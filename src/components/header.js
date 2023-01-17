@@ -7,9 +7,9 @@ const Header = ({ title }) => (
   <header className="global-header">
     <div className="main-heading">
       <div className="logo">
-        <a href="https://www.skplanet.com/" target="_blank" rel="noreferrer">
+        <Link to="/">
           <img src={logo} alt="logo" />
-        </a>
+        </Link>
         <Link to="/">{title}</Link>
       </div>
       <Menu />
