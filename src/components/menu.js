@@ -10,7 +10,7 @@ const Menu = () => (
       target="_blank"
       rel="noreferrer"
     >
-      채용안내
+      Recruit
     </a>
   </div>
 );
