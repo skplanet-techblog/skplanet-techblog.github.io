@@ -1,7 +1,7 @@
 ---
 title: "iOS15에서 비디오 재생 직전 화면이 깜박이는 현상"
 date: "2022-11-02"
-tags: ["iOS15", "Safari", "video", "rendering"]
+tags: ["iOS15", "video", "rendering"]
 author: "jayoon"
 description: "iOS15 렌더링, iOS15 rendering"
 ---
