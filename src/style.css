@@ -238,7 +238,7 @@ a:focus {
 }
 
 .global-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   font-size: var(--fontSize-7);
@@ -264,7 +264,6 @@ a:focus {
 
 .logo {
   display: flex;
-  min-width: var(--maxWidth-sm);
 }
 
 .logo a {
@@ -291,7 +290,6 @@ a:focus {
 main {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-24) var(--spacing-5);
 }
 
 .post-list-item {
@@ -354,6 +352,10 @@ main {
   border-radius: 100%;
 }
 
+.blog-post {
+  word-break: break-word;
+}
+
 .blog-post header {
   border-bottom: 1px solid #dddddd;
   margin-bottom: var(--spacing-4);
@@ -412,7 +414,8 @@ main {
     display: block;
   }
   main {
-    margin-top: var(--spacing-10);
+    overflow: hidden;
+    padding: var(--spacing-0) var(--spacing-5);
   }
   .menu {
     margin: 0 0 0 var(--spacing-6);
