@@ -9,12 +9,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `SK플래닛 테크블로그`,
+    title: `테크블로그`,
     author: {
       name: `SK플래닛`,
       summary: `SK플래닛 Platform Center`,
     },
-    description: `SK플래닛 Platform Center 기술블로그입니다.`,
+    description: `SK플래닛 Platform Center 테크블로그입니다.`,
     siteUrl: `https://skplanet-tech.github.io/`,
     social: {},
   },

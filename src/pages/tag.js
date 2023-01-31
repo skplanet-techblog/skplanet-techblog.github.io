@@ -7,20 +7,33 @@ import Seo from "../components/seo";
 
 import { MEMBERS } from "../members";
 
-const BlogIndex = ({ data, location }) => {
+const Tag = ({ data, location }) => {
+  const { search } = location;
+  const tagName = search.replace("?tag=", "");
+
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const posts = data.allMarkdownRemark.nodes;
+  const posts = data.allMarkdownRemark.nodes.filter((item) =>
+    item.frontmatter.tags.includes(tagName)
+  );
 
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <p>등록된 게시물이 없습니다.</p>
+        <p>
+          No blog posts found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
       </Layout>
     );
   }
 
   return (
     <Layout location={location} title={siteTitle}>
+      <div className="tag-box">
+        <span>{tagName}</span>
+        <h1>{tagName}</h1>
+      </div>
       <ol style={{ listStyle: `none` }}>
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
@@ -37,9 +50,7 @@ const BlogIndex = ({ data, location }) => {
                 {post.frontmatter.tags && (
                   <div className="tags">
                     {post.frontmatter.tags.map((tag) => (
-                      <Link to={`/tag?tag=${tag}`}>
-                        <span key={tag}>{tag}</span>
-                      </Link>
+                      <span key={tag}>{tag}</span>
                     ))}
                   </div>
                 )}
@@ -75,7 +86,7 @@ export const Head = () => {
   return <Seo title="테크블로그" />;
 };
 
-export default BlogIndex;
+export default Tag;
 
 export const pageQuery = graphql`
   {
@@ -93,8 +104,8 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          description
           author
+          description
           tags
         }
       }
