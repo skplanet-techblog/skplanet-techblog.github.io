@@ -6,11 +6,10 @@ const Menu = ({ location }) => {
   const { pathname } = location;
 
   const isRootPath = pathname === rootPath;
-  const isTag = pathname.includes("tag");
 
   return (
     <div className="menu">
-      <Link to="/" className={isRootPath || isTag ? "active" : ""}>
+      <Link to="/" className={isRootPath ? "active" : ""}>
         Tech
       </Link>
       <a

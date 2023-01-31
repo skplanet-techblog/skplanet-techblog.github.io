@@ -282,7 +282,8 @@ a:focus {
 }
 
 .menu a.active {
-  border-bottom: 1px solid #222222;
+  color: #db1137;
+  border-bottom: 1px solid #db1137;
 }
 
 main {
@@ -444,6 +445,7 @@ main ol li:last-child .post-list-item {
 .tag-box h1 {
   padding: 0;
   margin: var(--spacing-3) 0 0 0;
+  color: #303030;
   font-size: var(--fontSize-8);
   font-weight: 800;
 }
