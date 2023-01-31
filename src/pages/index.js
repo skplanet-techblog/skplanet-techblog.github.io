@@ -37,8 +37,8 @@ const BlogIndex = ({ data, location }) => {
                 {post.frontmatter.tags && (
                   <div className="tags">
                     {post.frontmatter.tags.map((tag) => (
-                      <Link to={`/tag?tag=${tag}`}>
-                        <span key={tag}>{tag}</span>
+                      <Link to={`/tag?tag=${tag}`} key={tag}>
+                        <span>{tag}</span>
                       </Link>
                     ))}
                   </div>
