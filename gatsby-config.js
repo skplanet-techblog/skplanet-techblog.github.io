@@ -12,9 +12,9 @@ module.exports = {
     title: `테크블로그`,
     author: {
       name: `SK플래닛`,
-      summary: `SK플래닛 Platform Center`,
+      summary: `SK플래닛`,
     },
-    description: `SK플래닛 Platform Center 테크블로그입니다.`,
+    description: `SK플래닛 구성원의 Data, Tech, UX 이야기가 담겨 있는 SK플래닛 테크블로그입니다.`,
     siteUrl: `https://skplanet-tech.github.io/`,
     social: {},
   },
