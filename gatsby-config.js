@@ -15,7 +15,7 @@ module.exports = {
       summary: `SK플래닛`,
     },
     description: `SK플래닛 구성원의 Data, Tech, UX 이야기가 담겨 있는 SK플래닛 테크블로그입니다.`,
-    siteUrl: `https://skplanet-tech.github.io/`,
+    siteUrl: `https://techblog.skplanet.com/`,
     social: {},
   },
   plugins: [
@@ -124,8 +124,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://skplanet-tech.github.io",
-        sitemap: "https://skplanet-tech.github.io/sitemap.xml",
+        host: "https://techblog.skplanet.com",
+        sitemap: "https://techblog.skplanet.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

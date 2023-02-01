@@ -1,1 +1,1 @@
-# skplanet-tech.github.io
+# techblog.skplanet.com
