@@ -276,7 +276,7 @@ a:focus {
 }
 
 .logo img {
-  margin-bottom: 0.24rem;
+  margin-bottom: 0.2rem;
 }
 
 .logo a {
@@ -512,7 +512,7 @@ main ol li:last-child .post-list-item {
   }
   .logo img {
     width: 50px;
-    margin-bottom: 0.12rem;
+    margin-bottom: 0.1rem;
   }
   .logo a {
     line-height: var(--spacing-3);
