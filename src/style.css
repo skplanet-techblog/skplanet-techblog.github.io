@@ -553,8 +553,6 @@ main ol li:last-child .post-list-item {
     font-size: var(--fontSize-4);
   }
   .footer {
-    border: none;
-    width: calc(100vw - 3rem);
     max-width: 100vw;
   }
 }
