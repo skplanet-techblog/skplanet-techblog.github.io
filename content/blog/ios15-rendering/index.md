@@ -198,13 +198,10 @@ const videoStyle = useMemo(() =>
 
 `transition` 속성은 다음과 같이 사용할 수 있습니다.
 
-```html
-div { transition:
-<property>
-  <duration>
-    <timing-function> <delay>; }</delay></timing-function></duration
-  ></property
->
+```javascript
+div {
+  transition: <property> <duration> <timing-function> <delay>;
+}
 ```
 
 - transition-property
@@ -233,3 +230,53 @@ const movingStyle = useMemo(
 ```
 
 결과적으로 아주 매끄럽게 동작하는 것을 확인할 수 있었습니다. 😄
+
+(+) 추가 이슈
+
+iOS 16.2 버전 이상부터 플레이어에서 갑자기 렌더링이 이상하게 되는 이슈가 발생했습니다. 기존의 문제점이 화면이 일시적으로 작아졌다가 커진 현상이었다면, 이번에는 반대로 첫 로딩 시에는 화면이 커졌다가 작아지는 문제였습니다.
+
+최근에 16.0으로 iOS 버전이 업데이트되면서 추가적으로 발생했던 이슈를 해결하기 위해 `object-fit` 속성을 `cover`에서 `fill`로 변경했었는데요, 아마도 그 조치에 대한 side effect이었던 것이 아닐까 하는 생각이 들었습니다.
+
+결과적으로 15버전에서 15.5 버전, 그리고 16.0에서 16.1 버전, 현재 최종 버전인 16.3 (16.2 이상) 이렇게 세 가지로 분기 처리를 하기 위해서 코드를 다음과 같이 수정하였습니다.
+
+```javascript
+// player.tsx (썸네일 보여주는 영역)
+
+const isIOS16LowVersion =
+  isIOS() && iosVersion >= "16.0" && iosVersion < "16.2";
+
+const objectFitClass = isIOS && isIOS16LowVersion ? "fill" : "cover";
+```
+
+```javascript
+// videoForIOS.tsx (플레이어 영역)
+
+const isIOS15Version =
+  EnvChecker.isIOS() && iosVersion >= "15.0" && iosVersion < "15.5";
+const isIOS16LowVersion =
+  EnvChecker.isIOS() && iosVersion >= "16.0" && iosVersion < "16.2";
+
+const objectfitValue = useMemo(
+  () => (isIOS16LowVersion ? "fill" : "cover"),
+  [isIOS16LowVersion]
+);
+
+const directionClassName = useMemo(
+  () => (direction === "HORIZONTAL" ? "landscape" : objectfitValue),
+  [direction]
+);
+
+const loadedClassName = useMemo(
+  () => (loaded ? directionClassName : "hidden"),
+  [loaded, directionClassName]
+);
+
+const videoStyle = useMemo(
+  () => (isIOS15Version ? loadedStyle : movingStyle),
+  [loadedStyle, movingStyle]
+);
+```
+
+이제 모든 버전에서 잘 동작합니다.
+
+2023년 2월 1일에 작성함.
