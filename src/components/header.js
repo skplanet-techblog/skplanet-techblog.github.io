@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Menu from "./menu";
-import logo from "../images/logo.png";
+import logo from "../images/logo_eng.png";
 
 const Header = ({ title, location }) => (
   <header className="global-header">
