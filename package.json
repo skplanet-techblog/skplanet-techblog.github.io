@@ -50,6 +50,6 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "predeploy": "gatsby build && cp CNAME public/CNAME",
-    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
+    "deploy": "gh-pages -d public -b gh-pages"
   }
 }
