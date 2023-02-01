@@ -1,7 +1,7 @@
 import * as React from "react";
 
-const Footer = () => (
-  <footer className="footer">
+const Footer = ({ onChange }) => (
+  <footer className="footer" onClick={onChange}>
     ©{` ${new Date().getFullYear()}`} SK Planet
   </footer>
 );
