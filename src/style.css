@@ -276,7 +276,7 @@ a:focus {
 }
 
 .logo img {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.24rem;
 }
 
 .logo a {
@@ -512,7 +512,7 @@ main ol li:last-child .post-list-item {
   }
   .logo img {
     width: 50px;
-    margin-bottom: 0.125rem;
+    margin-bottom: 0.12rem;
   }
   .logo a {
     line-height: var(--spacing-3);
@@ -523,7 +523,7 @@ main ol li:last-child .post-list-item {
     margin-left: var(--spacing-4);
   }
   main {
-    padding: 0 var(--spacing-6);
+    padding: 0 var(--spacing-6) var(--spacing-5) var(--spacing-6);
   }
   .post-list-item {
     padding: var(--spacing-8) 0;
