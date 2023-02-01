@@ -5,8 +5,8 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Seo = ({ description, title, children }) => {
   const { site } = useStaticQuery(
@@ -23,10 +23,10 @@ const Seo = ({ description, title, children }) => {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
     <>
@@ -42,11 +42,22 @@ const Seo = ({ description, title, children }) => {
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="google-site-verification" content="vMqBtqtAuaCt-E77Hy3kVwYFp3Ve9kaAMI1cBnYSfa4" />
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"></link>
+      <meta
+        name="google-site-verification"
+        content="vMqBtqtAuaCt-E77Hy3kVwYFp3Ve9kaAMI1cBnYSfa4"
+      />
+      <meta
+        name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"
+      ></link>
       {children}
     </>
-  )
-}
+  );
+};
 
-export default Seo
+export default Seo;

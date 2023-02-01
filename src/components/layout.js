@@ -1,6 +1,6 @@
 import * as React from "react";
 import Header from "./header";
-// import Footer from "./footer";
+import Footer from "./footer";
 import Banner from "./banner";
 
 const Layout = ({ location, title, children }) => {
@@ -12,7 +12,7 @@ const Layout = ({ location, title, children }) => {
       <Header title={title} location={location} />
       {isRootPath && <Banner />}
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
