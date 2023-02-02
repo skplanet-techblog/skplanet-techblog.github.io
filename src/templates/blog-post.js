@@ -9,7 +9,7 @@ const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
-  const siteTitle = site.siteMetadata?.title || `Title`;
+  const siteTitle = site.siteMetadata?.title || `SK플래닛 테크블로그`;
 
   return (
     <Layout location={location} title={siteTitle}>

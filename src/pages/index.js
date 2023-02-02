@@ -8,7 +8,7 @@ import Seo from "../components/seo";
 import { MEMBERS } from "../members";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 테크블로그`;
   const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
@@ -72,7 +72,7 @@ const BlogIndex = ({ data, location }) => {
 };
 
 export const Head = () => {
-  return <Seo title="테크블로그" />;
+  return <Seo title="Tech" />;
 };
 
 export default BlogIndex;
