@@ -5,9 +5,9 @@ const Banner = ({ changed }) => (
     <div className="text">
       SK플래닛 구성원의
       <br />
-      Data, Tech, UX 이야기가 담겨 있는
+      다양한 기술 활동을 외부에 공유하여
       <br />
-      SK플래닛 테크 블로그입니다.
+      함께 성장하고자 만든 기술 블로그입니다.
     </div>
   </div>
 );

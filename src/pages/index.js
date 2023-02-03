@@ -8,7 +8,7 @@ import Seo from "../components/seo";
 import { MEMBERS } from "../members";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 테크블로그`;
+  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TechTopic`;
   const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {

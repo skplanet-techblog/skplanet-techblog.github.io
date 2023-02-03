@@ -8,7 +8,7 @@ const Header = ({ title, location }) => (
     <div className="main-heading">
       <div className="logo">
         <img src={logo} alt="logo" />
-        <Link to="/">테크블로그</Link>
+        <Link to="/">TechTopic</Link>
       </div>
       <Menu location={location} />
     </div>

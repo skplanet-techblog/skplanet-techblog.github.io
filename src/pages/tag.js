@@ -11,7 +11,7 @@ const Tag = ({ data, location }) => {
   const { search } = location;
   const tagName = search.replace("?tag=", "");
 
-  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 테크블로그`;
+  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TechTopic`;
   const posts = data.allMarkdownRemark.nodes.filter((item) =>
     item.frontmatter.tags.includes(tagName)
   );
