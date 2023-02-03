@@ -1,7 +1,7 @@
 {
   "name": "skplanet-tech-blog",
   "private": true,
-  "description": "SK플래닛 테크 블로그입니다.",
+  "description": "SK플래닛 테크블로그입니다.",
   "version": "0.1.0",
   "author": "Jayoon Kong <jayoon.kong@sk.com>",
   "bugs": {

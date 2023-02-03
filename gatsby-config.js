@@ -11,8 +11,8 @@ module.exports = {
   siteMetadata: {
     title: `SK플래닛 테크블로그`,
     author: {
-      name: `SK플래닛`,
-      summary: `SK플래닛`,
+      name: `공자윤`,
+      summary: `SK플래닛 Platform Center`,
     },
     description: `SK플래닛 구성원의 Data, Tech, UX 이야기가 담겨 있는 SK플래닛 테크블로그입니다.`,
     siteUrl: `https://techblog.skplanet.com/`,
