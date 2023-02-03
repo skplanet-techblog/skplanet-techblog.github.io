@@ -3,7 +3,7 @@ import * as React from "react";
 const Banner = ({ changed }) => (
   <div className={changed ? "banner-blue" : "banner"}>
     <div className="text">
-      SK플래닛 구성원의
+      SK플래닛 구성원들의
       <br />
       다양한 기술 활동을 외부에 공유하여
       <br />
