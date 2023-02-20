@@ -2,7 +2,7 @@ import * as React from "react";
 
 const Footer = ({ onChange }) => (
   <footer className="footer" onClick={onChange}>
-    ©{` ${new Date().getFullYear()}`} SK Planet
+    COPYRIGHT © 2023 SK Planet. ALL RIGHT RESERVED.
   </footer>
 );
 
