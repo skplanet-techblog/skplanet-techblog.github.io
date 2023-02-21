@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://techblog.skplanet.com/sitemap.xml
-Host: https://techblog.skplanet.com
+Sitemap: https://techtopic.skplanet.com/sitemap.xml
+Host: https://techtopic.skplanet.com
