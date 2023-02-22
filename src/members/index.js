@@ -1,5 +1,6 @@
 import jayoon from "./images/jayoon.jpg";
 import hdy from "./images/hdy.png";
+import neotf from "./images/neotf.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -15,4 +16,10 @@ export const MEMBERS = {
     description: "web3 전문가입니다.",
     thumbnail: hdy
   },
+  neotf: {
+    name: "NEO TF",
+    team: "NEO TF",
+    description: "TechTopic 기술블로그를 운영하고 있습니다.",
+    thumbnail: neotf
+  }
 };
