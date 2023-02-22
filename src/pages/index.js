@@ -22,7 +22,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <ol style={{ listStyle: `none` }}>
-        {posts.filter((_post, i) => i === 1).map((post) => {
+        {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
           const author = post.frontmatter.author;
           const member = MEMBERS[author.toLowerCase()];

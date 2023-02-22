@@ -31,7 +31,7 @@ const BlogPostTemplate = ({
           <Bio author={post.frontmatter.author} />
         </footer>
       </article>
-      {/* <nav className="blog-post-nav">
+      <nav className="blog-post-nav">
         <ul
           style={{
             display: `flex`,
@@ -56,7 +56,7 @@ const BlogPostTemplate = ({
             )}
           </li>
         </ul>
-      </nav> */}
+      </nav>
     </Layout>
   );
 };
