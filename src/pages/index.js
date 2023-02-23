@@ -26,6 +26,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug;
           const author = post.frontmatter.author;
           const member = MEMBERS[author.toLowerCase()];
+          const tagsLength = post.frontmatter.tags?.length || 0;
 
           return (
             <li key={post.fields.slug}>
@@ -36,9 +37,9 @@ const BlogIndex = ({ data, location }) => {
               >
                 {post.frontmatter.tags && (
                   <div className="tags">
-                    {post.frontmatter.tags.map((tag) => (
+                    {post.frontmatter.tags.map((tag, i) => (
                       <Link to={`/tag?tag=${tag}`} key={tag}>
-                        <span>{tag}</span>
+                        <span className={i < tagsLength / 2 ? 'gray' : ''}>{tag}</span>
                       </Link>
                     ))}
                   </div>

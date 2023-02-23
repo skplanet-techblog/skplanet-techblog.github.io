@@ -1,13 +1,13 @@
 import * as React from "react";
 
-const Banner = ({ changed }) => (
-  <div className={changed ? "banner-blue" : "banner"}>
+const Banner = () => (
+  <div className="banner">
     <div className="text">
-      SK플래닛 구성원들의
+      SK플래닛 구성원의 활동들을
       <br />
-      다양한 기술 활동을 외부에 공유하여
+      공유하여 함께 성장하고자 만든
       <br />
-      함께 성장하고자 만든 기술 블로그입니다.
+      <span className="red">기술 블로그</span>입니다.
     </div>
   </div>
 );
