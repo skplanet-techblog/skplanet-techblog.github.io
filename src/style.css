@@ -319,7 +319,8 @@ main ol li:last-child .post-list-item {
   text-decoration: none;
 }
 
-.post-list-item .tags span {
+.post-list-item .tags span,
+.tag-box span {
   padding: 0.25rem 0.625rem;
   margin-right: 0.625rem;
   border-radius: 0.25rem;
@@ -330,7 +331,8 @@ main ol li:last-child .post-list-item {
   font-weight: 700;
 }
 
-.post-list-item .tags span.gray {
+.post-list-item .tags span.gray,
+.tag-box span.gray {
   border: 1px solid #c3c3c3;
   background-color: #f6f6f6;
   color: #7d7d7d;
@@ -407,18 +409,12 @@ main ol li:last-child .post-list-item {
 }
 
 .tag-box span {
-  padding: 0.25rem 0.75rem;
-  border: 1px solid #fbb196;
-  border-radius: 0.25rem;
-  background-color: rgba(251, 177, 150, 0.3);
-  color: #ff875b;
   font-size: 1.2rem;
-  font-weight: 700;
 }
 
 .tag-box h1 {
   padding: 0;
-  margin: 0.75rem 0 0 0;
+  margin:1rem 0 0 0;
   color: #303030;
   font-size: 3.75rem;
   font-weight: 800;
@@ -463,10 +459,10 @@ main ol li:last-child .post-list-item {
   }
   .banner .text {
     max-width: calc(100vw - 3rem);
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .main-heading a {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .logo img {
     width: 50px;
@@ -492,35 +488,23 @@ main ol li:last-child .post-list-item {
     margin-bottom: 1rem;
   }
   .post-list-item h2 {
-    font-size: 0.938rem;
+    font-size: 1rem;
   }
   .post-list-item p,
   .post-list-item small {
     font-size: 0.75rem;
   }
-  .post-list-item .tags span {
-    padding: 0.125rem 0.625rem;
-    margin-right: 0.625rem;
-    border-radius: 0.25rem;
-    border: 1px solid #fbb196;
-    background-color: #fff3ee;
-    color: #ff875b;
+  .post-list-item .tags span,
+  .tag-box span {
     font-size: 0.5rem;
-    font-weight: 700;
   }
   .tag-box {
-    max-width: calc(24rem - 2.5rem);
-    border-radius: 20px;
+    max-width: calc(100vw - 3rem);
+    border-radius: 1.25;
     margin-top: 1.25rem;
     padding: 2rem 2.5rem;
   }
-  .tag-box span {
-    padding: 0.125rem 0.375rem;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-  }
   .tag-box h1 {
-    margin: 0.375rem 0 0 0;
     font-size: 1.8rem;
   }
   .footer {

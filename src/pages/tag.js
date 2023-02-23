@@ -39,6 +39,7 @@ const Tag = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug;
           const author = post.frontmatter.author;
           const member = MEMBERS[author.toLowerCase()];
+          const tagsLength = post.frontmatter.tags?.length || 0;
 
           return (
             <li key={post.fields.slug}>
@@ -49,8 +50,8 @@ const Tag = ({ data, location }) => {
               >
                 {post.frontmatter.tags && (
                   <div className="tags">
-                    {post.frontmatter.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
+                    {post.frontmatter.tags.map((tag, i) => (
+                      <span key={tag} className={i < tagsLength / 2 ? 'gray' : ''}>{tag}</span>
                     ))}
                   </div>
                 )}
