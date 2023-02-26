@@ -40,9 +40,9 @@ body {
   font-family: var(--fontFamily-poppins), var(--fontFamily-noto);
 }
 
-* {
+/* * {
   font-family: inherit;
-}
+} */
 
 hr {
   background: var(--color-accent);
