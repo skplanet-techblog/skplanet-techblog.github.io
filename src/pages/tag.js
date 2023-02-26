@@ -9,7 +9,7 @@ import { MEMBERS } from "../members";
 
 const Tag = ({ data, location }) => {
   const { search } = location;
-  const tagName = search.replace("?tag=", "");
+  const tagName = search?.replace("?tag=", "");
 
   const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TechTopic`;
   const posts = data.allMarkdownRemark.nodes.filter((item) =>
