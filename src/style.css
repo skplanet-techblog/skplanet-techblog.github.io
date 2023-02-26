@@ -518,6 +518,7 @@ main ol.list li:first-child .post-list-item {
     max-width: calc(100vw - 3rem);
     border-radius: 1.25;
     margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     padding: 2rem 2.5rem;
   }
   .tag-box h1 {
