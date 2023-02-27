@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkskplanet_techtopic=self.webpackChunkskplanet_techtopic||[]).push([[358],{1274:function(t,e,l){l.r(e),l.d(e,{Head:function(){return i}});var n=l(7294),a=l(4691),c=l(9357);const i=()=>n.createElement(c.Z,{title:"Culture"});e.default=t=>{var e;let{data:l,location:c}=t;const i=null===(e=l.site.siteMetadata)||void 0===e?void 0:e.title;return n.createElement(a.Z,{location:c,title:i},n.createElement("div",null,"빈 페이지입니다."))}}}]);
+//# sourceMappingURL=component---src-pages-culture-js-9fac045b3da4cc773c14.js.map
