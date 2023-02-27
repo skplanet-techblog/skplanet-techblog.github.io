@@ -336,6 +336,7 @@ main ol li:last-child .post-list-item {
 
 .main-title .text > div {
   line-height: 4.8rem;
+  letter-spacing: -1px;
 }
 
 .main-title .text > div:last-child {
@@ -348,6 +349,7 @@ main ol li:last-child .post-list-item {
   margin-right: 0.75rem;
   background: url('../src/images/border.png') no-repeat center;
   background-size: contain;
+  letter-spacing: 0;
 }
 
 .banner img {
