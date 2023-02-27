@@ -1,8 +1,8 @@
 /* CSS Custom Properties Definitions */
 
 :root {
-  --fontFamily-noto: "Noto Sans CJK KR, sans-serif";
-  --fontFamily-poppins: "Poppins, sans-serif";
+  --fontFamily-noto: "Noto Sans CJK KR", "Noto Sans KR", sans-serif;
+  --fontFamily-poppins: "Poppins", sans-serif;
   --color-primary: black;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
