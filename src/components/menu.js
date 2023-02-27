@@ -28,7 +28,7 @@ const Menu = ({ location }) => {
       >
         <img 
           srcSet={`${facebook_1x} 36w, ${facebook_4x} 144w`}
-          sizes={`(max-width: 800px) 18px, 36px`}
+          sizes={`(max-width: 768px) 18px, 36px`}
           src={facebook_4x} alt="facebook" 
         />
       </a>
