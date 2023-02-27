@@ -325,7 +325,8 @@ main ol li:last-child .post-list-item {
 }
 
 .main-title .text > div {
-  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .main-title .text > div .highlight {
@@ -379,8 +380,7 @@ main ol.list li:first-child .post-list-item {
   text-decoration: none;
 }
 
-.post-list-item .tags span,
-.tag-box span {
+.post-list-item .tags span {
   padding: 0.25rem 0.625rem;
   margin-right: 0.625rem;
   border-radius: 0.25rem;
@@ -391,8 +391,7 @@ main ol.list li:first-child .post-list-item {
   font-weight: 600;
 }
 
-.post-list-item .tags span.gray,
-.tag-box span.gray {
+.post-list-item .tags span.gray {
   border: 1px solid #c3c3c3;
   background-color: #f6f6f6;
   color: #7d7d7d;
@@ -473,13 +472,9 @@ main ol.list li:first-child .post-list-item {
   padding: 4rem 4.5rem;
 }
 
-.tag-box span {
-  font-size: 1.2rem;
-}
-
 .tag-box h1 {
   padding: 0;
-  margin:1rem 0 0 0;
+  margin: 0;
   color: #303030;
   font-size: 3.75rem;
   font-weight: 600;
@@ -528,7 +523,7 @@ main ol.list li:first-child .post-list-item {
     margin-top: 1.5rem;
   }
   .main-title .text {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   .main-title .text > div .highlight {
     padding: 0.5rem;

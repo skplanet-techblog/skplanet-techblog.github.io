@@ -32,7 +32,6 @@ const Tag = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <div className="tag-box">
-        <span>{tagName}</span>
         <h1>{tagName}</h1>
       </div>
       <ol style={{ listStyle: `none` }}>
@@ -40,7 +39,6 @@ const Tag = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug;
           const author = post.frontmatter.author;
           const member = MEMBERS[author.toLowerCase()];
-          const tagsLength = post.frontmatter.tags?.length || 0;
 
           return (
             <li key={post.fields.slug}>
