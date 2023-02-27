@@ -13,7 +13,7 @@ export const MEMBERS = {
   hdy: {
     name: "한대영",
     team: "블록체인플랫폼개발팀",
-    description: "web3 전문가입니다.",
+    description: "블록체인 기술과 Web3를 탐험 중인 개발자입니다.",
     thumbnail: hdy
   },
   neotf: {
