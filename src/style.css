@@ -14,7 +14,6 @@
 /* HTML elements */
 @font-face {
 	font-family: var(--fontFamily-poppins);
-	font-style: normal;
 	font-weight: 400;
 	src:url('../src/fonts/Poppins/Poppins-Regular.woff') format('woff');
 }
@@ -26,17 +25,18 @@
 @font-face {
 	font-family: var(--fontFamily-poppins);
 	font-weight: 600;
+  font-style: normal;
 	src:url('../src/fonts/Poppins/Poppins-SemiBold.woff') format('woff');
 }
 @font-face {
 	font-family: var(--fontFamily-poppins);
-	font-style: bold;
 	font-weight: 700;
 	src:url('../src/fonts/Poppins/Poppins-Bold.woff') format('woff');
 }
 @font-face {
 	font-family: var(--fontFamily-poppins);
 	font-weight: 800;
+  font-style: bold;
 	src:url('../src/fonts/Poppins/Poppins-ExtraBold.woff') format('woff');
 }
 @font-face {
@@ -46,7 +46,6 @@
 }
 @font-face {
 	font-family: var(--fontFamily-noto);
-	font-style: normal;
 	font-weight: 400;
 	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Regular.woff') format('woff');
   unicode-range: U+AC00-D7A3;
@@ -65,19 +64,20 @@
 }
 @font-face {
 	font-family: var(--fontFamily-noto);
-  font-style: bold;
 	font-weight: 700;
 	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Bold.woff') format('woff');
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
 	font-family: var(--fontFamily-noto);
+  font-style: normal;
 	font-weight: 800;
 	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Bold.woff') format('woff');
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
 	font-family: var(--fontFamily-noto);
+  font-style: bold;
 	font-weight: 900;
 	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Black.woff') format('woff');
   unicode-range: U+AC00-D7A3;
@@ -98,6 +98,7 @@ body {
   font-size: 1rem;
   color: #222222;
   font-family: var(--fontFamily-poppins), var(--fontFamily-noto);
+  font-weight: 500;
 }
 
 /* * {
@@ -129,12 +130,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 600;
   color: #1a202c;
 }
 
 h1 {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 2rem;
   color: #222222;
 }
@@ -332,7 +333,7 @@ main ol li:last-child .post-list-item {
 
 .main-title .text {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #222222;
   margin: 0 auto;
 }
@@ -370,12 +371,11 @@ main ol.list li:first-child .post-list-item {
   margin-bottom: 1.25rem;
   color: #666666;
   font-size: 1.125rem;
-  font-weight: 500;
 }
 
 .post-list-item h2 {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #303030;
   margin: 0;
 }
@@ -402,7 +402,7 @@ main ol.list li:first-child .post-list-item {
   background-color: #fff3ee;
   color: #ff875b;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .post-list-item .tags span.gray,
@@ -419,9 +419,9 @@ main ol.list li:first-child .post-list-item {
 }
 
 .header-link-home {
-  font-weight: 700;
   text-decoration: none;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .bio {
