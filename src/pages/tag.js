@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 import { MEMBERS } from "../members";
+import TagList from "../components/tagList";
 
 const Tag = ({ data, location }) => {
   const { search } = location;
@@ -49,11 +50,7 @@ const Tag = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 {post.frontmatter.tags && (
-                  <div className="tags">
-                    {post.frontmatter.tags.map((tag, i) => (
-                      <span key={tag} className={i < tagsLength / 2 ? 'gray' : ''}>{tag}</span>
-                    ))}
-                  </div>
+                  <TagList tags={post.frontmatter.tags} />
                 )}
                 <header>
                   <h2 className="title">

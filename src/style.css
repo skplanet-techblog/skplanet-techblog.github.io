@@ -331,7 +331,7 @@ main ol li:last-child .post-list-item {
 }
 
 .main-title .text {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 800;
   color: #222222;
   margin: 0 auto;
@@ -343,10 +343,10 @@ main ol li:last-child .post-list-item {
 
 .main-title .text > div .highlight {
   color: #ec2428;
-  border: 1px solid #a5a5a5;
-  padding: 0.875rem;
-  margin-left: 0.5rem;
+  padding: 1.125rem;
   margin-right: 0.5rem;
+  background: url('../src/images/border.png') no-repeat;
+  background-size: contain;
 }
 
 .banner img {
@@ -355,7 +355,7 @@ main ol li:last-child .post-list-item {
 }
 
 main ol.list li:first-child .post-list-item {
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 
 .post-list-item {
@@ -544,10 +544,11 @@ main ol.list li:first-child .post-list-item {
     margin-top: 1.5rem;
   }
   .main-title .text {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
   .main-title .text > div .highlight {
-    padding: 0.4rem;
+    padding: 0.5rem;
+    margin-right: 0.3rem;
   }
   .banner img {
     top: -0.5rem;

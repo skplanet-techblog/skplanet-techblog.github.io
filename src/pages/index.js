@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 import { MEMBERS } from "../members";
+import TagList from "../components/tagList";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TechTopic`;
@@ -36,13 +37,7 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 {post.frontmatter.tags && (
-                  <div className="tags">
-                    {post.frontmatter.tags.map((tag, i) => (
-                      <Link to={`/tag?tag=${tag}`} key={tag}>
-                        <span className={i < tagsLength / 2 ? 'gray' : ''}>{tag}</span>
-                      </Link>
-                    ))}
-                  </div>
+                  <TagList tags={post.frontmatter.tags} />
                 )}
                 <header>
                   <h2 className="title">
