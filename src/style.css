@@ -1,8 +1,6 @@
 /* CSS Custom Properties Definitions */
 
 :root {
-  --fontFamily-noto: "Noto Sans CJK KR", "Noto Sans KR", sans-serif;
-  --fontFamily-poppins: "Poppins", sans-serif;
   --color-primary: black;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
@@ -13,70 +11,58 @@
 
 /* HTML elements */
 @font-face {
-	font-family: var(--fontFamily-poppins);
+	font-family: "Poppins";
 	font-weight: 400;
 	src:url('../src/fonts/Poppins/Poppins-Regular.woff') format('woff');
 }
 @font-face {
-	font-family: var(--fontFamily-poppins);
+	font-family: "Poppins";
 	font-weight: 500;
 	src:url('../src/fonts/Poppins/Poppins-Medium.woff') format('woff');
 }
 @font-face {
-	font-family: var(--fontFamily-poppins);
+	font-family: "Poppins";
   font-style: normal;
 	font-weight: 600;
 	src:url('../src/fonts/Poppins/Poppins-SemiBold.woff') format('woff');
 }
 @font-face {
-	font-family: var(--fontFamily-poppins);
+	font-family: "Poppins";
 	font-weight: 700;
 	src:url('../src/fonts/Poppins/Poppins-Bold.woff') format('woff');
 }
 @font-face {
-	font-family: var(--fontFamily-poppins);
+	font-family: "Poppins";
 	font-weight: 800;
   font-style: bold;
 	src:url('../src/fonts/Poppins/Poppins-ExtraBold.woff') format('woff');
 }
 @font-face {
-	font-family: var(--fontFamily-poppins);
+	font-family: "Poppins";
 	font-weight: 900;
 	src:url('../src/fonts/Poppins/Poppins-Black.woff') format('woff');
 }
 @font-face {
-	font-family: var(--fontFamily-noto);
+	font-family: "Noto Sans CJK KR";
 	font-weight: 400;
 	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Regular.woff') format('woff');
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
-	font-family: var(--fontFamily-noto);
+	font-family: "Noto Sans CJK KR";
 	font-weight: 500;
 	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Medium.woff') format('woff');
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
-	font-family: var(--fontFamily-noto);
-	font-weight: 600;
-	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Medium.woff') format('woff');
-  unicode-range: U+AC00-D7A3;
-}
-@font-face {
-	font-family: var(--fontFamily-noto);
+	font-family: "Noto Sans CJK KR";
+  font-style: normal;
 	font-weight: 700;
 	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Bold.woff') format('woff');
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
-	font-family: var(--fontFamily-noto);
-  font-style: normal;
-	font-weight: 800;
-	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Bold.woff') format('woff');
-  unicode-range: U+AC00-D7A3;
-}
-@font-face {
-	font-family: var(--fontFamily-noto);
+	font-family: "Noto Sans CJK KR";
   font-style: bold;
 	font-weight: 900;
 	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Black.woff') format('woff');
@@ -97,13 +83,13 @@ html {
 body {
   font-size: 1rem;
   color: #222222;
-  font-family: var(--fontFamily-poppins), var(--fontFamily-noto);
-  font-style: normal;
+  font-family: "Poppins", "Noto Sans CJK KR", "Noto Sans KR", sans-serif;
+  font-weight: normal;
 }
 
-/* * {
+* {
   font-family: inherit;
-} */
+}
 
 hr {
   background: var(--color-accent);
@@ -135,7 +121,7 @@ h6 {
 }
 
 h1 {
-  font-weight: 800;
+  font-weight: bold;
   font-size: 2rem;
   color: #222222;
 }
