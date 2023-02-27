@@ -24,8 +24,8 @@
 }
 @font-face {
 	font-family: var(--fontFamily-poppins);
-	font-weight: 600;
   font-style: normal;
+	font-weight: 600;
 	src:url('../src/fonts/Poppins/Poppins-SemiBold.woff') format('woff');
 }
 @font-face {
@@ -98,7 +98,7 @@ body {
   font-size: 1rem;
   color: #222222;
   font-family: var(--fontFamily-poppins), var(--fontFamily-noto);
-  font-weight: 500;
+  font-style: normal;
 }
 
 /* * {
@@ -496,7 +496,7 @@ main ol.list li:first-child .post-list-item {
   margin:1rem 0 0 0;
   color: #303030;
   font-size: 3.75rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .gatsby-highlight {
