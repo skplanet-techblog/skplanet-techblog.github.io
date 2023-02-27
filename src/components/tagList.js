@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from "gatsby";
 
 const TagList = ({ tags }) => {
-  const UXTagList = ['UX', 'UI'];
+  const UXTagList = ['UX', 'UI', 'GUI', '설계', '리서치'];
   return (
     <div className="tags">
       {tags.map(tag => (
