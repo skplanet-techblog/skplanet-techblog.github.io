@@ -1,3 +1,2 @@
-# techblog.skplanet.com
-# skplanet-techblog.github.io
+# techtopic.skplanet.com
 # skplanet-techblog.github.io
