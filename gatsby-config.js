@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `SK플래닛 TechTopic`,
+    title: `SK플래닛 TECH TOPIC`,
     author: {
       name: `공자윤`,
       summary: `SK플래닛 Platform Center`,
@@ -109,7 +109,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `SK플래닛 TechTopic`,
+        name: `SK플래닛 TECH TOPIC`,
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#ffffff`,

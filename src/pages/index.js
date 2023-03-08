@@ -9,7 +9,7 @@ import { MEMBERS } from "../members";
 import TagList from "../components/tagList";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TechTopic`;
+  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TECH TOPIC`;
   const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
@@ -67,7 +67,7 @@ const BlogIndex = ({ data, location }) => {
 };
 
 export const Head = () => {
-  return <Seo title="Tech" />;
+  return <Seo title="SK플래닛 TECH TOPIC" />;
 };
 
 export default BlogIndex;
