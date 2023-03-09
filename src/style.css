@@ -11,61 +11,65 @@
 
 /* HTML elements */
 @font-face {
-	font-family: "Poppins";
-	font-weight: 400;
-	src:url('../src/fonts/Poppins/Poppins-Regular.woff') format('woff');
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("../src/fonts/Poppins/Poppins-Regular.woff") format("woff");
 }
 @font-face {
-	font-family: "Poppins";
-	font-weight: 500;
-	src:url('../src/fonts/Poppins/Poppins-Medium.woff') format('woff');
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("../src/fonts/Poppins/Poppins-Medium.woff") format("woff");
 }
 @font-face {
-	font-family: "Poppins";
+  font-family: "Poppins";
   font-style: normal;
-	font-weight: 600;
-	src:url('../src/fonts/Poppins/Poppins-SemiBold.woff') format('woff');
+  font-weight: 600;
+  src: url("../src/fonts/Poppins/Poppins-SemiBold.woff") format("woff");
 }
 @font-face {
-	font-family: "Poppins";
-	font-weight: 700;
-	src:url('../src/fonts/Poppins/Poppins-Bold.woff') format('woff');
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url("../src/fonts/Poppins/Poppins-Bold.woff") format("woff");
 }
 @font-face {
-	font-family: "Poppins";
-	font-weight: 800;
+  font-family: "Poppins";
+  font-weight: 800;
   font-style: bold;
-	src:url('../src/fonts/Poppins/Poppins-ExtraBold.woff') format('woff');
+  src: url("../src/fonts/Poppins/Poppins-ExtraBold.woff") format("woff");
 }
 @font-face {
-	font-family: "Poppins";
-	font-weight: 900;
-	src:url('../src/fonts/Poppins/Poppins-Black.woff') format('woff');
+  font-family: "Poppins";
+  font-weight: 900;
+  src: url("../src/fonts/Poppins/Poppins-Black.woff") format("woff");
 }
 @font-face {
-	font-family: "Noto Sans CJK KR";
-	font-weight: 400;
-	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Regular.woff') format('woff');
+  font-family: "Noto Sans CJK KR";
+  font-weight: 400;
+  src: url("../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Regular.woff")
+    format("woff");
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
-	font-family: "Noto Sans CJK KR";
-	font-weight: 500;
-	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Medium.woff') format('woff');
+  font-family: "Noto Sans CJK KR";
+  font-weight: 500;
+  src: url("../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Medium.woff")
+    format("woff");
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
-	font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans CJK KR";
   font-style: normal;
-	font-weight: 700;
-	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Bold.woff') format('woff');
+  font-weight: 700;
+  src: url("../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Bold.woff")
+    format("woff");
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
-	font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans CJK KR";
   font-style: bold;
-	font-weight: 900;
-	src:url('../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Black.woff') format('woff');
+  font-weight: 900;
+  src: url("../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Black.woff")
+    format("woff");
   unicode-range: U+AC00-D7A3;
 }
 
@@ -168,15 +172,6 @@ p {
   padding: 0;
 }
 
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style-position: outside;
-  list-style-image: none;
-  list-style: none;
-}
-
 ul li,
 ol li {
   padding: 0;
@@ -192,7 +187,7 @@ li *:last-child {
 }
 
 li > ul {
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
   margin-top: calc(2rem / 2);
 }
 
@@ -203,17 +198,11 @@ blockquote {
   padding: 0 0 0 1.5rem;
   border-left: 0.25rem solid var(--color-primary);
   font-size: 1.2rem;
-  font-style: italic;
   margin-bottom: 2rem;
 }
 
 blockquote > :last-child {
   margin-bottom: 0;
-}
-
-blockquote > ul,
-blockquote > ol {
-  list-style-position: inside;
 }
 
 table {
@@ -314,12 +303,13 @@ main {
   padding-bottom: 10rem;
 }
 
-main ol li {
+main ol.list,
+main ol.list li {
   padding: 0;
   margin: 0;
 }
 
-main ol li:last-child .post-list-item {
+main ol.list li:last-child .post-list-item {
   border: none;
 }
 
@@ -347,7 +337,7 @@ main ol li:last-child .post-list-item {
   color: #ec2428;
   padding: 0.875rem;
   margin-right: 0.75rem;
-  background: url('../src/images/border.png') no-repeat center;
+  background: url("../src/images/border.png") no-repeat center;
   background-size: contain;
   letter-spacing: 0;
 }
@@ -464,6 +454,10 @@ main ol.list li:first-child .post-list-item {
   margin-bottom: 1.25rem;
 }
 
+.blog-post section > ul {
+  padding: 1rem;
+}
+
 .blog-post-nav ul {
   margin: 0 0 2rem 0;
 }
@@ -525,7 +519,7 @@ main ol.list li:first-child .post-list-item {
   }
   h1 {
     font-size: 1.75rem;
-  }  
+  }
   h2 {
     font-size: 1.5rem;
   }

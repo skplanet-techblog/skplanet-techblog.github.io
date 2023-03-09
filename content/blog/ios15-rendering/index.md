@@ -113,11 +113,11 @@ HTML의 기본 태그인 video의 속성 중에는 `onLoadedData`라는 값이 �
 
 css의 `object-fit` 속성이란, 요소의 크기에 맞게 `<img>` 태그와 `<video>` 태그의 크기를 조정하는 방법으로 사용되는 속성입니다. 기본적인 속성 값은 다음과 같습니다.
 
-> - **fill** : 기본값이며 요소의 크기에 맞게 꽉 채워서 보여줍니다. 크기가 늘어나거나 찌그러집니다.
-> - **contain** : 요소의 가로/세로에 맞춰 크기가 조정되고, 비율은 고정입니다.
-> - **cover** : 요소의 가로/세로에 맞춰 크기가 조정되고, 비율은 고정입니다. 가득 채울 때까지 확대됩니다.
-> - **none**: 원본 사이즈로 처리됩니다.
-> - **scale-down** : none과 contain 중 대체 콘텐츠의 크기가 더 작아지는 값을 선택합니다.
+> * **fill** : 기본값이며 요소의 크기에 맞게 꽉 채워서 보여줍니다. 크기가 늘어나거나 찌그러집니다.
+> * **contain** : 요소의 가로/세로에 맞춰 크기가 조정되고, 비율은 고정입니다.
+> * **cover** : 요소의 가로/세로에 맞춰 크기가 조정되고, 비율은 고정입니다. 가득 채울 때까지 확대됩니다.
+> * **none** : 원본 사이즈로 처리됩니다.
+> * **scale-down** : none과 contain 중 대체 콘텐츠의 크기가 더 작아지는 값을 선택합니다.
 
 ![objectfit_fill](./objectfit_fill.png)
 ![objectfit_contain](./objectfit_contain.png)
@@ -125,7 +125,7 @@ css의 `object-fit` 속성이란, 요소의 크기에 맞게 `<img>` 태그와 `
 ![objectfit_none](./objectfit_none.png)
 ![objectfit_scaledown](./objectfit_scaledown.png)
 
-(출처 : [object-fit] https://developer.mozilla.org/ko/docs/Web/CSS/object-fit)
+(출처 : https://developer.mozilla.org/ko/docs/Web/CSS/object-fit)
 
 이렇게 다섯 가지 값이 있는데, 기존 코드를 살펴보니 가로형 영상인 경우 `contain` 값이, 세로형 영상인 경우 `cover` 값이 적용되어 있었습니다.
 `contain`과 `cover`은 둘다 모두 가로/세로 비율에 맞게 크기가 조정되지만, 차이점은 `cover` 속성인 경우 화면을 가득 채울 때까지 확대됩니다.
