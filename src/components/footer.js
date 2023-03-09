@@ -1,8 +1,8 @@
 import * as React from "react";
 
-const Footer = ({ onChange }) => (
-  <footer className="footer" onClick={onChange}>
-    COPYRIGHT © 2023 SK Planet. ALL RIGHT RESERVED.
+const Footer = () => (
+  <footer className="footer">
+    COPYRIGHT © 2023 <span className="bold">SK Planet.</span> ALL RIGHT RESERVED.
   </footer>
 );
 

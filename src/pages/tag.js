@@ -6,12 +6,13 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 import { MEMBERS } from "../members";
+import TagList from "../components/tagList";
 
 const Tag = ({ data, location }) => {
   const { search } = location;
-  const tagName = search.replace("?tag=", "");
+  const tagName = search?.replace("?tag=", "");
 
-  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TechTopic`;
+  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TECH TOPIC`;
   const posts = data.allMarkdownRemark.nodes.filter((item) =>
     item.frontmatter.tags.includes(tagName)
   );
@@ -31,7 +32,6 @@ const Tag = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <div className="tag-box">
-        <span>{tagName}</span>
         <h1>{tagName}</h1>
       </div>
       <ol style={{ listStyle: `none` }}>
@@ -48,11 +48,7 @@ const Tag = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 {post.frontmatter.tags && (
-                  <div className="tags">
-                    {post.frontmatter.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
+                  <TagList tags={post.frontmatter.tags} />
                 )}
                 <header>
                   <h2 className="title">
@@ -83,7 +79,7 @@ const Tag = ({ data, location }) => {
 };
 
 export const Head = () => {
-  return <Seo title="Tech" />;
+  return <Seo title="SK플래닛 TECH TOPIC" />;
 };
 
 export default Tag;

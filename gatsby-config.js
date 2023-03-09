@@ -9,13 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `SK플래닛 TechTopic`,
+    title: `SK플래닛 TECH TOPIC`,
     author: {
       name: `공자윤`,
       summary: `SK플래닛 Platform Center`,
     },
     description: `SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.`,
-    siteUrl: `https://techblog.skplanet.com/`,
+    siteUrl: `https://techtopic.skplanet.com/`,
     social: {},
   },
   plugins: [
@@ -109,7 +109,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `SK플래닛 TechTopic`,
+        name: `SK플래닛 TECH TOPIC`,
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -124,8 +124,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://techblog.skplanet.com",
-        sitemap: "https://techblog.skplanet.com/sitemap.xml",
+        host: "https://techtopic.skplanet.com",
+        sitemap: "https://techtopic.skplanet.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

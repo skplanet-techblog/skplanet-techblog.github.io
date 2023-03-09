@@ -6,9 +6,10 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 import { MEMBERS } from "../members";
+import TagList from "../components/tagList";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TechTopic`;
+  const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TECH TOPIC`;
   const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
@@ -21,7 +22,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <ol style={{ listStyle: `none` }}>
+      <ol className="list" style={{ listStyle: `none` }}>
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
           const author = post.frontmatter.author;
@@ -35,13 +36,7 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 {post.frontmatter.tags && (
-                  <div className="tags">
-                    {post.frontmatter.tags.map((tag) => (
-                      <Link to={`/tag?tag=${tag}`} key={tag}>
-                        <span>{tag}</span>
-                      </Link>
-                    ))}
-                  </div>
+                  <TagList tags={post.frontmatter.tags} />
                 )}
                 <header>
                   <h2 className="title">
@@ -72,7 +67,7 @@ const BlogIndex = ({ data, location }) => {
 };
 
 export const Head = () => {
-  return <Seo title="Tech" />;
+  return <Seo title="SK플래닛 TECH TOPIC" />;
 };
 
 export default BlogIndex;
