@@ -238,7 +238,7 @@ a:focus {
   position: sticky;
   top: 0;
   width: 100vw;
-  padding: 3rem 0;
+  padding: 3rem 0 1.5rem 0;
   margin: 0;
   display: flex;
   background-color: #ffffff;
@@ -263,12 +263,13 @@ a:focus {
 }
 
 .logo {
-  align-items: end;
+  align-items: center;
 }
 
 .logo img {
   margin-right: 1rem;
   width: 91px;
+  padding-bottom: 20px;
 }
 
 .logo a {
@@ -289,7 +290,6 @@ a:focus {
 
 .menu a:last-child {
   margin-right: 0;
-  line-height: 1rem;
 }
 
 .menu a.active {
@@ -541,6 +541,7 @@ main ol.list li:first-child .post-list-item {
   .logo img {
     width: 40px;
     margin-right: 0.375rem;
+    padding-bottom: 10px;
   }
   .logo a {
     font-size: 0.7rem;

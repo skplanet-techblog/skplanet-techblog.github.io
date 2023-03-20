@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import dayjs from "dayjs";
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -20,7 +21,7 @@ const BlogPostTemplate = ({
       >
         <header>
           <h2 itemProp="headline">{post.frontmatter.title}</h2>
-          <p>{post.frontmatter.date}</p>
+          <p>{dayjs(post.frontmatter.date).format("YYYY.MM.DD")}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
