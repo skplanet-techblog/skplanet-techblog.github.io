@@ -10,7 +10,7 @@ import TagList from "../components/tagList";
 
 const Tag = ({ data, location }) => {
   const { search } = location;
-  const tagName = search?.replace("?tag=", "");
+  const tagName = decodeURI(search?.replace("?tag=", ""));
 
   const siteTitle = data.site.siteMetadata?.title || `SK플래닛 TECH TOPIC`;
   const posts = data.allMarkdownRemark.nodes.filter((item) =>

@@ -6,7 +6,7 @@ const TagList = ({ tags }) => {
   return (
     <div className="tags">
       {tags.map(tag => (
-        <Link to={`/tag?tag=${tag}`} key={tag}>
+        <Link to={`/tag?tag=${encodeURI(tag)}`} key={tag}>
           <span className={UXTagList.includes(tag) ? '' : 'gray'}>{tag}</span>
         </Link>
       ))}

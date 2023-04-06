@@ -595,7 +595,7 @@ main ol.list li:first-child .post-list-item {
   }
   .post-list-item .tags span {
     font-size: 0.625rem;
-    padding: 0.25rem 0.375rem;
+    padding: 0.25rem;
     margin-right: 0.25rem;
   }
   .blog-post-nav ul {
