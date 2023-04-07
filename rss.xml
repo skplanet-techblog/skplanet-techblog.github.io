@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 06 Apr 2023 08:59:25 GMT</lastBuildDate><item><title><![CDATA[Spot by NetApp을 활용한 AWS EKS 운영 비용 절감 사례]]></title><description><![CDATA[최근 트렌드에 따라 많은 서비스들이 온프레미스 환경에서 클라우드 환경으로 전환을 진행하고 있습니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Apr 2023 04:32:21 GMT</lastBuildDate><item><title><![CDATA[Spot by NetApp을 활용한 AWS EKS 운영 비용 절감 사례]]></title><description><![CDATA[최근 트렌드에 따라 많은 서비스들이 온프레미스 환경에서 클라우드 환경으로 전환을 진행하고 있습니다. 
 하지만 전환 이후 예상보다 높은 운영 비용이 발생하는 케이스가 있고, 이러한 경우 각 서비스에 맞는 비용 최적화 과정이 필요합니다. 
 저희 팀 역시 운영중이던 챗봇 서비스(RB Dialog, https://www.rbdialog.co.kr…]]></description><link>https://techtopic.skplanet.com/spotbynetapp/</link><guid isPermaLink="false">https://techtopic.skplanet.com/spotbynetapp/</guid><dc:creator><![CDATA[leejun]]></dc:creator><pubDate>Thu, 06 Apr 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;최근 트렌드에 따라 많은 서비스들이 온프레미스 환경에서 클라우드 환경으로 전환을 진행하고 있습니다. &lt;br/&gt;
 하지만 전환 이후 예상보다 높은 운영 비용이 발생하는 케이스가 있고, 이러한 경우 각 서비스에 맞는 비용 최적화 과정이 필요합니다. &lt;br/&gt;
@@ -16,7 +16,7 @@
 &lt;li&gt;Spot 인스턴스는 On-Demand 인스턴스 대비 최대 90% 까지 할인을 받을 수 있으며, Spot 마켓 상황에 따라 다를 수 있지만 보통 가장 높은 할인을 받을 수 있습니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;하지만 Spot 인스턴스는 Amazon EC2에서 여유 있는 미사용 서버들을 사용하는 것이기 때문에, 언제든 다시 회수되어 종료될 수 있습니다. 회수 2분 전 알림을 받을 수 있지만 AWS EKS 환경에서 새로운 노드를 띄우는 시간만 보통 2분 이상이 소요되기 때문에, 이러한 갑작스러운 종료 상황을 대처하기가 어렵습니다. &lt;br/&gt;
-그렇기 때문에 일반적으로 안정성이 크게 문제되지 않는 테스트나 개발 환경 등에서 활용할 수 있습니다. 또한 최대 90%까지 할인을 받을 수 있지만, 저희 팀의 경우 평균적으로 약 60% 정도의 할인을 받아 사용하고 있습니다. Spot 인스턴스의 할인율은 인스턴스 타입과 시기, 여러 상황에 따라 차이가 발생할 수 있습니다.&lt;/p&gt;
+그렇기 때문에 일반적으로 안정성이 크게 문제되지 않는 테스트나 개발 환경 등에서 활용할 수 있습니다. Spot 인스턴스의 할인율은 인스턴스 타입과 시기, 여러 상황에 따라 차이가 발생할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;일반적으로 클라우드 운영 비용 최적화를 위해서는 Spot 인스턴스와 RI를 최대한 많이 활용하고, On-Demand 인스턴스는 최소한으로 사용하는 것이 좋습니다. 하지만 적절한 비용 최적화를 위해서는 서비스별 여러 특성과 변수들을 고려해야 하기 때문에, 꾸준한 노력과 관리가 필요합니다. &lt;br/&gt;
 이렇게 까다로운 비용 최적화 과정에 대한 부담을 Spot by NetApp 솔루션을 통해서 덜어낼 수 있습니다. &lt;br/&gt;
 Spot by NetApp의 강점은 높은 할인율을 제공하는 Spot 인스턴스를 사용하면서도 SLA를 보장하여, 운영 환경에서도 무중단으로 서비스가 가능하도록 해준다는 것입니다. &lt;br/&gt;
