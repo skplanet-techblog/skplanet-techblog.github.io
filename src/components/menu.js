@@ -2,6 +2,8 @@ import * as React from "react";
 import { Link } from "gatsby";
 import facebook_1x from "../images/facebook_1x.png";
 import facebook_4x from "../images/facebook_4x.png";
+import insta_1x from "../images/insta_1x.png";
+import insta_4x from "../images/insta_4x.png";
 
 const Menu = ({ location }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
@@ -21,15 +23,28 @@ const Menu = ({ location }) => {
       >
         Recruit
       </a>
-      <a 
+      <a
         href="https://facebook.com/readme.skp"
         target="_blank"
         rel="noreferrer"
       >
-        <img 
+        <img
           srcSet={`${facebook_1x} 36w, ${facebook_4x} 144w`}
           sizes={`(max-width: 419px) 20px, 36px`}
-          src={facebook_4x} alt="facebook" 
+          src={facebook_4x}
+          alt="facebook"
+        />
+      </a>
+      <a
+        href="https://www.instagram.com/sk.planet.design"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          srcSet={`${insta_1x} 36w, ${insta_4x} 144w`}
+          sizes={`(max-width: 419px) 20px, 36px`}
+          src={insta_4x}
+          alt="facebook"
         />
       </a>
     </div>
