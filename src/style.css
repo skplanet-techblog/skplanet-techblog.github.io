@@ -377,10 +377,12 @@ main ol.list li:first-child .post-list-item {
 
 .post-list-item .tags {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .post-list-item .tags a {
   text-decoration: none;
+  margin-bottom: 0.2rem;
 }
 
 .post-list-item .tags span {
