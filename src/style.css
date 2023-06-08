@@ -372,7 +372,7 @@ main ol.list li:first-child .post-list-item {
 }
 
 .post-list-item header {
-  margin: 2rem 0;
+  margin: 1.3rem 0 2rem 0;
 }
 
 .post-list-item .tags {
@@ -382,7 +382,7 @@ main ol.list li:first-child .post-list-item {
 
 .post-list-item .tags a {
   text-decoration: none;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.7rem;
 }
 
 .post-list-item .tags span {
@@ -594,6 +594,9 @@ main ol.list li:first-child .post-list-item {
   .post-list-item p,
   .post-list-item small {
     font-size: 0.75rem;
+  }
+  .post-list-item .tags a {
+    margin-bottom: 0.2rem;
   }
   .post-list-item .tags span {
     font-size: 0.625rem;
