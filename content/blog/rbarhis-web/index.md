@@ -1,6 +1,6 @@
 ---
 title: "RB ARHIS 브랜드 웹사이트 구축 스토리"
-date: "2023-03-09"
+date: "2023-03-08"
 tags: ["branding", "motif", "responsive", "parallax-scroll"]
 author: "hyuna"
 description: "RB ARHIS 브랜드 웹사이트 구축 스토리"
