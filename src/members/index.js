@@ -4,6 +4,7 @@ import neotf from "./images/neotf.png";
 import hyuna from "./images/hyuna.png";
 import leejun from "./images/leejun.png";
 import nhs from "./images/nhs.png";
+import kyuho from "./images/kyuho.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -43,5 +44,11 @@ export const MEMBERS = {
     team: "Media솔루션개발팀", 
     description: "Cloud Streaming과 가상화 기술을 통해 보다 나은 서비스를 제공하고자 새로운 기술과 가치를 만들어가는 엔지니어입니다.", 
     thumbnail: nhs, 
+  }, 
+  kyuho: {
+    name: "황규호", 
+    team: "IoT개발팀", 
+    description: "다양한 센서로 취득한 방대한 양의 데이터를 AI를 활용하여 보다 더 가치 있는 정보로 변환하기 위해 노력하고 있습니다.", 
+    thumbnail: kyuho, 
   }, 
 };
