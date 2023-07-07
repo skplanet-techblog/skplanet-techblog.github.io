@@ -1,11 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Jul 2023 06:05:39 GMT</lastBuildDate><item><title><![CDATA[초분광 기술과 IoT의 접목 사례]]></title><description><![CDATA[초분광 기술은 초분광 센서를 활용하여 사람이 볼 수 있는 가시광선과 볼 수 없는 적외선, 자외선까지 빛을 세부적으로 분해하고 데이터화하는 것입니다. 이러한 초분광 기술에 AI를 접목하면, 생산공장에서 품질관리, 불량품 검출, 공정 자동화 등 다양한 영역에 적용할 수 있습니다. SK Planet은 초분광 기술에 자체적으로 개발한 AI…]]></description><link>https://techtopic.skplanet.com/hyperspectral/</link><guid isPermaLink="false">https://techtopic.skplanet.com/hyperspectral/</guid><dc:creator><![CDATA[kyuho]]></dc:creator><pubDate>Tue, 11 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;초분광 기술은 초분광 센서를 활용하여 사람이 볼 수 있는 가시광선과 볼 수 없는 적외선, 자외선까지 빛을 세부적으로 분해하고 데이터화하는 것입니다.&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Jul 2023 06:15:23 GMT</lastBuildDate><item><title><![CDATA[초분광 기술과 IoT의 접목 사례]]></title><description><![CDATA[초분광 기술은 초분광 센서를 활용하여 사람이 볼 수 있는 가시광선과 볼 수 없는 적외선, 자외선까지 빛을 세부적으로 분해하고 데이터화하는 것입니다. 이러한 초분광 기술에 AI를 접목하면, 생산공장에서 품질관리, 불량품 검출, 공정 자동화 등 다양한 영역에 적용할 수 있습니다. SK Planet은 초분광 기술에 자체적으로 개발한 AI…]]></description><link>https://techtopic.skplanet.com/hyperspectral/</link><guid isPermaLink="false">https://techtopic.skplanet.com/hyperspectral/</guid><dc:creator><![CDATA[kyuho]]></dc:creator><pubDate>Tue, 11 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;초분광 기술은 초분광 센서를 활용하여 사람이 볼 수 있는 가시광선과 볼 수 없는 적외선, 자외선까지 빛을 세부적으로 분해하고 데이터화하는 것입니다.&lt;br&gt;
 이러한 초분광 기술에 AI를 접목하면, 생산공장에서 품질관리, 불량품 검출, 공정 자동화 등 다양한 영역에 적용할 수 있습니다.&lt;br&gt;
 SK Planet은 초분광 기술에 자체적으로 개발한 AI를 접목하여 사업화를 하고 있으며, 이와 관련된 몇 가지 상용 사례를 소개하고자 합니다.&lt;/p&gt;
 &lt;h2&gt;초분광 기술 개요&lt;/h2&gt;
 &lt;p&gt;초분광 기술은 사람이 눈으로 볼 수 있는 R, G, B의 가시광선 영역을 포함하여 적외선, 자외선 영역의 빛을 세부적으로 분해하는 것입니다. 초분광 카메라는 공간 정보와 분광 기술을 더해 각 파장대의 밴드를 세분화하여 3차원 데이터를 생성합니다.&lt;br&gt;
 특히, 초분광 기술은 각 이미지 픽셀을 조밀한 연속적인 스펙트럼 정보로 표현하여 데이터 큐브¹ 형태로 구성합니다. 데이터 큐브에 저장된 데이터를 통해 객체의 상태, 구성, 특징, 변이를 도출하여 객체를 식별하거나 객체의 결함 정도를 측정할 수 있습니다.&lt;br&gt;
 모든 물체는 사람의 손금과 같은 고유한 스펙트럼을 가지고 있는데, 초분광 기술은 이러한 특징을 활용하여물체를 식별할 수 있습니다. 따라서 사람의 눈으로 보지 못하는 영역의 정보를 얻을 수 있는 기술입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./hyperspectral-01.png&quot; alt=&quot;그림1. 초분광 기술 특징&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e30b478e5220791547596a03cd01dada/eb4a1/hyperspectral.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAACHVAAAh1QEEnLSdAAADD0lEQVR42j2Sf0jUdxjHn+siZkl2lZYk98PP56uWzHS2dllt/dgaTgqaYNIvJqbWRrbSopK6PLKzDEtu63Cddf0EZ6GViVE4Z6hlczD00P2gpafdrnNZVP76fr+fd9wF/fHAwwPvF6/n4SH/SdvkTiLqNoWl/xER5bKkHQ6PIqK+e21aWZa1AAjqxGcb7LWLptuaTifW+k7prw44yPFkF/0PigslIucAMcaIc07UhQEKhEJPmi9HZh8ZpIzbWQ8fDQdnwVIm6MXw8LFL91pjKassMcpWZ55pu2Weerj6Q8lkDGecT5X0UUFYABoIJQMwFz2+aMluvF9hb366FUASgI8VoX4iKyLuxfOh/XvKr6bM2eSwpBT/Yp2/t7GUMqtzck2kiZcMGsr7jWJjY98BX41OiJ4nXrXp7/43Je3/vlxf2Tp6vq1XvB4bVyAEBNDl9T61ljkux3yQsDnF8FXRqrmp1mXTlhYmSswUxjmfxRifzTkP9DPputuP9BOVWPTtFiTv2IGE3RUIWZuO3KMHhFCDQPdgf5/le1eDOays5WDSzWeHDD97reT0fAMikox6jTHJPIlzrmGMTSJXx6BIKsoXketXis9XfyRyswoErYkRXxZ8rSqyCiFE95+9PcX7fjgfr915ZoXB+ejTiPK7a0Is15bEmAy6gBnjko4xNotzHkLDMmBvvgN9TjZSMlej0nkBzrqzaPn9V1VRVABwP2hvtWwvdizWZfxYoM9v2Bued6OIMqo3YSGRFG3UGBYkazjn2oAlQR2H3/cK9Z3/4GzDObj7H0MeB3xen+rxeCDLcnfD7XpL9h7rginm/C/mrDueNiO1ZN205YWrJGYK3E7HOA+TJOnd2/j9/6HqShu2XmjB5op82F3b0fdXF0bGxtSRkRHIiuJ2VTmPbbT9tFhn7/jOWDe0a26Nr5DOeTLziDQ8OlobHZ+gff8246OjqKnvxMHaNpReP4PejhIMdbVjQkVwXwA9FafKd67dXbxweuHFLfNsjTnhpU3bJh+5kzZfHxnKpBiKD6WgXcDwLfYikFcx2WTNAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;그림1. 초분광 기술 특징&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e30b478e5220791547596a03cd01dada/f058b/hyperspectral.png&quot;
+        srcset=&quot;/static/e30b478e5220791547596a03cd01dada/c26ae/hyperspectral.png 158w,
+/static/e30b478e5220791547596a03cd01dada/6bdcf/hyperspectral.png 315w,
+/static/e30b478e5220791547596a03cd01dada/f058b/hyperspectral.png 630w,
+/static/e30b478e5220791547596a03cd01dada/40601/hyperspectral.png 945w,
+/static/e30b478e5220791547596a03cd01dada/eb4a1/hyperspectral.png 1083w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;초분광 기술의 주요 응용 분야는 제조(2차 전지, 제약, 식품 등), 국방, 환경, 문화재 등의 영역에서 물체 식별, 결함 검출 등의 목적으로 많이 사용됩니다. 이러한 초분광 기술에 AI 기술을 접목하면, 기존 대비 훨씬 좋은 성능의 기능을 구현할 수 있습니다.&lt;br&gt;
 먼저, 초분광과 AI를 활용한 솔루션 구조를 보면 광원을 통하여 반사되는 물질의 고유한 스펙트럼을 초분광센서를 통하여 데이터 큐브 형태로 취득하게 됩니다. 이후 현장 데이터 수집 장치에 저장한 후, 각 AI 모델이 우리가 얻고자 하는 결과물에 부합하는지를 판단합니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
