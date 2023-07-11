@@ -14,33 +14,39 @@
   font-family: "Poppins";
   font-weight: 400;
   src: url("../src/fonts/Poppins/Poppins-Regular.woff") format("woff");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Poppins";
   font-weight: 500;
   src: url("../src/fonts/Poppins/Poppins-Medium.woff") format("woff");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   src: url("../src/fonts/Poppins/Poppins-SemiBold.woff") format("woff");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Poppins";
   font-weight: 700;
   src: url("../src/fonts/Poppins/Poppins-Bold.woff") format("woff");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Poppins";
   font-weight: 800;
   font-style: bold;
   src: url("../src/fonts/Poppins/Poppins-ExtraBold.woff") format("woff");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Poppins";
   font-weight: 900;
   src: url("../src/fonts/Poppins/Poppins-Black.woff") format("woff");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Noto Sans CJK KR";
@@ -48,6 +54,7 @@
   src: url("../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Regular.woff")
     format("woff");
   unicode-range: U+AC00-D7A3;
+  font-display: fallback;
 }
 @font-face {
   font-family: "Noto Sans CJK KR";
@@ -55,6 +62,7 @@
   src: url("../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Medium.woff")
     format("woff");
   unicode-range: U+AC00-D7A3;
+  font-display: fallback;
 }
 @font-face {
   font-family: "Noto Sans CJK KR";
@@ -63,6 +71,7 @@
   src: url("../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Bold.woff")
     format("woff");
   unicode-range: U+AC00-D7A3;
+  font-display: fallback;
 }
 @font-face {
   font-family: "Noto Sans CJK KR";
@@ -71,6 +80,7 @@
   src: url("../src/fonts/Noto_Sans_CJK_KR/NotoSansCJKkr-Black.woff")
     format("woff");
   unicode-range: U+AC00-D7A3;
+  font-display: fallback;
 }
 
 *,
