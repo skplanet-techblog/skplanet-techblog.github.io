@@ -5,6 +5,7 @@ import hyuna from "./images/hyuna.png";
 import leejun from "./images/leejun.png";
 import nhs from "./images/nhs.png";
 import kyuho from "./images/kyuho.png";
+import hyungjoo from "./images/hyungjoo.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -52,5 +53,12 @@ export const MEMBERS = {
     description:
       "다양한 센서로 취득한 방대한 양의 데이터를 AI를 활용하여 보다 더 가치 있는 정보로 변환하기 위해 노력하고 있습니다.",
     thumbnail: kyuho,
+  },
+  hyungjoo: {
+    name: "정형주",
+    team: "IoT개발팀",
+    description:
+      "ESG 분야 신규 솔루션 발굴/내재화 및 신규 고객사 확보를 위해 노력하고 있습니다.",
+    thumbnail: hyungjoo,
   },
 };
