@@ -1,4 +1,216 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 11 Jul 2023 06:06:09 GMT</lastBuildDate><item><title><![CDATA[초분광 기술과 IoT의 접목 사례]]></title><description><![CDATA[초분광 기술은 초분광 센서를 활용하여 사람이 볼 수 있는 가시광선과 볼 수 없는 적외선, 자외선까지 빛을 세부적으로 분해하고 데이터화하는 것입니다. 이러한 초분광 기술에 AI를 접목하면, 생산공장에서 품질관리, 불량품 검출, 공정 자동화 등 다양한 영역에 적용할 수 있습니다. SK Planet은 초분광 기술에 자체적으로 개발한 AI…]]></description><link>https://techtopic.skplanet.com/hyperspectral/</link><guid isPermaLink="false">https://techtopic.skplanet.com/hyperspectral/</guid><dc:creator><![CDATA[kyuho]]></dc:creator><pubDate>Tue, 11 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;초분광 기술은 초분광 센서를 활용하여 사람이 볼 수 있는 가시광선과 볼 수 없는 적외선, 자외선까지 빛을 세부적으로 분해하고 데이터화하는 것입니다.&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 22 Aug 2023 00:33:43 GMT</lastBuildDate><item><title><![CDATA[SK Planet의 DTS 기술 적용 사례]]></title><description><![CDATA[DTS(Distributed Temperature Sensor)는 광섬유 센서를 활용하여 최대 50Km 길이의 구간을 미터 간격으로 온도를 측정하는 기술입니다. 이러한 DTS 기술에 AI를 접목하면 화학, 정유, 제조, 철도, 항만, 펜스, 터널 등의 분야에서 안전관리를 목적으로 적용할 수 있습니다. SK Planet은 DTS 기술에 자체 개발한 AI…]]></description><link>https://techtopic.skplanet.com/dts/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dts/</guid><dc:creator><![CDATA[hyungjoo]]></dc:creator><pubDate>Mon, 21 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;DTS(Distributed Temperature Sensor)는 광섬유 센서를 활용하여 최대 50Km 길이의 구간을 미터 간격으로 온도를 측정하는 기술입니다.&lt;br&gt;
+이러한 DTS 기술에 AI를 접목하면 화학, 정유, 제조, 철도, 항만, 펜스, 터널 등의 분야에서 안전관리를 목적으로 적용할 수 있습니다.&lt;br&gt;
+SK Planet은 DTS 기술에 자체 개발한 AI를 접목하여 사업화하고 있으며, 이와 관련된 몇 가지 상용 사례를 소개하고자 합니다.&lt;/p&gt;
+&lt;h2&gt;DTS 기술 개요&lt;/h2&gt;
+&lt;p&gt;DTS(분산 온도 센서) 기술은 광섬유 케이블이 설치된 구간에서 온도를 실시간으로 측정할 수 있습니다. 중앙 서버는 이러한 온도 데이터를 수집하고 목적에 맞게 처리합니다.&lt;br&gt;
+DTS 는 광섬유 케이블의 시작 지점에서 끝 지점까지 광학 신호를 이용하여 온도를 측정합니다. 이때 광섬유 케이블 자체가 센서로 작용하며, 일반적인 전기 온도 센서보다 더 넓은 온도 범위와 더 높은 정확도로 온도를 측정합니다.&lt;/p&gt;
+&lt;p&gt;DTS의 작동 원리는 광섬유에 레이저 빛을 주입하고, 광섬유의 굴절률을 이용하여 주변 온도 변화에 따른 빛의 속도 변화를 감지하는 것입니다. 빛의 속도는 온도와 관련되기 때문에 광케이블 주변의 온도 변화가 빛의 속도에 영향을 미치게 됩니다. 이러한 정보가 광섬유 케이블을 따라 관리 시스템으로 전송됩니다. 관리 시스템은 이러한 데이터를 수집하여 가공하면, 실시간으로 광케이블 주변의 온도 변화를 알 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/57ed5c8ed3f78964c6134067607a0b46/c8ad9/dts_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.10126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABcRAAAXEQHKJvM/AAADBklEQVR42h2Qa2hTdwDF/+isc92Gsi8bVb+NPRCpynBQNjYRP6zMfSjt2MZWQW2E0a2tihtMGLgN1A8qax2r24pVWXFrsrWVVgytxrwfTXKbJjePJvfRxDZNk+bR25v7+B+5fjocOOfH4RBJ0R/Fs6X0x1dcaOv30mM3Zukn19zwp/Irqk4dhao8MxXM7c2ebWqsxB4dr1TKfR6HoycZCn8bc7q/8dgdfTzPdwLYAoAQAAhwaxh6zNPEcs2wSHGLlImmoKqaYZVxZ7LHaRk+n7KNLkZnfVgMByAV8lCqRWiKbGSyuqq8SCl9BtSK63XdEeIwEuLpezaB7vl+GLtaunWrO2qEV80zzJmJKdunUNfZarkMPuCHz2wGc2cIicfTKBSLIoDGZws3FA18YR1CbgXzyyVcjwg499ckTv0wSFP8kgEsj9siX4/NMG8COF2T6vczy2X7tCtiD/vnrc6pyVvmkdu/qrGZl1AUCJEUHVJdw7oKSBTYkAEVQB2g1Jiv6zWrf6HzhKn3VUKee+XQyas7Wj6/0PTFj8M7e/pHd+7bQRoIIQ3nW/e8jIHdm0itWoEkK8i7H0D4fxC8eQDszV8Q++0cfcLOgQKS1RtvN0pj4/eaIJdeDw72fvTwWneb/4/vjgj+6ebbV37edfHway90dXy2mRinVqsSFrxuMJNjsN+5Ae/dm/D9c4tm07wBlCfdiZaouEJciVx7LBkXs74JPuOdEsTZB1w6k4yX6vWDpoujhDx/iJDCWk1fLVV0SYde0aCvqdDLhurQNIDKiiYz6fxXHC++7QnFPrxvne5grP+2pR1jR/NzD1t/GvyvddveLz8gb5maGw90HSDvXrDh8kQMhaUsFjIcOEGEKIrIP8miLm9Ao0CSX0KQicLu8sHhCcDlZ2D3BJERcuj//W/sfr8T+4+asG1/F0jHgC/+p41js6tVNpFbY+fFEsvlK2y5KrE1SY5LdT0WSYkTs+H5UY8/bHH7gpZAKGJxegKW1ELacun6Xcv2dzrNbxwxmbc2d5mfArK3WZjbCy2SAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;그림1. DTS 기술 설명&quot;
+        title=&quot;&quot;
+        src=&quot;/static/57ed5c8ed3f78964c6134067607a0b46/f058b/dts_01.png&quot;
+        srcset=&quot;/static/57ed5c8ed3f78964c6134067607a0b46/c26ae/dts_01.png 158w,
+/static/57ed5c8ed3f78964c6134067607a0b46/6bdcf/dts_01.png 315w,
+/static/57ed5c8ed3f78964c6134067607a0b46/f058b/dts_01.png 630w,
+/static/57ed5c8ed3f78964c6134067607a0b46/40601/dts_01.png 945w,
+/static/57ed5c8ed3f78964c6134067607a0b46/78612/dts_01.png 1260w,
+/static/57ed5c8ed3f78964c6134067607a0b46/c8ad9/dts_01.png 1564w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;DTS 기술을 활용한 주요 응용 분야는 오일 파이프 라인, 가스 파이프 라인, 전력 케이블, 지열 시스템 등의 배관이나 선로에 광 케이블을 설치하여 상태를 모니터링하는데 사용됩니다. 이 외에도 환경 모니터링, 해양 과학, 지질 조사,  화재 감지, 군사, 물리 보안 등에도 활용 가능합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/da5f65b06a2315037e8895be9ce61a8f/f2364/dts_02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.9620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABcRAAAXEQHKJvM/AAAC9ElEQVR42mVSW08TYRDd32D4D/6Bmmg08uAlMRqNkhgvQUCN0YANYrygglEMJqgBFAQv3CoQTTWUFkmBYOQqSltqLdAutGxpl23LbrvC9rr9vmNafNJJzpyXyZmZM8MU1ejF4vvvUFTdTQurdMji/IMeaJ98hLZOj/KnW7z7cis0F1uRX/qGai68pPuvdeGFrv/zoMnQPDQ0/NpoNHbo9fpqBgAPEACguUQpVDWDf+P93AbqRtfR9DWIqgEeZneCsgsOGE0DGBkZgdlsxujoqIfp1HXzza2vUFJ0jo5PTmLsmxXsEgdJ3sQznQmVL3oxObeAsCTD6uIwNcfSmXkfXVfUbPcMt+JVBWEtJYoi0um0leHZWd5m+YbpiTEai8fBrQYQEgRsxBJo0BlQ09IDl3cV3kAIVncAFlbApNNPxThASYYG/Cv09+8oUZQYCCF2xu208q8MNrQNLdPm583Qd3ag8cM0bHZnbtVkXMlxWI7Dv76B74t+zC6FkRVMp5KQZRkej4dEIhFEo1E7Mz7cxze09+HmoyZ69NgJVN1/jCuV9TCZx3NC0Wg0xx5ehMXlAxuMg08ACgXiMQUOFws3yxKO46Aoip35/kXP19wpQ93NAvrwxiXcKj4Czc49GDAOI0ko5FgiJ5gmW1dbXQuhW9+PmVkLCKGwOVwQhCCRRBGqqtqZicEu/m5pAaq0J2mlthC3yk7jwL690L1th25exifbCtT4JsKhEJxuD8ZnrNDs0KCionzLCiEAr9dDBCEISZLsTGNjvf/gru24WnI8c/jwIbJrdz7ZlpdHGp83EH9EISNTP0gqmSDJZIq42GUyv+giPp+PyLJMg+EIaTdME4vdqTp//UI4HJ5jTEaDfOrMWdy7fR1P62qh1Zaj5PxF1NbWoqujHb3d77Le5P7T2N+P1pYW/PzpyE23Lm2gbcCBJY4Ht+KFEostZB/bDyAiRaKiEAxJmUxGAiBRSqV0Ov0fVFXNQvxbFwDgA8BRSkOpVGroD8p30+58zSWyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;그림2. DTS 솔루션 예&quot;
+        title=&quot;&quot;
+        src=&quot;/static/da5f65b06a2315037e8895be9ce61a8f/f058b/dts_02.png&quot;
+        srcset=&quot;/static/da5f65b06a2315037e8895be9ce61a8f/c26ae/dts_02.png 158w,
+/static/da5f65b06a2315037e8895be9ce61a8f/6bdcf/dts_02.png 315w,
+/static/da5f65b06a2315037e8895be9ce61a8f/f058b/dts_02.png 630w,
+/static/da5f65b06a2315037e8895be9ce61a8f/40601/dts_02.png 945w,
+/static/da5f65b06a2315037e8895be9ce61a8f/78612/dts_02.png 1260w,
+/static/da5f65b06a2315037e8895be9ce61a8f/f2364/dts_02.png 1389w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;시스템 구조를 보면 DTS 인트로게이터 , 광케이블 센서, SK Planet RB Insight , AI Cloud 모델로 구성됩니다. DTS 인트로 게이터는  최대 50km 까지 실시간 온도 데이터를 분석하는 장비입니다. 광케이블 센서는 기존의 광통신 케이블과 같은 스펙의 제품이며, 외부 잡음의 영향을 줄이기 위해 쉴드를 사용해서 안전성을 확보합니다. RB Insight는 DTS 인트로게이터에서 보내는 Low Data를 기반으로 Anomaly Detection을 수행합니다. AI Cloud는 AI 모델링과 모델 업데이트를 담당하며, 주기적으로 RB Insight와 연동됩니다.&lt;/p&gt;
+&lt;h2&gt;DTS 기술 적용 사례&lt;/h2&gt;
+&lt;p&gt;DTS 기술이 적용되는 대표적인 산업분야는 화학, 정유, 제조, 철도, 항만, 펜스, 터널 등으로 주된 목적은 안전관리입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;파이프 라인 누출 감지: 오일이나 가스의 Delivery 파이프 라인에서 Leak 누출을 감지합니다. 실시간 Leak 감지로 사고 방지에 도움이 됩니다.&lt;/li&gt;
+&lt;li&gt;터널 및 지하 공동구 화재 감지: 터널이나 지하 공동구에서 장거리 구간의 화재를 감지합니다. 실시간 화재 감지로 사고 방지에 도움이 됩니다.&lt;/li&gt;
+&lt;li&gt;반응기(Reactor), 용광로(Furnace) 내화 재료의 안전 모니터링: 고열 구조물에 대한 열감지를 합니다. 특정 부위의 이상 탐지를 통한 사고 방지에 도움이 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;파이프 라인 누출 감지&lt;/h3&gt;
+&lt;p&gt;오일이나 가스 플랜트 단지는 수만평에서 수십만평 규모이며, 이러한 넓은 지역에 복잡한 파이프 라인이 설치되어 있습니다.&lt;br&gt;
+파이프 라인 누출 감지를 위하여 기존 방식인 육안 검사나 스팟 단위 전수 검사는  한 달 이상 소요되는데, DTS 기술을 활용하면 실시간으로  전수 검사를 할 수 있습니다. 또한 이러한 플랜트에 있는 특정 장치나 시스템이 안정성 평가를 위하여 온도 정보가 필요하며, 이러한 정보는 관리 시스템에 전송됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 519px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4da3f92adaff06f2773785e2c3dc7838/b23ad/dts_03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFJ0lEQVR42h3M6Y8bBwGG8fkfUD9UgFBbeqgHhYJaKVIJSgsRIkpbEqmBpg2BFCKqqq2KBEJVkVCitFGyIaGJ413f9ozn8NgzHh9je3ysb4/t3bWb3e69m+wmq6QJERIS33hQ9sNPz/vpFc4Fo/wjFGUiFOVCKMalmMylqMyFcJyJcJzP/CKnpyJMhER02yHjlMjVGlxVDU55Q5yejOz2jC/K2YCIMBGMcM4f5ozXz+WYTLVRp96sMzMe05mZY1ISEbU43mgEv5pENHP8U9Q4H4rjVQ2kTAHVdrgiJ/nMF0X4PCCh5IoU6i2cVg8tX2RKklCSKtVph+npKrVqhVyhgKQn0fQkflkloCbI2ja1RgN3bkQknefv3jDC2YBE1MxilCpYxSKqmcLMWlSrDv1mnbSeRI7L5FIpQhERPZUiqCYJiAr+qIRhGlwNBvEEgoRkEcET8nPOF+C8L0g4Nomm+MilNYyEhirGmZISTEoaKU3BExaZkhOk0haypiMZFqaVwSOqSFqKrBFFqLhjqu6Y3sJ13MVbOOUqihQiEryMrvpIpSQkXSeg6FxVUvgVnfP+CFpcIm+kuBiI4I3KVEpZAtFJBHe8hD3dpNru0XRs3HaX8cZdGqMVMqUi2ayKmQyhyj4sUyVhGgT1NOG4ytVAmIiRodbtY1siE/4Agt1bwqp1sZwyBafItcVV3MXbjNbvsrC8wdL6FuOVbfKtMUapSlSTkdUIqbSObJoUag36vSZ6IsDngTjCF3Iaj5bDm7CQrDyNVguz3CRqt4gX22iOi1EfYbsrFIcbpNtf4TdKXAqF8YWnEOUwevwyntAUp6eiCLFcg1i+gWR3idkdpAdHhTZSoUO86CI7AxRniFIeolVmSdavYXWW0Gpf4rcaBNJVpGwFv1XHZ04jDFf/Q3P2OpmkQrHSpD53k87yv+ks3qe1cJ/m/D0a8/+ifu0e019+TWX8Nc7oDs7oNs7cHUqzt8k9MHObzHAHobt8n4SW5v2D3+fPv/0lyWyL5uI9aqOdXdXRDpW5W1Rmb1J6YLhDYXgTu79Nzr1B1r2B1buO2d3EaK8jdBbvoSpJTh74ER+9/Qa6Vae5cJfa7Da12ZtUZrapzmzjDLcoDbYoDraw+zfIuVtk3E0yvQ3SnU3M1jpGcx2hNX8HVU3xu32P8+7r+zDsHvXRLaozm1SH16kMNikPNnGGmziDDYr9DezeBvneGtnOGlZ7lXRzFbO+TGp6CaF5bYe4pPGbvU/x7sEfo+gFpue2cPqrlAfrlPsbOP11HHdtV8ldo+iuk++sYHdXyHdWybVXyLRXsFrLCM3xNvG4xqGXn+Cdg3tRtQz10Q0qgzUqw3XK7ioVd42yu4LTW6XQnCdbHVJoLWBWZ9DtHkqmTihRYlKyEFqDeRQxzDs/e4EP39yPHI1RaQ7IOw0yhRqGVUBNmrukuITnyiV0NU4s6iMWmeKLi2e54vUgajqKmUbwXDjD3z7+PW+99lM+fu8E3ovnkEKTJOQgSU3ETCkULA1dV8jlDNSERLGQ3d1uu0JCi5G1M3R6bVrdNoL39Adc/PR9zv/lBCeP/Jw3XnmR/Xu+x/49P2DvSy9wYN8ejhx4lTdf/wVHDh/m7bd+xaFDh/nTByc59deP+PXRYxw9fpyjx//AsRPvIbDd4X+bdf77lc2trsYw7cHyn8J76kM++eMRjr32Mq+89DQ/+eGjPP2db/DsY9/iuUce4slvPsTzjz7Mc099lxeff5wnH/k2zzzxGP8HNFuwZH4SztQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;그림3. 파이프라인 누출 감지 예 - 에이피텍&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4da3f92adaff06f2773785e2c3dc7838/b23ad/dts_03.png&quot;
+        srcset=&quot;/static/4da3f92adaff06f2773785e2c3dc7838/c26ae/dts_03.png 158w,
+/static/4da3f92adaff06f2773785e2c3dc7838/6bdcf/dts_03.png 315w,
+/static/4da3f92adaff06f2773785e2c3dc7838/b23ad/dts_03.png 519w&quot;
+        sizes=&quot;(max-width: 519px) 100vw, 519px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;오일이나 가스 플랜드 단지의 Tank, Base, Pipe Line, Jelly 등의 인프라에 적용하여 실시간으로 온도를 탐지합니다.&lt;/li&gt;
+&lt;li&gt;AI 기술을 이용하여 DTS의 데이터를 기반으로  Feature Eng, Model Dev를 통하여 리크방지 Anomaly Detecion을 구현합니다.&lt;/li&gt;
+&lt;li&gt;Anomaly Detecion을 통하여 Leak 및 온도 이상을 실시간으로 감지하여 오일이나 가스 플랜트의 안전 관리에 도움이 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;터널 및 지하공동구 화재 감지&lt;/h3&gt;
+&lt;p&gt;터널이나 지하공동구는 장거리의 인프라로 길게는 수 km로 구성됩니다. 여기에는 기존의 스팟 단위의 화재 감지 시스템이 설치가 되어 있지만, 모든 화재를 탐지하기 어렵습니다.&lt;br&gt;
+DTS 기술은 미터 단위로 온도를 감지할 수 있습니다. 이러한 기능을 수십 km까지 확대 적용할 수 있어서 터널이나 지하공동구에 가장 적합한 기술로 알려져 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1c124e79aa1db4e813a7c2c9f40e59d1/9eaa0/dts_04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABcRAAAXEQHKJvM/AAAC00lEQVR42h3Ra0tTcRzA8UN005ikNN1M3E0925y7ueOmc7dz0p1N3U3dbOZtXmbqAxNsWaGmRATpThdzZWqZiZhiMKnEB9WjhKDwWU96FcFQz9n/F/YGvnzgi/3Y3fj1fWcV3i/OHI8PdXJdzTRXT1eiJr8zHvbTKZ/TCqGACzXWU6xBUwxyaX7yUu7ZGZH4IigVwiN1WT6nUQk5pULAKeV5HPZ7//PB/u46LD2ZSo9Er0LYQ6E6ugrCwTrmencoNTpwDSbH+tFErJctL5MCLhEmBcKMeGEhDxQKAadVC0BXJgQ5LgC8mA//g3tbi7C5mkiPxwbQUE8LMplKwdtAMQ+nhlN3bnRBf6QJ9XX52SZvDZhNhiSff2pWVJgJRdJsVqfORUaDBBmJElSuEyHs287awaetZVh/m0iP3x1BI8NRJFeIwWYzMu2tnlRnqwdam91Io8bZickJ2N7aTGZlYvFSPAdMBgnnuoJDwK2HAF0JpFUF2N72ysHezgbMMffT0/duIZfLjiRSAQT8TiYc9KQa/TT0RVpQMOhj+3s7YP/rx6RJz4+7KCX43ATXEiCgsVYP9ZQJHBYNYBuvnx0wD8Yg0h5Id7Q1Ipp2IKVKCt46kokNdqUaaDtYq7RIXiJizZUERCNtScpSFK+xq4Amy7kTXchjBn+dDWodBGDjN6M/20IuIG36IxwvOLbaDce1Lms6HPLNDkaCf0mLIT19e4ANNFCHWbwMwDDsA1mNz9AWHdgrVIcui5yljHKWspSzpFnLYj0d3j8nV42EAmQyAYzGojA9NQr+BiqhLBGDWimD7lYfOB2VIBFdhpxs3hdJQdZ80GYCnbQAjDohBLwk6LUKILQywOrp6glLlfqNVl00JxbnxpeXHjNrK08Zh62iuUhWOF9FaBb8bvKVu8Yyp9eVJTRqVe/5M1hIyDv3Lu/C6USpmPfy+fyjBauVeFEs5TP/AFzAPjlToUzoAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;그림4. 터널 및 지하공동구 예 - 밴드위버&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1c124e79aa1db4e813a7c2c9f40e59d1/f058b/dts_04.png&quot;
+        srcset=&quot;/static/1c124e79aa1db4e813a7c2c9f40e59d1/c26ae/dts_04.png 158w,
+/static/1c124e79aa1db4e813a7c2c9f40e59d1/6bdcf/dts_04.png 315w,
+/static/1c124e79aa1db4e813a7c2c9f40e59d1/f058b/dts_04.png 630w,
+/static/1c124e79aa1db4e813a7c2c9f40e59d1/40601/dts_04.png 945w,
+/static/1c124e79aa1db4e813a7c2c9f40e59d1/78612/dts_04.png 1260w,
+/static/1c124e79aa1db4e813a7c2c9f40e59d1/9eaa0/dts_04.png 1676w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;터널이나 지하공동구와 같은 인프라에 적용할 수 있으며, 실시간으로 온도를 탐지합니다.&lt;/li&gt;
+&lt;li&gt;AI 기술을 이용하여 DTS 데이터를 기반으로  Feature Eng, Model Dev를 통하여 화재 방지 Anomaly Detecion을 구현합니다.&lt;/li&gt;
+&lt;li&gt;특징 추출: 전처리된 데이터로부터 특징을 추출합니다. 초분광 데이터는 많은 수의 밴드(파장 대역)를 가지고 있어서 특징 추출이 중요합니다. 통계적인 방법이나 주성분 분석(PCA) 등을 사용하여 특징을 선택하거나 추출합니다.&lt;/li&gt;
+&lt;li&gt;Anomaly Detecion을 활용한 온도 이상 변화량을 기반으로 실시간으로 화재를 감지하여 안전 유지에 도움이 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;반응기(Reactor), 용광로(Furnace) 내화 재료의 안전 모니터링&lt;/h3&gt;
+&lt;p&gt;반응기(Reactor), 용광로(Furnace)의 내화 재료는 초고열 특성을 가지고 있어서 일반 센서나 열화상 카메라로 모든 스팟의 온도를 측정하기 어렵습니다. 여기에 DTS와  AI 모델을 적용하면, 실시간으로 정확한 온도를 측정할 수 있어서 관련 장치를 안전하게 운용할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f3b246ef0d02f5b471bd047acdfdb3fe/242e2/dts_05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 29.746835443037973%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgElEQVR42m2Qz0vbcBiH88d48+j/IazgQESPehTpEB2ouIE7uHkYYxWdyNAeBOt+YKuHUXF4GHUrpXW1uE0DSW1NGqPfNonpN8kzrG4w2HN5L8/nObyK22rhex5NIbCumjh+QASomk7DvCCQklvCMMRxfYQQRGGA8AM2VI+P+g11w8QwjI6nLE48IrOcYGxwiO4H08y9+wGNGtiCbPIln1JvOqIQ1xyXvpDdP8Co1SioVeJ7FSZzFulcgdxx8T4YHyWzlGAk1kdX7xSzqZ/gCQhhYyHOh9UXHdFqmJQPN9nbWeO8WqV8UmJh7TlPN99zotX5g7LyeJztxGuGYw/p6X/CfOYM2i4EEV/TSbaTr+6Cl4JiPsv3tzF0XeP8rMD68gAziWny5Qq3r7sWAqV2+gtT16iUjihUVKqWC54DMkAr5/m8u9UJXto2p0dFit8OMW2btmGipiZJ7z6j3rAgipCBROE/RPdXyja+7+O6Lo7j4Hk3SBn89Zqmhtsy/9n+BmGHpZjEoU54AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;그림5. 반응기, 용광로 내화 재료 적용 예 - 요꼬가와&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f3b246ef0d02f5b471bd047acdfdb3fe/f058b/dts_05.png&quot;
+        srcset=&quot;/static/f3b246ef0d02f5b471bd047acdfdb3fe/c26ae/dts_05.png 158w,
+/static/f3b246ef0d02f5b471bd047acdfdb3fe/6bdcf/dts_05.png 315w,
+/static/f3b246ef0d02f5b471bd047acdfdb3fe/f058b/dts_05.png 630w,
+/static/f3b246ef0d02f5b471bd047acdfdb3fe/242e2/dts_05.png 703w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;초고열 시설에 DTS 특수 광센서를 이용하여 실시간으로 부위별 온도를 감지합니다.&lt;/li&gt;
+&lt;li&gt;AI 기술과 DTS 데이터를 기반으로  Feature Eng, Model Dev를 통하여 온도 이상 감지  Anomaly Detecion을 구현합니다.&lt;/li&gt;
+&lt;li&gt;Anomaly Detecion을 통하여 부위별 온도 변화량을 활용하여 특수 시설의 안전 유지에 도움이 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;시사점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;정보 제공: 장거리에 설치된 다양한 시설의 온도 정보를 실시간으로 제공합니다. 이 정보를 활용하여 화재 감지나 안전 모니터링이 가능하고 AI 알고리즘을 결합하여 더 정확하고 다양한 상태 정보를 얻을 수 있습니다.&lt;/li&gt;
+&lt;li&gt;안전 유지: AI 알고리즘을 활용하여 대규모 시설의  안정성을 유지하고, 잠재적인 문제를 예방할 수 있습니다. 국가 시설물, 산업단지, 회사 등에 설치된 관련 장비나 시설의 경쟁력을 강화할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;친환경 기술: DTS 시스템을 적용하면 환경 저해 요소가 없으며, 유해 전파나 유해 물질을 발생시키지 않습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;용어 설명&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DTS(Distributed Temperature Sensor): 분산형 온도 광센서는 라만대역의 광신호 반사파를 이용한 온도 측정 시스템입니다.&lt;/li&gt;
+&lt;li&gt;Anomaly Detecion: 이상 탐지 대부분의 데이터가 보이는 주류 경향을 벗어난 희귀 항목, 사건, 관측값을 식별하는 기술입니다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[초분광 기술과 IoT의 접목 사례]]></title><description><![CDATA[초분광 기술은 초분광 센서를 활용하여 사람이 볼 수 있는 가시광선과 볼 수 없는 적외선, 자외선까지 빛을 세부적으로 분해하고 데이터화하는 것입니다. 이러한 초분광 기술에 AI를 접목하면, 생산공장에서 품질관리, 불량품 검출, 공정 자동화 등 다양한 영역에 적용할 수 있습니다. SK Planet은 초분광 기술에 자체적으로 개발한 AI…]]></description><link>https://techtopic.skplanet.com/hyperspectral/</link><guid isPermaLink="false">https://techtopic.skplanet.com/hyperspectral/</guid><dc:creator><![CDATA[kyuho]]></dc:creator><pubDate>Tue, 11 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;초분광 기술은 초분광 센서를 활용하여 사람이 볼 수 있는 가시광선과 볼 수 없는 적외선, 자외선까지 빛을 세부적으로 분해하고 데이터화하는 것입니다.&lt;br&gt;
 이러한 초분광 기술에 AI를 접목하면, 생산공장에서 품질관리, 불량품 검출, 공정 자동화 등 다양한 영역에 적용할 수 있습니다.&lt;br&gt;
 SK Planet은 초분광 기술에 자체적으로 개발한 AI를 접목하여 사업화를 하고 있으며, 이와 관련된 몇 가지 상용 사례를 소개하고자 합니다.&lt;/p&gt;
 &lt;h2&gt;초분광 기술 개요&lt;/h2&gt;
