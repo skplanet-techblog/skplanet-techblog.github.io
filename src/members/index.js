@@ -6,6 +6,7 @@ import leejun from "./images/leejun.png";
 import nhs from "./images/nhs.png";
 import kyuho from "./images/kyuho.png";
 import hyungjoo from "./images/hyungjoo.png";
+import taehyung from "./images/taehyung.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -60,5 +61,12 @@ export const MEMBERS = {
     description:
       "ESG 분야 신규 솔루션 발굴/내재화 및 신규 고객사 확보를 위해 노력하고 있습니다.",
     thumbnail: hyungjoo,
+  },
+  taehyung: {
+    name: "윤태형",
+    team: "커머스플랫폼개발팀",
+    description:
+      "Elasticsearch, 자연어 처리, ChatGPT 등 검색 시스템에 활용할 수 있는 기술들을 열심히 탐구하는 개발자입니다.",
+    thumbnail: taehyung,
   },
 };
