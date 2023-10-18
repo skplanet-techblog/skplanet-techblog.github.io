@@ -7,6 +7,7 @@ import nhs from "./images/nhs.png";
 import kyuho from "./images/kyuho.png";
 import hyungjoo from "./images/hyungjoo.png";
 import taehyung from "./images/taehyung.png";
+import ogog from "./images/ogog.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -68,5 +69,12 @@ export const MEMBERS = {
     description:
       "Elasticsearch, 자연어 처리, ChatGPT 등 검색 시스템에 활용할 수 있는 기술들을 열심히 탐구하는 개발자입니다.",
     thumbnail: taehyung,
+  },
+  ogog: {
+    name: "최원영, 이희진",
+    team: "OCB UX팀",
+    description:
+      "GUI Designer",
+    thumbnail: ogog,
   },
 };
