@@ -8,6 +8,7 @@ import kyuho from "./images/kyuho.png";
 import hyungjoo from "./images/hyungjoo.png";
 import taehyung from "./images/taehyung.png";
 import ogog from "./images/ogog.png";
+import go from "./images/go.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -76,5 +77,12 @@ export const MEMBERS = {
     description:
       "GUI Designer",
     thumbnail: ogog,
+  },
+  go: {
+    name: "고미봉",
+    team: "DT UX팀",
+    description:
+      "BX Designer",    
+    thumbnail: go,
   },
 };
