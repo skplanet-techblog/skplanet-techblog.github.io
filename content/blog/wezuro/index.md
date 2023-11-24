@@ -10,7 +10,7 @@ description: "여행은 직항, 쇼핑은 경유. WeZuro 브랜드 구축 스토
 
 ![wezuro_01](./wezuro_01.png)
 
-SK플래닛은 지난 9월 경유하여 쇼핑하며 포인트를 쌓아가는 쇼핑 혜택 플랫폼 Wezuro( https://wezuro.co.kr)를 선보였습니다.  
+SK플래닛은 지난 9월 경유하여 쇼핑하며 포인트를 쌓아가는 쇼핑 혜택 플랫폼 Wezuro( https://wezuro.co.kr )를 선보였습니다.  
 이번 포스트를 통해 No.1 리워드 쇼핑 플랫폼인 Wezuro가 브랜드적 관점에서 어떻게 구축되었는지 SK플래닛이 추진한 과정을 설명드리려고 합니다.
 
 ### Overview: 슈퍼 앱에서 버티컬 앱으로
