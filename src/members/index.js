@@ -9,6 +9,7 @@ import hyungjoo from "./images/hyungjoo.png";
 import taehyung from "./images/taehyung.png";
 import ogog from "./images/ogog.png";
 import go from "./images/go.png";
+import changho from "./images/changho.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -74,15 +75,19 @@ export const MEMBERS = {
   ogog: {
     name: "최원영, 이희진",
     team: "OCB UX팀",
-    description:
-      "GUI Designer",
+    description: "GUI Designer",
     thumbnail: ogog,
   },
   go: {
     name: "고미봉",
     team: "DT UX팀",
-    description:
-      "BX Designer",    
+    description: "BX Designer",
     thumbnail: go,
+  },
+  changho: {
+    name: "홍창호",
+    team: "Syrup개발팀",
+    description: "항상 긍정적인 마인드로 S/W를 개발하려 노력하는 개발자입니다.",
+    thumbnail: changho,
   },
 };
