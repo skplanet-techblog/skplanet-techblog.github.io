@@ -1,4 +1,629 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 29 Nov 2023 04:11:17 GMT</lastBuildDate><item><title><![CDATA[SK플래닛 신규 서비스 Wezuro 브랜드 구축 스토리]]></title><description><![CDATA[No.1 리워드 쇼핑 플랫폼, Wezuro 런칭!  SK플래닛은 지난 9월 경유하여 쇼핑하며 포인트를 쌓아가는 쇼핑 혜택 플랫폼 Wezuro( https://wezuro.co.kr )를 선보였습니다. 이번 포스트를 통해 No.1 리워드 쇼핑 플랫폼인 Wezuro가 브랜드적 관점에서 어떻게 구축되었는지 SK…]]></description><link>https://techtopic.skplanet.com/wezuro/</link><guid isPermaLink="false">https://techtopic.skplanet.com/wezuro/</guid><dc:creator><![CDATA[go]]></dc:creator><pubDate>Thu, 23 Nov 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;No.1 리워드 쇼핑 플랫폼, Wezuro 런칭!&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 11 Dec 2023 07:16:36 GMT</lastBuildDate><item><title><![CDATA[Syrup 모바일 웹 개선 사례]]></title><description><![CDATA[들어가며 Syrup은 재미있게 포인트 모으기, 모은 포인트 투자, 쿠폰 활용, 할인 혜택, 멤버십과 자산 내역 등을 한 곳에서 관리하는 SK플래닛의 대표 서비스입니다. SK플래닛은 고객에게 더 좋은 경험을 제공하기 위해서 응답 속도 위주로 Syrup 서비스를 개선했습니다. 본 내용은 Syrup…]]></description><link>https://techtopic.skplanet.com/syrup-refactoring/</link><guid isPermaLink="false">https://techtopic.skplanet.com/syrup-refactoring/</guid><dc:creator><![CDATA[changho]]></dc:creator><pubDate>Tue, 12 Dec 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;들어가며&lt;/h3&gt;
+&lt;p&gt;Syrup은 재미있게 포인트 모으기, 모은 포인트 투자, 쿠폰 활용, 할인 혜택, 멤버십과 자산 내역 등을 한 곳에서 관리하는 SK플래닛의 대표 서비스입니다.&lt;br&gt;
+SK플래닛은 고객에게 더 좋은 경험을 제공하기 위해서 응답 속도 위주로 Syrup 서비스를 개선했습니다.&lt;br&gt;
+본 내용은 Syrup 서비스 개선에 적용한 기술, 해당 기술을 채택한 이유, 개선 과정에서 경험한 시행 착오 그리고 개선 결과입니다.&lt;/p&gt;
+&lt;h3&gt;개선 배경&lt;/h3&gt;
+&lt;p&gt;Syrup 서비스는 2010년에 처음 출시되어 13년 이상, SK플래닛 고객이 사용하고 있습니다(2023년 기준).&lt;br&gt;
+이렇게 오랜 기간 Syrup 서비스를 제공하면서 API 서버의 레거시화가 진행되었는데, 특히 모바일 웹이 호출하는 웹 게이트웨이 서버의 응답 속도가 문제였습니다.&lt;br&gt;
+이러한 웹 게이트웨이의 느린 응답은 전체 Syrup 모바일 웹의 로딩과 렌더링 속도에 직접적인 영향을 주었고, Syrup 모바일 웹의 응답 속도와 서비스 개선을 위하여 신규 서버 구축의 필요성이 대두되었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 582px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/63cf0f3963c5d4f942332c052fb590d7/7c1cd/syrup-01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACJklEQVR42nWTy27UQBBF51cjlvxBJJb8ASA2KPkCNgg2oPAQC1gQJg+UKEw09ng8tnv8drfb74PcnokSECVdVbXKunWr+3p2fXXF5fk589NTLuZnzE9/kmUZYwzDwD7Gen9OswzP91m7LkIIwjCikNL0ZpbnkrSapK+JW80qEshSPSC5T9Y2DZZtE0YRQRAQxzFRtCMcBmb58WfqR69oD17QHTxDP35OLeKJsB+JzHf0O0IpJX4QEGy3RuFqvTZ1VhSTwvz1V+ThMdWTI/ThS4qnR1RhstuzfwjAdV2WlsU2DE22LIs0TcmLwmwxU1WB7BTttBAlA/3Qo5uOZaRwstrATjTuNsZZrYjiBF8Ik8M4fqhQBIJQbGnqllR1lLIiiyJ+WRve3+a8vdzw5szhxFK8+3bB2l7i+YFR5nketm0jgoBCqUlhlqZ0XY8uC26XNyS5RuUZCy/kky05WUR8uAn54mg+zm/YrFekeY4nBCIMDYJtSJbnk0Kppudu6ook8lFKUmlN2w94qUIUlYGflWRKs9m42I5zp27jeea17+7QWzlcf/+BMFMkUiq01vwvRo9GcUycpCTphDhJUGU5KfScNdbllZmQZjlFIdFVZZr9PQ/ubVPXNb8XCzZ+wGq0zQ6u71M3DbNxmm5qijw3Jo3j6E7h3sx/m3s09UhQlqXZaDT1+Mqj2plSyph1zGWpTd227T+/3v1z1/fGKl3XGYyqx55Uij+IJI1/gYADKgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/63cf0f3963c5d4f942332c052fb590d7/7c1cd/syrup-01.png&quot;
+        srcset=&quot;/static/63cf0f3963c5d4f942332c052fb590d7/c26ae/syrup-01.png 158w,
+/static/63cf0f3963c5d4f942332c052fb590d7/6bdcf/syrup-01.png 315w,
+/static/63cf0f3963c5d4f942332c052fb590d7/7c1cd/syrup-01.png 582w&quot;
+        sizes=&quot;(max-width: 582px) 100vw, 582px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;현상 및 개선 목표&lt;/h3&gt;
+&lt;p&gt;Syrup은 멤버십 카드/쿠폰, 불리기(금, 조각, 주식, 가상화폐, 부동산), 마이데이터 등의 서비스를 제공하기 위하여 많은 외부 파트너와 제휴하고 있습니다.&lt;/p&gt;
+&lt;p&gt;지금까지 Syrup 웹 게이트웨이는 파트너가 제공하는 정보를 조회하기 위하여 다수의 API를 호출하는데, 다음의 방법으로 API를 호출했습니다.&lt;/p&gt;
+&lt;p&gt;첫 번째는 웹 게이트웨이가 순차적으로 API를 호출하여 모든 응답이 완료될 때까지 대기한 후, 최종으로 데이터를 병합하여 클라이언트(프론트엔드)로 보내는 방법입니다.&lt;br&gt;
+이처럼 다수의 API를 순차적으로 처리할 때, 응답 시간이 지연되는 문제가 있습니다.&lt;/p&gt;
+&lt;p&gt;예를 들어, 다음 그림에서 Gateway의 getSummary API 응답 시간은 Gateway 내부에서 호출하는 API인 getToken, getMember, getFinanceInfo, getCardInfo, getCouponInfo, getProfitInfo 의 응답 시간을 합한 것입니다.&lt;br&gt;
+이러한 결과로 전체 API 응답 시간은 402.063 ms가 되어 클라이언트가 getSummary API를 호출한 후, 대기 시간이 길어지는 문제가 있었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/95510340db6f39e9eedfe4dc70a4a685/e80ec/syrup-02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.316455696202528%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABF0lEQVR42mWQXU+CABSG+Yn1Z/wv3bbu6ybNwoLNLbbSFAjURBBIBcHCrPwAngZzzdbZnouzve857zmC54e02h3CqYtiW5woj8iWjeL53HuvNF0faeRQ7WpcdlVqql72sj0+wKVh2TiLN4RwHlGrN7gRJTqDIQ8jh6ZhInY1zMmUeRTxvdlwWFmWkaYpWUGW/UGYzBPOrkxOawZhvCoNwfKDcbygPwuodlREo4dmO7x4PtvtFshLXZ7n/we+RRZPUoX2XYVFNGSXFsqMvYOv9bpM2LLHSGYfpTfgVtUZTqYsk4TdPmWRuEAIYoML+Zhz+Ygg1ss5aZaS7jeWafL899zZe8JgFtBy/fKvdU1HfDa5NvuEq09+AG5KbtdZDujIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/95510340db6f39e9eedfe4dc70a4a685/f058b/syrup-02.png&quot;
+        srcset=&quot;/static/95510340db6f39e9eedfe4dc70a4a685/c26ae/syrup-02.png 158w,
+/static/95510340db6f39e9eedfe4dc70a4a685/6bdcf/syrup-02.png 315w,
+/static/95510340db6f39e9eedfe4dc70a4a685/f058b/syrup-02.png 630w,
+/static/95510340db6f39e9eedfe4dc70a4a685/40601/syrup-02.png 945w,
+/static/95510340db6f39e9eedfe4dc70a4a685/78612/syrup-02.png 1260w,
+/static/95510340db6f39e9eedfe4dc70a4a685/e80ec/syrup-02.png 2582w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이때 응답 시간을 줄이기 위한 방법으로 서로 의존성이 없는 API를 비동기로 호출하기도 했습니다.&lt;br&gt;
+이 방법은 getSummary API의 응답 시간은 단축되지만, 가장 많은 시간이 소요되는 API에 의존하게 됩니다(다음 그림에서 ProfitService의 getProfitInfo API 응답 시간에 의존).&lt;br&gt;
+특히 특정 API가 타임아웃 시간까지 대기하면, 전체 응답 시간은 타임아웃 시간까지 지연됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/575745dfd2f54b7e9ddee43934eedce4/36405/syrup-03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.58227848101266%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABI0lEQVR42m2QTU7CYBBAezcv4Fk8gFtuwNqFQVYGjGDRgGCo1CbEFCr/FmhLCWgpEgxC+/UZKokunORlJpOZl8lI7vSdptHAdQa03DFJ5Qm506NuT6hPpmiOi2o5lDu9mPt2l+pwRM12qFm/KGOb5nSG5HkLcjclMtkCemdAw7Kpvw65UjX0scXC89hsNuwjiiIOxb9EQiDNFyvSxR5n+RfMiR/Pf263OP6S/mxOStW4UDXOH1XklzZ7pRCCUIg4/2Xfkz58B/3hFO32hDe3zi4EEQaxeP21JVlRSGSvSeRk8g2D9WoVL0eHi0QY/rAXhiGStzTJVY+5LB0xcouxKBRBPLwLAjJGm9SzTlo3kLt9Cg2DO6MVUxmYKIf/lc0Rtr/kG2qaajrRi67GAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/575745dfd2f54b7e9ddee43934eedce4/f058b/syrup-03.png&quot;
+        srcset=&quot;/static/575745dfd2f54b7e9ddee43934eedce4/c26ae/syrup-03.png 158w,
+/static/575745dfd2f54b7e9ddee43934eedce4/6bdcf/syrup-03.png 315w,
+/static/575745dfd2f54b7e9ddee43934eedce4/f058b/syrup-03.png 630w,
+/static/575745dfd2f54b7e9ddee43934eedce4/40601/syrup-03.png 945w,
+/static/575745dfd2f54b7e9ddee43934eedce4/78612/syrup-03.png 1260w,
+/static/575745dfd2f54b7e9ddee43934eedce4/36405/syrup-03.png 2486w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;또한 스프링 MVC(Model, View, Controller)를 사용할 경우, 비동기 호출을 위해 일반적으로  CompletableFuture를 사용하는데, CompletableFuture는 다음과 같은 문제가 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;복잡성&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CompletableFuture를 사용하면 코드가 복잡해질 수 있습니다. 특히 여러 개의 thenCombine을 조합하여 연결할 때, 다음 코드와 같이 콜백 함수와 데이터 병합 코드로 인해 가독성이 떨어질 수 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;public static void main(String[] args) {
+    CompletableFuture&amp;lt;String&gt; SK = CompletableFuture.supplyAsync(() -&gt;
+        &quot;SK&quot;
+    );
+
+    CompletableFuture&amp;lt;String&gt; Planet = CompletableFuture.supplyAsync(() -&gt;
+        &quot;Planet&quot;
+    );
+
+    CompletableFuture&amp;lt;String&gt; Syrup = CompletableFuture.supplyAsync(() -&gt;
+        &quot;Syrup&quot;
+    );
+
+    CompletableFuture&amp;lt;String&gt; Development = CompletableFuture.supplyAsync(() -&gt;
+        &quot;Development&quot;
+    );
+
+    CompletableFuture&amp;lt;String&gt; Team = CompletableFuture.supplyAsync(() -&gt;
+        &quot;Team&quot;
+    );
+
+    CompletableFuture&amp;lt;String&gt; future = SK
+        .thenCombine(Planet, (result, planet) -&gt; result + &quot; &quot; + planet)
+        .thenCombine(Syrup, (result, syrup) -&gt; result + &quot; &quot; + syrup)
+        .thenCombine(Development, (result, development) -&gt; result + &quot; &quot; + development)
+        .thenCombine(Team, (result, team) -&gt; result + &quot; &quot; + team);
+
+    try {
+        System.out.println(future.get());
+    } catch (InterruptedException | ExecutionException e) {}
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;스레드 풀 관리&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CompletableFuture는 백그라운드 스레드 풀을 사용하여 비동기 작업을 하기 때문에 스레드 풀을 관리해야 합니다. 스레드 풀을 관리하지 않으면 스레드가 과도하게 생성되거나 리소스 누수 문제가 발생될 수 있습니다.&lt;br&gt;
+실제 CompletableFuture 사용 시, 별도로 스레드 풀을 관리하지 않아서 장애가 발생된 경험이 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;콘텍스트 스위칭 비용&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;비동기 API 호출을 위해 작업이 다른 스레드로 전환될 때, 추가 시간과 메모리 사용 등 오버헤드 비용이 발생하여 전체적인 서버 성능에 영향을 미칠 수 있습니다.&lt;/p&gt;
+&lt;p&gt;두 번째는 클라이언트에서 다수의 API를 병렬 호출하여 전체 응답을 화면에서 처리하는 방법입니다.&lt;br&gt;
+특히 React, Vue와 같은 모던 프론트엔드 개발 환경은 전체 페이지 단위가 아닌 컴포넌트 단위로 API를 호출하는 사례가 많아지면서 이와 같은 병렬 호출 방법이 주로 사용됩니다.&lt;/p&gt;
+&lt;p&gt;다수의 API를 호출할 때에도 다음 그림과 같이 AuthService, MemberService에서 제공하는 API(인증/인가 등)가 중복 호출되는 문제가 발생되어 AuthService, MemberService의 트래픽을 증가시키고 있었습니다. 또한 Gateway API 호출 건수가 많아짐에 따라 고객의 네트워크 비용도 증가 됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d3813c9a5de3d8c9e119005b1ffcd9e8/e996b/syrup-04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.79746835443038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACkklEQVR42iWSTY/adhCH/VVy76WfK8ee2nuvuTeXHhJFPbSN0kpVm5Wa7C77QlnIAosx2BgbbPyCX/Ar9t/2PhF0pNFPM5oZPRr9pIWuIesqT6rCVFVYmQan8PcHJjMVy7ToyzK/D79wOZvTmy+4GAz5Zzrj7yeZz7rBlbHh09rkwdohpYsNQrZoFZtyqFKZLt1zh7Nzufx8y+jugd5peaFys1S50w08xyFPU6q6RrQtTdsimuacUvnyZ7Jvv6f85juOL15S//D2TKiYT7z67Ud++vCKJHDPPcPzkS2bibaifyIyN9wtNfqrNSPHRY9ipHosk1wOEfdj0osetbaBrqOocjaRhhvrFHlC0bSUTUvRNJiWjep6LF0Pzd+zjmL06ICX5UhJEhGl8Zmg45m2a2jqGn8foihzXHPNx8mE1/+NuNJ0bnWD3mTK7VLlVl0x2Fh8cTwG1g4tCJHSKKIuSoJ9yNoK6UrBc9NgmDZv3/3JH+8vkJcaC8/neibz1+OExdrA9TwKIcirmqw8kh0rKiGQ6rI40x18k8CzOOYlbV0RxRnXN2P691O6/P+ZoqpJjhVb12NgmGfK0w/vlip9Y4OdpEjJPiCwbOIoJk9zxPFIKwRJesTxUpIwR9vtGNgO832A7AcMlAX9lc79as3Qsnl0XB5sBz2MkbaKynwwIjwcSNKMumnpug7H2XFz8y/zcZ+PoxFvho98ms4YmlsMw8TyfZz4wD4vCMoSP8uJyxKpqipqUVMUBXEcc6pPoa5dXv9yxZtfrwlcn6pt6ClLBmuT8WLJzLKZ7xyettZZFT/AzzIkIQTiZNCTCkHTNOeDeVVhBAHbIKBKU9osowtDmjzH9Hz0MGLhuOc8WWcVHwiKkq/eOyL/cmMmwgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d3813c9a5de3d8c9e119005b1ffcd9e8/f058b/syrup-04.png&quot;
+        srcset=&quot;/static/d3813c9a5de3d8c9e119005b1ffcd9e8/c26ae/syrup-04.png 158w,
+/static/d3813c9a5de3d8c9e119005b1ffcd9e8/6bdcf/syrup-04.png 315w,
+/static/d3813c9a5de3d8c9e119005b1ffcd9e8/f058b/syrup-04.png 630w,
+/static/d3813c9a5de3d8c9e119005b1ffcd9e8/40601/syrup-04.png 945w,
+/static/d3813c9a5de3d8c9e119005b1ffcd9e8/e996b/syrup-04.png 1050w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이러한 문제를 해결하기 위해 신규로 구축되는 Syrup 웹 게이트웨이에는 WebFlux, Server Sent Events를 적용하여 신규 서버를 구축했고, 추가로 모던 프론트엔드 개발 환경을 통한 렌더링 성능 향상 및 사용자 경험 개선을 위해 프론트엔드 환경도 Next.js를 적용했습니다.&lt;/p&gt;
+&lt;h3&gt;적용 기술&lt;/h3&gt;
+&lt;h4&gt;1. WebFlux&lt;/h4&gt;
+&lt;p&gt;WebFlux(&lt;a href=&quot;https://docs.spring.io/spring-framework/reference/web/webflux.html&quot;&gt;https://docs.spring.io/spring-framework/reference/web/webflux.html&lt;/a&gt; )는 스프링(Spring) 5부터 도입된 리엑티브 프로그래밍을 위한 모듈 중 하나입니다.&lt;br&gt;
+리엑티브 프로그래밍은 비동기 동작이고 이벤트 기반의 애플리케이션을 개발하기 위한 패러다임이며, 특히 대규모의 동시성이 필요한 애플리케이션에 적합합니다.&lt;/p&gt;
+&lt;p&gt;WebFlux는 다음과 같은 특징이 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;비동기 및 논블로킹&lt;/strong&gt;&lt;br&gt;
+비동기 방식으로 HTTP 요청을 처리하여, 블로킹 I/O 작업이 최소화됩니다. 이를 통해 대규모의 동시 요청을 처리하고 높은 확장성을 제공합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;리액티브 스트림&lt;/strong&gt;&lt;br&gt;
+리액티브 스트림 API를 사용하여 데이터를 처리합니다. 이 기능은 데이터를 스트림으로 처리하여 실시간 데이터를 처리할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;함수형 프로그래밍&lt;/strong&gt;&lt;br&gt;
+함수형 프로그래밍 패러다임을 따르며, 람다 표현식 및 스트림 처리와 같은 기능을 활용하여 코드를 작성할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;다양한 백엔드 런타임&lt;/strong&gt;&lt;br&gt;
+Netty와 Servlet 3.1+와 같은 다양한 런타임을 지원하고, 선택한 런타임에 맞게 웹 애플리케이션을 개발할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;따라서 WebFlux를 사용하면 대규모의 실시간 애플리케이션을 구축할 때 높은 성능 보장과 확장성을 달성할 수 있고, 비동기 및 이벤트 기반 프로그래밍 모델을 활용할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;WebFlux는 다음과 같은 장단점이 있으며, Syrup 웹 게이트웨이는 RDBMS와 직접 연동하지 않고, 다른 파트너 사와 연동이 많은 서버임을 고려하여 WebFlux가 적합하다고 판단했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e10982dcf72a8c05ec297198c75baa25/99072/syrup-05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.72151898734178%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEklEQVR42n1Tya7bMAz0//9ODwV6LXxJkEOQPc7iXZJ3O7HjNMsUwzSBUTw8AYRliRwOqaG12+2w3++x3W6x2Wxg2zaOxyM8z4PruvLlueM4oO/hcJCz8Xgscb7vyz9jgiCARef1eo35fC7OWZbhdDqhrmsURYHz+Yy2bbFarcSHSZIkEauqCmVZIs9ziem6DhbRl8ulgBpj5DJNU4RhKBm5JyCBmJCVLBYLYUbfN/j9fsflcoH1ZrdarxFFkQROp1OMxyPMZjMBJlOCs2Tes3yCaK0lIeNutxv6vocVx7EENXUtBwyOY4UoivF43MWRZzS2410BGQ3X8/l8MdSarDzE2kBrA9/zkCQhfP+ISBkwoVLx55Hej0DGBGebmqYRUAHcbH5AxxPYywBebBCFARznJ47uCL8me0RKoyjyDwsa1+PxEJY07j+Aee7AqBF+L3wcQoXA96CUDdebwN4aKJNIqW/A4ff/9Q+wRFlUMFmBoqykhDQNkaYKkU6lLEpjyPAr+wDytdjwNOXzv/rB+yGJ6/X6Keu7JYBs7lsKVDubbowW0fLVaae2E2fuKd6h8ZzGPYfA+i5jd+nR1iV67aJtarRd96XfsGyLI8M+KaVEjxQp9/zyMco8Q5tpFFmGqq7ljlJ6yUmJwNkm4lCzAkiq1BYnhrNN41SwDDr3f26om0Z6yZZwrjlhNMaxZOJwUv4CSUEe2hVfLQkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e10982dcf72a8c05ec297198c75baa25/f058b/syrup-05.png&quot;
+        srcset=&quot;/static/e10982dcf72a8c05ec297198c75baa25/c26ae/syrup-05.png 158w,
+/static/e10982dcf72a8c05ec297198c75baa25/6bdcf/syrup-05.png 315w,
+/static/e10982dcf72a8c05ec297198c75baa25/f058b/syrup-05.png 630w,
+/static/e10982dcf72a8c05ec297198c75baa25/99072/syrup-05.png 842w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;추가로 WebFlux 적용할 때, 성능 향상 이외에 다음과 같은 장점이 있었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1) CompletableFuture를 사용하는 대신, Reactor의 Mono.zip을 활용하면 단순한 비동기 처리가 가능합니다.&lt;/strong&gt;
+CompletableFuture를 사용하는 경우, thenCombine마다 콜백 함수가 필요하고 콜백 함수에서 이전까지 결과와 현재 결과를 병합하는 코드가 필요해 전체 코드가 복잡해집니다. 반면 Mono.zip을 사용하면 하나의 콜백 함수에서 모든 처리가 가능합니다.&lt;/p&gt;
+&lt;p&gt;다음 코드에서 주석 부분은 CompletableFuture를 사용할 때 코드이고, 주석 제거 부분은 WebFlux 사용시 코드입니다&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;public static void main(String[] args) {
+//    CompletableFuture&amp;lt;String&gt; SK = CompletableFuture.supplyAsync(() -&gt;
+//        &quot;SK&quot;
+//    );
+//
+//    CompletableFuture&amp;lt;String&gt; Planet = CompletableFuture.supplyAsync(() -&gt;
+//        &quot;Planet&quot;
+//    );
+//
+//    CompletableFuture&amp;lt;String&gt; Syrup = CompletableFuture.supplyAsync(() -&gt;
+//        &quot;Syrup&quot;
+//    );
+//
+//    CompletableFuture&amp;lt;String&gt; Development = CompletableFuture.supplyAsync(() -&gt;
+//        &quot;Development&quot;
+//    );
+//
+//    CompletableFuture&amp;lt;String&gt; Team = CompletableFuture.supplyAsync(() -&gt;
+//        &quot;Team&quot;
+//    );
+//
+//    CompletableFuture&amp;lt;String&gt; future = SK
+//            .thenCombine(Planet, (result, planet) -&gt; result + &quot; &quot; + planet)
+//            .thenCombine(Syrup, (result, syrup) -&gt; result + &quot; &quot; + syrup)
+//            .thenCombine(Development, (result, development) -&gt; result + &quot; &quot; + development)
+//            .thenCombine(Team, (result, team) -&gt; result + &quot; &quot; + team);
+//
+//    try {
+//        System.out.println(future.get());
+//    } catch (InterruptedException | ExecutionException e) {}
+
+Mono&amp;lt;String&gt; SK = Mono.just(&quot;SK&quot;);
+Mono&amp;lt;String&gt; Planet = Mono.just(&quot;Planet&quot;)
+Mono&amp;lt;String&gt; Syrup = Mono.just(&quot;Syrup&quot;);
+Mono&amp;lt;String&gt; Development = Mono.just(&quot;Development&quot;);
+Mono&amp;lt;String&gt; Team = Mono.just(&quot;Team&quot;);
+
+Mono.zip(SK, Planet, Syrup, Development, Team).map(t -&gt;
+    t.getT1() + &quot; &quot; + t.getT2() + &quot; &quot; + t.getT3() + &quot; &quot; + t.getT4() + &apos; &apos; + t.getT5()
+).subscribe(System.out::println);
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;(2) 타임아웃 제한 없이 롱-폴링을 사용할 수 있었습니다.&lt;/strong&gt;&lt;br&gt;
+기존의 Syrup은 마이데이터 자산 업데이트 체크를 위해 폴링 방식을 사용했습니다. 폴링을 사용하면 프론트엔드에서 매번 업데이트 체크 요청을 전송해야 하므로 고객 네트워크 비용이 증가됩니다.&lt;br&gt;
+이를 개선하기 위해 업데이트 체크 역할을 Gateway로 이전하여 롱-폴링 사용을 고려했으나, 업데이트가 진행되는 기간에 Gateway 서버의 스레드 점유 때문에 서버 비용이 증가되는 문제가 있었습니다. 따라서 롱-폴링을 사용하면, 타임아웃 설정이 필수입니다.&lt;br&gt;
+이번에 WebFlux로 서버를 개편하면서 연결 요청마다 스레드가 생성되지 않는 것을 이용하여 롱-폴링 시 별도의 타임아웃 설정 없이 사용할 수 있었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/832ffa8b102d434ee56cfc36358b464d/cf0be/syrup-06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABU0lEQVR42oWS666CQAyEef8HhD9IBAHlKnJTFOnJ16RkTYxnk2aX0pnOdNcrikKSJJG2baWuawmCQM7ns9zvdzkcDnI6neT1esn7/ZbL5aLffd8LON/3pWkaGcdRwjCUNE3F27ZNE5BUVSXX61UbEF3XibvWdZVhGCTLMm2OiOPxqN80gcujCOA0TaqKIkB83243VUYh6/l8yrIseiYHDjHUgoFLCed51oT9fDweCmY3MiMkjJD/BCMhr4QoQAmymRFWzDJn/ruEppAFziwzKmo9mws7QREgutpcvhGSp9ZU4263zOyw7QZA9l+E4Ahy7B+WuXKeAjbjONbggv6zHEWRYu0Cd8tYNJvkWNj4pZBaO+NmV8jNmjo6cTnEtxnS1Ba4PM/1/X48G24IexCwu+ESQsbbK8tSgzM14HfLAOjMDjnKzDIELiEALBM052mZYqv9A1svoIHXra20AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-06&quot;
+        title=&quot;&quot;
+        src=&quot;/static/832ffa8b102d434ee56cfc36358b464d/f058b/syrup-06.png&quot;
+        srcset=&quot;/static/832ffa8b102d434ee56cfc36358b464d/c26ae/syrup-06.png 158w,
+/static/832ffa8b102d434ee56cfc36358b464d/6bdcf/syrup-06.png 315w,
+/static/832ffa8b102d434ee56cfc36358b464d/f058b/syrup-06.png 630w,
+/static/832ffa8b102d434ee56cfc36358b464d/40601/syrup-06.png 945w,
+/static/832ffa8b102d434ee56cfc36358b464d/78612/syrup-06.png 1260w,
+/static/832ffa8b102d434ee56cfc36358b464d/cf0be/syrup-06.png 1994w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;2. Server Sent Events&lt;/h4&gt;
+&lt;p&gt;Server Sent Events(&lt;a href=&quot;https://docs.nestjs.com/techniques/server-sent-events&quot;&gt;https://docs.nestjs.com/techniques/server-sent-events&lt;/a&gt;, SSE)는 서버에서 클라이언트로 단방향 데이터를 전송하기 위한 웹 기술입니다. SSE는 서버에서 클라이언트로 데이터를 푸시하고, 웹 페이지가 열려 있는 동안 데이터를 실시간으로 업데이트할 때 사용됩니다.&lt;br&gt;
+따라서 SSE는 실시간으로 정보가 업데이트 되는 스트리밍 뉴스, 실시간 주가, 온라인 게임, 알림 및 기타 웹 애플리케이션에 유용하게 사용됩니다.&lt;/p&gt;
+&lt;p&gt;이러한 SSE의 주요 특징은 다음과 같습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;단방향 통신&lt;/strong&gt;&lt;br&gt;
+서버에서 클라이언트로 단방향 통신을 제공합니다. 이것은 클라이언트가 주기적으로 서버에 데이터를 요청하지 않고도 서버가 데이터를 보낼 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;간단한 프로토콜&lt;/strong&gt;&lt;br&gt;
+SSE는 간단한 프로토콜로써, 웹 브라우저에 내장된 EventSource 객체를 활용하여 쉽게 사용할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Event-Driven 구조&lt;/strong&gt;&lt;br&gt;
+서버는 이벤트 스트림으로 클라이언트에 이벤트를 보낼 수 있으며, 클라이언트는 JavaScript 이벤트 핸들러를 사용하여 처리합니다.&lt;/p&gt;
+&lt;p&gt;SSE를 구현하려면, 서버 측은 특정 HTTP 헤더(&apos;Content-Type: text/event-stream&apos;)를 사용하여 SSE 스트림을 전송하고, 클라이언트 측은 EventSource API를 사용하여 이벤트를 수신하는 코드를 작성하면 됩니다.&lt;/p&gt;
+&lt;p&gt;Syrup은 다음 그림과 같이 SSE를 적용하여 비동기로 호출되는 API 전체 응답을 기다리는 것이 아닌, 개별 API응답을 즉시 프론트엔드에 푸시하고, 프론트엔드에서는 바로 렌더링하여 사용자 경험을 개선했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1244bef0f52a47d6af9fb577b4ea5cf6/85053/syrup-07.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.12658227848101%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACSElEQVR42n2Sy27TUBRF84dM+BIm/EFHjJkxQaJIIPEQJSmNWkBt6TttIW3SKonjOHFsx3n6eX1tL+SblFIJcaWtYx/rLu99dEp6z+L4tEa/p3HcafF894Ct5i37ms6upvOto1Nt3LBRu1Cq/Kzzta2x0+qspLHd6rDX6SKShJLtOHyubFGufOHkuslRq83edZPyyRntoYU3n5NmGcVJ0/S/yrKM0tCZ8LJc58XHC4zhRF0ceT5dd8xpV2f9xyFvDo54vX+onAopyfNcXf6XSuORTu3rU46rT3DMOjKFPF86alo2axubrH34xLNKlcObW6QQZCvgA3d3Dp1xi/ffH/N2+xGGdaJAMpWq9qczXp1dsH56zrt6g/L5JRtnNTYvf1G9arDb7ak577Q1ri27cEKpGGSzrdM1HWSaIUSMEIJECGIhiOJlDaOIRRASFr1CSUIsU2IplUSyHEUpiiKajQZdTUPEMb7v4/uBUhj4KwV4noe3WKhorCLnKxXvRWwFNAZDTNvFnSww7QmabmIMRvT6Nre9GVfanG7fpW8WPUd90w2b0cRnOg9IpURKeQ8cuS6mZTEaT/GjlOk8YjAcswgSOobL0A3pmS7jqU8kcsI4UyqeY7F09/cp5atGUWQGQSjodA3CSFC4n84WDIY2puWQZqg5yzRfSqZ/NqLgKIeFVbW0Wa5WZuFHNG7aCtzWDBx3Rt+0FbQAJnewNCeR2QOgcniXvfhzLFIWXqAcen5EzzAZjZdAc+ggkpQoTohFoqoQkvuES+BvdAuE1B4svUEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-07&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1244bef0f52a47d6af9fb577b4ea5cf6/f058b/syrup-07.png&quot;
+        srcset=&quot;/static/1244bef0f52a47d6af9fb577b4ea5cf6/c26ae/syrup-07.png 158w,
+/static/1244bef0f52a47d6af9fb577b4ea5cf6/6bdcf/syrup-07.png 315w,
+/static/1244bef0f52a47d6af9fb577b4ea5cf6/f058b/syrup-07.png 630w,
+/static/1244bef0f52a47d6af9fb577b4ea5cf6/40601/syrup-07.png 945w,
+/static/1244bef0f52a47d6af9fb577b4ea5cf6/85053/syrup-07.png 1225w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;3. Next.js&lt;/h4&gt;
+&lt;p&gt;Next.js(&lt;a href=&quot;https://nextjs.org&quot;&gt;https://nextjs.org&lt;/a&gt; )는 React 기반의 웹 애플리케이션 프레임워크로써 웹 애플리케이션을 쉽고 빠르게 개발하도록 도와주는 도구와 환경입니다. Next.js는 다음과 같은 주요 기능을 제공합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;서버 사이드 렌더링(Server Side Rendering, SSR)&lt;/strong&gt;&lt;br&gt;
+Next.js는 기본적으로 서버 사이드 랜더링을 지원하며, 이를 통해 초기 페이지를 로딩할 때 서버에서 페이지를 렌더링하여 검색 엔진 최적화(SEO)와 초기 로딩 속도를 높일 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;정적 사이트 생성(Static Site Generation, SSG)&lt;/strong&gt;&lt;br&gt;
+Next.js는 빌드 시 미리 정적 HTML 파일을 생성할 수 있습니다. 이것은 정적 HTML을 우선적으로 노출시켜 초기 로딩 속도 및 사용자 경험을 향상시키고 CDN(Content Delivery Network)을  통한 캐싱도 가능합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;데이터 미리 가져오기(Date Pre-fetching)&lt;/strong&gt;&lt;br&gt;
+페이지 이동 전에 필요한 데이터를 미리 가져오는 기능을 지원합니다. 이 기능으로 페이지는 빠르고 부드럽게 전환됩니다.&lt;/p&gt;
+&lt;p&gt;Next.js는 다음과 같은 장단점이 있으며, Syrup은 Next.js 의 장점만을 수용하여 정적 사이트 생성(SSG)만 적용하기로 했습니다. 서버 사이드 렌더링을 적용하면 별도의 서버 리소스, 모니터링, 운영 인력 등이 필요하기 때문에 서버 사이드 렌더링은 효과 대비 비용 효율성이 떨어진다고 판단했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9b9c8d200e51dd72e326e5f7d734572b/121b3/syrup-08.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.08860759493672%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkUlEQVR42oWS2a6CUAxF+f+fMz6JCuKMIIMMKuCwb1aTY7zGxCY7IW1Pu9riLRYLvWs0Gsn3fR2PR+12O+33e61WKwVB8E/j8VjT6VRxHFseWq/X8nhAYD6fW5LvT6zAZrOxolmW6Xq9KkkSTSYTaxpFkZbLpcqyNKVpqqIoLNfL89wKLKLIHE3bqihL4b9cLno+nxqGQVVVqa5rdV1nwkcjl4Ph9/q+Nwfqh0HZIdbl3Op2u9kj7H6/22hhGBodlEAw4na7NToAILWCPCQBwjrPVVcnG5FxMOLQ8aBpmlcTJ+KImOco2rYVxYMwNBrXHcMP8S8jzzudToYLDfugC7txe3GErrFbz6deO2T+2Wxm++FyXJ1vxoMakegIfxbkehRFULI7KMGHGNr+reDPkTkEPypUHAZBSTdn3TCoG25GwhEo/n4U9Hg8DMBz/9W7CDjCLM9VJVtV6V55URgxBYl/ykb+hk43Hp7PZyVpqkPoKw59HZL0tQaovpn3bbkcgqvyiO/pPDDxR9AMGpp9O9IfcFLlopZAPU0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-08&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9b9c8d200e51dd72e326e5f7d734572b/f058b/syrup-08.png&quot;
+        srcset=&quot;/static/9b9c8d200e51dd72e326e5f7d734572b/c26ae/syrup-08.png 158w,
+/static/9b9c8d200e51dd72e326e5f7d734572b/6bdcf/syrup-08.png 315w,
+/static/9b9c8d200e51dd72e326e5f7d734572b/f058b/syrup-08.png 630w,
+/static/9b9c8d200e51dd72e326e5f7d734572b/40601/syrup-08.png 945w,
+/static/9b9c8d200e51dd72e326e5f7d734572b/121b3/syrup-08.png 1070w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;개선 과정에서 시행착오(WebFlux 위주)&lt;/h3&gt;
+&lt;p&gt;WebFlux를 적용하면서 겪었던 몇 가지 시행착오를 정리해 보았습니다.&lt;/p&gt;
+&lt;p&gt;첫 번째는 리액티브 프로그래밍 모델에 대한 적응이 필요했습니다.&lt;br&gt;
+예를 들어 다음 코드에서 getSummaryBad 함수가 실행되어도 실제 System.out.println(res); 구문이 실행되지 않았는데 이유가 무엇일까요?&lt;/p&gt;
+&lt;p&gt;이유는 (1)리엑티브 프로그래밍 모델은 발행자(Publisher)-구독자(Subscriber) 모델이 사용되는데 별도 구독을 하거나 하나의 구독 파이프라인 안에서 실행되고, (2)발행자의 발행 준비가 완료된 후, 푸시되어야 구독이 일어나기 때문입니다.&lt;/p&gt;
+&lt;p&gt;Mono.just를 사용하면, 즉각적인 발행이 이루어지므로 발행은 별개로 하고, getSummaryBad는 별도의 구독도 없고 파이프라인에도 포함되지 않아 System.out.println(res); 구문이 실행되지 않았습니다. 그리고 getSummaryNormal은 구독 파이프라인에 포함되어 로그가 출력되는 차이가 있습니다.&lt;/p&gt;
+&lt;p&gt;이와 같은 우리는 리엑티브 프로그래밍 모델에 대한 적응이 필요했으며, 리엑티브 시스템의 기본 개념, 리엑티브 프로그래밍 모델, 리엑터 라이브러리의 사용법 등을 익히는 데 6개월 이상 소요되었습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;private Mono&amp;lt;String&gt; getToken() {
+    return Mono.just(&quot;token&quot;);
+}
+
+private Mono&amp;lt;String&gt; getMember() {
+    return Mono.just(&quot;member&quot;);
+}
+
+private Mono&amp;lt;String&gt; getMembershipInfo() {
+    return Mono.just(&quot;membership&quot;);
+}
+
+// reactive programming bad example
+public Mono&amp;lt;ServerResponse&gt; getSummaryBad(ServerRequest request) {
+Mono token = getToken();
+Mono member = getMember();
+
+token.flatMap(res -&gt; {
+    System.out.println(res);
+    return res;
+});
+
+member.flatMap(res -&gt; {
+    System.out.println(res);
+    return res;
+});
+
+Mono membership = getMembershipInfo().flatMap(res -&gt; {
+    return Mono.just(res);
+});
+
+return ServerResponse.ok().body(membership, String.class);
+}
+
+// reactive programming normal example
+public Mono&amp;lt;ServerResponse&gt; getSummaryNormal(ServerRequest request) {
+    return token.flatMap(tokenRes -&gt; {
+        System.out.println(tokenRes);
+        return member.flatMap(memberRes -&gt; {
+            System.out.println(memberRes);
+            return getMembershipInfo().flatMap(membershipRes -&gt; {
+                return ServerResponse.ok().body(Mono.just(membershipRes), String.class);
+            });
+        });
+    });
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;두 번째는 멀티 스레드 기반 라이브러리를 사용할 수 없습니다.&lt;br&gt;
+WebFlux는 스프링 MVC와 다르게 연결 요청마다 별도의 스레드를 생성하지 않기 때문에 스레드 기반으로 데이터를 관리하는 라이브러리를 사용할 수 없습니다.  만약 이것을 무시하고 사용하면 다른 사용자의 정보가 노출되는 지옥이 펼쳐질 수 있습니다.&lt;/p&gt;
+&lt;p&gt;대표적인 멀티 스레드 기반 라이브러리는 ThreadLocal, MDC(Mapped Diagnostic Context) 등이 있으며, 이를 대체하기 위해 WebFlux는 ContextView를 제공합니다. 또한 로그 추적을 위해서 Spring Cloud Sleuth를 사용할 수 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// context write
+.contextWrite(context -&gt; {
+    context = context.put(ContextType.MEMBER_CONTEXT, MemberContext.builder().build());
+    return context.put(ContextType.LOG_CONTEXT, LogContext.builder().traceId(TraceUtil.createTraceValue()).build());
+})
+
+// context read
+    return Mono.deferContextual(contextView -&gt; {
+        MemberContext memberContext = (MemberContext) ContextUtils.getContext(contextView, ContextType.MEMBER_CONTEXT);    
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;세 번째는 블로킹 라이브러리를 사용할 수 없습니다. 언급한 바와 같이 WebFlux는 스프링 MVC와 달리 연결을 요청할 때마다 스레드를 할당하지 않고, 적은 수의 Worker 스레드를 공용으로 사용하는 리액티브 프로그래밍 모델입니다.&lt;/p&gt;
+&lt;p&gt;이처럼 적은 수의 Worker 스레드를 사용하기 때문에 스프링 MVC에서 사용하던 블로킹 라이브러리를 그대로 사용하면, 전체 시스템이 블로킹될 수 있습니다. 참고로 RestTemplate은 대표적인 블로킹 I/O를 사용하는 라이브러리입니다.&lt;/p&gt;
+&lt;p&gt;만약 RestTemplate을 이용하여 API 호출 중 대기시간이 길어질 경우, 스프링 MVC는 해당 API만 영향을 주지만 WebFlux는 전체 시스템에 영향을 주게 됩니다.&lt;/p&gt;
+&lt;p&gt;WebFlux에서 대표적으로 사용할 수 있는 논-블로킹 라이브러리는 다음 그림과 같으며, 이 중에서 R2DBC(Reactive Relational Database Connectivity)는 아직까지 지원 데이터베이스 부족, 커뮤니티와 지원 부족, 개발의 복잡성 등의 문제가 있기 때문에 신중히 사용해야 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/98e0538075e2c6d9c021f274bae652ce/6937a/syrup-09.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACaUlEQVR42l1T2XLaQBDk/38iTqX85MRH7PKD4wOEDQaDhbFBQoBOdJ9ISOKtUzOExERVXdptaae6Z3obRVEgyzIYhsEwTROr1Yq5sqpAzyJOcaOZuNdNnA5H+DEQcfH2jpP+AKdDETdzFbe6hYHjoVGWJfI85yKe58FxHNi2zVxd11zQyQv++dXxIMgKWtIMXVVHezZHS5LxYtkYuj5mUYxGVVXYbDagt+/7jD1Xb7cHBUdegHGYQPQCCDMFPcPCOEow8kMMXB9KnKBBB8l2mqaQZZlBdklh9cfyMklxp1sQTBuC5eBeNXDS7ePqfcL7lmnj3ljh1Qv+KWRFdY3tdgtqw151VZaIygrTIGRLUhBi6geYJylmUQI5iJifBhHMbI0GKSFF6/Wa1SmKwmtGnqPIMj5wvdBxa1i4khQcNQUcd55x1Gzj++sbfukWrpc6eraLBqkiRazmE5ira2yKAmFeYBmn0JIMWrqGlmYMNUkZtF7ECZw83ykkezRlSZIwnU550sSRwpwVJricqzju9nEkPOJLU8C3py6+tjs7rvWIc0lBz/EPe0jFyep+T9/qqkK4KTHxd737cH3IIfUyYshRjInn48MPYKRrNGjCBMrgPtxBEHDx8tOUbzUTTWOFy/cJzoYjXIzGuBDHOB2IuFvqPGXK4kFsyDYhjmPmDoJtuxBdH92lBkGeobNU0VmoaM8UDCjYjg+Fgk3Np8MU6CiKGP8XpDg82y6H90kz8KgaaCkLhrBQ0bdd9BwPUhjvLJM9usOapkFV1b9X7/Nd5mBbNq4/JPwUxzgbiDgn6+IbHjQDD8aKb9BvFri3JGZvowAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-09&quot;
+        title=&quot;&quot;
+        src=&quot;/static/98e0538075e2c6d9c021f274bae652ce/f058b/syrup-09.png&quot;
+        srcset=&quot;/static/98e0538075e2c6d9c021f274bae652ce/c26ae/syrup-09.png 158w,
+/static/98e0538075e2c6d9c021f274bae652ce/6bdcf/syrup-09.png 315w,
+/static/98e0538075e2c6d9c021f274bae652ce/f058b/syrup-09.png 630w,
+/static/98e0538075e2c6d9c021f274bae652ce/40601/syrup-09.png 945w,
+/static/98e0538075e2c6d9c021f274bae652ce/6937a/syrup-09.png 1094w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Syrup 웹 게이트웨이는 리액티브 환경에서 외부 API 연동을 위해 WebClient를 사용하며, MemCached 사용을 위해 com.spotify.folsom(&lt;a href=&quot;https://github.com/spotify/folsom&quot;&gt;https://github.com/spotify/folsom&lt;/a&gt; )을 사용합니다.&lt;/p&gt;
+&lt;p&gt;네 번째는 스프링 MVC에 비해 생태계가 작기 때문에 사용할 수 있는 라이브러리의 선택지가 좁습니다.&lt;/p&gt;
+&lt;p&gt;Syrup은 다음 그림과 같이 A 서버에서 MemCached에 값을 저장하고, B 서버에서 MemCached의 값을 읽어서 사용하는 경우가 있습니다. A 서버와 B 서버가 동일한 라이브러리 패키지와  Key 해싱 알고리즘을 사용한다면, 다중 노드를 사용하더라도 문제 없이 동작됩니다(캐시 HIT).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 526px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c171ced0f1e6cb0d17e222a64509866e/2d7ab/syrup-10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvElEQVR42lWRXW/SYBTH+Y5eeGPilX4DL7zSD7HEC4ODDVpXbObFZpAQlDBeB7QFxssEZictUAlhupGVvvxM66bsJCf/55zzzy/PyYkA+L4fCBvXpWGY1CYmdWMa5mdFI6u1yagaubMeDXNGw5hSnZi0p3M8z2ObEdkubmyb9PCCZKfPbqvLXrvHu2qdnZMKO4UysdNm2AtmwtmAvP4D23EeAoPHNvDTtxEvsnkex0WeHR7zulDhqfSRJ8kUr/Ilnh8e8yi6z8tsnuLlhNstYIAJgZ7ngx+s7FG+NNhX2rw5qbB7qnCgdnhbaxKtK0itLvFmi2hdRer0UcwZruuGMO/uY+HK97FYWFjWDDznruPjOQ7OZsPGtnE2t4DH9a8Vun6Bvlzj8DAimcwYSVKRpAbxeJFYrIAsaySSVb58/Y7jeP/MmjZHfK8iCFWi0TyxvTIHkoIg1Dg66mLbLpFczkCWFUSxQirVQBSrJBLFUHO5CYb5O4StVmtKJQtZVsNZ6kMTUSgjCGWSyRLp9BhdvyIyGl1xfr6g37cYDKxQu90Zg8FPhsMVy+X678FubMbj/9777PXmoQZey7rmDznYNvjzB2z0AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-10&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c171ced0f1e6cb0d17e222a64509866e/2d7ab/syrup-10.png&quot;
+        srcset=&quot;/static/c171ced0f1e6cb0d17e222a64509866e/c26ae/syrup-10.png 158w,
+/static/c171ced0f1e6cb0d17e222a64509866e/6bdcf/syrup-10.png 315w,
+/static/c171ced0f1e6cb0d17e222a64509866e/2d7ab/syrup-10.png 526w&quot;
+        sizes=&quot;(max-width: 526px) 100vw, 526px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;하지만 WebFlux는 블로킹 I/O를 사용하는 com.whalin.MemCached를 적용할 수 없었고, 논-블로킹 I/O를 사용하는 com.spotify.folsom을 사용해야 합니다.&lt;/p&gt;
+&lt;p&gt;두 라이브러리가 지원하는 Key 해싱 알고리즘이 다르기 때문에 다음 그림과 같이 다중 노드 환경에서 캐시 Miss가 발생됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 522px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f6d07432201f97448a8e1fe27c5d54d6/29492/syrup-11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.9746835443038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzklEQVR42lWPS28SYRSG+ZXGjXGvG+M/0LULdVO7AVLANrIpoQQHKqMFhOEmDIIzMGCBcplCDeEyMNCZxzAptZ7ky7k/53tdALZt7xzz1ZpM9wqp1yffH3LRbBHKSgg/KoSlPF8bGrn+0OlndjNXA8ztlocM18PkejYnol1yXFPw1VT8lRreXJFDqcBhNs9xpcbHmorvp8JJvUG83WFmrP4H7oJ9Mp7POVVbvPic4PHRCc9DUV6nJJ5+OuVJIMirb995FhZ45PHzMhLj/LLHzDD+AW0bl2XZ3N5aYMNstXauHmSLvBGTfMiVOCpXeZ/J8y6ZwVssc5Ar8TYt4SnJpHt9lneSLctyoI7kvd3cXDOd/cFme1exMDcbNtstm80G0zRZm6azPBqP0fsDGI1gadwzXPF4m2j0F2dnVQKBFMFgDkFQCIVk8vmBI2Nvuq6jqiqFQgFRFDmPxcglEpQyGRrNJovFAlc43MLny+L1pvD7JdzuJG73BR5PGiHWQdcXDswwDJqahizLJBIigiAQiUSICgJfRJF6vc5gMMClqlNkeUi53L9/xWKHanWIokyZTJYOcLVaOT8cjUZ0u11arRaqoqBpGr/bbac3mUz4C2U2OB+x4py3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-11&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f6d07432201f97448a8e1fe27c5d54d6/29492/syrup-11.png&quot;
+        srcset=&quot;/static/f6d07432201f97448a8e1fe27c5d54d6/c26ae/syrup-11.png 158w,
+/static/f6d07432201f97448a8e1fe27c5d54d6/6bdcf/syrup-11.png 315w,
+/static/f6d07432201f97448a8e1fe27c5d54d6/29492/syrup-11.png 522w&quot;
+        sizes=&quot;(max-width: 522px) 100vw, 522px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;결국 특정 라이브러리를 사용할 수 없어서 기존 로직을 변경하거나 다른 우회적인 방법을 찾아야 하는 시행착오를 겪었습니다.&lt;/p&gt;
+&lt;h3&gt;개선 결과&lt;/h3&gt;
+&lt;p&gt;WebFlux, Server Sent Events, Next.js를 통한 웹 게이트웨이와 웹 서버를 개선한 이후, Syrup의 전체적인 화면 로딩 속도가 개선되었습니다.&lt;/p&gt;
+&lt;p&gt;(1) API 요청 건수는 기존 대비 70% 이상 줄었습니다. 개별로 호출되던 API가 하나의 API로 통합된 결과입니다.&lt;/p&gt;
+&lt;p&gt;(2) API 응답 속도는 기존 대비 50% 이상 개선되었습니다. 순차적으로 호출되던 외부 API가 비동기로 호출된 결과입니다.&lt;/p&gt;
+&lt;p&gt;(3) API 이외에 Next.js 적용을 통한 렌더링 속도 개선 효과도 확인할 수 있었습니다.&lt;br&gt;
+또한 LightHouse를 통한 웹 페이지 성능을 확인해 보았는데요. 특히 이번 개선으로 First Contentful Paint, Total Blocking Time, Speed Index 값이 개선된 것을 확인할 수 있었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3272365d2a7412071f93309caa3150c4/d74fe/syrup-12.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0UlEQVR42oWS2W7bMBBF9f+fVKAvfUkTB0gcx7FkrdZq2ZathaQoyfEpqKYo0KAtwYsz88CLuRhap9OJPM8pioJ9WZKmGWmWkeUFrhew2+3YxTGbjU0S79g8P/H8+I3QeeLL3VcenxbYtsN6vcZ1XSzf9+dmuVyydRwCb4vvuUT+Bvt1gReEbNdvrF5WhL5P5Lq4fkiUJLysloRBSBwEuM6WNE2xbNtmvX7l/v6Bt9Uzui7oTymn0saJFgg5UYUPVPuUY1WyfL2jzA9EZcj3zR1NLTgnL5SxQ9MKLBPJ87xZcRzT9z3DMCCU5NzW9EojRYWSHZ0UHJsKKSS1EFTNhVb0CHmh6Ro6IbGyLCNJEkx0M/L/ju41g9ZMuc+tOzMWAdfmjD6kqLr6bHi73cDc2+2T3t9vSKXmBGN95NoLxqZiEi1tsKE95FiO83NDURTNxkpJtNZzdG2kewb9m71Sc90PI3oYPqTp+oFOKixjYsyCIJgNO6UZxolhus6PGqnp1ET7i+qPXmpaNaG1QnQNlolplmEm3UURskwYu5rhUnIVNepYoOp/U15qxmOMOOVY5lObyQzL/Z4x97jWB6Yy+mDIu+H+LyxDrpeSqfDRlyM/AI2D7Y6sUvEyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;syrup-12&quot;
+        title=&quot;&quot;
+        src=&quot;/static/3272365d2a7412071f93309caa3150c4/f058b/syrup-12.png&quot;
+        srcset=&quot;/static/3272365d2a7412071f93309caa3150c4/c26ae/syrup-12.png 158w,
+/static/3272365d2a7412071f93309caa3150c4/6bdcf/syrup-12.png 315w,
+/static/3272365d2a7412071f93309caa3150c4/f058b/syrup-12.png 630w,
+/static/3272365d2a7412071f93309caa3150c4/40601/syrup-12.png 945w,
+/static/3272365d2a7412071f93309caa3150c4/d74fe/syrup-12.png 1164w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;(4) 마지막으로 실제 앱 실행을 통한 비교 시험에서도 성능이 좋아진 것을 확인할 수 있었습니다.&lt;br&gt;
+개선 전(3.52s) 대비, 개선 후(1.96s) 최초 로딩 속도가 1.56s 개선되었습니다.&lt;/p&gt;
+&lt;h3&gt;마무리&lt;/h3&gt;
+&lt;p&gt;지금까지 Syrup 모바일 웹의 몇 가지 개선 사례를 공유 드렸습니다. 개선 과정에서 WebFlux, Server Sent Events, Next.js를 활용한 성능 개선에 집중했고, 실제로 체감할 수 있는 성능 향상을 달성했습니다.&lt;/p&gt;
+&lt;p&gt;이러한 결과를 얻기까지 WebFlux, Server Sent Events, Next.js를 도입에 따른 레퍼런스 부족, 코딩스킬 경험의 부족으로 인한 여러 시행착오의 과정을 겪었지만 그 결과 실질적인 성능 향상 뿐만 아니라 개발 관점에서 많은 성장과 다양한 경험을 할 수 있었습니다.&lt;/p&gt;
+&lt;p&gt;짧은 글이나마 과정을 정리한 이 글이 독자 여러분의 성장에 작은 밑거름이 될 수 있길 바랍니다.&lt;/p&gt;
+&lt;p&gt;감사합니다.&lt;/p&gt;
+&lt;p&gt;모으는 재미, 불리는 맛 Syrup&lt;/p&gt;
+&lt;p&gt;Google play&lt;br&gt;
+&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.skt.skaf.OA00026910&amp;#x26;hl=ko&amp;#x26;gl=US&quot;&gt;https://play.google.com/store/apps/details?id=com.skt.skaf.OA00026910&amp;#x26;hl=ko&amp;#x26;gl=US&lt;/a&gt;&lt;br&gt;
+Apple App Store&lt;br&gt;
+&lt;a href=&quot;https://apps.apple.com/kr/app/syrup-%EC%8B%9C%EB%9F%BD/id430282710&quot;&gt;https://apps.apple.com/kr/app/syrup-%EC%8B%9C%EB%9F%BD/id430282710&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[SK플래닛 신규 서비스 Wezuro 브랜드 구축 스토리]]></title><description><![CDATA[No.1 리워드 쇼핑 플랫폼, Wezuro 런칭!  SK플래닛은 지난 9월 경유하여 쇼핑하며 포인트를 쌓아가는 쇼핑 혜택 플랫폼 Wezuro( https://wezuro.co.kr )를 선보였습니다. 이번 포스트를 통해 No.1 리워드 쇼핑 플랫폼인 Wezuro가 브랜드적 관점에서 어떻게 구축되었는지 SK…]]></description><link>https://techtopic.skplanet.com/wezuro/</link><guid isPermaLink="false">https://techtopic.skplanet.com/wezuro/</guid><dc:creator><![CDATA[go]]></dc:creator><pubDate>Thu, 23 Nov 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;No.1 리워드 쇼핑 플랫폼, Wezuro 런칭!&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
