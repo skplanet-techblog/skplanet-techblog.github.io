@@ -10,6 +10,7 @@ import taehyung from "./images/taehyung.png";
 import ogog from "./images/ogog.png";
 import go from "./images/go.png";
 import changho from "./images/changho.png";
+import yooncy from "./images/yooncy.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -89,5 +90,11 @@ export const MEMBERS = {
     team: "Syrup개발팀",
     description: "항상 긍정적인 마인드로 S/W를 개발하려 노력하는 개발자입니다.",
     thumbnail: changho,
+  },
+  yooncy: {
+    name: "윤치열",
+    team: "DT Solution사업2팀",
+    description: "적극적인 마인드로 일하는 ARHIS Product Manager입니다.",
+    thumbnail: yooncy,
   },
 };
