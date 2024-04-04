@@ -1,6 +1,6 @@
 ---
 title: "ARHIS: 음향 기반 도로 노면 검지 솔루션"
-date: "2024-01-18"
+date: "2024-02-18"
 tags: ["AI", "Audio", "IoT", "Edge_Computing", "Road_Safety"]
 author: "yooncy"
 description: "ARHIS: 음향 기반 도로 노면 검지 솔루션"
