@@ -1,4 +1,591 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Apr 2024 12:12:17 GMT</lastBuildDate><item><title><![CDATA[ARHIS: 음향 기반 도로 노면 검지 솔루션]]></title><description><![CDATA[SK플래닛이 자체 개발한 ARHIS(Audio & AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다. 이 기술을 솔루션화한 RB ARHIS…]]></description><link>https://techtopic.skplanet.com/rbarhis-ai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/rbarhis-ai/</guid><dc:creator><![CDATA[yooncy]]></dc:creator><pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;SK플래닛이 자체 개발한 ARHIS(Audio &amp;#x26; AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 05 Apr 2024 02:57:20 GMT</lastBuildDate><item><title><![CDATA[Planet AD 서비스 안정화 가이드]]></title><description><![CDATA[SK플래닛의 Planet AD 는 리워드 광고 플랫폼으로 현재 시럽, OK 캐쉬백, 오락, T 멤버십 등에 광고를 제공하고 있습니다.
+2023년 4월에 처음 서비스를 시작하여 이제 1년을 맞이하고 있습니다.…]]></description><link>https://techtopic.skplanet.com/planet-ad/</link><guid isPermaLink="false">https://techtopic.skplanet.com/planet-ad/</guid><dc:creator><![CDATA[limds]]></dc:creator><pubDate>Fri, 05 Apr 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/38b05f1d4e76cba97a8d7244e349a1c7/077b7/image01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.79746835443038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACPElEQVR42p2Sy2sTURTGoxsFH/+CS8HHRlQCLty5ciuKoBuhtujCtYqIFLGI3QitiCgJSSlKS9ukwbYS2xqNtKl51IhFq5NIM5OQmTuZyUxmMpP7ee8kSiKI4OLj3Nf5zTfnHJ+iNyxZM10WnV+S6yxqptN99g81mTjD9vEFqdsgdeu3VKKDNByoeqPn/G9iDKoaNo+tXiADyIaDRjgIPZeD0gJIzfgfoNVOVOuQiQn7wRDotT7UhCIUm4JoZncyWIm82JbJ97Rz1wGaTRBKoYJ6ruyno0D/WbTuXocmlhjU9dxzgGE7sFwK06FoMPE9E+VrD0hM21WKEqT7QZSHQ5CGx0DODUA/eRq6/xRq5weglAkUw2KJLbx+8w5zrxaxml5HIrmCZCqNdDZPP+Ty3Cl3yDpcVSFeuo3vvn0Qth9g8TCEncch7PBD2OuH/PGr55I1lIFyiM0tIBAaw+TMLKaiMYRnInRiOoqKonV+mdeEQy8PQvAdRGHbEVQv3oTcN4itQ2dQzXyB0nQ9h/PxJYTHXyC+lMCTZwEkEkmYsffU4CVhDzygyguqGlAkGeKFGwy6H8VdR/Fj9wkU9hzrcbiWzSP6cp6BlzEZmUUqnUVtOUOJrPGydI0NnznutCCifOcxpKtDEK/cg3RrFMpWlX8ddctldVvFw5FHWIgvYmI6gtD4c4wEglQoVVAzm3/OIR8fNiKsc8Ri4t1lHSXtGeMJ2PhWwNuVNWwWS/i8KSCVWUfu0watEI0zWj8BY+8KMCbaR0oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/38b05f1d4e76cba97a8d7244e349a1c7/f058b/image01.png&quot;
+        srcset=&quot;/static/38b05f1d4e76cba97a8d7244e349a1c7/c26ae/image01.png 158w,
+/static/38b05f1d4e76cba97a8d7244e349a1c7/6bdcf/image01.png 315w,
+/static/38b05f1d4e76cba97a8d7244e349a1c7/f058b/image01.png 630w,
+/static/38b05f1d4e76cba97a8d7244e349a1c7/40601/image01.png 945w,
+/static/38b05f1d4e76cba97a8d7244e349a1c7/077b7/image01.png 1166w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;SK플래닛의 Planet AD 는 리워드 광고 플랫폼으로 현재 시럽, OK 캐쉬백, 오락, T 멤버십 등에 광고를 제공하고 있습니다.
+2023년 4월에 처음 서비스를 시작하여 이제 1년을 맞이하고 있습니다. 1년 동안 서비스를 운영하면서 팀원들이 맞닥뜨린 여러 사례들과 문제 해결을 위해 어떤 노력들을 하였는지 사례를 중심으로 말씀드리고자 합니다.&lt;/p&gt;
+&lt;h2&gt;Planet AD 와 AWS&lt;/h2&gt;
+&lt;p&gt;Planet AD 는 여러 AWS 서비스를 사용하고 있습니다. Amazon EKS 에서 여러 서비스를 운영하고 있으며, 광고 할당에는 Opensearch, DMP 타겟팅에는 DynamoDB, 데이터베이스는 Aurora MySQL 을 사용하고 있습니다. 이처럼 다양한 AWS 서비스를 사용하다 보면 비용 절감이라는 주제를 빠트릴 수 없으므로, 서비스 안정화와 비용 절감이라는 두 가지의 주제로 말씀드리고자 합니다.&lt;/p&gt;
+&lt;h3&gt;EKS IP Pool 관리&lt;/h3&gt;
+&lt;p&gt;Planet AD 는 Amazon EKS(Elastic Kubernetes Service)에서 서비스를 운영하고 있습니다. EKS에서 서비스를 운영 할 때 중요한 부분 중 하나는 부하에 따른 Autoscaling인데요, Planet AD 에서도 CPU/RAM 사용량으로 Autoscaling 설정을 해놨습니다. 그런데 트래픽이 집중되는 시간에 Node 가 새로 생성이 되었는데, IP 가 부족하여 Node 생성이 Pending 되는 현상이 발생했습니다.&lt;/p&gt;
+&lt;p&gt;이와 같은 현상은 EKS Node의 기본 설정을 사용하게 될 경우 발생할 수 있습니다. EKS Node는 보다 빠른 Pod 생성을 위해서 Pod 에 할당 가능한 IP를 Warm  pool 로 구성하여 유지하게 됩니다. Warm pool 에 있는 IP 는 실제 Pod 에 할당되어 있지 않더라도 사용중인 IP 로 간주합니다. Warm pool 에 할당되는 IP 수는 Node의 ENI (Elastic Network Interface) 수에 따라서 결정되고, ENI 수는 Node 타입(인스턴스 타입)으로 결정됩니다. 예를 들어서 m5.4xlarge의 경우 최대 8개의 ENI 가 붙을 수 있고 각 인터페이스 당 30개의 IP 주소가 할당 될 수 있습니다. 즉 Node에서 Warm pool 에 할당하는 IP 가 30개라고 했을때, Pod가 10개만 생성이 된다면 나머지 20개의 IP는 실제 사용하지 않지만 사용중으로 취급되어 낭비되는 IP 가 생기게 됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/078b36732fc3a670a6ff05ed7e5f202d/252d3/image02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.15189873417721%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAADsUlEQVR42l1UfUxTVxS//YKmLR+WUlFW6xLcYpdQR4lDdILLOs3c/oCsugimGg24GhWjbov+8eJYorOBLJFFmUAJ7CtvMrHZCIxtfJRaP95SEgutRWpcGxjYtJ2PFmyLZ/e+lmXxJC/n3PM759zz9S4ChHgIk7XuFcXkmeI77IWyi3Y9Uv7dtLsK2Mf6kI1eR3AAg4DjFOIPUUgIkPLDPHWmkWDIiMSIxgIBbhjV6z2nNiajn2n7yFmMkFooFP5cUlIyKMvK+kOlUr0DAKqenh4lwaVS6T6FQnkZIeGbKEU8lwFl4BuAu8kZhlz34PdfuIdv1qUNNh058lEC42A2m6GgoOAkFt9zOBzFBMSX9WZmZuIC0adpeyEXcI7Kl4U+WZXj6qfljwFW3YqAHIARYYPCyh07fuzs7OytqakZLisrqyJeW7dWbMNyoUQiOatQKHwajaY+HZDvMmgy0HzzhpuRtm2BWGDcG18GXyy68OCRc2xTqj/AJ3x0dDQ/GAxWm0ymd8vLy0Gr1V7HWD7JGH+VK3ZcwMCF7Qzb9iE8m3mQfI6RZDKR8I0zbxADBkCEVYJHbvd6zIXyoqJsnU7XWVpauhfDOSKRaL9MllOH+1mZCohLfjo/exeSURhxhePtvz95HlpILEWm720mBnWtraR0vs12W8swjITo9PpaabpEvVgsBrk8j/TxJ6Lo24UyUSy2yJDGtww+jR9oC8NfwXgi7h/nMrw2MKP78jd29bz/4QaPZ2q/1+t9CasFqUHmy/C4tzQYPzj2zdXm8zB4OW/OhGSIZdlbJODCs+WEa4pd9E//sxD22l9H5WNZHY6l5a+HowON5q6XR+wj23u6u9egomPZB5vmrFWfB7khuVwgr7n0ZNhAefaQXUS4lHX37082TE97ap399zZ3fWV7nxjSLjrjePts4+H2+T3s7NRrExOeQ34/lyHaS01c3fmxeyeR3zrtq9/duAQVDYG38dIL0f+Jpg2CycBkXmTmoW4WQBm63qIGq1Wygntv92X7/rSrSV8rqCHOub555kbtpblfiBxp0sgRRVF8MkHyEWVv769r79oc1f0/dGnZb4+ORb87fn4lYKy7/soifYIMgGehjGKckazFdEptMVIFQKlz3WdezUIvEI803Fy8WkohlB2ymC4Grx2oJoMgWLjj0OFw19HTxLC1VSdaeQfwxvI43//OL5DZrJd2nFurGrDblRReWsuJnNwrJ+WFVisjsTiduUiHRAg/EqlYOFj69yX0L0yAxhj24qX/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/078b36732fc3a670a6ff05ed7e5f202d/f058b/image02.png&quot;
+        srcset=&quot;/static/078b36732fc3a670a6ff05ed7e5f202d/c26ae/image02.png 158w,
+/static/078b36732fc3a670a6ff05ed7e5f202d/6bdcf/image02.png 315w,
+/static/078b36732fc3a670a6ff05ed7e5f202d/f058b/image02.png 630w,
+/static/078b36732fc3a670a6ff05ed7e5f202d/40601/image02.png 945w,
+/static/078b36732fc3a670a6ff05ed7e5f202d/78612/image02.png 1260w,
+/static/078b36732fc3a670a6ff05ed7e5f202d/252d3/image02.png 3244w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+Pod 에 IP가 할당되는 과정&lt;/p&gt;
+&lt;p&gt;즉, 많은 수의 Node 가 스케일 아웃 되면서 기본 값으로 Warm Pool 에 할당 될 IP가 부족하여 Node 가 생성되지 않았던 것이었습니다. 따라서 낭비되는 IP 가 없도록 Warm Pool 설정의 변경이 필요합니다. Planet AD에서 변경한 설정 값은 아래와 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WARM_ENI_TARGET : WARM IP POOL 을 유지 하기 위한 추가 ENI 의 수&lt;/li&gt;
+&lt;li&gt;WARM_IP_TARGET : Node 생성 시 필요한 최소의 IP 주소 수&lt;/li&gt;
+&lt;li&gt;MINIMUM_IP_TARGET : Node 생성 시 Pod에 할당하기 위해 확보해야 하는 최소의 IP 수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;WARM_ENI_TARGET&lt;/code&gt; 의 기본값은 1인데, 이는 기본 ENI외의 추가 ENI 1개에서도 Warm Pool 을 유지한다는 설정입니다. 저희는 이 설정을 삭제했습니다.
+&lt;code class=&quot;language-text&quot;&gt;WARM_IP_TARGET&lt;/code&gt; 은 ENI 전체를 Warm Pool로 가져가지 않고 특정 IP 개수만큼만 Warm Pool을 확보하겠다라는 설정입니다. &lt;code class=&quot;language-text&quot;&gt;WARM_IP_TARGET=1&lt;/code&gt;로 설정되면 Pod이 생성될 때마다 Secondary IP를 1개씩 추가로 할당한다고 보시면 됩니다. 이때, Pod의 생성과 종료가 빈번한 경우 인스턴스에 IP를 Attach/Detach 하는 API call의 수가 늘어나 ENI를 추가하거나 IP를 추가하는데 쓰로틀링 이 발생할 수 있습니다.
+이를 방지하기 위해 &lt;code class=&quot;language-text&quot;&gt;MINIMUM_IP_TARGET&lt;/code&gt;을 함께 설정합니다. Node에 일반적으로 유지되는 Pod의 수를 &lt;code class=&quot;language-text&quot;&gt;MINIMUM_IP_TARGET&lt;/code&gt; 으로 지정해 놓으면 해당 수만큼 ENI에 미리 IP가 할당되어 있습니다.
+&lt;code class=&quot;language-text&quot;&gt;WARM_IP_TARGET&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;MINIMUM_IP_TARGET&lt;/code&gt; 은 주로 사용하는 인스턴스 크기와 Planet AD 의 평균 Pod 리소스를 고려하여 설정하였습니다.&lt;/p&gt;
+&lt;h3&gt;EKS 1.24 Containerd 런타임 IPv4,IPv6 dualstack 지원 이슈&lt;/h3&gt;
+&lt;p&gt;AWS EKS 는 주기적으로 버전 업그레이드가 필요합니다. 특히나 2024년에는 추가 지원(Extended support)가 추가되면서 EOS(End Of Support) 이 후에도 지원을 받을 수 있습니다만 그만큼 과금이 되도록 변경되면서 적절한 시간에 버전 업그레이드는 필수적인 사항이 되었습니다. 업그레이드 이 후 변경점에 따라서 이슈가 발생하기도 하는데, EKS 1.23에서 1.24로 업그레이드 이 후 겪은 이슈 하나를 말씀드리겠습니다.&lt;/p&gt;
+&lt;p&gt;EKS 1.24를 적용한 후 모니터링 중 500 에러가 증가하는 현상을 발견했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/80d96551100486b70e18e48f1934690b/e405b/image03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAT0lEQVR42h3JQQ5AMBBAUcdqdYxRLJRUVCIREvc/guQvJFZv8aonLW/eL9J6spQbjRO+iYiNv0E6NlGKtuQgHK2R1Qg2/O+0x7ww+5rkHB+qFiOazsi71gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/80d96551100486b70e18e48f1934690b/f058b/image03.png&quot;
+        srcset=&quot;/static/80d96551100486b70e18e48f1934690b/c26ae/image03.png 158w,
+/static/80d96551100486b70e18e48f1934690b/6bdcf/image03.png 315w,
+/static/80d96551100486b70e18e48f1934690b/f058b/image03.png 630w,
+/static/80d96551100486b70e18e48f1934690b/40601/image03.png 945w,
+/static/80d96551100486b70e18e48f1934690b/78612/image03.png 1260w,
+/static/80d96551100486b70e18e48f1934690b/e405b/image03.png 1566w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;500 에러 발생 로그&lt;/p&gt;
+&lt;p&gt;에러 로그에서는 upstream 으로 IPv6 주소를 사용하고 있습니다. 이는 EKS 1.24 의 주요 변경점 중 하나인 Docker의 CRI(Container Runtime Interface) 지원이 제거되고 &lt;code class=&quot;language-text&quot;&gt;Containerd&lt;/code&gt; 로 변경된 것이 원인이었습니다. &lt;code class=&quot;language-text&quot;&gt;Containerd&lt;/code&gt; 는 Pod의 루프백 주소로 IPv4(127.0.0.1) 및 IPv6(::1) 주소 모두를 바인딩합니다. 하지만 Planet AD 의 nginx 에서는 upstream host를 &lt;code class=&quot;language-text&quot;&gt;localhost&lt;/code&gt; 로 사용하고 있었는데, 이 경우에도 IPv4와 IPv6 모두 할당이 가능합니다. 그런데 upstream이 IPv4를 리스닝 중 일 때, localhost 가 ipv6 (::1) 로 되면 upstream 으로 접속이 되지 않아 이 현상이 발생하게 됩니다. 저희는 &lt;code class=&quot;language-text&quot;&gt;localhost&lt;/code&gt; 대신 명시적으로 &lt;code class=&quot;language-text&quot;&gt;127.0.0.1&lt;/code&gt;로 지정하고 IPv6 설정을 비활성화 하여 해당 현상을 방지하였습니다.&lt;/p&gt;
+&lt;h3&gt;Autoscaling 최적화&lt;/h3&gt;
+&lt;h4&gt;KEDA(k8s Event-driven Autoscaling) 적용&lt;/h4&gt;
+&lt;p&gt;앞서 CPU/RAM 사용량에 따른 Autoscaling을 설정했다고 말씀드렸습니다만, 실제 적용해보니 아쉬운 점이 있었습니다. 선제적으로 스케일링이 되지 않고 스파이크 치는 시점에 스케일링이 시작되어 1, 2분 후에 스케일링이 완료되니, 스케일링 중인 시간에 더 많은 요청이 들어오면 정상적으로 처리되지 않는 현상이 간헐적으로 발생했습니다. 이를 해결하기 위해 먼저 트래픽을 분석해 보았습니다.&lt;/p&gt;
+&lt;p&gt;Planet AD의 트래픽을 분석해 보면 크게 세 개로 구분할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7633c6e7ed5d7a4aa6e888efcae40bc6/51800/image04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 40.50632911392405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABLUlEQVR42qWRW0vDQBCF8///TdFSUZ8E9UGpN0Qam/RiREGTxTbZTXZn5ji5iPqgD7rLx1zYnMxwImtdAPBfGgUCLKMQ2vqPR1SCCSDirqaQRcSsffkBfaM36ABBBuD7Wvu8fYXMjsDxCWN5pvE40wl993E38MCHGDig9I/IQwwjKxS8QEFpj+a+SEDTEeh6wohV+GY/i3xdop2y9OjYKqFdQDTxG1SDYO5jFGE+cA/TCuYz8OUuwsUO4+4QdDXOIlAtL6WTccoySUlGc5a1qQRcif5IGCy6tOiqHW1OXYRwmQsn58LplLCegpLThwj6rHAN9hYeB8uAcRKQbZrOPPlmJP1mdG8K1BRnrdlW1jy/1YozT8pG69pZY21lnOvzz9j3vlLXNtd+FXxz+w5Awmn4J0AwUQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7633c6e7ed5d7a4aa6e888efcae40bc6/f058b/image04.png&quot;
+        srcset=&quot;/static/7633c6e7ed5d7a4aa6e888efcae40bc6/c26ae/image04.png 158w,
+/static/7633c6e7ed5d7a4aa6e888efcae40bc6/6bdcf/image04.png 315w,
+/static/7633c6e7ed5d7a4aa6e888efcae40bc6/f058b/image04.png 630w,
+/static/7633c6e7ed5d7a4aa6e888efcae40bc6/40601/image04.png 945w,
+/static/7633c6e7ed5d7a4aa6e888efcae40bc6/51800/image04.png 1196w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+Planet AD 트래픽&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구분&lt;/th&gt;
+&lt;th&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 42px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/aaf27342d379e765e2fcc8da442e8d1f/bfa22/image05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.19047619047619%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAWElEQVR42mPYcvz5/22nXlAFg8xi2Hri+f+9197933udQgw0A2TWqIGjBo4aSJSBW048/w0U+L33BoUYaAbILIYD177/P/7gD1UwyCwGYAmxZNNR6mCQWQAUIg6xPEImLQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/aaf27342d379e765e2fcc8da442e8d1f/bfa22/image05.png&quot;
+        srcset=&quot;/static/aaf27342d379e765e2fcc8da442e8d1f/bfa22/image05.png 42w&quot;
+        sizes=&quot;(max-width: 42px) 100vw, 42px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/th&gt;
+&lt;th&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 44px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5a104a1d98bf2c0f9757d92594e33492/743ae/image06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.72727272727273%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAbklEQVR42u3MsQ2AIBRFUSZyHJnIWDuHYGJjoiygIqUNjGAPosWTvwKNDcUt72H+GLqgRRMO2WaXfnKiGSuGawXs8sIpZEc/OU5xhnNC0NKHXT7ZpZ8cv/U1g50TKN5bS+RGPznRCF7AAhbwF/AD+yj45ttwRMoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image06&quot;
+        title=&quot;&quot;
+        src=&quot;/static/5a104a1d98bf2c0f9757d92594e33492/743ae/image06.png&quot;
+        srcset=&quot;/static/5a104a1d98bf2c0f9757d92594e33492/743ae/image06.png 44w&quot;
+        sizes=&quot;(max-width: 44px) 100vw, 44px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/th&gt;
+&lt;th&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 42px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1ba701d60dff63645b2f9816d21cb523/bfa22/image07.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.19047619047619%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAALUlEQVR42mM4+mDLf2pihlEDRw0cNXBgDLy/+Tc1McPlDwf+UxMDXbhlCTUxANQD5u4VwF06AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image07&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1ba701d60dff63645b2f9816d21cb523/bfa22/image07.png&quot;
+        srcset=&quot;/static/1ba701d60dff63645b2f9816d21cb523/bfa22/image07.png 42w&quot;
+        sizes=&quot;(max-width: 42px) 100vw, 42px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;br&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;설명&lt;/td&gt;
+&lt;td&gt;request 가 적은 새벽&lt;/td&gt;
+&lt;td&gt;request가 최대로 발생되는 구간&lt;/td&gt;
+&lt;td&gt;스파이크 현상이 반복 발생되는 구간&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;그래프 범례&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;트래픽 그래프를 보면 새벽 시간 대에는 아무래도 유저가 줄어들어 request 가 적습니다. 그리고 저녁부터 자정까지 0X:00 에 최대 request 가 발생합니다. 그 밖의 시간대에는 한 시간 단위로 스파이크가 반복됩니다.&lt;/p&gt;
+&lt;p&gt;각 패턴을 시간대로 구분이 가능하니, 시간대를 설정하고 이에 따른 스케일링 설정을 추가해보기로 합니다. Autoscaling 을 지원하는 여러 도구들이 있지만 cron 설정과 여러 메트릭을 트리거로 지정할 수 있는 KEDA(Kubernetes Event-driven Autoscaling)가 Planet AD에는 가정 적합하다고 생각하여 적용하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a91f0444a6ee0e4a717cbcb023f43e7e/3c051/image08.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 85.44303797468356%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACkElEQVR42p1Uy24TMRTNh8A/8A3dsuYrWPIHiAUrJHZILLpFIJYsiloQAqTAogiBIJXS0Igk88jEHnvGnrHH48O1mzZtCarElY6uR3d8fHwfHiRJYsbjsZlMJmY6nZqmaQyA/4ElVIOyLJGmKfI8R5Zl4JxHMMYgZIVSyLiuqgp1XUNKeb6++u2cM4OwCKRCiBgMPhDwANkQNEo6oG1b9H2Pruu2ou9diJsBrjG33mCtjf6f//XYEHrvL+HMOucwmy9wfDzB8WQSU+N7ivtrCCPp2rOqw/cTDaU15SbmBbZzMW5IJS8FlNKXDr5gG4VFUcQc3nv0Djd2HuLF2+npAcpiOlvg8PALRqMjSMq5sR0kFWIL6YYwkBlK/P2nn3DrzhO8+pyiIV2tdVQ0gZ9HR5jN5lR5Sbl0saqabrGVcGMepVQQCphWBvu/BcZli8Y4SNtDmQ7vP3zE6/0DzJMUtW5jOvq10r+qbOkqnDOomnqLFKxqui5rkUmLlJAJgznTmBU1Ejool/TNWxR1t53QGIMl5XI4HOLk5BeyymKecyRphpJyKanJgw/KBPmCcSyyggjddkLnSGEpoeQKDeWnNh6J6KLCJakolIvrgAU3SHgTPVf/JHR0VUq0rdA3DE4zWF1SsRQqZajCLcqqQbpkcSQF4aylthIGC3PZGou+a9CpHL3VKFYcKy6gWxs3S9VhbzjDIi9Pia4UxV+E65ynNvGGPDV/9PNF4rMs99QBvnfWP34+8jdv7/oHu1/96Mc3r3Xj14Tt1lkOj4BuSGGYJ7KMXqJ8uUQXxg49Xr6ZYufuHp4dzFGyZezLc4XU1OwqwoBQkFHjMho/xkrBSDWra8XovaS4Z1L38b+A9T5O6/QP8gMaSaAhVjcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image08&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a91f0444a6ee0e4a717cbcb023f43e7e/f058b/image08.png&quot;
+        srcset=&quot;/static/a91f0444a6ee0e4a717cbcb023f43e7e/c26ae/image08.png 158w,
+/static/a91f0444a6ee0e4a717cbcb023f43e7e/6bdcf/image08.png 315w,
+/static/a91f0444a6ee0e4a717cbcb023f43e7e/f058b/image08.png 630w,
+/static/a91f0444a6ee0e4a717cbcb023f43e7e/3c051/image08.png 760w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+KEDA Architecture&lt;/p&gt;
+&lt;p&gt;잠깐 KEDA에 대해서 설명을 드리자면, KEDA는 쿠버네티스 프로젝트를 관리하는 CNCF(Cloud Native Computing Foundation)에서 관리하는 프로젝트 중의 하나입니다. 별도의 컨테이너로 설치되며, 쿠버네티스 메트릭이나 외부 DB 값등을 트리거로 설정하고 이벤트가 발생하면 스케일링을 시작합니다. 이를 위해서 &lt;code class=&quot;language-text&quot;&gt;ScaledObject&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;HPA(Horizontal Pod Autoscaling) 리소스&lt;/code&gt;가 자동으로 추가됩니다.&lt;/p&gt;
+&lt;p&gt;Planet AD에서는 cron 으로 자정을 제외한 새벽 시간대에는 적은 수의 Pod 수를, 스파이크 구간에서는 스파이크가 주로 발생하는 정시보다 몇 분 이른 시간에 Pod가 스케일 아웃을 시작하도록 설정하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9e55df76f5fb848001ffd23cc39bec4d/8d68c/image09.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.848101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAm0lEQVR42p2QURKEMAhDvf9xtWoJUDZQne23Os+0kQZx248D7o6I+MqIfIxhqRvD4us1ePtI/B/YVSKpPgssqEPmFur6qJV2kwC9XVqcuKLJGVDMwBu9TBiIstBKzSyE3t5bvE0TISfuovasyYb0Z+DwUcbF4Fv7chi1z3fPfM/fWnTxmTMDAQ1NlOOQd70qwK8vfcGicy0yR/4BlHnZ9EQ4+sIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image09&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9e55df76f5fb848001ffd23cc39bec4d/f058b/image09.png&quot;
+        srcset=&quot;/static/9e55df76f5fb848001ffd23cc39bec4d/c26ae/image09.png 158w,
+/static/9e55df76f5fb848001ffd23cc39bec4d/6bdcf/image09.png 315w,
+/static/9e55df76f5fb848001ffd23cc39bec4d/f058b/image09.png 630w,
+/static/9e55df76f5fb848001ffd23cc39bec4d/40601/image09.png 945w,
+/static/9e55df76f5fb848001ffd23cc39bec4d/8d68c/image09.png 1234w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+KEDA 적용 전 Pod 수&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/48205dcdb8468c651592c3614aa6e2e9/e9140/image10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 28.48101265822785%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAwklEQVR42qXPbU4EIQwGYO5/L+/gXMCQ7Kgzy1db+mHLrqO/leQJ5C0tIbXeycz+C524Pamq/W2pRe+zP4YZC29JRK7CN1keOUy0KRyXVxa1OFdsdncHFDuhrIEF25ZoTvWhF2bRAlXv7nS39qm7u7UPPUfxWltZrru+92PluexcdcTA1zSVr0/E6yjTgNEaD+sMBkKGOm34eUjkYOesqzb8XugTvEs9wy0BQB7u946IGRwhZaIfkT/QhdaOb+5g5pcvhhbVIgMIpB8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;&quot;
+        src=&quot;/static/48205dcdb8468c651592c3614aa6e2e9/f058b/image10.png&quot;
+        srcset=&quot;/static/48205dcdb8468c651592c3614aa6e2e9/c26ae/image10.png 158w,
+/static/48205dcdb8468c651592c3614aa6e2e9/6bdcf/image10.png 315w,
+/static/48205dcdb8468c651592c3614aa6e2e9/f058b/image10.png 630w,
+/static/48205dcdb8468c651592c3614aa6e2e9/40601/image10.png 945w,
+/static/48205dcdb8468c651592c3614aa6e2e9/e9140/image10.png 1226w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+KEDA 적용 후 Pod 수&lt;/p&gt;
+&lt;p&gt;위 그래프에서 트래픽 패턴과 유사하게 Pod가 변하는 모습을 확인 할 수 있습니다. KEDA를 적용하고 하나의 효과를 더 얻을 수 있었는데, 고정적으로 유지하던 Node 수가 트래픽 패턴에 맞추어 늘어나고 줄어들며 비용도 감소되었습니다.&lt;/p&gt;
+&lt;h4&gt;DNS lookup 지연 개선&lt;/h4&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/364245528deb39d96eb097af588d0374/62a6a/image14.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 29.746835443037973%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABQUlEQVR42oXOzUoCYRQG4AHpblq3KBIt6gKCWlSrjDZKdgHt6woUWrQwKjArJfqxlqWbhlnYxmbGmdIUxpL8mdFxxs+3M6OBbuqDh/e8fHA43F6CR+g8h81TARsnAgLDXD/i/7UW4+3AhYjdZC7C0VuOxz1cKJbFCn0uRJ8wFxmYJ37ii2b+5I1k7MXYi3OQu3CL5ye4pYNDTB+fwX95DV/qDr7kLbmBN5XG7NXDiPux7iVTqbS9+vgMqVx1F8YBDxcWBBbIZlkon2dBUSSvbm7LEgvL8rjCEM07JChJ1r6mocF6iS4wqVmY4eo1HXq1DvNbR6fWRNvx1YBVN8BaJnqEtTroNUc4XTcHDAtWx0bfBvoM4PRiWTVEWTWUd1IcZOFN1RVC6fTfWZcKartYUo1SWW1/EEqzoqndiqa4PmvKD6BzbSkqT3xdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image14&quot;
+        title=&quot;&quot;
+        src=&quot;/static/364245528deb39d96eb097af588d0374/f058b/image14.png&quot;
+        srcset=&quot;/static/364245528deb39d96eb097af588d0374/c26ae/image14.png 158w,
+/static/364245528deb39d96eb097af588d0374/6bdcf/image14.png 315w,
+/static/364245528deb39d96eb097af588d0374/f058b/image14.png 630w,
+/static/364245528deb39d96eb097af588d0374/40601/image14.png 945w,
+/static/364245528deb39d96eb097af588d0374/62a6a/image14.png 1122w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+DNS lookup 발생 로그&lt;/p&gt;
+&lt;p&gt;EKS 에서 Pod 가 스케일 아웃되면, 클러스터 내부에서 DNS 를 담당하는 CoreDNS 도 같이 스케일 아웃이 되어야 합니다. CoreDNS가 부족하게 되면 DNS lookup 지연이 발생하게 됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7d051edae950549be9d4095c8ed75e23/dba9a/image15.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.734177215189874%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACcElEQVR42mWSTU8TURiFJyFBFNB/4M7EjTtCQMAEiImyMSqYGPeu3fhjJKAUEDRQSEOgpVANUFQiRUBClI92oNBShumUdubOTFt4vAxujIuTc3Le95zcm3sVc7YREanHmm3AijRI3Sj5LmakGT3UxEmwCV3iJNTMabgJ61OzB+Fxi8Q9xOeWMksdGDsjQcUdUbD8VdhjlR6EX7K/gtKYwuHANfZ81ez7alD7ajgeqqLkVxCjFTIj98aveBmpywQUjMjDoLIVec3Sepz5aFRinq+rv1lf6CE9fofv679YXokR/RIltvaD2GqMVKCO9cV+osubzMnMwmKUxVW1nJx/RSFcH1SOx26RnH7GdqCDleGHqJOPOAw0kB+5jhp6jhrsYs3fSWKqE3XqCacjN0hPNBGffMzqhw42Rx/I2dOyOXWbwuKLoCJ2h7B33mLt9KFv9Ejdi9j1YcU/St2D2O5F+9mNLfkCVnzYmztyT9/oRuy8w956UyYzgXWaDir2OaR1CzVtop2WEGVwzkAUz6VvkzjMo+VMHLlnSz9nlVBTeQ40QbbgeJ44O5cpmSuW5aO4DoaRJZ5IYFkmBUvgFs/k8IzDdIb9gzTZXIFi6dzzbbeEpuekJ3dNgePY2La4LHTcoOK4RWzHxfSKSmS1JNnMFlYuiXGckHoXLb1NPrtHXt+joKuI3B7Zo03yRkpmyhf5y0L3b6EUuPIEwtTJBW5y4Ksk2V9LZqiag4FaqatJDVZz9P6q95VSgzUc+RTMcB2W7eX/L5T3R1h5jLkujHAzx9PtGDOtaNNt6OFWD8ZMG1qonUzovvfh899eIpzSP4V/AKvpkx8JtPqCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image15&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7d051edae950549be9d4095c8ed75e23/f058b/image15.png&quot;
+        srcset=&quot;/static/7d051edae950549be9d4095c8ed75e23/c26ae/image15.png 158w,
+/static/7d051edae950549be9d4095c8ed75e23/6bdcf/image15.png 315w,
+/static/7d051edae950549be9d4095c8ed75e23/f058b/image15.png 630w,
+/static/7d051edae950549be9d4095c8ed75e23/dba9a/image15.png 652w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+cluster proportional autoscaler 개요&lt;/p&gt;
+&lt;p&gt;Pod 수는 Node 수에 비례해서 늘어나므로 결국 Node 수 증가에 따라서 Autoscaling 이 필요하게 됩니다. 쿠버네티스에서 이런 상황에 대응할 수 있도록 제공되는 CPA(Cluster Proportional Autoscaler)를 사용하여 CoreDNS를 Autoscaling을 하게 됩니다. Planet AD 에서도 DNS lookup 지연 문제 개선을 위해 CPA를 적용하였습니다.&lt;/p&gt;
+&lt;h3&gt;RDS Proxy 적용&lt;/h3&gt;
+&lt;p&gt;앞서 Planet AD의 트래픽 패턴을 보면, 특정 시간대에 스파이크가 생기는 패턴입니다. 이 때 문제가 될 수 있는 또 다른 부분이 DB Connection이 있습니다. 아무래도 접속이 늘어나면 이에 필요한 DB 요청도 늘어나고 Connection도 자연히 늘어나니까요. 그러다보니 Connection이 맺어지지 않아 요청이 실패되는 현상도 발생했습니다.
+Planet AD 서버 애플리케이션은 Golang을 사용하고 있는데, Golang MySQL Dirver에서는 fail-over 지원이 되지 않아 다른 방법을 찾던 중에 AWS RDS Proxy 를 적용하였습니다. 또 AWS RDS 는 인스턴스 크기에 따라서 지원되는 Connection 수가 다른데, RDS Proxy 의 Connection 관리에 따라서 인스턴스 스케일 아웃 없이 Connection 확장 효과도 더불어 얻을 수 있었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/edb75085f3d31eddf13e2f798a950200/e5ca1/image11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.21518987341772%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA2klEQVR42k1Qy24DIQzc//+1HHqKKvXS3qJIjZpsWPCDYWKzTRuQZRjG48HLei8sZaOqERjsAB02c94n1sFaG2trbBFjBM7OC05sozBXYhmLu89DQPNhw41fdqSxcl/7m3tn0qIPXckmxvd64Lee2YVhKIxYCG5bnQ7SSdau9sPjeqCMEASnSLoVUVoUqYQ3T6zzjE+WMJC8rB8RSxChFQgirBI3ueKjveEuBeFk4tI6NNWmP/7n3H93IBpjSXfe+x6WZ6emUnSTmOucF/YvP3mmvznG9crLGT4AFgeIbMAng6AAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;&quot;
+        src=&quot;/static/edb75085f3d31eddf13e2f798a950200/f058b/image11.png&quot;
+        srcset=&quot;/static/edb75085f3d31eddf13e2f798a950200/c26ae/image11.png 158w,
+/static/edb75085f3d31eddf13e2f798a950200/6bdcf/image11.png 315w,
+/static/edb75085f3d31eddf13e2f798a950200/f058b/image11.png 630w,
+/static/edb75085f3d31eddf13e2f798a950200/40601/image11.png 945w,
+/static/edb75085f3d31eddf13e2f798a950200/78612/image11.png 1260w,
+/static/edb75085f3d31eddf13e2f798a950200/e5ca1/image11.png 1332w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+RDS Proxy 적용 전/후 비교&lt;/p&gt;
+&lt;p&gt;그래프에서 확인할 수 있듯이, 클라이언트 Connection이 스파이크를 그려도 RDS Proxy에서 Connection을 관리하므로 DB Connection은 클라이언트 Connection 보다 덜 가파르게 늘어나는 것을 확인 할 수 있습니다.&lt;/p&gt;
+&lt;h3&gt;DynamoDB 최적화&lt;/h3&gt;
+&lt;p&gt;Planet AD에서 타겟팅 광고를 위해서 DMP 세그먼트를 사용하고 있습니다. Planet AD에서는 DMP 세그먼트를 적용을 위해 AWS DynamoDB를 사용하고 있습니다.
+DynamoDB는 완전 관리형 NoSQL DB 서비스로 읽기 용량 단위(Read Capacity Unit), 쓰기 용량 단위(Write Capacity Unit)로 과금이 되며, 읽기 및 쓰기 처리하는 방식으로는 On-Demand와 Provisioned의 두가지 방식이 있습니다. Planet AD에서는 서비스 특성에 따라 트래픽 대응을 위해 여러가지 기능이 제공되는 Provisioned capacity 모드를 사용하고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0ec1ca26ddfbffa07aca6b605cd4665a/e4900/image12.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.77215189873418%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABiklEQVR42nVSvU7CUBjlPXwLB1/B3Y3EwZg4uRMXJ5/AwYRE0cXBRZ1xMCEkBAuJhqUitlAKt0BCf6BW29t7j/feFnTQm3w9zf1OTs93vhYA0P+KgSn8TCJKPItOghFNWZr1GPvNjZEdu8A5x6oECWmaYnUYZwprehV7lW2UbouwXVPd8by3ouZICpRS6LqOXq8Hx3EQhqESjeMYi+UCljHCZbWMzeMN7Jxtof78iDe9B/1Vh2maWC6XEBpMmlkLtlotaJqGbreLJEkwm83Uu2VZoDHFdDHE3dMF7rVrREkIlnIQh2A8HmM6nYIQwlzXlcKkIN1IwXa7jUajocSCIBDNbPRaM8D5zQIPdREW5ZhMHMznc/T7fYWSL6ZjURRlgtJhp9NRjiR6npeFkqdyWrZRPDSwfzREU3uBbVuC4yue7/tqZFFMojBH1FJs28ZgMIBhGGqMTJArrFyZ2D1ooXTyLjL9yheCHLnKW9TPUuRTXsrsZEnHK7I8H2EkxhvBdf38Q2z9V/y15W//41RkeLgsXQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image12&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0ec1ca26ddfbffa07aca6b605cd4665a/f058b/image12.png&quot;
+        srcset=&quot;/static/0ec1ca26ddfbffa07aca6b605cd4665a/c26ae/image12.png 158w,
+/static/0ec1ca26ddfbffa07aca6b605cd4665a/6bdcf/image12.png 315w,
+/static/0ec1ca26ddfbffa07aca6b605cd4665a/f058b/image12.png 630w,
+/static/0ec1ca26ddfbffa07aca6b605cd4665a/40601/image12.png 945w,
+/static/0ec1ca26ddfbffa07aca6b605cd4665a/e4900/image12.png 988w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+일 배치(batch)를 사용할 때의 DMP 타겟팅 워크플로우&lt;/p&gt;
+&lt;p&gt;처음 DMP 타겟팅은 S3를 이용하여 Dynamo DB에 세그먼트 정보를 가져와서 사용하는 방식이었습니다. 이 방식은 일 배치를 사용하므로 세그먼트 생성 후 Planet AD에 적용하기까지 최소 2일이 소요되는 점이 단점이었습니다. 이 점을 개선한 실시간 타겟팅을 적용하였는데, 적용 후 여러가지 문제가 발생했습니다. 대표적인 문제점은 아래와 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;유저 한 명에 대한 DMP 세그먼트 갯수가 너무 많아 Read/Write Capacity를 높여야 했고, DynamoDB 과금 구조상 비용 증가로 이어졌습니다.&lt;/li&gt;
+&lt;li&gt;DynamoDB에 대한 요청이 증가하였고, 스파이크가 발생하여 쓰로틀이 발생하였습니다. 이를 대응하기 위해 Provisoned capacity 를 증가시켜야 했고, 증가 분만큼 비용 또한 늘어났습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;비용 증가한 문제를 해결하기 위해 기존에는 읽기/쓰기 용량 단위(R/W Capacity Unit) 당 하나의 세그먼트를 할당하였는데, 최대 100개의 세그먼트를 넣을 수 있도록 데이터 모델을 수정했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 564px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e164059aee371bd7b861f2e2a0fa9267/ba4d9/image13.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 86.0759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACOklEQVR42pVUWWsiYRD07+uT4FNeQh4UQYQQY8QrKF4JqETEI3jHK96KZ1DH2qlOvtXoZpf9oOlh7Kmu7qpPw+FwwGq1wnq9lpjP55I3mw2WyyU0TQNrmP9y5Ee9rmHY7/cIBAJwOBzweDzw+/2w2+1wuVyIx+PSTJ3FYoFut4t+v492u41ms4n393d0Oh1tMpl8Au52Ozw+PuL+/h6JRALRaBThcBivr68oFosYDocol8uoVqtoNBrSVDXzer24u7vDy8uLlsvloJP7ZEiw6+trhEIhRCIR+Hw+FAoFlEolYXR7e4ubmxth9PDwgGAwiFQqhVgshnw+z9DY8Dcgu9psNilgZzImWKVSkT2qw1HT6TSy2ayw5gStVouhcRJ9zw0DF16r1UDKZKDvQzI/Zmy3WxHkXBR+p8TSSR1FOS36+PjAbDYTpbnbHyXVQVg3nU7FDd9UVgXsRmbPz894enoSdorFORhBOBFFfHt7Y/NLQCrY6/VIX9hxVDI9H5UiEYS7I4F6vc53qugIyAIWcwx6SuVThnxWxmdmUDS99pKhUlXdGAb3pBiqTFu53W7xKcPpdIoP+ZvYRhXT8Rx5PB5LjEYjyYqhyoPBQLxoNpthsVjkEuhMtS+cIyDZ0ZwcgUHFORJ3ejoyD69jJpMRthd3WRVRFJpTKcv98d0pkHpWrmB8NTwyVLuh+00mE66uruQaGo1GJJPJb/v7k7EvGJ4yoBC8p1arFf95Lm8KQek/CsFR//H/9yPgL2VR+mvUwEvhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image13&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e164059aee371bd7b861f2e2a0fa9267/ba4d9/image13.png&quot;
+        srcset=&quot;/static/e164059aee371bd7b861f2e2a0fa9267/c26ae/image13.png 158w,
+/static/e164059aee371bd7b861f2e2a0fa9267/6bdcf/image13.png 315w,
+/static/e164059aee371bd7b861f2e2a0fa9267/ba4d9/image13.png 564w&quot;
+        sizes=&quot;(max-width: 564px) 100vw, 564px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+데이터 모델 수정 전/후&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Unit&lt;/th&gt;
+&lt;th&gt;수정 전 (min-max)&lt;/th&gt;
+&lt;th&gt;수정 후 (min-max)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;RCU&lt;/td&gt;
+&lt;td&gt;6K-15K&lt;/td&gt;
+&lt;td&gt;1.5K-2.8K&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WCU&lt;/td&gt;
+&lt;td&gt;14K-24K&lt;/td&gt;
+&lt;td&gt;1K-1.7K&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;그 결과 Read/Write Capacity 가 사용량이 표의 내용 처럼 줄어들었고, 비용 또한 큰 폭으로 줄일 수 있었습니다.&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;쉽고 빠른 AWS 비용 최적화 방법&lt;/h3&gt;
+&lt;p&gt;AWS 비용을 줄이는 이슈는 Planet AD 런칭 후 지금까지 계속되는 과제입니다. 서비스의 트래픽 증감에 따라서 비용 또한 바뀔 수 있으나, 효율적으로 비용을 사용하기 위해서 적용한 몇 가지 방법들을 말씀드립니다.&lt;/p&gt;
+&lt;h4&gt;RI 계약&lt;/h4&gt;
+&lt;p&gt;사용 중인 AWS 서비스 중에서 비용이 크고, 인스턴스 타입 변동이 제한적인 서비스 위주로 3년 RI 계약을 적용했습니다. 장기 계약을 할 경우 서비스에 따라 50% 이상 절감이 가능하므로 가장 큰 폭으로 비용을 줄일 수 있었습니다.
+다만 RI 계약을 할 경우 스케일 업 또는 스케일 아웃에 제약이 발생합니다. 계약된 인스턴스로만 사용할 수 있기 때문에 스케일 업이나 스케일 아웃으로 인스턴스가 변경될 경우, RI 계약 요금과 변경된 인스턴스의 비용이 중복으로 발생될 수 있으므로 주의 하여야 합니다.&lt;/p&gt;
+&lt;h4&gt;EBS Volume 변경&lt;/h4&gt;
+&lt;p&gt;AWS 인스턴스에서 사용하는 볼륨 같은 경우 현재 GP2와 GP3 가 제공되고 있습니다. 서비스 특성에 따라서 GP3 를 사용하는게 유리하다면, GP3가 GP2 대비 시간당 $ 0.02 가 저렴하므로 약간이나마 비용 절감 효과가 있습니다.&lt;/p&gt;
+&lt;h4&gt;Graviton 인스턴스 사용&lt;/h4&gt;
+&lt;p&gt;Graviton 인스턴스를 사용할 경우 일반 인스턴스를 사용할 때 보다 최대 20%까지 저렴합니다. 다만 Graviton 인스턴스는 ARM 아키텍처이므로 적용하기 전 호환성 점검이 필요합니다. Planet AD 에서는 RDS와 Elasticache에 Graviton 인스턴스를 사용하고 있습니다.&lt;/p&gt;
+&lt;h4&gt;Datadog ASM&lt;/h4&gt;
+&lt;p&gt;Planet AD에서는 보안을 위해 AWS WAF(Web Application Firewall) 를 적용하고 있었습니다. WAF 같은 경우 ACL과 요청 수에 비례하여 비용이 증가하게 됩니다. Planet AD 같은 경우 서비스 런칭 후 트래픽이 증가하는 추세이므로, WAF 비용 또한 증가할 수 밖에 없었습니다.
+Datadog ASM(Application Security Management)의 경우 WAF와 비슷하게 코드 취약성 탐지, 위협 관리 기능을 제공하면서 Datadog APM 호스트 수에 비례해서 비용이 책정되며, 이 비용 또한 WAF 비용 보다 저렴하므로 Datadog ASM을 적용하였고, WAF 비용 대비 1/3 수준으로 비용을 절감하였습니다.&lt;/p&gt;
+&lt;h2&gt;맺음말&lt;/h2&gt;
+&lt;p&gt;지금까지 Planet AD 런칭 후 약 1년 동안 팀에서 진행한 서비스 안정화 및 비용 최적화 내용을 말씀드렸습니다.&lt;/p&gt;
+&lt;p&gt;위에서 말씀드린 내용 이외에도 Spot by NetApp을 사용하여 Spot 인스턴스의 비용을 줄이고, Datadog 이나 Spot by NetApp 에서 제공하는 각 서비스 별 리소스(CPU/MEM) 분석을 참고하여 할당되는 리소스를 최적화시키거나 급격한 트래픽 증가에 대비하기 위해 Spot by NetApp의 Headroom 설정을 하기도 하였습니다. 이러한 활동의 결과 Planet AD는 처음 런칭했을 때 대비 AWS 비용을 약 27% 절감하였습니다.&lt;/p&gt;
+&lt;p&gt;저희가 시도한 방법들이 비슷한 고민을 하고 계시는 분들에게 약간의 팁이 되길 바랍니다. 서비스 런칭 후 고생하신 팀원들, 서비스 안정화와 비용 최적화에 같이 고민해 주시고 도와주신 Cloud Eng.팀과 정보보호담당 팀 담당자분께도 감사의 인사를 전합니다.&lt;/p&gt;
+&lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ARHIS: 음향 기반 도로 노면 검지 솔루션]]></title><description><![CDATA[SK플래닛이 자체 개발한 ARHIS(Audio & AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다. 이 기술을 솔루션화한 RB ARHIS…]]></description><link>https://techtopic.skplanet.com/rbarhis-ai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/rbarhis-ai/</guid><dc:creator><![CDATA[yooncy]]></dc:creator><pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;SK플래닛이 자체 개발한 ARHIS(Audio &amp;#x26; AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다.&lt;/p&gt;
 &lt;p&gt;이 기술을 솔루션화한 RB ARHIS는 기상청 등 관련 기관으로부터 우수한 평가를 받았으며, 제 18회 대한민국 기상산업대상에서 국무총리상을 수상하였습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
