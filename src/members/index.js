@@ -11,6 +11,7 @@ import ogog from "./images/ogog.png";
 import go from "./images/go.png";
 import changho from "./images/changho.png";
 import yooncy from "./images/yooncy.png";
+import limds from "./images/limds.png";
 
 export const MEMBERS = {
   jayoon: {
@@ -96,5 +97,11 @@ export const MEMBERS = {
     team: "DT Solution사업2팀",
     description: "적극적인 마인드로 일하는 ARHIS Product Manager입니다.",
     thumbnail: yooncy,
+  },
+  limds: {
+    name: "임동선",
+    team: "Data Solution개발팀",
+    description: "새로운 기술을 배우는데 관심이 많은 소프트웨어 엔지니어입니다.",
+    thumbnail: limds,
   },
 };
