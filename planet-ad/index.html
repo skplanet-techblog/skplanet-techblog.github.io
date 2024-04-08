@@ -296,7 +296,7 @@ Planet AD 트래픽</p>
   </a>
     </span>
 KEDA Architecture</p>
-<p>잠깐 KEDA에 대해서 설명을 드리자면, KEDA는 쿠버네티스 프로젝트를 관리하는 CNCF(Cloud Native Computing Foundation)에서 관리하는 프로젝트 중의 하나입니다. 별도의 컨테이너로 설치되며, 쿠버네티스 메트릭이나 외부 DB 값등을 트리거로 설정하고 이벤트가 발생하면 스케일링을 시작합니다. 이를 위해서 <code class="language-text">ScaledObject</code>와 <code class="language-text">HPA(Horizontal Pod Autoscaling) 리소스</code>가 자동으로 추가됩니다.</p>
+<p>잠깐 KEDA에 대해서 설명을 드리자면, KEDA는 쿠버네티스 프로젝트를 관리하는 CNCF(Cloud Native Computing Foundation)에서 관리하는 프로젝트 중의 하나입니다. 별도의 컨테이너로 설치되며, 쿠버네티스 메트릭이나 외부 DB 값등을 트리거로 설정하고 이벤트가 발생하면 스케일링을 시작합니다. 이를 위해서 <code class="language-text">ScaledObject</code>와 <code class="language-text">HPA(Horizontal Pod Autoscaling)</code>리소스가 자동으로 추가됩니다.</p>
 <p>Planet AD에서는 cron 으로 자정을 제외한 새벽 시간대에는 적은 수의 Pod 수를, 스파이크 구간에서는 스파이크가 주로 발생하는 정시보다 몇 분 이른 시간에 Pod가 스케일 아웃을 시작하도록 설정하였습니다.</p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -585,7 +585,7 @@ Datadog ASM(Application Security Management)의 경우 WAF와 비슷하게 코�
 <h2>맺음말</h2>
 <p>지금까지 Planet AD 런칭 후 약 1년 동안 팀에서 진행한 서비스 안정화 및 비용 최적화 내용을 말씀드렸습니다.</p>
 <p>위에서 말씀드린 내용 이외에도 Spot by NetApp을 사용하여 Spot 인스턴스의 비용을 줄이고, Datadog 이나 Spot by NetApp 에서 제공하는 각 서비스 별 리소스(CPU/MEM) 분석을 참고하여 할당되는 리소스를 최적화시키거나 급격한 트래픽 증가에 대비하기 위해 Spot by NetApp의 Headroom 설정을 하기도 하였습니다. 이러한 활동의 결과 Planet AD는 처음 런칭했을 때 대비 AWS 비용을 약 27% 절감하였습니다.</p>
-<p>저희가 시도한 방법들이 비슷한 고민을 하고 계시는 분들에게 약간의 팁이 되길 바랍니다. 서비스 런칭 후 고생하신 팀원들, 서비스 안정화와 비용 최적화에 같이 고민해 주시고 도와주신 Cloud Eng.팀과 정보보호담당 팀 담당자분께도 감사의 인사를 전합니다.</p>
+<p>저희가 시도한 방법들이 비슷한 고민을 하고 계시는 분들에게 약간의 팁이 되길 바랍니다. 서비스 런칭 후 고생하신 팀원들, 서비스 안정화와 비용 최적화에 같이 고민해주시고 도와주신 Cloud Eng.팀과 정보보호담당 팀 담당자분께도 감사의 인사를 전합니다.</p>
 <p>감사합니다.</p></section><hr/><footer><div class="bio"><img src="/static/limds-4aca89242a9d0e86b5a4a9bbb18a4092.png" alt="profile" class="bio-avatar"/><p><strong>임동선 (Data Solution개발팀)</strong><br/>새로운 기술을 배우는데 관심이 많은 소프트웨어 엔지니어입니다.</p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/rbarhis-ai/">← <!-- -->ARHIS: 음향 기반 도로 노면 검지 솔루션</a></li><li></li></ul></nav></main><footer class="footer">COPYRIGHT © 2023 <span class="bold">SK Planet.</span> ALL RIGHT RESERVED.</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XMQBSN6DMR"></script><script>
       
       
@@ -602,4 +602,4 @@ Datadog ASM(Application Security Management)의 경우 WAF와 비슷하게 코�
           >
             window.___chunkMapping="{\"app\":[\"/app-787c96a099cd74e9b689.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-e0b58933b01be53235e7.js\"],\"component---src-pages-culture-js\":[\"/component---src-pages-culture-js-023d0cd87c4e4dbff761.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-bc68aa88cfb15e3b8846.js\"],\"component---src-pages-tag-js\":[\"/component---src-pages-tag-js-93bcf6be417a81dfdf1b.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-d229c97eead41d742147.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-51a2288211217f98f183.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="2ef28bd82564e854c3a2";</script><script src="/webpack-runtime-0033662a2f78bd654a25.js" async></script><script src="/framework-ab9cf4d9323c9a33eb65.js" async></script><script src="/app-787c96a099cd74e9b689.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="3a74fa2f85308ff97339";</script><script src="/webpack-runtime-0033662a2f78bd654a25.js" async></script><script src="/framework-ab9cf4d9323c9a33eb65.js" async></script><script src="/app-787c96a099cd74e9b689.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

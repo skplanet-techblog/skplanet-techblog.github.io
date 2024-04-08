@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 05 Apr 2024 02:57:20 GMT</lastBuildDate><item><title><![CDATA[Planet AD 서비스 안정화 가이드]]></title><description><![CDATA[SK플래닛의 Planet AD 는 리워드 광고 플랫폼으로 현재 시럽, OK 캐쉬백, 오락, T 멤버십 등에 광고를 제공하고 있습니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Apr 2024 02:43:14 GMT</lastBuildDate><item><title><![CDATA[Planet AD 서비스 안정화 가이드]]></title><description><![CDATA[SK플래닛의 Planet AD 는 리워드 광고 플랫폼으로 현재 시럽, OK 캐쉬백, 오락, T 멤버십 등에 광고를 제공하고 있습니다.
 2023년 4월에 처음 서비스를 시작하여 이제 1년을 맞이하고 있습니다.…]]></description><link>https://techtopic.skplanet.com/planet-ad/</link><guid isPermaLink="false">https://techtopic.skplanet.com/planet-ad/</guid><dc:creator><![CDATA[limds]]></dc:creator><pubDate>Fri, 05 Apr 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -295,7 +295,7 @@ Planet AD 트래픽&lt;/p&gt;
   &lt;/a&gt;
     &lt;/span&gt;
 KEDA Architecture&lt;/p&gt;
-&lt;p&gt;잠깐 KEDA에 대해서 설명을 드리자면, KEDA는 쿠버네티스 프로젝트를 관리하는 CNCF(Cloud Native Computing Foundation)에서 관리하는 프로젝트 중의 하나입니다. 별도의 컨테이너로 설치되며, 쿠버네티스 메트릭이나 외부 DB 값등을 트리거로 설정하고 이벤트가 발생하면 스케일링을 시작합니다. 이를 위해서 &lt;code class=&quot;language-text&quot;&gt;ScaledObject&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;HPA(Horizontal Pod Autoscaling) 리소스&lt;/code&gt;가 자동으로 추가됩니다.&lt;/p&gt;
+&lt;p&gt;잠깐 KEDA에 대해서 설명을 드리자면, KEDA는 쿠버네티스 프로젝트를 관리하는 CNCF(Cloud Native Computing Foundation)에서 관리하는 프로젝트 중의 하나입니다. 별도의 컨테이너로 설치되며, 쿠버네티스 메트릭이나 외부 DB 값등을 트리거로 설정하고 이벤트가 발생하면 스케일링을 시작합니다. 이를 위해서 &lt;code class=&quot;language-text&quot;&gt;ScaledObject&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;HPA(Horizontal Pod Autoscaling)&lt;/code&gt;리소스가 자동으로 추가됩니다.&lt;/p&gt;
 &lt;p&gt;Planet AD에서는 cron 으로 자정을 제외한 새벽 시간대에는 적은 수의 Pod 수를, 스파이크 구간에서는 스파이크가 주로 발생하는 정시보다 몇 분 이른 시간에 Pod가 스케일 아웃을 시작하도록 설정하였습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -584,7 +584,7 @@ Datadog ASM(Application Security Management)의 경우 WAF와 비슷하게 코�
 &lt;h2&gt;맺음말&lt;/h2&gt;
 &lt;p&gt;지금까지 Planet AD 런칭 후 약 1년 동안 팀에서 진행한 서비스 안정화 및 비용 최적화 내용을 말씀드렸습니다.&lt;/p&gt;
 &lt;p&gt;위에서 말씀드린 내용 이외에도 Spot by NetApp을 사용하여 Spot 인스턴스의 비용을 줄이고, Datadog 이나 Spot by NetApp 에서 제공하는 각 서비스 별 리소스(CPU/MEM) 분석을 참고하여 할당되는 리소스를 최적화시키거나 급격한 트래픽 증가에 대비하기 위해 Spot by NetApp의 Headroom 설정을 하기도 하였습니다. 이러한 활동의 결과 Planet AD는 처음 런칭했을 때 대비 AWS 비용을 약 27% 절감하였습니다.&lt;/p&gt;
-&lt;p&gt;저희가 시도한 방법들이 비슷한 고민을 하고 계시는 분들에게 약간의 팁이 되길 바랍니다. 서비스 런칭 후 고생하신 팀원들, 서비스 안정화와 비용 최적화에 같이 고민해 주시고 도와주신 Cloud Eng.팀과 정보보호담당 팀 담당자분께도 감사의 인사를 전합니다.&lt;/p&gt;
+&lt;p&gt;저희가 시도한 방법들이 비슷한 고민을 하고 계시는 분들에게 약간의 팁이 되길 바랍니다. 서비스 런칭 후 고생하신 팀원들, 서비스 안정화와 비용 최적화에 같이 고민해주시고 도와주신 Cloud Eng.팀과 정보보호담당 팀 담당자분께도 감사의 인사를 전합니다.&lt;/p&gt;
 &lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ARHIS: 음향 기반 도로 노면 검지 솔루션]]></title><description><![CDATA[SK플래닛이 자체 개발한 ARHIS(Audio & AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다. 이 기술을 솔루션화한 RB ARHIS…]]></description><link>https://techtopic.skplanet.com/rbarhis-ai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/rbarhis-ai/</guid><dc:creator><![CDATA[yooncy]]></dc:creator><pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;SK플래닛이 자체 개발한 ARHIS(Audio &amp;#x26; AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다.&lt;/p&gt;
 &lt;p&gt;이 기술을 솔루션화한 RB ARHIS는 기상청 등 관련 기관으로부터 우수한 평가를 받았으며, 제 18회 대한민국 기상산업대상에서 국무총리상을 수상하였습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
