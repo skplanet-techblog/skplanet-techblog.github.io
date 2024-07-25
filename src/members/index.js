@@ -13,6 +13,7 @@ import changho from "./images/changho.png";
 import yooncy from "./images/yooncy.png";
 import limds from "./images/limds.png";
 import taehak from "./images/taehak.png"; 
+import joe from "./images/joe.png"; 
 
 export const MEMBERS = {
   jayoon: {
@@ -106,9 +107,15 @@ export const MEMBERS = {
     thumbnail: limds,
   },
   taehak: {
-    name: "김태학 PL",
+    name: "김태학",
     team: "Web3.0 Biz Lab",
     description: "SK플래닛에서 Web3 기획을 담당하고 있습니다.",
     thumbnail: taehak,
+  },
+  joe: {
+    name: "Joe",
+    team: "기술기획팀",
+    description: "SK플래닛의 Dev. Advocate Manager입니다.",
+    thumbnail: joe,
   },
 };
