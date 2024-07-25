@@ -6,6 +6,8 @@ author: "joe"
 description: "AI-assisted Coding과 개발 생산성 향상"
 ---
 
+(참고) 본 글은 지난 3월 사내에서 진행되었던 SK플래닛 기술 세미나(Data & Tech Committee, DTC*)에서 한기용 대표(Upzen)가 발표한 내용을 중심으로 정리하였습니다(발표자의 사용 허락을 받아 편집자가 Tech Topic 블로그에 포스팅합니다 ^^)
+
 본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI 툴을 바라보는 여러 관점들을 발표자와 실리콘밸리 사례 위주로 설명합니다. 
 
 ![image0-](./image0-.png)
@@ -251,5 +253,7 @@ ChatGPT 에서 파이썬 코드 스니펫을 직접 실행할 수 있는 통합 
 
 읽어 주셔서 감사합니다.
 
+(*) SK 플래닛의 기술 공유 문화로 발전하고 있는 Data & Tech Committee(이하 DTC)는 매월 진행되는 전사 기술 공유 프로그램으로, 2024년 기준 4년째를 맞이하게 되었습니다. 
+DTC에서는 개발, 인프라, 데이터, UX 등 현업의 다양한 업무 사례를 공유함으로써 구성원들의 상호 교류와 시너지 창출을 통한 기술 문화를 만들어 나가고 있으며, 개발자, 데이터 엔지니어 및 비개발자들 및 임원들도 참여하여 다양한 의견을 개진합니다. 최근에는 스퀘어 관계사에까지 범위를 확장하여 발표 및 참여를 지원하고 있습니다.
 
-(* 내용 및 강연 문의: 한기용 Upzen 대표(전 Yahoo, Udemy 데이터 엔지니어, Grepp USA CTO), keeyong at gmail dot com)  
+(*) 내용 및 강연 문의: 한기용 Upzen 대표(전 Yahoo, Udemy 데이터 엔지니어, Grepp USA CTO), keeyong at gmail dot com  
