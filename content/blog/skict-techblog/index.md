@@ -99,3 +99,6 @@ T map을 개발 및 서비스하는 티맵모빌리티의 블로그입니다. ht
 각 테크 블로그들이 SK 관계사뿐만 아니라 외부의 개발자들과도 공유 및 소통의 도구로 더욱 성장하기를 바랍니다. 
 
 읽어 주셔서 감사합니다. 
+
+덧. 이 블로그는 SK 데보션에서도 같은 내용으로 참고하실 수 있습니다. 
+* 글 https://devocean.sk.com/blog/techBoardDetail.do?ID=166044&boardType=techBlog&searchData=&searchDataMain=&page=&subIndex=&searchText=sk+ict&techType=&searchDataSub=
