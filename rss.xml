@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 29 Jul 2024 00:28:37 GMT</lastBuildDate><item><title><![CDATA[AI-assisted Coding과 개발 생산성 향상 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)]]></title><description><![CDATA[본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI…]]></description><link>https://techtopic.skplanet.com/genai-productivity/</link><guid isPermaLink="false">https://techtopic.skplanet.com/genai-productivity/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI 툴을 바라보는 여러 관점들을 발표자와 실리콘밸리 사례 위주로 설명합니다(* 참고로 본 글은 지난 3월 사내에서 진행되었던 SK플래닛 기술 세미나(Data &amp;#x26; Tech Committee, DTC*)에서 Upzen 한기용 대표의 발표 내용을 중심으로 정리하였습니다 - 발표자의 허락을 받아 편집자가 Tech Topic 블로그에 포스팅합니다).&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 29 Jul 2024 00:32:42 GMT</lastBuildDate><item><title><![CDATA[AI-assisted Coding과 개발 생산성 향상 #1 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)]]></title><description><![CDATA[본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI…]]></description><link>https://techtopic.skplanet.com/genai-productivity/</link><guid isPermaLink="false">https://techtopic.skplanet.com/genai-productivity/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI 툴을 바라보는 여러 관점들을 발표자와 실리콘밸리 사례 위주로 설명합니다(* 참고로 본 글은 지난 3월 사내에서 진행되었던 SK플래닛 기술 세미나(Data &amp;#x26; Tech Committee, DTC*)에서 Upzen 한기용 대표의 발표 내용을 중심으로 정리하였습니다 - 발표자의 허락을 받아 편집자가 Tech Topic 블로그에 포스팅합니다).&lt;/p&gt;
 &lt;p&gt;이들을 잘 활용할 경우 개발자의 소프트웨어 개발 생산성이 향상된다고 알려져 있는데요, 정말 그러한가 해서 발표자께서는 실리콘밸리 지인 찬스(!)를 사용하셨다고 합니다(물론 발표자님도 써 보셨고요 ^^).&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -332,7 +332,7 @@ IDE 및 브라우저에서 왼쪽에는 채팅 창을, 오른쪽에 코드 창�
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;3.ChatGPT 4 소개&lt;/h2&gt;
+&lt;h2&gt;3. ChatGPT 4 소개&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;이 글에서는 모든 기능을 설명하지는 않고, 개발 생산성과 관련이 있는 GPT Store와 Code Interpreter의 개요, 특징 및 활용 방법을 소개합니다(올해 3월 발표여서 GPT-4o나 mini는 커버하지 않음). 발표자께서는 가능하면 꼭 유료 버전을 사용하시는 것을 권장(이라 쓰고 강조라고 읽음)하셨네요. 무엇을 해야 할지 모를 때도, 아니면 해야 할 일을 알고 있을 때도 일단 편하게 &apos;대화&apos;를 하면 좋다는 것입니다.&lt;/p&gt;
 &lt;h4&gt;(1) GPT Store &amp;#x26; apps&lt;/h4&gt;
@@ -422,7 +422,7 @@ ChatGPT 에서 파이썬 코드 스니펫을 직접 실행할 수 있는 통합 
 &lt;li&gt;이를 다운로드 받아서 코드 인터프리터가 코딩해 준 것에 기능을 추가할 수 있음&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;내가 데이터를 모델링할 일이 있으면 ChatGPT를 사용하면 됩니다.&lt;/p&gt;
-&lt;h2&gt;4.개발 방식의 변화&lt;/h2&gt;
+&lt;h2&gt;4. 개발 방식의 변화&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h4&gt;(1)기존 개발 방식&lt;/h4&gt;
 &lt;p&gt;&lt;span
@@ -581,7 +581,7 @@ ChatGPT 에서 파이썬 코드 스니펫을 직접 실행할 수 있는 통합 
   &lt;/a&gt;
     &lt;/span&gt;
 (위 내용은 ChatGPT-4o 의 도움을 받아 정리하였습니다)&lt;/p&gt;
-&lt;h2&gt;5.AI의 발전과 우려 사항&lt;/h2&gt;
+&lt;h2&gt;5. AI의 발전과 우려 사항&lt;/h2&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;질문: AI의 발전이 과연 인류에게 도움이 되는 것인지 우려점에 대해 살펴보자&lt;/li&gt;
@@ -636,7 +636,7 @@ ChatGPT 에서 파이썬 코드 스니펫을 직접 실행할 수 있는 통합 
 &lt;li&gt;Gettyimage vs. Stable Diffusion(2023.1) &lt;a href=&quot;https://www.theverge.com/2023/1/17/23558516/ai-art-copyright-stable-diffusion-getty-images-lawsuit&quot;&gt;https://www.theverge.com/2023/1/17/23558516/ai-art-copyright-stable-diffusion-getty-images-lawsuit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;NYT 관련 Microsoft vs. OpenAI 소송(2023.11) &lt;a href=&quot;https://www.wsj.com/tech/ai/new-york-times-sues-microsoft-and-openai-alleging-copyright-infringement-fd85e1c4?mod=Searchresults_pos1&amp;#x26;page=1&quot;&gt;https://www.wsj.com/tech/ai/new-york-times-sues-microsoft-and-openai-alleging-copyright-infringement-fd85e1c4?mod=Searchresults_pos1&amp;#x26;page=1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;6.생산성 툴(소프트웨어)를 바라보는 관점&lt;/h2&gt;
+&lt;h2&gt;6. 생산성 툴(소프트웨어)를 바라보는 관점&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;질문: 개발 생산성 툴의 발전을 어떤 관점에서 받아들어야 할 지 알아보자|
 (이 질문 및 답변들은, 우리가 AI 툴을 어떻게 활용할 것인지에 대한 메타인지 관점에서 중요하게 작용할 것임: 편집자 주) &lt;/p&gt;
