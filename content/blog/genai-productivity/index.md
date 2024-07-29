@@ -1,5 +1,5 @@
 ---
-title: "AI-assisted Coding과 개발 생산성 향상 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)"
+title: "AI-assisted Coding과 개발 생산성 향상 #1 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)"
 date: "2024-07-31"
 tags: ["GenAI", "개발생산성", "Copilot", "코파일럿", "ChatGPT"]
 author: "joe" 
@@ -112,7 +112,7 @@ GitHub에서는 많은 회사들과 엔터프라이즈 버전을 프리뷰로 �
 
 ![image07](./image07.png)
 
-## 3.ChatGPT 4 소개 
+## 3. ChatGPT 4 소개 
 ---
 이 글에서는 모든 기능을 설명하지는 않고, 개발 생산성과 관련이 있는 GPT Store와 Code Interpreter의 개요, 특징 및 활용 방법을 소개합니다(올해 3월 발표여서 GPT-4o나 mini는 커버하지 않음). 발표자께서는 가능하면 꼭 유료 버전을 사용하시는 것을 권장(이라 쓰고 강조라고 읽음)하셨네요. 무엇을 해야 할지 모를 때도, 아니면 해야 할 일을 알고 있을 때도 일단 편하게 '대화'를 하면 좋다는 것입니다.
 
@@ -146,7 +146,7 @@ ChatGPT 에서 파이썬 코드 스니펫을 직접 실행할 수 있는 통합 
 내가 데이터를 모델링할 일이 있으면 ChatGPT를 사용하면 됩니다. 
 
 
-## 4.개발 방식의 변화
+## 4. 개발 방식의 변화
 ---
 #### (1)기존 개발 방식
 
@@ -189,7 +189,7 @@ ChatGPT 에서 파이썬 코드 스니펫을 직접 실행할 수 있는 통합 
 ![table02](./table02.png)
 (위 내용은 ChatGPT-4o 의 도움을 받아 정리하였습니다)
 
-## 5.AI의 발전과 우려 사항
+## 5. AI의 발전과 우려 사항
 ---
 * 질문: AI의 발전이 과연 인류에게 도움이 되는 것인지 우려점에 대해 살펴보자
 * 참고: 관련 소송 일지 https://sustainabletechpartner.com/topics/ai/generative-ai-lawsuit-timeline/ 
@@ -212,7 +212,7 @@ ChatGPT 에서 파이썬 코드 스니펫을 직접 실행할 수 있는 통합 
 * Gettyimage vs. Stable Diffusion(2023.1) https://www.theverge.com/2023/1/17/23558516/ai-art-copyright-stable-diffusion-getty-images-lawsuit
 * NYT 관련 Microsoft vs. OpenAI 소송(2023.11) https://www.wsj.com/tech/ai/new-york-times-sues-microsoft-and-openai-alleging-copyright-infringement-fd85e1c4?mod=Searchresults_pos1&page=1
 
-## 6.생산성 툴(소프트웨어)를 바라보는 관점
+## 6. 생산성 툴(소프트웨어)를 바라보는 관점
 ---
 질문: 개발 생산성 툴의 발전을 어떤 관점에서 받아들어야 할 지 알아보자|
 (이 질문 및 답변들은, 우리가 AI 툴을 어떻게 활용할 것인지에 대한 메타인지 관점에서 중요하게 작용할 것임: 편집자 주) 
