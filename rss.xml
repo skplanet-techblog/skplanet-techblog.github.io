@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 25 Jul 2024 12:52:03 GMT</lastBuildDate><item><title><![CDATA[AI-assisted Coding과 개발 생산성 향상 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)]]></title><description><![CDATA[본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI…]]></description><link>https://techtopic.skplanet.com/genai-productivity/</link><guid isPermaLink="false">https://techtopic.skplanet.com/genai-productivity/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI 툴을 바라보는 여러 관점들을 발표자와 실리콘밸리 사례 위주로 설명합니다(참고로 본 글은 지난 3월 사내에서 진행되었던 SK플래닛 기술 세미나(Data &amp;#x26; Tech Committee, DTC*)에서 한기용 대표(Upzen)가 발표한 내용을 중심으로 정리하였습니다 - 발표자의 사용 허락을 받아 편집자가 Tech Topic 블로그에 포스팅합니다).&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 29 Jul 2024 00:28:37 GMT</lastBuildDate><item><title><![CDATA[AI-assisted Coding과 개발 생산성 향상 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)]]></title><description><![CDATA[본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI…]]></description><link>https://techtopic.skplanet.com/genai-productivity/</link><guid isPermaLink="false">https://techtopic.skplanet.com/genai-productivity/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI 툴을 바라보는 여러 관점들을 발표자와 실리콘밸리 사례 위주로 설명합니다(* 참고로 본 글은 지난 3월 사내에서 진행되었던 SK플래닛 기술 세미나(Data &amp;#x26; Tech Committee, DTC*)에서 Upzen 한기용 대표의 발표 내용을 중심으로 정리하였습니다 - 발표자의 허락을 받아 편집자가 Tech Topic 블로그에 포스팅합니다).&lt;/p&gt;
+&lt;p&gt;이들을 잘 활용할 경우 개발자의 소프트웨어 개발 생산성이 향상된다고 알려져 있는데요, 정말 그러한가 해서 발표자께서는 실리콘밸리 지인 찬스(!)를 사용하셨다고 합니다(물론 발표자님도 써 보셨고요 ^^).&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -32,15 +33,14 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;이들을 잘 활용할 경우 개발자의 소프트웨어 개발 생산성이 향상된다고 알려져 있는데요, 정말 그러한가 해서 발표자께서는 실리콘밸리 지인 찬스(!)를 사용하셨다고 합니다(물론 발표자님도 써 보셨고요 ^^).&lt;/p&gt;
-&lt;p&gt;지인 중 인도 개발자 출신 스타트업 대표와 인터뷰를 했었는데, 사내 개발자들이 코파일럿 엔터프라이즈 유료 버전을 사용하도록 6개월 정도 지원했더니  확실히 개발자 생산성이 올라간다는 피드백을 받았다고 합니다. 페어 프로그램 느낌도 꽤 나구요. 특히 주니어들의 개발자 생산성이 훨씬 올라간다고 합니다(&lt;del&gt;그렇다고 주니어를 대체(?)하지는 않겠죠?&lt;/del&gt;). 하나 더 재미있는 사실은 코파일럿 하나만 많이 사용할 경우 피드백 루프가 생기는 것 같아, 다른 AI 툴을 병행해서 사용할 계획이 있다고 들었습니다(예: 툴 1로는 코드 생성, 툴 2로는 유닛 테스트 생성 등). 앞으로는 툴이 발전해서 휴먼이 작성한 코드와 AI 툴이 작성한 코드를 잘 구분해 주면 더욱 좋겠다는 의견도 제시해 주셨습니다.&lt;/p&gt;
 &lt;p&gt;(참고) &apos;개발 생산성(Software Development Productivity)&apos;이란? &lt;/p&gt;
-&lt;p&gt;소프트웨어 개발 생산성은 코딩 시간의 단축(남는 시간에 다른 일을 하거나 쉴 수 있음), 코드 퀄리티 향상, DevEx(개발자 경험)의 향상, 코딩 스킬 향상 등 여러 가지로 정의할 수 있으며, GitHub에서 발간한 아래 글을 보시면 AI 툴 관점에서의 개발 생산성을 좀더 잘 이해할 수 있을 것으로 생각합니다(자세한 설명은 생략). &lt;/p&gt;
+&lt;p&gt;지인 중 인도 개발자 출신 스타트업 대표와 인터뷰를 했었는데, 사내 개발자들이 코파일럿 엔터프라이즈 유료 버전을 사용하도록 6개월 정도 지원했더니  확실히 개발자 생산성이 올라간다는 피드백을 받았다고 합니다. 페어 프로그램 느낌도 꽤 나구요. 특히 주니어들의 개발자 생산성이 훨씬 올라간다고 합니다(그렇다고 주니어를 대체(?)하지는 않겠죠?). 하나 더 재미있는 사실은 코파일럿 하나만 많이 사용할 경우 피드백 루프가 생기는 것 같아, 다른 AI 툴을 병행해서 사용할 계획이 있다고 들었습니다(예: 툴 1로는 코드 생성, 툴 2로는 유닛 테스트 생성 등). 앞으로는 툴이 발전해서 휴먼이 작성한 코드와 AI 툴이 작성한 코드를 잘 구분해 주면 더욱 좋겠다는 의견도 제시해 주셨습니다.
+소프트웨어 개발 생산성은 코딩 시간의 단축(남는 시간에 다른 일을 하거나 쉴 수 있음), 코드 퀄리티 향상, DevEx(개발자 경험)의 향상, 코딩 스킬 향상 등 여러 가지로 정의할 수 있으며, GitHub에서 발간한 아래 글을 보시면 AI 툴 관점에서의 개발 생산성을 좀더 잘 이해할 수 있을 것으로 생각합니다(자세한 설명은 생략). &lt;/p&gt;
+&lt;p&gt;1* 제목: &quot;Measuring the impact of GitHub Copilot&quot; (Ryan Salva, VP of Product, GitHub)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;제목: &quot;Measuring the impact of GitHub Copilot&quot; (Ryan Salva, VP of Product, GitHub)&lt;/li&gt;
 &lt;li&gt;링크: &lt;a href=&quot;https://resources.github.com/learn/pathways/copilot/essentials/measuring-the-impact-of-github-copilot/&quot;&gt;https://resources.github.com/learn/pathways/copilot/essentials/measuring-the-impact-of-github-copilot/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;1.개발 생산성 툴 소개&lt;/h2&gt;
+&lt;h2&gt;1. 개발 생산성 툴 소개&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;DataCamp에서 약 8개월 전에 다양한 생성형 AI 툴을 survey했었는데 아래와 같이 카테고리를 분류하고 있습니다. 
 (&lt;a href=&quot;https://www.datacamp.com/cheat-sheet/the-generative-ai-tools-landscape&quot;&gt;https://www.datacamp.com/cheat-sheet/the-generative-ai-tools-landscape&lt;/a&gt;)&lt;/p&gt;
@@ -90,7 +90,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;GenAI 기반 Coding Application은 공통적으로 아래의 기능을 사용자에게 제공합니다. IDE 형태 및 Extension을 통해 대부분의 기능을 제공하기도 하며(예: GitHub Copilot), 웹사이트 생성 등 특정 기능에 특화되어 있는 프로그램들도 있습니다(예: locofy.ai, Webflow.ai 등). &lt;/p&gt;
+&lt;p&gt;GenAI 기반 Coding Application은 공통적으로 아래의 기능을 사용자에게 제공합니다. IDE 형태 및 Extension을 통해 대부분의 기능을 제공하기도 하며(예: GitHub Copilot), 웹사이트 생성 등 특정 기능에 특화되어 있는 프로그램들도 있습니다(예: locofy.ai, Webflow 등). &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Website Generation from Text &lt;/li&gt;
 &lt;li&gt;Website Generation from Figma Designs (참고: Figma AI at Config 2024) &lt;/li&gt;
@@ -99,7 +99,7 @@
 &lt;li&gt;Code Analysis &amp;#x26; DevOps Intelligence&lt;/li&gt;
 &lt;li&gt;Documentation Generation &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;이 중에서 발표자께서는 웹사이트를 &apos;만들어&apos; 주는 Webflow.ai를 써 봤는데 만족도가 높았다고 합니다. 발표자는 프론트엔드 비전공자이나(십수년 전 윈도우즈 애플리케이션 개발 경험은 있고 이후 데이터 직군으로 전직) 1인 기업용 웹사이트 개발을 위해 이 툴을 사용해 보았으며, 필요한 코드도 생성해 주고, 모르는 것은 코파일럿과 ChatGPT에게 물어보면서 함께 개발하는 쓸만한 웹 애플리케이션이 하나 나왔다고 합니다(웹사이트는 안 보여주셨네요 ^^; ).&lt;/p&gt;
+&lt;p&gt;이 중에서 발표자께서는 웹사이트를 &apos;만들어&apos; 주는 Webflow(&lt;a href=&quot;https://webflow.com/)%EB%A5%BC&quot;&gt;https://webflow.com/)를&lt;/a&gt; 써 봤는데 만족도가 높았다고 합니다. 발표자는 프론트엔드 비전공자이나(십수년 전 윈도우즈 애플리케이션 개발 경험은 있고 이후 데이터 직군으로 전직) 1인 기업용 웹사이트 개발을 위해 이 툴을 사용해 보았으며, 필요한 코드도 생성해 주고, 모르는 것은 코파일럿과 ChatGPT에게 물어보면서 함께 개발하는 쓸만한 웹 애플리케이션이 하나 나왔다고 합니다(웹사이트는 안 보여주셨네요 ^^; ).&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -134,7 +134,7 @@
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h4&gt;(2) Data Applications &lt;/h4&gt;
-&lt;p&gt;GenAI 기반 Data Analysis Application은 다음과 같은 기능을 제공합니다. 예전에는 실리콘밸리에서는 마케팅부서 등에서 요청이 오면 SQL을 대신 작성해 주는 이른바 &apos;SQL Monkey&apos; 가 있었다고 합니다. 이것을 이제 AI 툴이 대체할 수 있게 되었는데요, 현재는 회사에서 많이 쓰는 스키마를 업로드하고 프롬프트로 명령어를 보내면 SQL을 만들어 주는 수준이라고 하며 향후에는 더욱 다양한 분석기능을 제공할 것으로 예상됩니다.&lt;/p&gt;
+&lt;p&gt;GenAI 기반 Data Analysis Application은 다음과 같은 기능을 제공합니다. 예전에는 실리콘밸리에서는 마케팅부서 등에서 요청이 오면 SQL을 대신 작성해 주는 이른바 &apos;SQL Monkey&apos; 가 있었다고 합니다. 이제 AI 툴이 대체할 수 있게 되었는데요, 현재는 회사에서 많이 쓰는 스키마를 업로드하고 프롬프트로 명령어를 보내면 SQL을 만들어 주는 수준이라고 하며 향후에는 더욱 다양한 분석기능을 제공할 것으로 예상됩니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Automated Analysis &amp;#x26; Insights &lt;/li&gt;
 &lt;li&gt;Machine Learning &amp;#x26; DataOps &lt;/li&gt;
@@ -172,8 +172,8 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;그리고 향후의 데이터 분석은 지금의 엑셀 같은 느낌으로(모두의 데이터 분석?) 바뀌지 않을까 의견을 주셨습니다. 참고로 발표자는 데이터 도메인에 약 13년간 재직했다고 하는데요. 데이터 엔지니어링, 데이터 분석, 데이터 보안 중 분석 직군은 (사라지지는 않겠으나) 향후에는 &apos;모든&apos; 사람이 하는 스킬 정도로 바뀌지 않을까 말씀을 주셨고, 큰 범주에서는 코딩도 비슷한 길을 걸을 것으로 예상해 주셨습니다(대단히 잘 하는 사람, 적당히 할 줄 아는 사람 등등).&lt;/p&gt;
-&lt;h2&gt;2.GitHub Copilot 소개 (in detail) &lt;/h2&gt;
+&lt;p&gt;그리고 향후의 데이터 분석은 지금의 엑셀 같은 느낌으로 바뀌지 않을까 하는 의견을 주셨습니다. 참고로 발표자는 데이터 도메인에 약 13년간 재직했다고 하는데요. 데이터 엔지니어링, 데이터 분석, 데이터 보안 중 분석 직군은 (사라지지는 않겠으나) 향후에는 모든 사람이 할 수 있는 스킬 정도로 바뀌지 않을까 말씀을 주셨고, 큰 범주에서는 코딩도 비슷한 길을 걸을 것으로 예상해 주셨습니다(대단히 잘 하는 사람, 적당히 할 줄 아는 사람 등등).&lt;/p&gt;
+&lt;h2&gt;2. GitHub Copilot 소개 (in detail) &lt;/h2&gt;
 &lt;hr&gt;
 &lt;h4&gt;(1) 주요 특징&lt;/h4&gt;
 &lt;p&gt;&lt;span
@@ -247,7 +247,7 @@
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;GitHub에서는 세 가지 라이선스의 코파일럿을 제공하고 있습니다 - 개인(Individual), 비즈니스(Business), 엔터프라이즈(Enterprise) - 이들은 가격 및 기능의 차이가 존재합니다. 이 중 비즈니스 라이선스 이상에서 지원되는 기능은 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;슬래쉬(/) 커맨드 사용 가능: Slack의 슬래쉬 기능과 유사한 기능으로 여러 가지 편리성을 제공합니다.&lt;/li&gt;
+&lt;li&gt;슬래쉬(/) 커맨드 사용 가능: Slack의 슬래쉬 기능과 유사한 기능으로 여러 가지 편리성을 제공합니다(뒤에서 설명).&lt;/li&gt;
 &lt;li&gt;내가 작성한 코드를 코파일럿이 학습하지 않습니다(기업에서 보안을 고려할 경우 검토할 수 있음).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;엔터프라이즈 라이선스에서만 지원되는 기능은 다음과 같습니다.&lt;/p&gt;
@@ -289,7 +289,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;2023년 5월 Copilot X의 기능 중 하나로 소개되었으며 연말에 정식 출시되었습니다. GPT-4 모델을 사용하여 ChatGPT에 준하는 강력한 기능을 제공합니다.
+&lt;p&gt;2023년 3월 Copilot X의 기능 중 하나로 소개되었으며 연말에 정식 출시되었습니다. GPT-4 모델을 사용하여 ChatGPT에 준하는 강력한 기능을 제공합니다.
 IDE 및 브라우저에서 왼쪽에는 채팅 창을, 오른쪽에 코드 창을 띄우고 다음 기능들을 실행할 수 있습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;새 프로젝트 실행, 특정 코드 Unit Test, 문서화, 이해 못하는 코드 설명 요청, 코드 최적화 (생각보다 잘 한다고 합니다 ^^)&lt;/li&gt;
@@ -670,7 +670,9 @@ ChatGPT 에서 파이썬 코드 스니펫을 직접 실행할 수 있는 통합 
 &lt;p&gt;읽어 주셔서 감사합니다.&lt;/p&gt;
 &lt;p&gt;(*) SK 플래닛의 기술 공유 문화로 발전하고 있는 Data &amp;#x26; Tech Committee(이하 DTC)는 매월 진행되는 전사 기술 공유 프로그램으로, 2024년 기준 4년째를 맞이하게 되었습니다.
 DTC에서는 개발, 인프라, 데이터, UX 등 현업의 다양한 업무 사례를 공유함으로써 구성원들의 상호 교류와 시너지 창출을 통한 기술 문화를 만들어 나가고 있으며, 개발자, 데이터 엔지니어 및 비개발자들 및 임원들도 참여하여 다양한 의견을 개진합니다. 최근에는 스퀘어 관계사에까지 범위를 확장하여 발표 및 참여를 지원하고 있습니다.&lt;/p&gt;
-&lt;p&gt;(*) 내용 및 강연 문의: 한기용 Upzen 대표(전 Yahoo, Udemy 데이터 엔지니어, Grepp USA CTO), keeyong at gmail dot com  &lt;/p&gt;</content:encoded></item><item><title><![CDATA[웹 3.0 생태계를 빠르게 꽃 피우는 법]]></title><description><![CDATA[Blockchain as a Service(이하 BaaS)는 제 3자가 Blockchain을 플랫폼으로 활용해서 다양한 응용기능이나 서비스를 제공하는 웹 3.0 분야입니다. 'as a Service…]]></description><link>https://techtopic.skplanet.com/baas/</link><guid isPermaLink="false">https://techtopic.skplanet.com/baas/</guid><dc:creator><![CDATA[taehak]]></dc:creator><pubDate>Mon, 03 Jun 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;p&gt;(*) 내용 및 강연 문의: 한기용 Upzen 대표 &amp;#x26; San Jose State University 겸임교수
+(전 Yahoo 엔지니어링 디렉터, Udemy 시니어 디렉터, Grepp USA CTO)
+, keeyong at gmail dot com  &lt;/p&gt;</content:encoded></item><item><title><![CDATA[웹 3.0 생태계를 빠르게 꽃 피우는 법]]></title><description><![CDATA[Blockchain as a Service(이하 BaaS)는 제 3자가 Blockchain을 플랫폼으로 활용해서 다양한 응용기능이나 서비스를 제공하는 웹 3.0 분야입니다. 'as a Service…]]></description><link>https://techtopic.skplanet.com/baas/</link><guid isPermaLink="false">https://techtopic.skplanet.com/baas/</guid><dc:creator><![CDATA[taehak]]></dc:creator><pubDate>Mon, 03 Jun 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
