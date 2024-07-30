@@ -1,6 +1,6 @@
 ---
 title: "SK ICT Family사 테크 블로그 총정리 (2024년 버전)" 
-date: "2024-08-05"
+date: "2024-08-01"
 tags: ["SK", "테크블로그", "TechBlog", "기술블로그"]
 author: "joe"
 description: "SK ICT Family사 테크 블로그 총정리" 
