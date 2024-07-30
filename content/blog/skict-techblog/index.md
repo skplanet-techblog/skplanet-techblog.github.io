@@ -49,7 +49,7 @@ SK C&C의 테크 블로그는 2024년 기준으로 회사 대표 웹사이트에
 ![image23](./image23.png)
 
 * 링크: https://web.archive.org/web/20190116065552/http://readme.skplanet.com/ 
-* 글은 아카이빙되어 있으며, 마지막 글은 Spring Camp 2018년에서도 발표하였던,'Spring Cloud 기반 MSA로의 전환, 지난 1년간의 이야기(2018.5)' 였습니다.
+* 그 동안 공유되었던 글은 아카이빙하였으며, 마지막 글은 Spring Camp 2018년에서도 발표하였던,'Spring Cloud 기반 MSA로의 전환, 지난 1년간의 이야기(2018.5)' 였습니다.
 
 ## 4. 11번가 테크 블로그, Tech Talk 
 --- 
