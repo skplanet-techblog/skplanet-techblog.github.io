@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 27 Aug 2024 09:08:43 GMT</lastBuildDate><item><title><![CDATA[SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)]]></title><description><![CDATA[여러분은 업무에서 GitHub Copilot(이하 '코파일럿'으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :) SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터…]]></description><link>https://techtopic.skplanet.com/github-copilot/</link><guid isPermaLink="false">https://techtopic.skplanet.com/github-copilot/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Mon, 09 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;여러분은 업무에서 GitHub Copilot(이하 &apos;코파일럿&apos;으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :)&lt;/p&gt;
-&lt;p&gt;SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터 8월까지, 다양한 개발 업무에서 개발 생산성 향상 실험 및 사례 발굴 등의 활동을 진행하였습니다. 본 글은 이 활동을 회고/정리하는 &apos;코파일럿 활용기&apos; 성격으로 작성하였사오니 함께 참고 부탁드립니다.  &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 Aug 2024 06:30:05 GMT</lastBuildDate><item><title><![CDATA[SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)]]></title><description><![CDATA[여러분은 업무에서 GitHub Copilot(이하 '코파일럿'으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :) SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터…]]></description><link>https://techtopic.skplanet.com/github-copilot/</link><guid isPermaLink="false">https://techtopic.skplanet.com/github-copilot/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Mon, 09 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;여러분은 업무에서 GitHub Copilot(이하 &apos;코파일럿&apos;으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :)&lt;/p&gt;
+&lt;p&gt;SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터 8월까지, 다양한 개발 업무에서 개발 생산성 향상 실험 및 사례 발굴 등의 활동을 진행하였습니다. 본 글은 이 활동을 회고하고 사례를 정리한 &apos;코파일럿 활용기&apos; 성격으로 작성하였사오니 함께 참고 부탁드립니다.  &lt;/p&gt;
 &lt;p&gt;참고로 SK플래닛에서 사용한 코파일럿 버전은 &apos;Copilot for Business&apos; 이며, 당사의 사업 및 개발 분야는 아래를 참조하시기 바랍니다. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;사업 소개: &lt;a href=&quot;https://www.skplanet.com/&quot;&gt;https://www.skplanet.com/&lt;/a&gt;&lt;/li&gt;
@@ -145,7 +145,7 @@
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h4&gt;B. 개발자 의도 분석 후 추천 (자동 완성) &lt;/h4&gt;
-&lt;p&gt;코파일럿은 개발자의 의도를 분석한 후 코드를 추천(Code Suggestion)해 줍니다. 코드를 추천받기 위해서는 1) 작성된 코드 패턴으로부터 데이터 자동 완성, 2) 전체 로직에 대한 &apos;이해&apos; 에 기반한 로직 작성 등이 있으며, 3) Server API 작성 후, Client Code를 코파일럿이 자동으로 작성해 주기도 한데 결과는 괜찮았다고 합니다. &lt;/p&gt;
+&lt;p&gt;코파일럿은 개발자의 의도를 분석한 후 코드를 추천(Code Suggestion)해 줍니다. 코드를 추천받기 위해서는 (1) 작성된 코드 패턴으로부터 데이터 자동 완성, (2) 전체 로직에 대한 &apos;이해&apos; 에 기반한 로직 작성 등이 있으며, (3) Server API 작성 후, Client Code를 코파일럿이 자동으로 작성해 주기도 한데 결과는 괜찮았다고 합니다. &lt;/p&gt;
 &lt;p&gt;상단에 주석(Comment) 형태로 원하는 도시를 나열하고, label과 value 예시를 하나 제시하면(one-shot learning) 나머지 데이터를 자동 완성해 줍니다. 
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -178,7 +178,8 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;전체 로직에 대한 이해에 기반하여 다음 코드 로직을 자동으로 작성(제안)해 줍니다.
+&lt;p&gt;아래 사례는 전체 Logic에 대해 코파일럿이 &apos;이해&apos;하고 다음 코드의 Logic을 추천해 주는 사례입니다.
+logData 중 특정 조건에 충족하는 로그의 갯수를 구하고 lineData에 넣도록 하는 의도를 가지고 코딩을 시작하였는데, 코파일럿은 그 의도에 부합하는 코드들 제안합니다.
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 557px; &quot;
@@ -217,25 +218,24 @@ Server API를 작성하면, 코파일럿은 Client Code를 자동 생성해 줍�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/bf153a6ad2f40e9750cba464e62caf8f/0a867/image06.png&quot;
+    href=&quot;/static/c786939a837c26bd86f49ea64ebe6f4c/3c051/image06-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 32.911392405063296%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA1UlEQVR42m2OWXKEMAxEOUiGffEmGzNAqHzMcP9T5Tn6S01Vo2o1epKr13297+u88uv+Po+nkVX200p06+a3PWy7CcGk7J7HEmT20aU8WeePKx8/VYjiJRjnJCXjLPLiS2JNkMDfcZ4eTY3qtlEV/6dqWmZJ0XrgCLNYQ6WFWcoiYQCvzD8VWKc5QgWmkiiDRzyn6drPsF6Oa9JRFzwrAIZp7McB7Kt+fFSBuckoFQzDLvxsFuq6ZZJu6GnbvuMtGARFWPGRIgx3tMWo14p4heYYVdt3v/i7P+ZO0ZJgAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 32.911392405063296%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABPElEQVR42m2QWY6DMBBEuUfYEpJg8IbZAyTkO/e/T021IjTSaD5K1Yv7ue3o83njuY147RPWeYQJA5ppgQ89/DDDjw+0ywYXWrhuhO0nWLqqDSz7Slto36JZdwzdishah6rW8L6BdQ7GaOi6gtY1ax7OWtSVQlmWKC4XpElMJcjS9NfTBMnphIS9KIQAR1DbBoSmgdG82Rgo9YUI1DCvmBdFgSzLkOc5cvHs8KOWI3KEaG7hBcy45rDkqq5xI6QSmNYwvLS43RBzOOHwf0rZixZuMHJoIWzhUF9VkJo5nzGxLrKMFZ8nKvm0Mo6/Mf2Qoq58frRyk/V+x4u+EfakNm628rkbtRP4ZO/B7QaCxefrFT03WtiXXM7OZOy8JOr40QObclg08Z86ri5+1EQjc4EIbPoTz4SOjN9Jgh/TZM/vBWiRUQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image06&quot;
+        alt=&quot;image06-1&quot;
         title=&quot;&quot;
-        src=&quot;/static/bf153a6ad2f40e9750cba464e62caf8f/f058b/image06.png&quot;
-        srcset=&quot;/static/bf153a6ad2f40e9750cba464e62caf8f/c26ae/image06.png 158w,
-/static/bf153a6ad2f40e9750cba464e62caf8f/6bdcf/image06.png 315w,
-/static/bf153a6ad2f40e9750cba464e62caf8f/f058b/image06.png 630w,
-/static/bf153a6ad2f40e9750cba464e62caf8f/40601/image06.png 945w,
-/static/bf153a6ad2f40e9750cba464e62caf8f/0a867/image06.png 986w&quot;
+        src=&quot;/static/c786939a837c26bd86f49ea64ebe6f4c/f058b/image06-1.png&quot;
+        srcset=&quot;/static/c786939a837c26bd86f49ea64ebe6f4c/c26ae/image06-1.png 158w,
+/static/c786939a837c26bd86f49ea64ebe6f4c/6bdcf/image06-1.png 315w,
+/static/c786939a837c26bd86f49ea64ebe6f4c/f058b/image06-1.png 630w,
+/static/c786939a837c26bd86f49ea64ebe6f4c/3c051/image06-1.png 760w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -311,7 +311,7 @@ Copilot Chat은 (1) 간단한 표현 축약, (2) Method 단위의 코파일럿 
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Method 단위의 리팩터링 수행도 코파일럿을 통해 가능합니다. 반복되는 스타일의 함수들을 정리해서 최적화된 Code Suggestion을 해 줍니다. 
+&lt;p&gt;Method 단위의 리팩터링 수행도 코파일럿을 통해 가능합니다. 코파일럿은 중복 코드를 Method로 만들어 가독성과 재사용성이 향상된 코드를 생성하였습니다.&lt;br&gt;
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -345,7 +345,8 @@ Copilot Chat은 (1) 간단한 표현 축약, (2) Method 단위의 코파일럿 
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h4&gt;D. Copilot Chat을 활용한 레거시 코드 분석 및 문서화&lt;/h4&gt;
-&lt;p&gt;Copilot Chat을 활용하여 레거시 코드의 특정 영역에 대해 설명을 요청할 경우, 좋은 답변을 받을 수 있습니다. /explain 명령어를 사용합니다. 
+&lt;p&gt;Copilot Chat을 활용하여 레거시 코드의 특정 영역에 대해 설명을 요청할 경우 좋은 답변을 받을 수 있습니다.
+이 경우 /explain 명령어를 사용합니다. 이 기능은 단순히 코드 라인별 주석의 총합이 아니며 코드 블록의 의도와 목적, 그리고 그 목적을 수행하는 절차까지 상세한 설명을 해 주는 것을 볼 수 있습니다.
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -795,7 +796,7 @@ Copilot Chat은 (1) 간단한 표현 축약, (2) Method 단위의 코파일럿 
 &lt;p&gt;다수의 SDE(Software Development Engineer)와 Web3 개발자로 구성된 그룹 1에서는 다음과 같이 실험을 진행하였습니다. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;실험 조건: 현업 과제 중 난이도 &apos;중(Middle)&apos; 에 해당하는 측정 요건 선정&lt;/li&gt;
-&lt;li&gt;대상자: 코파일럿 사용자 및 미사용자 각각 25개 및 27개 요건 측정 &lt;/li&gt;
+&lt;li&gt;대상자: 코파일럿 사용자 및 미사용자 각각 16개 및 18개 요건 측정 &lt;/li&gt;
 &lt;li&gt;실험 결과: 완료 시간을 약 41.7% 단축하였으며, 개발 속도를 약 1.71배 개선한 것으로 볼 수 있음 (55%까지는 아닙...)&lt;/li&gt;
 &lt;li&gt;기타: 코파일럿 사용 시 개발 속도 평균은 약 3.04시간(표준편차 1.3), 미 사용 시 평균은 5.21시간(표준편차 2.2)&lt;/li&gt;
 &lt;/ul&gt;
