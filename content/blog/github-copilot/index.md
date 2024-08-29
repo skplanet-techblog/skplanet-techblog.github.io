@@ -123,9 +123,9 @@ Copilot Chat 대화창에 전체 테이블 scheme 파일(scheme.sql) 등록 후 
 ![image18_](./image18_.png)
 
 LLM fine tuning을 위한 학습 데이터 생성 테스트를 진행하였습니다. 코파일럿에 샘플 데이터를 복사 후 질문-답변 생성을 요청하였는데요, 데이터뿐만 아니라 생성된 질문-답변을 생성하는 Python script를 함께 생성해 주었습니다. 
-![image19_](./image19_.png)
+![image19-1](./image19-1.png)
 
-![image20_](./image20_.png)
+![image20-1](./image20-1.png)
 
 
 ## 3. 코파일럿이 생산성에 미치는 영향
