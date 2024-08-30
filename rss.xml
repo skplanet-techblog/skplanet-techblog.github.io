@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 29 Aug 2024 09:49:08 GMT</lastBuildDate><item><title><![CDATA[SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)]]></title><description><![CDATA[여러분은 업무에서 GitHub Copilot(이하 '코파일럿'으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :) SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터…]]></description><link>https://techtopic.skplanet.com/github-copilot/</link><guid isPermaLink="false">https://techtopic.skplanet.com/github-copilot/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Mon, 09 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;여러분은 업무에서 GitHub Copilot(이하 &apos;코파일럿&apos;으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 30 Aug 2024 09:39:30 GMT</lastBuildDate><item><title><![CDATA[SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)]]></title><description><![CDATA[여러분은 업무에서 GitHub Copilot(이하 '코파일럿'으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :) SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터…]]></description><link>https://techtopic.skplanet.com/github-copilot/</link><guid isPermaLink="false">https://techtopic.skplanet.com/github-copilot/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 30 Aug 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;여러분은 업무에서 GitHub Copilot(이하 &apos;코파일럿&apos;으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :)&lt;/p&gt;
 &lt;p&gt;SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터 8월까지, 다양한 개발 업무에서 개발 생산성 향상 실험 및 사례 발굴 등의 활동을 진행하였습니다. 본 글은 이 활동을 회고하고 사례를 정리한 &apos;코파일럿 활용기&apos; 성격으로 작성하였사오니 함께 참고 부탁드립니다.  &lt;/p&gt;
 &lt;p&gt;참고로 SK플래닛에서 사용한 코파일럿 버전은 &apos;Copilot for Business&apos; 이며, 당사의 사업 및 개발 분야는 아래를 참조하시기 바랍니다. &lt;/p&gt;
 &lt;ul&gt;
@@ -7,8 +7,8 @@
 &lt;/ul&gt;
 &lt;h2&gt;1. 코파일럿 활용 개요&lt;/h2&gt;
 &lt;hr&gt;
-&lt;p&gt;이번 &apos;코파일럿 활용&apos;의 목표는 (1) 코파일럿의 다양한 활용 사례를 정리하여 구성원에게 공유하는 것과 (2) 코파일럿이 개발업무 생산성에 미치는 영향을 정량적으로 측정/비교 실험을 포함하였습니다(좀 어려웠...). 또한 (3) 많이 사용되는 백엔드, 프론트엔드 개발 외에도 데이터, 인프라, 블록체인 개발자에 대한 피드백을 함께 받아 실용성을 높이고자 하였습니다. &lt;/p&gt;
-&lt;p&gt;(아시는 것처럼, 코파일럿 사이트에 가보면 &apos;55% Faster coding&apos; 및 개발자 생산성 증가와 함께 소프트웨어 개발 페이스를 가속화할 수 있음이 증명되었다는 문구가 있습니다. 과연 이 숫자가 나올 것인가? 두둥~)&lt;/p&gt;
+&lt;p&gt;이번 &apos;코파일럿 활용&apos;의 목표는 (1) 코파일럿의 다양한 활용 사례를 정리하여 구성원에게 공유하는 것과 (2) 코파일럿이 개발업무 생산성에 미치는 영향을 정량적으로 측정하여 비교하는 실험을 포함하였습니다(&lt;del&gt;좀 어려웠...&lt;/del&gt;). 또한 (3) 많이 사용되는 백엔드, 프론트엔드 개발 외에도 데이터, 인프라, 블록체인 개발자에 대한 피드백을 함께 받아 다양성을 높이고자 하였습니다. &lt;/p&gt;
+&lt;p&gt;(아시는 것처럼, 코파일럿 사이트에 가보면 &apos;55% Faster coding&apos; 및 개발자 생산성 증가와 함께 소프트웨어 개발 페이스를 가속화할 수 있음이 증명되었다는 문구가 있습니다. 과연 이 숫자가 나올 것인가? 두둥~~)&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -346,7 +346,7 @@ Copilot Chat은 (1) 간단한 표현 축약, (2) Method 단위의 코파일럿 
     &lt;/span&gt;&lt;/p&gt;
 &lt;h4&gt;D. Copilot Chat을 활용한 레거시 코드 분석 및 문서화&lt;/h4&gt;
 &lt;p&gt;Copilot Chat을 활용하여 레거시 코드의 특정 영역에 대해 설명을 요청할 경우 좋은 답변을 받을 수 있습니다.
-이 경우 /explain 명령어를 사용합니다. 이 기능은 단순히 코드 라인별 주석의 총합이 아니며 코드 블록의 의도와 목적, 그리고 그 목적을 수행하는 절차까지 상세한 설명을 해 주는 것을 볼 수 있습니다.
+이 경우 /explain 명령어를 사용합니다. 이 기능은 단순한 코드 라인별 주석의 총합을 생성하는 것이 아니라 코드 블록의 의도와 목적, 그리고 그 목적을 수행하는 절차까지 상세한 설명을 해 주는 것을 볼 수 있습니다.
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
