@@ -14,6 +14,7 @@ import yooncy from "./images/yooncy.png";
 import limds from "./images/limds.png";
 import taehak from "./images/taehak.png"; 
 import joe from "./images/joe.png"; 
+import hanjh from "./images/hanjh.png"; 
 
 export const MEMBERS = {
   jayoon: {
@@ -117,5 +118,11 @@ export const MEMBERS = {
     team: "기술기획팀",
     description: "SK플래닛의 Dev. Advocate Manager입니다.",
     thumbnail: joe,
+  },
+  hanjh: {
+    name: "한정현",
+    team: "Data Infrastructure팀",
+    description: "사내 빅데이터 플랫폼 개발을 이끌며 함께 성장하는 개발자입니다.",
+    thumbnail: hanjh,
   },
 };
