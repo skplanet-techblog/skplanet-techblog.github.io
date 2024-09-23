@@ -1,5 +1,5 @@
 ---
-title: "Trino를 활용한 전사 데이터 분석 시스템 구축기"
+title: "오픈소스 Trino를 활용한 전사 데이터 분석 시스템 구축기"
 date: "2024-09-24"
 tags: ["Bigdata", "Trino", "Hive", "Hadoop", "Ranger", "데이터분석"]
 author: "hanjh"
