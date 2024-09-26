@@ -15,6 +15,7 @@ import limds from "./images/limds.png";
 import taehak from "./images/taehak.png"; 
 import joe from "./images/joe.png"; 
 import hanjh from "./images/hanjh.png"; 
+import sunny from "./images/sunny.png"
 
 export const MEMBERS = {
   jayoon: {
@@ -124,5 +125,11 @@ export const MEMBERS = {
     team: "Data Infrastructure팀",
     description: "사내 빅데이터 플랫폼 개발을 이끌며 함께 성장하는 개발자입니다.",
     thumbnail: hanjh,
+  },
+  sunny: {
+    name: "박선희",
+    team: "DevOps팀",
+    description: "DevOps팀에서 사내 CI/CD 및 개발환경포탈 시스템을 개발/운영하고 있습니다.",
+    thumbnail: sunny,
   },
 };
