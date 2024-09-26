@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Sep 2024 07:03:03 GMT</lastBuildDate><item><title><![CDATA[OPA(Open Policy Agent)를 이용하여 JIRA의 권한 구현하기]]></title><description><![CDATA[본 글은 SK플래닛에서 OPA(Open Policy Agent)를 이용하여 사내 JIRA의 권한을 구현한 사례를 공유하며, 아래와 같이 크게 세 가지 작업을 정리하고자 합니다. 첫번째는 개발 중인 ITSM 시스템에서 권한 부분을 OPA를 이용해 구현합니다. 정책은 Rego로 작성합니다. 두번째는 작성된 정책을, data API…]]></description><link>https://techtopic.skplanet.com/opa/</link><guid isPermaLink="false">https://techtopic.skplanet.com/opa/</guid><dc:creator><![CDATA[sunny]]></dc:creator><pubDate>Thu, 26 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글은 SK플래닛에서 OPA(Open Policy Agent)를 이용하여 사내 JIRA의 권한을 구현한 사례를 공유하며, 아래와 같이 크게 세 가지 작업을 정리하고자 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Sep 2024 07:09:26 GMT</lastBuildDate><item><title><![CDATA[OPA(Open Policy Agent)를 이용하여 JIRA의 권한 구현하기]]></title><description><![CDATA[본 글은 SK플래닛에서 OPA(Open Policy Agent)를 이용하여 사내 JIRA의 권한을 구현한 사례를 공유하며, 아래와 같이 크게 세 가지 작업을 정리하고자 합니다. 첫번째는 개발 중인 ITSM 시스템에서 권한 부분을 OPA를 이용해 구현합니다. 정책은 Rego로 작성합니다. 두번째는 작성된 정책을, data API…]]></description><link>https://techtopic.skplanet.com/opa/</link><guid isPermaLink="false">https://techtopic.skplanet.com/opa/</guid><dc:creator><![CDATA[sunny]]></dc:creator><pubDate>Thu, 26 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글은 SK플래닛에서 OPA(Open Policy Agent)를 이용하여 사내 JIRA의 권한을 구현한 사례를 공유하며, 아래와 같이 크게 세 가지 작업을 정리하고자 합니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;첫번째는 개발 중인 ITSM 시스템에서 권한 부분을 OPA를 이용해 구현합니다.
 &lt;ul&gt;
@@ -101,7 +101,7 @@
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;opa-image03&quot;
+        alt=&quot;opa-image03_&quot;
         title=&quot;&quot;
         src=&quot;/static/9c09b7b93dddfe45d937e094e03c46b4/f058b/opa-image03_.png&quot;
         srcset=&quot;/static/9c09b7b93dddfe45d937e094e03c46b4/c26ae/opa-image03_.png 158w,
