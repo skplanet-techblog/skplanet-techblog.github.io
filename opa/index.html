@@ -92,24 +92,24 @@
     >
       <a
     class="gatsby-resp-image-link"
-    href="/static/4b1156d256d7a14265b159a1399877b4/1cfc2/opa-image03.png"
+    href="/static/9c09b7b93dddfe45d937e094e03c46b4/1cfc2/opa-image03_.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 80.37974683544303%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAABgUlEQVR42p2U6W6dMBCF7/s/X/80UpJLblnM4gUvGNv4dOySSFXVKAF0ZMDwcWY845vRFmJU8NuGFANijJflvcetXGzGE9RC6wAg4+pRWLeUIjS3GN4k2oVjNhOEFTjycRF4JBjpMD0WRILn87zsMIRQAXLS4L3CzFY47WkyVZc55w99GVgMSaHAphGW3Drhkfb0Jci/wD3UD9WyYn5wWOPQmQ4Nb9Asf/QyveB1fsWoGBhpWqc69nKgZyMG1aOkLqV0OiSLvFO4/2jRNQyt6vCTPRH0DYvl4FWCPnpPAep4nKk4zkiqw32TNBshB4Hh0eHeP4PJFsrN0F5i3cRZSrm+95lipDrcLUNOGoZPlL8ZI4UqCJiiRAiijmW+CMfnimEl4L5Xq99dgP8uSgF656lbdnL0Ds6XOuajsDU3aJ8FHkxQ7kQt8OutV4CLBbvPsMHBJ3ep7f4q7CMdVIcaTnk4E+s98sWQN9q2SohlCxuaCT1p/sVhVovys+9sX2U9fgO8t+bSHileXgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 80.37974683544303%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAABiUlEQVR42p2U63KkIBCF5/0fbfMA2V+ZGWdG8QYochGBk4Yxqdqt3Uqi1iko1M9Dd9OnRWmIfoKzFmHz2LbtsJxzOOWJ1Y6gGkqtABKOXpl12sIGJRawm0TNOYalh9ACMcVjwEDARRp09xEZnvb7sEPvfQHIfgZnE8ZuhlGOHobiMqX0qW8DsyEpJ7R9Bz0ZGOkQfPgW5N8O6cOJzxjuHHoxaFSNil9xHa+oSOf+DefhjG7qSC36uUdLYyNZWWOyQYgBIYTdIVnkzYTL6wOPG0M91fj1+6UAueYYSTwnKn6EAGWMeyjivpPicLUyTyFbAfaocWFvaOUDwvRQVmAmPUsplveK0l/a17eN6nDVLVJQWMRA8RvQjhU4AUOQ8F5QsUukqIrwhTY/E3Bdi9WfJuC/SclAZxzsspKjD3A6dGKehU3ZUXzB/SJw6wSkEVTg4bjDJ1CDVRRDb+GCPXTs/qjDGCLVoYKZaevaU0IikA5u2ea2RWc4tzBW9UVDw5HbWv7ZT9rXujq8A5h25s8nj5LXAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="opa-image03"
         title=""
-        src="/static/4b1156d256d7a14265b159a1399877b4/f058b/opa-image03.png"
-        srcset="/static/4b1156d256d7a14265b159a1399877b4/c26ae/opa-image03.png 158w,
-/static/4b1156d256d7a14265b159a1399877b4/6bdcf/opa-image03.png 315w,
-/static/4b1156d256d7a14265b159a1399877b4/f058b/opa-image03.png 630w,
-/static/4b1156d256d7a14265b159a1399877b4/1cfc2/opa-image03.png 900w"
+        src="/static/9c09b7b93dddfe45d937e094e03c46b4/f058b/opa-image03_.png"
+        srcset="/static/9c09b7b93dddfe45d937e094e03c46b4/c26ae/opa-image03_.png 158w,
+/static/9c09b7b93dddfe45d937e094e03c46b4/6bdcf/opa-image03_.png 315w,
+/static/9c09b7b93dddfe45d937e094e03c46b4/f058b/opa-image03_.png 630w,
+/static/9c09b7b93dddfe45d937e094e03c46b4/1cfc2/opa-image03_.png 900w"
         sizes="(max-width: 630px) 100vw, 630px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -297,7 +297,8 @@ public boolean allow(String action, Map&lt;String, Object> resourceAttributes) {
             defaultMode: 420
       containers:
         - name: pitsm-backend
-          image: dev.pcr.kr/devops/pitsm-backend:20230328142251          env:
+          image: dev.pcr.kr/devops/pitsm-backend:20230328142251          
+          env:
             - name: SPRING_PROFILES_ACTIVE
               value: kube
           resources: {}
