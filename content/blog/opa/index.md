@@ -75,8 +75,8 @@ user_is_granted := grant if {
 * 작성한 정책(rego)과 데이터을 이용하여 권한을 체크합니다. OPA 플레이그라운드에서 테스트할 수 있습니다. 
     * https://play.openpolicyagent.org/p/7dwdCy843A
 * 백엔드 서버에서 OPA data API를 이용하여  권한 체크를 하는 로직을 개발해 봅니다. 
-* Spring security의 PreAuthorize 태그를 이용합니다. 
-* Spring controller에 권한 체크를 위해 PreAuthorize 태그를 추가합니다.
+* Spring Security의 PreAuthorize 태그를 이용합니다. 
+* Spring Controller에 권한 체크를 위해 PreAuthorize 태그를 추가합니다.
 * PreAuhorize에서 opaclient.allow를 호출합니다. 
 
 ```
@@ -102,7 +102,7 @@ user_is_granted := grant if {
 * input으로 사용자 아이디와 그룹, 권한을 체크하고자 하는 프로젝트와 퍼미션를 입력합니다. 
 
 ```
-//URI는 OPA 서버의 endpoint로 http://localhost:8181 설정한다.
+//URI는 OPA 서버의 endpoint로 http://localhost:8181 로 설정한다.
 @Value("${opa.url}")
 String URI;
 
@@ -157,11 +157,11 @@ public boolean allow(String action, Map<String, Object> resourceAttributes) {
 ```
 
 * 개발한 백엔드 서버와 OPA 서버을 쿠버네티스(이하 k8s) 환경에 개발 서버로 배포해 봅니다. 
-* 아래 k8s deployment yaml를 이용하여, 백단서버(pitsm-backend)와 OPA서버를 한 pod 내에 container로 배포합니다. 
+* 아래 k8s deployment yaml를 이용하여, 백엔드 서버(pitsm-backend)와 OPA 서버를 한 pod 내에 container로 배포합니다. 
 * OPA 서버를 사이드카 형태로 실행하면 아래와 같은 장점이 있습니다. 
     * localhost:8181을 통해 권한을 체크하므로, 네트웍 지연을 없앨 수 있음
     * 애플리케이션과 함께 배포되며, 애플리케이션과 함게 스케일링되어 운영 및 관리가 용이함
-    * 단점도 있다. data를 수정하는 경우, 사이드카 형태의 각 OPA 서버에게 data 수정 API를 요청해야 함
+    * 단점도 있음. data를 수정하는 경우, 사이드카 형태의 각 OPA 서버에게 data 수정 API를 요청해야 함
     * 메시지 브로커를 사용하여 각 애플리케이션에서 이벤트를 받아 data를 수정하도록 함
     * 또는 OPAL을 이용하여 OPA의 정책과 데이터를 동기화할 수 있음
 * OPA 서버를 시작할때 /policies 경로에 정책을 사용하도록 설정하였습니다. 
@@ -211,9 +211,9 @@ public boolean allow(String action, Map<String, Object> resourceAttributes) {
 * 현재는 JSON 형태의 데이터를 통으로 DB 컬럼에 저장 중임.
 * DB에서 데이터를 조회해서 권한 체크를 할 것이 아니기 때문에, 굳이 테이블을 나눠서 인덱스를 생각할 필요가 없음.
 * OPA는 데이터를 메모리에 올려놓고 실행되기 때문에 빠르게 동작할 것으로 기대함.
-* 또한 사이드카로 구성하여, 어플리케이션에서 권한 요청시 네트웍 지연을 없앤 것도 맘에 듬.
-* 다만 데이터 동기화를 위한, 추가 작업이 필요함. 
-    * 메시지 브로커를 이용해 어플리케이션에서 업데이트 작업을 하거나,
+* 또한 사이드카로 구성하여, 애플리케이션에서 권한 요청시 네트웍 지연을 없앤 것도 맘에 듬.
+* 다만 데이터 동기화를 위한 추가 작업이 필요함. 
+    * 메시지 브로커를 이용해 애플리케이션에서 업데이트 작업을 하거나,
     * OPAL를 도입하여 데이터 동기화를 하는 등의 작업이 필요함.
 
 읽어 주셔서 감사합니다! 
