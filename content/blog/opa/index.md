@@ -26,7 +26,7 @@ description: "OPA(Open Policy Agent)를 이용한 JIRA의 권한 구현하기"
 * 이렇게 화면에서 설정한 값은 JSON으로 아래와 같이 표현합니다(JIRA API를 통해 확인). 
     * 파일 크기가 꽤 되므로 일부 내용만 캡쳐하며, permissionKey(퍼미션 내용)과 grants(권한부여) 을 포함한 동일한 형태의 퍼미션을 배열로 정의하고 있습니다. 
     * 해당 JSON을 OPA에서 권한 체크 시, 데이터로 사용합니다. 
-* ![opa-image03](./opa-image03.png)
+* ![opa-image03](./opa-image03_.png)
 * ![opa-image04](./opa-image04.png)
 * 이러한 구조를 염두해 두고 권한 처리를 생각해 보면, 사용자 및 사용자의 그룹이 속한 **롤**을 확인하고,
 * 사용자 아이디, 그룹명, 롤명으로 permissions의 grants를 뒤져서 해당 사용자가 해당 퍼미션에 권한이 있는지 여부를 확인할 수 있습니다. 
@@ -176,7 +176,8 @@ public boolean allow(String action, Map<String, Object> resourceAttributes) {
             defaultMode: 420
       containers:
         - name: pitsm-backend
-          image: dev.pcr.kr/devops/pitsm-backend:20230328142251          env:
+          image: dev.pcr.kr/devops/pitsm-backend:20230328142251          
+          env:
             - name: SPRING_PROFILES_ACTIVE
               value: kube
           resources: {}
