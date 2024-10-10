@@ -1,4 +1,492 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Sep 2024 07:09:26 GMT</lastBuildDate><item><title><![CDATA[OPA(Open Policy Agent)를 이용하여 JIRA의 권한 구현하기]]></title><description><![CDATA[본 글은 SK플래닛에서 OPA(Open Policy Agent)를 이용하여 사내 JIRA의 권한을 구현한 사례를 공유하며, 아래와 같이 크게 세 가지 작업을 정리하고자 합니다. 첫번째는 개발 중인 ITSM 시스템에서 권한 부분을 OPA를 이용해 구현합니다. 정책은 Rego로 작성합니다. 두번째는 작성된 정책을, data API…]]></description><link>https://techtopic.skplanet.com/opa/</link><guid isPermaLink="false">https://techtopic.skplanet.com/opa/</guid><dc:creator><![CDATA[sunny]]></dc:creator><pubDate>Thu, 26 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글은 SK플래닛에서 OPA(Open Policy Agent)를 이용하여 사내 JIRA의 권한을 구현한 사례를 공유하며, 아래와 같이 크게 세 가지 작업을 정리하고자 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Oct 2024 02:43:45 GMT</lastBuildDate><item><title><![CDATA[Locust를 활용한 부하 테스트 작성]]></title><description><![CDATA[안녕하세요, SK플래닛의 원준수입니다. 팀에서 블록체인 개발업무를 진행하다 보면 블록체인의 nonce, 서명 등의 고려사항으로 부하 테스트 시 어려움을 겪었는데 이를 Locust라는 오픈소스 툴을 이용하여 해결하였습니다.
+간단한 예시를 이용하여 Locust의 기능과 장점에 대하여 공유하겠습니다. 들어가며 Locust…]]></description><link>https://techtopic.skplanet.com/locust/</link><guid isPermaLink="false">https://techtopic.skplanet.com/locust/</guid><dc:creator><![CDATA[wonjs]]></dc:creator><pubDate>Wed, 02 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛의 원준수입니다. 팀에서 블록체인 개발업무를 진행하다 보면 블록체인의 nonce, 서명 등의 고려사항으로 부하 테스트 시 어려움을 겪었는데 이를 Locust라는 오픈소스 툴을 이용하여 해결하였습니다.&lt;br&gt;
+간단한 예시를 이용하여 Locust의 기능과 장점에 대하여 공유하겠습니다.&lt;/p&gt;
+&lt;h2&gt;들어가며&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Locust는 사용자 정의 테스트 시나리오를 작성하는 데에 Python을 기반으로 하고 있습니다.&lt;br&gt;
+Python은 많은 개발자들이 이미 익숙한 언어이며, 높은 유연성과 확장성을 제공합니다.&lt;br&gt;
+저의 경우에도 web3 python module 임포트하여 쉽게 테스트 코드를 작성할 수 있었습니다.&lt;br&gt;
+이외에도 사용자가 웹 기반 인터페이스를 통해 테스트를 모니터링하고 제어할 수 있는 기능을 제공하여 작업이 더 직관적이고 효율적으로 만들어줍니다.&lt;br&gt;
+또한, 마스터-워커 (Master-Worker) 구조를 지원하여 대규모 트래픽을 생성하고 관리하여 복잡한 성능 테스트 시나리오를 효율적으로 수행할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;본 포스팅에서는 Locust를 이용한 간단한 3가지 테스트 예시를 작성해보겠습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;요청 횟수 제한 테스트 (Rate Limiting)&lt;/li&gt;
+&lt;li&gt;마스터 노드와 워커 노드를 사용한 테스트&lt;/li&gt;
+&lt;li&gt;고유한 성질을 가진 유저의 테스트&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;1. 요청 횟수 제한 테스트 (Rate Limiting)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3&gt;(1) 테스트 대상 서버 구성&lt;/h3&gt;
+&lt;p&gt;🧑‍🚀 요청사항&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;초당 100개의 요청을 처리하고 나머지 요청은 제한하는 로직을 작성하고 올바르게 작동하는지 테스트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;빠르고 간단하게 서버를 구성하기 위해 Golang을 사용하고 코드 작성은 ChatGPT의 힘을 빌렸습니다.&lt;br&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;go&quot;&gt;&lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; main
+
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;golang.org/x/time/rate&quot;&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;log&quot;&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;net/http&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 요청을 처리할 핸들러&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ResponseWriter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Request&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Fprintln&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Hello, world!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 속도 제한을 구현하는 미들웨어&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rateLimiter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;next http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Handler&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; limiter &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;rate&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Limiter&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Handler &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;HandlerFunc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ResponseWriter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Request&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;limiter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Allow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Too Many Requests&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;StatusTooManyRequests&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+		next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ServeHTTP&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; r&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	limiter &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; rate&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;NewLimiter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;rate&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Limit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;120&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 초당 100개의 요청을 허용하고 최대 120개의 버스트 요청을 허용&lt;/span&gt;
+
+	mux &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;NewServeMux&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	mux&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; handler&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;token comment&quot;&gt;// rate limiter 미들웨어 추가&lt;/span&gt;
+	wrappedMux &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rateLimiter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;mux&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; limiter&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+	fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Starting server at :8080&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; err &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ListenAndServe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;:8080&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; wrappedMux&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; err &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		log&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Fatal&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;(2) Locust 설치 및 설정&lt;/h3&gt;
+&lt;p&gt;설치&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;locust 공식 홈페이지 - &lt;a href=&quot;https://docs.locust.io/en/stable/installation.html&quot;&gt;https://docs.locust.io/en/stable/installation.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;homebrew - &lt;a href=&quot;https://formulae.brew.sh/formula/locust&quot;&gt;https://formulae.brew.sh/formula/locust&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;코드 작성&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;rate_limit_test.py&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; locust &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; HttpUser&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; task&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; between
+
+HOST&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;http://localhost:8080&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;WebsiteUser&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;HttpUser&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    host &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; HOST
+    
+    &lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@task&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;rate_limit_test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; catch_response&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    wait_time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; between&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;설명&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&apos;WebsiteUser&apos; 클래스는 Locust에서 제공하는 기본 사용자 클래스 중 하나입니다. &lt;br&gt;
+이 클래스를 상속하면 Locust가 HTTP 요청을 쉽게 만들고 처리할 수 있는 여러 기능을 활용할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;@task 데코레이터는 테스트 시나리오의 일부를 정의합니다.&lt;br&gt;
+작성된 test 메소드는 무한 루프로 실행되며, 웹 호스트의 루트 페이지에 GET 요청을 보냅니다.&lt;/li&gt;
+&lt;li&gt;self.client.get() 메서드는 Locust에서 제공하는 HTTP 클라이언트를 사용하여 GET 요청을 보내고, 응답을 받습니다.&lt;br&gt;
+catch_response=True로 설정하면 Locust가 응답을 캐치하여 실패 여부를 확인할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;wait_time 속성을 통해 각 사용자가 다음 작업을 수행하기 전에 1초의 시간을 대기하도록 설정해두었습니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;각 사용자는 1초에 한번의 요청을 진행하게 됩니다.&lt;/p&gt;
+&lt;h3&gt;(3) Locust 실행 및 접속&lt;/h3&gt;
+&lt;p&gt;Locust 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 작성된 python파일으로 이름 변경 (rate_limit_test.py)&lt;/span&gt;
+$ locust &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; rate_limit_test.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;브라우저에서 localhost:8089 접속
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ec32d5f34b9b1b4e0c3034dabd7241b4/baf97/locust_img_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.9746835443038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABGElEQVR42p2QTUsCURSG778K+lhFLqJdIKRtyoigRT/AZfvIAg2DWgRlMQVCFhZt26SjYui6clUWjCXN/Zo376UZZxoz6L08cM8593zcQxZzSawa65jdX8PIRhSjm3MYS8UwsT0fYnwrjsn0AmZ2VxDZSWA6u4ypTEITySxpH+GCgwsBIQWsjoXn9gvab6+wqQ3G2UDE93t1V/lM9GMEPkkpPRzHwW9SMZefIj23dxhjoJRqVGc9yR/4iysCE37aNqz3Dj66Xb0GLoejvh2aMPAV6UDSXlch8V8RdydKpYc69m4N5MoFHJsXHka1GLBPKpc4uMuj9HgPf36oYKXVxJFZwFntWhdxyddvAvZp7QqH5XOYT41QwS/ztEQ+uP/cSgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;locust_img_01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ec32d5f34b9b1b4e0c3034dabd7241b4/f058b/locust_img_01.png&quot;
+        srcset=&quot;/static/ec32d5f34b9b1b4e0c3034dabd7241b4/c26ae/locust_img_01.png 158w,
+/static/ec32d5f34b9b1b4e0c3034dabd7241b4/6bdcf/locust_img_01.png 315w,
+/static/ec32d5f34b9b1b4e0c3034dabd7241b4/f058b/locust_img_01.png 630w,
+/static/ec32d5f34b9b1b4e0c3034dabd7241b4/40601/locust_img_01.png 945w,
+/static/ec32d5f34b9b1b4e0c3034dabd7241b4/78612/locust_img_01.png 1260w,
+/static/ec32d5f34b9b1b4e0c3034dabd7241b4/baf97/locust_img_01.png 2942w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+Number of users - 테스트를 수행하는 동안 생성될 가상 사용자의 총 수 &lt;br&gt;
+Ramp-up - 부하를 점진적으로 증가시킬 사용자의 수&lt;/p&gt;
+&lt;h3&gt;(4) 테스트 진행&lt;/h3&gt;
+&lt;p&gt;100명의 유저가 초당 1개 요청
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6c200df026245b71a46d29045ef0c0ce/ea9a1/locust_img_02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.65822784810127%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACRklEQVR42nWSzWoUQRSF+0UUgt31X1393zNBREFQItlmZSC4kIS4Di5cunThKkRFE1wJbnwBnUlmQnyr46maiRHUxce5VV1d995zK3v29RUOv73G7peXuHu8iwfv9hL3T/awfXaIrY/72Pq0j+3TQzw5PUjrx5+fY+ftEY4P3uPD0VMs3zzC0ckOHp69QDZbnOP7Yo75xTlm53P8mM+p59QZ5tTZ8gI/r66wWC7/Yrm4JAtcLhdcL3BxuUQWQgNfVrC2hBIGStqVCqq2kM7BOg9lHGRcG7uKE3atLu0pZZEVhUaRKxSKagwKTZxFXnvklUdB8uCS/o+8dtjoLIQ1yByzmzrAtqyyoTbUuLYelhmtXLOOnbzZc2uMMqxSsjteOE5HjMOAoawTvV/pQCvG0GJSt5g2jKs2EfcT1Ur7UCfGaB1ty0r+bG1AIXVCMMt1rBSrjx6WJnkkWEkh1Io/zl8jY4WicMjzWK6D1y0qN7KFAMmhaFWyVSZUDRy/WV3Dmxal6VIcCbbnOZ8wmhXe29xEW/foSBUq1I3B5qTBZOgwdh16ejv2LfqOOsQ4asB0bEiFQN83rMCGuQPHbrLJ1GPkh350iZJTc6XnxSWqxqHqAtWj4tR9iLj0PeFZlTcwwUDTFs1nlPmygWS5gi1GpLTJCyk0JJ+UYBvalGmCUlyjf8dqjU5vmB5qzYcp4wF1Q0xQ9hBhpA4rUjyu9E+4l1cDGfl0ArKU2dYQ1XR9aJJUmooXs1rtCZOqfyN45ja9u2XipC1+Ae8jvdzQXN3tAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;locust_img_02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6c200df026245b71a46d29045ef0c0ce/f058b/locust_img_02.png&quot;
+        srcset=&quot;/static/6c200df026245b71a46d29045ef0c0ce/c26ae/locust_img_02.png 158w,
+/static/6c200df026245b71a46d29045ef0c0ce/6bdcf/locust_img_02.png 315w,
+/static/6c200df026245b71a46d29045ef0c0ce/f058b/locust_img_02.png 630w,
+/static/6c200df026245b71a46d29045ef0c0ce/40601/locust_img_02.png 945w,
+/static/6c200df026245b71a46d29045ef0c0ce/78612/locust_img_02.png 1260w,
+/static/6c200df026245b71a46d29045ef0c0ce/ea9a1/locust_img_02.png 2970w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;사용자를 110으로 늘려보면?&lt;/strong&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2c6c9e1fcef7191f46b8be0d3e1a0f99/30c0b/locust_img_03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACE0lEQVR42mWS227TQBCG/Rg0zaFA6/WefWjLkyGQKiFaCSQuSJvEjlOgF/SqEi+QIhEOEhI3PNPPv2unrcTFp392ZnZ2POPk3c9POP99jebPDd7++Ijn6/d4eXuBF+spTr7O8eb7B5x+W+Jss8Ipeb1pI682Na4/r/FrdYW/X05xuz7DCePJZXOJtlmhaZZoZkvU5zWaixr1dIFmWmNBu21aXC0usZy3WJG2p65rzHhvtlhhPl/FWDLZe4rR+DFGoz0MdkcYDIbYCToeY2fUQ7s7j3rGeDSkDumnPaA9mIS8CRJjPWRmkCmibUR4h8za/3G9mgdKBP1PbAbJGolSXVA6B8WACsqAyrboDtHZWpoeHeOaSNpCZ9ChYFke4fj4GSpfwbG4167DeDjjULpDHJYFjqoCuSvod9Hvtjna3aFk6DB8YqaQCkkUhLA4SDPsH2TU4OPr7EzEmKYvqImEnDRV/b0uJ7GmgFE5MhayquRLPOvQXRFtb9i5KXu7hNV5VN/HLdEyJ1TlkRS55efkyD2LOA1rJby3kXD2vc9ZFc/3KMY4Qyex71OM1QRSs8OyqlCUfDksg5+vFDcsuSR1j3IVjM05fBsJi5TSRDvjQqRSvKuQcXTJNlFwXoKzizyYSdR40SDlY/f4Oz0g+0RI1/02IiwkXNC+S+RcUs4qnoOqjlBYMK8jLNNE9vhlu+wylRr/AChhmRHl2vaSAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;locust_img_03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2c6c9e1fcef7191f46b8be0d3e1a0f99/f058b/locust_img_03.png&quot;
+        srcset=&quot;/static/2c6c9e1fcef7191f46b8be0d3e1a0f99/c26ae/locust_img_03.png 158w,
+/static/2c6c9e1fcef7191f46b8be0d3e1a0f99/6bdcf/locust_img_03.png 315w,
+/static/2c6c9e1fcef7191f46b8be0d3e1a0f99/f058b/locust_img_03.png 630w,
+/static/2c6c9e1fcef7191f46b8be0d3e1a0f99/40601/locust_img_03.png 945w,
+/static/2c6c9e1fcef7191f46b8be0d3e1a0f99/78612/locust_img_03.png 1260w,
+/static/2c6c9e1fcef7191f46b8be0d3e1a0f99/30c0b/locust_img_03.png 2956w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;RateLimit이 발생하기 시작함 &lt;br&gt;
+서버에서 정상적으로 RateLimit이 작동하고 있는 것 확인 (429 응답)&lt;/p&gt;
+&lt;h2&gt;2. 마스터 노드와 워커 노드를 사용한 테스트&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;하나의 노드에서만 트래픽을 발생시키는 경우에는 서버의 컴퓨팅 자원 한계로 인하여 대량의 트래픽을 생성하는 데 제약이 있습니다. &lt;br&gt;
+이러한 한계를 극복하기 위해 locust는 마스터-워커 구조를 제공하고 있습니다. &lt;br&gt;
+실습은 위에서 진행한 Rate Limiting 테스트를 여러 노드를 사용하여 부하를 넣는 방식으로 진행하겠습니다.&lt;/p&gt;
+&lt;h3&gt;(1) 환경 구성&lt;/h3&gt;
+&lt;p&gt;간단한 실습을 위해 하나의 장치에 여러 컨테이너를 구성해보겠습니다. (실제 적용은 여러 개의 장치를 묶어서 사용해야 합니다.) &lt;br&gt;
+docker-compose 기술을 사용하여 여러개의 로컬 컨테이너를 활용하겠습니다. (1대의 master node와 3대의 worker node로 구성) &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;컨테이너간 통신을 위해 위에서 사용한 파일의 HOST 주소를 localhost에서 현재 컴퓨터 private ip로 바꿔주는 작업이 필요합니다. &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;rate_limit_test.py&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; locust &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; HttpUser&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; task&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; between
+
+HOST&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;http://{PRIVATE_IP}:8080&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;## PRIVATE_IP로 변경 필요&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;WebsiteUser&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;HttpUser&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    host &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; HOST
+    
+    &lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@task&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;rate_limit_test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; catch_response&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    wait_time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; between&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;docker-compose.yml&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker-compose&quot;&gt;&lt;pre class=&quot;language-docker-compose&quot;&gt;&lt;code class=&quot;language-docker-compose&quot;&gt;version: &amp;#39;3&amp;#39;
+services:
+  locust-master:
+    image: locustio/locust
+    command: &amp;gt;
+      --master --web-host 0.0.0.0 --master-bind-host 0.0.0.0 --master-bind-port 5557 -f /mnt/rate_limit_test.py
+    ports:
+      - &amp;quot;8089:8089&amp;quot;
+    networks:
+      - locust-network
+    volumes:
+      - ./rate_limit_test.py:/mnt/rate_limit_test.py  # 테스트 파일 마운트
+
+  locust-worker-1:
+    image: locustio/locust
+    command: &amp;gt;
+      --worker --master-host locust-master --master-port 5557 -f /mnt/rate_limit_test.py
+    networks:
+      - locust-network
+    volumes:
+      - ./rate_limit_test.py:/mnt/rate_limit_test.py
+
+  locust-worker-2:
+    image: locustio/locust
+    command: &amp;gt;
+      --worker --master-host locust-master --master-port 5557 -f /mnt/rate_limit_test.py
+    networks:
+      - locust-network
+    volumes:
+      - ./rate_limit_test.py:/mnt/rate_limit_test.py
+
+  locust-worker-3:
+    image: locustio/locust
+    command: &amp;gt;
+      --worker --master-host locust-master --master-port 5557 -f /mnt/rate_limit_test.py
+    networks:
+      - locust-network
+    volumes:
+      - ./rate_limit_test.py:/mnt/rate_limit_test.py
+
+networks:
+  locust-network:
+    driver: bridge&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;(2) 테스트 진행&lt;/h3&gt;
+&lt;p&gt;위에서 설정한 컨테이너 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;docker-compose&lt;/span&gt; up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;브라우저에서 localhost:8089 접속하여 3대의 worker node 확인
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e8a3c4bd1acecc7210a20b5eacf55ead/9ba38/locust_img_04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 39.87341772151899%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABMklEQVR42o2RPUsDQRCG788kNiJoLYKIkBgsYixsr7G2UFACaYREJB6SQmLtHxD87m0tBVuNJJBo4p17H7u3u6+3Gy9eLoUZeNiZ2eHl3R1jqbmOlaaJ5TMT2VoemWoe2YiZo8KITG0NC9Ymti52kTvfxpxVwuJxEWY5h9XDAmatDczXi9FMCQYJCNzAg0t99L4+8dpu4a3zrnPb+x7hRAgpwEIW5WTYIzYc1/mb8QkMJEIIAamRkFIiHfo+1U/XhmrEcM5BGQWlFDzkWmAakhpjDsMwBGNMD2lRwf9FfcOYw2ShHDIaCUanEp8mJp6cLHwWoNVro9PvYuA56Lu2RuXJOuaDDPQyJwRj20+tZ+xd1VG+PcXBjaXZvz5B5a6Byn1D53FfzexcVvHw8jhc2K/THxz+QMj6QdjIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;locust_img_04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e8a3c4bd1acecc7210a20b5eacf55ead/f058b/locust_img_04.png&quot;
+        srcset=&quot;/static/e8a3c4bd1acecc7210a20b5eacf55ead/c26ae/locust_img_04.png 158w,
+/static/e8a3c4bd1acecc7210a20b5eacf55ead/6bdcf/locust_img_04.png 315w,
+/static/e8a3c4bd1acecc7210a20b5eacf55ead/f058b/locust_img_04.png 630w,
+/static/e8a3c4bd1acecc7210a20b5eacf55ead/40601/locust_img_04.png 945w,
+/static/e8a3c4bd1acecc7210a20b5eacf55ead/78612/locust_img_04.png 1260w,
+/static/e8a3c4bd1acecc7210a20b5eacf55ead/9ba38/locust_img_04.png 1329w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;테스트 진행 및 상태 확인
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/98c04c2f9692a9c62233c72330ba8d27/9685e/locust_img_05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.316455696202528%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR42kWPzUoDMRSF56VciVgpulaUulApRRTc6EJwKwouddWO4qIUlz6HLyNkXMwkmfwfc9JaD3yc5N6Tm6TaX5zgaHGDg/k1Nl5GGNYTXH7e4/jjFoPpGLuv5xjMxgX2dmYTbL2fYvRwh/qsxvzqEF+P23h63sPm2wUqqRW06df01iCGiJBRvSp7Zjoly7rTEt+tgDIK1ruCNjq7hQ0OlbUWwXuklJBiRCQpIuFf7Hm3zDjniltjl9mMUqo4VXVdB9E0aH4aCCEKDFCRl2RCCJBSFvcZHuZgit627SofURljSvgPXsBaWg0jHMAanUPLi/OvKO611uvsL5czZ5lrdKb4AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;locust_img_05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/98c04c2f9692a9c62233c72330ba8d27/f058b/locust_img_05.png&quot;
+        srcset=&quot;/static/98c04c2f9692a9c62233c72330ba8d27/c26ae/locust_img_05.png 158w,
+/static/98c04c2f9692a9c62233c72330ba8d27/6bdcf/locust_img_05.png 315w,
+/static/98c04c2f9692a9c62233c72330ba8d27/f058b/locust_img_05.png 630w,
+/static/98c04c2f9692a9c62233c72330ba8d27/40601/locust_img_05.png 945w,
+/static/98c04c2f9692a9c62233c72330ba8d27/78612/locust_img_05.png 1260w,
+/static/98c04c2f9692a9c62233c72330ba8d27/9685e/locust_img_05.png 1336w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+100명의 유저가 컨테이너별로 나뉘어서 수행되는 것을 확인 &lt;br&gt;
+각 컨테이너의 자원 리소스 현황 확인 가능&lt;/p&gt;
+&lt;h3&gt;(3) 테스트 종료&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;docker-compose&lt;/span&gt; down&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;3. 고유한 성질을 가진 유저의 테스트&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;블록체인의 트랜잭션 처리량에 대한 부하테스트를 진행하기 위해서는 테스트 유저간 각기 다른 지갑이 필요하였고, 테스트 유저가 초기화 되는 순간에 지갑을 만들어 해결하였습니다.&lt;br&gt;
+간단한 예시를 통해 고유한 성질을 가지는 유저로 테스트를 진행해보겠습니다.&lt;/p&gt;
+&lt;h3&gt;(1) 테스트 대상 서버 구성&lt;/h3&gt;
+&lt;p&gt;🧑‍🚀 요청사항&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각 회원별 클릭 횟수 저장&lt;/li&gt;
+&lt;li&gt;회원별 클릭 횟수 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;go&quot;&gt;&lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; main
+
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;encoding/json&quot;&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;log&quot;&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;net/http&quot;&lt;/span&gt;
+	&lt;span class=&quot;token string&quot;&gt;&quot;strings&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; clickedMap &lt;span class=&quot;token keyword&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clickHandler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ResponseWriter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Request&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	name &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; strings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;TrimPrefix&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;URL&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/click/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+	clickedMap&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;
+
+	fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Fprintf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;clicked by %s!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;countsHandler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ResponseWriter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Request&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	w&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+	json&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;NewEncoder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Encode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;clickedMap&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	clickedMap &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+	mux &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;NewServeMux&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	mux&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/click/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; clickHandler&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	mux&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/counts/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; countsHandler&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+	fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Starting server at :8080&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; err &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; http&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ListenAndServe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;:8080&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mux&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; err &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		log&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Fatal&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;click/{name} : 사용자별 클릭하는 API&lt;/li&gt;
+&lt;li&gt;counts : 사용자별 클릭 현황 확인하는 API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;(2) Locust 코드 작성 및 실행&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;코드 작성&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각 테스트 유저는 이름을 갖을 수 있도록 코드 작성&lt;/li&gt;
+&lt;li&gt;Alice, Bob, Charlie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; locust &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; HttpUser&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; task&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; between
+
+HOST&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;http://localhost:8080&quot;&lt;/span&gt;
+NAME_LIST &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Alice&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Bob&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Charlie&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;WebsiteUser&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;HttpUser&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    host &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; HOST
+    
+    &lt;span class=&quot;token comment&quot;&gt;# 유저 초기화시 호출&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;on_start&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;NAME_LIST&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; NAME_LIST&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pop&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@task&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/click/&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; catch_response&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    wait_time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; between&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;실행 및 확인&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;locust 확인 (&lt;a href=&quot;http://localhost:8089&quot;&gt;http://localhost:8089&lt;/a&gt;)
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 30.37974683544304%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA60lEQVR42n1PwUoDMRTMJ2qh1O7Bg/cVtbb0LiLoqVeFUlbamxU/brtJ3kvGTHaz9CAuzM4kbybvPTNrFqiPT3j8eUP99YyLbY3J9haXiae7e1zv16g+l5nnzRJVs8LV4QH15hXv6w2OLzf4/qgwS/Xp7g5GVNC6E0IICKoDAnTgSISY6/99Vhw0KAyN3vscsM5BROAS866AZ+vsqL14dF0HccM5oe36oQxN7anNE7FIZoDMx0sDggE3NFXR0aMq/UYxwlBY23enjrFf7xzZnJg16r98Ma3NO8MfH8wriIyBc5RJGSy6eAuXhr90/7wpJXbcKQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;locust_img_06&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2fa16767bfc004e85b5dfc8c2fbd90dc/f058b/locust_img_06.png&quot;
+        srcset=&quot;/static/2fa16767bfc004e85b5dfc8c2fbd90dc/c26ae/locust_img_06.png 158w,
+/static/2fa16767bfc004e85b5dfc8c2fbd90dc/6bdcf/locust_img_06.png 315w,
+/static/2fa16767bfc004e85b5dfc8c2fbd90dc/f058b/locust_img_06.png 630w,
+/static/2fa16767bfc004e85b5dfc8c2fbd90dc/40601/locust_img_06.png 945w,
+/static/2fa16767bfc004e85b5dfc8c2fbd90dc/78612/locust_img_06.png 1260w,
+/static/2fa16767bfc004e85b5dfc8c2fbd90dc/1f7be/locust_img_06.png 3196w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;
+counts API 확인 (&lt;a href=&quot;http://localhost:8080/counts&quot;&gt;http://localhost:8080/counts&lt;/a&gt;)
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.088607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQklEQVR42q2MQQ6AIBDE+P9TDRqywIKG3Up4AtrLpHNoaK0jRUm5kqui082MXYKIkOLF0Bufh7uv/RQ8j8hTOn/wAolU7Y4eCiqVAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;locust_img_07&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f8566546077067153f604d47f604e743/f058b/locust_img_07.png&quot;
+        srcset=&quot;/static/f8566546077067153f604d47f604e743/c26ae/locust_img_07.png 158w,
+/static/f8566546077067153f604d47f604e743/6bdcf/locust_img_07.png 315w,
+/static/f8566546077067153f604d47f604e743/f058b/locust_img_07.png 630w,
+/static/f8566546077067153f604d47f604e743/40601/locust_img_07.png 945w,
+/static/f8566546077067153f604d47f604e743/bb051/locust_img_07.png 1212w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;마치며&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Locust의 기능을 간단하게 소개해보았습니다. &lt;br&gt;
+소개한 기능 외에도 다양한 기능을 제공하여 업무에 많은 도움이 되었습니다 &lt;br&gt;
+&lt;a href=&quot;https://docs.locust.io/en/stable/&quot;&gt;공식 홈페이지&lt;/a&gt;를 확인해주시면 다양한 좋은 기능들을 확인해볼 수 있습니다.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;REFERENCE&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.locust.io/en/stable&quot;&gt;https://docs.locust.io/en/stable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://devocean.sk.com/internal/board/viewArticleForAjax.do?id=165998&quot;&gt;https://devocean.sk.com/internal/board/viewArticleForAjax.do?id=165998&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[OPA(Open Policy Agent)를 이용하여 JIRA의 권한 구현하기]]></title><description><![CDATA[본 글은 SK플래닛에서 OPA(Open Policy Agent)를 이용하여 사내 JIRA의 권한을 구현한 사례를 공유하며, 아래와 같이 크게 세 가지 작업을 정리하고자 합니다. 첫번째는 개발 중인 ITSM 시스템에서 권한 부분을 OPA를 이용해 구현합니다. 정책은 Rego로 작성합니다. 두번째는 작성된 정책을, data API…]]></description><link>https://techtopic.skplanet.com/opa/</link><guid isPermaLink="false">https://techtopic.skplanet.com/opa/</guid><dc:creator><![CDATA[sunny]]></dc:creator><pubDate>Thu, 26 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글은 SK플래닛에서 OPA(Open Policy Agent)를 이용하여 사내 JIRA의 권한을 구현한 사례를 공유하며, 아래와 같이 크게 세 가지 작업을 정리하고자 합니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;첫번째는 개발 중인 ITSM 시스템에서 권한 부분을 OPA를 이용해 구현합니다.
 &lt;ul&gt;
