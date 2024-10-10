@@ -1,6 +1,6 @@
 ---
 title: "Locust를 활용한 부하 테스트 작성"
-date: "2024-10-02"
+date: "2024-10-10"
 tags: ["locust", "부하테스트", "opensource"]
 author: "wonjs"
 description: "Locust를 이용하여 간단하게 부하테스트 작성해보기"
