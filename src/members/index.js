@@ -16,6 +16,7 @@ import taehak from "./images/taehak.png";
 import joe from "./images/joe.png"; 
 import hanjh from "./images/hanjh.png"; 
 import sunny from "./images/sunny.png"
+import wonjs from "./images/wonjs.jpg"
 
 export const MEMBERS = {
   jayoon: {
@@ -131,5 +132,11 @@ export const MEMBERS = {
     team: "DevOps팀",
     description: "DevOps팀에서 사내 CI/CD 및 개발환경포탈 시스템을 개발/운영하고 있습니다.",
     thumbnail: sunny,
+  },
+  wonjs: {
+    name: "원준수",
+    team: "Web3개발팀",
+    description: "새로운 도전과 시도를 통해 끊임없이 성장하고자 하는 개발자입니다.",
+    thumbnail: wonjs,
   },
 };
