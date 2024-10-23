@@ -203,7 +203,7 @@
 <h4>(2) 처리하고 있는 데이터 수</h4>
 <p>Spark Streaming로 수행되는 데이터 처리량은 처리 이상여부를 판별하는 중요한 요소입니다. 앞서 Spark Streaming은 일정 수의 Kafka 데이터를 가져와서 마이크로 배치 형태로 수행한다고 했습니다. 즉, 하나의 마이크로 배치에서 가져오는 Kafka 데이터의 수가 처리량이 됩니다. 모니터링을 위해서 Kafka에서 각 파티션별로 가져오는 메시지의 첫 오프셋과 마지막 오프셋의 차이로 데이터 처리량을 계산하며 Elasticsearch에 마이크로 배치마다 로그를 기록하고 있습니다. 기록된 로그는 Grafana를 통해 모니터링 하며 처리량이 일정 기준보다 낮아지면 알림을 받습니다.</p>
 <h4>(3) Kafka 데이터의 지연 여부</h4>
-<p>Kafka의 데이터를 소비하며 처리를 하기 때문에 Kafka에 보관된 처리되지 않는 데이터 수의 증감으로 지연여부를 판단할 수 있습니다. Kafka 데이터의 지연 수는 Kafka의 마지막 적재 데이터 오프셋과 컨슈머 그룹 오프셋의 차로 파악할 수 있습니다. 그 수치를 LAG(Latency Aware Gap)이라고 말합니다(이 값이 작을수록 데이타가 원활하게 처리됨을 나타냄). LAG을 계산하며 지연 정도를 파악하는데 도움을 주는 오픈소스로는 Burrow(<a href="https://github.com/linkedin/Burrow)%EA%B0%80">https://github.com/linkedin/Burrow)가</a> 있습니다. Burrow에서 제공하는 LAG을 주기적으로 Elasticsearch로 적재하면서 데이터 지연 여부를 모니터링할 뿐만 아니라, 컨슈머 그룹 오프셋과 LAG의 증가 추이를 통해 상태(WARNING, ERROR, STOPPED)로 표현하기 때문에 정상이 아닌 상태로 변화하면 알림을 받습니다.</p>
+<p>Kafka의 데이터를 소비하며 처리를 하기 때문에 Kafka에 보관된 처리되지 않는 데이터 수의 증감으로 지연여부를 판단할 수 있습니다. Kafka 데이터의 지연 수는 Kafka의 마지막 적재 데이터 오프셋과 컨슈머 그룹 오프셋의 차로 파악할 수 있습니다. 그 수치를 LAG(Latency Aware Gap)이라고 말합니다(이 값이 작을수록 데이타가 원활하게 처리됨을 나타냄). LAG을 계산하며 지연 정도를 파악하는데 도움을 주는 오픈소스로는 Linkedin의 Burrow*가 있습니다. Burrow에서 제공하는 LAG을 주기적으로 Elasticsearch로 적재하면서 데이터 지연 여부를 모니터링할 뿐만 아니라, 컨슈머 그룹 오프셋과 LAG의 증가 추이를 통해 상태(WARNING, ERROR, STOPPED)로 표현하기 때문에 정상이 아닌 상태로 변화하면 알림을 받습니다.</p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
