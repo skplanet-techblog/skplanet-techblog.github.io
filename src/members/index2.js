@@ -17,7 +17,7 @@ import joe from "./images/joe.png";
 import hanjh from "./images/hanjh.png"; 
 import sunny from "./images/sunny.png"; 
 import wonjs from "./images/wonjs.jpg"; 
-import junghochoi from "./images/junghochoi.jpeg"
+import chanmin from "./images/chanmin.jpeg"
 
 export const MEMBERS = {
   jayoon: {
@@ -56,7 +56,7 @@ export const MEMBERS = {
     name: "나현식",
     team: "Media솔루션개발팀",
     description:
-      "Cloud Streaming과 가상화 기술을 통해 새로운 기술과 가치를 만들어가는 엔지니어입니다.",
+      "Cloud Streaming과 가상화 기술을 통해 보다 나은 서비스를 제공하고자 새로운 기술과 가치를 만들어가는 엔지니어입니다.",
     thumbnail: nhs,
   },
   kyuho: {
@@ -140,10 +140,10 @@ export const MEMBERS = {
     description: "새로운 도전과 시도를 통해 끊임없이 성장하고자 하는 개발자입니다.",
     thumbnail: wonjs,
   },
-  junghochoi: {
-    name: "최중호",
-    team: "Data Infrastructure팀",
-    description: "빅데이터의 실시간 플랫폼 개발에 관심있는 개발자입니다.", 
-    thumbnail: junghochoi,
+  chanmin: {
+    name: "김찬민",
+    team: "커뮤니케이션기술개발팀",
+    description: "오늘날 IT 서비스의 경쟁력은 사용자 경험에 달려 있다고 믿는 프론트엔드 개발자입니다.",
+    thumbnail: chanmin,
   },
 };
