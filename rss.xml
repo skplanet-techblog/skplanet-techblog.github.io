@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 01 Nov 2024 07:00:32 GMT</lastBuildDate><item><title><![CDATA[생성형 AI로 QA 업무 수행하기 : 똑똑한 소프트웨어 테스트의 시작]]></title><description><![CDATA[최근 다양한 생성형 AI 기술이 등장하면서 여러 산업 분야에서 필수적인 도구로 자리잡고 있는데요, QA(Quality Assurance) 분야도 예외는 아닙니다. AI를 QA 업무에 적절히 활용하면 업무의 효율성과 정확성을 크게 향상시킬 수 있습니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 01 Nov 2024 07:40:48 GMT</lastBuildDate><item><title><![CDATA[생성형 AI로 QA 업무 수행하기 : 똑똑한 소프트웨어 테스트의 시작]]></title><description><![CDATA[최근 다양한 생성형 AI 기술이 등장하면서 여러 산업 분야에서 필수적인 도구로 자리잡고 있는데요, QA(Quality Assurance) 분야도 예외는 아닙니다. AI를 QA 업무에 적절히 활용하면 업무의 효율성과 정확성을 크게 향상시킬 수 있습니다.
 요구 사항 분석부터 소프트웨어 결함과 오동작 분석까지, AI는 QA…]]></description><link>https://techtopic.skplanet.com/qa-chatgpt/</link><guid isPermaLink="false">https://techtopic.skplanet.com/qa-chatgpt/</guid><dc:creator><![CDATA[keumbaek]]></dc:creator><pubDate>Fri, 01 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;br&gt;
 &lt;p&gt;최근 다양한 생성형 AI 기술이 등장하면서 여러 산업 분야에서 필수적인 도구로 자리잡고 있는데요, QA(Quality Assurance) 분야도 예외는 아닙니다. AI를 QA 업무에 적절히 활용하면 업무의 효율성과 정확성을 크게 향상시킬 수 있습니다.
 요구 사항 분석부터 소프트웨어 결함과 오동작 분석까지, AI는 QA 프로세스의 여러 단계에서 가치를 더할 수 있습니다.&lt;/p&gt;
@@ -182,6 +182,8 @@ UI가 다양한 해상도에서 어떻게 반응하는지 테스트 케이스를
 &lt;p&gt;이 기법을 활용하면, AI는 QA 엔지니어의 시각에서 요구되는 테스트를 이해하고 그에 맞는 구체적인 테스트 케이스를 생성할 수 있습니다.&lt;/p&gt;
 &lt;br&gt;
 &lt;u&gt; Contextual Prompting &lt;/u&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;p&gt;Contextual Prompting은 QA 업무에 특정 상황을 제공해 AI가 그에 맞춰 더 적합한 답변을 생성하도록 하는 기법입니다.
 구체적인 상황을 제공하면 AI는 그에 맞춘 정확한 테스트 케이스를 제안하기 때문에, QA 과정에서 발생할 수 있는 다양한 시나리오에 대한 대비가 가능합니다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;작성 예시&lt;/strong&gt;&lt;/p&gt;
