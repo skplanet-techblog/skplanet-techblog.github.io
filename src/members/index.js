@@ -18,6 +18,7 @@ import hanjh from "./images/hanjh.png";
 import sunny from "./images/sunny.png"; 
 import wonjs from "./images/wonjs.jpg"; 
 import junghochoi from "./images/junghochoi.jpeg"
+import keumbaek from "./images/keumbaek.png"
 
 export const MEMBERS = {
   jayoon: {
@@ -145,5 +146,11 @@ export const MEMBERS = {
     team: "Data Infrastructure팀",
     description: "빅데이터의 실시간 플랫폼 개발에 관심있는 개발자입니다.", 
     thumbnail: junghochoi,
+  },
+  keumbaek: {
+    name: "금윤아, 백승필",
+    team: "QA팀",
+    description: "스마트한 소프트웨어 품질 관리 방안을 고민하는 QA 엔지니어입니다.", 
+    thumbnail: keumbaek,
   },
 };
