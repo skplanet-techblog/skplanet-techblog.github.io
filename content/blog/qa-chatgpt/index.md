@@ -211,7 +211,8 @@ Role-based Prompting은 AI에게 특정 역할을 부여하여 문제를 해결�
   
 <br>
 <u> Contextual Prompting </u>
-
+<br>
+<br>
 
 Contextual Prompting은 QA 업무에 특정 상황을 제공해 AI가 그에 맞춰 더 적합한 답변을 생성하도록 하는 기법입니다.
 구체적인 상황을 제공하면 AI는 그에 맞춘 정확한 테스트 케이스를 제안하기 때문에, QA 과정에서 발생할 수 있는 다양한 시나리오에 대한 대비가 가능합니다.
