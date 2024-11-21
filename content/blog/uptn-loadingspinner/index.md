@@ -1,6 +1,6 @@
 ---
 title: "웹앱 사용자 경험을 개선하는 기술 한 스푼"
-date: "2024-11-22"
+date: "2024-11-21"
 tags: ["UPTN", "spinner", "Frontend"]
 author: "chanmin"
 description: "웹앱 사용자 경험을 개선하는 기술 한 스푼"
