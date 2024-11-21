@@ -34,6 +34,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "gatsby-remark-gifs": "^1.2.0",
     "gh-pages": "^6.1.1",
     "prettier": "^2.8.1"
   },

@@ -19,6 +19,7 @@ import sunny from "./images/sunny.png";
 import wonjs from "./images/wonjs.jpg"; 
 import junghochoi from "./images/junghochoi.jpeg"
 import keumbaek from "./images/keumbaek.png"
+import chanmin from "./images/chanmin.jpeg"
 
 export const MEMBERS = {
   jayoon: {
@@ -152,5 +153,11 @@ export const MEMBERS = {
     team: "QA팀",
     description: "스마트한 소프트웨어 품질 관리 방안을 고민하는 QA 엔지니어입니다.", 
     thumbnail: keumbaek,
+  },
+  chanmin: {
+    name: "김찬민",
+    team: "커뮤니케이션기술개발팀",
+    description: "오늘날 IT 서비스의 경쟁력은 사용자 경험에 달려 있다고 믿는 프론트엔드 개발자입니다.",
+    thumbnail: chanmin,
   },
 };

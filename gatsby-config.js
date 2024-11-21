@@ -42,7 +42,11 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
+              ignoreFileExtensions: ['gif'],
             },
+          },
+          {
+            resolve: "gatsby-remark-gifs",
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
