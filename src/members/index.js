@@ -20,6 +20,7 @@ import wonjs from "./images/wonjs.jpg";
 import junghochoi from "./images/junghochoi.jpeg"
 import keumbaek from "./images/keumbaek.png"
 import chanmin from "./images/chanmin.jpeg"
+import eshong from "./images/eshong.png"
 
 export const MEMBERS = {
   jayoon: {
@@ -159,5 +160,11 @@ export const MEMBERS = {
     team: "커뮤니케이션기술개발팀",
     description: "오늘날 IT 서비스의 경쟁력은 사용자 경험에 달려 있다고 믿는 프론트엔드 개발자입니다.",
     thumbnail: chanmin,
+  },
+  eshong: {
+    name: "홍의숙",
+    team: "OCB개발팀",
+    description: "탁구치기 좋아하는 아줌마 개발자입니다 :)",
+    thumbnail: eshong,
   },
 };
