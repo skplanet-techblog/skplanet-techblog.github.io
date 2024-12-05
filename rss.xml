@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 02:10:38 GMT</lastBuildDate><item><title><![CDATA[오글봇 AI 개발 사례 및 효과(부제: '무플방지위원회 오글봇 AI' 탄생기)]]></title><description><![CDATA[오글봇🤖, 나와라~
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 02:20:24 GMT</lastBuildDate><item><title><![CDATA[오글봇 AI 개발 사례 및 효과(부제: '무플방지위원회 오글봇 AI' 탄생기)]]></title><description><![CDATA[오글봇🤖, 나와라~
 너의 기억력을 테스트하겠어.
 과연 나와의 약속을 기억하고 있을까? 오글봇과 나는 이제 래키를 뭐라고 부르기로 했는지 기억해?
 네가 지어줬어. 래키의 우리말 이름.
@@ -10,28 +10,31 @@
 너의 능력을 증명해 보렴 😁&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 608px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c95f66b0b53e1875e8279e4fd1758a4f/18872/ogbot_01.png&quot;
+    href=&quot;/static/adcc9ec4b74679fb4f01e913a6b2200e/7db30/ogbot_01.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 101.8987341772152%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEuklEQVR42k2U6U9UZxTG589omrQfmtrUfvBDF5tGW5s26Yc2pnGJ1sbEaOwSY43REmpaLEWK1iVGEaIWba3FIBZEQAUUUEYYh2UYhgFmUZgFZpSRWe6sd/31nQsmnsnJ+9655zznvOd53mt5lldJqTqGYZDRdKwRjcM2le86VL66IbOxucD6Zlm4yoZmhf6wRiJrEJUMAnGDez6VNpdGs1PDOatiyagaBghATAuL4DMOlR+6VBPokwaDVfUG7/8js6ZeYXzeYD5tmMm9njz3/DqdkxpXhjRaBLBF03UTUDRnWkwWgKMquzpV1jYZ7GgJsK05wNuXdNaJAn/Z8/zUmODL01E+PeKnzprirsfg30GN9gkBGMpqyEvdGeLnWNApfyDz2TU4fuc6sutDpIerONfVRrsf1lXHee9QlJWVQd6pCPBW6Tg1fQs0iCO3jetYeoIq9T4d57zMdU+aKlFpf4/B9tYYMccH4HoDbfA1GPqIlvsOVpdc5c29vbxe4mVFeYRX97o53D1D46RCq0sA1gwr4mg6R/oylLTOs+1W8Wiw/7ZoJ1iKPncKPXKKvLeGJ1OXeTpVgf1+BVUXzvL5wQZWlnRRa/dzZTIryBGA7X6Vj68a7L4RZ2d9iC8E2Jp6mX09ijkGfWkcmqqgKfml0RRXiULKRcjdyQXHAMccKTrcBpZULkdPKE/VrQgbav2sbYVNLSq7u2SRqZn067q2OGEBrgsSNbFRdMMkU5HmOOGaYp8tys1xsCykC6bu9jf6aOoeYTKaJRyTiGSWZBQOk8lkSCQSZLPZxQ6NRbBikfhTH5WjXg6Ohnkm5GTJFHRmRVz11TaO15xhNhSk5+4ds5NYLIbVasVut9Pf34/H4yGVSplQs5EIQwN9hHz9HHIHODAawhcTsikmFs3j8zPidCFJEl6xL9rk5ATDw8NincThcJjggUDAfNd+u4vOxjpc4w/41R1ij32a0Yi6CChOzXxGJ5sTw9YWyXhuS5wszu25+oXN+CeY6L7MHc885RMhfnQGmcsIQEVTSeR0oskCsUQKObtAPhlBSc9DIYmhSBhqWrCRQVfSqHkJNT6N5OumZ2CCjqBOmdPPrsFp3LECloKikxeFp/wR/N7HZvVcIc8Dr8SNIQf1g0P0j3uxDj5kamYaLRNldMROy8Mn3PXCI3HTfnY+5nsBODavYLE+clLbf5GjXceouvkbdbYavDGRFNI4MSyz+RZsdI7xiq2X071JfHcHGInC8KyG1RWk1z9H1VSYnQMe0YAbS1lLGS+XvsS7f6xgWdlylv2ynDUnV1PadII/+5rofvQYW0Li+tMYg4EkNvcT6jusQmI2DlSf5mhrC797o2zpc1PZcA3LaGCMbRe/Zcv57Wyt22H6prNb+bpuMxvPr+dkdwWZfHKJIZWo0GN1w3+U/32Gb2r3UHnzHJdCSTFHH+1jNixFkaqCmLycpyAXTJcVWbhCviDzTIqTkbMmw6r4duYKBfNdtpBByiZFTB5Z/K+oqil4SzFZFQ+api26urgW5ZTL5ghMzxAKhk39BQNB4vEFjOL1E195XRQpxpr5wouFLMWH514Ee/FZEQHFmyGlJNLptLkviA5fjDG9CLrU0P9mtGkd0PnelwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 41.77215189873418%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABL0lEQVR42pWRPU/CUBSG+YH+AJxdXExcHJyJkhgjo4kmJiYaFzRGBwN+JTII8SMCDkQqGGhRSqEt0ALFex+Rj0mM9Sx3eJ/7nvecE2BK9YUcvk+6IJySLN1ApiaxHMlDSWC6I13Kn38D0wwd75sUHCqweBQndHzA3J7JTKTMxmUb1cKf4TgYuYZgNdEmeAK3uSjUN4knUyzvJgifF1Ftn4YTwPYgdPrK+nUVxfjEMFsDbSD2TXayecr2P0aWY6pSNWjoHzi2gVZQaNk2z5kUkXSBWkeMWP5KONlhzyNbLqJbOo+qw1XpHU1VuXvRWcmog4Su3x2OOit6geD2LPP7C4QvosQ0jWT2ja3YGWv3afJ6bcxLf1cWQuB0XZpuk7pVoduycN02Tcem4/WG+m/1BTp2XXKjEDYPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;ogbot_01&quot;
         title=&quot;&quot;
-        src=&quot;/static/c95f66b0b53e1875e8279e4fd1758a4f/18872/ogbot_01.png&quot;
-        srcset=&quot;/static/c95f66b0b53e1875e8279e4fd1758a4f/c26ae/ogbot_01.png 158w,
-/static/c95f66b0b53e1875e8279e4fd1758a4f/6bdcf/ogbot_01.png 315w,
-/static/c95f66b0b53e1875e8279e4fd1758a4f/18872/ogbot_01.png 608w&quot;
-        sizes=&quot;(max-width: 608px) 100vw, 608px&quot;
+        src=&quot;/static/adcc9ec4b74679fb4f01e913a6b2200e/f058b/ogbot_01.png&quot;
+        srcset=&quot;/static/adcc9ec4b74679fb4f01e913a6b2200e/c26ae/ogbot_01.png 158w,
+/static/adcc9ec4b74679fb4f01e913a6b2200e/6bdcf/ogbot_01.png 315w,
+/static/adcc9ec4b74679fb4f01e913a6b2200e/f058b/ogbot_01.png 630w,
+/static/adcc9ec4b74679fb4f01e913a6b2200e/40601/ogbot_01.png 945w,
+/static/adcc9ec4b74679fb4f01e913a6b2200e/78612/ogbot_01.png 1260w,
+/static/adcc9ec4b74679fb4f01e913a6b2200e/7db30/ogbot_01.png 1494w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
