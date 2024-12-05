@@ -1,4 +1,407 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 02:20:24 GMT</lastBuildDate><item><title><![CDATA[오글봇 AI 개발 사례 및 효과(부제: '무플방지위원회 오글봇 AI' 탄생기)]]></title><description><![CDATA[오글봇🤖, 나와라~
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 03:50:14 GMT</lastBuildDate><item><title><![CDATA[판교 테크세미나를 운영하는 법과 'Age of AI - the Future of Work' 회고]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 :) 판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, 지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data & Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech…]]></description><link>https://techtopic.skplanet.com/dtc24-ageofai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dtc24-ageofai/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe입니다 :)&lt;/p&gt;
+&lt;p&gt;판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요,&lt;/p&gt;
+&lt;p&gt;지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data &amp;#x26; Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech Topic 블로그를 통해 회고하며, 특히 지난 11월 진행된 DTC 주제인  &apos;Age of AI - the Future of Work&apos; 강연 및 현장의 분위기, 구성원 의견 중 일부를 함께 담아 보았사오니 즐겨 주시면 감사하겠습니다.&lt;/p&gt;
+&lt;p&gt;아울러 기술 세미나를 기획하거나 운영하는 다른 회사 및 부서에서도 함께 참고하여 주시면 감사하겠습니다.&lt;/p&gt;
+&lt;h2&gt;DTC(Data &amp;#x26; Tech Committeee)란?&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4&gt;TL;DR&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; 예전에는 사내 임원 중심의 기술 미팅으로 시작했다가&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+   &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;년 전부터 현재는 임직원을 아우르는 전사 대상의 기술 공유 커뮤니티로 발전하였음&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2024&lt;/span&gt;년 &lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;월 기준&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; 매월 사내 기술 공유뿐만 아니라 외부 전문가의 강연을 통해 많은 인사이트를 제공하고 있음&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;개요 및 아젠다&lt;/h4&gt;
+&lt;p&gt;DTC 프로그램과 관련하여 당사 개발자 활동 페이스북에 정리된 내용이 있어 아래 인용해 보았습니다(&lt;a href=&quot;https://facebook.com/readme.skp/&quot;&gt;https://facebook.com/readme.skp/&lt;/a&gt; 를 일부 수정).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/119554c2dd2e109b3c2c902fab1d1420/302a4/image01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACX0lEQVR42oWUa3OiMBSG+/9/ys5+2Nkv7ex03Fq19oKi2FWrIkpCCAkQriIg6Z6Vbq2OnZ5hmJCch3Py5oWL13Mh5dczEBcnz1VV7XbVyWRR5DD/Nex5nm00kjTJskwIEYaRCARBc5OiHKpL+bGFA1xPup47fb6ZjIez2cwXYRxvMDLxqqfP+5zzk/4/wFI6Do/jBGGHOtwkDCjGOKVuIFxjOZ1OeiII86I4A+d5YawQ8PpyhS0apRvPE2vDUNWeZSHhhw5jSk9DmLzv/2jPhFCb0MFwrC9WTpRsK+n7oT7TXIZFEPvJVhuNx5N5UZan8DbfCQdxYg61aZpusu3WsWlVlFCHcQ9bdpzlmDCM7TOVKymhW0rrZQkZzcurp1Yblmybce5bGI+UnyBKLdAR7LkcmUvIoxRkS7NsG0RxEAavRZSkGxNZnLkIrcv/PR/gsqwsvHDw0LERyGtZti8iOOQojMh6SWwHYJt53BXnTRKFfInmf557NkFrZOmLheeF3PUNk8AReCJgrg/tfOqwvJKUrLCI1ZGmKp3ZywTcQr0ATmG1xlEUf2pPuXcfDNJNzhllfjRdGIaxIsTp3CmMue86na9c7aPOgDpBECVJChufL4zaWFIemfsAg4z1AtyL4m0M7/oo7/m2Ien+/uny6rrV7l79ajRvO7etu+tGUx1oT0q/1eq2Ow83zfa37z8Gw9EpDHXmC73xu3XT7MA1fpk32w/dx55umI/KoPOg9FWt1x/CG1VV+/R7fjN5kJOw9NPK8nMaFjzZyXO/kiO192LJvXX3yv8DakZW8hDv8F8AbG6PefnmEwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/119554c2dd2e109b3c2c902fab1d1420/f058b/image01.png&quot;
+        srcset=&quot;/static/119554c2dd2e109b3c2c902fab1d1420/c26ae/image01.png 158w,
+/static/119554c2dd2e109b3c2c902fab1d1420/6bdcf/image01.png 315w,
+/static/119554c2dd2e109b3c2c902fab1d1420/f058b/image01.png 630w,
+/static/119554c2dd2e109b3c2c902fab1d1420/40601/image01.png 945w,
+/static/119554c2dd2e109b3c2c902fab1d1420/302a4/image01.png 1080w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(이미지는 사내 모 PL 님께서 디자인해 주셨습니다 ^ ^)&lt;/p&gt;
+&lt;p&gt;Data &amp;#x26; Tech Committee(이하 DTC)는 매월 진행되는 전사 기술 공유 프로그램으로 개발, 인프라, 데이터, UX 등 현업의 다양한 업무 사례를 공유함으로써 구성원들의 상호 교류와 시너지 창출을 통한 기술 문화를 만들었습니다. 이와 함께 DTC는 기획, 사업, UX 등 비개발 직군의 임직원들도 적극적으로 참여하였으며, 다양한 분야의 외부 전문가 초빙을 통해 기술 인사이트 공유 및 네트워킹을 함께 강화해 나가고 있습니다.&lt;/p&gt;
+&lt;p&gt;SK플래닛에서 다루었던 주요 아젠다는 아래와 같습니다.
+(덧. 역시 생성형 AI의 비중이 많아지고 있네요! - 이제는 프로그램명을 ATC(AI &amp;#x26; Tech...) 로 바꾸어야 할까요?)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a9d86f032744d8f478940ea38a199150/58354/image02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 93.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAAC4klEQVR42m1UiXaiQBDk/z8sm5hEvCOoKIigEm/uq7dqgklwl/faGUamuqaqQEvSXDbeVi7XUMIokTQrVHH99xgnmVgLSz3HeRSn38V9rAilhWEk1nIpu91e8qIQ23FkuVqJ5/nirNeyXrtqbttYx3NhFAMwlTgmQCzcXxSlqjwvRCvLUqqqwkIhVV3Lx2QivV5PxuOx9Ad9meB+NpvJcDhU43Q8lLlpiGlMVYMgCNR+Xtyv5TmODCa3KJISf3ieJ5vNRpUDthzJ2rZtcSHN0j2LhXL9k5wvFwVUN2DcrxE9zzIh0xqLPV2XTqejWL6+vkq/38f4Jt1uV55fXuT5uSPdN130Xl9WkGa73aKp971fI7LqgpFzE0ccDQZiWZaMRiNZLBbQdyf7/V4V50Gwh7Zf7C9gyVPe97cAWVMADsGKmpmmKcZ0qpiwATWbYY3A1+tVHq8vQBy5qr6MIW3XdRUrAsxhgklAAs3nMsXcQMM1NPd8H24nLTLE0BgVGsGOJRZ5JKcxYQVgZ2Wr6PB//hfFsdpcNJpVDbMfUxr0Wi2U8oGo6O/vMoCOAxih0xiMBEtThBjAMRLBCsNQMhjaOjJRY3TNIGzRxIbseCwen5HhfNk4GgD4gOx90iTMbwB9iE0tN3RlJ2pA7QwIv8DIOQEJTDYRWD1e9a8TKg35+tD+4+mkNPSwmcLTGOUuDCFj1g6sHgHIqq0hfu4Z4nwI7d6gm46A/3l6UiMDzmJceBIyZWXQ9J/Y0OXT+YyvSqpi40OnNVhuoCWjwZGx4bF93H9rC8a8vzO9x07jR+EAcRMYw2uCt2OAYDN3I4SbHwc6zlAzOufjUcLbTWnK+/uHoRVsZornL/EJ8huXydShfjDmeDjIAUAVnvvf29FiyE4MMnNGx2eGoXScg+EYbD/wdjAuB4DeR1WfnypCRzRqMaTIrASvETsQmK4HMICfNTINYQA15jMpnk0xJgw3yDDsv2PzF1H7m2V69LI2AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a9d86f032744d8f478940ea38a199150/f058b/image02.png&quot;
+        srcset=&quot;/static/a9d86f032744d8f478940ea38a199150/c26ae/image02.png 158w,
+/static/a9d86f032744d8f478940ea38a199150/6bdcf/image02.png 315w,
+/static/a9d86f032744d8f478940ea38a199150/f058b/image02.png 630w,
+/static/a9d86f032744d8f478940ea38a199150/40601/image02.png 945w,
+/static/a9d86f032744d8f478940ea38a199150/78612/image02.png 1260w,
+/static/a9d86f032744d8f478940ea38a199150/58354/image02.png 1396w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+[지난 3년간의 아젠다: 다양한 분야를 여러 전문가 분들께서 커버해 주셨습니다]&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e85b54a26bf24be0db65e91bfc302b65/a878e/image03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADgUlEQVR42gXB608bBQAA8NNEp8QsmY9lI3swItIBLaWlpCBtaa9H371Xr+1x5a5318f1cb07ru+jFltKpWMQpmyMzWA2oUONMZrsw/xgDPGbX/2i/4y/H5BxWSIzE43WYPv0zfdvLg+PH+cLYhSFX5/t76ickoxwEV+nFD8/apfTMdi1GF+1NvjQbjkhkAFAXl0iZiY0tfX4t7+Hv18O9vbCIWR43Hu+I+diwQ0GO26njrtFFlsloXl13TuocjKDRr32JOwCNPBzfHp8u7F9+ue/Z7++ZoRyVeR/edKq0mEtQ3zXL3Xlddq3JMahrkjIlJ+BwSwONlLYBhcDvkXD9ruftCpbr/76b/fwG45hzx+1GyzeEoivtXSNRUtr/p5EduWkysdqGVJcC+Eel9fpspotwJBlZ0c/LMnNs8t/tJ3B0X6/q+YOmjkxAZfivr5E9VW2KVAyR0lCVikUZD7hWLKBTiiKoMBQzNv1n2KRtd6zH7/cO2w0m1UpV6RxNUuV8zSNQIjbToRhAo1iQbSYzvQ2614XyNOcnMsCP8tZLmRnomGlUlcr1aqqaqrCxMj7xhXDAjR6/YbVOJdO0gV+vZwXRI7f3BBRj4tF3YTfCfzRlJQ4lCbDhQz3RW1jp1lMUbCS9lGYAVm1+ldMHGGig44kPsfFbIjb6FzQIb7ZgM2wsmAE9lmiRoIH5CQTdjC0P580maduwCuGakafik5z8Exny6YoNio+Xa9hVYXGYRD1m50Ww6zuMyDu0CuI5TzxcQXVh21TtGfOYtD7QBBeNuPLJlB3h8tk0+Q85ta16p6YcyHmstepwFetTeviErAVNx3w1qFkvmiFfupFL3pIGls67goP2iVNzWZ5Kuj1BydvpaBxoWJyzNxhrDqN8GVIUjcxCezS8yei42Uz/KKbPuunLgb0I9G+xTn6tfR2PSuJfJ7G111jpHccSeiuvv9uMRU/2uvUaMxtnASeCI4TyfW0lRyeHLx6WNrPOdQEWC2wmxKryal6ieMD8yJ6DwfHFhc/Gr95SxCldq9zev6y324CP9QCJwr0Yl87faBVIpYUsSIJa+UCXc7RVZGlYUh/7b350auWmyO2ydshv59JUsEA5Al6CcQHDMv+p7Knk1jmoakk4clzkQKHFblokY9lmMga4rk7cmVs5Mrtd96y6e/PGucQHPYFfNeuv31v4oP/AevyS1Jn28OaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e85b54a26bf24be0db65e91bfc302b65/f058b/image03.png&quot;
+        srcset=&quot;/static/e85b54a26bf24be0db65e91bfc302b65/c26ae/image03.png 158w,
+/static/e85b54a26bf24be0db65e91bfc302b65/6bdcf/image03.png 315w,
+/static/e85b54a26bf24be0db65e91bfc302b65/f058b/image03.png 630w,
+/static/e85b54a26bf24be0db65e91bfc302b65/40601/image03.png 945w,
+/static/e85b54a26bf24be0db65e91bfc302b65/78612/image03.png 1260w,
+/static/e85b54a26bf24be0db65e91bfc302b65/a878e/image03.png 2048w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+[Chris Chae 님의 열정 넘치는 발표 장면. 2022년 판교사옥 SUPEX Hall]&lt;/p&gt;
+&lt;h4&gt;운영&lt;/h4&gt;
+&lt;p&gt;저희는 DTC 프로그램을 다음과 같이 진행하였습니다(2024년 기준) .&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; 한 번에 하나의 아젠다&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;주제를 발표하여 집중력을 높임 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;예전에는 아젠다 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;개를 하루에 발표하기도 함&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; 사전질문 이벤트를 진행하여 구성원 참여 강화 &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 현장에서 답변과 함께 공유하고 현장 질문도 함께 받음 
+  &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;질문자에게는 기여보상 지급&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; 주로 실시간 온라인 방식으로 진행하되&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;파견 근무자도 참여 가능&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  연간 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;회 현장 강연도 진행함&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;리더십&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;커리어 강연은 모두 &lt;span class=&quot;token constant&quot;&gt;SUPEX&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Hall&lt;/span&gt;에서 현장 강연으로 진행&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; 도구는 사내 &lt;span class=&quot;token class-name&quot;&gt;Teams&lt;/span&gt;의 동영상 기능을 사용하다가&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+  원스토어&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;드림어스 등 패밀리사 분들도 참여하면서 &lt;span class=&quot;token class-name&quot;&gt;Zoom&lt;/span&gt;의 활용 비중을 높였음&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; 발표내용 중 외부에 오픈 가능한 내용을 블로그 스타일로 정리하여 &lt;span class=&quot;token class-name&quot;&gt;Tech&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Topic&lt;/span&gt;에 공유
+  &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;One&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Source&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Multi&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Age of AI - The Future of Work (&apos;24년 11월 DTC)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;도서 &apos;개발자로 살아남기&apos; 로 유명한 박종천 님을 모시고 현장 강연으로 진행하게 되었습니다. 최근에는 미국 인공지능 스타트업 자문 및 개발, 강연 등 국내외에서 다양한 활동을 하고 계신데 어렵게 섭외하게 되었습니다 ^ ^&lt;/p&gt;
+&lt;p&gt;행사 공지 방법은 사내공지 및 SK데보션 &lt;a href=&quot;https://devocean.sk.com/&quot;&gt;https://devocean.sk.com/&lt;/a&gt; 의 커뮤니티 메뉴에서 데보션 프로 님들 대상으로 따로 드렸고(아래 참조), 스퀘어 패밀리사에는 메일로 공유를 드렸구요, 플래닛 외에도 텔레콤, 드림어스컴퍼니에서 참여해 주셨습니다(3월에는 원스토어에서도 참여).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 440px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2d2b57205227acdfc3b7e35a0600119c/48c0e/image04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 102.53164556962024%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAADZ0lEQVR42pWV208TQRTG+5f4aKKJUWJMagSkSKiIFCHIpQavIOKl8gCJ6AOEBAigGNOYEo1ofPKujfiiIV4e9Nkoibbl0pbSe7fb7ba0293PPUO3iqipk0zOzNk5v/Od2Z1ZnZRTIIgyxLSMdEaGLFNXoChKfixvGP86z2azSKVSzNJcFxcBhw9wRxSEE/jvtgHIcTHMuxzwej1wOh34+uUr5ufn1bkXLpeL9ZWVFTgcDiwuLmJpaQmBQIA9X1hYgMfjwfLyMuLxOEugi0Qj+PbdAbfbDacaPDc3xyAUSADyE4CCNQgl0EBknU4n/H4/2wpdIpGAz+dDMBhkncbRaJRBOI5DKBRiAJpTp0Cy5BdFkUG0xoCCICAcDrNgAhGU5EciUfA8r9pIARoKhRmQfLFYjPmTyWQBxoCUhQBaMC2kBOFwEILAIyUKiPNqshinrokjnRIhJPh1ytYplCQJmUyGvaXV1VU2JhsM8Vj2J+ANJOEPcBDCVCanlsupAn6q2gD83UFNyuVg6b6N2tI+XKy3YKjpFEYPH8PB6mGU7x3DTevrtXWSXBxQzAAjnf24tk+PYaMR5/eYUL29A/X6bnTsrMUrq42ty0m54oBZSUHP0RGYtrWgTn8OlaWDOFTWg8H99ejVG/Bmaoqtk3PFArMSuk7aUHfwOk6cug9Tow3Vuyw4X3kEjWqSidEX+ZKLBGYyWZzuvANzwzg66/pwxtCOM+Vt6KlsQuvWcoyN/C9QLfnS8SH07q7EUHUNRmuMGKw6gHMN3TjeZsZT6821PSy25FQWsBwbx4ChCl0V7bAYWtBXUQv7hVZMjQ3g472Jwh5qH3Thw/4TkDJPnu3Hlb1VsJqqcLehFM+bduCGuQLm1mZcHR3Olyz9WyHyQEXO4dNAO540boPdrMdM2048PFqG5uZmlFUYMDY+XkhMB4LOf+G2Yap+uTS1Ut71NeGBcRMe12+B3bQZQ8YSmGprUFJSgsv9/QUNdJ5tNhtmZ2fXgEzRT4l5hTI8H17C9ewWPDN34LJPw/liGq8fTGNi8jrev327ljh/g9NR1V6QbtZ+D4+sl8Dxgnq/eQvS/9q0beFjkJIJpFQYlZ1Op5nVBdwu+L5/Rk79j5BT22hSqdBbVPeTrJzvpEQmqJRV/ZIaR/+WvF+W8QN4Ns7P5RsTmAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2d2b57205227acdfc3b7e35a0600119c/48c0e/image04.png&quot;
+        srcset=&quot;/static/2d2b57205227acdfc3b7e35a0600119c/c26ae/image04.png 158w,
+/static/2d2b57205227acdfc3b7e35a0600119c/6bdcf/image04.png 315w,
+/static/2d2b57205227acdfc3b7e35a0600119c/48c0e/image04.png 440w&quot;
+        sizes=&quot;(max-width: 440px) 100vw, 440px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;참고로 종천님은 2021년 가을 플래닛 사내 개발자행사때 처음으로 &apos;개발자로 살아남기&apos; 강연을 해 주셨고(당시는 COVID-19 시절이어서 온라인으로 강연하셨는데, 그때도 개발자분들 반응이 엄청 좋았죠), 3년만에 드디어 오프라인으로 모시게 되었습니다. 약 200명의 개발자와 기획자 여러분이 판교사옥 SUPEX Hall을 가득 메워 주셨답니다!&lt;/p&gt;
+&lt;p&gt;&apos;Age of AI: The Future of Work&apos; 라는 주제로, 3시간 분량의 강연을 2배속(?)으로 그러나 정확하고 열정적으로 잘 전달해주셔서, 질의응답 시간에 구성원들의 질문이 쏟아지는데 원래 약속된 강의시간을 20분이나 더 넘겼다는 ;; (점심시간이라 저희가 양해를 구하고 끊었는데도 행사 마치고 질문하러 줄을 섰습니다...&lt;/br&gt;&lt;/br&gt;
+좋은 주제만큼이나 좋은 연사의 힘은 정말 대단한 것 같습니다!)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/016b00815f7adc9a0ac446e24b5d39cc/11a88/image11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADnklEQVR42gGTA2z8AGBNP1hENmBIN11HNGZLOF9EMWdMOXtaQW9POGFGM3pZQHNUPXFSO1xCMVI6LFc+LlxENEUxJjknHzopIACkq62boqGTmJimq6ScmpRgWFNMQTyVioGZjoOHfHGDdmmJeWmEcmKCbl6Eb11/aFZ7ZVN/alhvW0tnUEAAZWRoe3d2pJmMjIV/kI6NhHt0Rjs0nJudo6SmpKerpamtrK+yoaWqqrG0sri5qrG0o6yvkZWXcXBvWVBKAEE2PDovMc6nfbKllI2NiM6/p9bFqpaYkZCPhlZJSVlIUIZtb3pgVz4rKDMpLDApKzkwMkA0NVRLSlZJQwBGKSQmFhaMcFnCycC4xsLCy8fByMO5zsy8zcZZR0JTLCmAU0m9j29yTTs3JiQ0IyBALShNOTNNPThMOTIAPiQeJhMSeGBPwse8vcrGwM/Kv9HMw9rWy93UbVdMOBkYSy8qqnxhgVpHRjAqRC8qUjs0Ujw2RTMvSjgwAC8bFyEQEGpRQbGtnqSqo5+jm5eclZWdmJiZklE+PDQaF0wxJYthS2hHODsnIkEtJ1A4MTMmIUIzL0MyLQAYDQ4ZDQ8fExUgExIcDQwfDg0iDw0qEQw2GA5GKSCRVSGzbCuGZVc5KyUnGxktHhkwHhcvIRJELyRbPjMAckMkg1ItiFAllmE0o2w8qnNCs3tGvYRKxoxQuoBDsXQ2h1UqRTc2NCYiMyYnKyMmQztFHg0FHA8MLSEeAJBhPoBYO7SSeJ5tQpRoQqZ6VKl+WqB4V3BPOWheYFdOVCofHzkoKVlXazcvNC8lKjo8TCYlMx8bJAEAAAAVEBUXEBUjJzcRBwkKAAJOOTF/ZFJ0WUlAKyYvJytAMTFDLSYvKCpIRE87KSsbEBMeGSIlHyozJCg4KCUADAYGCwoNCgQDEgkKTFFeOS8uYkk5cFVFLh0XGwcFQDAtNCssCgsOCwcGEQcFDggIFw0NUDo1aFdQU0E5AB8TEjEiIDQhHkIyLzgpKSQYFUs2LFtDNlM8MCwfHB8NDA8JCWldXIVoYSwYEwEBBSMSCUInGzIfGBEGAgAbEA4cDg0LAAIxIyFPMSgvIRtCMSdKNixNOS5DMSsyIBxNNzGMZlp6XlN1XlcvHhooDwgfDAcQBgUHAwcAAwAALykuQD5LSyohPS0pLSAcNichOysjPCsjMyQeJh4aKRsYWDEkhW1oXFFRJxUNEQIFDQYICQUJBwUJEbUNbgN1TZYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;&quot;
+        src=&quot;/static/016b00815f7adc9a0ac446e24b5d39cc/f058b/image11.png&quot;
+        srcset=&quot;/static/016b00815f7adc9a0ac446e24b5d39cc/c26ae/image11.png 158w,
+/static/016b00815f7adc9a0ac446e24b5d39cc/6bdcf/image11.png 315w,
+/static/016b00815f7adc9a0ac446e24b5d39cc/f058b/image11.png 630w,
+/static/016b00815f7adc9a0ac446e24b5d39cc/40601/image11.png 945w,
+/static/016b00815f7adc9a0ac446e24b5d39cc/78612/image11.png 1260w,
+/static/016b00815f7adc9a0ac446e24b5d39cc/11a88/image11.png 3325w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c521cd7ad904fb2f889bea43659efd11/11a88/image12.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADmklEQVR42jXQ209aBwAG8JNsq1UKB7lEsAjK4QDKrdYqiEUECoJWQEqLDVOjtqJurm0q84YCClRtqi2uWkGQ+5EeoAjYzqzZ1mXq+rBl/0Af9rK/Y2zJkt/D9z18Lx9wxzh4s1NzFpn5693KkkVhM2knzb3TetnJ1uDfP7k376umzN02i+G+uffru4axbpm5x/yleczaPzRyexSQtXbxoCuF1YFP757Fo8EYiqQK+UwO+f19/NN58n0phuTRWCYRLeZT+Yx71HS9Rabu0FqUuiXLANDB4jJJtR6LOLvjCKTiASQRzr6OZNJIBkFzCHKUDaHpjR1/4CifLB25xwz8WrqYwTLym+zyq4CKw2mi1M2bxHG/I3iYfBUPbx8E9lLRSAaJZNPRPLqbjG2k0GA+H3vz2nPPKKDSOplsI6/pXpsIULNhAaVu1tie8i+FMukAcvAqEd5DIoHDaDAdjx8frS9Mbj00hnJosvhmfbxfRLmshGB9E9fA4wJqmCWoodmNksNtx34GCSQPdmP7u8lwWTCL7Kf2n0wbnkyZQ1kUOc5t2IzNVJqCCalhpqKhHlBBTAH58pxJWgqvIidvU8e5RDGTLGUTxWzy+wL6QyGyt/ndijPz84+lDyfbD241U2s76PQyMY0GdDIYAhJ1UtcWXZ3wry2+8H1btuW1b3pmNj2P/RuLzz2zGwvTz7xzu97ZBata18Qa6RI31lA5JDLQWltzlUoVUSn8GhIbj2PhsDCIhfEgjMf9C8Sy8DioGmzAYsoVAgljCsmoQvxITJy/TgTYRDJMJDPxBAZIpOMIdbj/Akhk4En1ePL/SA14ElRNLo/F5Y9otLUuMHSzGljpa3T2sBc0kEPLWu6BXb2wR8/xGbnefp7vlnDd1LjWz/HpYV8fvKZn+03wV3LWsBR+qaneUWGAX2ZEZ/PXPjrbz5zSP9e6/vDKzlySj27puVvyq1Nyuiw+dbWfl6tL+mG+7bfF1u27fLuGk7AwniqJwOywdcY2btdxDyban1pbng9dy8+rikuawrK25NQdLWneOtWph7JROawVMVwGoamFLoeIA810aQMFYDMEFzE1GOCzDgoBrsKyqjA2BW9KLRxX8m1K/riC90AjNAjp9ZfwL16iaO60sgInZHP6OuV0kACAFyrqqyohHJ5YAdIqMeTPv7jd2fr4zg3HsMYxpJ2z3pjoltr65MSLF0YGv3E+WoYuYa9w2DIRr43b8g/BtUeCcBkWDgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image12&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c521cd7ad904fb2f889bea43659efd11/f058b/image12.png&quot;
+        srcset=&quot;/static/c521cd7ad904fb2f889bea43659efd11/c26ae/image12.png 158w,
+/static/c521cd7ad904fb2f889bea43659efd11/6bdcf/image12.png 315w,
+/static/c521cd7ad904fb2f889bea43659efd11/f058b/image12.png 630w,
+/static/c521cd7ad904fb2f889bea43659efd11/40601/image12.png 945w,
+/static/c521cd7ad904fb2f889bea43659efd11/78612/image12.png 1260w,
+/static/c521cd7ad904fb2f889bea43659efd11/11a88/image12.png 3325w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c28a21417e063bdf08edba167cac6de3/11a88/image13.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADnklEQVR42gGTA2z8ALGMc76bgn9XQGRJPFlFO1tIPXNbSqOKcpJ8boh6dZOIhJiPjZuUk5uUlJ6Xl4qGiDszNikbHC0gIpmVnADx5Mr///POrZSbiX6Pg3qRfW3Pso///+7Lq4SDa1l6al53aFxqVEdPREtZUFxhVGB5bHR2XlgvGBcyISMA0KJy9Nq60+Ln0+bn0uPj1OLg7u/j/vrr7+7h0N3ZydvZyt/gpZuPUj9AclNWmmtphWZmto10dEcwTC8lAJ9zTtO4nNvp69Pi4s7d3c7d29be2N7f1NXc1sza18ra2cng4KykllMzKmY4LnxBMXBFNsqVb6BqSW5GMgCLZEjBqZHS4eLN29rG0tHI1NPP29nP29jM2NXJ19XK2dfK3t6yqp1ZOC9WMClWLidZOTC6hmSYZ0p3TTcAf1xDu6GHytnZytfUxdHPx9TSzNnWzt3azd3az97bzt3Zy+DgurGiYDwyRyclPiEgSS0opnVXj2BGeU85AHdWP7ydgsfT08nU0srX1c3b183c2Mzb2LvBwcrY1sza18jY2Lu0pF08MTwgHzcdHUEnIo9gRoNWPXpQOABxUjy/n3/Fz8/H0tHI1NO5z9TDysrJx8O7y8/E2d3I1tbQ1dTLwrFhPzAwGBwsFxk8JCB+VD9vSjd3TzcAbE46yKSAy9XV0t3a0t3Wx9HLx8q/ycW3xMS2uLamqKOTnJGCknlnTTIqLBYYJBQWUSsYi2ROd041cEguAGVINryVcqKSgZKAboFtXXBcTF1JPEw3LT0mHzUfGi0ZFigUEyYRFCcVGCMTFA8HD3I6EnBMNms3Gm9FLgArGBYxHRonExAgDAwaCAoZCAweDBAhDRIgDxUiEhYmFRkpFxo0Hh0/JR1JKRpULhqERxtfNh15PRiOVC4AIhERHw4RHg4SHxAUJhUYKBYYLxoaPyMdUC8gYjkjeUkonV4toGArrGkvuG0vxnUzol0kZjgajE0gs3E5ACgVFTUeGUgqG1s2H29DJY5XKqNmLrZzMcN+OM2GO9aOP6NsNMyMQdqWRql0PHxUMMqGRXdKL04vHpdfNwCTVyurZy64cDDDejPUhS7IgTPMhzjKi0FeQSRbQid+WzQFAwmCWDKQXDZMLyQcEBFPLCJOIxswDg4tDA4Ayn87xn9ATjEdKxkQzKqXallYRy4rMSQkCgQJLg4OGgsQDwcKQBkUTy0qLB8cNyUiCwYKFAYHNBMQMRgWkdOSKiu+RQwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image13&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c28a21417e063bdf08edba167cac6de3/f058b/image13.png&quot;
+        srcset=&quot;/static/c28a21417e063bdf08edba167cac6de3/c26ae/image13.png 158w,
+/static/c28a21417e063bdf08edba167cac6de3/6bdcf/image13.png 315w,
+/static/c28a21417e063bdf08edba167cac6de3/f058b/image13.png 630w,
+/static/c28a21417e063bdf08edba167cac6de3/40601/image13.png 945w,
+/static/c28a21417e063bdf08edba167cac6de3/78612/image13.png 1260w,
+/static/c28a21417e063bdf08edba167cac6de3/11a88/image13.png 3325w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c54222bef62c739eb22f0b603f61ff44/11a88/image14.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADi0lEQVR42jWOa0xaBxiGz8+q3KoVKFdR7lAh4qU6uXmDSZVECVSzWmfm1sS0tqukEGyXtdmS2bDWzmnmltQsTmvaNdqOWDhw4BzgHORyDhyY1bkmS7Zl2a/92O+tOy5b8uTLmzd58n7Ahtd10drqMrdN2LovOcwP3rX+lNt5hW7dneyeGuh8q79rvLfzvOWs29zuMRqGTRbXoHvUNurscw73DgOVxM6zp1tPnj7Zfv4cfPHdLxXw9d9/vv7rj1e5ne1vNx493tjcWl/fXF/7eu32tMtpHbDbL4ycmxgbunB1fBqAUSSazaXIMlIis/sv9388+v3XH377+ZA8OkTKZbhcTh4cJF4egDgevDrR16xV8aVdMq1Dq79s7KDkJIShIJqGctkUQeT2K8WjQwqsXIIJIlEqQQQB4cQumnrgfdumUzefFvXIFU6t5lJnCxBJIrEMGsXSIIYmCvk0WUQrJLb/fbpSRkgSJksQjsMkuYuhy74pm06l5wp7pY2DKrlHrwV2kQRImWiK8o/HS5RcTpVLSbKIkCW4SMTxQgwnXmTQVd/km3pVK0/YL210KKUOpQwIwfEImqRkEEtB+b14IQvjBUpGjuUiXCrCRRws5MN72Ff+SYde2canliUD0kZroxgIJaBwKhlOws+i4RAc203B4XQyuodBeAEq4gkCj+aykUI+hCJr81ODeoWBxzNJxOYGUZeYD0AZDM7nksVCPJ+J5/egHBbPZaj9BFGAiQJSIhDqi3IllsluL8xQ8hkuu0cqahdydTw28DA4/+Unvi8+9i5/NPc5xZ3rS3feX7p9bfHDa/c+mA3eunLv1uyngdn7/suLV9wmpUTHrZuztc+c65PU1gESJl1ErxH/z3Fm0MR0mujfLPqvqZEwabLak2r2KSmTMTPUP2M3uuQMgH2iuv5EVX1VNbuqmkNRXUNdLkUN7TSNwaMx+HQmj87kM1hCJlNAZwhodFOLwa4U3uxgARIWo4HFaDrJlNWxVPUsDae2RcRvbRAYhOw2wakOYf0bYrZJwrFKOeYmrl3BGdIIenXyERV70cgE7jplC8OyoFN+f0Sx7FGveNSfuc+sjDWvnleveiiUq275wzHFxkXN5qQmNK1aGpXO2ZTvtHAWztKAuK877jeC3u7oDSPkN8HzlvhNKxSwgD4TFLDGAj3hG2bQb474jN+8Z4hcb18ZlwcGm7wWfrCP+w9rp5wMoyptiAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image14&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c54222bef62c739eb22f0b603f61ff44/f058b/image14.png&quot;
+        srcset=&quot;/static/c54222bef62c739eb22f0b603f61ff44/c26ae/image14.png 158w,
+/static/c54222bef62c739eb22f0b603f61ff44/6bdcf/image14.png 315w,
+/static/c54222bef62c739eb22f0b603f61ff44/f058b/image14.png 630w,
+/static/c54222bef62c739eb22f0b603f61ff44/40601/image14.png 945w,
+/static/c54222bef62c739eb22f0b603f61ff44/78612/image14.png 1260w,
+/static/c54222bef62c739eb22f0b603f61ff44/11a88/image14.png 3325w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e692fd3cde865d68de7e0f570b48ca6f/11a88/image15.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADnklEQVR42gGTA2z8AJienXh9fnRwb3BkX4N3b2pbUWBSSFlKRF9QRlZGPGVURXtlUYhuVnZfTFxKPnNeTl1NQ0c6M00+N1E/NQCqu8e7zdaktL2SnqemtbyGkJaNlJeHjo+KiomMh4FZUUxEODJqXFFwX1NeT0NuWUdyWUVfSTp3XEdbSDsAbW50cXF2f36CjI2Rh4+VmKaumqu1obC6qrjCrr7Jg5KfdX2FprK5m6SqaWptfXp5j5CPk5KNe3RtbGBVAENCUDk5S4p2aNq8loJvYmNbVo99aLGcgXhxbXl5eXp8gHV7hoeJkltbYxIPFFNVXY+bqIWOmXF3fm9wcQAqKDIXGytoVUfm1Lm2y86ju7/KzsHf2MKgsa2YsK9hWlljSFCIb2xkRjYwIB0kGhkfFRQsICBBOTtZUVAAHxcaDAsRPS0lsa6hrsvPpLy8qLy6rL68pL+/sdTWc2pjSCIdgl9PpXpdVDowMiYkNSclQDAsQzYzSz05ACIWGRALETYpI6ypnavIy6O6uaG4taO6t564uLDQ0HRuZx0JDFlANZBoT1tBNTcpJjcpJj4tJ0AyLUQ1MgAjFhcSCg4vIx6rppesx8eowsOrxsevysuwzs7B4eF8d28eDQ5UPTN3V0VbQjcxJCA1JyM7KyYwJiRDODQAIhQUEgoNKh4Zua+dt83Js8K9qLWvl6Kbh42Hfn94RTw3LiIkZkc3i1QqXUAwJR8fFxERJRkWJxwURTodACASEhYLDR8VFGVVSE1DPTUrJyEXFhYLDA4EBwgAAxwNCyocGlw2HapZGHtQM1JGRA8MDScgHS8jICocFAAaDw4WCwwMBgkCAAEFAAESBwklFBFAJxxnQyqOXDajajqfZzmRXTGvbjOPXTcjFhAlGxdDLyYhExAgEREAGQ4OKRgTOyMYVjQhdksskl81tHpFyYxQtYBJi2Q8g146WTwkPC0gLR4WRCshXkxXOCIoJBEOIg0MLhIPAJZeNqRpOrl4QsOCSciLUtCYYJpvSGhGMFI4LRIKDSEQEiscJSQUFA0FCC8RDmtSYUgmLCUOCSoNDTQWEwCHVjGscT+ZZjuWZ0GNZEaWdFpKOjAFAAAgFRkgCwogDA0nHiMKBgcgDhAiCAoYBgQaBgcjDw4fDAwcDQwALBgPVTUoWUQ3WkQ4X0o9Qi0nLSEdJBcTGg4NCAIEDQUGGgwMFg8QJxcWHQsKHQwNGwwNDQEHGg0LHxEON18n5XadTOAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image15&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e692fd3cde865d68de7e0f570b48ca6f/f058b/image15.png&quot;
+        srcset=&quot;/static/e692fd3cde865d68de7e0f570b48ca6f/c26ae/image15.png 158w,
+/static/e692fd3cde865d68de7e0f570b48ca6f/6bdcf/image15.png 315w,
+/static/e692fd3cde865d68de7e0f570b48ca6f/f058b/image15.png 630w,
+/static/e692fd3cde865d68de7e0f570b48ca6f/40601/image15.png 945w,
+/static/e692fd3cde865d68de7e0f570b48ca6f/78612/image15.png 1260w,
+/static/e692fd3cde865d68de7e0f570b48ca6f/11a88/image15.png 3325w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fc1e109a678c58aa909052128b829bb1/11a88/image16.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADj0lEQVR42n2Q209aBwDGT5Zo0MNF4CCHmxaG61HEWi4C2gJllJuZYFUmygGOgAoW3dQWtWqbDbdVa1Zj7JLdxIFTuUxA1GKBViN0NdnLHra9bMn+k/EX7Hv75ft9Lx/wkbxN3d5sVYmGtbKhO2KbpgPVKfTS1uG7Ck+3EjPdcuo7HTq5VSPXilsqlU0trTjDWsWgUgQ8eRQ0Gw1rny+5h6xPQ0sry8ExF6pV3WaRiV671e9CV5bn10LL9oG+L0OPfZhjaT4YnLrvHPx4ffUrIPLLyTfhvUgqtxWORzOF1OsrbDSAq6r+0NgbTecjh7lErpQ8K23Hspniu3DseO+o+HO6sBM73s+eA6jNgTkwn9uzMv8wNPfgk4nA8MCAGOFPul1b62uLc4uz03OB+zOTgVmf79Px8UmPZ8LtmXA6vT73OKCWaTolSuEHkt2Q/9+z5wsjA37UGhxDL3ef/HmyujDS6+o3o/2WIXP3HZFQ1KaQiZRdYmW3yuQ02wCzVC5DhDQKZz3Q/3c5kX1znnnz+uzy4o/fS//89e7yt6vMxUX6shzP5VwWQwOLK+QLtO1Sv8GEqu8CKh73JptFrcWPdXdmE9upQj6WSR2+PDkpvMqXS6flUvr8PPO2nMznRvuMEIh/H4IUjQ09AkTbxAOEDFgAw/UgYdTUlYrvHBaLB0fpxPFRtljYiW5vvdjY/PrpxupnP0V+mHb200CQS6VWJhI2q4VeD1yjkPkQlVYL+nuUh4lIMp+v/BrLHqUKr56FHj1w9C36PAse7NvN9fnRQQoO10gmN0FUHqWOQyICDAKBU0ei1NQGbfr8afzsbSlfvij8elm8Ksfjkcj3W/vRH2O74ZenmS8CKI9KZpGILCKRQcDXgyAA4/EVpoOgQSIYuWewW4x2i8Hea3D0mUaG7o25bBNedMrvnvF5fD0aY1szu66OScBTa2rJuBoAX1VDqMYRq3HV71UB/5uKjbBYYibpsRoel0AIFQSMCFN/nalDmCoefJtLlzfSJGxIzmNLrrGl3IZ2Nl3IgG6waK0wtZVO4UCQkgdtGpkbOljZQAJ20I6YV5Hy3zrwKg688j23NIpJ9r2yHawjgnXsYpIwKnpmad3ov7GkQ5RNDD6N3FxPmJFBkyoEELHpfTd5Sj48pWtJz+oS0/rkrCE5o08/1H3n0w+r2kc0gq7rHA3CaaDWwSAo5zIYJCKbTBRzGP8BfYE5jVnsjlMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image16&quot;
+        title=&quot;&quot;
+        src=&quot;/static/fc1e109a678c58aa909052128b829bb1/f058b/image16.png&quot;
+        srcset=&quot;/static/fc1e109a678c58aa909052128b829bb1/c26ae/image16.png 158w,
+/static/fc1e109a678c58aa909052128b829bb1/6bdcf/image16.png 315w,
+/static/fc1e109a678c58aa909052128b829bb1/f058b/image16.png 630w,
+/static/fc1e109a678c58aa909052128b829bb1/40601/image16.png 945w,
+/static/fc1e109a678c58aa909052128b829bb1/78612/image16.png 1260w,
+/static/fc1e109a678c58aa909052128b829bb1/11a88/image16.png 3325w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(이날 사례발표가 특히 좋았는데 연사님께서 특정 회사의 이름을 공개하지 말아 달라고 당부하셔서 블로그에서 남기지 못함을 아쉽게 생각합니다 ^ ^)&lt;/p&gt;
+&lt;p&gt;현장감을 조금이라도 공유하기 위해, 구성원들의 피드백을 일부 공유드립니다. ^ ^
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/06ab026286d563abc02a4999e27f1a67/fde66/image05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABpElEQVR42m1Si46iQBDk/79sLxtgQUQFfCB6iifKewTUuupRk92Nk1Sax0x1VdcYTauwTjYoygpNe0HdtKhqomo05L1uFMqqRpJsoS7dE73e/x2t6mB0fY/D4YCeNTtmcB0H/mQCbzyGw2fPG8P3JyiKHG3bkogHKUJwu92fuOl6v99hyMNrnU8nBCSLwhDT6RQTknqehwm/LZdLzOdzhPyXrFYozmf8XuSD0SqFzWZDmzUUFSSrGH+3W/1NsNvtkKYHxHGMnA0HOum6jnVA8zzTNA2UUlqpcb3etF1Z/9IU5ucnxlQ2Go1g2RZs24ZlWRr21xdMVsd19Dhmvo9FFGG/36Msywfhd8vZ8QibB1zX1Vb/fHzANE1NJgTxYoEwCPTMi6LQMxMSqQ/LnOEwXHHhoEXpmXOR+UXsOudhsRkEIdbrNbIsoz313HvVBD9DeQSjCfM8h1QJJWQYMnyfdmYSDJWKIrEleJG/WzqUHylToZBEs5lOM6A9sSgk0lRwYlMhFEVvCQdarXhpe6Ymlzilmi1TlioJn9hE1L/u2Qsyonf4D9N189LtbSKSAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/06ab026286d563abc02a4999e27f1a67/f058b/image05.png&quot;
+        srcset=&quot;/static/06ab026286d563abc02a4999e27f1a67/c26ae/image05.png 158w,
+/static/06ab026286d563abc02a4999e27f1a67/6bdcf/image05.png 315w,
+/static/06ab026286d563abc02a4999e27f1a67/f058b/image05.png 630w,
+/static/06ab026286d563abc02a4999e27f1a67/40601/image05.png 945w,
+/static/06ab026286d563abc02a4999e27f1a67/78612/image05.png 1260w,
+/static/06ab026286d563abc02a4999e27f1a67/fde66/image05.png 1574w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;마무리하며&lt;/h2&gt;
+&lt;hr&gt;
+&lt;/br&gt;
+SK플래닛 판교 세미나 DTC가 어떤 형태의 기술 세미나로 바뀔지 모르지만, &lt;/br&gt;
+향후에도 SK의 구성원들이 기술 인사이트를 얻고 공유해 나가는 지식 플랫폼으로 지속 발전해 갈 것을 바랍니다(언젠가 데보션 테크데이 같은 오픈 세미나로 발전할 수 있으면 더 좋겠죠?) &lt;/br&gt;&lt;/br&gt;
+&lt;p&gt;그동안 함께해 주신 외부 전문가와 사내 발표자 분들께, 그리고 이 글을 읽어 주신 분들께 감사드립니다. &lt;/br&gt;
+올 한해 잘 마무리하세요! &lt;/br&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[오글봇 AI 개발 사례 및 효과(부제: '무플방지위원회 오글봇 AI' 탄생기)]]></title><description><![CDATA[오글봇🤖, 나와라~
 너의 기억력을 테스트하겠어.
 과연 나와의 약속을 기억하고 있을까? 오글봇과 나는 이제 래키를 뭐라고 부르기로 했는지 기억해?
 네가 지어줬어. 래키의 우리말 이름.
