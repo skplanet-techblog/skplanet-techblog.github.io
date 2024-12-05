@@ -1,4 +1,355 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 21 Nov 2024 03:49:28 GMT</lastBuildDate><item><title><![CDATA[웹앱 사용자 경험을 개선하는 기술 한 스푼]]></title><description><![CDATA[안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 UPTN Station…]]></description><link>https://techtopic.skplanet.com/uptn-loadingspinner/</link><guid isPermaLink="false">https://techtopic.skplanet.com/uptn-loadingspinner/</guid><dc:creator><![CDATA[chanmin]]></dc:creator><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 &lt;a href=&quot;https://www.uptn.io/&quot;&gt;UPTN Station&lt;/a&gt;의 프론트엔드 개발을 담당하는 김찬민이라고 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 02:10:38 GMT</lastBuildDate><item><title><![CDATA[오글봇 AI 개발 사례 및 효과(부제: '무플방지위원회 오글봇 AI' 탄생기)]]></title><description><![CDATA[오글봇🤖, 나와라~
+너의 기억력을 테스트하겠어.
+과연 나와의 약속을 기억하고 있을까? 오글봇과 나는 이제 래키를 뭐라고 부르기로 했는지 기억해?
+네가 지어줬어. 래키의 우리말 이름.
+너의 능력을 증명해 보렴 😁   이용자들이 서로의 일상을 나누며 소통하고 앱테크를 할수 있는 서비스가 보시는 것처럼 오글봇 AI…]]></description><link>https://techtopic.skplanet.com/ogbot-ai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/ogbot-ai/</guid><dc:creator><![CDATA[eshong]]></dc:creator><pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;오글봇🤖, 나와라~&lt;/br&gt;
+너의 기억력을 테스트하겠어.&lt;/br&gt;
+과연 나와의 약속을 기억하고 있을까?&lt;/p&gt;
+&lt;p&gt;오글봇과 나는 이제 래키를 뭐라고 부르기로 했는지 기억해?&lt;/br&gt;
+네가 지어줬어. 래키의 우리말 이름.&lt;/br&gt;
+너의 능력을 증명해 보렴 😁&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 608px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c95f66b0b53e1875e8279e4fd1758a4f/18872/ogbot_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 101.8987341772152%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEuklEQVR42k2U6U9UZxTG589omrQfmtrUfvBDF5tGW5s26Yc2pnGJ1sbEaOwSY43REmpaLEWK1iVGEaIWba3FIBZEQAUUUEYYh2UYhgFmUZgFZpSRWe6sd/31nQsmnsnJ+9655zznvOd53mt5lldJqTqGYZDRdKwRjcM2le86VL66IbOxucD6Zlm4yoZmhf6wRiJrEJUMAnGDez6VNpdGs1PDOatiyagaBghATAuL4DMOlR+6VBPokwaDVfUG7/8js6ZeYXzeYD5tmMm9njz3/DqdkxpXhjRaBLBF03UTUDRnWkwWgKMquzpV1jYZ7GgJsK05wNuXdNaJAn/Z8/zUmODL01E+PeKnzprirsfg30GN9gkBGMpqyEvdGeLnWNApfyDz2TU4fuc6sutDpIerONfVRrsf1lXHee9QlJWVQd6pCPBW6Tg1fQs0iCO3jetYeoIq9T4d57zMdU+aKlFpf4/B9tYYMccH4HoDbfA1GPqIlvsOVpdc5c29vbxe4mVFeYRX97o53D1D46RCq0sA1gwr4mg6R/oylLTOs+1W8Wiw/7ZoJ1iKPncKPXKKvLeGJ1OXeTpVgf1+BVUXzvL5wQZWlnRRa/dzZTIryBGA7X6Vj68a7L4RZ2d9iC8E2Jp6mX09ijkGfWkcmqqgKfml0RRXiULKRcjdyQXHAMccKTrcBpZULkdPKE/VrQgbav2sbYVNLSq7u2SRqZn067q2OGEBrgsSNbFRdMMkU5HmOOGaYp8tys1xsCykC6bu9jf6aOoeYTKaJRyTiGSWZBQOk8lkSCQSZLPZxQ6NRbBikfhTH5WjXg6Ohnkm5GTJFHRmRVz11TaO15xhNhSk5+4ds5NYLIbVasVut9Pf34/H4yGVSplQs5EIQwN9hHz9HHIHODAawhcTsikmFs3j8zPidCFJEl6xL9rk5ATDw8NincThcJjggUDAfNd+u4vOxjpc4w/41R1ij32a0Yi6CChOzXxGJ5sTw9YWyXhuS5wszu25+oXN+CeY6L7MHc885RMhfnQGmcsIQEVTSeR0oskCsUQKObtAPhlBSc9DIYmhSBhqWrCRQVfSqHkJNT6N5OumZ2CCjqBOmdPPrsFp3LECloKikxeFp/wR/N7HZvVcIc8Dr8SNIQf1g0P0j3uxDj5kamYaLRNldMROy8Mn3PXCI3HTfnY+5nsBODavYLE+clLbf5GjXceouvkbdbYavDGRFNI4MSyz+RZsdI7xiq2X071JfHcHGInC8KyG1RWk1z9H1VSYnQMe0YAbS1lLGS+XvsS7f6xgWdlylv2ynDUnV1PadII/+5rofvQYW0Li+tMYg4EkNvcT6jusQmI2DlSf5mhrC797o2zpc1PZcA3LaGCMbRe/Zcv57Wyt22H6prNb+bpuMxvPr+dkdwWZfHKJIZWo0GN1w3+U/32Gb2r3UHnzHJdCSTFHH+1jNixFkaqCmLycpyAXTJcVWbhCviDzTIqTkbMmw6r4duYKBfNdtpBByiZFTB5Z/K+oqil4SzFZFQ+api26urgW5ZTL5ghMzxAKhk39BQNB4vEFjOL1E195XRQpxpr5wouFLMWH514Ee/FZEQHFmyGlJNLptLkviA5fjDG9CLrU0P9mtGkd0PnelwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ogbot_01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c95f66b0b53e1875e8279e4fd1758a4f/18872/ogbot_01.png&quot;
+        srcset=&quot;/static/c95f66b0b53e1875e8279e4fd1758a4f/c26ae/ogbot_01.png 158w,
+/static/c95f66b0b53e1875e8279e4fd1758a4f/6bdcf/ogbot_01.png 315w,
+/static/c95f66b0b53e1875e8279e4fd1758a4f/18872/ogbot_01.png 608w&quot;
+        sizes=&quot;(max-width: 608px) 100vw, 608px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a265b3ea6c7331dee077ee430b063f4f/3e096/ogbot_02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6ElEQVR42pVT27KaQBDk//8rVlJWaQ4mR2AR5SIIyE1EQYVOzxofjpWXbNXUzs7OdvX0zBrfZg4Wiw84jgPP8xDsfIR+gDAMEUcBXHeDKNwhiSUWYbPZ6Ly6rjFN0xeTZcgWhg5+rUwo14WzXqOtKn2Jtwfvj/+1jPv9jvn3BVkuYFk2lLPGIQmQH49IkgR5nms7pvSzjLED8nTPnEj7aZrynKAsCzTNCcY4AsqLCOQQ0GI5OyjlkvEKrlIoigKn9oS+KVCXlT7XdaWtLEtUrKZrK0zjAyPBjMfjgeV8DtM0NaAwFJ3Wawt+EOBIppphUWrdBLCqah0XwKZpeFfoeNu2LPkxQW1LLJc/8fn5G/tAwSVg5HvI2IwsP+JwOCBjaRlLFl/KfMkhsZcJW0OEbIodLDYjiqhNmunkS9dhJPv/XcY0TojjlCU+Sw0CjgsBhcX53OF2u2EYBgw3Wt+ju17Qcx/6DpfL05f9er3qXOPa3zH7YVNDmUWFrac4dwSNYzKO9Dz6vq/3gJpmnM0TNTyfnw0R3URbMQE1xmmEp0yYH9SQjXAtE/E+REHBhZEwuJOdJIsNQ48bGQubd9NdvlxumM1srDgmtm1jx5+iOC6vHyE/qE62aDgy0tGSrKq/JqxeoyO+lP4H7oU7TQakVQsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ogbot_02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a265b3ea6c7331dee077ee430b063f4f/f058b/ogbot_02.png&quot;
+        srcset=&quot;/static/a265b3ea6c7331dee077ee430b063f4f/c26ae/ogbot_02.png 158w,
+/static/a265b3ea6c7331dee077ee430b063f4f/6bdcf/ogbot_02.png 315w,
+/static/a265b3ea6c7331dee077ee430b063f4f/f058b/ogbot_02.png 630w,
+/static/a265b3ea6c7331dee077ee430b063f4f/40601/ogbot_02.png 945w,
+/static/a265b3ea6c7331dee077ee430b063f4f/78612/ogbot_02.png 1260w,
+/static/a265b3ea6c7331dee077ee430b063f4f/3e096/ogbot_02.png 1718w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이용자들이 서로의 일상을 나누며 소통하고 앱테크를 할수 있는 서비스가 보시는 것처럼 오글봇 AI와도 의견을 나누고 대화할 수 있는 커뮤니티가 되었네요 :) &lt;/br&gt;   오글봇이 작성된 글에 반응을 보이고, 궁금증을 풀어주기 전에는 처음으로 글 작성하는 사용자들의 수가 일평균 17명이라면, 오글봇 AI가 등장한 이후로는 일평균 80명을 넘을 정도로 글을 작성하지 않던 이용자들도 글을 작성하게 되었습니다. &lt;/br&gt;&lt;br&gt;
+한 번도 안 물어본 사람은 있어도(?) 한번만 물어본 사람은 없을 정도로 친숙한 ChatGPT를 연동한 후, 오글오글 서비스에는 다양한 질문과 수많은 대화가 오고 갔는데요~ &lt;/br&gt;
+본 글에서는 이렇게 친숙한 ChatGPT를 연동하여 오글오글 서비스를 더욱 활기차게 만든 &apos;오글봇 AI 개발 사례&apos;를 소개하겠습니다(연동 모델은 gpt-4o 입니다).&lt;/p&gt;
+&lt;h3&gt;&apos;무플방지 위원회 오글봇 AI&apos; 의 등장!&lt;/h3&gt;
+&lt;p&gt;&quot;커뮤니티 서비스인데 아무도 내글에 댓글을 안달면 어떻게 하지?&quot;라는 고민을 해결하기 위해 등장한 것이 바로 &apos;무플방지 위원회 오글봇 AI&apos; 였습니다. &lt;/br&gt;
+오글봇 AI는 이용자가 게시글을 작성 했을 때 글 작성자의 만족도를 높여주기 위해 즉시 첫 댓글을 달아 줍니다. 이용자가 게시글을 작성하게 되면 서버에서 ChatGPT에 System prompt와 User prompt를 보내 첫 댓글을 받아 옵니다. &lt;/br&gt;
+혹시 모를 연동 delay를 고려하여 async로 요청하며, 응답을 받으면 서버에서는 DB에 바로 댓글 정보를 저장합니다. 클라이언트에서는 게시글 등록 요청 후 즉시 오글봇 AI의 &apos;무플방지 작동중&apos;이라는 댓글을 노출하고 3초 타이머를 수행한 후, 댓글 영역을 갱신하게 됩니다.&lt;/p&gt;
+&lt;h3&gt;글 작성 시 이용자의 화면 변화&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a5b10c75951571678802aa9d7ad64b2e/a83dd/ogbot_03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.291139240506325%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACGklEQVR42m1Ti47iMAzs/3/e6TiBUAstsAt9pO+8aJkbu8tpddpIVqs4Hs9MnCSEgOfzCfnGGDHPM+q6xjRNcN7r/vew1jJm9L3F9eZQlR5t4+Gcg+f5pGkalGWpoMuy6HcYRriphR0NZut0/72s84i2x9i16Hr+xxUr0+u6asNEwMZxxPclnVpjkJ9PGMn09XppgSwp6toWp1PGcw74yskZBcyOR9zvd7Ia2LHXpACK7N3uDwtPaAkgSsQSKaqqLXcpLpqTeNuWXC8X3G43ZSQgAiw+dpTUmJpeDepnz2bylWb90KNlXpTJ3vurgPhhWUfjJ4tgnpRnYNhMWEQWOOaC5eUYrzlh3nWdgumlCIDo32IDlKJhcjD9gkfnMPMixC+5HM/cbCMa5qqeDbxMR8DylvwTQx0BuU165uYFwcV/TSX3jCx2BAuRjYLuSzMFdOws/sio1AbgWSa8+hg82QwzJhkjZTbrflk2uF0/acvMul49lFDJ74HeOpBFWFRCYzqYbqCfTiU6MgpRBnsi4ITfuyP2u1/Y7w84ZRmKolD2idzwOE5ktmBloB7pR8Q5L3E4FGRAFhzTGDeD5aVI8xgc9weC+P/mMPtEll75hDiHLYunQFk8PHT4YLOyKgkQlbUo2Z6e1TGpqgoXjp2MmkiW/USQJZGmmfqzrq+vWJHnBTLKeTweOJ9zlSWgEgIkQ5+mqT6MPM8V9C/x/OmYou+07gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ogbot_03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a5b10c75951571678802aa9d7ad64b2e/f058b/ogbot_03.png&quot;
+        srcset=&quot;/static/a5b10c75951571678802aa9d7ad64b2e/c26ae/ogbot_03.png 158w,
+/static/a5b10c75951571678802aa9d7ad64b2e/6bdcf/ogbot_03.png 315w,
+/static/a5b10c75951571678802aa9d7ad64b2e/f058b/ogbot_03.png 630w,
+/static/a5b10c75951571678802aa9d7ad64b2e/40601/ogbot_03.png 945w,
+/static/a5b10c75951571678802aa9d7ad64b2e/78612/ogbot_03.png 1260w,
+/static/a5b10c75951571678802aa9d7ad64b2e/a83dd/ogbot_03.png 1482w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;ChatGPT 연동 코드와 Prompt&lt;/h3&gt;
+&lt;p&gt;System prompt는 어드민에 등록되어 운영자가 상황에 맞게 변경할 수 있으며, User prompt는 사용자가 입력한 제목과 내용으로 구성됩니다.    ChatGPT를 연동할때 가장 중요한 포인트가 System prompt를 어떻게 작성하는가였던 것 같습니다. System prompt의 내용에 따라 댓글 내용이 달라졌기 때문에 System prompt의 내용을 다듬는데 가장 많은 시간을 투자했던 것 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Request&lt;/span&gt; request &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Request&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;GPT_VER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;messages&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Arrays&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;asList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Message&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;system&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;systemPrompt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Message&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;user&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;userPrompt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Response&lt;/span&gt; response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; openAIRestTemplate&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sendPost&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;APPLICATION_JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/v1/chat/completions&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getChoices&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getChoices&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getContent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3a9fdd5ba108d161865ed277f47203f8/9685e/ogbot_04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.12658227848101%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR42n2S246CQBBE/f//8kGN9zsCkbvAKoigImptV2/wYZPdSSY9UwxnqrunE6cnbE0PthPBsH2ciwrXW43qWmv8Pc9Fib0Xw9qH2Mn5teHAsDyY+wD3e43O1zGD40UIwlhiiDhJURQX5PkZp1OG/FxIzHV9uZS4lBXcIILrR0i+MmTnUk2c8gvqxxOdNE2xWq0wHo8xn80wGAwwm07R7XYxHA4xlfViucBisYBhGKjrGq7jwPNcuaAQV3fcblfVm0aAiQC32y2Wy6X+YFkWNpuNAhipMypYtLKqsNvtsF6vEYYhDocDgiBAmiYCvqMTiNj+wElou6bb0WiEmTjv9XofYBRF4tCTsuQoyxKv1wscr9cbnSzLPsDWGaFMdzKZKIxgfnNdF83zCdu2Fej7vmpkHI/Hn6Yw5fl8/kmPQNaUe0bTNDXyQpajaRo9xwtbnTD2QoGHOFaRH1tXbBBTZJ2454VMvd/v4yZNYIqPx0PhT3HcDk2ZdaBtOqErQtgkRqZOOKHU6J7nOd7v9wfENacC26bwMJ3SJd21zaBOh9QZ7/I8/hoKjKKDHmwdEtKCqRNIjZON+HHzD7CUlx9LHVlLNihJEvjyrhx5vOyiTtnzO+vGmrGGf81vuoZya0fhmrcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ogbot_04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/3a9fdd5ba108d161865ed277f47203f8/f058b/ogbot_04.png&quot;
+        srcset=&quot;/static/3a9fdd5ba108d161865ed277f47203f8/c26ae/ogbot_04.png 158w,
+/static/3a9fdd5ba108d161865ed277f47203f8/6bdcf/ogbot_04.png 315w,
+/static/3a9fdd5ba108d161865ed277f47203f8/f058b/ogbot_04.png 630w,
+/static/3a9fdd5ba108d161865ed277f47203f8/40601/ogbot_04.png 945w,
+/static/3a9fdd5ba108d161865ed277f47203f8/78612/ogbot_04.png 1260w,
+/static/3a9fdd5ba108d161865ed277f47203f8/9685e/ogbot_04.png 1336w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+[System Prompt와 User Prompt 예시]&lt;/p&gt;
+&lt;p&gt;오글봇 AI가 첫 댓글을 생성하는 기능 도입 후 오글봇과 놀이하는 유형, 오글봇에게 질문하고 답변을 요구하는 유형의 글 등등 작성되는 게시글의 유형이 보다 다양해졌으며, 새로운 재미 요소로 인해 위에서 언급된 것처럼 첫글을 작성하는 사용자의 수도 약 4배 이상 증가하는 효과를 보였습니다. &lt;/br&gt; 이러한 재미 요소로 인해 오글오글 서비스에 글을 작성하지 않았던 사용자들도 점차 글을 작성하는 등 참여도가 높아지게 되었습니다.&lt;/p&gt;
+&lt;h3&gt;오글봇 AI에게 문의하는 게시글들&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8aa90ccc0484de87c77acc67fa791ee7/985a9/ogbot_05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 85.44303797468356%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAADAklEQVR42nVUy5LbNhDkv6fyEznlG3zOxRdXDkmVy05pvVvr6EVKfIAPECTBB8h2z1DrOAdjRYkLDBrTPT2IQpjRNjla12HbNgzDgK7vMc0Lpsmhqgp9n+eZ8wP8OPJ9gW1r9F2NdYPu6XvP+AnREgKcH9G2Dl3XYV1XBZan9z3qhht5wI/zAt7ammsVxnGCjG1bNSaaxw2Xk8M9S7k4YPAbjuegQUOW4X69wlSVbME1WeHchsDN57RCXdUEn5g1cLwsGhMt84qhnUlrQmC24xjQWGbC5UAZRtIRKtsWYErZzEwh2c86LyALsapm3QHnZcbpdMT5fMLx+FXpvY3aWlzjK5I4RpblyPM7D/QQmYwpUBQFpWr5WISpVdqRCHw8vSKOT6Rg8BBkp9x65IlBmt5RliXqulYWC1PK84LF8Pr/GlYFE32jlWXqq4nBDSpuMMawep1SnqcZQzdQt1Yz996r8AJ4uyWIr2fcb7HGv61FgV9d26NpGs1gnHYt92pSU4IKmMy9DZm75RZ3UyHOSuR2QNUvCArIQEGX9Ed6bF2C2iIwxbqMER8+wLDalzih1hdk1C0Q0Fceflr06Vlmz7lVKMtpl2uswYV1ePfLr3j/2+9KubcpbPqCgRk658iiUnNLlZ0ZkGdSmFz17Tq3a7gEnjD0qotk9frxb/z7+R+lFic5O+JR9W3BMnUqiWgl/lMPkt3bUMDW9Xh+Pj50k+l1f+dfcrO0U8L2q+EofGNblYOI+PSa4q+nBCUliJM7XXJjU3hEE419iQ0nrvRailt8RpGn6jXNkh48HA54eXnGl6eDgouBPz+d8MefX7WYGTVO00zbMJJN4viyNLooYF1bqsBCQfpb+tw5Sxt1eohnEUpj/qO6skDDfg9EI7/uIqhmtH4PEkChLodp1Xkr2VYe+rYfcXi60NxGizRyv39cIFGQLNhOlrfKMlqlo59HhhK0d0NQX07T3kVyjZ3ZqkWeoWGVTZ6rTJEUYntsCkGuoEBPyu+Gn43vB8mtsG3/q/I3kSUfoy7Uuv0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ogbot_05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8aa90ccc0484de87c77acc67fa791ee7/f058b/ogbot_05.png&quot;
+        srcset=&quot;/static/8aa90ccc0484de87c77acc67fa791ee7/c26ae/ogbot_05.png 158w,
+/static/8aa90ccc0484de87c77acc67fa791ee7/6bdcf/ogbot_05.png 315w,
+/static/8aa90ccc0484de87c77acc67fa791ee7/f058b/ogbot_05.png 630w,
+/static/8aa90ccc0484de87c77acc67fa791ee7/40601/ogbot_05.png 945w,
+/static/8aa90ccc0484de87c77acc67fa791ee7/78612/ogbot_05.png 1260w,
+/static/8aa90ccc0484de87c77acc67fa791ee7/985a9/ogbot_05.png 1512w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;오글봇 AI 댓글의 정확도 개선&lt;/h3&gt;
+&lt;p&gt;오글봇 AI 첫 댓글 기능 적용 후, ChatGPT도 정확히 모르는 게 있다는 것을 알게 되었는데요, 바로 대한민국 맛집이나 장소 등에 대한 문의의 경우 존재하지 않는 지역이나 상호명을 대답하는 경우가 있었습니다. 그래서 ChatGPT에서 외부 시스템을 연동할 수 있는 Function call 기능을 추가 개발하였습니다. &lt;/br&gt;&lt;br&gt;
+ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함께 보내고 해당 조건에 부합하면 Function call name과 그 Function call을 사용하기 위한 parameter가 응답으로 전달됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7af532a39d7b5ed4ff0f9c437296f83b/31df8/ogbot_90.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABeklEQVR42n2TiYrCQBBE8/9/JSKKRIl44hGNJ973renlFSRks7oNRZKZ7uqqmY6zXC5tvV7bfr8XVquVcLvdbLPZ2G630/vlctHzfr8L1+v1F9g/n8/mtFoty+VyViqVbDweK/nxeNjz+bTj8WhBENhoNLLZbGaHwyHG+/22ZIRhKGKHwk6nY5lMxur1utTRiQLIG42GNZtNNYnUsM4+JBH4RqWDjW63a4VCwdrtthRhEwIK5/O59ft9NUHx6XTSXjpihRRXq1XZdl1XaigGdMRerVazXq+nZjx939cR0CAiQ6EIWeCMstmsCCnANioApOVyWXvYxwWEi8VCTv4oxBbdPM+TdUher5eAPaagWCxaPp8XaaVSEel0OrXJZKLmTAOTgmJZBtvtVvboFHUkEfWDwUB2IeEdF0zEcDiUUsYtJrQvgULUk0gxyVxg0uLHS0lefTIpIuQ4UMChs5bOT45NfCmfggRuGtK0mk8RK/wvIbIJ0r/at1/vB+xDlfty8hhxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ogbot_90&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7af532a39d7b5ed4ff0f9c437296f83b/f058b/ogbot_90.png&quot;
+        srcset=&quot;/static/7af532a39d7b5ed4ff0f9c437296f83b/c26ae/ogbot_90.png 158w,
+/static/7af532a39d7b5ed4ff0f9c437296f83b/6bdcf/ogbot_90.png 315w,
+/static/7af532a39d7b5ed4ff0f9c437296f83b/f058b/ogbot_90.png 630w,
+/static/7af532a39d7b5ed4ff0f9c437296f83b/40601/ogbot_90.png 945w,
+/static/7af532a39d7b5ed4ff0f9c437296f83b/78612/ogbot_90.png 1260w,
+/static/7af532a39d7b5ed4ff0f9c437296f83b/31df8/ogbot_90.png 2366w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위의 API가 호출되면 OpenAPI에서 응답값으로 아래와 location, topic, count를 전달 받습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;XXXX&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;token string&quot;&gt;&quot;object&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;chat.completion&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token string&quot;&gt;&quot;created&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1729566722&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;model&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gpt-4o-2024-08-06&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;choices&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;index&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&quot;role&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;assistant&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&quot;function_call&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token string&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;locati*********nKorea&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token string&quot;&gt;&quot;arguments&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;{\&quot;location\&quot;:\&quot;판교\&quot;,\&quot;topic\&quot;:\&quot;맛집\&quot;,\&quot;count\&quot;:\&quot;5\&quot;}&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&quot;refusal&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;logprobs&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;finish_reason&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;function_call&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위의 argument를 paremeter로 naver api에서 받은 응답값을 function의 결과로 셋팅하여 다시 Open API를 호출합니다.  이렇게 naver의 검색 결과를 바탕으로 ChatGPT는 더욱 정확한 댓글을 생성합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Request&lt;/span&gt; secondRequest &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Request&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;GPT_VER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;messages&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Arrays&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;asList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Message&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;system&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;systemPrompt2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Message&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;user&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;userPrompt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Message&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;function&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;functionCall&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;naverResponse&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getItems&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Response&lt;/span&gt; secondResponse &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; openAIRestTemplate&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sendPost&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;APPLICATION_JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/v1/chat/completions&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; secondRequest&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AIDTO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Function call을 연동하는 process를 도식화하면 아래와 같습니다.   Naver 검색 API의 도움을 받아 이제 ChatGPT는 맛집, 까페, 여행지 등에 대한 질문에도 척척 대답할 수 있게 되었습니다 :)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7eb7da0b4a48b68f70f6f8bb9fb2bc90/86a1e/ogbot_06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.21518987341771%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACbUlEQVR42n1TabOiMBDk//+wt+4+tbwPEAUEkRsB5aZ3Jhjr1X5Yq7omGcyku2eieHoG9/jAbZ+hyErUdYWmadC2LbquE/F/qCr6P50JsgpG+ILSdg28S4YoSNH3HaFHmqaI4xhBEFJMEEaRiL4fiLz8zqjpcgw9bC+GlxRQuqGFtaaNE6KjgsMwIElSfH9PMZ3OsF5tsFgssFqtsVwux/V6g+VqBdd1hRoMHVa6C+32gFLXNdEuxYeyLAWEDNozW5bNzDlKyDxfzgy7psItrWGyZC74er0+hdgX3l8uF+x2OxwOB4H9nrGHqmnYUTyqKrbbHRznBvQt/mzPOLnpm2HNDJlpLQpzUc/zRVHHcQSs6xWWZeFK0TDNMRoG4iQBUcRCvZLkBErTNkiDAtkjp0KNkPp8Pj+seS3Zy9yYH9fCQ2JoRS+S/ITSo4U+DXGmGwaM3qw3G2rKN2azGX5NJhTnmM/n+Pr6wmTyW+y5abzOiwL82xo+dC/nLjewlimeD5JM5jITtkHOIoPXDM7Lbx/v33MY5yWi7DUyvMwjXM8u3TMgyzLYtkP+GTBNC+czma3r0LST8I79ZP/CMBy7/L6kpklhKAM6kuxjv9ZoDlvRGPaNwYd0KqZTUVXVENGAs28FyZTNkwWlv0oHlpygSMjgduzyT1ny+XH8KZmtkQ2SeZY/Sp7FuJm+MDfPc8GKZ0+lWTudTiRXE5FxPB4/rDkfRrE4tzw5NDbp+JYDK8MjzsEjVJWV8MkwTNzvd+GXbdtwCOwt79lbjgyW2tM523/gzm9Z0G3GwS7L6jNbsrvtG/IV/QshWzxVbkyFv0cvcIbWxmmBAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ogbot_06&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7eb7da0b4a48b68f70f6f8bb9fb2bc90/f058b/ogbot_06.png&quot;
+        srcset=&quot;/static/7eb7da0b4a48b68f70f6f8bb9fb2bc90/c26ae/ogbot_06.png 158w,
+/static/7eb7da0b4a48b68f70f6f8bb9fb2bc90/6bdcf/ogbot_06.png 315w,
+/static/7eb7da0b4a48b68f70f6f8bb9fb2bc90/f058b/ogbot_06.png 630w,
+/static/7eb7da0b4a48b68f70f6f8bb9fb2bc90/40601/ogbot_06.png 945w,
+/static/7eb7da0b4a48b68f70f6f8bb9fb2bc90/78612/ogbot_06.png 1260w,
+/static/7eb7da0b4a48b68f70f6f8bb9fb2bc90/86a1e/ogbot_06.png 1296w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;참고) &lt;a href=&quot;https://platform.openai.com/docs/guides/function-calling&quot;&gt;https://platform.openai.com/docs/guides/function-calling&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;오글봇 AI의 기능 개선&lt;/h3&gt;
+&lt;p&gt;오글봇 AI의 긍정적인 효과를 더욱 극대화시키기 위하여, 첫 댓글만 달아주던 기능을 확장하여&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;어느 댓글에서나 &quot;@오글봇&quot;을 입력하여 오글봇 AI의 대댓글을 확인할 수 있는 오글봇 소환 기능과&lt;/li&gt;
+&lt;li&gt;오글봇 AI 댓글에 대댓글을 입력하면 오글봇과 소통할 수 있도록 오글봇 AI의 대댓글 작성 기능도 추가하게 되었습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;오글봇 소환과 대댓글을 작성 요청시 전달하는 System prompt는 첫 댓글을 달때 사용한 prompt의 내용에 댓글에 대한 답변인지 대댓글을 참고하여 추가 대댓글을 작성할 것인지에 대해 명시해 주었습니다.  &lt;/br&gt;
+이에 따라 User prompt도 오글봇 소환은 본문과 해당 댓글만 전달하고 대댓글의 경우에는 이전 댓글과 대댓글을 모두 전달하여 흐름에 맞는 대답을 할 수 있도록 개발하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b31b14158364b1e930e4c92cbc79e5f8/56caf/ogbot_07.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.78481012658227%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACTklEQVR42oVU2ZLaMBD0/38UPCSVXW5jc5lzMQaMuczlg6t3esCESqUSVXWNLKRWz/QIww82cL0FVusQcZziFMUvRHHynCc4nmKF6/mYzgOcZB4nKZL0LPGse5M0hTGZeGi322g0mmg2H2i1WrrmOA4sy9Jvu9HAYrHAcDiS6GO9XiOKIiE+SYxxvd5wvwOG53mo1+tC2NBYKpWUhHPGSqWCarUK27YxmUxQq9Xgui622y3CMNRI0ttNCCGEQRCoEqLT6Wjs9/vodrsKrpGMF/q+/9o7m83As8fjEdm4i0SDm7iZB0lAxdPpVGMgKe52OxwOB0WSJHg7rQQZXoRf47GmRVKmaFm21s80TU2Rmy7XKy6Xi6Z1Pp+RCm5PkvfBNa0hU6RCEmVmEL1eT2tJo3jhfO7LvCUZeJqqGiJ4GBOJMVe6/Cg01TEWCgVVl6FcLitIzMsd51HX4XAoJCSLlFwJJQNjuVxp7agmi1ScmTMYDFQ1SVarldaXLpMglb5L0wRpIj0Zx1KaC4z5fK4p8RBvpXs0ig7yNxIw8nsphB8fv1AuFVAsFhWWWYPTtiU7E3sxzmBD5/N57TWqYxNTFRWyHJvNRpWF4VZ7LpfLofD5Qy9nc1PlHb/dNtQ1lf4A3WRxuU5Xs3bg4O+W9GTNrIMvjDVMEp5Jdc5uMO5/sf+9Ud/7jHViJky78PlTTSzKy6pVy7Dqprzn+N+Efw42dqVSRVfKEW4CNYc1Ho1GWg5mZLAZSfk/qEIhdJ7P8WvswpeXxBe0P+zlH+mkDf8NffhdZsLk1dgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ogbot_07&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b31b14158364b1e930e4c92cbc79e5f8/f058b/ogbot_07.png&quot;
+        srcset=&quot;/static/b31b14158364b1e930e4c92cbc79e5f8/c26ae/ogbot_07.png 158w,
+/static/b31b14158364b1e930e4c92cbc79e5f8/6bdcf/ogbot_07.png 315w,
+/static/b31b14158364b1e930e4c92cbc79e5f8/f058b/ogbot_07.png 630w,
+/static/b31b14158364b1e930e4c92cbc79e5f8/40601/ogbot_07.png 945w,
+/static/b31b14158364b1e930e4c92cbc79e5f8/78612/ogbot_07.png 1260w,
+/static/b31b14158364b1e930e4c92cbc79e5f8/56caf/ogbot_07.png 1712w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;마무리&lt;/h3&gt;
+&lt;p&gt;&quot;댓글 하나 달아 준다고 얼마나 효과가 날까?&quot;라는 의문을 가지고 시작했던 개발이 사용자들의 궁금증을 풀어 주고, 재미를 더해 주어 한번 더 글을 작성하게 만드는 효과를 보면서, 개발의 난이도 대비 좋은 결과를 얻었다고 생각합니다. &lt;/br&gt;&lt;/br&gt;
+또한, 댓글을 한번만 달아주고 끝내는 연동이 아니라, 서로 소통하는 스토리를 만들어 개발하는 과정을 통해 생성형 AI 기술의 잠재력과 다양한 응용 가능성을 직접 느낄 수 있었습니다. 이런 경험을 바탕으로 더욱 정교하고 맥락에 맞게 이용자들과 소통할 수 있는 오글봇 AI로 발전시켜 나가고 싶습니다.&lt;/p&gt;
+&lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[웹앱 사용자 경험을 개선하는 기술 한 스푼]]></title><description><![CDATA[안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 UPTN Station…]]></description><link>https://techtopic.skplanet.com/uptn-loadingspinner/</link><guid isPermaLink="false">https://techtopic.skplanet.com/uptn-loadingspinner/</guid><dc:creator><![CDATA[chanmin]]></dc:creator><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 &lt;a href=&quot;https://www.uptn.io/&quot;&gt;UPTN Station&lt;/a&gt;의 프론트엔드 개발을 담당하는 김찬민이라고 합니다.&lt;/p&gt;
 &lt;p&gt;저는 입사하기 전부터 &quot;나부터 사용하고 싶고, 네이티브 이상으로 부드러운 웹앱&quot; 을 만들고 싶다는 꿈을 갖고 있었는데요, 이를 이루기 위해서는 작은 디테일들을 잡아내는 것이 중요하다고 생각했습니다.&lt;/p&gt;
 &lt;p&gt;이번 글에서는 프론트엔드 개발자가 어떤 장치들을 도입해 사용자 경험을 개선했는지에 대한 이야기를 사진과 함께 가볍게 풀어보려 합니다.&lt;/p&gt;
 &lt;h2&gt;스피너, 어떻게 개선할 수 있을까?&lt;/h2&gt;
