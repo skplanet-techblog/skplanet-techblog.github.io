@@ -94,7 +94,7 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
   ]
 ```
 
-위의 argument를 paremeter로 naver api에서 받은 응답값을 function의 결과로 셋팅하여 다시 Open API를 호출합니다.  이렇게 naver의 검색 결과를 바탕으로 ChatGPT는 더욱 정확한 댓글을 생성합니다.
+위의 argument를 parameter로 naver api에서 받은 응답값을 function의 결과로 셋팅하여 다시 Open API를 호출합니다.  이렇게 naver의 검색 결과를 바탕으로 ChatGPT는 더욱 정확한 댓글을 생성합니다.
 
 ```java
 AIDTO.Request secondRequest = AIDTO.Request.builder()
