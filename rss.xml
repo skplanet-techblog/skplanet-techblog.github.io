@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 03:50:14 GMT</lastBuildDate><item><title><![CDATA[판교 테크세미나를 운영하는 법과 'Age of AI - the Future of Work' 회고]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 :) 판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, 지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data & Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech…]]></description><link>https://techtopic.skplanet.com/dtc24-ageofai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dtc24-ageofai/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe입니다 :)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 04:00:02 GMT</lastBuildDate><item><title><![CDATA[판교 테크세미나를 운영하는 법과 'Age of AI - the Future of Work' 회고]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 :) 판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, 지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data & Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech…]]></description><link>https://techtopic.skplanet.com/dtc24-ageofai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dtc24-ageofai/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe입니다 :)&lt;/p&gt;
 &lt;p&gt;판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요,&lt;/p&gt;
 &lt;p&gt;지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data &amp;#x26; Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech Topic 블로그를 통해 회고하며, 특히 지난 11월 진행된 DTC 주제인  &apos;Age of AI - the Future of Work&apos; 강연 및 현장의 분위기, 구성원 의견 중 일부를 함께 담아 보았사오니 즐겨 주시면 감사하겠습니다.&lt;/p&gt;
 &lt;p&gt;아울러 기술 세미나를 기획하거나 운영하는 다른 회사 및 부서에서도 함께 참고하여 주시면 감사하겠습니다.&lt;/p&gt;
@@ -477,7 +477,7 @@ SK플래닛 판교 세미나 DTC가 어떤 형태의 기술 세미나로 바뀔�
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;이용자들이 서로의 일상을 나누며 소통하고 앱테크를 할수 있는 서비스가 보시는 것처럼 오글봇 AI와도 의견을 나누고 대화할 수 있는 커뮤니티가 되었네요 :) &lt;/br&gt;   오글봇이 작성된 글에 반응을 보이고, 궁금증을 풀어주기 전에는 처음으로 글 작성하는 사용자들의 수가 일평균 17명이라면, 오글봇 AI가 등장한 이후로는 일평균 80명을 넘을 정도로 글을 작성하지 않던 이용자들도 글을 작성하게 되었습니다. &lt;/br&gt;&lt;br&gt;
+&lt;p&gt;이용자들이 서로의 일상을 나누며 소통하고 앱테크를 할수 있는 서비스가 보시는 것처럼 오글봇 AI와도 의견을 나누고 대화할 수 있는 커뮤니티가 되었네요. &lt;/br&gt;   오글봇이 작성된 글에 반응을 보이고, 궁금증을 풀어주기 전에는 처음으로 글 작성하는 사용자들의 수가 일평균 17명이라면, 오글봇 AI가 등장한 이후로는 일평균 80명을 넘을 정도로 글을 작성하지 않던 이용자들도 글을 작성하게 되었습니다. &lt;/br&gt;&lt;br&gt;
 한 번도 안 물어본 사람은 있어도(?) 한번만 물어본 사람은 없을 정도로 친숙한 ChatGPT를 연동한 후, 오글오글 서비스에는 다양한 질문과 수많은 대화가 오고 갔는데요~ &lt;/br&gt;
 본 글에서는 이렇게 친숙한 ChatGPT를 연동하여 오글오글 서비스를 더욱 활기차게 만든 &apos;오글봇 AI 개발 사례&apos;를 소개하겠습니다(연동 모델은 gpt-4o 입니다).&lt;/p&gt;
 &lt;h3&gt;&apos;무플방지 위원회 오글봇 AI&apos; 의 등장!&lt;/h3&gt;
@@ -540,26 +540,25 @@ SK플래닛 판교 세미나 DTC가 어떤 형태의 기술 세미나로 바뀔�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3a9fdd5ba108d161865ed277f47203f8/9685e/ogbot_04.png&quot;
+    href=&quot;/static/39c2399e276fdd2e86eb6d69e7341107/1132d/ogbot_14.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 60.12658227848101%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR42n2S246CQBBE/f//8kGN9zsCkbvAKoigImptV2/wYZPdSSY9UwxnqrunE6cnbE0PthPBsH2ciwrXW43qWmv8Pc9Fib0Xw9qH2Mn5teHAsDyY+wD3e43O1zGD40UIwlhiiDhJURQX5PkZp1OG/FxIzHV9uZS4lBXcIILrR0i+MmTnUk2c8gvqxxOdNE2xWq0wHo8xn80wGAwwm07R7XYxHA4xlfViucBisYBhGKjrGq7jwPNcuaAQV3fcblfVm0aAiQC32y2Wy6X+YFkWNpuNAhipMypYtLKqsNvtsF6vEYYhDocDgiBAmiYCvqMTiNj+wElou6bb0WiEmTjv9XofYBRF4tCTsuQoyxKv1wscr9cbnSzLPsDWGaFMdzKZKIxgfnNdF83zCdu2Fej7vmpkHI/Hn6Yw5fl8/kmPQNaUe0bTNDXyQpajaRo9xwtbnTD2QoGHOFaRH1tXbBBTZJ2454VMvd/v4yZNYIqPx0PhT3HcDk2ZdaBtOqErQtgkRqZOOKHU6J7nOd7v9wfENacC26bwMJ3SJd21zaBOh9QZ7/I8/hoKjKKDHmwdEtKCqRNIjZON+HHzD7CUlx9LHVlLNihJEvjyrhx5vOyiTtnzO+vGmrGGf81vuoZya0fhmrcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABwklEQVR42mVTi5KiQAzk/z9NS/EFoiC+jiuVNwgyCPZNx2XP2k1V12BIOp0eNOqHQpqVyPI7suKORrVQ6om27aDa53+o98n6vKh0fYUwznALU1zDBMW9lvcGfyzXHixnh6Xt6oJYF5cIowRRnCBOMn2mSNJcUJR3qbUcH94+wDm4wT/8Rap7GqVgFEWBzcbBbufB3W6xXC6xXq/hOA5s28LxeIRlWXDdLfb7PdrnE6fTUVBVlVbeQDUNGo2u62BEUfxNslqtMJ1OMZ/PJWeapoB5ki4WC1R1ja0eHPwJ9DYhrrcrLpcLoijCUw8z4jj+JiORac604o0QzmYzIbFtW3JUrdoWp/MZoSZL0xSPxwND9H0PoyxLaWAjCcbjsTyTgHkq4zDmqJ4kh8NB1vd9H0EQSI4qFT3Mslw3rbSHO1E6mUyEaBhCQuapmLksy7DRKw8+c0N6yfzXyokoowr65XmeFLLh008ScxgbGa/XS/AZsjLNJBmnu64roDJiWJXq389z1PpSfsZALoScaH/5xNvjSSWj0UgUDyqpnN7VH5fwM4RQ6X9Gnhegl/wmCfpCJEkihr9vs5GmruvR9VTzG3z3D4THLQSdYAIfAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;ogbot_04&quot;
+        alt=&quot;ogbot_14&quot;
         title=&quot;&quot;
-        src=&quot;/static/3a9fdd5ba108d161865ed277f47203f8/f058b/ogbot_04.png&quot;
-        srcset=&quot;/static/3a9fdd5ba108d161865ed277f47203f8/c26ae/ogbot_04.png 158w,
-/static/3a9fdd5ba108d161865ed277f47203f8/6bdcf/ogbot_04.png 315w,
-/static/3a9fdd5ba108d161865ed277f47203f8/f058b/ogbot_04.png 630w,
-/static/3a9fdd5ba108d161865ed277f47203f8/40601/ogbot_04.png 945w,
-/static/3a9fdd5ba108d161865ed277f47203f8/78612/ogbot_04.png 1260w,
-/static/3a9fdd5ba108d161865ed277f47203f8/9685e/ogbot_04.png 1336w&quot;
+        src=&quot;/static/39c2399e276fdd2e86eb6d69e7341107/f058b/ogbot_14.png&quot;
+        srcset=&quot;/static/39c2399e276fdd2e86eb6d69e7341107/c26ae/ogbot_14.png 158w,
+/static/39c2399e276fdd2e86eb6d69e7341107/6bdcf/ogbot_14.png 315w,
+/static/39c2399e276fdd2e86eb6d69e7341107/f058b/ogbot_14.png 630w,
+/static/39c2399e276fdd2e86eb6d69e7341107/40601/ogbot_14.png 945w,
+/static/39c2399e276fdd2e86eb6d69e7341107/1132d/ogbot_14.png 1158w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
