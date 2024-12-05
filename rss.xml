@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 04:31:37 GMT</lastBuildDate><item><title><![CDATA[판교 테크세미나를 운영하는 법과 'Age of AI - the Future of Work' 회고]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 :) 판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, 지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data & Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech…]]></description><link>https://techtopic.skplanet.com/dtc24-ageofai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dtc24-ageofai/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe입니다 :)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 04:47:12 GMT</lastBuildDate><item><title><![CDATA[판교 테크세미나를 운영하는 법과 'Age of AI - the Future of Work' 회고]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 :) 판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, 지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data & Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech…]]></description><link>https://techtopic.skplanet.com/dtc24-ageofai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dtc24-ageofai/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe입니다 :)&lt;/p&gt;
 &lt;p&gt;판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요,&lt;/p&gt;
 &lt;p&gt;지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data &amp;#x26; Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech Topic 블로그를 통해 회고하며, 특히 지난 11월 진행된 DTC 주제인  &apos;Age of AI - the Future of Work&apos; 강연 및 현장의 분위기, 구성원 의견 중 일부를 함께 담아 보았사오니 즐겨 주시면 감사하겠습니다.&lt;/p&gt;
 &lt;p&gt;아울러 기술 세미나를 기획하거나 운영하는 다른 회사 및 부서에서도 함께 참고하여 주시면 감사하겠습니다.&lt;/p&gt;
@@ -724,26 +724,26 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b31b14158364b1e930e4c92cbc79e5f8/56caf/ogbot_07.png&quot;
+    href=&quot;/static/9a1448bc3ebe20d5285f6d44ed592d3e/169e3/ogbot_17.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 72.78481012658227%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACTklEQVR42oVU2ZLaMBD0/38UPCSVXW5jc5lzMQaMuczlg6t3esCESqUSVXWNLKRWz/QIww82cL0FVusQcZziFMUvRHHynCc4nmKF6/mYzgOcZB4nKZL0LPGse5M0hTGZeGi322g0mmg2H2i1WrrmOA4sy9Jvu9HAYrHAcDiS6GO9XiOKIiE+SYxxvd5wvwOG53mo1+tC2NBYKpWUhHPGSqWCarUK27YxmUxQq9Xgui622y3CMNRI0ttNCCGEQRCoEqLT6Wjs9/vodrsKrpGMF/q+/9o7m83As8fjEdm4i0SDm7iZB0lAxdPpVGMgKe52OxwOB0WSJHg7rQQZXoRf47GmRVKmaFm21s80TU2Rmy7XKy6Xi6Z1Pp+RCm5PkvfBNa0hU6RCEmVmEL1eT2tJo3jhfO7LvCUZeJqqGiJ4GBOJMVe6/Cg01TEWCgVVl6FcLitIzMsd51HX4XAoJCSLlFwJJQNjuVxp7agmi1ScmTMYDFQ1SVarldaXLpMglb5L0wRpIj0Zx1KaC4z5fK4p8RBvpXs0ig7yNxIw8nsphB8fv1AuFVAsFhWWWYPTtiU7E3sxzmBD5/N57TWqYxNTFRWyHJvNRpWF4VZ7LpfLofD5Qy9nc1PlHb/dNtQ1lf4A3WRxuU5Xs3bg4O+W9GTNrIMvjDVMEp5Jdc5uMO5/sf+9Ud/7jHViJky78PlTTSzKy6pVy7Dqprzn+N+Efw42dqVSRVfKEW4CNYc1Ho1GWg5mZLAZSfk/qEIhdJ7P8WvswpeXxBe0P+zlH+mkDf8NffhdZsLk1dgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACMElEQVR42o1U2Y7aQBD0//9QtI9ZCBAucd/YBtsBk3D7NlA71dYgtFJWO1JphsZT3V3VtpEkKf5s/2Ht+TieroiiBEEYC8LoE1Rs9/eAlbPB+RIgilMkaSaIk+JsBGEA215hMpliOiVm6jzBYrHAcrnEbDbDeDyWmGmacB0X67WD/X6vkkRIU0WUJMjzHI/HA8b1eoVt2eh0Ouj1erI3Gg202+3n71arhXq9rgiXkojkJDydTjgcDrLHcQwug6yWZT0r0BUR8/lc4jwPh0P5f7VaSSLbtrHb7YSQHFxSIQ+mackFEnAnSKwvXS4XqSIIgudF4n6/C/RvIWSAWnW7XamE2QlqSmK2xnW73UQnDd77vJ4asg2SjUYjDAYDAVslSEodmZBVMzmfZaJImcKqyUHQIIMBEvb7ffXgSEi1QTwzTjKaRK1d15VpIPH5fFYkiSKOxZQ8zwoNqZ2uigQECfW4aKNIcjwe1dis1X5SMuTIKEGWSnWUwaA/HIVur2hJO0tDNpsNPM+Tqggaw2rf3n6gWnlHtVpTqGIyUB2p+Nb3iwpZXalUEr3YFkkdx5GKqBX1YXtZlkm7pfefsMy5GpmjaEjDtOOGtv+h8OqkPr/OGBcTUU++UUyS8zlCtc32hfCBr1cxY8WYUAq2+btWRrPZQKVSQaPZRL32C9ut/z3C1wqpd7lchufY6pW1RGNOie/vwA+NGuwi++u0/w9cvhKeprmuJyRhGIqOHBt+JD4AxtBe4nWBt2gAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;ogbot_07&quot;
+        alt=&quot;ogbot_17&quot;
         title=&quot;&quot;
-        src=&quot;/static/b31b14158364b1e930e4c92cbc79e5f8/f058b/ogbot_07.png&quot;
-        srcset=&quot;/static/b31b14158364b1e930e4c92cbc79e5f8/c26ae/ogbot_07.png 158w,
-/static/b31b14158364b1e930e4c92cbc79e5f8/6bdcf/ogbot_07.png 315w,
-/static/b31b14158364b1e930e4c92cbc79e5f8/f058b/ogbot_07.png 630w,
-/static/b31b14158364b1e930e4c92cbc79e5f8/40601/ogbot_07.png 945w,
-/static/b31b14158364b1e930e4c92cbc79e5f8/78612/ogbot_07.png 1260w,
-/static/b31b14158364b1e930e4c92cbc79e5f8/56caf/ogbot_07.png 1712w&quot;
+        src=&quot;/static/9a1448bc3ebe20d5285f6d44ed592d3e/f058b/ogbot_17.png&quot;
+        srcset=&quot;/static/9a1448bc3ebe20d5285f6d44ed592d3e/c26ae/ogbot_17.png 158w,
+/static/9a1448bc3ebe20d5285f6d44ed592d3e/6bdcf/ogbot_17.png 315w,
+/static/9a1448bc3ebe20d5285f6d44ed592d3e/f058b/ogbot_17.png 630w,
+/static/9a1448bc3ebe20d5285f6d44ed592d3e/40601/ogbot_17.png 945w,
+/static/9a1448bc3ebe20d5285f6d44ed592d3e/78612/ogbot_17.png 1260w,
+/static/9a1448bc3ebe20d5285f6d44ed592d3e/169e3/ogbot_17.png 1682w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -755,8 +755,8 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
 &lt;p&gt;&quot;댓글 하나 달아 준다고 얼마나 효과가 날까?&quot;라는 의문을 가지고 시작했던 개발이 사용자들의 궁금증을 풀어 주고, 재미를 더해 주어 한번 더 글을 작성하게 만드는 효과를 보면서, 개발의 난이도 대비 좋은 결과를 얻었다고 생각합니다. &lt;/br&gt;&lt;/br&gt;
 또한, 댓글을 한번만 달아주고 끝내는 연동이 아니라, 서로 소통하는 스토리를 만들어 개발하는 과정을 통해 생성형 AI 기술의 잠재력과 다양한 응용 가능성을 직접 느낄 수 있었습니다. 이런 경험을 바탕으로 더욱 정교하고 맥락에 맞게 이용자들과 소통할 수 있는 오글봇 AI로 발전시켜 나가고 싶습니다.&lt;/p&gt;
 &lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[웹앱 사용자 경험을 개선하는 기술 한 스푼]]></title><description><![CDATA[안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 UPTN Station…]]></description><link>https://techtopic.skplanet.com/uptn-loadingspinner/</link><guid isPermaLink="false">https://techtopic.skplanet.com/uptn-loadingspinner/</guid><dc:creator><![CDATA[chanmin]]></dc:creator><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 UPTN Station의 프론트엔드 개발을 담당하는 김찬민이라고 합니다. 저는 입사하기 전부터 &quot;나부터 사용하고 싶고, 네이티브 이상으로 부드러운 웹앱&quot; 을 만들고 싶다는 꿈을 갖고 있었는데요, 이를 이루기 위해서는 작은 디테일들을 잡아내는 것이 중요하다고 생각했습니다.
-이번 글에서는 프론트엔드 개발자가 어떤 장치들을 도입해 사용자 경험을 개선했는지에 대한 이야기를 사진과 함께 가볍게 풀어보려 합니다.
-(* UPTN Station: &lt;a href=&quot;https://www.uptn.io/&quot;&gt;https://www.uptn.io/&lt;/a&gt;)&lt;/p&gt;
+이번 글에서는 프론트엔드 개발자가 어떤 장치들을 도입해 사용자 경험을 개선했는지에 대한 이야기를 사진과 함께 가볍게 풀어보려 합니다.&lt;/p&gt;
+&lt;p&gt;(* UPTN Station: &lt;a href=&quot;https://www.uptn.io/&quot;&gt;https://www.uptn.io/&lt;/a&gt;)&lt;/p&gt;
 &lt;h2&gt;스피너, 어떻게 개선할 수 있을까?&lt;/h2&gt;
 &lt;p&gt;1년 전 UPTN Station을 처음 맡게 되었을 때의 기억이 아직도 생생한데요, 이 서비스가 과연 어떤 앱인지 파악하기 위해 직접 써보던 중 저는 화면을 가득 채우는 로딩 스피너가 제일 먼저 눈에 들어왔습니다.&lt;/p&gt;
 &lt;ul&gt;
