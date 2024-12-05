@@ -14,7 +14,7 @@ description: "판교세미나, Age of AI, DTC"
 
 아울러 기술 세미나를 기획하거나 운영하는 다른 회사 및 부서에서도 함께 참고하여 주시면 감사하겠습니다. 
 
-## DTC(Data & Tech Committeee)란? 
+## DTC(Data & Tech Committee)란? 
 ---
 #### TL;DR
 ```java
