@@ -122,7 +122,7 @@ export const MEMBERS = {
   joe: {
     name: "Joe",
     team: "기술기획팀",
-    description: "SK플래닛의 Dev. Advocate Manager입니다.",
+    description: "SK플래닛의 Developer Advocate Manager 입니다.",
     thumbnail: joe,
   },
   hanjh: {
