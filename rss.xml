@@ -1,4 +1,315 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 06 Dec 2024 00:36:48 GMT</lastBuildDate><item><title><![CDATA[판교 테크세미나를 운영하는 법과 'Age of AI - the Future of Work' 회고]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 :) 판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, 지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data & Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech…]]></description><link>https://techtopic.skplanet.com/dtc24-ageofai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dtc24-ageofai/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe입니다 :)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 02 Jan 2025 04:16:16 GMT</lastBuildDate><item><title><![CDATA[Microsoft-GitHub UNIVERSE24 Recap 서울 후기(발표 및 참여)]]></title><description><![CDATA[안녕하세요, SK플래닛 Joe입니다. 2024년 12월 6일 서울 광화문에서 있었던 'Microsoft-GitHub UNIVERSE24 Recap Seoul'에 발표자로 참여한 후기를 간략히 공유해 드립니다(이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다).   
+(행사 사이트: https://gh.io…]]></description><link>https://techtopic.skplanet.com/universerecapkr24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/universerecapkr24/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Thu, 02 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 Joe입니다.&lt;/p&gt;
+&lt;p&gt;2024년 12월 6일 서울 광화문에서 있었던 &apos;Microsoft-GitHub UNIVERSE24 Recap Seoul&apos;에 발표자로 참여한 후기를 간략히 공유해 드립니다(이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다).  &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACj0lEQVR42jWS204TURiF+wSGJzAxvoQX3PgAJmqMN5Lghd4I2gs10QsxYCIikURQCx6CyCFYTsUepU6nLdWh4CjFprT0MNPSaadQRIVwsJrPKcWLlez8yf7+vfZapve5ZTy5GDP5ZSaXF+jxTPDYM06Xa5RH7lHaba9ptw/Q6R3hUfAtXUErPdIUPbKNLsnKc8XDi6IXi+biSdGJSciucKBcEmdiEYvLRsfIGzqtQ3SODfHAOkjr0MuDRU/sVp59sGERHPSFXDz1TzOszjKshRjUZunX/Jh82SQ1JfBlVEQ9T7CkEtAVQrqKW04RLqp49Bjd6yGcJcNN+RuOtQjvSks4chFs+a+MrX5kLBfCJGZTiOoKH/Iq87LM5ngLsvyJQEFjcOMzrdsebscWuLYgUE8Lrwth7K41vEENKZlkR95Dl34hxiWc6WAVmETMZZAMaMVuJtPRhHMkxlwK2lSZBgao64tz9IXCiaiPq5Yyly5v0txQZrFvhz3fd/btOxSWfuBYjWIKGEAhnyWhhKHvLJHeu7zsV5j++JemqQL1ljzHzHucMc5m/xYXGuDm8BqNz8qM3/pN8bMGEfgp7+LNxmsv9GXTLJbj7L+5Ds3HCd9vJ6CUuNa7RV3jNkfa0pw0V7jzdZMzt/5w7uIa9zp2me38zd78LhWpQjRWwJtL1P7Qr6bw6QZUFVl92MT8q24CWpkrngznUzOcSns5PanQHc1xY1an4XmWln4d6UuC9XCBhXmFGQNWDbcWyqEELY1gJCvoGkIpi2cjilRI4s7HmSgvMpdP4dYSuEtGiMUVRC2GT00grCbxHzJqoRxWR1QNKSsHqQvVGinGEmPmq84zhgvjQkCtORL/66AlNUZV/wBBeYwbTlneywAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;recap_seoul&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a981ad64262a6a8f326f032f41cd57e3/f058b/recap_seoul.png&quot;
+        srcset=&quot;/static/a981ad64262a6a8f326f032f41cd57e3/c26ae/recap_seoul.png 158w,
+/static/a981ad64262a6a8f326f032f41cd57e3/6bdcf/recap_seoul.png 315w,
+/static/a981ad64262a6a8f326f032f41cd57e3/f058b/recap_seoul.png 630w,
+/static/a981ad64262a6a8f326f032f41cd57e3/40601/recap_seoul.png 945w,
+/static/a981ad64262a6a8f326f032f41cd57e3/78612/recap_seoul.png 1260w,
+/static/a981ad64262a6a8f326f032f41cd57e3/f5aa5/recap_seoul.png 2312w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;
+(행사 사이트: &lt;a href=&quot;https://gh.io/universerecapkr24/&quot;&gt;https://gh.io/universerecapkr24/&lt;/a&gt; )&lt;/p&gt;
+&lt;h3&gt;1. GitHub UNIVERSE24 Recap Seoul - 발표자 섭외&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;저희 회사에서는 AI-assisted Coding의 효과 검증을 위해 사용자 그룹을 구성하여 GitHub Copilot Business 버전을 업무에 활용하였고, 해당 사례를 블로그로 정리하여 지난 8월 SK 데보션과 당사 Tech Topic 블로그에 포스팅하였는데요(아래). 마침 GitHub APAC의 담당자께서 이 블로그를 보시고 발표 요청 연락을 주셨습니다!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SK데보션 테크 블로그: &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=166794&quot;&gt;https://devocean.sk.com/blog/techBoardDetail.do?ID=166794&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SK플래닛 Tech Topic: &lt;a href=&quot;https://techtopic.skplanet.com/github-copilot/&quot;&gt;https://techtopic.skplanet.com/github-copilot/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;아시는 것처럼 매년 가을에는 미국 샌프란시스코에서 GitHub의 신기술을 발표하는 UNIVERSE 컨퍼런스가 열리는데요(&lt;a href=&quot;https://githubuniverse.com/&quot;&gt;https://githubuniverse.com/&lt;/a&gt;, 10월 또는 11월), 이후 서울을 포함한 전 세계 주요 도시에서 Recap 행사가 열립니다(12월 경).
+2024년 서울 행사에서 고객 사례 중 하나로 &apos;SK플래닛의 GitHub Copilot 활용 사례&apos;를 발표해 줄 수 있는지 연락을 주셔서 기쁘게 수락하게 되었습니다.&lt;/p&gt;
+&lt;p&gt;발표를 위해 내부 보고 등 일련의 절차를 밟았으며, GitHub에서 제공하는 예쁜 템플릿을 활용하여 발표를 준비하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0b38be82d8af7996e1f18e25f865c581/a3c4c/recap_title.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6klEQVR42q1STWsTURQdkJAxmY/MZL7bmaRJ09KMJK1JNZAxbZwyjS2NFNrSguDHohRBEIq7unFl/0JBd5KN3Yv4A1y5cOHfUAQX4uJ434upaRFEcHF495337nn33PsESbPBcFkxkFFNjmzOwohnkAmME3M2MgrdkU2IaZ2vGeJTUu4sR2BBtd5Ee2kFN7oJWlEXxUp4TkxULehGAZ5pwQgC2KVZlJNF2JUpGOYE6mELedOl+xYElpQjMu8Ev+BDNbzfFepUneri5H4Hp4fHeHj6FruDF9h4/grb+2/wqPcO319/wdHdIwjpzFCQVTlud1Q+t0qChlbEp3sR3j99gkZ/gMPBB2zvfMRa7xue9T/jx8uvONh6DEGUhoJMiPVwBFFmyA/7SrhEvWqS5cj0kZpsohi1MbdwB6b1AFFpD/FMFylZowKcYQ+ZVdcvwyHYkyW4QRleYRoOxdbEFLxgGqpXhOLR3itA012ks1lyISGlyPSgysX4UNKSjmqtgWStjzhZx1Lc4+utjU10biacX12/jXYnxnK8ys/ayyvQLB+y7pGQC0V3z3ouMFs+TY2JVqp1hPOLmKO41mghpOkz/srCNcyG8xQ3OVe7eh11OmfDvPjFhPHNub+nOxzj8cXkP0H424V/xX8X/AnBOjT/u1kNOgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;recap_title&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0b38be82d8af7996e1f18e25f865c581/f058b/recap_title.png&quot;
+        srcset=&quot;/static/0b38be82d8af7996e1f18e25f865c581/c26ae/recap_title.png 158w,
+/static/0b38be82d8af7996e1f18e25f865c581/6bdcf/recap_title.png 315w,
+/static/0b38be82d8af7996e1f18e25f865c581/f058b/recap_title.png 630w,
+/static/0b38be82d8af7996e1f18e25f865c581/40601/recap_title.png 945w,
+/static/0b38be82d8af7996e1f18e25f865c581/78612/recap_title.png 1260w,
+/static/0b38be82d8af7996e1f18e25f865c581/a3c4c/recap_title.png 2196w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(GitHub 발표 템플릿의 메인 폰트는 &apos;Mona Sans&apos;입니다)&lt;/p&gt;
+&lt;h3&gt;2. 발표 당일(직전) 스케치&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;연말이어서 판교에서 광화문까지 오는데 길이 꽤 막혔습니다.
+조금 늦었지만 담당 매니저께서 전혀 부담 갖지 않도록 편하게 맞아 주셨고요 :) 빔프로젝트-노트북 셋업은 별도 리허설 없이 연결상태만 간단히 확인한 후 Microsoft 및 GitHub 엔지니어 분들과 함께 도시락을 먹었습니다. 모두 좋은 분들이었고 편하게 대해 주셔서 즐거운 점심 시간을 가졌습니다.&lt;/p&gt;
+&lt;p&gt;굿즈(티셔츠와 간식)도 따로 챙겨주셨고, 개발자용 스티커와 담요 등 참석자에게 제공하는 선물도 잘 받았습니다 :)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3ca3949b6ab602ab806b07076f65762a/5a190/recap_goods_.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADnklEQVR42gGTA2z8ALm7t4uCfX1PWZIxNoZQL0GEFE2IDnl6WrGknrSsoI98ca2hl5eKf4WBdrfBuKevpLrBu73Dwbm9vLO3tgDGwLlqiJYAeL4Bb658e1nHjRmmgyJ5bFmmn5a3tKWlnZDEwbWvqp50dmtfYWFfWWR0eHvFy8i8wcC9wcAAwbqxXoSfAHG8AGu3sI8/8pMA04kZgnNpm5KHoJeLo5yOsKmdr6qeaWRYNDJMP0J4WFhrxszFv8PDv8PCALazrYyIhnqNmG+DjpuCXaiFUJZ9VYh8dI6BdoN1aYFwY5GEeYV4cFxORUJDPUhNSlJZU77FwrzCwcHFxAC/vLefjYOlj4Omk4aUiYWRiYeMgXyViH2ViH2RhXp+cGSLfXOHeXF7cWKZmXqXl3WZnYC4tKTAva/Bx8MAsLKwjYJ6opSLnI+GopSIo5KFnIh7lIJ3mol+o5SHnI2AjH5zhnx1o4V047OX3qaJ5rya6dev4M2vys3EAKCkpD09PEhFQVdTUVNQS25pZXdwa4iBfGddWVFJRFVMRpuLesCvmMKUedyMc96Pdd+mhenXseDKqszNvwCpraszNDImKSc0NzdCRUVRVlVqbm1obGwuMDA5OzsQEQ+uoojw3Lrl0bbWw5nOuJLo0Kzs06/fyaXMy7oAoKSiJyYmKCkoIyQkJicmJCUkLzAuMTIwNzk3Pj8+Njcyp5yF2cOS275i1a9Pp31UyaqE0raT5syo0Mq4AIGFgz4/PjQ1NDk7OyYoJzk7OiUoJiosKjw+O0NEQyEgG5+Qe+jMhdGWEtuaGbF4NqNrN8Saa+7RrtTHtwB2enhGRkYwMTAiJCN1dXTAwb6nqKVgYWEoJyUuMC4PDQqYh2zp0rXesFPnsAbBijqobkHLqIvt0K/ZxrYAc3d1cXRyaGpoXF1bgYOBUVJSiYqJgYF9FhYULCcjFhIPmYp16s+x4MKc58GI16+I1rGIv4xawpRw4cy7AGdrZkZHRjQ2NoGCgXBxbwsKCVpXVoeEgRcUESwZEx4UEZ+Pe+vNrN2/ouXFq+bDqOzLp8mddNavi+fNuABCQT8rKSkaHBpbXVuFhYIsKSeqpaJVU1EfFRErEwwiFhGWfmjlw6PcuprhwJ/jvJzmwqHvz6/51LGgd2IALi4rHh4dHR0bMjQvTE1HREM6QktPM0VUN0JKKi82GxshHxsfIx4gKh4ZVCkccTYeeTgfgjgeiTsghSkMoUizcz9fXQEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;recap_goods_&quot;
+        title=&quot;&quot;
+        src=&quot;/static/3ca3949b6ab602ab806b07076f65762a/f058b/recap_goods_.png&quot;
+        srcset=&quot;/static/3ca3949b6ab602ab806b07076f65762a/c26ae/recap_goods_.png 158w,
+/static/3ca3949b6ab602ab806b07076f65762a/6bdcf/recap_goods_.png 315w,
+/static/3ca3949b6ab602ab806b07076f65762a/f058b/recap_goods_.png 630w,
+/static/3ca3949b6ab602ab806b07076f65762a/5a190/recap_goods_.png 800w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(굿즈가 참 귀엽고 예쁘죠? ^ ^)&lt;/p&gt;
+&lt;h3&gt;3. 행사 진행&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;행사는 크게 다음과 같이 진행되었는데요,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;인사말 (한국 마이크로소프트 부문장, GitHub APAC 담당자)&lt;/li&gt;
+&lt;li&gt;UNIVERSE에서 소개된 신기술 소개 및 데모 (DevRel 및 엔지니어)&lt;/li&gt;
+&lt;li&gt;국내 네임드 개발자의 발표 (아웃사이더 님)&lt;/li&gt;
+&lt;li&gt;고객 사례 소개 (SK플래닛 발표)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/89b2b123f57b4536455f6da21f27d8e2/d56e1/recap_presentation001.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.49367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADNklEQVR42h2Ry28bZRTFZ8OGDUKIwoJ/gAUSK6QKGiRECUUhiVK1ebl+xE7GjmPPeDx+jF/jxBM/xo4TOw+FOMFJG5VWdkhRqrSiK1hVURZIoYFFBGJRqUKiqoTUHfrxpYujK917z7lH50rmjIv8jJt80ElJnyIpj+O5+iUTQ1+QFr1ybIqC4qGgTpAPuTDPIThm0EE2OE5G1ExglLR/BEMeRipoASxNFkQ/1WSApazCQk6nklap5zSa+QhNU6WRC4v5NJWEn0pcFscnBc/HnOpmTnG9qrNhF9Ks7qeckLFEw455WTBkmmmZTSvM5rxK6xUirJlBGpmAEA9RT8lCdJKS2J/XvYI/hZ08P+BBsuZMymaC2VgQ61w8Pk1Zn2Ax4aGR8gr4aKT9LKX8NAwfK7kANTErRW8IZ2MihlFKcSEc9xG+0Y/0w/EZq+1bzGSLhIsrbBw+JjTpRnUNojoHxNIAiquPmdHL6FmL6tZdCsstorUt4uvfk9q6T+3mHjlDITgxirT94DEbu3sE82skNrq0j55iRqdZFI5qmot14Shd2sKO1LFaHdLrXeKrHZTOr0zv/4n34DnFR3/w7c43LDfLSKnaIoX6NrHMDktrd/Ha+2i+MWxDPCAps5AKkI1lsAIKspZnqtbFlWkiN/bRuycY956w8fMZxVSU5aUi0mHtiHbsBEe5i73QxZPbQXN+TVHkU46MUxKw1WHs8BWGZYWrsU36XXF63HN8Elilz2gzMlun5+KHJBUN6WkZOpMv8aRu4ym2uZZooeoGYc0gFFZJ6lFisSjNmds8zPzGTfUFWmyb5MKayHEXX6RBwfGQ3clj0gMPkP5ae0bHfULIfYfe0CK9ahtH9Uc85UMGjV2cwrHT2uen+ef8XYU7nhektO8w7SaZ6jqVTJt/qv/xuwWLY6dIvyROONaPSCsN+gJxhsIWl0YUPuoPcsVnMqo18JptntSf8bL1L4+CpyxNH+C3WjjTKzTre7AOp5Uz7nmF4NtvvcNQz/tkpz4nYhoEyjbjw4N88N4FXnv9Da73XkIf+Yz+i1+x67jF6lCL659eI2e3+PjyCG9eeBelN8KB74BC/zz/A1oGVAfPNQsfAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;recap_presentation001&quot;
+        title=&quot;&quot;
+        src=&quot;/static/89b2b123f57b4536455f6da21f27d8e2/f058b/recap_presentation001.png&quot;
+        srcset=&quot;/static/89b2b123f57b4536455f6da21f27d8e2/c26ae/recap_presentation001.png 158w,
+/static/89b2b123f57b4536455f6da21f27d8e2/6bdcf/recap_presentation001.png 315w,
+/static/89b2b123f57b4536455f6da21f27d8e2/f058b/recap_presentation001.png 630w,
+/static/89b2b123f57b4536455f6da21f27d8e2/40601/recap_presentation001.png 945w,
+/static/89b2b123f57b4536455f6da21f27d8e2/d56e1/recap_presentation001.png 1130w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이날 소개되었던 기술 정리도 함께 하고 싶은데 너무 길어질 것 같아( &lt;del&gt;제가 MS나 GitHub DevRel이 되면(?)&lt;/del&gt; ) 연말에 조금 더 여유가 생기면 한번 시도해 볼까 합니다.&lt;/p&gt;
+&lt;p&gt;이날 행사의 세부 주제와 연사는 여기를 참조하시기 바랍니다.
+=&gt; &lt;a href=&quot;https://gh.io/universerecapkr24/&quot;&gt;https://gh.io/universerecapkr24/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;4. 당사 발표&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;발표의 기본적인 내용은 블로그 내용 중심으로 진행하되,
+앞 부분에 다음 내용을 추가하였습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft-GitHub Collaboration (2022년~현재)&lt;/li&gt;
+&lt;li&gt;Recap in Recap (SK &apos;AI Vision&apos; 요약)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Microsoft-GitHub Collaboration&lt;/h4&gt;
+&lt;p&gt;2022년부터 현재까지 Microsoft-GitHub과 당사와의 인연(!) 및 협업의 여정을 한 장의 장표로 정리하였습니다. 많은 도움을 주신 양 사 담당자 분들께 이 자리를 빌어 감사를 드립니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3604cfaa37ebbbeac5336587eb1e5ce2/a3c4c/recap_collaboration.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACTUlEQVR42nWSO08UURTHt5VZ2NlZZu7OnZk7753XPmZhAQkPERAWeSxIwEjjR7HyE9j5ATRmGwtj7K1tjYUWNsZEWhMr/56ZJQQLil/OuTm5//s/59yKZrgQfgJGkdshLDeC8CJYXlyeufDhttpoZXPw4951LAjTPkw3gco9aIZfUsl6Axw9eoz1zR082DvEva0hHh6eYHd/hOHBMTa2hzg6OcfO3jH2R2c4v3iK49MnZX5ydoF8YRWNpgNmBhNBZnrozi0hJeEexawzQJYP0J1fghOk5CCEqjuoqwKzulteVrlPBGgwj2qFUEhcCcqqQYlHRRvMDqB7VKQWiodqVJtpcDRMGkeQXF0KSIyTUBN6YEETRpmr3JwISnUGSdYxNc1Q4xZky8adqoYpmaMqm5iiXCFBI2rTRR9NK4cdvSBeI1wew8tfwYnHEK1nZMREpVpvYrphYHqWolLkTcw0dcoN1C1yHpHzNICVd8Bcl1zMo7/yGWu7v7GydYnlrV/or/1F2PtQOq1INQbFppaWEiKFPhcTEWq6gBrQthcz8CSGm/ch4oQcDjC//hHbp9+wOfqCxY2v6C1fImiPSVAnhzI5YhYUVxA2ZjSdWtUIDs2JYGYxRNZGOFiA1+7AsO8iWf+EfPQTvYPvSO//QLr6B172nubIJi1X6yakGgkVyAadCyxUFQFJ0VHTBJiIoBZ/zczhJC9J4C0xht99Q7yD3XpeLoYEGUpR5Yr6/0gygzxrXm+4hNsEjeQGGncmW54I3o5E7U++ln+D4BZ8/AOQhkQFQcn9IAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;recap_collaboration&quot;
+        title=&quot;&quot;
+        src=&quot;/static/3604cfaa37ebbbeac5336587eb1e5ce2/f058b/recap_collaboration.png&quot;
+        srcset=&quot;/static/3604cfaa37ebbbeac5336587eb1e5ce2/c26ae/recap_collaboration.png 158w,
+/static/3604cfaa37ebbbeac5336587eb1e5ce2/6bdcf/recap_collaboration.png 315w,
+/static/3604cfaa37ebbbeac5336587eb1e5ce2/f058b/recap_collaboration.png 630w,
+/static/3604cfaa37ebbbeac5336587eb1e5ce2/40601/recap_collaboration.png 945w,
+/static/3604cfaa37ebbbeac5336587eb1e5ce2/78612/recap_collaboration.png 1260w,
+/static/3604cfaa37ebbbeac5336587eb1e5ce2/a3c4c/recap_collaboration.png 2196w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;Recap in Recap (SK AI Vision 요약)&lt;/h4&gt;
+&lt;p&gt;본 발표 내용은 SK그룹의 &apos;AI Vision&apos;과도 결을 같이 한다는 것을 함께 설명하였는데요, 여기서는 간략하게 지난 11월 진행된 SK AI SUMMIT 2024를 통해 SK의 AI Vision이 공유된 것과, 이와 연계된 SK그룹 구성원 대상 다양한 AI 활용역량 강화 방법(교육, 업무, 경연/프롬프톤 등)을 말씀드렸습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/df6bc01303a953b3d3dcd7028e4e0e49/5b2ff/recap_skaivision.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACGUlEQVR42o2T3UuTURyA38Rp+3C6zX25r3Jui0ypVstmHyaBRHQVWCRZOjRhw3S+bhojLWPDuokiMDWiUIpuCpSSoJsuCu8Mr7rqjxArSHs672rSGKMOPJwDh/Oc38c5UqB+L6HwcfbsC3EofIxgKMzh5haCB8OEmo7iqg1QZXZS4wlgd/vzsDrrsDi8eUh2dx27Gvaz07ebhsYgPn89NY4dOJy1OF1etuuMlJTp0VbZ0FRat1DrLeIiV4FUUuurKReH1HozkkpHY7CJi109tF/o5FzHJTo6u7kc6SPSGyXSF6Nb0HUlRm9/nOYTbRitnjypVGGwUmG0YbA4kLaVc2MijTI2NjYoNnJ7tzJ3RCDWbPpbQp0QKlRW1yCVqEmOpHj3ZoknM7M8nnrIi6dzLC0s8nxqlntvXxFdec351UXGvn9mNDOJTghtbl9xoXwtxfD0Xc4korSPyXROXqfnfoaz4zLNCw/wrsxzavUlA3z5h9AshFIZiXSGtg/PKL3ZzYHlOfzvZzBMD2NZfoSWj7RufoIfm9mUJ9K3i6dcZXZkheN/argm6vRNzApf+cm6YE2s1/+3hkpjVFoDTUdaiceTxKIDxGKDggGu9svIQ6PI8RGGBP2DCeRkipaTp0Uz3fldzglz0jJ1pYhUlY32NypKSjWUak1bqJRZY0Rf7Sx8h38LFfQmezb9HEqzTDaP+Cn+Amyuwp/yC53hnPVLcPWYAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;recap_skaivision&quot;
+        title=&quot;&quot;
+        src=&quot;/static/df6bc01303a953b3d3dcd7028e4e0e49/f058b/recap_skaivision.png&quot;
+        srcset=&quot;/static/df6bc01303a953b3d3dcd7028e4e0e49/c26ae/recap_skaivision.png 158w,
+/static/df6bc01303a953b3d3dcd7028e4e0e49/6bdcf/recap_skaivision.png 315w,
+/static/df6bc01303a953b3d3dcd7028e4e0e49/f058b/recap_skaivision.png 630w,
+/static/df6bc01303a953b3d3dcd7028e4e0e49/40601/recap_skaivision.png 945w,
+/static/df6bc01303a953b3d3dcd7028e4e0e49/78612/recap_skaivision.png 1260w,
+/static/df6bc01303a953b3d3dcd7028e4e0e49/5b2ff/recap_skaivision.png 2190w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4d34d13d4d7074a36e2b0aa1de3b5f8e/a3c4c/recap_aieducation.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACUElEQVR42p2SS2gTURRAU7FpkuY3mf8kaWaa3yS2lLZpK1WhEb+0FrIQQWwFpSpYqV0IilS0Ul2LIIIguBY3CtaFK8VqceHGZZcuSuNCNypujm8SU1C7cuAwvPt459377vWFJR2PiGxs0oo10ZD0FHo6j5bM/kkqK+K5Bq2YryULRzQCHTKBoEIkYQqa4s6oSmdQRZYyqGb35kEzLWSGg5roQlUyzbUn9GT+9hj6UB53apR8bZBAVCIQThCKKEhOmt6ZKn0z+7BKJRQh8TLqjAtBpULp1CGcyTGCSpGELoShqEJhcITq3DTjS+c4eOs81ZPHyff2E5WSmIUi7pFRyhO7SeXK6FauUWptv8nMmRwXblSYu9zD7LRBT083vjZ/mCsL11ldWWX5xUuysycoL5xlZGIcWbWxHJek5aKrObrSfRhWAdWyef1snvWPd1h7s0T9wzVYn+XopIvP1xbg3v0HeF+9Xmeouodd+8YYGh7FL8qWtS4Mu0jctJG0FFHxvqrVzbvV93z/8Y0vXzfY+LTGz8+vOFbrx9ceinN4osbi4m3mLl5iYGCYSmUnTr5MKKYSk03RhDym7aJZogFGpiF8ePc0K8/nWX58lSePbvL26RQH9hZEU0Q32zsiItXttG0L0BGR8Qu8tw1Lhnh8jZhi/TMyqqGjGSqqrqPoImtDXCwuao6NhxB7eFkFhcwTNcZG/ONqUkhyf0m9uSw0SeV/r70uC4EhZsgp7MAWXbRFqVm3txFrSbcWbo3PO6SnHDLZEmmn2CCTK4lN57+EvwCc7lTcI+IdMAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;recap_aieducation&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4d34d13d4d7074a36e2b0aa1de3b5f8e/f058b/recap_aieducation.png&quot;
+        srcset=&quot;/static/4d34d13d4d7074a36e2b0aa1de3b5f8e/c26ae/recap_aieducation.png 158w,
+/static/4d34d13d4d7074a36e2b0aa1de3b5f8e/6bdcf/recap_aieducation.png 315w,
+/static/4d34d13d4d7074a36e2b0aa1de3b5f8e/f058b/recap_aieducation.png 630w,
+/static/4d34d13d4d7074a36e2b0aa1de3b5f8e/40601/recap_aieducation.png 945w,
+/static/4d34d13d4d7074a36e2b0aa1de3b5f8e/78612/recap_aieducation.png 1260w,
+/static/4d34d13d4d7074a36e2b0aa1de3b5f8e/a3c4c/recap_aieducation.png 2196w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;코파일럿 활용 사례&lt;/h4&gt;
+&lt;p&gt;활용 사례의 대부분은 당사 기술 블로그의 내용과 유사합니다.
+자세한 내용은 아래를 참조하시기 바랍니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SK데보션 테크 블로그: &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=166794&quot;&gt;https://devocean.sk.com/blog/techBoardDetail.do?ID=166794&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SK플래닛 Tech Topic: &lt;a href=&quot;https://techtopic.skplanet.com/github-copilot/&quot;&gt;https://techtopic.skplanet.com/github-copilot/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/86a5b034e32a16d633b9f9b0dbe048e9/a3c4c/recap_techblog.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACMklEQVR42nWS3WuScRTHH981fZyvz6NOn+VeXFFj1d7EFWZRsEVsREFBtxF00YsZdlH/Q8QYSbTcMPor2kSCVuuuLnINtotlqFOnubYLfb4dn8K2bD/48DsHfr8P5xwOYzDz2A1rccBkc6HtDya7E1aHAKfg+4cecO5DcHSMw+EZAdfuJbrA7JXx0BltYBQ64gAYJcFoIFex0Bjs0LIc0bgb79rACTfgDy3De/gFbM7uvcJGZWqDBceODyP+LIbp2HNMTccwE5/Dy9kEZhOvKU5ghuL43Cs8eToF35ExWF3XwXvOtVZotDoh07AYuzABQMTOzk9sb29h9xHFOiFKcTabxaA/QGMxU8uCJGsRKnVGjJycRPLtGpKpr5hfSEssfczg/dI6Fj9kSFRAubyJUmkTw4EzJBRI6NtfOBqcQCqVxpv5TxILyc94t7iCL+kC0sslElVQrf5AsVQiYYiEbhL2/F8o1xhxfvwitqoFVCp5+pxDoZBDsZgncpRvIJfLIp/fwOrqGrUcJKFnf6FCyyJ49hLWv4nIfK/TDOvSPH/PT0S9LqJWq0l5uVzBUOB0a4V6E4cGDamWtdB+9ePy1TCuXAvj5q0I7oQjuHs/ikj0UZMHDx/j9r0oOnv7aUcPgnd3/xWa7O0wc+4mRisPmUIFRq6ETKamPVRDrtRDpbcR1iZqg412z9sUNYV9A34MBoI44T8ltTA0GkLv0QF4fX2w8B5qyUkfBbg6fC3w7q4W4S8rSbNm6Y3/ywAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;recap_techblog&quot;
+        title=&quot;&quot;
+        src=&quot;/static/86a5b034e32a16d633b9f9b0dbe048e9/f058b/recap_techblog.png&quot;
+        srcset=&quot;/static/86a5b034e32a16d633b9f9b0dbe048e9/c26ae/recap_techblog.png 158w,
+/static/86a5b034e32a16d633b9f9b0dbe048e9/6bdcf/recap_techblog.png 315w,
+/static/86a5b034e32a16d633b9f9b0dbe048e9/f058b/recap_techblog.png 630w,
+/static/86a5b034e32a16d633b9f9b0dbe048e9/40601/recap_techblog.png 945w,
+/static/86a5b034e32a16d633b9f9b0dbe048e9/78612/recap_techblog.png 1260w,
+/static/86a5b034e32a16d633b9f9b0dbe048e9/a3c4c/recap_techblog.png 2196w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2&gt;마무리하며&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;광화문 행사에 발표자로서는 처음 참여한 세미나였는데요, 그 동안 GitHub Blog에서 단어로만 접했던 개발자의 &apos;Happiness&apos;를 잠시나마 느낄 수 있었던 행사였습니다. &lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;블로그에서 일일이 실명을 언급하지는 못했지만, 귀한 자리에 초대해 주시고 도움을 주셨던 모든 분들께 다시 한번 감사드립니다.
+이 글을 읽으시는 모두가 행복한 2025년을 맞기를 진심으로 바랍니다. 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[판교 테크세미나를 운영하는 법과 'Age of AI - the Future of Work' 회고]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 :) 판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, 지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data & Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech…]]></description><link>https://techtopic.skplanet.com/dtc24-ageofai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dtc24-ageofai/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe입니다 :)&lt;/p&gt;
 &lt;p&gt;판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요,&lt;/p&gt;
 &lt;p&gt;지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data &amp;#x26; Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech Topic 블로그를 통해 회고하며, 특히 지난 11월 진행된 DTC 주제인  &apos;Age of AI - the Future of Work&apos; 강연 및 현장의 분위기, 구성원 의견 중 일부를 함께 담아 보았사오니 즐겨 주시면 감사하겠습니다.&lt;/p&gt;
 &lt;p&gt;아울러 기술 세미나를 기획하거나 운영하는 다른 회사 및 부서에서도 함께 참고하여 주시면 감사하겠습니다.&lt;/p&gt;
@@ -757,7 +1068,7 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
 &lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[웹앱 사용자 경험을 개선하는 기술 한 스푼]]></title><description><![CDATA[안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 UPTN Station…]]></description><link>https://techtopic.skplanet.com/uptn-loadingspinner/</link><guid isPermaLink="false">https://techtopic.skplanet.com/uptn-loadingspinner/</guid><dc:creator><![CDATA[chanmin]]></dc:creator><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 UPTN Station의 프론트엔드 개발을 담당하는 김찬민이라고 합니다. 저는 입사하기 전부터 &quot;나부터 사용하고 싶고, 네이티브 이상으로 부드러운 웹앱&quot; 을 만들고 싶다는 꿈을 갖고 있었는데요, 이를 이루기 위해서는 작은 디테일들을 잡아내는 것이 중요하다고 생각했습니다.
 이번 글에서는 프론트엔드 개발자가 어떤 장치들을 도입해 사용자 경험을 개선했는지에 대한 이야기를 사진과 함께 가볍게 풀어보려 합니다.&lt;/p&gt;
 &lt;p&gt;(* UPTN Station: &lt;a href=&quot;https://www.uptn.io/&quot;&gt;https://www.uptn.io/&lt;/a&gt;)&lt;/p&gt;
-&lt;h2&gt;스피너, 어떻게 개선할 수 있을까?&lt;/h2&gt;
+&lt;h2&gt;스피너, 어떻게 개선할 수 있&lt;/h2&gt;
 &lt;p&gt;1년 전 UPTN Station을 처음 맡게 되었을 때의 기억이 아직도 생생한데요, 이 서비스가 과연 어떤 앱인지 파악하기 위해 직접 써보던 중 저는 화면을 가득 채우는 로딩 스피너가 제일 먼저 눈에 들어왔습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;AS-IS (1년 전)&lt;/strong&gt;&lt;/li&gt;
