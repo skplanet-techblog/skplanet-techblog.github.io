@@ -1,4 +1,284 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Jan 2025 07:09:09 GMT</lastBuildDate><item><title><![CDATA[Microsoft-GitHub UNIVERSE24 Recap Seoul Review(Global Version)]]></title><description><![CDATA[안녕하세요, SK플래닛 Joe입니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Feb 2025 02:09:38 GMT</lastBuildDate><item><title><![CDATA[배포 자동화 툴 개발을 위한 AWX 활용]]></title><description><![CDATA[소프트웨어 배포 자동화는 코드 변경 및 테스트 이후 프로덕션 환경에 배포하는 과정을 자동화하여 배포 속도를 향상시키고 품질을 보장하는 중요한 기술이며, 이를 통해 배포 빈도를 증가시키면서도 일관된 환경을 유지하고 보안성을 강화할 수 있습니다. AWX(Ansible Web eXecutable)는 Ansible 기반의 오픈 소스 IT 자동화 플랫폼으로, GUI…]]></description><link>https://techtopic.skplanet.com/ansible-awx/</link><guid isPermaLink="false">https://techtopic.skplanet.com/ansible-awx/</guid><dc:creator><![CDATA[sunny]]></dc:creator><pubDate>Fri, 21 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;소프트웨어 배포 자동화는 코드 변경 및 테스트 이후 프로덕션 환경에 배포하는 과정을 자동화하여 배포 속도를 향상시키고 품질을 보장하는 중요한 기술이며, 이를 통해 배포 빈도를 증가시키면서도 일관된 환경을 유지하고 보안성을 강화할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;AWX(Ansible Web eXecutable)는 Ansible 기반의 오픈 소스 IT 자동화 플랫폼으로, GUI 및 API를 제공하여 Ansible 플레이북 실행을 보다 쉽게 관리하고 스케줄링할 수 있도록 지원합니다. 본 글에서는 AWX를 활용하여 배포 자동화 시스템을 구축하는 방법과 고려해야 할 주요 요소를 살펴봅니다.&lt;/p&gt;
+&lt;h3&gt;배포 자동화의 중요성&lt;/h3&gt;
+&lt;p&gt;소프트웨어 배포 자동화 개념은 이미 개발 프로세스에서 필수적인 역할을 합니다. 이는 개발자가 코드를 변경하고 테스트한 후 프로덕션 환경에 배포하는 과정을 자동화하여 시간을 절약하고 오류 가능성을 줄이는 데 도움이 되기 때문입니다. &lt;/br&gt; &lt;/br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;효율성 향상:&lt;/strong&gt;
+수동 배포 프로세스는 시간 소모가 크고 반복적이며, 오류가 발생할 가능성이 높습니다. 배포 자동화는 이러한 프로세스를 자동화하여 개발자가 더 중요한 다른 업무에 집중할 수 있도록 시간을 확보해 줍니다. 또한 배포 프로세스의 일관성을 유지하면, 오류 가능성을 줄이고 배포 시간을 단축할 수 있습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;품질 향상:&lt;/strong&gt;
+배포 자동화는 배포 프로세스를 표준화하고 일관성을 유지하여 소프트웨어 품질이 향상됩니다. 자동화된 테스트를 통해 배포 전에 코드의 버그를 발견하고 해결할 수 있습니다. 이는 시스템 안정성을 높이고 사용자 경험을 개선하는 데 도움이 됩니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;배포 빈도 증가:&lt;/strong&gt;
+배포 자동화는 배포 프로세스를 간소화하여 배포 빈도를 높여 줍니다. 이는 새로운 기능 및 업데이트를 사용자에게 더 빠르게 제공해 주며,문제 발생 시 신속하게 핫픽스(긴급히 배포되는 패치 프로그램)를 배포하여 시스템 가동 시간을 늘릴 수 있습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;보안 강화:&lt;/strong&gt;
+배포 자동화는 프로세스를 표준화하고 일관성을 유지하여 보안 취약점을 줄일 수 있습니다. 자동화된 보안 테스트를 통해 배포 전에 시스템의 보안 취약점을 발견하고 해결할 수 있습니다. 따라서 배포 자동화는 소프트웨어 개발 프로세스의 효율성, 품질, 빈도, 비용 및 보안성을 향상시키는 데 중요한 역할을 하는 기술입니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 글에서 소개할 AWX를 이용한 배포 자동화 툴 개발은 다음과 같은 장점을 제공합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;간편한 설치와 사용: AWX는 오픈 소스 플랫폼이며, 설치 및 사용이 간편합니다.&lt;/li&gt;
+&lt;li&gt;다양한 기능: AWX는 다양한 배포 관련 기능을 제공합니다.&lt;/li&gt;
+&lt;li&gt;확장성: AWX는 확장 가능하며, 다양한 환경에 적용할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;커뮤니티 지원: AWX는 활발한 커뮤니티를 가지고 있으며, 기술 지원을 받을 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;AWX를 이용한 배포 자동화 툴 개발은 소프트웨어 배포 프로세스를 개선하고 다양한 장점이 있는 효과적인 방법입니다.&lt;/p&gt;
+&lt;h3&gt;AWX: Ansible 기반의 강력한 자동화 플랫폼&lt;/h3&gt;
+&lt;p&gt;AWX는 Ansible 기반의 오픈 소스 IT 자동화 플랫폼으로써, 웹 기반 인터페이스를 통해 Ansible Playbook을 관리, 실행, 배포, 모니터링 등을 수행할 수 있는 강력한 기능을 제공합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AWX의 주요 기능:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ansible Playbook 관리: Playbook 작성, 편집, 실행, 버전 관리&lt;/li&gt;
+&lt;li&gt;인벤토리 관리: 호스트 그룹 및 개별 호스트 정의와 관리&lt;/li&gt;
+&lt;li&gt;작업 템플릿: 반복적인 작업 템플릿 생성 및 재사용&lt;/li&gt;
+&lt;li&gt;자동화된 배포: 배포 스케줄 및 워크플로우 설정&lt;/li&gt;
+&lt;li&gt;권한 관리: 사용자 및 팀에 대한 역할 기반 권한 관리&lt;/li&gt;
+&lt;li&gt;모니터링 및 보고: 작업 실행 결과 및 시스템 상태 모니터링 및 보고서 생성&lt;/li&gt;
+&lt;li&gt;REST API: 자동화 및 통합을 위한 API 제공&lt;/li&gt;
+&lt;li&gt;확장성: Celery를 통한 분산 작업 처리&lt;/li&gt;
+&lt;li&gt;Ansible Engine: 실제 서버에서 Playbook 실행&lt;/li&gt;
+&lt;li&gt;추가 기능: Ansible Vault, Notification, 네트워크 인벤토리, RBAC 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;AWX는 다음과 같은 분야에 활용될 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;서버 프로비저닝 및 배포&lt;/li&gt;
+&lt;li&gt;시스템 구성 및 관리&lt;/li&gt;
+&lt;li&gt;애플리케이션 배포 및 유지 관리&lt;/li&gt;
+&lt;li&gt;네트워크 구성 및 관리&lt;/li&gt;
+&lt;li&gt;보안 및 규정 준수&lt;/li&gt;
+&lt;li&gt;클라우드 자동화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;AWX는 다양한 규모의 조직에서 IT 자동화를 효과적으로 수행할 수 있도록 지원하는 강력하고 유연한 플랫폼입니다.&lt;/p&gt;
+&lt;h3&gt;AWX 설치&lt;/h3&gt;
+&lt;p&gt;AWX Operator는 Kubernetes 상에서 Ansible AWX를 관리하기 위한 도구입니다. AWX는 Ansible의 웹 기반 그래픽 사용자 인터페이스로써, 작업 흐름을 자동화하고 관리할 수 있는 플랫폼입니다. AWX Operator는 Kubernetes Operator의 일종으로, AWX를 배포, 관리 및 확장하기 위한 자동화된 방식을 제공합니다.&lt;/p&gt;
+&lt;p&gt;AWX Operator는 Kubernetes의 Custom Resource Definition (CRD)을 사용하여 AWX 리소스를 정의합니다. 사용자는 이 CRD를 통해 AWX 애플리케이션을 배포하고 구성할 수 있습니다. AWX Operator는 이러한 리소스를 감지하고 관리하며, 필요한 작업을 수행하여 AWX 애플리케이션을 제어합니다.&lt;/p&gt;
+&lt;p&gt;AWX Operator를 사용하면 AWX 애플리케이션을 Kubernetes 클러스터에서 쉽게 배포하고 관리할 수 있습니다. AWX Operator는 AWX의 다양한 구성 요소를 관리하고, 자동으로 복제본을 생성하거나 스케일링할 수 있습니다. 또한 AWX Operator는 AWX 애플리케이션의 상태를 모니터링하고 필요한 경우에는 자동으로 복구 작업을 수행할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;AWX Operator를 사용하면 Kubernetes 환경에서 Ansible AWX를 보다 효율적으로 관리할 수 있습니다. 이를 통해 개발자와 운영팀은 자동화된 작업 흐름을 구성하고, 인프라 자동화를 확장할 수 있습니다. 또한 Kubernetes의 자원을 효율적으로 활용할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;Helm 차트를 이용하여 AWX Operator를 설치하면 기본적으로 PostgreSQL이 StatefulSet으로 구성됩니다. 하지만 사내 정책상 DB는 별도의 DB존에 구성해야 하므로, 기 구축된 PostgreSQL을 사용하기 위해 &lt;code class=&quot;language-text&quot;&gt;postgres-configuration&lt;/code&gt; secret을 수정하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AWX Operator를 이용해 설치시 다음과 같은 점을 고려해야 합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kubernetes 클러스터 버전: AWX Operator는 Kubernetes 1.18 이상을 지원합니다.&lt;/li&gt;
+&lt;li&gt;AWX 버전: AWX Operator는 특정 AWX 버전만 지원합니다.&lt;/li&gt;
+&lt;li&gt;저장소: AWX 데이터를 저장할 영구 저장소가 필요합니다.&lt;/li&gt;
+&lt;li&gt;네트워킹: AWX 컨테이너에 대한 네트워크 접근 권한을 설정해야 합니다.&lt;/li&gt;
+&lt;li&gt;인증: AWX 컨테이너에 대한 인증 방법을 설정해야 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;배포 자동화 툴 개발 과정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;서버 개발&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AWX API 연동:
+&lt;ul&gt;
+&lt;li&gt;배포 설정 시 호스트 및 인벤토리를 생성합니다.&lt;/li&gt;
+&lt;li&gt;배포 시 Job Template 및 Ad-hoc Command 실행합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;주요 기능:
+&lt;ul&gt;
+&lt;li&gt;배포 설정 관리&lt;/li&gt;
+&lt;li&gt;배포 작업 실행 및 상태 조회&lt;/li&gt;
+&lt;li&gt;배포 로그 조회&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Playbook 개발&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;배포 유형별 Playbook:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Web 배포(apache/nginx)&lt;/li&gt;
+&lt;li&gt;커스텀 배포 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;웹 서버 배포 Playbook 예시:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L4에서 웹 서버 제거&lt;/li&gt;
+&lt;li&gt;PID 파일 이용한 웹 서버 중지&lt;/li&gt;
+&lt;li&gt;포트 다운 확인&lt;/li&gt;
+&lt;li&gt;기존 배포 경로 빌드 결과물 삭제&lt;/li&gt;
+&lt;li&gt;새로운 빌드 결과물 다운로드 및 압축 해제&lt;/li&gt;
+&lt;li&gt;배포 경로를 Docroot로 복사&lt;/li&gt;
+&lt;li&gt;웹 서버 시작&lt;/li&gt;
+&lt;li&gt;Health Check 수행&lt;/li&gt;
+&lt;li&gt;L4에 웹 서버 추가&lt;/li&gt;
+&lt;li&gt;백업 폴더 생성 및 백업본 생성 (Rollback 대비)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;커스텀 배포 예시:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;설정된 배포 명령어를 ad-hoc command로 실행&lt;/li&gt;
+&lt;li&gt;설정된 배포 전/후 명령어를 동적으로 include하여 playbook 실행 &lt;/br&gt;&lt;/br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7da66b0c827fb3fef93804ee2c7a2e42/99072/image-2025-2-11_10-51-10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 165.82278481012656%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAhCAYAAADZPosTAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEaUlEQVR42o1W6XriSBDjNXYnNL7t9tk+wBBCjtnd938krdQ2M4GPzMyPDoZgoZKqVN6EYYC07pH3J5S2wNQ1mNoGXZlj35Q49w0cr+e2Ql8VMLsdojBEEOxgjMGO7z+fTcA/aeVQTK+o+iOaYUY3HjE1FQ4EORHwberw/eAwd5UHfuZnNk0QBsEjQIOk7FAMJxRpjDJLURcZ2VjUeYYqTz1TnbG2/kcau3yeJzG2dyw3oh7nJex4RpwVyKOAQPxyHKHKEg+qm/769oS/n7br6xO+8fppu/US3ACG0oMX+XBGOX9H2fRwnUPbj5j7Fgcy62xOHQuvq1iq9KlePs/TW5YbmRJGkTfF7t9Q7N+R9mektvE3zF3tjXnfO7yOHS5Di8vYYqAkcRTSoMAbdMNQ4ub9M4rxBWk3ozq8oRr5nmwrd0BZ1hir3Jshk6bG+h/Re7GV7leWCyBP5o4smyBV48u6TA4Hsnv2jDpfrm5U6Vdzjq72Zskc8xOQJYcRMpZcENDWHXr24dyWeOYNB76qTLFpKIGlUerD7dZ4EDEzt6YsgPl4QcHy2mGPYdxTvwwnAr6smum6JztpJ93u3b11mRpmbkbOsq21mKiXylRJApNeamhprXbZfQHmAXds7LioaciFLF+QWU4HhZaj0kplCyxhXwow+AXYj8YOY45RkiNR+1Bg6VRwtDKCZHyvozJ3vwFbSiZg1k50+IS+XmZVOg1k11JHTc3AUGhpyB8BqgTNshJHJxFDsktWdmpesY6ptUZNrsrh7YOk+TR6BlGaU8czLGdXbSJ3lTIy5IUjKOaKMfVjUyzMH6bNdVKizK6m1JzTgsGwpInXUEFBAIGU1Pf6+ZcMPSBN8QExXVDXBJ0H32u+RHN9/XnMVyWr3LR0HqxgL1oaE2rooyWVpfHn81tT9CcuGqTtnuWWBAu8+PcGmPV696d9qJLjwMAmkT9XneyqWRKH/tqofAGbL/uQY0d25fyBupswTgeMnOVDW/ssfKfTclluy301vPozicKHjDc7lpLY1rdM1Tg0rYNzA/atUtn6eBLQvzRJkaWR1JHjcv7xkuLWs5yUiOWnISeHOuYsW02dsmV0xEjNHnM8NYaqTOfe7R8Bq7TOuwN/NfPsXL0EqFhpxr3Wai9+Vz+ko881QeZRH6ptqtN/PnWU3lkzwFVLyUdqqTLPw6KjJkjRr5LF+m5JrSuAu0SgWgNVN6KrKx8KClYxFcCxW5a8jvTVzAs0ozzmfqdo6y2PI9wXVeoZHdfE1sZTNuZrcGiWNdcjK9BmlL7G3K8ATYpmmVHWtD2GMmO7kB13yuua2j7WyFoSaeHrKMGN+cUa1SNJefxnWVjtiJJ7puIm3HN1ai0IWA9NkuDktFJLz/p2jXrAEzLmYcMnsKPjUho6rlFG1+h8g+/JVM76mb667eW6XQsb/88k8+zs4QNFzewjmw/qpgyUo9JTrD63iFnPwyUV8WEpbaYludPU3yy99BTmyFgmmF9E1mfA/wGtaMCpqUw9DwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image 2025 2 11 10 51 10&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7da66b0c827fb3fef93804ee2c7a2e42/f058b/image-2025-2-11_10-51-10.png&quot;
+        srcset=&quot;/static/7da66b0c827fb3fef93804ee2c7a2e42/c26ae/image-2025-2-11_10-51-10.png 158w,
+/static/7da66b0c827fb3fef93804ee2c7a2e42/6bdcf/image-2025-2-11_10-51-10.png 315w,
+/static/7da66b0c827fb3fef93804ee2c7a2e42/f058b/image-2025-2-11_10-51-10.png 630w,
+/static/7da66b0c827fb3fef93804ee2c7a2e42/99072/image-2025-2-11_10-51-10.png 842w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;커스텀 배포를 이용한 L4 in/out를 통한 무중단 배포 예시:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Health Check API 구현:
+&lt;ul&gt;
+&lt;li&gt;서비스에 &lt;code class=&quot;language-text&quot;&gt;/healthcheck&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;/healthcheck/l4out&lt;/code&gt; API를 구현&lt;/li&gt;
+&lt;li&gt;정상 상태: &lt;code class=&quot;language-text&quot;&gt;/healthcheck&lt;/code&gt; 호출 시 &quot;skp_healthcheck_ok&quot; 응답&lt;/li&gt;
+&lt;li&gt;점검 상태: &lt;code class=&quot;language-text&quot;&gt;/healthcheck/l4out&lt;/code&gt; 호출 시 &quot;out_of_service&quot; 응답&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;L4 out 프로세스:
+&lt;ul&gt;
+&lt;li&gt;배포 시작 전 &lt;code class=&quot;language-text&quot;&gt;/healthcheck/l4out&lt;/code&gt; API 호출&lt;/li&gt;
+&lt;li&gt;서비스가 &quot;out_of_service&quot; 응답 시, L4는 해당 서비스를 비정상으로 인식&lt;/li&gt;
+&lt;li&gt;L4는 5초 간격으로 3회 재시도 후 연속 실패시 &quot;DOWN&quot; 상태로 인식하며, 서비스를 서비스 풀에서 제거&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;배포 수행:
+&lt;ul&gt;
+&lt;li&gt;L4에서 제거된 후 서비스 업데이트 및 배포 진행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;L4 in 프로세스:
+&lt;ul&gt;
+&lt;li&gt;배포 완료 후 &lt;code class=&quot;language-text&quot;&gt;/healthcheck&lt;/code&gt; API 호출&lt;/li&gt;
+&lt;li&gt;서비스가 &quot;skp_healthcheck_ok&quot; 응답 시, L4는 서비스를 정상으로 인식&lt;/li&gt;
+&lt;li&gt;L4는 서비스를 풀에 다시 추가하고 트래픽 유입 시작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;구현 방법:
+&lt;ul&gt;
+&lt;li&gt;커스텀 배포 기능을 사용하여 curl 명령어로 헬스체크 API 호출&lt;/li&gt;
+&lt;li&gt;배포 전후 스크립트에 L4 out/in 로직 포함 &lt;/br&gt;&lt;/br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/475214ec5c60757e60f10da4c16fa6e5/ab40b/image-2025-2-11_11-5-38.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.21518987341772%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA0ElEQVR42mWPW1JEIQxE7/4Xo3ux3INVmiG8QoD7aBNGRy0/uiCEnO5sxBUfIaON86GiO7IM3DiBAuNGARwz+jz+qOlALsVUIX2H2uyWakc1wG9gbcOa+5LfiyhEJ/o4lnTJjKuAiMDMq6/TgCG3f8CYBa3PlcJhyWqxND/pToz9xDwuDDPlGO8JHciprfV0Xg+gdF9nriFPxGbqaR3mZywK4rLe/aR3grQ7Y4u2cmlzQb7liWv31Fab3FC+6mZ9/5+kI/vsBbw9PSO8vEIBfAImWoPFtAqw8AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image 2025 2 11 11 5 38&quot;
+        title=&quot;&quot;
+        src=&quot;/static/475214ec5c60757e60f10da4c16fa6e5/f058b/image-2025-2-11_11-5-38.png&quot;
+        srcset=&quot;/static/475214ec5c60757e60f10da4c16fa6e5/c26ae/image-2025-2-11_11-5-38.png 158w,
+/static/475214ec5c60757e60f10da4c16fa6e5/6bdcf/image-2025-2-11_11-5-38.png 315w,
+/static/475214ec5c60757e60f10da4c16fa6e5/f058b/image-2025-2-11_11-5-38.png 630w,
+/static/475214ec5c60757e60f10da4c16fa6e5/40601/image-2025-2-11_11-5-38.png 945w,
+/static/475214ec5c60757e60f10da4c16fa6e5/78612/image-2025-2-11_11-5-38.png 1260w,
+/static/475214ec5c60757e60f10da4c16fa6e5/ab40b/image-2025-2-11_11-5-38.png 1736w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;배포 자동화 툴 테스트 및 실행&lt;/h3&gt;
+&lt;p&gt;배포 자동화 툴의 웹화면에서 미리 설정한 설정을 통해 배포를 테스트할 수 있습니다. &lt;/br&gt;&lt;/br&gt;
+배포 자동화 툴은 사용자 편의를 위해 웹 UI를 제공하고 있으며, 배포가 필요한 대상 서버 및 명령어 등을 미리 설정할 수 있습니다. 빌드 서버와 연동하여 빌드된 결과물을 배포 설정을 이용해 배포가 가능하며, 배포 시 ansible playbook 실행시의 아웃풋 화면을 함께 확인 가능합니다.&lt;/br&gt;&lt;/br&gt;
+필요에 따라 debug 를 이용해 필요한 정보를 추가합니다.&lt;/br&gt;&lt;/br&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cb92ce0e5b90cd084cba43df320eac30/a3c4c/image-2025-2-11_11-10-40.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABPElEQVR42q1T227CMAxt2jSJc4EE2lIYm4QG//+JZ7G7VTxsDE17OLJVJ+fiqA0FwnAckKeMcijIY0beZ6RNgvceMURBignBBzRN8xsauOwQTxF+9LAbC5MMet9Dk0ZnO2ivoZ1Ga1poq2UmCBX02dfKs6YzHcIUFhwqxgAqtByghchEs14SAVpITTDruZWQHbISE9mtFQJG13fPxPs+MivQnkSVidg1O/kzIdtNxwTakcSTKKFfo4njKiCx3PJNtepnQtUp2R/vjh+ELyml5BLPpN73tTbqgUNGnCPc1kncB+rPRWaCfyBaYKxBjPWFjYFzFlRhK7565xyICK7CWiuraNpWantXV8JtdLi+FlxOGW9zxvtLwVD/mN2wweWYMY0Drrcb5nnG6/kMSgltKfAxYpomlNqP47gSfgBfh+mTxvmbxwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image 2025 2 11 11 10 40&quot;
+        title=&quot;&quot;
+        src=&quot;/static/cb92ce0e5b90cd084cba43df320eac30/f058b/image-2025-2-11_11-10-40.png&quot;
+        srcset=&quot;/static/cb92ce0e5b90cd084cba43df320eac30/c26ae/image-2025-2-11_11-10-40.png 158w,
+/static/cb92ce0e5b90cd084cba43df320eac30/6bdcf/image-2025-2-11_11-10-40.png 315w,
+/static/cb92ce0e5b90cd084cba43df320eac30/f058b/image-2025-2-11_11-10-40.png 630w,
+/static/cb92ce0e5b90cd084cba43df320eac30/40601/image-2025-2-11_11-10-40.png 945w,
+/static/cb92ce0e5b90cd084cba43df320eac30/78612/image-2025-2-11_11-10-40.png 1260w,
+/static/cb92ce0e5b90cd084cba43df320eac30/a3c4c/image-2025-2-11_11-10-40.png 2196w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;문제 해결 및 고려사항&lt;/h3&gt;
+&lt;p&gt;AWX를 기반의 배포 도구 개발에서 다음과 같은 문제들이 발생할 수 있습니다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;보안 문제:&lt;/strong&gt; 배포 도구를 개발할 때 보안 취약점이 발생할 수 있습니다. 예를 들어, 인증 및 권한 부여, 데이터 보안, 네트워크 통신의 암호화 등을 고려해야 합니다. 배포 서버 접근시 적절한 인증 방법 및 권한 부여를 사용하여야 합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;에러 처리:&lt;/strong&gt; 배포 도구의 개발 과정에서 예상치 못한 에러가 발생할 수 있습니다. 이에 대한 적절한 에러 처리 및 로깅 메커니즘을 구현해야 합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;성능 및 확장성 문제:&lt;/strong&gt; 대규모 배포 환경에서 성능과 확장성 문제가 발생할 수 있습니다. AWX와의 통신, 작업 처리, 동시성 관리 등을 최적화하여 성능과 확장성을 향상시켜야 합니다. AWX의 Execution Environment을 이용하면, 작업을 분산하여 성능과 확장성을 향상시킬 수 있습니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;지속적인 개발 및 유지보수:&lt;/strong&gt; 배포 도구는 지속적으로 개발, 업데이트, 유지보수되어야 합니다. AWX의 업데이트나 변경사항에 대응하고, 새로운 요구사항을 수용할 수 있도록 개발 및 유지보수가 필요합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;사용자 경험:&lt;/strong&gt; 배포 도구의 사용자 경험을 고려해야 합니다. 직관적이고 사용하기 쉬운 인터페이스, 문서화된 가이드, 에러 메시지의 명확성 등을 고려하여 사용자들이 편리하게 도구를 활용할 수 있도록 해야 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이러한 문제들은 AWX를 기반으로 배포 도구를 개발할 때 고려해야 할 중요한 사항입니다. 충분한 테스트, 검증, 문제 해결 능력을 갖추고, 커뮤니티나 지원 그룹과의 소통을 통해 이러한 문제들을 극복할 수 있습니다.&lt;/p&gt;
+&lt;h3&gt;결론&lt;/h3&gt;
+&lt;p&gt;AWX 기반의 배포 자동화 툴을 개발하고 운영하면서 얻은 경험을 바탕으로 다음과 같은 결론을 도출하였습니다.
+&lt;/br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AWX는 에이전트 없는 배포방식에서 장점이 있습니다. 에이전트 설치 및 업그레이드에 따른 부담이 없고, 배포 대상 서버들간의 직접 통신으로 보다 단순하고 안정적인 배포가 가능합니다.&lt;/li&gt;
+&lt;li&gt;AWX의 호스트 기반 인벤토리와 템플릿은 배포 자동화 구축을 보다 쉽고 직관적으로 가능하게 합니다. 배포 작업의 표준화와 재사용성 확보에 큰 도움이 됩니다. 오픈소스 기반으로 커뮤니티의 지속적인 기여로 발전 가능성이 높습니다. 문제 해결을 위한 정보와 지식 공유가 용이합니다.&lt;/li&gt;
+&lt;li&gt;앞으로는 Kubernetes와의 연동을 통한 배포 자동화의 확장, 배포 이력 및 성능 지표 수집 기능 강화, UI/UX 개선 등을 계획하고 있습니다. AWX 기반의 배포 자동화 툴은 안정성과 생산성을 보장하는 효과적인 도구로 자리매김할 것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;감사합니다.&lt;/p&gt;
+&lt;p&gt;(참고) &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=165723&quot;&gt;https://devocean.sk.com/blog/techBoardDetail.do?ID=165723&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Microsoft-GitHub UNIVERSE24 Recap Seoul Review(Global Version)]]></title><description><![CDATA[안녕하세요, SK플래닛 Joe입니다. 
 2024년 12월 6일 서울 광화문에서 있었던 'Microsoft-GitHub UNIVERSE24 Recap Seoul'에 발표자로 참여한 후기를 간략히 공유해 드립니다. 이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다.   Hi, this is Joe from SK Planet…]]></description><link>https://techtopic.skplanet.com/universerecapkr24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/universerecapkr24/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Thu, 02 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 Joe입니다. &lt;/br&gt;
 2024년 12월 6일 서울 광화문에서 있었던 &apos;Microsoft-GitHub UNIVERSE24 Recap Seoul&apos;에 발표자로 참여한 후기를 간략히 공유해 드립니다. 이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다.  &lt;/p&gt;
 &lt;p&gt;Hi, this is Joe from SK Planet.&lt;/br&gt;
@@ -1113,10 +1393,8 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
 &lt;h3&gt;마무리&lt;/h3&gt;
 &lt;p&gt;&quot;댓글 하나 달아 준다고 얼마나 효과가 날까?&quot;라는 의문을 가지고 시작했던 개발이 사용자들의 궁금증을 풀어 주고, 재미를 더해 주어 한번 더 글을 작성하게 만드는 효과를 보면서, 개발의 난이도 대비 좋은 결과를 얻었다고 생각합니다. &lt;/br&gt;&lt;/br&gt;
 또한, 댓글을 한번만 달아주고 끝내는 연동이 아니라, 서로 소통하는 스토리를 만들어 개발하는 과정을 통해 생성형 AI 기술의 잠재력과 다양한 응용 가능성을 직접 느낄 수 있었습니다. 이런 경험을 바탕으로 더욱 정교하고 맥락에 맞게 이용자들과 소통할 수 있는 오글봇 AI로 발전시켜 나가고 싶습니다.&lt;/p&gt;
-&lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[웹앱 사용자 경험을 개선하는 기술 한 스푼]]></title><description><![CDATA[안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 UPTN Station…]]></description><link>https://techtopic.skplanet.com/uptn-loadingspinner/</link><guid isPermaLink="false">https://techtopic.skplanet.com/uptn-loadingspinner/</guid><dc:creator><![CDATA[chanmin]]></dc:creator><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛에서 운영하는 블록체인 플랫폼 UPTN Station의 프론트엔드 개발을 담당하는 김찬민이라고 합니다. 저는 입사하기 전부터 &quot;나부터 사용하고 싶고, 네이티브 이상으로 부드러운 웹앱&quot; 을 만들고 싶다는 꿈을 갖고 있었는데요, 이를 이루기 위해서는 작은 디테일들을 잡아내는 것이 중요하다고 생각했습니다.
-이번 글에서는 프론트엔드 개발자가 어떤 장치들을 도입해 사용자 경험을 개선했는지에 대한 이야기를 사진과 함께 가볍게 풀어보려 합니다.&lt;/p&gt;
-&lt;p&gt;(* UPTN Station: &lt;a href=&quot;https://www.uptn.io/&quot;&gt;https://www.uptn.io/&lt;/a&gt;)&lt;/p&gt;
-&lt;h2&gt;스피너, 어떻게 개선할 수 있&lt;/h2&gt;
+&lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[웹앱 사용자 경험을 개선하는 기술 한 스푼]]></title><description><![CDATA[SK…]]></description><link>https://techtopic.skplanet.com/uptn-loadingspinner/</link><guid isPermaLink="false">https://techtopic.skplanet.com/uptn-loadingspinner/</guid><dc:creator><![CDATA[chanmin]]></dc:creator><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;SK플래닛에서 운영하는 블록체인 플랫폼의 프론트엔드 개발을 담당하는 김찬민입니다. 저는 입사 전부터 &apos;나부터 사용하고 싶고 네이티브 이상으로 부드러운 웹앱&apos;을 만들고 싶은 꿈이 있었는데요, 이를 위해 작은 디테일을 잡아내는 것이 중요하다고 생각했습니다. 이번 글은 프론트엔드 개발자가 도입한 기술을 통한 사용자 경험 개선에 관한 이야기입니다.&lt;/p&gt;
+&lt;h3&gt;스피너, 어떻게 개선할 수 있을까&lt;/h3&gt;
 &lt;p&gt;1년 전 UPTN Station을 처음 맡게 되었을 때의 기억이 아직도 생생한데요, 이 서비스가 과연 어떤 앱인지 파악하기 위해 직접 써보던 중 저는 화면을 가득 채우는 로딩 스피너가 제일 먼저 눈에 들어왔습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;AS-IS (1년 전)&lt;/strong&gt;&lt;/li&gt;
@@ -1156,7 +1434,7 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
   &lt;span class=&quot;token literal-property property&quot;&gt;startTime&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;204.69999998807907&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 200ms ~ 260ms 사이의 값&lt;/span&gt;
   &lt;span class=&quot;token literal-property property&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;스켈레톤을 어떻게 잘 도입할 수 있을까?&lt;/h2&gt;
+&lt;h3&gt;스켈레톤을 어떻게 잘 도입할 수 있을까?&lt;/h3&gt;
 &lt;p&gt;그렇다고 스켈레톤이 로딩 경험을 향상시키는 은탄환이 되어 준 것은 아니었습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;중간 버전 (스켈레톤 도입 초기)&lt;/strong&gt;&lt;/li&gt;
@@ -1220,7 +1498,7 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
   &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Row&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;저희는 공통으로 사용되는 애니메이션이 포함된 스켈레톤을 컴포넌트로 만들고, UI의 레이아웃을 제어하는 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;Row&gt;&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;&amp;lt;Column&gt;&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;&amp;lt;Spacing&gt;&lt;/code&gt; 등의 컴포넌트를 적절히 섞어 사용함으로써 스켈레톤 구현에 페이지당 약 5 ~ 10분 내외의 최소한의 시간만을 들이고 서비스 개발에 집중할 수 있었습니다.&lt;/p&gt;
-&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;Transition&gt;&lt;/code&gt; 컴포넌트 활용하기&lt;/h2&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;Transition&gt;&lt;/code&gt; 컴포넌트 활용하기&lt;/h3&gt;
 &lt;p&gt;두 번째로 다룰 주제는 조건부 렌더링과 관련된 이야기인데요, 어려운 내용은 아니지만 잘 알려지지 않은 탓에 사용하지 않는 경우가 있는 것 같아 이번 글에서 함께 소개해보고 싶었습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- React --&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -1275,7 +1553,7 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;즉 기본적으로는 트랜지션 애니메이션이 종료되기 전까지 DOM에 로딩 UI와 완료 UI가 동시에 존재할 수 있는데요, &lt;a href=&quot;https://vuejs.org/guide/built-ins/transition#transition-modes&quot;&gt;mode&lt;/a&gt; 속성을 조작해 UI가 전환되는 시점을 제어할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;이처럼 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;Transition&gt;&lt;/code&gt; 을 활용하면 외부 라이브러리를 사용하지 않고도 쉽고 미려한 enter-exit 전환 애니메이션을 부여할 수 있다는 점에서 많은 분들께 추천드리고 싶습니다.&lt;/p&gt;
-&lt;h2&gt;Tanstack-Query 도입하기&lt;/h2&gt;
+&lt;h3&gt;Tanstack-Query 도입하기&lt;/h3&gt;
 &lt;p&gt;마지막으로 이제는 너무나 유명해진 Tanstack-Query (TQ로 줄여 부르겠습니다) 이야기를 도입한 후기를 짧게 소개해보려 합니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;onMounted&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token function&quot;&gt;handleFetchCoinList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -1329,7 +1607,7 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
     &lt;span class=&quot;token comment&quot;&gt;// 에러 핸들링 로직이 너무 길어진다... 😭&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;마치며&lt;/h2&gt;
+&lt;h3&gt;마치며&lt;/h3&gt;
 &lt;p&gt;이번 글을 통해 제가 보낸 한 해를 돌아보며 비교적 간단한 방법으로 UX를 개선하는 방법들을 소개해 보았는데요, 내년에는 더 멋진 서비스와 새로운 방법으로 다시 만나뵐 수 있길 바라겠습니다.&lt;/p&gt;
 &lt;p&gt;많은 분들께서 웹 어플리케이션은 네이티브에 비해 부드럽지 못하다고 생각하실 수도 있겠지만, 이를 따라잡고 네이티브와의 차이를 느끼지 못할 정도의 경험을 만들어내는 것이 웹 프론트엔드 개발자의 궁극적인 목표라고 생각합니다.&lt;/p&gt;
 &lt;p&gt;SK플래닛과 UPTN Station에도 많은 응원을 부탁드리며, 끝까지 읽어주셔서 감사드립니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[생성형 AI로 QA 업무 수행하기 : 똑똑한 소프트웨어 테스트의 시작]]></title><description><![CDATA[최근 다양한 생성형 AI 기술이 등장하면서 여러 산업 분야에서 필수적인 도구로 자리잡고 있는데요, QA(Quality Assurance) 분야도 예외는 아닙니다. AI를 QA 업무에 적절히 활용하면 업무의 효율성과 정확성을 크게 향상시킬 수 있습니다.
