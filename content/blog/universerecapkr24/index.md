@@ -1,7 +1,7 @@
 ---
 title: "Microsoft-GitHub UNIVERSE24 Recap Seoul Review(Global Version)"
 date: "2025-01-02"
-tags: ["Microsoft", "GitHub", "SK", "UNIVERSERECAPKR24", "AI_Coding"]
+tags: ["Microsoft", "GitHub Copilot", "SK", "UNIVERSERECAPKR24", "AI-assisted Coding"]
 author: "joe" 
 description: "Microsoft-GitHub UNIVERSE24 Recap Seoul Review :) "
 ---
