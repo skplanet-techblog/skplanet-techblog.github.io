@@ -21,6 +21,7 @@ import junghochoi from "./images/junghochoi.jpeg"
 import keumbaek from "./images/keumbaek.png"
 import chanmin from "./images/chanmin.jpeg"
 import eshong from "./images/eshong.png"
+import syrupdev from "./images/syrupdev.png"
 
 export const MEMBERS = {
   jayoon: {
@@ -166,5 +167,11 @@ export const MEMBERS = {
     team: "OCB개발팀",
     description: "탁구치기 좋아하는 아줌마 개발자입니다 :)",
     thumbnail: eshong,
+  },
+  syrupdev: {
+    name: "최경영,여선영,임형준",
+    team: "Syrup개발팀",
+    description: "Syrup 처럼 달콤한 사용자 경험을 추구하는 프론트엔드 개발자들입니다.",
+    thumbnail: syrupdev,
   },
 };
