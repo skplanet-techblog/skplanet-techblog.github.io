@@ -1,12 +1,12 @@
 ---
 title: " '우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?' (feat. SKP 멀티 LLM 플레이그라운드 ＆ AI 프롬프톤 사례 공유)" 
 date: "2024-03-11"
-tags: ["prompthon", "프롬프톤", "Playground", "Multi LLM"]
+tags: ["prompthon", "프롬프톤", "Playground", "Multi-LLM"]
 author: "joe"
-description: "멀티 LLM 플레이그라운드 ＆ AI 프롬프톤 사례 공유" 
+description: "멀티 LLM 플레이그라운드 및 AI 프롬프톤 사례 공유" 
 ---
 
-안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 : )
+안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다!
 </br>
 ChatGPT가 출시된 이후 계속해서 생성형 AI 기술을 활용한 서비스 개발 고도화뿐만 아니라, 각 기업 내 구성원들의 AI 활용을 높이기 위한 노력 또한 더욱 커지고 있는데요.
 따라서 **AI를 잘 활용하기 위한 기업의 환경 조성 및 활용 문화의 확산** 또한 중요해지고 있습니다. 
