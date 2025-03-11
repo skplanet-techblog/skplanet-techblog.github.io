@@ -1,4 +1,398 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 11 Mar 2025 10:48:12 GMT</lastBuildDate><item><title><![CDATA[Syrup Design System 개발 : UX에서 Front-End로의 효과적인 Hand-off]]></title><description><![CDATA[왜 Design System이 필요한가? 개념부터 이해하기 다양한 환경에서 일관된 사용자 경험(UX)을 제공하는 것이 그 어느 때보다 중요해지고 있습니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 11 Mar 2025 10:51:40 GMT</lastBuildDate><item><title><![CDATA[ '우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?' (feat. SKP 멀티 LLM 플레이그라운드 ＆ AI 프롬프톤 사례 공유)]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe!입니다.
+
+ChatGPT가 출시된 이후 계속해서 생성형 AI 기술을 활용한 서비스 개발 고도화뿐만 아니라, 각 기업 내 구성원들의 AI 활용을 높이기 위한 노력 또한 더욱 커지고 있는데요.
+따라서 AI…]]></description><link>https://techtopic.skplanet.com/skp-prompthon24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-prompthon24/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Tue, 11 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe!입니다.
+&lt;/br&gt;
+ChatGPT가 출시된 이후 계속해서 생성형 AI 기술을 활용한 서비스 개발 고도화뿐만 아니라, 각 기업 내 구성원들의 AI 활용을 높이기 위한 노력 또한 더욱 커지고 있는데요.
+따라서 &lt;strong&gt;AI를 잘 활용하기 위한 기업의 환경 조성 및 활용 문화의 확산&lt;/strong&gt; 또한 중요해지고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fa65376b5afe4fc58bcf81200110af65/d3b46/image10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.088607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAvElEQVR42g2OyW6DMAAF+f/PqsghhJYkJWDjlcU2lKpSlbbJberDSHN40rziUA+U1Y2qkTQXSd9btDC4weL1yKh8dsdkRlx2YybE4OmlxbrAsuzMfiXpwCZGimMteCkbjqeW87vielWIziB7jZWGaCxRKXbnidox59CSQ144XN65VqHfbti6Zc+nirruOJSvnKoL56ZDdpowJuKUWOfIV0x8p5X7x5ZZ+c08PzceW+SRAn9h5u4dP9rwtJp/PtXXSezqMooAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;&quot;
+        src=&quot;/static/fa65376b5afe4fc58bcf81200110af65/f058b/image10.png&quot;
+        srcset=&quot;/static/fa65376b5afe4fc58bcf81200110af65/c26ae/image10.png 158w,
+/static/fa65376b5afe4fc58bcf81200110af65/6bdcf/image10.png 315w,
+/static/fa65376b5afe4fc58bcf81200110af65/f058b/image10.png 630w,
+/static/fa65376b5afe4fc58bcf81200110af65/40601/image10.png 945w,
+/static/fa65376b5afe4fc58bcf81200110af65/78612/image10.png 1260w,
+/static/fa65376b5afe4fc58bcf81200110af65/d3b46/image10.png 1690w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(2025년 SK그룹 최태원 회장님 신년 메시지 중)
+&lt;/br&gt;&lt;/br&gt;
+SK플래닛에서는 이미 2024년 여름, 사내 구성원들이 다양한 LLM(Large Language Model)을 실제로 체험할 수 있는 &lt;strong&gt;LLM 플레이그라운드&lt;/strong&gt;를 사내에 시범 오픈하고,
+이를 활용한 &lt;strong&gt;프롬프톤(프롬프트 + 해커톤) 이벤트&lt;/strong&gt;를 사내 개발팀과 지원팀의 콜라보레이션으로 진행한 사례를 SK데보션과 Tech Topic을 통해 공유드리오니 참고하시기 바랍니다.
+&lt;/br&gt;&lt;/p&gt;
+&lt;h3&gt;(1) 개발팀: &apos;멀티 LLM Playground&apos;를 사내 오픈하다!&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h4&gt;A. LLM Playground란?&lt;/h4&gt;
+&lt;p&gt;ChatGPT 기반 서비스에서 활용하는 &lt;strong&gt;LLM Playground&lt;/strong&gt; (이하 &apos;플레이그라운드&apos;)는 서비스에 적용되는 GPT 모델을 테스트해 볼 수 있는 웹 기반 인터페이스로, &lt;a href=&quot;http://chatgpt.com/&quot;&gt;http://chatgpt.com/&lt;/a&gt; 의 채팅 인터페이스와 유사한 구성으로 사용자가 익숙하고 편리하게 사용할 수 있습니다. 또한 여러 가지 파라미터 변경 기능을 함께 제공하기 때문에, 사용자는 GPT의 답변 스타일을 직접 바꿔볼 수 있습니다.
+&lt;/br&gt;
+예를 들어 &apos;Temperature(온도)&apos;라는 파라미터 값을 낮게 설정하면 일반적인 문장의 답변을, 높게 설정하면 무작위성이 증가해 보다 창의적인 답변을 생성하게 되며, 이를 활용해 생성형 AI 기반 서비스의 페르소나를 설계하고 테스트할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.291139240506325%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYklEQVR42qVTi26DMAzM//9mVQYlEAh5B/B8ZrCp0yZVjXRKk5zPV9uoFBNZF6hpNTWdpnv7jbY35NP2hfVCyNsFnI0N5HwkozWp+70jaxfSfJjnmVJKFEIQxBjlnHNm8J4yFf5tjOGYmZxzFJnnvWNBT21zJ9U0DfW9FlEQEbzvO63resEzOYQoSZbFCXdZFrmbZ8tJs/CQTN1uH9R1I4sdhGmaRPTn2radsQmQDO8QORIF4YhgraQej16y4OF0hKD/Ft6B0zEfqNZVyqO0HsWV90EcvLJma2kYBharbGTjmvNfhm0UF/urgjAxTVbcnXUXwROvCjrnpUEQQiyE3xJEc9DtnAs7PGLfFCziCnGoYSmFFOp31vC0jkeMCpr9jOcajqMRYcQkzCEurD3GppQql2j/X6ODROgqdghhbCJ/voitdSM1DOPlEETYxuPh8jfACSEd3Fw5NvBna3iWj1p+AvJp+iiBXMxJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/fe5b2325022baf630b6e281101a8907c/f058b/image01.png&quot;
+        srcset=&quot;/static/fe5b2325022baf630b6e281101a8907c/c26ae/image01.png 158w,
+/static/fe5b2325022baf630b6e281101a8907c/6bdcf/image01.png 315w,
+/static/fe5b2325022baf630b6e281101a8907c/f058b/image01.png 630w,
+/static/fe5b2325022baf630b6e281101a8907c/40601/image01.png 945w,
+/static/fe5b2325022baf630b6e281101a8907c/78612/image01.png 1260w,
+/static/fe5b2325022baf630b6e281101a8907c/ba40d/image01.png 2524w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;
+(OpenAI Playground: &lt;a href=&quot;https://platform.openai.com/playground/chat?models=gpt-4o&quot;&gt;https://platform.openai.com/playground/chat?models=gpt-4o&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;여러분이 아시는 OpenAI에서 제공하는 Playground 뿐만 아니라, Amazon Bedrock, SKT A.X, 네이버 HyperClovaX 등 LLM을 제공하는 기업 중심으로 플레이그라운드를 제공하고 있습니다(최근에는 각각의 활용 목적에 따라 원티드 LaaS, SK mySUNI의 교육용 Playground 등 다양한 모습의 플레이그라운드가 출시되고 있습니다).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACyUlEQVR42j2SS09TURSFr2Cx8nAgpIIaFGMHYkBDFBUBbYuAoPH1C0wcaJyamPj8BY4UUZQiGBmYiMRXUBMVEUopYKkKaQF5lLYUBa21lJbWz3MPxpt8WffunbvOWfscpTfg5/yUlavePsnlKRtXfUI9Ni64rZJLk4IxCxfHBWNd8v3SeLes1z15REtTM9cePcAyPozS2vKY3UV7KK+sxFRdhanqIIdPHKe0vIz9BiMHDpSTnb+VpA1ZpG7OJk2/gZU560jKzhS1TNLSV6NLz0BJTKDm9m2UzoVZTkYcnA47ODPRwVlfN2c8XZKzkS+cig1i+ekjMDrF6KCTAUsP/jE3/I4QD8yzGIoQDUeICY2Hoyj1350oLjOJgw1omi+iqT9HotDlD6+QMNSI4jTTPDvKn9kgdvsA7W/eMTzkwjPpwev24HN78XumcY9NEvoZRKmruYWiKCSnpaJdvwZtZgbaLMFaHSkpKbJ339yI+nz66KCz4wOv217z/OkzXrW9lAvYLFasnRbm/N9RbtXUyp+02/RoDQWs2LcdrVFoaT6ajVmy19iwZDjj8zPt8eESO7T32XGIBXrECEacIwTnAsQXFlFqr9egpCWRfKiIpJJ8lu/JRWMqYFXxNnQlBSxboeHeXTPR+Qj23o/Yuqx8aO/A0T8g46p1Ner8rxAxaXjjJsomHbrKItKr97LasIM1FUVsyc2lwlRGTk4OjeYGiCENe7tt9Fpt2G39uMQhecUsv3n9Mu5CcF5EVg1FrOLiYsqMJo4dOUp15UFKSkopLCyUvaZ/kdXBfxXxPBNTzM3MihHM4BOGwR+/iIYWiKmnXPvPUCUvLw+DuHuqkV6v/18336knHAzxxfGZ92/bxewGpIF6XYjDn2h8iUgM5UlLK7t2FmISRkaDAeP+JQyqim+19/JF2/8dToyOC3WLq+OURH6HpZEkGuMvZTZbFucMlQgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f63df4a6656e43b9b1144361cd98b880/f058b/image02.png&quot;
+        srcset=&quot;/static/f63df4a6656e43b9b1144361cd98b880/c26ae/image02.png 158w,
+/static/f63df4a6656e43b9b1144361cd98b880/6bdcf/image02.png 315w,
+/static/f63df4a6656e43b9b1144361cd98b880/f058b/image02.png 630w,
+/static/f63df4a6656e43b9b1144361cd98b880/40601/image02.png 945w,
+/static/f63df4a6656e43b9b1144361cd98b880/2e694/image02.png 1048w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;
+(SK mySUNI의 교육용 Playground: &lt;a href=&quot;https://www.youtube.com/watch?v=sZ430DLsZA4&quot;&gt;https://www.youtube.com/watch?v=sZ430DLsZA4&lt;/a&gt; )&lt;/p&gt;
+&lt;h4&gt;B. Pain Point와 멀티 LLM 플레이그라운드의 시작&lt;/h4&gt;
+&lt;p&gt;그런데 플레이그라운드의 &apos;출시&apos; 뒤에는 실은 개발자 등 실무자 관점에서의 Pain point가 있었는데요,&lt;/p&gt;
+&lt;p&gt;AI엔지니어 및 개발자가 업무를 위해 LLM 모델을 테스트하기 위해서는 각 LLM 제공 회사의 사이트를 돌아다녀야 하였으며(Context Switching 발생), LLM 모델 별로 비용이나 속도를 비교해 보고 싶은데 그러한 기능을 제공하지 않는 곳도 있어 불편했다고 합니다. 그래서 저희 개발팀에서는 &apos;우리 회사가 자주 사용하는 LLM 모델을 한 곳에서 테스트해 볼 수 있도록 직접 만들어 사용하자!&apos; 는 아이디어를 제안하였고, 이것이 바로 &apos;멀티 LLM Playground&apos;의 시작이었습니다! : )&lt;/p&gt;
+&lt;h4&gt;C. 플레이그라운드의 주요 기능&lt;/h4&gt;
+&lt;p&gt;플레이그라운드의 화면 구성은 다음과 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사내 인트라넷으로 접속 가능 (외부망 불가능)&lt;/li&gt;
+&lt;li&gt;10개 이상의 모델 제공&lt;/li&gt;
+&lt;li&gt;템플릿 예시 제공 (예: 예의바른 MZ 스타일 등)&lt;/li&gt;
+&lt;li&gt;System Prompt, User Prompt, Chat Completion, Output&lt;/li&gt;
+&lt;li&gt;Parameter: Temperature, Max_tokens, Top_p, Performance info 등&lt;/li&gt;
+&lt;li&gt;이벤트 응모하기 버튼 구현&lt;/li&gt;
+&lt;li&gt;사용자 가이드 제공 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ad598159390019f7198092955cfdab0a/a878e/image03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.82278481012659%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6UlEQVR42pVTy47UMBCc//8WuHDnyAdwAC4rhLTsJjOZycOxHdvtpKjuJAgBQmKkljseu7qqun3JOeP+GNB2Pb43HZpbj9tjwrUbMEwBLuR/xuCinY1LRt81uNRa8dK0ePr6Da9cQ4hw8wwfAkQq/vd32bYNsw8GkHNh7jGOE/phxDx7rOv6xyXdqyLYNv1v4/cGITHdv+gBBRwIEmO0TS2ypIRHP9j+5Gay9rRAzywsvKK5R9wnQe8q5QpKKQRdd4bKTD80P8NYaLByrb/mglwE94HWeIKXSjAxq9QiY6jy2uvNommvbFKPaXIYuN+TpeaOLJWhXsyykhlJqOxVpVZjqIUNMC6LSVNgjXBIN2ZkJWfIHspQZaayIVK+RuB3PSUvSzoq7BdSykfs+79bkbKgGzluE8dmrhajF2O8M4w7QzXezD9ybYY2rJ5+Hqz1YkoLi2XtuXVaixlDrRhisvD0x4eFYIGzecPzS0twh3FS/xjjvhYC/u2n43N0OVuntVt6+JwzOfJT6s/OS0ZNHjU6iO9RwwiJAyTHcw4jJkpTlpF+Bj6jeMSeJ3aW/pJBocLqGtTnD5Cn9ygf36J8eQf59Abr9TMZElCB9FU45xAIfHqpr0ZXz6coh0xODFXUXVURm8N9FZuEH7X+85FDekwjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ad598159390019f7198092955cfdab0a/f058b/image03.png&quot;
+        srcset=&quot;/static/ad598159390019f7198092955cfdab0a/c26ae/image03.png 158w,
+/static/ad598159390019f7198092955cfdab0a/6bdcf/image03.png 315w,
+/static/ad598159390019f7198092955cfdab0a/f058b/image03.png 630w,
+/static/ad598159390019f7198092955cfdab0a/40601/image03.png 945w,
+/static/ad598159390019f7198092955cfdab0a/78612/image03.png 1260w,
+/static/ad598159390019f7198092955cfdab0a/a878e/image03.png 2048w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(플레이그라운드 화면)&lt;/p&gt;
+&lt;p&gt;플레이그라운드는 다음 LLM 모델을 지원하도록 만들었습니다(현재는 제공하지 않는 모델도 있음).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenAI / GPT-4o 등&lt;/li&gt;
+&lt;li&gt;Anthropic / Claude 3.5 Sonnet 등&lt;/li&gt;
+&lt;li&gt;Meta / Llama 3&lt;/li&gt;
+&lt;li&gt;네이버 / HyperClova X&lt;/li&gt;
+&lt;li&gt;SKT / A.X 등을 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;원래는 개발팀 등에서 업무 용도로만 사용하고자 해서 UI 등은 크게 신경을 쓰지 않고 빠르게 개발하여 사내에만 사용하고 있었는데 &lt;del&gt;(이름도 &apos;플레이그라운드&apos;...)&lt;/del&gt; ,그래도 여러 모델을 한 화면에서 테스트할 수 있어 좋았고, 오른쪽 패널에서 입출력 토큰 비용 및 답변 속도값을 제공하고 있어서 모델별 조건을 바로바로 비교할 수 있었습니다.
+&lt;/br&gt;
+&lt;/br&gt;
+그러던 중 누군가가, &apos;사내 구성원 전체에게 이 도구를 활용하여 프롬프트 엔지니어링을 경험해 볼 수 있는 기회를 제공하면 어떨까?&apos; 하는 생각을 제안하였고, 마침 담당 임원도 이 아이디어에 동의해 주셨습니다. 따라서 이 도구를 전사에 공개하고 &lt;strong&gt;개발팀과 지원팀 콜라보레이션의 &apos;프롬프톤&apos; 공동 이벤트&lt;/strong&gt; 를 진행하게 되었답니다.&lt;/p&gt;
+&lt;h3&gt;(2) 지원팀: &apos;프롬프톤&apos; 이벤트를 통해 우리회사 서비스의 캐릭터를 경험케 하다!&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h4&gt;A. 서비스 캐릭터, 페르소나, 그리고 AI Characterization&lt;/h4&gt;
+&lt;p&gt;SK플래닛에서는 아시는 것처럼 &lt;strong&gt;OK캐쉬백(이하 OCB)&lt;/strong&gt; 과 &lt;strong&gt;시럽(이하 Syrup)&lt;/strong&gt; 서비스를 운영하고 있는데, 여기에서 사용되는 다양한 귀여운 캐릭터 &apos;판타스틱4&apos; 들이 존재합니다. &lt;strong&gt;오글오글/오글봇&lt;/strong&gt; , &lt;strong&gt;래키(OCB)&lt;/strong&gt; , &lt;strong&gt;러비(Syrup)&lt;/strong&gt; 및 최근 출시된 &lt;strong&gt;OLOCK: (오락: )의 로키&lt;/strong&gt; 가 바로 그것이죠(아래 참조).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4fef0da85527559b32bec187f0f7563c/f6b04/image04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 31.645569620253163%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABg0lEQVR42h2P3XLSUBSFeTjfySsdH6AX3vTSW286rY4dhSJi7Uyh0AolRcJfoAESIqRA/s7JCW0+j1x8M3vt2bPWXgVzFtAwfex1hu3vWexyOtOQOytivHrGDWG+yWmPttxPY+wtuAFYfzOujBV1c0trIujNU9ztnkJr4HB+aVC8+sPXXw/UuksqTYvPpQYX132afZ+ek1HS80nRoHo7o20FGHPFSWXI6fcBZz/HlBqzQ0jB9jIsV7tvFAs/1UgsJ+Bbx+FmoI9mPo9ewmS5YzguM7B62CvdZB3y0K1wbxSxxnVsL2AdvlCo3SrMYQbsSdWeZyWp2nuq5jW/Jx2cIEdlOVn/I/npK/L6W4SIkMmSbPQO78t7XuZHerfRKApCpsSJIIoFYSRQWp91Iz5d1jhuthisElIpiScXBJ0mov2aeLsgStY65A1++RhlHxFHT9pHV5ZphpDqQKJRWns7wYe7G8p276CFzIiiEHf0g8QrIVWOSGLS5JE0naLiqf5O8t/rHyBDszOvEZa9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4fef0da85527559b32bec187f0f7563c/f058b/image04.png&quot;
+        srcset=&quot;/static/4fef0da85527559b32bec187f0f7563c/c26ae/image04.png 158w,
+/static/4fef0da85527559b32bec187f0f7563c/6bdcf/image04.png 315w,
+/static/4fef0da85527559b32bec187f0f7563c/f058b/image04.png 630w,
+/static/4fef0da85527559b32bec187f0f7563c/40601/image04.png 945w,
+/static/4fef0da85527559b32bec187f0f7563c/78612/image04.png 1260w,
+/static/4fef0da85527559b32bec187f0f7563c/f6b04/image04.png 2658w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;오글오글: &lt;a href=&quot;https://ogog.kr/&quot;&gt;https://ogog.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;래키: &lt;a href=&quot;https://www.road2rich.io/&quot;&gt;https://www.road2rich.io/&lt;/a&gt; (Road 2 Rich)&lt;/li&gt;
+&lt;li&gt;러비: &lt;a href=&quot;https://syrup.co.kr/&quot;&gt;https://syrup.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;로키: &lt;a href=&quot;https://www.instagram.com/sk.planet.design/p/C-uV8IUyrlr/?img_index=1&quot;&gt;https://www.instagram.com/sk.planet.design/p/C-uV8IUyrlr/?img_index=1&lt;/a&gt; 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;처음에는 (1)에서 언급한 LLM Playground의 단순 활용 방안을 고민하고 있었는데, 사내 다양한 분들의 이벤트와 캐릭터 활용 아이디어, 그리고 사내에서 공유해 주신 캐릭터 마케팅 관련 글에서 인사이트를 얻어 &lt;strong&gt;&quot;우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?&quot;&lt;/strong&gt; 라는 테마의 프롬프톤 사내 이벤트가 탄생하게 되었습니다. 요약하자면 Prompt Engineering을 통해, 내가 선택한 캐릭터의 페르소나를 정하는 즉 &lt;strong&gt;&apos;AI Characterization&apos;&lt;/strong&gt; 을 진행하는 것이었죠.&lt;/p&gt;
+&lt;p&gt;아래는 사내 인터뷰 일부이며, 사진과 이름 등은 익명 처리하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/33f272fda899334ee3722a48dfdd2f80/21b4d/image05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.65822784810127%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADIUlEQVR42k2TS28bVRiG/QNAlQggLhXQkNA2VAhWbFmyBJUuKlUsALEm4SqxYoFYsaCpSiOapqElolKTlKgEql5oksaJ7/fYiW/x3WPHcWyPHTsz44fPE3MZ6dH7nu/MefWdM3Ms+eXXqKydYM/+CqXVU+xYT7K7fsL01fXj4kcoW1+V+ohJbukUxeUhWq5jNB3/8BJN57DoEJY7M2f58/q7zE2eZurCh/w6cY7bP5/hyvmPWLz2Dr/8eI7L5z9m4ep7zE6eZWbife5Ov0nHO4gqAU2n4JIw1wiq/QUsuvsI3pvPceW7k9y6MGRyf+oYc+NDLE4MMvP9cWbHh5kff5m7k4PUrAPsOwZo2J5EXR8QRG2i9ueFo1jaya/Qs1+jpz8XPsPIfoGeEdKfcrA9KjqGlhqjk+yNx2gnRmnHRw/V9J/QTn5JK/S2BD+NRVUbOF0+ek8qnSMciRONbdNsqhi6iq41+tTRjTZGV/sfHQxjH0PWHijTNNYex1Krlrk1Py8lTRa1UIppWs096LboaiW6uqApdLtV9Nw9tOAl9JAQvIgemTJ9t7MrgVMS+BiW/WaRQm6LYi4ihFDyYQrZoPgNsik/+UyQfLZHmGz4PtngIin3TbKB2+Q27pD3z6HWd9BKV2lYpcNmPUUy5iKd9BLbdJg+EXUR33L0x262wnaiERuJuI9YzEc47CYa9ZJMBIjHPFQqCprZoQSqtTR+zzIB7woB3wpe90NCgUeiS4T8q4SDVnPe43yIT2puxwPRvwh4ZF7ed67/QTaTwNiRM7TKlvcqMSKhVZNw8NGhSmAkuEI64ZRuHWzHXWS2PTJ2E5eu08kgKdlROuNnM2RDUfYwytOHW261qlLImBQLKXYrBcrlAtWdJHpnB13fB0OlXFKo1WuotRC7hQXKcsblTS+atkGzM0+n+BPq2hEsB4VLaMU+ysR/Xujk5WsqF6mnLvPtDyrXZgt4HkyztHid4sI3lG7coJw8Tcz6BK2N3n/4jJyh7an+397Tvv9X+3W5Fda5D/D9fob8vWE2f3udmu0N4S3qjmflvvfu81Ga9hf5G/hWUo8FtHMdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/33f272fda899334ee3722a48dfdd2f80/f058b/image05.png&quot;
+        srcset=&quot;/static/33f272fda899334ee3722a48dfdd2f80/c26ae/image05.png 158w,
+/static/33f272fda899334ee3722a48dfdd2f80/6bdcf/image05.png 315w,
+/static/33f272fda899334ee3722a48dfdd2f80/f058b/image05.png 630w,
+/static/33f272fda899334ee3722a48dfdd2f80/40601/image05.png 945w,
+/static/33f272fda899334ee3722a48dfdd2f80/78612/image05.png 1260w,
+/static/33f272fda899334ee3722a48dfdd2f80/21b4d/image05.png 1280w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;(아래는 프롬프톤 실제 사내공지 일부이며 마스킹한 부분이 있습니다)
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1b638af194c885785e964c7435e66c12/5148a/image06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 69.62025316455697%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACL0lEQVR42qWU+26bMBTG+/5vsheYNKnS9lfVtVu3XtYkYEICJMFAsI3NJeHy9eBsZFJXbdIsfTo+Bn46PhcuoiiCv2SQOYcu9qiMQCEzGNq3bYt+ALq+x/F4nHQ4HF5pfLeua1xIqRCuZmDza/juF3iLGzjP11g6t4g3DNuIIUsCdF1rwX3X4601Qi/KskQQbXE/d/CwIDkMP5iPZ8/Ho+PiyfXwfeaSH2G+2sENYghdQpkKSld2b6rDGai1JiCH42nMXWXtgik8ziRmrgFbVUiFwV5pZKJAmivyyQrypUayl5AEn4DGaLp7iaZuMFC+rOhWXXdS3+GflwVGUQZGETlOgSwbwPkAKYmKs4bhLeFk7XtTDiuK8EgRUtLb4RTVq7wP591vwD9GyDlHGAZYhgxC5GjKA0pKtDYGY8Eq06AuG0ihUBSaQH+pclXVSNItPj2/w41ziTt2hVlwRxAFVSTwkiew5AG5jFFrKogK4Sb3iNX6VfQWOPbhJvIRLmdYBF/xef0BT9EVtOBI0xXugo+4DS7BUw9GJPD5A66W7+Hwbz9x/QSd+rDvh6nC/7NOOYxD8B1DngbYp2sksYc09pHxFVS+oTEctYWWOyujRhuhEHQuxvOY2qw7A5UU2G7W2G0DxDuCx5G1o0SeQsk9zXlKRcnIT6CVoH2F9thQV9Tojs1U8XHObduMhSmrCoauX1ODj749o2fGlLa6WhsrQ1NRFC193FFEJ/36aTRNgxflLTFoJHeKlAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image06&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1b638af194c885785e964c7435e66c12/f058b/image06.png&quot;
+        srcset=&quot;/static/1b638af194c885785e964c7435e66c12/c26ae/image06.png 158w,
+/static/1b638af194c885785e964c7435e66c12/6bdcf/image06.png 315w,
+/static/1b638af194c885785e964c7435e66c12/f058b/image06.png 630w,
+/static/1b638af194c885785e964c7435e66c12/40601/image06.png 945w,
+/static/1b638af194c885785e964c7435e66c12/5148a/image06.png 1228w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;B. 프롬프톤 수상자 회고&lt;/h4&gt;
+&lt;p&gt;프롬프톤 1~3위 수상자의 회고(소감 인터뷰)를 함께 공유드립니다 &lt;del&gt;(프롬프트는 안보여주고!)&lt;/del&gt;
+&lt;/br&gt;
+&lt;strong&gt;사내 데이터 분석가, UX 디자이너, 소프트웨어 엔지니어&lt;/strong&gt; 가 골고루 선정되셨는데요!
+이들의 회고를 통해 프롬프톤이 어떻게 진행되었고 어떤 모델과 프롬프트, 생각으로 결과물을 작성하였는지 아이디어와 느낌을 간접 경험해 보시기 바랍니다.
+&lt;/br&gt;
+&lt;del&gt;(평가 툴도 프롬프트 엔지니어링으로 만들어보기는 했으나 이번 행사는 결국 휴먼 팀장님들이 최종보스...)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8c85f92a1f73ba94a464f00536170c2e/8b640/image07.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.9620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACrElEQVR42lWTS09TQRiGz8qtG8QEAwVRJEajbEx0oQshMSa6xejKywKjKzf8FReaiMQYSLyhjWDw0mptDz1tqaVA70ChlJZW6unp9Zw+TkdduHgy73yLd96Z+T7F0I6w/fUEu98Hqfu7qfltGN4+Qa/AxqZ7hLTzIoang7KnE11QVjul/ofuOYix0C21UvL0835ihLnJYTwvL+CfOYe+YKPm6ybvGkD1fmQrGqKenaK19xrr56v/aP1dG7svaOSnUcq+41QiNymHRyl4TlHyDtGuGdpRceIBKtExarUim5spNjYSrK/FSKeTUm9trZFKRuXaalWxrCqKFb1EMLRMRhTrRhqfOkduJ0tzfRzdtY9G6h7lUpZFbZ4fgc+EfzhZCjqkXlr8QjyiUsitYtW3JYq5cp546CnbkcdY6XF2Arcw4g9orA6jf99PPXGXaiVPIuplPbkoCJCK+8Xex1oiICnkYrTMvDDcQcm7Bln+MEx0/iwr9kEisyfxvx4iOX+KqreDWnyMqpEXSRaILHtIxXwkY5rU8YhXaJ88xBRmViOHknMd59nD27ybvMbc81GmHt3BO3NJ/PxpKmqHTKiXtsVVv7ISdhNadOLXPom9S5oGAw4y6SVazfwfw4L7GLPPRpmZuM6bJzdwvbgi26bu75Et0kiMoe9tEfR9lO+3HPpGOOhkNewitqoKQyfptSA0c5g18YZF94BMZ58c5fP0VdmPhtZL2dsvflkkTN4Xv1whm0mwm09jNnUa9ZKkWS9gNTOYZgnL1CVKWaTZUwcoqUf4pfZTkWbtxj6MoXZRCV+mWXyPWbRLmoV3NAp22HtLdsPBrCNGMfMJs13ffYtiaH3SpKLZJNJM6/s7LW16xBT0iLpNTo7UC72i8Q+x4TiDfeouRXc7SJ+YoC5+A/B5x8nRqJ5HAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image07&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8c85f92a1f73ba94a464f00536170c2e/f058b/image07.png&quot;
+        srcset=&quot;/static/8c85f92a1f73ba94a464f00536170c2e/c26ae/image07.png 158w,
+/static/8c85f92a1f73ba94a464f00536170c2e/6bdcf/image07.png 315w,
+/static/8c85f92a1f73ba94a464f00536170c2e/f058b/image07.png 630w,
+/static/8c85f92a1f73ba94a464f00536170c2e/40601/image07.png 945w,
+/static/8c85f92a1f73ba94a464f00536170c2e/78612/image07.png 1260w,
+/static/8c85f92a1f73ba94a464f00536170c2e/8b640/image07.png 1454w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/br&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c1d911dc44991c2e2cf1de0c6f34e270/d7ceb/image08.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAC00lEQVR42l2TS28bVRiG5zewoCpNc1WkikaqKiQiJATqBhCiFQsk0ssWNrBHLPgDbBDwA5BKFEEplzaRQYEUx7HrZDxjJ+M4iW84jS9x7Di+zi2x8/TzOChSF6++M2eOnvN+l6N0IqN0ImM40WHc6GVsfQRT9jxp45jqJTprL4sunMfVF74lmupl76wS971B4ME7ZP95ndzSa1RCV7H0cblEYJFhLOMtnNQ9nOSM6Las+5rxouvpDrbs28m72DszKLmlKRK+aYz5axiPr7G/PIKlvjQAyo0ntd9wXRO7U8S1KzjWgaiMbZYx2yU6rSIn7iGnJzV6IsUtfUc9/xBKX9Hc+oTa5mc4mc8l3Uk6Auw15tkv5TCi/7KTWBWFSRhBklurpHdUb114ZtA7rnhSKnt+fIsqcEQ2kyKVTtOzc1jRK1Kbi/Tq85SKOTb0J2xurBBfX8GILbMR9XvwrXiI4l6crnswALbE1WHiC0zjbVrqJG3tKk31VUl5wnPYPXpM7bBELh0hl4myl1v3tJuNkU3r7P4X46iaOQcGHtzgz/vv8/fcByz9dIvAL++xcP9jdhbfxNUvCHCBojg0Yn5xF/AcbkqacXG7vRkW10EM2bc7BaljFWXl15ss/HgX3+wdFuc+Iu+/TmN1kubaoIan9UcU8xnW9SUBhDxwP/XU9poHzaZVHLPgues6ZZTY/A1x9iEHwanBDGqjWJp0WhsT4JA05S/qjTqFvW1s61A6XcMyD6TLRez2LuViilIhyWmvSq/bRHH0Szj60GCI+xCR2R8ZbcIbG7fwNcctjePGMt1mkNN2kHI+TGY3jbGh88Ncgp//UHkSWKPbCqBUw9M01L674bMXMnYetVFvuAeXjZ/9G6MtzatoN3nmn8b38Btmf8/z7fezVEMTKNmnX5IMfUolMCoHJ84g/z+9F6IHH0QrcpHj2CschUeILrzLfmBKyjTEcyezACOf8546AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image08&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c1d911dc44991c2e2cf1de0c6f34e270/f058b/image08.png&quot;
+        srcset=&quot;/static/c1d911dc44991c2e2cf1de0c6f34e270/c26ae/image08.png 158w,
+/static/c1d911dc44991c2e2cf1de0c6f34e270/6bdcf/image08.png 315w,
+/static/c1d911dc44991c2e2cf1de0c6f34e270/f058b/image08.png 630w,
+/static/c1d911dc44991c2e2cf1de0c6f34e270/40601/image08.png 945w,
+/static/c1d911dc44991c2e2cf1de0c6f34e270/78612/image08.png 1260w,
+/static/c1d911dc44991c2e2cf1de0c6f34e270/d7ceb/image08.png 1446w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/br&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e72b757baf428fd3ae3904ccccb789dc/ccf0c/image09.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.49367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADAElEQVR42jWTy28bZRTF/RewAZVSCIQkhU1RhUCqkCIlQUJFgMQKlXaBhNQN8CewYo1Qt2wqUQqlSiktpKEthTzAtWN7PI7jtH6/4/Fr7IztmfH4Ef+448Li6J6r0ZzvnPvdz2MrJ7FCs9jKLAP1RZzwzJRboTms4PPYu28wNDYZGEH6bZ/Aj3Pox3a5VBdDw0c6vkE6FcbTCy0QuLVM8PYy+c03KWy+jhF8FTu8gBk8jh1bYTRokc3skUqEyUnNpHZJPFZIxsNk024fxWiXOBrpeLqBl0n9cYbY+ltEfz1F4u4pDh8eww6ewAw8Rz+2xNAuU8rvUsqpggjlQpRcWiGfCVPIqjSqCRjrHA3reJz9JdqV37Gq15hUvqQe/YJe9iuc5EeY/qfp76/gmGViuw9RlS0C/gf4vPeIKJtEI9uEQ38J3+CgFIOjFh6yH+L1qxJHhUmdqLqNrtcZaZcwfU9J5LcZOxp2L0e/l6VnpOm2EtS1OM1acuquVnmM2SkyGTVlhuHTtPc/x4hdoBOYxwgsYOzM46gvyaUcZyAJOocVVu8k+f7mI1bXElwXdDp1oMXkSJ86Y9xkPJDILd9J7nz3AX9eO8tvV86zfvUc6z98jPbPaTr+F3BH0jc1tv0Z7m8nub+VZMObotWs0OtU5TCNjuGiysgRwV5wnrs/nmf18kVuXP6UtSsXpD/HPYG29Yo4XJRh1zhsV9EbFbRKWbhGVwTaujbl7ZaG3pSxmDU8xs4C3pvv4/vlPXZunZX6LpG1FSxlfhrZ3luaCuYLZdKZArl8iXS2SCpdJCvc7au1Axpy2FTQUuYYq89gh47R9L5G1z/HIDKDKYJm4MRUcDKsirMDCoUixWKJugi4UU03shtXeK+jPZmh+1Pc+xlK+AGXvvma29++I4KzmPJSzMCzsofL2E6Nhlmi+R90q0xLdlO3pBeYg5pcjCGL3XYXe4b8zic0ohfx/7zI3z8t0lfl2YlzKyQOo2cYdBWs3iPBniD2BN3/6x6OfBtb8Sn+BVvlH8g7mdzaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image09&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e72b757baf428fd3ae3904ccccb789dc/f058b/image09.png&quot;
+        srcset=&quot;/static/e72b757baf428fd3ae3904ccccb789dc/c26ae/image09.png 158w,
+/static/e72b757baf428fd3ae3904ccccb789dc/6bdcf/image09.png 315w,
+/static/e72b757baf428fd3ae3904ccccb789dc/f058b/image09.png 630w,
+/static/e72b757baf428fd3ae3904ccccb789dc/40601/image09.png 945w,
+/static/e72b757baf428fd3ae3904ccccb789dc/78612/image09.png 1260w,
+/static/e72b757baf428fd3ae3904ccccb789dc/ccf0c/image09.png 1428w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;(3) 마무리하며&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;최근 그리고 계속해서 LLM 모델의 성능이 너무나 좋아지면서, 프롬프트 엔지니어링을 강조하던 기조가 조금은(?) 줄어드는 것 같기는 하지만(웬지 수고 대비 효과를 찾는 휴먼의 관점일까요), 오히려 Agentic AI 등이 떠오르고 있는 요즘 Agent에게 정확한 지시를 하기 위해 아직도 &lt;strong&gt;잘 짜여진 프롬프트의 중요성&lt;/strong&gt; 은 아직도 그 위상을 지키고 있다고 생각합니다.
+&lt;/br&gt;&lt;/br&gt;
+또한 이 글에서는 언급하지 않았지만, &lt;strong&gt;&apos;코드 기반 프롬프트&apos;&lt;/strong&gt; 도 &lt;strong&gt;&apos;LLM에게 명확한 지시를 내린다&apos;&lt;/strong&gt; 는 관점에서 개발 업무, 자동화 코드 생성뿐만 아니라 일반 기획업무 등에서도 유용하게 활용될 수 있을 것으로 기대됩니다 &lt;del&gt;(웬지 다음다음 글이 이 주제 관련 글이 될지도 모르겠다는 생각이...)&lt;/del&gt; .
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+덧1. 본 사내 이벤트는 뤼튼(&lt;a href=&quot;https://wrtn.io/)%EC%9D%98&quot;&gt;https://wrtn.io/)의&lt;/a&gt; 프롬프톤 행사 사례 등을 참조하였습니다. 국내에서는 거의 최초로 진행이 된 것 같은데 팩트체크가 필요하다면 알려주시기 바랍니다.
+&lt;/br&gt;
+(뤼튼 프롬프톤: &lt;a href=&quot;https://wrtn.io/en/2023/12/19/%EB%AA%A8%EB%91%90%EB%A5%BC-%EC%9C%84%ED%95%9C-ai-%EB%A4%BC%ED%8A%BC-%ED%94%84%EB%A1%AC%ED%94%84%ED%86%A4-%EC%83%9D%EC%84%B1-ai-%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/&quot;&gt;https://wrtn.io/en/2023/12/19/%EB%AA%A8%EB%91%90%EB%A5%BC-%EC%9C%84%ED%95%9C-ai-%EB%A4%BC%ED%8A%BC-%ED%94%84%EB%A1%AC%ED%94%84%ED%86%A4-%EC%83%9D%EC%84%B1-ai-%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;덧2. 이 행사가 끝나고 수 개월 후 &apos;프롬프트 엔지니어의 업무일지&apos;를 쓰신 강수진 박사님의 북토크에 간 적이 있었는데(홍보는 아니나 음...), 이날에서야 강박사님과 진대연 님(세시간전 CSO)이 ex-뤼튼 멤버시절 당시 프롬프톤을 기획하셨던 분들이라는 사실을 알게 되었네요! 기회가 되면 이분들 모시고 또 좋은 기회를 갖고자 합니다.&lt;/p&gt;
+&lt;p&gt;덧3. 작년 11월 DTC 인기 연사이셨던 박종천 AI 어드바이저 님께서도 프롬프톤 추천을 해주셨는데 또 한번 해볼까요? : )
+(참고: &lt;a href=&quot;http://techtopic.skplanet.com/dtc24-ageofai/&quot;&gt;http://techtopic.skplanet.com/dtc24-ageofai/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;읽어 주셔서 감사드립니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Syrup Design System 개발 : UX에서 Front-End로의 효과적인 Hand-off]]></title><description><![CDATA[왜 Design System이 필요한가? 개념부터 이해하기 다양한 환경에서 일관된 사용자 경험(UX)을 제공하는 것이 그 어느 때보다 중요해지고 있습니다.
 하지만 디자인과 개발이 따로 움직이면, 스타일이 일치하지 않거나, UI/UX의 일관성이 부족해지고, 중복 작업이 늘어나는 등의 문제가 발생할 수 있습니다.이를 해결하는 방법이 바로 Design…]]></description><link>https://techtopic.skplanet.com/syrup-designsystem/</link><guid isPermaLink="false">https://techtopic.skplanet.com/syrup-designsystem/</guid><dc:creator><![CDATA[syrupdev]]></dc:creator><pubDate>Fri, 07 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;왜 Design System이 필요한가? 개념부터 이해하기&lt;/h2&gt;
 &lt;p&gt;다양한 환경에서 일관된 사용자 경험(UX)을 제공하는 것이 그 어느 때보다 중요해지고 있습니다.
 하지만 디자인과 개발이 따로 움직이면, 스타일이 일치하지 않거나, UI/UX의 일관성이 부족해지고, 중복 작업이 늘어나는 등의 문제가 발생할 수 있습니다.이를 해결하는 방법이 바로 &lt;strong&gt;Design System&lt;/strong&gt;입니다.&lt;/p&gt;
@@ -8186,401 +8580,7 @@ Datadog ASM(Application Security Management)의 경우 WAF와 비슷하게 코�
 &lt;p&gt;지금까지 Planet AD 런칭 후 약 1년 동안 팀에서 진행한 서비스 안정화 및 비용 최적화 내용을 말씀드렸습니다.&lt;/p&gt;
 &lt;p&gt;위에서 말씀드린 내용 이외에도 Spot by NetApp을 사용하여 Spot 인스턴스의 비용을 줄이고, Datadog 이나 Spot by NetApp 에서 제공하는 각 서비스 별 리소스(CPU/MEM) 분석을 참고하여 할당되는 리소스를 최적화시키거나 급격한 트래픽 증가에 대비하기 위해 Spot by NetApp의 Headroom 설정을 하기도 하였습니다. 이러한 활동의 결과 Planet AD는 처음 런칭했을 때 대비 AWS 비용을 약 27% 절감하였습니다.&lt;/p&gt;
 &lt;p&gt;저희가 시도한 방법들이 비슷한 고민을 하고 계시는 분들에게 약간의 팁이 되길 바랍니다. 서비스 런칭 후 고생하신 팀원들, 서비스 안정화와 비용 최적화에 같이 고민해주시고 도와주신 Cloud Eng.팀과 정보보호담당 팀 담당자분께도 감사의 인사를 전합니다.&lt;/p&gt;
-&lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ '우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?' (feat. SKP 멀티 LLM 플레이그라운드 ＆ AI 프롬프톤 사례 공유)]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다!
-
-ChatGPT가 출시된 이후 계속해서 생성형 AI 기술을 활용한 서비스 개발 고도화뿐만 아니라, 각 기업 내 구성원들의 AI 활용을 높이기 위한 노력 또한 더욱 커지고 있는데요.
-따라서 AI…]]></description><link>https://techtopic.skplanet.com/skp-prompthon24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-prompthon24/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Mon, 11 Mar 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe입니다!
-&lt;/br&gt;
-ChatGPT가 출시된 이후 계속해서 생성형 AI 기술을 활용한 서비스 개발 고도화뿐만 아니라, 각 기업 내 구성원들의 AI 활용을 높이기 위한 노력 또한 더욱 커지고 있는데요.
-따라서 &lt;strong&gt;AI를 잘 활용하기 위한 기업의 환경 조성 및 활용 문화의 확산&lt;/strong&gt; 또한 중요해지고 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/fa65376b5afe4fc58bcf81200110af65/d3b46/image10.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 17.088607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAvElEQVR42g2OyW6DMAAF+f/PqsghhJYkJWDjlcU2lKpSlbbJberDSHN40rziUA+U1Y2qkTQXSd9btDC4weL1yKh8dsdkRlx2YybE4OmlxbrAsuzMfiXpwCZGimMteCkbjqeW87vielWIziB7jZWGaCxRKXbnidox59CSQ144XN65VqHfbti6Zc+nirruOJSvnKoL56ZDdpowJuKUWOfIV0x8p5X7x5ZZ+c08PzceW+SRAn9h5u4dP9rwtJp/PtXXSezqMooAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image10&quot;
-        title=&quot;&quot;
-        src=&quot;/static/fa65376b5afe4fc58bcf81200110af65/f058b/image10.png&quot;
-        srcset=&quot;/static/fa65376b5afe4fc58bcf81200110af65/c26ae/image10.png 158w,
-/static/fa65376b5afe4fc58bcf81200110af65/6bdcf/image10.png 315w,
-/static/fa65376b5afe4fc58bcf81200110af65/f058b/image10.png 630w,
-/static/fa65376b5afe4fc58bcf81200110af65/40601/image10.png 945w,
-/static/fa65376b5afe4fc58bcf81200110af65/78612/image10.png 1260w,
-/static/fa65376b5afe4fc58bcf81200110af65/d3b46/image10.png 1690w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-(2025년 SK그룹 최태원 회장님 신년 메시지 중)
-&lt;/br&gt;&lt;/br&gt;
-SK플래닛에서는 이미 2024년 여름, 사내 구성원들이 다양한 LLM(Large Language Model)을 실제로 체험할 수 있는 &lt;strong&gt;LLM 플레이그라운드&lt;/strong&gt;를 사내에 시범 오픈하고,
-이를 활용한 &lt;strong&gt;프롬프톤(프롬프트 + 해커톤) 이벤트&lt;/strong&gt;를 사내 개발팀과 지원팀의 콜라보레이션으로 진행한 사례를 SK데보션과 Tech Topic을 통해 공유드리오니 참고하시기 바랍니다.
-&lt;/br&gt;&lt;/p&gt;
-&lt;h3&gt;(1) 개발팀: &apos;멀티 LLM Playground&apos;를 사내 오픈하다!&lt;/h3&gt;
-&lt;hr&gt;
-&lt;h4&gt;A. LLM Playground란?&lt;/h4&gt;
-&lt;p&gt;ChatGPT 기반 서비스에서 활용하는 &lt;strong&gt;LLM Playground&lt;/strong&gt; (이하 &apos;플레이그라운드&apos;)는 서비스에 적용되는 GPT 모델을 테스트해 볼 수 있는 웹 기반 인터페이스로, &lt;a href=&quot;http://chatgpt.com/&quot;&gt;http://chatgpt.com/&lt;/a&gt; 의 채팅 인터페이스와 유사한 구성으로 사용자가 익숙하고 편리하게 사용할 수 있습니다. 또한 여러 가지 파라미터 변경 기능을 함께 제공하기 때문에, 사용자는 GPT의 답변 스타일을 직접 바꿔볼 수 있습니다.
-&lt;/br&gt;
-예를 들어 &apos;Temperature(온도)&apos;라는 파라미터 값을 낮게 설정하면 일반적인 문장의 답변을, 높게 설정하면 무작위성이 증가해 보다 창의적인 답변을 생성하게 되며, 이를 활용해 생성형 AI 기반 서비스의 페르소나를 설계하고 테스트할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.291139240506325%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYklEQVR42qVTi26DMAzM//9mVQYlEAh5B/B8ZrCp0yZVjXRKk5zPV9uoFBNZF6hpNTWdpnv7jbY35NP2hfVCyNsFnI0N5HwkozWp+70jaxfSfJjnmVJKFEIQxBjlnHNm8J4yFf5tjOGYmZxzFJnnvWNBT21zJ9U0DfW9FlEQEbzvO63resEzOYQoSZbFCXdZFrmbZ8tJs/CQTN1uH9R1I4sdhGmaRPTn2radsQmQDO8QORIF4YhgraQej16y4OF0hKD/Ft6B0zEfqNZVyqO0HsWV90EcvLJma2kYBharbGTjmvNfhm0UF/urgjAxTVbcnXUXwROvCjrnpUEQQiyE3xJEc9DtnAs7PGLfFCziCnGoYSmFFOp31vC0jkeMCpr9jOcajqMRYcQkzCEurD3GppQql2j/X6ODROgqdghhbCJ/voitdSM1DOPlEETYxuPh8jfACSEd3Fw5NvBna3iWj1p+AvJp+iiBXMxJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image01&quot;
-        title=&quot;&quot;
-        src=&quot;/static/fe5b2325022baf630b6e281101a8907c/f058b/image01.png&quot;
-        srcset=&quot;/static/fe5b2325022baf630b6e281101a8907c/c26ae/image01.png 158w,
-/static/fe5b2325022baf630b6e281101a8907c/6bdcf/image01.png 315w,
-/static/fe5b2325022baf630b6e281101a8907c/f058b/image01.png 630w,
-/static/fe5b2325022baf630b6e281101a8907c/40601/image01.png 945w,
-/static/fe5b2325022baf630b6e281101a8907c/78612/image01.png 1260w,
-/static/fe5b2325022baf630b6e281101a8907c/ba40d/image01.png 2524w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;
-(OpenAI Playground: &lt;a href=&quot;https://platform.openai.com/playground/chat?models=gpt-4o&quot;&gt;https://platform.openai.com/playground/chat?models=gpt-4o&lt;/a&gt; )&lt;/p&gt;
-&lt;p&gt;여러분이 아시는 OpenAI에서 제공하는 Playground 뿐만 아니라, Amazon Bedrock, SKT A.X, 네이버 HyperClovaX 등 LLM을 제공하는 기업 중심으로 플레이그라운드를 제공하고 있습니다(최근에는 각각의 활용 목적에 따라 원티드 LaaS, SK mySUNI의 교육용 Playground 등 다양한 모습의 플레이그라운드가 출시되고 있습니다).&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACyUlEQVR42j2SS09TURSFr2Cx8nAgpIIaFGMHYkBDFBUBbYuAoPH1C0wcaJyamPj8BY4UUZQiGBmYiMRXUBMVEUopYKkKaQF5lLYUBa21lJbWz3MPxpt8WffunbvOWfscpTfg5/yUlavePsnlKRtXfUI9Ni64rZJLk4IxCxfHBWNd8v3SeLes1z15REtTM9cePcAyPozS2vKY3UV7KK+sxFRdhanqIIdPHKe0vIz9BiMHDpSTnb+VpA1ZpG7OJk2/gZU560jKzhS1TNLSV6NLz0BJTKDm9m2UzoVZTkYcnA47ODPRwVlfN2c8XZKzkS+cig1i+ekjMDrF6KCTAUsP/jE3/I4QD8yzGIoQDUeICY2Hoyj1350oLjOJgw1omi+iqT9HotDlD6+QMNSI4jTTPDvKn9kgdvsA7W/eMTzkwjPpwev24HN78XumcY9NEvoZRKmruYWiKCSnpaJdvwZtZgbaLMFaHSkpKbJ339yI+nz66KCz4wOv217z/OkzXrW9lAvYLFasnRbm/N9RbtXUyp+02/RoDQWs2LcdrVFoaT6ajVmy19iwZDjj8zPt8eESO7T32XGIBXrECEacIwTnAsQXFlFqr9egpCWRfKiIpJJ8lu/JRWMqYFXxNnQlBSxboeHeXTPR+Qj23o/Yuqx8aO/A0T8g46p1Ner8rxAxaXjjJsomHbrKItKr97LasIM1FUVsyc2lwlRGTk4OjeYGiCENe7tt9Fpt2G39uMQhecUsv3n9Mu5CcF5EVg1FrOLiYsqMJo4dOUp15UFKSkopLCyUvaZ/kdXBfxXxPBNTzM3MihHM4BOGwR+/iIYWiKmnXPvPUCUvLw+DuHuqkV6v/18336knHAzxxfGZ92/bxewGpIF6XYjDn2h8iUgM5UlLK7t2FmISRkaDAeP+JQyqim+19/JF2/8dToyOC3WLq+OURH6HpZEkGuMvZTZbFucMlQgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image02&quot;
-        title=&quot;&quot;
-        src=&quot;/static/f63df4a6656e43b9b1144361cd98b880/f058b/image02.png&quot;
-        srcset=&quot;/static/f63df4a6656e43b9b1144361cd98b880/c26ae/image02.png 158w,
-/static/f63df4a6656e43b9b1144361cd98b880/6bdcf/image02.png 315w,
-/static/f63df4a6656e43b9b1144361cd98b880/f058b/image02.png 630w,
-/static/f63df4a6656e43b9b1144361cd98b880/40601/image02.png 945w,
-/static/f63df4a6656e43b9b1144361cd98b880/2e694/image02.png 1048w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;
-(SK mySUNI의 교육용 Playground: &lt;a href=&quot;https://www.youtube.com/watch?v=sZ430DLsZA4&quot;&gt;https://www.youtube.com/watch?v=sZ430DLsZA4&lt;/a&gt; )&lt;/p&gt;
-&lt;h4&gt;B. Pain Point와 멀티 LLM 플레이그라운드의 시작&lt;/h4&gt;
-&lt;p&gt;그런데 플레이그라운드의 &apos;출시&apos; 뒤에는 실은 개발자 등 실무자 관점에서의 Pain point가 있었는데요,&lt;/p&gt;
-&lt;p&gt;AI엔지니어 및 개발자가 업무를 위해 LLM 모델을 테스트하기 위해서는 각 LLM 제공 회사의 사이트를 돌아다녀야 하였으며(Context Switching 발생), LLM 모델 별로 비용이나 속도를 비교해 보고 싶은데 그러한 기능을 제공하지 않는 곳도 있어 불편했다고 합니다. 그래서 저희 개발팀에서는 &apos;우리 회사가 자주 사용하는 LLM 모델을 한 곳에서 테스트해 볼 수 있도록 직접 만들어 사용하자!&apos; 는 아이디어를 제안하였고, 이것이 바로 &apos;멀티 LLM Playground&apos;의 시작이었습니다! : )&lt;/p&gt;
-&lt;h4&gt;C. 플레이그라운드의 주요 기능&lt;/h4&gt;
-&lt;p&gt;플레이그라운드의 화면 구성은 다음과 같습니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;사내 인트라넷으로 접속 가능 (외부망 불가능)&lt;/li&gt;
-&lt;li&gt;10개 이상의 모델 제공&lt;/li&gt;
-&lt;li&gt;템플릿 예시 제공 (예: 예의바른 MZ 스타일 등)&lt;/li&gt;
-&lt;li&gt;System Prompt, User Prompt, Chat Completion, Output&lt;/li&gt;
-&lt;li&gt;Parameter: Temperature, Max_tokens, Top_p, Performance info 등&lt;/li&gt;
-&lt;li&gt;이벤트 응모하기 버튼 구현&lt;/li&gt;
-&lt;li&gt;사용자 가이드 제공 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ad598159390019f7198092955cfdab0a/a878e/image03.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 65.82278481012659%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6UlEQVR42pVTy47UMBCc//8WuHDnyAdwAC4rhLTsJjOZycOxHdvtpKjuJAgBQmKkljseu7qqun3JOeP+GNB2Pb43HZpbj9tjwrUbMEwBLuR/xuCinY1LRt81uNRa8dK0ePr6Da9cQ4hw8wwfAkQq/vd32bYNsw8GkHNh7jGOE/phxDx7rOv6xyXdqyLYNv1v4/cGITHdv+gBBRwIEmO0TS2ypIRHP9j+5Gay9rRAzywsvKK5R9wnQe8q5QpKKQRdd4bKTD80P8NYaLByrb/mglwE94HWeIKXSjAxq9QiY6jy2uvNommvbFKPaXIYuN+TpeaOLJWhXsyykhlJqOxVpVZjqIUNMC6LSVNgjXBIN2ZkJWfIHspQZaayIVK+RuB3PSUvSzoq7BdSykfs+79bkbKgGzluE8dmrhajF2O8M4w7QzXezD9ybYY2rJ5+Hqz1YkoLi2XtuXVaixlDrRhisvD0x4eFYIGzecPzS0twh3FS/xjjvhYC/u2n43N0OVuntVt6+JwzOfJT6s/OS0ZNHjU6iO9RwwiJAyTHcw4jJkpTlpF+Bj6jeMSeJ3aW/pJBocLqGtTnD5Cn9ygf36J8eQf59Abr9TMZElCB9FU45xAIfHqpr0ZXz6coh0xODFXUXVURm8N9FZuEH7X+85FDekwjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image03&quot;
-        title=&quot;&quot;
-        src=&quot;/static/ad598159390019f7198092955cfdab0a/f058b/image03.png&quot;
-        srcset=&quot;/static/ad598159390019f7198092955cfdab0a/c26ae/image03.png 158w,
-/static/ad598159390019f7198092955cfdab0a/6bdcf/image03.png 315w,
-/static/ad598159390019f7198092955cfdab0a/f058b/image03.png 630w,
-/static/ad598159390019f7198092955cfdab0a/40601/image03.png 945w,
-/static/ad598159390019f7198092955cfdab0a/78612/image03.png 1260w,
-/static/ad598159390019f7198092955cfdab0a/a878e/image03.png 2048w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-(플레이그라운드 화면)&lt;/p&gt;
-&lt;p&gt;플레이그라운드는 다음 LLM 모델을 지원하도록 만들었습니다(현재는 제공하지 않는 모델도 있음).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;OpenAI / GPT-4o 등&lt;/li&gt;
-&lt;li&gt;Anthropic / Claude 3.5 Sonnet 등&lt;/li&gt;
-&lt;li&gt;Meta / Llama 3&lt;/li&gt;
-&lt;li&gt;네이버 / HyperClova X&lt;/li&gt;
-&lt;li&gt;SKT / A.X 등을 지원&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;원래는 개발팀 등에서 업무 용도로만 사용하고자 해서 UI 등은 크게 신경을 쓰지 않고 빠르게 개발하여 사내에만 사용하고 있었는데 &lt;del&gt;(이름도 &apos;플레이그라운드&apos;...)&lt;/del&gt; ,그래도 여러 모델을 한 화면에서 테스트할 수 있어 좋았고, 오른쪽 패널에서 입출력 토큰 비용 및 답변 속도값을 제공하고 있어서 모델별 조건을 바로바로 비교할 수 있었습니다.
-&lt;/br&gt;
-&lt;/br&gt;
-그러던 중 누군가가, &apos;사내 구성원 전체에게 이 도구를 활용하여 프롬프트 엔지니어링을 경험해 볼 수 있는 기회를 제공하면 어떨까?&apos; 하는 생각을 제안하였고, 마침 담당 임원도 이 아이디어에 동의해 주셨습니다. 따라서 이 도구를 전사에 공개하고 &lt;strong&gt;개발팀과 지원팀 콜라보레이션의 &apos;프롬프톤&apos; 공동 이벤트&lt;/strong&gt; 를 진행하게 되었답니다.&lt;/p&gt;
-&lt;h3&gt;(2) 지원팀: &apos;프롬프톤&apos; 이벤트를 통해 우리회사 서비스의 캐릭터를 경험케 하다!&lt;/h3&gt;
-&lt;hr&gt;
-&lt;h4&gt;A. 서비스 캐릭터, 페르소나, 그리고 AI Characterization&lt;/h4&gt;
-&lt;p&gt;SK플래닛에서는 아시는 것처럼 &lt;strong&gt;OK캐쉬백(이하 OCB)&lt;/strong&gt; 과 &lt;strong&gt;시럽(이하 Syrup)&lt;/strong&gt; 서비스를 운영하고 있는데, 여기에서 사용되는 다양한 귀여운 캐릭터 &apos;판타스틱4&apos; 들이 존재합니다. &lt;strong&gt;오글오글/오글봇&lt;/strong&gt; , &lt;strong&gt;래키(OCB)&lt;/strong&gt; , &lt;strong&gt;러비(Syrup)&lt;/strong&gt; 및 최근 출시된 &lt;strong&gt;OLOCK: (오락: )의 로키&lt;/strong&gt; 가 바로 그것이죠(아래 참조).&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4fef0da85527559b32bec187f0f7563c/f6b04/image04.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 31.645569620253163%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABg0lEQVR42h2P3XLSUBSFeTjfySsdH6AX3vTSW286rY4dhSJi7Uyh0AolRcJfoAESIqRA/s7JCW0+j1x8M3vt2bPWXgVzFtAwfex1hu3vWexyOtOQOytivHrGDWG+yWmPttxPY+wtuAFYfzOujBV1c0trIujNU9ztnkJr4HB+aVC8+sPXXw/UuksqTYvPpQYX132afZ+ek1HS80nRoHo7o20FGHPFSWXI6fcBZz/HlBqzQ0jB9jIsV7tvFAs/1UgsJ+Bbx+FmoI9mPo9ewmS5YzguM7B62CvdZB3y0K1wbxSxxnVsL2AdvlCo3SrMYQbsSdWeZyWp2nuq5jW/Jx2cIEdlOVn/I/npK/L6W4SIkMmSbPQO78t7XuZHerfRKApCpsSJIIoFYSRQWp91Iz5d1jhuthisElIpiScXBJ0mov2aeLsgStY65A1++RhlHxFHT9pHV5ZphpDqQKJRWns7wYe7G8p276CFzIiiEHf0g8QrIVWOSGLS5JE0naLiqf5O8t/rHyBDszOvEZa9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image04&quot;
-        title=&quot;&quot;
-        src=&quot;/static/4fef0da85527559b32bec187f0f7563c/f058b/image04.png&quot;
-        srcset=&quot;/static/4fef0da85527559b32bec187f0f7563c/c26ae/image04.png 158w,
-/static/4fef0da85527559b32bec187f0f7563c/6bdcf/image04.png 315w,
-/static/4fef0da85527559b32bec187f0f7563c/f058b/image04.png 630w,
-/static/4fef0da85527559b32bec187f0f7563c/40601/image04.png 945w,
-/static/4fef0da85527559b32bec187f0f7563c/78612/image04.png 1260w,
-/static/4fef0da85527559b32bec187f0f7563c/f6b04/image04.png 2658w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;오글오글: &lt;a href=&quot;https://ogog.kr/&quot;&gt;https://ogog.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;래키: &lt;a href=&quot;https://www.road2rich.io/&quot;&gt;https://www.road2rich.io/&lt;/a&gt; (Road 2 Rich)&lt;/li&gt;
-&lt;li&gt;러비: &lt;a href=&quot;https://syrup.co.kr/&quot;&gt;https://syrup.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;로키: &lt;a href=&quot;https://www.instagram.com/sk.planet.design/p/C-uV8IUyrlr/?img_index=1&quot;&gt;https://www.instagram.com/sk.planet.design/p/C-uV8IUyrlr/?img_index=1&lt;/a&gt; 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;처음에는 (1)에서 언급한 LLM Playground의 단순 활용 방안을 고민하고 있었는데, 사내 다양한 분들의 이벤트와 캐릭터 활용 아이디어, 그리고 사내에서 공유해 주신 캐릭터 마케팅 관련 글에서 인사이트를 얻어 &lt;strong&gt;&quot;우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?&quot;&lt;/strong&gt; 라는 테마의 프롬프톤 사내 이벤트가 탄생하게 되었습니다. 요약하자면 Prompt Engineering을 통해, 내가 선택한 캐릭터의 페르소나를 정하는 즉 &lt;strong&gt;&apos;AI Characterization&apos;&lt;/strong&gt; 을 진행하는 것이었죠.&lt;/p&gt;
-&lt;p&gt;아래는 사내 인터뷰 일부이며, 사진과 이름 등은 익명 처리하였습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/33f272fda899334ee3722a48dfdd2f80/21b4d/image05.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.65822784810127%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADIUlEQVR42k2TS28bVRiG/QNAlQggLhXQkNA2VAhWbFmyBJUuKlUsALEm4SqxYoFYsaCpSiOapqElolKTlKgEql5oksaJ7/fYiW/x3WPHcWyPHTsz44fPE3MZ6dH7nu/MefWdM3Ms+eXXqKydYM/+CqXVU+xYT7K7fsL01fXj4kcoW1+V+ohJbukUxeUhWq5jNB3/8BJN57DoEJY7M2f58/q7zE2eZurCh/w6cY7bP5/hyvmPWLz2Dr/8eI7L5z9m4ep7zE6eZWbife5Ov0nHO4gqAU2n4JIw1wiq/QUsuvsI3pvPceW7k9y6MGRyf+oYc+NDLE4MMvP9cWbHh5kff5m7k4PUrAPsOwZo2J5EXR8QRG2i9ueFo1jaya/Qs1+jpz8XPsPIfoGeEdKfcrA9KjqGlhqjk+yNx2gnRmnHRw/V9J/QTn5JK/S2BD+NRVUbOF0+ek8qnSMciRONbdNsqhi6iq41+tTRjTZGV/sfHQxjH0PWHijTNNYex1Krlrk1Py8lTRa1UIppWs096LboaiW6uqApdLtV9Nw9tOAl9JAQvIgemTJ9t7MrgVMS+BiW/WaRQm6LYi4ihFDyYQrZoPgNsik/+UyQfLZHmGz4PtngIin3TbKB2+Q27pD3z6HWd9BKV2lYpcNmPUUy5iKd9BLbdJg+EXUR33L0x262wnaiERuJuI9YzEc47CYa9ZJMBIjHPFQqCprZoQSqtTR+zzIB7woB3wpe90NCgUeiS4T8q4SDVnPe43yIT2puxwPRvwh4ZF7ed67/QTaTwNiRM7TKlvcqMSKhVZNw8NGhSmAkuEI64ZRuHWzHXWS2PTJ2E5eu08kgKdlROuNnM2RDUfYwytOHW261qlLImBQLKXYrBcrlAtWdJHpnB13fB0OlXFKo1WuotRC7hQXKcsblTS+atkGzM0+n+BPq2hEsB4VLaMU+ysR/Xujk5WsqF6mnLvPtDyrXZgt4HkyztHid4sI3lG7coJw8Tcz6BK2N3n/4jJyh7an+397Tvv9X+3W5Fda5D/D9fob8vWE2f3udmu0N4S3qjmflvvfu81Ga9hf5G/hWUo8FtHMdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image05&quot;
-        title=&quot;&quot;
-        src=&quot;/static/33f272fda899334ee3722a48dfdd2f80/f058b/image05.png&quot;
-        srcset=&quot;/static/33f272fda899334ee3722a48dfdd2f80/c26ae/image05.png 158w,
-/static/33f272fda899334ee3722a48dfdd2f80/6bdcf/image05.png 315w,
-/static/33f272fda899334ee3722a48dfdd2f80/f058b/image05.png 630w,
-/static/33f272fda899334ee3722a48dfdd2f80/40601/image05.png 945w,
-/static/33f272fda899334ee3722a48dfdd2f80/78612/image05.png 1260w,
-/static/33f272fda899334ee3722a48dfdd2f80/21b4d/image05.png 1280w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;(아래는 프롬프톤 실제 사내공지 일부이며 마스킹한 부분이 있습니다)
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1b638af194c885785e964c7435e66c12/5148a/image06.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 69.62025316455697%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACL0lEQVR42qWU+26bMBTG+/5vsheYNKnS9lfVtVu3XtYkYEICJMFAsI3NJeHy9eBsZFJXbdIsfTo+Bn46PhcuoiiCv2SQOYcu9qiMQCEzGNq3bYt+ALq+x/F4nHQ4HF5pfLeua1xIqRCuZmDza/juF3iLGzjP11g6t4g3DNuIIUsCdF1rwX3X4601Qi/KskQQbXE/d/CwIDkMP5iPZ8/Ho+PiyfXwfeaSH2G+2sENYghdQpkKSld2b6rDGai1JiCH42nMXWXtgik8ziRmrgFbVUiFwV5pZKJAmivyyQrypUayl5AEn4DGaLp7iaZuMFC+rOhWXXdS3+GflwVGUQZGETlOgSwbwPkAKYmKs4bhLeFk7XtTDiuK8EgRUtLb4RTVq7wP591vwD9GyDlHGAZYhgxC5GjKA0pKtDYGY8Eq06AuG0ihUBSaQH+pclXVSNItPj2/w41ziTt2hVlwRxAFVSTwkiew5AG5jFFrKogK4Sb3iNX6VfQWOPbhJvIRLmdYBF/xef0BT9EVtOBI0xXugo+4DS7BUw9GJPD5A66W7+Hwbz9x/QSd+rDvh6nC/7NOOYxD8B1DngbYp2sksYc09pHxFVS+oTEctYWWOyujRhuhEHQuxvOY2qw7A5UU2G7W2G0DxDuCx5G1o0SeQsk9zXlKRcnIT6CVoH2F9thQV9Tojs1U8XHObduMhSmrCoauX1ODj749o2fGlLa6WhsrQ1NRFC193FFEJ/36aTRNgxflLTFoJHeKlAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image06&quot;
-        title=&quot;&quot;
-        src=&quot;/static/1b638af194c885785e964c7435e66c12/f058b/image06.png&quot;
-        srcset=&quot;/static/1b638af194c885785e964c7435e66c12/c26ae/image06.png 158w,
-/static/1b638af194c885785e964c7435e66c12/6bdcf/image06.png 315w,
-/static/1b638af194c885785e964c7435e66c12/f058b/image06.png 630w,
-/static/1b638af194c885785e964c7435e66c12/40601/image06.png 945w,
-/static/1b638af194c885785e964c7435e66c12/5148a/image06.png 1228w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h4&gt;B. 프롬프톤 수상자 회고&lt;/h4&gt;
-&lt;p&gt;프롬프톤 1~3위 수상자의 회고(소감 인터뷰)를 함께 공유드립니다 &lt;del&gt;(프롬프트는 안보여주고!)&lt;/del&gt;
-&lt;/br&gt;
-&lt;strong&gt;사내 데이터 분석가, UX 디자이너, 소프트웨어 엔지니어&lt;/strong&gt; 가 골고루 선정되셨는데요!
-이들의 회고를 통해 프롬프톤이 어떻게 진행되었고 어떤 모델과 프롬프트, 생각으로 결과물을 작성하였는지 아이디어와 느낌을 간접 경험해 보시기 바랍니다.
-&lt;/br&gt;
-&lt;del&gt;(평가 툴도 프롬프트 엔지니어링으로 만들어보기는 했으나 이번 행사는 결국 휴먼 팀장님들이 최종보스...)&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8c85f92a1f73ba94a464f00536170c2e/8b640/image07.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.9620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACrElEQVR42lWTS09TQRiGz8qtG8QEAwVRJEajbEx0oQshMSa6xejKywKjKzf8FReaiMQYSLyhjWDw0mptDz1tqaVA70ChlJZW6unp9Zw+TkdduHgy73yLd96Z+T7F0I6w/fUEu98Hqfu7qfltGN4+Qa/AxqZ7hLTzIoang7KnE11QVjul/ofuOYix0C21UvL0835ihLnJYTwvL+CfOYe+YKPm6ybvGkD1fmQrGqKenaK19xrr56v/aP1dG7svaOSnUcq+41QiNymHRyl4TlHyDtGuGdpRceIBKtExarUim5spNjYSrK/FSKeTUm9trZFKRuXaalWxrCqKFb1EMLRMRhTrRhqfOkduJ0tzfRzdtY9G6h7lUpZFbZ4fgc+EfzhZCjqkXlr8QjyiUsitYtW3JYq5cp546CnbkcdY6XF2Arcw4g9orA6jf99PPXGXaiVPIuplPbkoCJCK+8Xex1oiICnkYrTMvDDcQcm7Bln+MEx0/iwr9kEisyfxvx4iOX+KqreDWnyMqpEXSRaILHtIxXwkY5rU8YhXaJ88xBRmViOHknMd59nD27ybvMbc81GmHt3BO3NJ/PxpKmqHTKiXtsVVv7ISdhNadOLXPom9S5oGAw4y6SVazfwfw4L7GLPPRpmZuM6bJzdwvbgi26bu75Et0kiMoe9tEfR9lO+3HPpGOOhkNewitqoKQyfptSA0c5g18YZF94BMZ58c5fP0VdmPhtZL2dsvflkkTN4Xv1whm0mwm09jNnUa9ZKkWS9gNTOYZgnL1CVKWaTZUwcoqUf4pfZTkWbtxj6MoXZRCV+mWXyPWbRLmoV3NAp22HtLdsPBrCNGMfMJs13ffYtiaH3SpKLZJNJM6/s7LW16xBT0iLpNTo7UC72i8Q+x4TiDfeouRXc7SJ+YoC5+A/B5x8nRqJ5HAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image07&quot;
-        title=&quot;&quot;
-        src=&quot;/static/8c85f92a1f73ba94a464f00536170c2e/f058b/image07.png&quot;
-        srcset=&quot;/static/8c85f92a1f73ba94a464f00536170c2e/c26ae/image07.png 158w,
-/static/8c85f92a1f73ba94a464f00536170c2e/6bdcf/image07.png 315w,
-/static/8c85f92a1f73ba94a464f00536170c2e/f058b/image07.png 630w,
-/static/8c85f92a1f73ba94a464f00536170c2e/40601/image07.png 945w,
-/static/8c85f92a1f73ba94a464f00536170c2e/78612/image07.png 1260w,
-/static/8c85f92a1f73ba94a464f00536170c2e/8b640/image07.png 1454w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-&lt;/br&gt;
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c1d911dc44991c2e2cf1de0c6f34e270/d7ceb/image08.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAC00lEQVR42l2TS28bVRiG5zewoCpNc1WkikaqKiQiJATqBhCiFQsk0ssWNrBHLPgDbBDwA5BKFEEplzaRQYEUx7HrZDxjJ+M4iW84jS9x7Di+zi2x8/TzOChSF6++M2eOnvN+l6N0IqN0ImM40WHc6GVsfQRT9jxp45jqJTprL4sunMfVF74lmupl76wS971B4ME7ZP95ndzSa1RCV7H0cblEYJFhLOMtnNQ9nOSM6Las+5rxouvpDrbs28m72DszKLmlKRK+aYz5axiPr7G/PIKlvjQAyo0ntd9wXRO7U8S1KzjWgaiMbZYx2yU6rSIn7iGnJzV6IsUtfUc9/xBKX9Hc+oTa5mc4mc8l3Uk6Auw15tkv5TCi/7KTWBWFSRhBklurpHdUb114ZtA7rnhSKnt+fIsqcEQ2kyKVTtOzc1jRK1Kbi/Tq85SKOTb0J2xurBBfX8GILbMR9XvwrXiI4l6crnswALbE1WHiC0zjbVrqJG3tKk31VUl5wnPYPXpM7bBELh0hl4myl1v3tJuNkU3r7P4X46iaOQcGHtzgz/vv8/fcByz9dIvAL++xcP9jdhbfxNUvCHCBojg0Yn5xF/AcbkqacXG7vRkW10EM2bc7BaljFWXl15ss/HgX3+wdFuc+Iu+/TmN1kubaoIan9UcU8xnW9SUBhDxwP/XU9poHzaZVHLPgues6ZZTY/A1x9iEHwanBDGqjWJp0WhsT4JA05S/qjTqFvW1s61A6XcMyD6TLRez2LuViilIhyWmvSq/bRHH0Szj60GCI+xCR2R8ZbcIbG7fwNcctjePGMt1mkNN2kHI+TGY3jbGh88Ncgp//UHkSWKPbCqBUw9M01L674bMXMnYetVFvuAeXjZ/9G6MtzatoN3nmn8b38Btmf8/z7fezVEMTKNmnX5IMfUolMCoHJ84g/z+9F6IHH0QrcpHj2CschUeILrzLfmBKyjTEcyezACOf8546AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image08&quot;
-        title=&quot;&quot;
-        src=&quot;/static/c1d911dc44991c2e2cf1de0c6f34e270/f058b/image08.png&quot;
-        srcset=&quot;/static/c1d911dc44991c2e2cf1de0c6f34e270/c26ae/image08.png 158w,
-/static/c1d911dc44991c2e2cf1de0c6f34e270/6bdcf/image08.png 315w,
-/static/c1d911dc44991c2e2cf1de0c6f34e270/f058b/image08.png 630w,
-/static/c1d911dc44991c2e2cf1de0c6f34e270/40601/image08.png 945w,
-/static/c1d911dc44991c2e2cf1de0c6f34e270/78612/image08.png 1260w,
-/static/c1d911dc44991c2e2cf1de0c6f34e270/d7ceb/image08.png 1446w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-&lt;/br&gt;
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/e72b757baf428fd3ae3904ccccb789dc/ccf0c/image09.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.49367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADAElEQVR42jWTy28bZRTF/RewAZVSCIQkhU1RhUCqkCIlQUJFgMQKlXaBhNQN8CewYo1Qt2wqUQqlSiktpKEthTzAtWN7PI7jtH6/4/Fr7IztmfH4Ef+448Li6J6r0ZzvnPvdz2MrJ7FCs9jKLAP1RZzwzJRboTms4PPYu28wNDYZGEH6bZ/Aj3Pox3a5VBdDw0c6vkE6FcbTCy0QuLVM8PYy+c03KWy+jhF8FTu8gBk8jh1bYTRokc3skUqEyUnNpHZJPFZIxsNk024fxWiXOBrpeLqBl0n9cYbY+ltEfz1F4u4pDh8eww6ewAw8Rz+2xNAuU8rvUsqpggjlQpRcWiGfCVPIqjSqCRjrHA3reJz9JdqV37Gq15hUvqQe/YJe9iuc5EeY/qfp76/gmGViuw9RlS0C/gf4vPeIKJtEI9uEQ38J3+CgFIOjFh6yH+L1qxJHhUmdqLqNrtcZaZcwfU9J5LcZOxp2L0e/l6VnpOm2EtS1OM1acuquVnmM2SkyGTVlhuHTtPc/x4hdoBOYxwgsYOzM46gvyaUcZyAJOocVVu8k+f7mI1bXElwXdDp1oMXkSJ86Y9xkPJDILd9J7nz3AX9eO8tvV86zfvUc6z98jPbPaTr+F3BH0jc1tv0Z7m8nub+VZMObotWs0OtU5TCNjuGiysgRwV5wnrs/nmf18kVuXP6UtSsXpD/HPYG29Yo4XJRh1zhsV9EbFbRKWbhGVwTaujbl7ZaG3pSxmDU8xs4C3pvv4/vlPXZunZX6LpG1FSxlfhrZ3luaCuYLZdKZArl8iXS2SCpdJCvc7au1Axpy2FTQUuYYq89gh47R9L5G1z/HIDKDKYJm4MRUcDKsirMDCoUixWKJugi4UU03shtXeK+jPZmh+1Pc+xlK+AGXvvma29++I4KzmPJSzMCzsofL2E6Nhlmi+R90q0xLdlO3pBeYg5pcjCGL3XYXe4b8zic0ohfx/7zI3z8t0lfl2YlzKyQOo2cYdBWs3iPBniD2BN3/6x6OfBtb8Sn+BVvlH8g7mdzaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image09&quot;
-        title=&quot;&quot;
-        src=&quot;/static/e72b757baf428fd3ae3904ccccb789dc/f058b/image09.png&quot;
-        srcset=&quot;/static/e72b757baf428fd3ae3904ccccb789dc/c26ae/image09.png 158w,
-/static/e72b757baf428fd3ae3904ccccb789dc/6bdcf/image09.png 315w,
-/static/e72b757baf428fd3ae3904ccccb789dc/f058b/image09.png 630w,
-/static/e72b757baf428fd3ae3904ccccb789dc/40601/image09.png 945w,
-/static/e72b757baf428fd3ae3904ccccb789dc/78612/image09.png 1260w,
-/static/e72b757baf428fd3ae3904ccccb789dc/ccf0c/image09.png 1428w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;(3) 마무리하며&lt;/h3&gt;
-&lt;hr&gt;
-&lt;p&gt;최근 그리고 계속해서 LLM 모델의 성능이 너무나 좋아지면서, 프롬프트 엔지니어링을 강조하던 기조가 조금은(?) 줄어드는 것 같기는 하지만(웬지 수고 대비 효과를 찾는 휴먼의 관점일까요), 오히려 Agentic AI 등이 떠오르고 있는 요즘 Agent에게 정확한 지시를 하기 위해 아직도 &lt;strong&gt;잘 짜여진 프롬프트의 중요성&lt;/strong&gt; 은 아직도 그 위상을 지키고 있다고 생각합니다.
-&lt;/br&gt;&lt;/br&gt;
-또한 이 글에서는 언급하지 않았지만, &lt;strong&gt;&apos;코드 기반 프롬프트&apos;&lt;/strong&gt; 도 &lt;strong&gt;&apos;LLM에게 명확한 지시를 내린다&apos;&lt;/strong&gt; 는 관점에서 개발 업무, 자동화 코드 생성뿐만 아니라 일반 기획업무 등에서도 유용하게 활용될 수 있을 것으로 기대됩니다 &lt;del&gt;(웬지 다음다음 글이 이 주제 관련 글이 될지도 모르겠다는 생각이...)&lt;/del&gt; .
-&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
-덧1. 본 사내 이벤트는 뤼튼(&lt;a href=&quot;https://wrtn.io/)%EC%9D%98&quot;&gt;https://wrtn.io/)의&lt;/a&gt; 프롬프톤 행사 사례 등을 참조하였습니다. 국내에서는 거의 최초로 진행이 된 것 같은데 팩트체크가 필요하다면 알려주시기 바랍니다.
-&lt;/br&gt;
-(뤼튼 프롬프톤: &lt;a href=&quot;https://wrtn.io/en/2023/12/19/%EB%AA%A8%EB%91%90%EB%A5%BC-%EC%9C%84%ED%95%9C-ai-%EB%A4%BC%ED%8A%BC-%ED%94%84%EB%A1%AC%ED%94%84%ED%86%A4-%EC%83%9D%EC%84%B1-ai-%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/&quot;&gt;https://wrtn.io/en/2023/12/19/%EB%AA%A8%EB%91%90%EB%A5%BC-%EC%9C%84%ED%95%9C-ai-%EB%A4%BC%ED%8A%BC-%ED%94%84%EB%A1%AC%ED%94%84%ED%86%A4-%EC%83%9D%EC%84%B1-ai-%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/&lt;/a&gt; )&lt;/p&gt;
-&lt;p&gt;덧2. 이 행사가 끝나고 수 개월 후 &apos;프롬프트 엔지니어의 업무일지&apos;를 쓰신 강수진 박사님의 북토크에 간 적이 있었는데(홍보는 아니나 음...), 이날에서야 강박사님과 진대연 님(세시간전 CSO)이 ex-뤼튼 멤버시절 당시 프롬프톤을 기획하셨던 분들이라는 사실을 알게 되었네요! 기회가 되면 이분들 모시고 또 좋은 기회를 갖고자 합니다.&lt;/p&gt;
-&lt;p&gt;덧3. 작년 11월 DTC 인기 연사이셨던 박종천 AI 어드바이저 님께서도 프롬프톤 추천을 해주셨는데 또 한번 해볼까요? : )
-(참고: &lt;a href=&quot;http://techtopic.skplanet.com/dtc24-ageofai/&quot;&gt;http://techtopic.skplanet.com/dtc24-ageofai/&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;읽어 주셔서 감사드립니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ARHIS: 음향 기반 도로 노면 검지 솔루션]]></title><description><![CDATA[SK플래닛이 자체 개발한 ARHIS(Audio & AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다. 이 기술을 솔루션화한 RB ARHIS…]]></description><link>https://techtopic.skplanet.com/rbarhis-ai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/rbarhis-ai/</guid><dc:creator><![CDATA[yooncy]]></dc:creator><pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;SK플래닛이 자체 개발한 ARHIS(Audio &amp;#x26; AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다.&lt;/p&gt;
+&lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ARHIS: 음향 기반 도로 노면 검지 솔루션]]></title><description><![CDATA[SK플래닛이 자체 개발한 ARHIS(Audio & AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다. 이 기술을 솔루션화한 RB ARHIS…]]></description><link>https://techtopic.skplanet.com/rbarhis-ai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/rbarhis-ai/</guid><dc:creator><![CDATA[yooncy]]></dc:creator><pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;SK플래닛이 자체 개발한 ARHIS(Audio &amp;#x26; AI based Road Hazard Information System)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지하여, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술입니다.&lt;/p&gt;
 &lt;p&gt;이 기술을 솔루션화한 RB ARHIS는 기상청 등 관련 기관으로부터 우수한 평가를 받았으며, 제 18회 대한민국 기상산업대상에서 국무총리상을 수상하였습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
