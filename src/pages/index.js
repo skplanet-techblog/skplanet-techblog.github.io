@@ -26,7 +26,7 @@ const BlogIndex = ({ data, location }) => {
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
           const author = post.frontmatter.author;
-          const member = MEMBERS[author.toLowerCase()];
+          const member = author ? MEMBERS[author.toLowerCase()] : undefined; 
 
           return (
             <li key={post.fields.slug}>
@@ -54,8 +54,8 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
                 <small>
-                  {dayjs(post.frontmatter.date).format("YYYY.MM.DD")} |{" "}
-                  {member.name}
+                  {dayjs(post.frontmatter.date).format("YYYY.MM.DD")} [
+                  {member && member.name ? member.name : "Unknown Author"}]
                 </small>
               </article>
             </li>

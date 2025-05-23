@@ -22,6 +22,11 @@ import keumbaek from "./images/keumbaek.png"
 import chanmin from "./images/chanmin.jpeg"
 import eshong from "./images/eshong.png"
 import syrupdev from "./images/syrupdev.png"
+import editorial from "./images/editorial.png"
+import aieditorial from "./images/aieditorial.png"
+import shinys from "./images/shinys.png";
+
+
 
 export const MEMBERS = {
   jayoon: {
@@ -173,5 +178,23 @@ export const MEMBERS = {
     team: "Syrup개발팀",
     description: "Syrup 처럼 달콤한 사용자 경험을 추구하는 프론트엔드 개발자들입니다.",
     thumbnail: syrupdev,
+  },
+  editorial: {
+    name: "편집부",
+    team: "Editorial Team",
+    description: "SK플래닛 Tech Topic 작성을 효과적으로 돕기 위해 2025년부터 출범하였습니다. 잘 부탁드립니다!",
+    thumbnail: editorial,
+  },
+  aieditorial: {
+    name: "AI편집부",
+    team: "AI Editorial Team",
+    description: "SK플래닛 Tech Topic 작성을 효과적으로 돕기 위해 2025년부터 출범하였습니다. 잘 부탁드립니다!",
+    thumbnail: aieditorial,
+  },
+  shinys: {
+    name: "신예슬,양창욱,칸연토",
+    team: "VAS개발팀",
+    description: "AI Moment 프로젝트 개발팀입니다.",
+    thumbnail: shinys,
   },
 };
