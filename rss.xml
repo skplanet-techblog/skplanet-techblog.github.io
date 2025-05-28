@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 May 2025 12:41:21 GMT</lastBuildDate><item><title><![CDATA[생성형 AI를 활용한 마케팅 영상 제작 - AI Moment 개발 사례]]></title><description><![CDATA['요즘' 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
-하지만 AI를 사용자로 경험하는 것과 개발자 입장에서 이를 활용하여 LLM 기반 서비스를 구현하는 것은 완전히 다른 이야기였습니다. 이번 글에서는 저희가 개발자로 참여한 SK플래닛의 AI Moment…]]></description><link>https://techtopic.skplanet.com/aimoment/</link><guid isPermaLink="false">https://techtopic.skplanet.com/aimoment/</guid><dc:creator><![CDATA[shinys]]></dc:creator><pubDate>Mon, 26 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&apos;요즘&apos; 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
-&lt;/br&gt;하지만 AI를 사용자로 경험하는 것과 개발자 입장에서 이를 활용하여 LLM 기반 서비스를 구현하는 것은 완전히 다른 이야기였습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 May 2025 12:51:28 GMT</lastBuildDate><item><title><![CDATA[생성형 AI를 활용한 마케팅 영상 제작 - AI Moment 개발 사례]]></title><description><![CDATA['요즘' 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
+하지만 AI를 사용자로 경험하는 것과 개발자 입장에서 이를 활용하여 LLM 기반 서비스를 구현하는 것은 '완전히' 다른 이야기였습니다. 이번 글에서는 저희가 개발자로 참여한 SK플래닛의 AI Moment…]]></description><link>https://techtopic.skplanet.com/aimoment/</link><guid isPermaLink="false">https://techtopic.skplanet.com/aimoment/</guid><dc:creator><![CDATA[shinys]]></dc:creator><pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&apos;요즘&apos; 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
+&lt;/br&gt;하지만 AI를 사용자로 경험하는 것과 개발자 입장에서 이를 활용하여 LLM 기반 서비스를 구현하는 것은 &apos;완전히&apos; 다른 이야기였습니다.&lt;/p&gt;
 &lt;p&gt;이번 글에서는 저희가 개발자로 참여한 SK플래닛의 &lt;strong&gt;AI Moment&lt;/strong&gt;라는 과제를 소개하고,  그리고 그 과정에서 마주친 문제들과 해결 방식에 대해 이야기해보려고 합니다.&lt;/p&gt;
 &lt;h2&gt;1. AI Moment는 어떤 서비스인가요?&lt;/h2&gt;
 &lt;p&gt;AI Moment는 SK 플래닛에서 자체 개발한 &lt;strong&gt;AI 기반 영상 생성 B2B 서비스&lt;/strong&gt;로, 기업의 광고 영상을 쉽고 빠르게 제작할 수 있는 서비스입니다(2024년 9월 30일 출시하여 2025년 5월 현재 서비스 중). OpenAI의 GPT 모델 및 API(이하 GPT)와 Google Cloud Text-to-Speech AI(이하 Google TTS)를 적용하였으며, 서비스 동작 방식은 다음과 같습니다.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;사용자가 기업명을 입력하면 (예: SK플래닛, SK planet 등)&lt;/li&gt;
-&lt;li&gt;GPT-4o를 통해 해당 기업의 카테고리를 분류하고&lt;/li&gt;
+&lt;li&gt;사용자가 기업명을 입력하면(예: SK플래닛, SK planet 등)&lt;/li&gt;
+&lt;li&gt;GPT-4o(예시)를 통해 해당 기업의 카테고리를 분류하고&lt;/li&gt;
 &lt;li&gt;마케팅 문구와 TTS용 문구를 생성합니다.&lt;/li&gt;
 &lt;li&gt;이 후 Google TTS를 활용해 음성을 만들고,&lt;/li&gt;
 &lt;li&gt;사전에 준비된 템플릿에 이미지를 합성하여 최종 영상을 생성합니다.&lt;/li&gt;
@@ -16,7 +16,10 @@
 &lt;/br&gt;
 &lt;/br&gt;
 &lt;/br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/c9e6f847e8ab4a78f9fa6bc50b476241/aimoment_example1.gif&quot; alt=&quot;aimoment_example1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/c9e6f847e8ab4a78f9fa6bc50b476241/aimoment_example1.gif&quot; alt=&quot;aimoment_example1&quot;&gt;
+(💡 블로그에 직접 영상을 올리기 어려워 GIF로 대체했어요!
+영상 길이가 길다 보니 로딩을 고려해서 반복 주기를 좀 짧게 조정했는데, 덕분에(?) 조금 급하게 느껴질 수 있어요.
+실제 영상은 더 자연스럽고 부드럽답니다 😊)&lt;/p&gt;
 &lt;h2&gt;2. AI를 만드는 두 가지 관점 : 기획자와 개발자의 협업기&lt;/h2&gt;
 &lt;p&gt;AI Moment 과제를 진행하면서, 사업팀과 개발팀의 역할을 아래와 같이 명확하게 구분하었습니다:&lt;/p&gt;
 &lt;ul&gt;
@@ -28,7 +31,7 @@
 &lt;h4&gt;(a) 응답의 비결정성 (Non-determinism)&lt;/h4&gt;
 &lt;p&gt;GPT는 똑똑하지만, 항상 우리가 원하는 형식으로 응답해주지는 않습니다. 예를 들어, JSON 형식으로 답해달라고 요청해도 &quot;Sure! Here&apos;s the result:&quot; 같은 문장이 앞에 붙는 경우가 흔히 발생하죠.&lt;/p&gt;
 &lt;p&gt;하지만 우리는 GPT의 응답을 단순한 대화용이 아닌, 서비스 코드에서 직접 파싱하고 활용해야 했기 때문에, 응답 형식의 일관성과 데이터 파싱의 안정성이 무엇보다 중요했습니다.&lt;/p&gt;
-&lt;p&gt;✅ 해결 방법: Pydantic 모델과 PromptTemplate 활용
+&lt;p&gt;✅ 해결 방법 : Pydantic 모델과 PromptTemplate 활용
 이 문제를 해결하기 위해, 우리는 Pydantic 모델과 PromptTemplate의 format_instructions 기능을 적극 활용해 GPT가 명확한 형식을 따르도록 유도하는 구조를 설계했습니다.&lt;/p&gt;
 &lt;p&gt;Python 코드:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;prompt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; PromptTemplate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -70,7 +73,7 @@ Python 타입 힌트를 활용해 데이터의 유효성을 자동으로 검사�
 &lt;p&gt;이를 대비해 기본 카테고리와 문구를 제공하거나 영상 생성을 스킵하는 이른바 &apos;우아한 처리(Graceful Degradation)&apos; 전략도 함께 구현해, 전체 서비스의 안정성과 사용자 경험을 지킬 수 있도록 했습니다.&lt;/p&gt;
 &lt;h4&gt;(c) 속도 문제&lt;/h4&gt;
 &lt;p&gt;GPT → TTS → FFmpeg로 이어지는 영상 생성 과정은 단계별로 시간이 누적되기 때문에, 속도 지연이 사용자 경험에 영향을 줄 수 있는 부분이었습니다.&lt;/p&gt;
-&lt;p&gt;✅ 해결 방법: &lt;strong&gt;비동기 처리와 Prefix Caching&lt;/strong&gt;
+&lt;p&gt;✅ 해결 방법 : &lt;strong&gt;비동기 처리와 Prefix Caching&lt;/strong&gt;
 &lt;/br&gt;
 이를 완화하기 위해 일부 작업은 비동기 처리로 개선했고, 속도와 비용 최적화를 위한 캐시 전략도 함께 고려했습니다.&lt;/p&gt;
 &lt;p&gt;캐시 전략의 일환으로 활용한 것이 바로 OpenAI의 prefix caching 기능이었습니다. 이는 일정 조건을 만족할 경우 동일한 프롬프트의 앞부분을 내부적으로 캐싱하여 재사용하는 것으로, 지연 시간을 최대 80%, 비용도 최대 50%까지 할인해주는 기능입니다.
@@ -80,7 +83,8 @@ Python 타입 힌트를 활용해 데이터의 유효성을 자동으로 검사�
 &lt;/br&gt;
 GPT-4o 이상 최신 모델에서 활성화되며 추가 비용 없이 무료로 사용할 수 있습니다!
 &lt;/br&gt;
-자세한 내용: OpenAI Prompt Caching 가이드&lt;/p&gt;
+자세한 내용: OpenAI Prompt Caching 가이드
+&lt;a href=&quot;https://platform.openai.com/docs/guides/prompt-caching&quot;&gt;https://platform.openai.com/docs/guides/prompt-caching&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;🎯 thanks to:
 &lt;/br&gt;
 prefix caching은 프로젝트 기간 중 참여한 사내 교육을 통해 알게 된 내용으로, 인사이트에 큰 도움이 되었습니다. 좋은 교육을 진행해 주셔서 감사합니다 :)&lt;/p&gt;
