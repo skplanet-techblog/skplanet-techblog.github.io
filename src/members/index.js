@@ -194,7 +194,7 @@ export const MEMBERS = {
   shinys: {
     name: "신예슬,양창욱,칸연토",
     team: "VAS개발팀",
-    description: "AI Moment 프로젝트 개발팀입니다.",
+    description: "AI로 더 똑똑한 부가서비스를 만드는 VAS(Value-added Service)개발팀입니다.",
     thumbnail: shinys,
   },
 };
