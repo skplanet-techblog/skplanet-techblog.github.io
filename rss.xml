@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 May 2025 12:54:45 GMT</lastBuildDate><item><title><![CDATA[생성형 AI를 활용한 마케팅 영상 제작 - AI Moment 개발 사례]]></title><description><![CDATA['요즘' 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 29 May 2025 02:12:46 GMT</lastBuildDate><item><title><![CDATA[생성형 AI를 활용한 마케팅 영상 제작 - AI Moment 개발 사례]]></title><description><![CDATA['요즘' 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
 하지만 AI를 사용자로 경험하는 것과 개발자 입장에서 이를 활용하여 LLM 기반 서비스를 구현하는 것은 '완전히' 다른 이야기였습니다. 이번 글에서는 저희가 개발자로 참여한 SK플래닛의 AI Moment…]]></description><link>https://techtopic.skplanet.com/aimoment/</link><guid isPermaLink="false">https://techtopic.skplanet.com/aimoment/</guid><dc:creator><![CDATA[shinys]]></dc:creator><pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&apos;요즘&apos; 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
 &lt;/br&gt;하지만 AI를 사용자로 경험하는 것과 개발자 입장에서 이를 활용하여 LLM 기반 서비스를 구현하는 것은 &apos;완전히&apos; 다른 이야기였습니다.&lt;/p&gt;
 &lt;p&gt;이번 글에서는 저희가 개발자로 참여한 SK플래닛의 &lt;strong&gt;AI Moment&lt;/strong&gt;라는 과제를 소개하고,  그리고 그 과정에서 마주친 문제들과 해결 방식에 대해 이야기해보려고 합니다.&lt;/p&gt;
@@ -17,6 +17,7 @@
 &lt;/br&gt;
 &lt;/br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/c9e6f847e8ab4a78f9fa6bc50b476241/aimoment_example1.gif&quot; alt=&quot;aimoment_example1&quot;&gt;
+&lt;/br&gt;
 (💡 블로그에 직접 영상을 올리기 어려워 GIF로 대체했어요!
 영상 길이가 길다 보니 로딩을 고려해서 반복 주기를 좀 짧게 조정했는데, 덕분에(?) 조금 급하게 느껴질 수 있어요.
 실제 영상은 더 자연스럽고 부드럽답니다 😊)&lt;/p&gt;
