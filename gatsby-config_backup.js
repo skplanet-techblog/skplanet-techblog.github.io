@@ -11,8 +11,8 @@ module.exports = {
   siteMetadata: {
     title: `SK플래닛 TECH TOPIC`,
     author: {
-      name: `양진욱`,
-      summary: `SK플래닛 개발그룹`,
+      name: `공자윤`,
+      summary: `SK플래닛 Platform Center`,
     },
     description: `SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.`,
     siteUrl: `https://techtopic.skplanet.com/`,
@@ -133,27 +133,11 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-google-gtag",
-    //   options: {
-    //     trackingIds: ["G-XMQBSN6DMR"],
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingIds: [
-          "G-XMQBSN6DMR",
-          "G-ZKB2SBCZXJ",
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-        },
-        pluginConfig: {
-          head: true,
-        },
+        trackingIds: ["G-XMQBSN6DMR"],
       },
     },
-    
   ],
 };
