@@ -8,7 +8,7 @@ description: "SK ICT Family사 테크 블로그 총정리 (SKP기술지원팀 �
 
 안녕하세요, SK플래닛 DevRel 담당자입니다! <br/>
 SK그룹 테크블로그가 궁금하신 분들을 위해, 작년에 이어 SK ICT 테크블로그 2025년 버전을 업데이트해 보았어요~ <br/>
-(참고: SK ICT 테크블로그 2024년 버전 -  https://techtopic.skplanet.com/skict-techblog/ ) 
+(참고: SK ICT 테크블로그 2024년 버전 -  https://techtopic.skplanet.com/skict-techblog24/ ) 
 
 1년이 지났을 뿐인데 업데이트할 내용들이 제법 있었어요. SK ICT를 대표하는 **SK데보션 블로그**, 지금 보고 계시는 **SK플래닛 Tech Topic** 등은 계속 잘 운영되고 있구요, 올해 변경된 주요 내용은
 
