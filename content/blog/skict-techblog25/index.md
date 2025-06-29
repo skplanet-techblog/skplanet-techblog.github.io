@@ -1,6 +1,6 @@
 ---
 title: "SK ICT Family사 테크 블로그 총정리 (2025년 버전)" 
-date: "2025-06-30"
+date: "2025-06-29"
 tags: ["SK", "테크블로그", "TechBlog", "기술블로그"]
 author: "Joe"
 description: "SK ICT Family사 테크 블로그 총정리 (SKP기술지원팀 또는 테크편집부)" 
