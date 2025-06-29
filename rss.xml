@@ -1,4 +1,350 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 29 May 2025 02:12:46 GMT</lastBuildDate><item><title><![CDATA[생성형 AI를 활용한 마케팅 영상 제작 - AI Moment 개발 사례]]></title><description><![CDATA['요즘' 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 29 Jun 2025 10:49:36 GMT</lastBuildDate><item><title><![CDATA[SK ICT Family사 테크 블로그 총정리 (2025년 버전)]]></title><description><![CDATA[안녕하세요, SK플래닛 DevRel 담당자입니다! 
+SK그룹 테크블로그가 궁금하신 분들을 위해, 작년에 이어 SK ICT 테크블로그 2025년 버전을 업데이트해 보았어요~ 
+(참고: SK ICT 테크블로그 2024년 버전 -  https://techtopic.skplanet.com/skict-techblog/ )…]]></description><link>https://techtopic.skplanet.com/skict-techblog25/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skict-techblog25/</guid><dc:creator><![CDATA[Joe]]></dc:creator><pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 DevRel 담당자입니다! &lt;br/&gt;
+SK그룹 테크블로그가 궁금하신 분들을 위해, 작년에 이어 SK ICT 테크블로그 2025년 버전을 업데이트해 보았어요~ &lt;br/&gt;
+(참고: SK ICT 테크블로그 2024년 버전 -  &lt;a href=&quot;https://techtopic.skplanet.com/skict-techblog/&quot;&gt;https://techtopic.skplanet.com/skict-techblog/&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;1년이 지났을 뿐인데 업데이트할 내용들이 제법 있었어요. SK ICT를 대표하는 &lt;strong&gt;SK데보션 블로그&lt;/strong&gt;, 지금 보고 계시는 &lt;strong&gt;SK플래닛 Tech Topic&lt;/strong&gt; 등은 계속 잘 운영되고 있구요, 올해 변경된 주요 내용은&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;SK C&amp;#x26;C의 사명 변경(SK AX)과 인사이트 메뉴 소개&lt;/li&gt;
+&lt;li&gt;원스토어의 개발자 스타일 블로그 오픈 이야기&lt;/li&gt;
+&lt;li&gt;SK쉴더스의 정보보안/물리보안 블로그 내용을 추가했어요~&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(작년에 소개해 드린 11번가, 티맵, 드림어스 등의 테크블로그 정보도 현행화했어요. 자세한 내용은 아래에!)&lt;/p&gt;
+&lt;h2&gt;1. SK DEVOCEAN(데보션) 기술 블로그&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/496cc15559e0212beebdef5d5c37821a/8e6e2/image11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36.075949367088604%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVR42h2Q3U+SYRiHObT4eF++etXxwssLyJeCpOBEUhECosC1WdMTnbOFB+Vaa+uf6KCTttY66cCt/6DVChZMZxBI5vp3rm49uHbvuZ891/17bsv3zle+/fjCr8GJ0OOs32UwOmF4fsafy99c/hsJQy7+Dhhf9BlJfzg8ZTyWet6nd9ql3W3T6XX42WtjmYo4MJIuEgu3yK77KTfjFO/HWK1FKNaj3G3Er3urNZMluU/lNMy4k0DUhmYqKIYDm2HF6rcy4ZvA4g3a0aNOwmkv9a0sn45f8+79Sw6fN9lv1Th41qR11GR7f51CNcLtvE4w6cFr2nGZDpwhFTWkoIrHIVKLasgkaRpzHsqbKd68fczx56d8+PiEw6MGu606e60Kj/buUKiEyYjQiLtRA3YUQQ06UEWsiEwx7FiUgA23RNfjHmKLkzzcifHiVY7dgzRr90Isl/wslaavWVyfJr0yycyCCyOl4J9V0aLy7YAVm++GIAnt+k3cYg7OuUnKfmaFuWWVVEElu6GRr+rkKzrzBS+JnJO4MCOYi7LHeSc+eecxJVTQylTsKqEs9Gpitugls+YWvBTqJtWtDA+2szR2cpQ2k6QLkyRWNJIbUiVtVM5aTMGl2zBEnCxrhDMu/gMJlPuO/AenvgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;&quot;
+        src=&quot;/static/496cc15559e0212beebdef5d5c37821a/f058b/image11.png&quot;
+        srcset=&quot;/static/496cc15559e0212beebdef5d5c37821a/c26ae/image11.png 158w,
+/static/496cc15559e0212beebdef5d5c37821a/6bdcf/image11.png 315w,
+/static/496cc15559e0212beebdef5d5c37821a/f058b/image11.png 630w,
+/static/496cc15559e0212beebdef5d5c37821a/40601/image11.png 945w,
+/static/496cc15559e0212beebdef5d5c37821a/78612/image11.png 1260w,
+/static/496cc15559e0212beebdef5d5c37821a/8e6e2/image11.png 2438w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;올해로 4주년을 맞은 데보션은 SK텔레콤이 운영하는 SK그룹의 대표 개발자 커뮤니티 플랫폼으로, SK ICT 패밀리사의 개발 전문가들과 외부 인재간 소통 및 기술 공유를 위한 개발자 활동(DevRel) 채널 역할을 겸하고 있습니다. 블로그뿐만 아니라 AI 개발 생태계를 지원하는 &apos;데보션 오픈랩&apos;, 실무형 AI 인재 성장을 지원하는 &apos;데보션 AI 펠로우십&apos; 등 다양한 외부 프로그램을 함께 진행합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SK데보션 메인 페이지 &lt;a href=&quot;https://devocean.sk.com/&quot;&gt;https://devocean.sk.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;데보션 오픈랩 신설 홍보기사 &lt;a href=&quot;https://news.sktelecom.com/202785&quot;&gt;https://news.sktelecom.com/202785&lt;/a&gt; (SK텔레콤 뉴스룸, 2024)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. SK(주) AX TECH BLOG&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;2025년 6월 1일부터 SK(주) C&amp;#x26;C의 회사명이 SK(주) AX로 변경되었습니다! &lt;br/&gt;
+(&apos;AX&apos;는 &apos;AI Transformation&apos; 이라는 의미입니다)&lt;/p&gt;
+&lt;p&gt;SK AX 테크 블로그는 2024년 C&amp;#x26;C 때부터 회사 대표 웹사이트에 포함되었으며, &apos;Insights&apos; 메뉴 내에 기술 인사이트 및 트렌드 메뉴를 별도로 운영하고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/77cff2b21fc104c615d9d6a860efe3f4/8078c/image12.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAUlEQVR42pWS22oTURSG9xxymEzmmGRmMplkkiZt0oY2bdBGURGUkItiEUHUIogIHqgI3og+ggj6AL6ANz7j58o0QkEUvPhnzfr32v9e+19bJUHIzbRBN/aJ4pher0cUReR5XsQsy0iShH6/T6vVKvggCAq4rstgMGCxWDCdHnB8fAulKw3b1CgbCsMwKJVK6LpexHVumuYfvKZpBZRSRW7bHaqVOY3gdM0p1HpxU/S78PL/v+Ggq2vUKi9ohG82gv+Fy4eElLRTPPsznfZXEXx8ITgcDplMJozHY2azGWEYFvl0Ov2LqCHIRewVvv2DTvSd0L0vXHYhuL+/z3K55OzsjNVqxXw+L4w+OjoU//TCQ8MwxcOybAgEVylrnwidn6TxF8LWPSzvOlXnylpQBlIuY1lVHMcRuMX06nWHmmXj+008L5auB1Kzi6ZuyxDfkSbf2Bq+Je4/IR48wwumomOjDKMi5hsb6NKFKXHdjfB6TU50RSTBUGMq6gZB/SmjnQ/sHbwk2XlPNjon8LpUKrYI1lHrj+9FeG6TkmljaDWBI/AxtZZcrYulT3CtBWnnAXuz12zvPifofaS7dU7UyHH9VJ5OE6sqDVSrFu12Tt7blqs1sWsBdVl07BjPyeQBD4mSQ/qju+xMTkizO7jxI/LBQ7J0m6g9ImykstcXW5r8ApeG92n9ycm3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image12&quot;
+        title=&quot;&quot;
+        src=&quot;/static/77cff2b21fc104c615d9d6a860efe3f4/f058b/image12.png&quot;
+        srcset=&quot;/static/77cff2b21fc104c615d9d6a860efe3f4/c26ae/image12.png 158w,
+/static/77cff2b21fc104c615d9d6a860efe3f4/6bdcf/image12.png 315w,
+/static/77cff2b21fc104c615d9d6a860efe3f4/f058b/image12.png 630w,
+/static/77cff2b21fc104c615d9d6a860efe3f4/40601/image12.png 945w,
+/static/77cff2b21fc104c615d9d6a860efe3f4/78612/image12.png 1260w,
+/static/77cff2b21fc104c615d9d6a860efe3f4/8078c/image12.png 2218w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SK AX Insight&amp;#x26; Trends 메뉴: &lt;a href=&quot;https://www.skax.co.kr/insight/trends&quot;&gt;https://www.skax.co.kr/insight/trends&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SK AX 회사 사이트: &lt;a href=&quot;https://www.skax.co.kr/&quot;&gt;https://www.skax.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. Tech Topic: SK플래닛 테크 블로그&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d0b6e71839e42a66ca32a1ca97a708dd/5dded/image13-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABQ0lEQVR42pWS2Y6CYAyFff/38tJoNIoGo3FnE0FlUZYzfE00jjeTaXJo//5wetrSU2e160ipr9vtJs/zdTwedb/fuVLbtvq0pmmU57mqqtLj8VCWZTqfzwrD0OJeWzeq93spixQGnhaLhWazmeI4fhO+gD2fT51OJxVFYQIul4sJ2Gw2SpKkI+xerLqqWV52lQvVdW0KrterqfxW+JcZYYzkIFDQwfM8qwhQAjFqIaclVBHjUcRdWZbvboxwOp1qNBqZ7/f7Gg6HchxHg8HAPOfdbqftdqv5fK7lcinXdTUejzWZTH6Nxwhp8VWVaoAZkUcVMZ53AKo/v8FzZmFG6Pu+VUcFrRK/PMMmv1qttF6vte8WeDgcDMSMiA0DNm+EzILVR1FkMZ420jQ1kMOzUfKo4ozy77+gx+OzTVpDPmDj/7UfFWawiVKqtiIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image13-1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d0b6e71839e42a66ca32a1ca97a708dd/f058b/image13-1.png&quot;
+        srcset=&quot;/static/d0b6e71839e42a66ca32a1ca97a708dd/c26ae/image13-1.png 158w,
+/static/d0b6e71839e42a66ca32a1ca97a708dd/6bdcf/image13-1.png 315w,
+/static/d0b6e71839e42a66ca32a1ca97a708dd/f058b/image13-1.png 630w,
+/static/d0b6e71839e42a66ca32a1ca97a708dd/40601/image13-1.png 945w,
+/static/d0b6e71839e42a66ca32a1ca97a708dd/78612/image13-1.png 1260w,
+/static/d0b6e71839e42a66ca32a1ca97a708dd/5dded/image13-1.png 1588w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;판교에 있는 SK플래닛에서 운영 중인 기술 블로그입니다. &lt;br/&gt;
+2023년 1월부터 월 평균 1회 수준으로 블로그를 운영 중이며, OK 캐쉬백, 시럽(Syrup) 등 SK플래닛에서 개발한 프로덕트의 기술과 개발 회고 내용을 소개합니다(초기에는 UX, 솔루션을 포함하였으나 개발 내용 중심으로 변화 중!).
+위에서 소개드린 SK데보션 및 T Academy, 외부 개발자 포털(코드너리, TechBlogPosts)와도 연계되어 있구요.
+블로그와 함께 개발자 페이스북을 함께 운영 중입니다(SK플래닛 개발자 활동, 팔로워 약 4.6천). &lt;br/&gt;
+덧. SK플래닛 초기에는 &apos;README&apos;라는 블로그를 2012년 오픈하여 2018년 11번가 분사 전까지 운영했습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SK플래닛 테크 블로그: &lt;a href=&quot;https://techtopic.skplanet.com/&quot;&gt;https://techtopic.skplanet.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SK플래닛 개발자 활동 페이스북: &lt;a href=&quot;https://www.facebook.com/README.SKP/&quot;&gt;https://www.facebook.com/README.SKP/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SK플래닛 구 블로그(아카이브): &lt;a href=&quot;https://web.archive.org/web/20190116065552/http://readme.skplanet.com/&quot;&gt;https://web.archive.org/web/20190116065552/http://readme.skplanet.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SK플래닛 회사 사이트: &lt;a href=&quot;https://www.skplanet.com/&quot;&gt;https://www.skplanet.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;4. 11번가 테크 블로그, Tech Talk&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a5df3c8ff476a95a30e32c5c1a5e9594/e8950/image14.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 73.41772151898735%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAADhklEQVR42l2T6U9cVRiHz+wMUFmmbIU2RQulMDArM8gO7Qx7CrJacSNQxIVlILQmatLURKlGq36wif+Ff4jfm6ZpKOsMMyDOgJ2tj+deoBpP8uR37nnP/d333Pc9IvF3jNQfj4k82eHx0ycc/nnIyzQcHR+zv39AJHJANBpV57HYkarRaIy9vTDJZErlSK7HokfEX8QRDu8IrvphHO4RbK4hXJ5RvJ53aK6fpsU1jdc9SYOk0fUuTa4PaHS8T7NzimbHFG3OGTqct+mwz9LpmMPn+gQhRCVCo3AVdS4qTrVKYkUjak+pk9gxCg9m8SaZokklR7SSLzolNyTdCGOWDZ25juy8ejp8HzI4/Bk3uqYZnQjg883g9U4yPLjERzP38bXNct7cQY62hVxdGyVmP2WZ3ZQauykx9HHB9BZCa5ZfN9XwWr6X6muDOOzj2GrH8Djeo/rKMNaqUXnEaXpaFnBXTXJO18Tl/D5qL45RoL9Okd5HkUahi0KN/8RQZFSTm9OC5/IczrLbVBSO4Ln0MQ2X5rliGaHv6n2Grj2gv/oeJnnk1soZbKXj5Io2iqVhsU5mqO2lUjPxb4bZeW78PTMM3PwUb+Mtenrn8PtmuTVxl6GBJezVY2RqGrAY27Ho5LF1fiwywwJtJ0XaLoqlYam2/8RQm2HFlO2gvKKLiqpeLpS2Y7UO4LCN4Xa+TWvTFI6acVkMLxZDO3kSi/xv+fpOig09FBv7KFRM9b0IQ7asnEKWHb3Jik5fgzmnidLySYxaG3qdE4PWRZahQRaknfOmDiwZnRSarlNuvElJhp8SUy9lGf1cNA4obVPOCa9L3lBVY6gjr2BAtonSOjWSOrTCKbGjE26pbgxKtjKrbFmILNk+52T75GjaEPPL37C4/C2LK2tS1wisfEcgsMbC/NcsL3/PSuAHVpcf8vmdX1ld+pE7iw9ZXfxZ6k/cXfyNr+Z/58vAL9xbecQXC48Q6XSK/UiYrc0Nec3CPHv2lJ2dbba3N9nYeM7W1gabm8/ZlHpwsM/JeMn/RyIZR/ESiURSGkUIBoMEQyFpsE0otEc4HJYaYnc3KO/tnrqm8N95OBxR77Iy1tfX1XsuUqmUDCgbgqrJ7u6u+tLJi6FX8zPO4kpM2Z9Op1VDJaFYLIaIxxOEDl+w91ecSDROMpEgLkkoGo+rJE6fz0gmk6/iZ2uK2fHxMf8Ao7O5j49MrFEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image14&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a5df3c8ff476a95a30e32c5c1a5e9594/f058b/image14.png&quot;
+        srcset=&quot;/static/a5df3c8ff476a95a30e32c5c1a5e9594/c26ae/image14.png 158w,
+/static/a5df3c8ff476a95a30e32c5c1a5e9594/6bdcf/image14.png 315w,
+/static/a5df3c8ff476a95a30e32c5c1a5e9594/f058b/image14.png 630w,
+/static/a5df3c8ff476a95a30e32c5c1a5e9594/40601/image14.png 945w,
+/static/a5df3c8ff476a95a30e32c5c1a5e9594/78612/image14.png 1260w,
+/static/a5df3c8ff476a95a30e32c5c1a5e9594/e8950/image14.png 2000w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;11번가에서 운영 중인 테크 블로그입니다. &lt;br/&gt;
+2021년 오픈하였으며 Java, Spring, AWS 개발 및 배포 사례 등 서버 및 클라우드 기술 중심으로 포스팅합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;11번가 Tech Blog: &lt;a href=&quot;https://11st-tech.github.io/&quot;&gt;https://11st-tech.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;11번가 회사 사이트: &lt;a href=&quot;https://www.11stcorp.com/&quot;&gt;https://www.11stcorp.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;5. 드림어스컴퍼니(FLO) 블로그&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/315c4f7e10a32f45e4abffd8c2dd6a00/1d94f/image15.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACs0lEQVR42mWTy08TURTG+38Y3Ro36sJ/wY0JiYk7dy7ckBiNDxJNJBElIhowaowxRARxYTA0QMVH5KEEqmIL1Uqp7UxfdEqnj+m002mBzvy8naJivMl3zpkz937ny7nnulRVY309RyGvY1RMyrpBo9GguWzbFsYSXsCynNiybCffyjX+/GvlbFzhZJEfco61RIFYRkcWSOYMUgIbpTo5Y5t8dZtizSIv4oRaYTEpEVN10sWagEkqb5AumKwXqriknImcr9H0kZ14Wdb44M/wNZzCM/eZielFhl56ePfRh1fJsn+0g9fxKPGkSmg9T0QVZ7OGA5ekVpFEIBXqyOEN1PMDxLwRJN1memGZrp4+bvTe5XLndQZGRpEVnfGgn9lAkoWlVaIZDbkpRPA04YpsCOaMQDMRL6IMzhIOxPkuRfGtpRx1kzOfeTPvYz4QIRbZoFTY5MTpUc5cfU22ZhNWyjg8Ai61vEkTOYG46EFcXEylvk06o4qeVAhKcdHjECtrq4TkFCHR89VEgmTiCyvBFX6mNNHbLbJ6i8f15zbFSvjf4h57KpQFKWSyxKMhDh9uY+++Pg4c6uDKxQ4848M8G2pn7tsLXr25xKR7eGciLMe3CLEda9VruB+1c+LUWZZ8QYxCkqPHTrLn4BRHjo3Qe6ufaOAhAzMXaLs/w/DYcUL+R7SoGn8JaQnE1AzWFr2szniZej9NKilzs/sy13q66ei8wfCzJ3gm3HTduc3joUGeDPTgmXrrnLWsXQp/q9TyRSpisOubNcxqFdMUM5aIoaQVipomvg003SStlNC0Mkq2LvZa7F67CEUV0Usx+2w1X4RT1aZi1GhYRlM/W9v2rt2/vf0/ob1j3MKMJIp4JIXnIrXgD3C//xyfvvTj93fz4F4nm1oFW9fY0ks0SpqoY/5D+Avl8Fe1ickDZAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image15&quot;
+        title=&quot;&quot;
+        src=&quot;/static/315c4f7e10a32f45e4abffd8c2dd6a00/f058b/image15.png&quot;
+        srcset=&quot;/static/315c4f7e10a32f45e4abffd8c2dd6a00/c26ae/image15.png 158w,
+/static/315c4f7e10a32f45e4abffd8c2dd6a00/6bdcf/image15.png 315w,
+/static/315c4f7e10a32f45e4abffd8c2dd6a00/f058b/image15.png 630w,
+/static/315c4f7e10a32f45e4abffd8c2dd6a00/40601/image15.png 945w,
+/static/315c4f7e10a32f45e4abffd8c2dd6a00/78612/image15.png 1260w,
+/static/315c4f7e10a32f45e4abffd8c2dd6a00/1d94f/image15.png 2264w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;음악 서비스 FLO를 개발하는 드림어스컴퍼니에서 운영하는 블로그입니다. &lt;br/&gt;
+기술뿐만 아니라 회사 컬처 등을 함께 외부에 소개하고 있으며,
+기술 카테고리에서 커버하는 내용은 앱 개발, 서버, 추천 기술 등 다양한 카테고리를 포함합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;테크 카테고리: &lt;a href=&quot;https://www.blog-dreamus.com/dreamus-now&quot;&gt;https://www.blog-dreamus.com/dreamus-now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;드림어스컴퍼니 회사 블로그: &lt;a href=&quot;https://www.blog-dreamus.com/&quot;&gt;https://www.blog-dreamus.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;6. 티맵모빌리티 블로그 (티맵 테크노트)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b3c416dc97590de302ec63f3e4e4eb48/fde66/image16.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.15189873417721%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABdklEQVR42q1TzUrDQBCOp4JPIKj4Cp59AFHo1UJR8C18B089lP6AZy8F7xpPfQPxVgRPFbRJMJq/ze4mnzsbty61BisOfOzOZPfL7Mw3DmMMWZZ9A8VrkTFwzhC+cbxcPMG/usM0DuBIKUEoigJlWWrQ3sR/guASgMT0QeL8pMCpe49R8AhHRZHnOTzPw2w2QxAESJIEq9jlDXB2zfAqRUUohEAYhojjWD+H/L+aJtRPUCTmqasYL0qkokCm7lG55hkSTA1XJYzUXaaSmWf4n1ZLaDpuFGDvF8+ZmGMH6DB1XH7Wg3wqBcWiKFK649q3v1MTbdk5y7JalsFvm6UJmTrsqelIBUdpibquQeYHnU4HB4f7aDabcN3bijBVZM9K2J4SNQnb930NGkE7axv0fLLWUQvbO3vY2NpFr9f9kg1Nx7uqE60EEjmtaZrOVzPn5NMgkLXbx2g0NuGsrWMw6FeEVNDFgtfBHoDxeIx+v4vhcIDJZIIPmjQyDU/+wyUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image16&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b3c416dc97590de302ec63f3e4e4eb48/f058b/image16.png&quot;
+        srcset=&quot;/static/b3c416dc97590de302ec63f3e4e4eb48/c26ae/image16.png 158w,
+/static/b3c416dc97590de302ec63f3e4e4eb48/6bdcf/image16.png 315w,
+/static/b3c416dc97590de302ec63f3e4e4eb48/f058b/image16.png 630w,
+/static/b3c416dc97590de302ec63f3e4e4eb48/40601/image16.png 945w,
+/static/b3c416dc97590de302ec63f3e4e4eb48/78612/image16.png 1260w,
+/static/b3c416dc97590de302ec63f3e4e4eb48/fde66/image16.png 1574w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;TMAP을 개발 및 서비스하는 티맵모빌리티의 블로그입니다. 브런치를 활용하고 있으며, TMAP 개발자들이 직접 쓰는 테크노트 중심의 글들을 포스팅한다는 컨셉으로 외부에 기술을 공유합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;티맵모빌리티 테크노트: &lt;a href=&quot;https://brunch.co.kr/@tmapmobility&quot;&gt;https://brunch.co.kr/@tmapmobility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;티맵모빌리티 회사 사이트: &lt;a href=&quot;https://www.tmapmobility.com/&quot;&gt;https://www.tmapmobility.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;7. 원스토어 기술 블로그 (NEW!)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/325e0d79d1d8c672641219280e426cad/f726e/image21.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACgUlEQVR42q2P3UvTURjHf/MF5tz2++39zTnn3IaaZuJVNxFEIHRZ0d/QXyC5aaZLid6oi+i6KKiIoMAQISLNqBsztLCyzdrUtU334iSdfjqzLtLrDnzO4XzP83zP95Gag0GcdhveegdWk4zdYsBmNmBUZCwmE7KmBpfDhqzV0uTz0NYSoPNAgK62IIe72ulqD3KotUloQYKN9Uh6USjrdbQ2+wj6vbjdHswWO1q9gTp3PQdbWukUBAJ+DOITWaelPdiwa9TZ6qdD9LWJe7OvHn+DC0mtVu8a+rxurFY7OpMLndFBrd6MzenhyNFjnOju5tTJ0+KzBmTFICay4nW78HnqCDS6aW7yEPDW0eh2INXWalEUBW+DG8XsQGN2olPEqAYTisGMRqNDr9NjsbpwOP+k18tGMYGMyWjEZbfsJnNYTTitRiSxqFCpqBRIkgpVZXVZ3IfQVVXirNijq6tVKBoVck0lWnUVerXQe3p66Av3cSUSYWAgwvVrN7k4OESoN0xY0HuuVxASNf2EBaFQn7iHd98jF84zPNQvGODS8CAjkQEk/vOSSqUSW1ubxNZWGPuU5eWXNeKFJT6kPhPfTDKz+JHRqXEW8wmi+STfsnGiuQTPZgpMRdOk139S2ipR9inzN2GJ+WSOt183mfhaJLGRYjo5x/M349x5dI/LN64y+mqM2fgCy7/SxITxZDTP9NIq6Y0M7PyTsLxtb2+TyeUpFgok8yLhRpKFtWUm3r/jwesn3J16yOPJp0x/nyW6vkKimBTJVlnN58iInj0jl7ednR2W8xl+5NOCFPHiCrFCiphoPHP/LB23jzPy4hZzuQXmszFhmCKxlmU5m2V1n+Fv3OolqVcidzgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image21&quot;
+        title=&quot;&quot;
+        src=&quot;/static/325e0d79d1d8c672641219280e426cad/f058b/image21.png&quot;
+        srcset=&quot;/static/325e0d79d1d8c672641219280e426cad/c26ae/image21.png 158w,
+/static/325e0d79d1d8c672641219280e426cad/6bdcf/image21.png 315w,
+/static/325e0d79d1d8c672641219280e426cad/f058b/image21.png 630w,
+/static/325e0d79d1d8c672641219280e426cad/40601/image21.png 945w,
+/static/325e0d79d1d8c672641219280e426cad/78612/image21.png 1260w,
+/static/325e0d79d1d8c672641219280e426cad/f726e/image21.png 2610w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2024년 12월 모던한 분위기의 원스토어 기술블로그를 새롭게 오픈하였습니다. 많은 관심과 참고 부탁드립니다! &lt;br/&gt;
+(회사 사이트 메뉴에 블로그 메뉴가 포함되어 있습니다)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;원스토어 Tech Blog: &lt;a href=&quot;https://www.onestorecorp.com/sv/techblog/&quot;&gt;https://www.onestorecorp.com/sv/techblog/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;원스토어 회사 사이트: &lt;a href=&quot;https://www.onestorecorp.com/&quot;&gt;https://www.onestorecorp.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;8. SK쉴더스 물리/정보보안 블로그&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/467e88c8e62bddc911008df9c79616ce/d5ef8/image22.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 40.50632911392405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABDklEQVR42q1SS0rEQBDtE4lnEQUP4AkEt17AO7jxBgPjxonL8RQRF06EhMkk/U2nK/2sbkhQXAUseNSr6ub1o6rFdDggfn1gjmmaUNc1nHNo2xbGGDRNk/Nca60hpYTseyhrEaWGurmH2rxCxEBA8ItgjBEhhJyJaMnpoZ9I/ZlzgagtyA0Q+KeIjMDigtjNOI4Z3vuF55dXKcacRFmWeN5usXvZ4W2/z7woClRVtYxgTYjkY2A3ngJbJvjMab3DWTB2CrH8RKxqTAnvzI9dnsnEwkS/l0G5R38Wle4lCPe0wfHsAt3VLfrrO7Tnl5APj7AsqJRG3ysY62BdwgDJvVPHX0aZXCek847vKW3wDcxmaUBa7QRYAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image22&quot;
+        title=&quot;&quot;
+        src=&quot;/static/467e88c8e62bddc911008df9c79616ce/f058b/image22.png&quot;
+        srcset=&quot;/static/467e88c8e62bddc911008df9c79616ce/c26ae/image22.png 158w,
+/static/467e88c8e62bddc911008df9c79616ce/6bdcf/image22.png 315w,
+/static/467e88c8e62bddc911008df9c79616ce/f058b/image22.png 630w,
+/static/467e88c8e62bddc911008df9c79616ce/40601/image22.png 945w,
+/static/467e88c8e62bddc911008df9c79616ce/78612/image22.png 1260w,
+/static/467e88c8e62bddc911008df9c79616ce/d5ef8/image22.png 2462w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;SK쉴더스 회사 사이트에 블로그 메뉴가 포함되어 있습니다. 독특한 것은 정보보안 블로그와 물리보안 블로그가 별도로 운영된다는 점입니다(참고로 SK쉴더스는 예전에 SK인포섹과 ADT캡스라는 두 개의 회사가 하나로 합쳐진 회사여서, 각각의 사업 영역에 맞는 블로그를 운영하는 것 같습니다).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;정보보안/물리보안 블로그: &lt;a href=&quot;https://www.skshieldus.com/kor/blog.do&quot;&gt;https://www.skshieldus.com/kor/blog.do&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SK쉴더스 회사 사이트: &lt;a href=&quot;https://www.skshieldus.com/&quot;&gt;https://www.skshieldus.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;마무리하며&lt;/h2&gt;
+&lt;p&gt;지금까지 SK ICT 패밀리사 중심으로 운영되었거나 운영 중인 다양한 기술 블로그들을 소개하였습니다(작년보다 더 많아졌네요!). 혹시 빠진 내용이나 보완할 부분이 있다면 알려주시면 감사하겠습니다. &lt;br/&gt;
+이들 블로그들이 SK그룹 내 개발자뿐만 아니라 외부의 개발자들과도 공유 및 소통하며 서로가 성장하는 도구로 잘 활용되기를 바랍니다. 읽어 주셔서 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[생성형 AI를 활용한 마케팅 영상 제작 - AI Moment 개발 사례]]></title><description><![CDATA['요즘' 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
 하지만 AI를 사용자로 경험하는 것과 개발자 입장에서 이를 활용하여 LLM 기반 서비스를 구현하는 것은 '완전히' 다른 이야기였습니다. 이번 글에서는 저희가 개발자로 참여한 SK플래닛의 AI Moment…]]></description><link>https://techtopic.skplanet.com/aimoment/</link><guid isPermaLink="false">https://techtopic.skplanet.com/aimoment/</guid><dc:creator><![CDATA[shinys]]></dc:creator><pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&apos;요즘&apos; 개발자라면 GPT, Claude, Gemini와 같은 생성형 AI(LLM)를 한 번쯤은 사용해 보셨을 것입니다.
 &lt;/br&gt;하지만 AI를 사용자로 경험하는 것과 개발자 입장에서 이를 활용하여 LLM 기반 서비스를 구현하는 것은 &apos;완전히&apos; 다른 이야기였습니다.&lt;/p&gt;
 &lt;p&gt;이번 글에서는 저희가 개발자로 참여한 SK플래닛의 &lt;strong&gt;AI Moment&lt;/strong&gt;라는 과제를 소개하고,  그리고 그 과정에서 마주친 문제들과 해결 방식에 대해 이야기해보려고 합니다.&lt;/p&gt;
@@ -6740,7 +7086,7 @@ Copilot Chat은 (1) 간단한 표현 축약, (2) Method 단위의 코파일럿 
 또한 개발 패러다임 관점에서도 AI-assisted Coding (또는 Prompt-based Coding)이 미래의 코딩 형태에 부합하는 것으로 여러 전문가들이 언급하고 있는 바, 더 많은 IT기업에서의 활용이 늘어날 것으로 예상합니다. &lt;/p&gt;
 &lt;p&gt;우리의 업무가 바퀴를 만드는 업무도 있겠지만, 이미 잘 만들어진 바퀴(도구)를 잘 활용하여 기업의 목표를 빠르고 퀄리티 있게 달성할 수 있다면 &apos;한번 써보는 것도&apos; 어떨까요? 
 (물론 우리가 사용할 바퀴도 함께 개선되면 더욱 좋겠지요 ^ ^) &lt;/p&gt;
-&lt;p&gt;읽어 주셔서 감사합니다! &lt;/p&gt;</content:encoded></item><item><title><![CDATA[SK ICT Family사 테크 블로그 총정리 (2024년 버전)]]></title><description><![CDATA[이른바 'IT 회사'로 불리는 많은 기업들은, 그들이 개발하는 제품을 통한 기술력을 홍보하고 작성자의 퍼스널 브랜딩을 지원하는 등의 다양한 목적으로 기술(테크) 블로그를 운영하고 있습니다. SK에서도 SK플래닛을 포함한 이른바 SK ICT Family사들이 각 사별 특성에 맞는 테크 블로그를 운영하고 있는데요, 이번 글에서는 SK ICT…]]></description><link>https://techtopic.skplanet.com/skict-techblog/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skict-techblog/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Thu, 01 Aug 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이른바 &apos;IT 회사&apos;로 불리는 많은 기업들은, 그들이 개발하는 제품을 통한 기술력을 홍보하고 작성자의 퍼스널 브랜딩을 지원하는 등의 다양한 목적으로 기술(테크) 블로그를 운영하고 있습니다. SK에서도 SK플래닛을 포함한 이른바 SK ICT Family사들이 각 사별 특성에 맞는 테크 블로그를 운영하고 있는데요, 이번 글에서는 SK ICT 각 사별 테크 블로그의 2024년 버전을 소개해 드리오니 도움이 되시길 바랍니다. ^^&lt;/p&gt;
+&lt;p&gt;읽어 주셔서 감사합니다! &lt;/p&gt;</content:encoded></item><item><title><![CDATA[SK ICT Family사 테크 블로그 총정리 (2024년 버전)]]></title><description><![CDATA[이른바 'IT 회사'로 불리는 많은 기업들은, 그들이 개발하는 제품을 통한 기술력을 홍보하고 작성자의 퍼스널 브랜딩을 지원하는 등의 다양한 목적으로 기술(테크) 블로그를 운영하고 있습니다. SK에서도 SK플래닛을 포함한 이른바 SK ICT Family사들이 각 사별 특성에 맞는 테크 블로그를 운영하고 있는데요, 이번 글에서는 SK ICT…]]></description><link>https://techtopic.skplanet.com/skict-techblog24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skict-techblog24/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Thu, 01 Aug 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이른바 &apos;IT 회사&apos;로 불리는 많은 기업들은, 그들이 개발하는 제품을 통한 기술력을 홍보하고 작성자의 퍼스널 브랜딩을 지원하는 등의 다양한 목적으로 기술(테크) 블로그를 운영하고 있습니다. SK에서도 SK플래닛을 포함한 이른바 SK ICT Family사들이 각 사별 특성에 맞는 테크 블로그를 운영하고 있는데요, 이번 글에서는 SK ICT 각 사별 테크 블로그의 2024년 버전을 소개해 드리오니 도움이 되시길 바랍니다. ^^&lt;/p&gt;
 &lt;h2&gt;1. SK DEVOCEAN (/데보션/ 으로 읽습니다!)&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;span
