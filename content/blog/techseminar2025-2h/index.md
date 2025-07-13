@@ -12,13 +12,13 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 
 ### 목차 (연중 추가될 수 있음)
 * 7월: TOSS MAKERS CONFERENCE 25 | Google I/O Extended Incheon 2025 | 한빛미디어 북토크('코드 너머' DevRel 세미나) | OKKY 7월 세미나: '개발자의 문장력'  
-* 8월: 파이콘 한국 2025 | FEConf2025 | KWDC25 
-* 9월: KBW2025 | lab | up > /conf/5 | ISMIR 2025 
+* 8월: 파이콘 한국 2025 | FEConf2025
+* 9월: KWDC25 | KBW2025 | lab | up > /conf/5 | ISMIR 2025 
 * 10월: OpenAI DevDay 2025 | GitHub UNIVERSE25 
 * 11월: SK AI SUMMIT 2025 | AI SUMMIT SEOUL & EXPO 2025 
 * 12월: AWS re:Invent 2025 
 * 미공개: 네이버 DAN25 | if(kakaoAI) 2025 | SDC 2025 | 우아콘 2025 | 모두콘 2025 등
-* '26.1Q: CES26 | MWC26 | NVIDIA GTC26
+* '26.1Q: CES26 | MWC26 | (NVIDIA GTC26)
 <br/>
 
 # [2025년 7월] 
@@ -84,7 +84,13 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 * 참가자 신청: 접수 전 (7/13 기준) (유료) 
 * 기타: 7/13 현재 위 링크를 통해 스피커(연사) 및 라이트닝 톡 발표자 모집을 받고 있습니다(후원사도...). 
 
-### (3) KWDC25 
+(참고) 아쉽게도 매년 8월 열렸던 인프콘은, 올해는 열리지 않는다고 합니다(내년에...). 
+
+<br/>
+
+# [2025년 9월] 
+
+### (1) KWDC25 
 
 ![image23](./image23.png)
 
@@ -94,13 +100,7 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 * 참가자 신청: https://www.ticketa.co/events/12 (유료) 
 * 기타: 7/13 현재 프로그램 공개 전입니다. 
 
-(참고) 아쉽게도 매년 8월 열렸던 인프콘은, 올해는 열리지 않는다고 합니다(내년에...). 
-
-<br/>
-
-# [2025년 9월] 
-
-### (1) Korea Blockchain Week(KBW2025) 
+### (2) Korea Blockchain Week(KBW2025) 
 
 ![image31](./image31.png)
 
@@ -110,7 +110,7 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 * 참가자 신청: 7/13 현재 접수중 - https://tickets.koreablockchainweek.com/ (유료) <br/>(7/31까지 Early Bird 접수중, 이후 Regular & On-site Pass 접수) 
 * 참고사항(7/13 기준): 최근 이슈가 되는 스테이블코인 이야기는 얼마나 나올까요? 관전 포인트 중 하나입니다. 
 
-### (2) lab | up > /conf/5 (제 5회 래블업 개발자 컨퍼런스) 
+### (3) lab | up > /conf/5 (제 5회 래블업 개발자 컨퍼런스) 
 
 ![image32](./image32.png)
 
@@ -120,7 +120,7 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 * 참가자 신청:  접수 전 (추후 공개)  
 * 참고사항(7/13 기준): 발표자 신청을 받기 시작했습니다(7/14-8/3, 결과발표 8/8) - https://www.backend.ai/ko/event/lablup-conf-5th
 
-### (3) ISMIR 2025 
+### (4) ISMIR 2025 
 
 ![image33-1](./image33-1.png)
 
@@ -211,7 +211,7 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 
 * 한줄설명: 카카오 연례 개발자 컨퍼런스로, 2024년에는 10월에 Kakao AI 캠퍼스에서 3일간 진행하였습니다. 
 * '24년 링크: https://if.kakao.com/2024
-* 참고사항(7/13 현재): 2025년에는 9월 진행 예정이라고 합니다(추후 공식 안내 예정).
+* 참고사항(7/13 현재): 지난 if kakao는 여기서 보실 수 있어요 => https://if.kakao.com/history
 
 ### SDC 2025 (Samsung Developer Conference)
 (아래 이미지는 2024년 메인 페이지 스크린샷입니다)<br/>
@@ -262,6 +262,15 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 * 등록: https://www.mwcbarcelona.com/register-your-interest (유료)
 * 참조: MWC = Mobile World Congress 
 
+### NVIDIA GTC 2026
+![image83](./image83.png)
+
+
+* 한줄설명: NVIDIA GTC 는 GPU 기반의 고성능 연산에서 출발해 현재는 AI, 로보틱스, 자율주행, 양자컴퓨팅 등 최첨단 기술을 다루는 개발자·연구자 대상 글로벌 기술 콘퍼런스임(2025년에는 3월 산호세에서 개최). 
+* '26년 링크: https://www.nvidia.com/gtc/ (행사 업데이트 전) 
+* 일시/장소: 2026년 3월 추정 
+* 등록: 오픈 전 (유료) - 향후 GTC 2026 등록 오픈 및 뉴스를 위한 Sign Up 아ㄴ내
+* 참조: GTC = GPU Technology Conference 
 <br/>
 
 # 마무리하며
