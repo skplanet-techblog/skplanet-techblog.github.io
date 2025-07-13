@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Jul 2025 15:07:39 GMT</lastBuildDate><item><title><![CDATA[2025 하반기 NEW! 기술 세미나 & 컨퍼런스 일정 정리! (ver.250713)]]></title><description><![CDATA[안녕하세요 SK플래닛 DevRel 담당자입니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Jul 2025 21:59:34 GMT</lastBuildDate><item><title><![CDATA[2025 하반기 NEW! 기술 세미나 & 컨퍼런스 일정 정리! (ver.250713)]]></title><description><![CDATA[안녕하세요 SK플래닛 DevRel 담당자입니다. 
 여러 곳에서 열리는 국내외 기술 세미나 & 컨퍼런스 주요 정보를 한 곳에 정리해 보았습니다. 저희 업무에도 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 공유드리오니 참고하시기 바랍니다.  목차 (연중 추가될 수 있음) 7월: TOSS…]]></description><link>https://techtopic.skplanet.com/techseminar2025-2h/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techseminar2025-2h/</guid><dc:creator><![CDATA[Joe]]></dc:creator><pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 SK플래닛 DevRel 담당자입니다. 
 여러 곳에서 열리는 &lt;strong&gt;국내외 기술 세미나 &amp;#x26; 컨퍼런스 주요 정보&lt;/strong&gt;를 한 곳에 정리해 보았습니다.&lt;br&gt;
 저희 업무에도 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 공유드리오니 참고하시기 바랍니다. &lt;/p&gt;
@@ -258,7 +258,40 @@
 &lt;li&gt;참가자 신청: 접수 전 (7/13 기준) (유료) &lt;/li&gt;
 &lt;li&gt;기타: 7/13 현재 위 링크를 통해 스피커(연사) 및 라이트닝 톡 발표자 모집을 받고 있습니다(후원사도...). &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(참고) 아쉽게도 매년 8월 열렸던 인프콘은, 올해는 열리지 않는다고 합니다(내년에...). &lt;/p&gt;
+&lt;p&gt;(참고) 아쉽게도 매년 8월 열렸던 인프콘은, 올해는 열리지 않는다고 합니다(내년에...?). 
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ffb14c1ed9edc11148596982623c50eb/e4d4a/image29.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABUElEQVR42r1TTUsCURQdx/6ApNXOVjX9h1z0p/oNs6ukDyWTtCIjaFVQu4KIPpCe1jCOkQZDi0DUnJmccebN6WEjaDTpIrpw4PLue4dz77mPg0+4rssAH7h+z8Dhj+NHwg6lqBlt6B0Kw7Rh2BS65aD5YTJYaDR0OA4dTuh4rZy/NDG9dAvhTMVsqgjhQIGwo7C8gJn9Kub2ZMhvWvcu/db+ICH9Kp5UW+AWLzAmXoNfJQisE/DLeQTjD+CzTwis3IG8vg+I+FXhqaqBS8gQUhJimSJiRwrmD8tYOK4gmrxHULxBodYegbCn8LkOTrwCv0YQ2pIQSRBMZGWE0hK4zRICuQpIw/IIR5jhpdpCdLeESFpGJJ7H+AZBOCMhnFMwuV3GVFLGY90cPsNeUKbUYK5qFnPXdJjbHmx2xmoac5/67OL/7GH3p/Tg9uV98CP8BNBVLLSovcJXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image29&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ffb14c1ed9edc11148596982623c50eb/f058b/image29.png&quot;
+        srcset=&quot;/static/ffb14c1ed9edc11148596982623c50eb/c26ae/image29.png 158w,
+/static/ffb14c1ed9edc11148596982623c50eb/6bdcf/image29.png 315w,
+/static/ffb14c1ed9edc11148596982623c50eb/f058b/image29.png 630w,
+/static/ffb14c1ed9edc11148596982623c50eb/40601/image29.png 945w,
+/static/ffb14c1ed9edc11148596982623c50eb/78612/image29.png 1260w,
+/static/ffb14c1ed9edc11148596982623c50eb/e4d4a/image29.png 2198w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;br/&gt;
 &lt;h1&gt;[2025년 9월] &lt;/h1&gt;
 &lt;h3&gt;(1) KWDC25 &lt;/h3&gt;
@@ -268,7 +301,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a241aab2db153cef1fab569ede144c71/cad6c/image23.png&quot;
+    href=&quot;/static/a241aab2db153cef1fab569ede144c71/cad6c/image30.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -279,15 +312,15 @@
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image23&quot;
+        alt=&quot;image30&quot;
         title=&quot;&quot;
-        src=&quot;/static/a241aab2db153cef1fab569ede144c71/f058b/image23.png&quot;
-        srcset=&quot;/static/a241aab2db153cef1fab569ede144c71/c26ae/image23.png 158w,
-/static/a241aab2db153cef1fab569ede144c71/6bdcf/image23.png 315w,
-/static/a241aab2db153cef1fab569ede144c71/f058b/image23.png 630w,
-/static/a241aab2db153cef1fab569ede144c71/40601/image23.png 945w,
-/static/a241aab2db153cef1fab569ede144c71/78612/image23.png 1260w,
-/static/a241aab2db153cef1fab569ede144c71/cad6c/image23.png 1339w&quot;
+        src=&quot;/static/a241aab2db153cef1fab569ede144c71/f058b/image30.png&quot;
+        srcset=&quot;/static/a241aab2db153cef1fab569ede144c71/c26ae/image30.png 158w,
+/static/a241aab2db153cef1fab569ede144c71/6bdcf/image30.png 315w,
+/static/a241aab2db153cef1fab569ede144c71/f058b/image30.png 630w,
+/static/a241aab2db153cef1fab569ede144c71/40601/image30.png 945w,
+/static/a241aab2db153cef1fab569ede144c71/78612/image30.png 1260w,
+/static/a241aab2db153cef1fab569ede144c71/cad6c/image30.png 1339w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
