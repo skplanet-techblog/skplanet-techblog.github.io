@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Jul 2025 13:18:48 GMT</lastBuildDate><item><title><![CDATA[2025 하반기 NEW! 기술 세미나 & 컨퍼런스 일정 정리! (ver.250713)]]></title><description><![CDATA[안녕하세요 SK플래닛 DevRel 담당자입니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Jul 2025 14:59:50 GMT</lastBuildDate><item><title><![CDATA[2025 하반기 NEW! 기술 세미나 & 컨퍼런스 일정 정리! (ver.250713)]]></title><description><![CDATA[안녕하세요 SK플래닛 DevRel 담당자입니다. 
 여러 곳에서 열리는 국내외 기술 세미나 & 컨퍼런스 주요 정보를 한 곳에 정리해 보았습니다. 저희 업무에도 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 공유드리오니 참고하시기 바랍니다.  목차 (연중 추가될 수 있음) 7월: TOSS…]]></description><link>https://techtopic.skplanet.com/techseminar2025-2h/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techseminar2025-2h/</guid><dc:creator><![CDATA[Joe]]></dc:creator><pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 SK플래닛 DevRel 담당자입니다. 
 여러 곳에서 열리는 &lt;strong&gt;국내외 기술 세미나 &amp;#x26; 컨퍼런스 주요 정보&lt;/strong&gt;를 한 곳에 정리해 보았습니다.&lt;br&gt;
 저희 업무에도 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 공유드리오니 참고하시기 바랍니다. &lt;/p&gt;
 &lt;h3&gt;목차 (연중 추가될 수 있음)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;7월: TOSS MAKERS CONFERENCE 25 | Google I/O Extended Incheon 2025 | 한빛미디어 북토크(&apos;코드 너머&apos; DevRel 세미나) | OKKY 7월 세미나: &apos;개발자의 문장력&apos;&lt;/li&gt;
-&lt;li&gt;8월: 파이콘 한국 2025 | FEConf2025 | KWDC25&lt;/li&gt;
-&lt;li&gt;9월: KBW2025 | lab | up &gt; /conf/5 | ISMIR 2025&lt;/li&gt;
+&lt;li&gt;8월: 파이콘 한국 2025 | FEConf2025&lt;/li&gt;
+&lt;li&gt;9월: KWDC25 | KBW2025 | lab | up &gt; /conf/5 | ISMIR 2025&lt;/li&gt;
 &lt;li&gt;10월: OpenAI DevDay 2025 | GitHub UNIVERSE25&lt;/li&gt;
 &lt;li&gt;11월: SK AI SUMMIT 2025 | AI SUMMIT SEOUL &amp;#x26; EXPO 2025 &lt;/li&gt;
 &lt;li&gt;12월: AWS re:Invent 2025&lt;/li&gt;
 &lt;li&gt;미공개: 네이버 DAN25 | if(kakaoAI) 2025 | SDC 2025 | 우아콘 2025 | 모두콘 2025 등&lt;/li&gt;
-&lt;li&gt;&apos;26.1Q: CES26 | MWC26 | NVIDIA GTC26&lt;/li&gt;
+&lt;li&gt;&apos;26.1Q: CES26 | MWC26 | (NVIDIA GTC26)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br/&gt;
 &lt;h1&gt;[2025년 7월]&lt;/h1&gt;
@@ -258,7 +258,10 @@
 &lt;li&gt;참가자 신청: 접수 전 (7/13 기준) (유료) &lt;/li&gt;
 &lt;li&gt;기타: 7/13 현재 위 링크를 통해 스피커(연사) 및 라이트닝 톡 발표자 모집을 받고 있습니다(후원사도...). &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;(3) KWDC25 &lt;/h3&gt;
+&lt;p&gt;(참고) 아쉽게도 매년 8월 열렸던 인프콘은, 올해는 열리지 않는다고 합니다(내년에...). &lt;/p&gt;
+&lt;br/&gt;
+&lt;h1&gt;[2025년 9월] &lt;/h1&gt;
+&lt;h3&gt;(1) KWDC25 &lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -299,10 +302,7 @@
 &lt;li&gt;참가자 신청: &lt;a href=&quot;https://www.ticketa.co/events/12&quot;&gt;https://www.ticketa.co/events/12&lt;/a&gt; (유료) &lt;/li&gt;
 &lt;li&gt;기타: 7/13 현재 프로그램 공개 전입니다. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(참고) 아쉽게도 매년 8월 열렸던 인프콘은, 올해는 열리지 않는다고 합니다(내년에...). &lt;/p&gt;
-&lt;br/&gt;
-&lt;h1&gt;[2025년 9월] &lt;/h1&gt;
-&lt;h3&gt;(1) Korea Blockchain Week(KBW2025) &lt;/h3&gt;
+&lt;h3&gt;(2) Korea Blockchain Week(KBW2025) &lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -343,7 +343,7 @@
 &lt;li&gt;참가자 신청: 7/13 현재 접수중 - &lt;a href=&quot;https://tickets.koreablockchainweek.com/&quot;&gt;https://tickets.koreablockchainweek.com/&lt;/a&gt; (유료) &lt;br/&gt;(7/31까지 Early Bird 접수중, 이후 Regular &amp;#x26; On-site Pass 접수) &lt;/li&gt;
 &lt;li&gt;참고사항(7/13 기준): 최근 이슈가 되는 스테이블코인 이야기는 얼마나 나올까요? 관전 포인트 중 하나입니다. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;(2) lab | up &gt; /conf/5 (제 5회 래블업 개발자 컨퍼런스) &lt;/h3&gt;
+&lt;h3&gt;(3) lab | up &gt; /conf/5 (제 5회 래블업 개발자 컨퍼런스) &lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -382,7 +382,7 @@
 &lt;li&gt;참가자 신청:  접수 전 (추후 공개)  &lt;/li&gt;
 &lt;li&gt;참고사항(7/13 기준): 발표자 신청을 받기 시작했습니다(7/14-8/3, 결과발표 8/8) - &lt;a href=&quot;https://www.backend.ai/ko/event/lablup-conf-5th&quot;&gt;https://www.backend.ai/ko/event/lablup-conf-5th&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;(3) ISMIR 2025 &lt;/h3&gt;
+&lt;h3&gt;(4) ISMIR 2025 &lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -706,7 +706,7 @@
 &lt;ul&gt;
 &lt;li&gt;한줄설명: 카카오 연례 개발자 컨퍼런스로, 2024년에는 10월에 Kakao AI 캠퍼스에서 3일간 진행하였습니다.&lt;/li&gt;
 &lt;li&gt;&apos;24년 링크: &lt;a href=&quot;https://if.kakao.com/2024&quot;&gt;https://if.kakao.com/2024&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;참고사항(7/13 현재): 2025년에는 9월 진행 예정이라고 합니다(추후 공식 안내 예정).&lt;/li&gt;
+&lt;li&gt;참고사항(7/13 현재): 지난 if kakao는 여기서 보실 수 있어요 =&gt; &lt;a href=&quot;https://if.kakao.com/history&quot;&gt;https://if.kakao.com/history&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;SDC 2025 (Samsung Developer Conference)&lt;/h3&gt;
 &lt;p&gt;(아래 이미지는 2024년 메인 페이지 스크린샷입니다)&lt;br/&gt;
@@ -908,6 +908,46 @@
 &lt;li&gt;일시/장소: 2 - 5 March 2026 (현지시간)&lt;/li&gt;
 &lt;li&gt;등록: &lt;a href=&quot;https://www.mwcbarcelona.com/register-your-interest&quot;&gt;https://www.mwcbarcelona.com/register-your-interest&lt;/a&gt; (유료)&lt;/li&gt;
 &lt;li&gt;참조: MWC = Mobile World Congress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;NVIDIA GTC 2026&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/64fac2d67e9e8805b953f717e23f6d9b/8affb/image83.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.56962025316456%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACbUlEQVR42j2R3UuTYRiH37E0HNamyZab4Vyac5rah+RHfqWmViIlCqWpEKJnHXRgmBFBnqkIoebH5mZRUCqWGVaoSxha0kFRukI77Q9It3dz29W7WT5wwe85ufjd9y30TtbRvWygz9LOo34zAwP9EgMMDg7uMTI8gs1mwzxqZnREylYrYxIW6xi2cRvDQ6M8nRzi1bwV4e7DWmY226hvuUBpSQUVlRWUl5dTVlZGXl4u6enpxMXrEGQCh2Ki0Wg1UpYRKd+HKiwcQRDQqDVUNSdhKpYj+Hx+PKKXQIC9F5A+Xq+Xzc1NVlY/8mz6OREKBQ3XLnPrXockkXP9YhWtLa0hYVNzNRbLA7SH1Qhut5v/7Hg9iB4Rl9uFa/sPa9/XWPxgZ+b1OMpoFW1XKrnf2R6S3GlupKPzdijnZJukCcvQamN2hX6/H+f6T+Zm53EsfeL9WzsLCwtMvJhgcnqKJ8/6SE5MICXewKX8bJSK/TSdP0f91ZqQsKDoBDU3SlBrooJCF34frG2sMrNoZtZu5Y39Metr3/i8usqSw0FXTzeZacdRRao4mZKGQhFBhT6exIQESSgjxaQn46wJpergP+GOJPw9x9SXm7z82s47Zxc+n5eNjQ0cyw4s472kJRlQR6kxGY3Iw8NoLMihtrYq1DAuLpaMM6kolQcQRFHELQb35yMgNQ3i8wbY2trC6fyBXdqh2dKDKkpJrCaWTGMcMklSV5BLQ/3uyEeTjlBdU0xkpALB4/EQRJSkbtFFsPG2azsk/CVd2bHioH9skGPJyWSdyqK0uAitTkvp6SwK8wvR6XQkJhpISzWi1+v5C521u5TnzNn3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image83&quot;
+        title=&quot;&quot;
+        src=&quot;/static/64fac2d67e9e8805b953f717e23f6d9b/f058b/image83.png&quot;
+        srcset=&quot;/static/64fac2d67e9e8805b953f717e23f6d9b/c26ae/image83.png 158w,
+/static/64fac2d67e9e8805b953f717e23f6d9b/6bdcf/image83.png 315w,
+/static/64fac2d67e9e8805b953f717e23f6d9b/f058b/image83.png 630w,
+/static/64fac2d67e9e8805b953f717e23f6d9b/40601/image83.png 945w,
+/static/64fac2d67e9e8805b953f717e23f6d9b/8affb/image83.png 1254w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;한줄설명: NVIDIA GTC 는 GPU 기반의 고성능 연산에서 출발해 현재는 AI, 로보틱스, 자율주행, 양자컴퓨팅 등 최첨단 기술을 다루는 개발자·연구자 대상 글로벌 기술 콘퍼런스임(2025년에는 3월 산호세에서 개최).&lt;/li&gt;
+&lt;li&gt;&apos;26년 링크: &lt;a href=&quot;https://www.nvidia.com/gtc/&quot;&gt;https://www.nvidia.com/gtc/&lt;/a&gt; (행사 업데이트 전)&lt;/li&gt;
+&lt;li&gt;일시/장소: 2026년 3월 추정&lt;/li&gt;
+&lt;li&gt;등록: 오픈 전 (유료) - 향후 GTC 2026 등록 오픈 및 뉴스를 위한 Sign Up 아ㄴ내&lt;/li&gt;
+&lt;li&gt;참조: GTC = GPU Technology Conference&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br/&gt;
 &lt;h1&gt;마무리하며&lt;/h1&gt;
