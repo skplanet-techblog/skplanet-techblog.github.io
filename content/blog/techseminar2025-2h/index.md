@@ -87,6 +87,8 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 (참고) 아쉽게도 매년 8월 열렸던 인프콘은, 올해는 열리지 않는다고 합니다(내년에...?). 
 ![image29](./image29.png)
 
+* 인프콘 다시보기: https://www.youtube.com/playlist?list=PLpkj8RKr48wZQXN874PP1hJkaRm6qcvZg
+
 <br/>
 
 # [2025년 9월] 
