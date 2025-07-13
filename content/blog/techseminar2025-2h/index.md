@@ -17,7 +17,7 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 * 10월: OpenAI DevDay 2025 | GitHub UNIVERSE25 
 * 11월: SK AI SUMMIT 2025 | AI SUMMIT SEOUL & EXPO 2025 
 * 12월: AWS re:Invent 2025 
-* 미공개: 네이버 DAN25 | if(kakaoAI) 2025 | SDC 2025 | 우아콘 2025 | 모두콘 2025 등
+* 미공개: 네이버 DAN25 | if(kakaoAI) 2025 | 우아콘 2025 | SDC Korea 2025 | 모두콘 2025 등
 * '26.1Q: CES26 | MWC26 | (NVIDIA GTC26)
 <br/>
 
@@ -86,7 +86,7 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 
 (참고) 아쉽게도 매년 8월 열렸던 인프콘은, 올해는 열리지 않는다고 합니다(내년에...?). 
 ![image29](./image29.png)
-(작년 윕사이트 이미지입니다)
+(작년 웹사이트 이미지입니다)
 
 * 인프콘 다시보기: https://www.youtube.com/playlist?list=PLpkj8RKr48wZQXN874PP1hJkaRm6qcvZg
 
