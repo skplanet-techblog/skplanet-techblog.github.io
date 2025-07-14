@@ -88,6 +88,7 @@ description: "2025 하반기 NEW! 기술 세미나-컨퍼런스 일정 정리"
 ![image29](./image29.png)
 (작년 웹사이트 이미지입니다)
 
+* 관련 글(이형주 대표님): https://www.inflearn.com/pages/notice-20250618-infcon 
 * 인프콘 다시보기: https://www.youtube.com/playlist?list=PLpkj8RKr48wZQXN874PP1hJkaRm6qcvZg
 
 <br/>
