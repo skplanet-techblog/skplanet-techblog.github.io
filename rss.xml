@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Jul 2025 22:59:01 GMT</lastBuildDate><item><title><![CDATA[［讀書生活本］'코드 너머, 회사보다 오래 남을 개발자']]></title><description><![CDATA[안녕하세요, SK플래닛 DevRel…]]></description><link>https://techtopic.skplanet.com/book-beyondcode/</link><guid isPermaLink="false">https://techtopic.skplanet.com/book-beyondcode/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 DevRel 매니저입니다. 오늘은 최근 화제가 되고 있는 개발자 소프트스킬 도서, &quot;코드 너머, 회사보다 오래 남을 개발자&quot;의 요약 및 독후감을 작성하여 보았어요~ (요즘 학교에서는 &quot;독후감&quot;이라는 표현보다는 자유롭게 책을 읽고 기록하며 생활 속에서 실천을 강조하는 &quot;독서생활본(讀書生活本)&quot;의 작성을 권장한다고 하는데요, 웬지 성찰/학습/개선이라는 패턴의 개발자 회고(Retrospect)와도 유사한 점이 많은 것 같습니다. 나의 업무와 회사의 문화를 회고하는 마음으로 퀵하게 작성해 보았사오니 참고 부탁드립니다!)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Jul 2025 23:11:16 GMT</lastBuildDate><item><title><![CDATA[［讀書生活本］'코드 너머, 회사보다 오래 남을 개발자']]></title><description><![CDATA[안녕하세요, SK플래닛 DevRel…]]></description><link>https://techtopic.skplanet.com/book-beyondcode/</link><guid isPermaLink="false">https://techtopic.skplanet.com/book-beyondcode/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 DevRel 매니저입니다. 오늘은 최근 화제가 되고 있는 개발자 소프트스킬 도서, &quot;코드 너머, 회사보다 오래 남을 개발자&quot;의 요약 및 독후감을 작성하여 보았어요~ (요즘 학교에서는 &quot;독후감&quot;이라는 표현보다는 자유롭게 책을 읽고 기록하며 생활 속에서 실천을 강조하는 &quot;독서생활본(讀書生活本)&quot;의 작성을 권장한다고 하는데요, 웬지 성찰/학습/개선이라는 패턴의 개발자 회고(Retrospect)와도 유사한 점이 많은 것 같습니다. 나의 업무와 회사의 문화를 회고하는 마음으로 퀵하게 작성해 보았사오니 참고 부탁드립니다!)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;도서 링크는 여기에! &lt;a href=&quot;https://product.kyobobook.co.kr/detail/S000216932006&quot;&gt;https://product.kyobobook.co.kr/detail/S000216932006&lt;/a&gt; (교보문고))&lt;/li&gt;
+&lt;li&gt;도서 링크는 여기에! &lt;a href=&quot;https://product.kyobobook.co.kr/detail/S000216932006&quot;&gt;https://product.kyobobook.co.kr/detail/S000216932006&lt;/a&gt; (교보문고)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;0. 잠시 전하는 말씀 있겠습니다~&lt;/h2&gt;
 &lt;p&gt;&lt;span
@@ -43,24 +43,26 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/15ad153a3461b693a367bab8a168ac9a/57dc1/image02.png&quot;
+    href=&quot;/static/fdb1fa2e50d68e9b2c98e62562b8643d/3ceac/image02-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 146.2025316455696%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAGC0lEQVR42o1WeVDUZRhmpjwQr7xYFgzkELlEUhHxSEulUDPNSgxrVNTCW1iQSy65CVREzZsUDzDT1NExxybHo6wpa6bGe8ZrDIRl2fvk6fl+67JLf/WbeeZ7fzvfPvtez/uuG/7P09EBWKyA1db1dEC8Ex285ybu6/R6aHU66VRrNNDzNBgMMJlMEp++WY2UBQeQOOsrJH2wF4vf342lc/dIdtK8vZg3tQaNW3+Q7kqEWp2dSK3VSMTCVqnVMBiN0iX1UyUiA/IQHFGM6JhKRIwqwcioUsx8bxdiJ1bBzW01CtY2OgnNZjOM/LLRaKJnRgnC1qj5AwYd2h63YkpUGcaSbOqULXgnbruECbFfYqhPDnr3VaAi7Vsnocligs7IkPlljU4Do9koEQnbZDND86wNkyJLMY4E06fXYPLkasTP3IEJE6oQHV0BDxKWpp50ErY/UaLpdhNaH7xAy/1mtNxrRuv9F2i+24SWBy14eO0BxocXIya2ClOnbkEsiadN24aJDHcWiXv3S+tKWLTqOGT90+A3JBN+gzPgL8vEMM9MBA/NQZhfLkIJH+8cDBq0kcjAEN4T52De9aTd0yMFZQoXwpQlhxEYshlV1ZeRvKoBHy44iIysM0x4NV4buBGeXtmQy7PhTVIB39c3wdc3VzoD/PPQhx5WpJ1yEiqWHkbU6HLc+v0R6ut/QXXVZVy7eh+JiXUYMCAdQ+mpIBTwIrnImXvvVAmCzM1tJfLoSCdh2tJ6jBlXidOn/0Be3jkkJdWjouJ7LFx4UArN7hnJ5DkIomclaxqxI+88arLPojb3HCoVp3Dj5C0XDxly1JgKqWoJCQexYvlRrFndiLlsXkHow9aQybLQl+GP8MlGE4slCchm6xST1WZ1KmXtojokJH6NHTuuoKHhN+zbewP37jajpPQiejMsbxKGBRYgmo0dx378504TDFYTWpUqvFC24XlzM9rZs52EGz47hLdn1KK29kdUVl5CQeEF7Nx1FZuLLiAurhbdem5ATTqTrjVC90wJq8EEI2VptVhgpYYt1LPN5qLlrM+PwaNPKnzpSVBAvnQKRI0sQQT7r4d7CrbnnpVCU+kpTb0Wrao2tFOq7Vo1VITOaHDxkFWeELYZ+5LrkT1/N7YsrkPFogNQzNmJ4GF56O6Riq0bT3OyWKBpUUOv1MDQprVD2EotzPS+kzCdRfCTZ+GTt7Yibmw55k+qwuyYCskOYFUHs8nHsE9nUcvvRlcinh0RH23HbKpnYmgR6grPO6ucmnQEozhNyhbtx85lh/ApiXM/2oMT64/jY+q2PyvtySr3H5iBfqx0PyqmvziJgVSKW7d1KFr/jZMwffkRBLIdkuNrkTClGjPGlmEO9Ro/rhxRwYUYQjIhPTFZ/H2pDkrRnyoRCPbPZ/4VKFe4TBsFPRwdVIAzihM4vPIoti2pw7IZNehBFci8suD9UiUC48KLEMtijWYKxoYVIYZ2L7ZWl+EgqtynbxqieeHNUaUIYaVHUKMO7cpdCAd7ZiGIhYph9SPohIyfCcIuwyH7i2PoRbfllNcgFkB45eUyDBykQseiSGKUjadngjR8eAGnTWrXkDeuOIJX3TdIhCL5oqr/hYNwGHMYQZLQwHyJLIRevsLGL05xKUox94EvvYoaUSiFIWF4QacdTtn5eL+cNoRMbo9ARCJ0Ludc3J79nZPQ2NQO3SMl9E/aoHtsPyXQNjep8fjKPQSxsp4iFYzAk3mUESIaGVvq8v7r6GjXS/KTCFWUkFKrgt5sgIH7RMVdojXq0aZpBxWKF38/R4hcEGUiNHQz3uDGi2LxIgkf9uGlY7/i9v0mJ6HYv2Ini+0nNp5YpUaT/bRRTsY2PR5ef4gNHLiRkSWIE4uKagpkOkSqLh65iRs/PZTGWeeid+xksU41Wq1ki72s4Y5WckeLp2B1AxeSAsNDCuFHZQm1uHdfhwuHfsaffz2DzfqSUM9/CY4Fb+YA0NF2kKo1amnWcZzicv1NpC+px6aVDdiUfBz5nNwFPO9cf4Cnz1X2kEWYFpKIFwGLNOOsne+un9tcJrTr47gv7vwLuo1HCMDlweAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 74.0506329113924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACeklEQVR42pWTW0hUURSGfaqHsHS6OGoKYqKVSuMFoQzKQDILovIt7CGoTKgEU3OcyGaULCO8UAnViw9mSCkVJZFmgwZpFzHLkKyQLpbkNGfOmft87RnHh2LKacPh7MNa+ztrr/9fIQRYDqcTm93ue7zLNGXmZutTutqGuN3+nFtiPzU544t5PJ7fzoYEAtodDqx2BcWqeI/w6skE8bE6sjLOkplehzq8DGP3a1+u2+X+O3DuX5afMl8mv/N5chrJJDHUO0aa5gy5uc1szmkgKaGagYdj8wNd/mC97g47tjSxr+Aa+TmNpK+tITb2JFHRVUREalmhKqf/wZvggSeOdVBW0UVTcx+7dl9hcVgZEWotKasNZGfVs35dHS/6J2aB7n/00OUP1ooKCwtbaWkxUlx8g0h1FWGLSmm/ZPRmIX0z4bQ5ArX/zwpngadFdQV7rqLX36eoqJ3kRD29nS+RzTJunLg8TtwedzDA2STt0Q62ptZwMLeRvIw6EuJO8ahzmNGh9wz2jPFMiGSelvy2CQYoerh343kOb79I0bZm4oQg4cIqqvByVKoKloYeF6L8h8qVArh/0wVKdl5Gk6T3qRsTo0MjRNGsMRC/UsdAz9v5gU5/8MiBNhYuKBFiVBK6RFS2rIKoqCpSRS8zk2tQi2+j3zauYCpsMHSzQUxFXk4T+cKP2ZnnWB5RSUy0ToC1pCUZGB38ML9t5pZVkrGZLSgzovFOOyOPx0kUwiSn1KIW19cJ0RyyPfhZttptyGKOFZsVSfHOs5tGYaHEVdW+q5ceuo7phyVIoEiQZQVJsoi3jNksYXVY+fTuK313hzHeG2F8+COKbA3ow1/ohO40dKiVpgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image02&quot;
+        alt=&quot;image02-1&quot;
         title=&quot;&quot;
-        src=&quot;/static/15ad153a3461b693a367bab8a168ac9a/f058b/image02.png&quot;
-        srcset=&quot;/static/15ad153a3461b693a367bab8a168ac9a/c26ae/image02.png 158w,
-/static/15ad153a3461b693a367bab8a168ac9a/6bdcf/image02.png 315w,
-/static/15ad153a3461b693a367bab8a168ac9a/f058b/image02.png 630w,
-/static/15ad153a3461b693a367bab8a168ac9a/57dc1/image02.png 718w&quot;
+        src=&quot;/static/fdb1fa2e50d68e9b2c98e62562b8643d/f058b/image02-1.png&quot;
+        srcset=&quot;/static/fdb1fa2e50d68e9b2c98e62562b8643d/c26ae/image02-1.png 158w,
+/static/fdb1fa2e50d68e9b2c98e62562b8643d/6bdcf/image02-1.png 315w,
+/static/fdb1fa2e50d68e9b2c98e62562b8643d/f058b/image02-1.png 630w,
+/static/fdb1fa2e50d68e9b2c98e62562b8643d/40601/image02-1.png 945w,
+/static/fdb1fa2e50d68e9b2c98e62562b8643d/78612/image02-1.png 1260w,
+/static/fdb1fa2e50d68e9b2c98e62562b8643d/3ceac/image02-1.png 1456w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -69,12 +71,12 @@
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;본 도서는 &lt;strong&gt;소프트스킬, 개발문화, 퍼스널 브랜딩&lt;/strong&gt; 이라는 세 영역에서 주 독자인 개발자와 예비 개발자들에게 현업 사례와 경험과 함께 이들의 중요성을 전해 주는 실무서입니다. &lt;br/&gt;&lt;br/&gt;
-문득 이 세 영역을 &lt;strong&gt;삼각형&lt;/strong&gt; 으로 도식화해보고 싶은 생각이 들었는데요(책에는 없는 내용입니다 ^ ^), 각 꼭짓점인 소프트 스킬, 개발 문화, 퍼스널 브랜딩은 상호 보완하면서 개발자의 성공을 이끌어나가게 됩니다. &lt;/p&gt;
+문득 이 세 영역을 &lt;strong&gt;삼각형&lt;/strong&gt; 으로 도식화해보고 싶은 생각이 들었는데요(책에는 그림이 없습니다 ^ ^), 각 꼭짓점인 소프트 스킬, 개발 문화, 퍼스널 브랜딩은 상호 보완하면서 개발자의 성공을 이끌어나가게 됩니다. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;소프트 스킬: 조직 안에서 협업을 가능하게 하는 또 하나의 &quot;역량&quot; &lt;/li&gt;
-&lt;li&gt;개발 문화: 그런 소프트 스킬이 존중받고 발휘되는 환경 &lt;/li&gt;
-&lt;li&gt;퍼스널 브랜딩: 그 과정을 외부로 확장하여 커리어 기회를 넓히는 요소로 피드백 루프를 형성&lt;/li&gt;
-&lt;li&gt;삼각형의 중심은 &lt;strong&gt;&quot;지속 가능한 개발자의 성장&quot;&lt;/strong&gt; 을 추구 (개인적인 의견입니다)&lt;/li&gt;
+&lt;li&gt;개발 문화: 그런 소프트 스킬이 존중받고 발휘되며 업무에 몰입, 성장하도록 돕는 환경 &lt;/li&gt;
+&lt;li&gt;퍼스널 브랜딩: 자신의 전문성과 가치를 외부로 확장하여 커리어 기회를 확장하는 전략.&lt;/li&gt;
+&lt;li&gt;삼각형은 피드백 루프를 형성하며, 삼각형의 중심은 &lt;strong&gt;&quot;지속 가능한 개발자의 성장&quot;&lt;/strong&gt; 을 추구&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -108,7 +110,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-(책에는 없는 내용이지만 이해를 돕기 위해 작성하였습니다)&lt;/p&gt;
+(책에는 없지만지만 이해를 돕기 위해 도식화하였습니다)&lt;/p&gt;
 &lt;p&gt;참고로 도서 정보는 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;도서명: &apos;코드 너머, 회사보다 오래 남을 개발자&apos;&lt;/li&gt;
@@ -116,6 +118,7 @@
 &lt;li&gt;주요 주제: 소프트 스킬, 개발문화, 퍼스널 브랜딩으로 확보되는 결정적 경쟁력&lt;/li&gt;
 &lt;li&gt;집필진: 국내 주요 IT기업의 만렙 DevRel 매니저님들 ^ ^&lt;/li&gt;
 &lt;li&gt;출판사: 한빛미디어 (올해 6월 30일 1쇄 발간)&lt;/li&gt;
+&lt;li&gt;링크: &lt;a href=&quot;https://product.kyobobook.co.kr/detail/S000216932006&quot;&gt;https://product.kyobobook.co.kr/detail/S000216932006&lt;/a&gt; (교보문고 기준)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;2. 챕터별 핵심내용 및 소감 &lt;/h2&gt;
 &lt;h4&gt;(1) 성장 지옥에서 탈출할 비기, 소프트 스킬 &lt;/h4&gt;
@@ -127,10 +130,48 @@
 &lt;li&gt;왜(Why) 보다는 &apos;무슨 이유로&apos;, &apos;어떤&apos; 을 선호하기&lt;/li&gt;
 &lt;li&gt;말하기와 듣기의 비율은 3:7 로 유지&lt;/li&gt;
 &lt;li&gt;상어 같은 대화자 vs. 고래 같은 대화자&lt;/li&gt;
-&lt;li&gt;조언보다는 인정과 공감하기 등 &lt;/li&gt;
+&lt;li&gt;조언보다는 인정과 공감하기&lt;/li&gt;
+&lt;li&gt;회의의 목적과 기대 결과를 미리 그리고 명확하게 전달하기&lt;/li&gt;
+&lt;li&gt;배경 음악, 시간제한 도구 등의 보조 장치 잘 활용하기&lt;/li&gt;
+&lt;li&gt;체크인 및 체크아웃 잘하기 등&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;(2) 우테코 리사 코치가 말해주는 소프트 스킬의 중요성 &lt;/h4&gt;
 &lt;p&gt;참고로 우테코는 &quot;우아한테크코스&quot;, 즉 우아한형제들 회사 내 외부개발자 양성을 위한 교육조직으로 수 년간 좋은 개발자들을 양성하고 있습니다 - 박재성(포비) 님을 비롯하여 다양한 직무별 강사 및 소프트스킬 코치님들이 도움을 주고 계세요. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;우아한 테크코스 웹사이트: &lt;a href=&quot;https://www.woowacourse.io/&quot;&gt;https://www.woowacourse.io/&lt;/a&gt; &lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/52b2f9e8e083b2ce4658393242f20bd6/ad997/image10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.08860759493672%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADQ0lEQVR42h2SXU8bRxSGrYZPY2wv/lh71+vd9X55116wjW2MIkjUQpWiUiU0bUwIUOES4xKVkKo3bdVe9KbX/Yu9qlq1KhEWEJunQy6OZjRnznPe98xERqMxd3ExvOGft1dc3tzy9mrE5fWYd2O4fnfL9eiW4WjE8GbMnxdj/vj7mv+GI66GQy5F/t+rW/66GIm6MZHByYBXp2e8OX/NN4MTdne7dLtddnaeiPUZL18es7f3gt7XR/SORPR67O8f8Kz7nBeHR/RFfb/f52QwEGe7RDzHprXcoNPpEFZ8spk0mXQaKSkRjycoFIqYlote1NF1k1xeQ9VM1KKJ5QRo4kzO5cXeI5NXifi2gWUWCVyLwLN5cH+FWhig5PMCUEI3LBzXpyAAiqojC6CcU5DlPJqqoKp50VTB0DUsSyey3g5p1UM6zaX3oE6rgSmS0kKaUskVlzwedGq0aiG66VHxy4SewczcHAWjgGObuJ5Duezgl0t3wAqdRpXVZkhjqUpF2A7KZUxhJ27WSNl1/OUmRrjMjBaiBU3WWhUMS8OvuUKIS7PmCDE2SxWTSCEr0Vx0qVcd7JIuFAQC6KM7QvmTHhuHZ3zS+4717oAvzn6m9ek+i9VAWFQwhcL2sstq3aIRGNT9IpHozBSFfIZYdBY1l8MPqgTBIu6dko93ebR9yPZOj5X1xzzdO2Xzsz0xW4t8LkXJUAmrtnDm0BCiOnWPSDYZJ7uQJC6AuqrilqtUa23scJUNofD42x/Z73/P1pfH9M9/YevzA9R8gXQmiVaQmY3NEhOMonicbDpFxNE0otE5kvE4tuVQssUX0XQ8L2T76QGD1z/w6s1PPP/qlF9/+53NR49xTJO8kiGXk8hkFkilJTRFuLPEDFVZIS5eLC0lyIlkOhljXjQwDUP8zfusrX3Iw4cb79ePNrcIKnWSkkR6IUZJS2HpGVKixjJ0XNshMjE5jZyIsajLzExPiphi4t6kuBRHTqUIfZeVxhLtRoN2s01B1ZicnMI1Zdq+hFecZ25qAikxTz6VJJIUs0tGZ1iITjM7c4+YAEpiLnWvgK3JVCyFdqVIq2LQrFroSpZUIoqamcdSYniKhJxMsxx+wHkvwf/Pc7g/rWk9vwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;&quot;
+        src=&quot;/static/52b2f9e8e083b2ce4658393242f20bd6/f058b/image10.png&quot;
+        srcset=&quot;/static/52b2f9e8e083b2ce4658393242f20bd6/c26ae/image10.png 158w,
+/static/52b2f9e8e083b2ce4658393242f20bd6/6bdcf/image10.png 315w,
+/static/52b2f9e8e083b2ce4658393242f20bd6/f058b/image10.png 630w,
+/static/52b2f9e8e083b2ce4658393242f20bd6/40601/image10.png 945w,
+/static/52b2f9e8e083b2ce4658393242f20bd6/ad997/image10.png 1012w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;이 챕터에서는 정확한 자기 인식의 힘이 나와 조직 성장의 시작점이라고 정의를 내리고 있는데요, (1) 개인 관점에서는 자기 인식에서 시작하여 자기 효능감과 회복 탄력성을 길러 나가고, (2) 조직과 리더 관점에서는 심리적 안전감을 잘 제공해 줄 수 있으면 행복한 개발자 문화가 이루어지겠구나 하는 생각이 들었습니다(제 의견은 책의 내용과는 살짝 다르지만 개인만으로는 힘들 수도 있다고 생각하거든요). (3) 유연성과 자기 결정력은 그 정반합(?)의 결과일 수 있겠다는 생각이 들었습니다. 개인적으로 좋아하는 내용들, 고민하는 내용들이 나와서 매우 반가왔고 동시에 이러한 요소들이 실제로 잘 Working하는지가 궁금하기도 했던 터라 흥미있게 읽었습니다(실은 독후감 초안은 이미 써놓았다가 포스팅을 못하고 있었...).&lt;br/&gt; 주요 내용은 다음과 같습니다. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;자기 인식(Self-awareness)과 자기 효능감&lt;/li&gt;
@@ -145,24 +186,26 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9167450b0e0cbc37e5979439de8ea3bc/97655/image04.png&quot;
+    href=&quot;/static/b70f73d786e5a7713dcc92b7ede2c1a1/7db30/image04-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 146.8354430379747%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAIAAAAl5NuSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFWElEQVR42k1UaUxUVxSmTf9ahopabMQFGRaBGXYdqgISFWxtjG1Tu/ywJk1jY7Qal1itidoQcGGGGZAlDFut6S/b/lDTFBARZYRhLBpstdWRxRlnf/PWuct7PW8exGbOu3Peu+f7zrnfOe8lKIpCZUJkMu9gcGRFRvBTFM2P/ytYxuBTmYKjxSfAxRMuShiI5gjLEU6kIjgCFcCfhyGB8hES+kuY9GMfT9V4IEoAJpawIhVYEtX4wjgcv1XxsAtEDA5LVAwgv4tzPhb+dovPGBJRwXDFaAyIwYAvSqIaBm6hvDAO8ZTX8mvUsKvFqGVDHJSt1kl4MCieJzw8BKIIjuB5CTQ8iMLgCNBRhapg2JCoBEGQCioHMJzZh7whHNRgGjIuFYFqARkiIU1XFawVBkhPzDMrzQDYEb07yT0ERsjvR37YhRVyspiFoqB+jfEVGPIHsf8l8nCU9eDZZ+hJAPs4Go3QEFVImAbBJwoCqeGY2nHUVsU7xEZJhOWQJAK1zAuY4xEmVJCQhBAnxkSMYohMBYKcJMoK0ETnBFObRFUB7D9PHjw7fPLivbrWcViHRl/UNjnrW1wHTg83dj2w9jz49vSdkfGXEBlBWp8V6CQnq0egv/z+1NI5MTTquT4w9dsf7vGHgTONzuFRT+/Vx84H/r7hmdpm59iEDyIFMt8qAMMMgCQ8hWJUebEsqvIqWJlTWxOcat2GfK9apR4YR4ECOhxGEQZFgyjIExFkF4jIEwFMIhIfHwSI/JN3eZFnLjMEuaVno6zDh15G463m41Ot6o8CiKIIDgN1fLYYcEajI37kmwND0HPJPcG6vDGPOlUU2guFsCJR3xAGRQAPAx+TY8ASxMFpaQomCoBqq2C2gZKXOTCWMpIsQktZOYoUiadsTBHBYBagbCgkgpkACgD73FslKvyMh3Xcf3H73tQd5+ygY3rikW9swnvXNfvEHbox+HTENasNFmSa9jD/PA/OeBm1bAljGJrJR6FrfW7HuPd6n/vqtX+dE77+29M3BtxDI7M+v8gwiBIFjEPCC9ELFpGi8N1Q1UaKwIkiI7EiFhmBC/OcgEUe8wLiecTL8vwXRW0bJoqkfh4UtZcJpxpun7g4eKrx1ncNN4+e64f1+MWbxy8MHDuvGviH6/oO1fYdqe8H50hd/7H6wVMNw8cv9H/fMJTw2sq611fWg63e2Jq/rXN52aXMyva0Da15W+zG6s4VZZcyKtoNW+3wJKOyPb28TV/R9kaaGg/AhEUF1kWF1iSDOXdrR+mOnrxqe/knl4u3d5l29lZ9diV/m710Rzf4xdu7C97rzNnckVHZlpxvVVEF1oQkg0WXZ1lcaE01NS8stKRXtuTXdJZ+0FXwfkfZRyqgYJvdWNNR/mlv2saWlOKmlBLb28U2gAAwDjaYU0qtELG8qCNrfXfGptbsLW25FT36dV36itaMqpbsjV2rSuzZVe1Zm9uyN7et3NAMkDlwktGsyzMvyG1YtvfAO3v3vwl+VuPSPQdT9+9LzL+wIMOa8vmR5Yf2JhadW5BtTjQ06AwNSUbLK3BiZrP+xG7TSKZpWJ92+KsV3+w3jWWVufQZZ75I3XPU5Mwxjehzu3ck5VjV+HmLgw1mXU6T4aeqoivpRb2rcu01a9p3lvy6qrBzteHKpuzWXetu6Qt7MksdJQvXnk822pILGv8HzofMTalfH1x7r7jUUbhs9+GlH54suVOydsy4Yt++JdVnigdMpvvG9NNfLs67VLHr8vqPf1xaatPA5rhZErNsi6tqwXTZNrBF5XVLtvygW2PTZdmS3z23pPqsbo0VRH7LaIHMmtr/AXVqAmnNgIneAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 70.88607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACG0lEQVR42pWSS2hTURCG40Jw51K04qIYNCQutSD4AkHQhVYRJVi6sgvR+lhYLIpSStAqgoIbqdJatLHGN6LdiGDBRSnigwpqbUvivSW5aZ73kfv6PDeJrhKbzmHOOXCYb/6ZOT5qmCuW6ZpVL1FySriui+M65O0cRbtQvtcyX02gCPaCDEdHF67ZGqqtlhOkSilk4zeWay0CKJbuaBQENG/myZoZLMfGFqpMxxLJVOpZXYWGY5B3cmRtBdmMU3J1DFdFF+69LapkT43YGf88x/Dz74yNS7x6O82z0V88HZ0iOV8U77ZXSmNAL7vmFokrCj8TColklmkpg5zOMytnUdQMjgdsVKGX2Wv8nJkQpRrlYAtDlCrKdTVm9RkM21gEUFiqmOGHJAtlCvFkmhlZYb5QEBNXkXIpDMtsEOhWNknJMvFFYuKrxMdJiW9TSQqagS6UpfWMmHYDQMuuTK7/4Sc2tQ5w6NRjDhyPlf3giRitx0aEP2JH+AEd3W+qP+I/QNOqAC9cf49vVYQ1G/tZt/UOoe2DBLbdJbBlgObNt1nq76Nl39C/L1ZfYRUYufWBZeuvETp5lrXhSwQ7xXm4h+DpMzTv7WN58CY7j0QXBv5VeP7qGL6miwSiG1jduwt/NERTzx4Cr/2sONrBkpU3aNk/uDDQrvZw+MUku9tjtF++T7h7hLbeIcJd4ozco63rCeHOl5y78q5mD/8APG31aG0o9G0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image04&quot;
+        alt=&quot;image04-1&quot;
         title=&quot;&quot;
-        src=&quot;/static/9167450b0e0cbc37e5979439de8ea3bc/f058b/image04.png&quot;
-        srcset=&quot;/static/9167450b0e0cbc37e5979439de8ea3bc/c26ae/image04.png 158w,
-/static/9167450b0e0cbc37e5979439de8ea3bc/6bdcf/image04.png 315w,
-/static/9167450b0e0cbc37e5979439de8ea3bc/f058b/image04.png 630w,
-/static/9167450b0e0cbc37e5979439de8ea3bc/97655/image04.png 819w&quot;
+        src=&quot;/static/b70f73d786e5a7713dcc92b7ede2c1a1/f058b/image04-1.png&quot;
+        srcset=&quot;/static/b70f73d786e5a7713dcc92b7ede2c1a1/c26ae/image04-1.png 158w,
+/static/b70f73d786e5a7713dcc92b7ede2c1a1/6bdcf/image04-1.png 315w,
+/static/b70f73d786e5a7713dcc92b7ede2c1a1/f058b/image04-1.png 630w,
+/static/b70f73d786e5a7713dcc92b7ede2c1a1/40601/image04-1.png 945w,
+/static/b70f73d786e5a7713dcc92b7ede2c1a1/78612/image04-1.png 1260w,
+/static/b70f73d786e5a7713dcc92b7ede2c1a1/7db30/image04-1.png 1494w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -335,10 +378,9 @@
 &lt;/ul&gt;
 &lt;p&gt;또한 앞으로 AI에게 점점 기대하는 역량이 &apos;생산성과 효율성&apos;이라면,
 인간에게 더욱 요구하게 될 역량이 바로 이 책에서 기술하는 &lt;strong&gt;소프트 스킬&lt;/strong&gt;이라고 보았습니다.
-그런데 소프트 스킬은 인간이 인간과 협업할 때 필요한 역량이라면, 최근 이야기가 많이 나오고 있는 &apos;AI와 인간의 협업&apos;을 위해서는 어떤 &lt;del&gt;하이브리드한&lt;/del&gt; 스킬이 필요할까요? (프롬프트 엔지니어링? 규칙을 부여하여 원하는 결과를 뽑아낼 수 있는 바이브코딩? 멀티 툴 활용?)
-이 부분도 별도로 고민이 필요할 영역일 것 같습니다.&lt;/p&gt;
+그런데 소프트 스킬은 인간이 인간과 협업할 때 필요한 역량이라면, 최근 이야기가 많이 나오고 있는 &apos;AI와 인간의 협업&apos;을 위해서는 어떤 &lt;del&gt;하이브리드한&lt;/del&gt; 스킬이 필요할까요? (프롬프트 엔지니어링? 규칙을 부여하여 원하는 결과를 뽑아낼 수 있는 바이브코딩? 멀티 툴 활용?) 이 부분도 별도로 고민이 필요할 영역일 것 같습니다.&lt;/p&gt;
+&lt;p&gt;혹시 다음에 &lt;strong&gt;&apos;코드너머 2편&apos;&lt;/strong&gt; 이 나온다면 ^ ^ 1편은 개발자 관점에서의 소프트스킬/브랜딩/문화를 서술했다면, 2편은 IT기업과 담당자 관점에서의 데브렐 업무 및 프랙티스, AI 활용과 해커톤 영역까지 소개하는 관점의 책을 한번 기대해 봅니다(저희도 참전할 수 있으면 좋겠네요 ^ ^).&lt;/p&gt;
 &lt;p&gt;그러한 의미에서 이 책이 우리나라 개발자 생태계에 하나의 소프트스킬 차원의 마중물이 되기를 바랍니다. &lt;/p&gt;
-&lt;p&gt;덧. 혹시 다음에 &lt;strong&gt;&apos;코드너머 2편&apos;&lt;/strong&gt; 이 나온다면 어떨까요? - 1편은 개발자 관점에서의 소프트스킬/브랜딩/문화를 서술했다면, 2편은 IT기업과 담당자 관점에서의 데브렐 업무 및 프랙티스, AI 활용과 해커톤 영역까지 소개하는 관점의 책을 한번 기대해 봅니다(저희도 참전할 수 있으면 좋겠네요 ^ ^).&lt;/p&gt;
 &lt;p&gt;읽어 주셔서 감사드립니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2025 하반기 NEW! 기술 세미나 & 컨퍼런스 일정 정리! (ver.250713)]]></title><description><![CDATA[안녕하세요 SK플래닛 DevRel 담당자입니다. 
 여러 곳에서 열리는 국내외 기술 세미나 & 컨퍼런스 주요 정보를 한 곳에 정리해 보았습니다. 저희 업무에도 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 공유드리오니 참고하시기 바랍니다.  목차 (연중 추가될 수 있음) 7월: TOSS…]]></description><link>https://techtopic.skplanet.com/techseminar2025-2h/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techseminar2025-2h/</guid><dc:creator><![CDATA[Joe]]></dc:creator><pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 SK플래닛 DevRel 담당자입니다. 
 여러 곳에서 열리는 &lt;strong&gt;국내외 기술 세미나 &amp;#x26; 컨퍼런스 주요 정보&lt;/strong&gt;를 한 곳에 정리해 보았습니다.&lt;br&gt;
