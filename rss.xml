@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Jul 2025 14:50:32 GMT</lastBuildDate><item><title><![CDATA[［讀書生活本］'코드 너머, 회사보다 오래 남을 개발자']]></title><description><![CDATA[안녕하세요, SK플래닛 DevRel…]]></description><link>https://techtopic.skplanet.com/book-beyondcode/</link><guid isPermaLink="false">https://techtopic.skplanet.com/book-beyondcode/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 DevRel 매니저입니다. 오늘은 최근 화제가 되고 있는 개발자 소프트스킬 도서, &quot;코드 너머, 회사보다 오래 남을 개발자&quot;의 요약 및 독후감을 작성하여 보았어요~ (요즘 학교에서는 &quot;독후감&quot;이라는 표현보다는 자유롭게 책을 읽고 기록하며 생활 속에서 실천을 강조하는 &quot;독서생활본(讀書生活本)&quot;의 작성을 권장한다고 하는데요, 웬지 성찰/학습/개선이라는 패턴의 개발자 회고(Retrospect)와도 유사한 점이 많은 것 같습니다. 나의 업무와 회사의 문화를 회고하는 마음으로 퀵하게 작성해 보았사오니 참고 부탁드립니다!)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Jul 2025 22:59:01 GMT</lastBuildDate><item><title><![CDATA[［讀書生活本］'코드 너머, 회사보다 오래 남을 개발자']]></title><description><![CDATA[안녕하세요, SK플래닛 DevRel…]]></description><link>https://techtopic.skplanet.com/book-beyondcode/</link><guid isPermaLink="false">https://techtopic.skplanet.com/book-beyondcode/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 DevRel 매니저입니다. 오늘은 최근 화제가 되고 있는 개발자 소프트스킬 도서, &quot;코드 너머, 회사보다 오래 남을 개발자&quot;의 요약 및 독후감을 작성하여 보았어요~ (요즘 학교에서는 &quot;독후감&quot;이라는 표현보다는 자유롭게 책을 읽고 기록하며 생활 속에서 실천을 강조하는 &quot;독서생활본(讀書生活本)&quot;의 작성을 권장한다고 하는데요, 웬지 성찰/학습/개선이라는 패턴의 개발자 회고(Retrospect)와도 유사한 점이 많은 것 같습니다. 나의 업무와 회사의 문화를 회고하는 마음으로 퀵하게 작성해 보았사오니 참고 부탁드립니다!)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;도서 링크는 여기에! &lt;a href=&quot;https://product.kyobobook.co.kr/detail/S000216932006&quot;&gt;https://product.kyobobook.co.kr/detail/S000216932006&lt;/a&gt; (교보문고))&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;0. 잠시 전하는 말씀 있겠습니다~&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -79,25 +82,25 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d87563f7e7275e0a19f77caaf93a17a7/2bef9/image03.png&quot;
+    href=&quot;/static/9bdd3040521f8098a12576052992b3b7/00172/image03-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACNklEQVR42o2TS2/aUBCF/fubfdlRFs0CmihsmlRIBWSjFATm/W4wfmAkBBhSwGCMUT/sSm0cV8ksrsZ35njOnJkrHKLMcRzP806nk+cbn5FpQuh7v98fj8fVapXP54vFUrlcxrEsi0tCb4Ops16v4/H4x1js8/V1LBabTqeweAMMrNPp1Gq10WhUqVR6vd5gMGg0Gpqud7pdQrvd7t8WwpXtnb1cLuv1eqvVIns4GMqy3Gw24QIyVFx4LRW23W7h+RN7eqLboOBr2YRIGV3XpRSch8MhTqRa0WDyXPfY6/Wfn39hOO8FkwRhczpVFCWgqihj03yH2kHPdNjvD06+BasC+ZDOEWC/rDsej2kWqRkVsiM1w1NVldB/1Q52izmNRgpSpVKpTCaTTqc/JRLMHPBisQg1/6IysW63S7harX64uvpyc1OR5UQikcvlbNsm5DjHcGWyiYGcTCaapp3P581mo6rabDZjTrqu43DJnhnGhDSSg/pCMFX36Hreud3uADZ0A5KmaQLTVM0wDHbbnJiEKI5+4DkvYDRst9uSKN1/vWcTb29vyeDf8/l84RvFS6XSXTqdzX5HBVEUk8nkw8M3tlCAQLFYlCSJjHK5wgNEZwD+NjqubxB5fPwhilKhUED/bDaLhH9oMwxuq7Uaf2Eq+PwrkMSyVsxc9o23HTw1Tsaxt/cX2nBjjVAIwUzf6DZYGGtp8Ty5oXOiHPi+Y1xoB0kXyV6Y64/+bwhF/evLEVweDoffvfdKlWjt+fcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 98.73417721518987%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAACkklEQVR42pVUa08iQRDcP3/+Ar750TN6SiTRQ0EQCKK8RUCFJQgiIAkPeak8FqibatgLZ5aLbtKZ2Znumuqa7tHG4zE22WQywXw+/8e49r8YzWpxNBphOp3i9fUVp6en+O10wu/34/z8HC8vDRiGIT5fAqQjjUGDwQB7e3uw2WzY39/H7u4uHh8fMZvN8PHxYQmqrQMxHbK6v79HIBAQduFwWJh5PB4xrvH/9vYW7XZbMlkH1j5r1u/3kUqlcH19jYuLCxlDoRCi0SiCwSAuLy9xdXWFeDyObrcrMRsBTeOpvACmxq9cLqNUKsmcUnCd47cuhRqZEuTzeei6rlLsyNom/TYCrt90LpdTMgwwHA5l/lmzLzNkWvV6XVIlCJkx9Wq1KnvfYsjg9/d3laqO2ZpmHHW9gLe3t40FblmHBCGbh4cHFItFFAoFMWp5d3eHktrbVNyalW6sL6ZKhoeHh3C5XDg+OcH29jZSqv4qlQqazZYlqGZVMixsOmYyGfzY2sKvgwPEYjHs7PzE0dGR1CrZS9ojC4ZmmRCsVqvh+flZao43m81m1X8FnU5HWJt79KtWawp0KnoznuACyCJeLBYiejqdVg/Aiwqsio4MZIqcPz1V0Gg0xOhDX5JgLDGEIZHZamwntlY8nhDNeAnDwRCtVks0pZFxIpGEy+1etWUYkUgEDocDTvUicV8jXfap1+uFz+cT/dwqgIDmqWa/LstGl8PZ42ZP88E4O3NJb2vNZlPeOp5I44tCQLvdLo5kyNskQ/rJvsstc5OEGU9ZNAbwiUomk0L/5uZGpZWQMRqJKsA2jKmBXq8HXZWRyYw+fOKYHY3/xNImq0thOlY2Ga9KY7QsKa6Z/vPZcjRmxt/X5w9bBcpahL+zJQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image03&quot;
+        alt=&quot;image03-1&quot;
         title=&quot;&quot;
-        src=&quot;/static/d87563f7e7275e0a19f77caaf93a17a7/f058b/image03.png&quot;
-        srcset=&quot;/static/d87563f7e7275e0a19f77caaf93a17a7/c26ae/image03.png 158w,
-/static/d87563f7e7275e0a19f77caaf93a17a7/6bdcf/image03.png 315w,
-/static/d87563f7e7275e0a19f77caaf93a17a7/f058b/image03.png 630w,
-/static/d87563f7e7275e0a19f77caaf93a17a7/40601/image03.png 945w,
-/static/d87563f7e7275e0a19f77caaf93a17a7/2bef9/image03.png 1024w&quot;
+        src=&quot;/static/9bdd3040521f8098a12576052992b3b7/f058b/image03-1.png&quot;
+        srcset=&quot;/static/9bdd3040521f8098a12576052992b3b7/c26ae/image03-1.png 158w,
+/static/9bdd3040521f8098a12576052992b3b7/6bdcf/image03-1.png 315w,
+/static/9bdd3040521f8098a12576052992b3b7/f058b/image03-1.png 630w,
+/static/9bdd3040521f8098a12576052992b3b7/40601/image03-1.png 945w,
+/static/9bdd3040521f8098a12576052992b3b7/00172/image03-1.png 1044w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -105,7 +108,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-(책에는 없는 내용이지만 이해를 돕기 위해 GPT로 퀵하게 작성한 이미지입니다)&lt;/p&gt;
+(책에는 없는 내용이지만 이해를 돕기 위해 작성하였습니다)&lt;/p&gt;
 &lt;p&gt;참고로 도서 정보는 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;도서명: &apos;코드 너머, 회사보다 오래 남을 개발자&apos;&lt;/li&gt;
