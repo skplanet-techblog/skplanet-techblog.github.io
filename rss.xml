@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Jul 2025 23:11:16 GMT</lastBuildDate><item><title><![CDATA[［讀書生活本］'코드 너머, 회사보다 오래 남을 개발자']]></title><description><![CDATA[안녕하세요, SK플래닛 DevRel…]]></description><link>https://techtopic.skplanet.com/book-beyondcode/</link><guid isPermaLink="false">https://techtopic.skplanet.com/book-beyondcode/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 DevRel 매니저입니다. 오늘은 최근 화제가 되고 있는 개발자 소프트스킬 도서, &quot;코드 너머, 회사보다 오래 남을 개발자&quot;의 요약 및 독후감을 작성하여 보았어요~ (요즘 학교에서는 &quot;독후감&quot;이라는 표현보다는 자유롭게 책을 읽고 기록하며 생활 속에서 실천을 강조하는 &quot;독서생활본(讀書生活本)&quot;의 작성을 권장한다고 하는데요, 웬지 성찰/학습/개선이라는 패턴의 개발자 회고(Retrospect)와도 유사한 점이 많은 것 같습니다. 나의 업무와 회사의 문화를 회고하는 마음으로 퀵하게 작성해 보았사오니 참고 부탁드립니다!)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Jul 2025 23:14:14 GMT</lastBuildDate><item><title><![CDATA[［讀書生活本］'코드 너머, 회사보다 오래 남을 개발자']]></title><description><![CDATA[안녕하세요, SK플래닛 DevRel…]]></description><link>https://techtopic.skplanet.com/book-beyondcode/</link><guid isPermaLink="false">https://techtopic.skplanet.com/book-beyondcode/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 DevRel 매니저입니다. 오늘은 최근 화제가 되고 있는 개발자 소프트스킬 도서, &quot;코드 너머, 회사보다 오래 남을 개발자&quot;의 요약 및 독후감을 작성하여 보았어요~ (요즘 학교에서는 &quot;독후감&quot;이라는 표현보다는 자유롭게 책을 읽고 기록하며 생활 속에서 실천을 강조하는 &quot;독서생활본(讀書生活本)&quot;의 작성을 권장한다고 하는데요, 웬지 성찰/학습/개선이라는 패턴의 개발자 회고(Retrospect)와도 유사한 점이 많은 것 같습니다. 나의 업무와 회사의 문화를 회고하는 마음으로 퀵하게 작성해 보았사오니 참고 부탁드립니다!)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;도서 링크는 여기에! &lt;a href=&quot;https://product.kyobobook.co.kr/detail/S000216932006&quot;&gt;https://product.kyobobook.co.kr/detail/S000216932006&lt;/a&gt; (교보문고)&lt;/li&gt;
 &lt;/ul&gt;
@@ -110,7 +110,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-(책에는 없지만지만 이해를 돕기 위해 도식화하였습니다)&lt;/p&gt;
+(책에는 없지만 이해를 돕기 위해 도식화하였습니다)&lt;/p&gt;
 &lt;p&gt;참고로 도서 정보는 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;도서명: &apos;코드 너머, 회사보다 오래 남을 개발자&apos;&lt;/li&gt;
