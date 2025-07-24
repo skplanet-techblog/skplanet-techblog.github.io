@@ -1,8 +1,8 @@
 ---
 title: "SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)"
 date: "2024-08-30"
-tags: ["GitHub", "Copilot", "코파일럿", "개발생산성"]
-author: "joe" 
+tags: ["AI Coding", "GitHub", "Copilot", "코파일럿", "개발생산성"]
+author: "joeoriginal" 
 description: "AI-assisted Coding과 개발 생산성 향상 #2"
 ---
 

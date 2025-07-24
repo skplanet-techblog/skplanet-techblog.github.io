@@ -2,7 +2,7 @@
 title: " '우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?' (feat. SKP 멀티 LLM 플레이그라운드 ＆ AI 프롬프톤 사례 공유)" 
 date: "2025-03-12"
 tags: ["prompthon", "프롬프톤", "Playground", "Multi-LLM"]
-author: "joe"
+author: "joeoriginal"
 description: "멀티 LLM 플레이그라운드 및 AI 프롬프톤 사례 공유" 
 ---
 

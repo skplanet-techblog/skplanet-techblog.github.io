@@ -2,7 +2,7 @@
 title: "[讀書生活本］'코드 너머, 회사보다 오래 남을 개발자' 독후감 및 요약"
 date: "2025-07-20"
 tags: ["독후감", "코드너머", "DevRel", "소프트스킬", "퍼스널브랜딩", "개발문화"]
-author: "joe" 
+author: "joeoriginal" 
 description: "'코드너머' 독후감 작성한 썰 푼다(?)"
 ---
 
@@ -180,3 +180,11 @@ description: "'코드너머' 독후감 작성한 썰 푼다(?)"
 그러한 의미에서 이 책이 우리나라 개발자 생태계에, 그리고 소프트스킬 | 퍼스널브랜딩 | 개발문화 분야의 마중물이 되기를 바랍니다. 
 
 읽어 주셔서 감사드립니다! 
+
+---
+#### (참고) 작가의 최근 글은 여기서도 읽으실 수 있습니다.
+
+* [SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)](https://techtopic.skplanet.com/github-copilot/)
+* [AI-assisted Coding과 개발 생산성 향상 #1 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)](https://techtopic.skplanet.com/genai-productivity/)
+* ['우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?' (feat. SKP 멀티 LLM 플레이그라운드 ＆ AI 프롬프톤 사례 공유)](https://techtopic.skplanet.com/skp-prompthon24/)
+* [Microsoft-GitHub UNIVERSE24 Recap Seoul Review(Global Version)](https://techtopic.skplanet.com/universerecapkr24/) 

@@ -25,6 +25,8 @@ import syrupdev from "./images/syrupdev.png"
 import editorial from "./images/editorial.png"
 import aieditorial from "./images/aieditorial.png"
 import shinys from "./images/shinys.png";
+import chanmin2025 from "./images/chanmin.jpeg"
+import joeoriginal from "./images/joeoriginal.jpeg"
 
 
 
@@ -180,7 +182,7 @@ export const MEMBERS = {
     thumbnail: syrupdev,
   },
   editorial: {
-    name: "편집부",
+    name: "테크편집부",
     team: "Editorial Team",
     description: "SK플래닛 Tech Topic 작성을 효과적으로 돕기 위해 2025년부터 출범하였습니다. 잘 부탁드립니다!",
     thumbnail: editorial,
@@ -196,5 +198,17 @@ export const MEMBERS = {
     team: "VAS개발팀",
     description: "AI로 더 똑똑한 부가서비스를 만드는 VAS(Value-added Service)개발팀입니다.",
     thumbnail: shinys,
+  },
+   chanmin2025: {
+    name: "김찬민",
+    team: "솔루션개발1팀",
+    description: "오늘날 IT 서비스의 경쟁력은 사용자 경험에 달려 있다고 믿는 프론트엔드 개발자입니다.",
+    thumbnail: chanmin2025,
+  },
+    joeoriginal: {
+    name: "Joe",
+    team: "DevRel Manager",
+    description: "새로운 탐색을 즐겨하는 SKP DevRel, Tech Writer + 바이브 코더 0년차입니다",
+    thumbnail: joeoriginal,
   },
 };

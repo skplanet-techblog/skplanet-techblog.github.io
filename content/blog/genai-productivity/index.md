@@ -2,7 +2,7 @@
 title: "AI-assisted Coding과 개발 생산성 향상 #1 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)"
 date: "2024-07-31"
 tags: ["GenAI", "개발생산성", "Copilot", "코파일럿", "ChatGPT"]
-author: "joe" 
+author: "joeoriginal" 
 description: "AI-assisted Coding과 개발 생산성 향상"
 ---
 
