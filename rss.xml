@@ -1,4 +1,362 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 23 Jul 2025 02:55:42 GMT</lastBuildDate><item><title><![CDATA[[讀書生活本］'코드 너머, 회사보다 오래 남을 개발자' 독후감 및 요약]]></title><description><![CDATA[…]]></description><link>https://techtopic.skplanet.com/book-beyondcode/</link><guid isPermaLink="false">https://techtopic.skplanet.com/book-beyondcode/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 오늘은 최근 화제가 되고 있는 개발자 소프트스킬 | 퍼스널브랜딩 | 개발문화 도서, &lt;strong&gt;&quot;코드 너머, 회사보다 오래 남을 개발자&quot;&lt;/strong&gt; 의 요약 및 독후감을 작성하여 보았어요~ (요즘 학교에서는 &quot;독후감&quot;이라는 표현보다는 자유롭게 책을 읽고 기록하며 생활 속에서 실천을 강조하는 &quot;독서생활본(讀書生活本)&quot;의 작성을 권장한다고 하는데요, 웬지 성찰/학습/개선이라는 패턴의 &lt;strong&gt;개발자 회고(Retrospect)&lt;/strong&gt; 와도 유사한 점이 많은 것 같습니다. 나의 업무와 회사의 문화를 회고하는 마음으로 퀵하게 작성해 보았사오니 참고 부탁드립니다!)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 구성원들의 다양한 기술 활동을 외부에 공유하여 함께 성장하고자 만든 기술 블로그입니다.]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 24 Jul 2025 05:29:17 GMT</lastBuildDate><item><title><![CDATA[[Figma MCP]를 활용한 효율적인 UI 컴포넌트 개발 및 실제 적용 경험을 공유합니다]]></title><description><![CDATA[안녕하세요, SK플래닛에서 프론트엔드 개발을 담당하고 있는 김찬민이라고 합니다. 작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 새로운 기술을 습득하거나 코드를 리팩터링하는 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI…]]></description><link>https://techtopic.skplanet.com/figmamcp/</link><guid isPermaLink="false">https://techtopic.skplanet.com/figmamcp/</guid><dc:creator><![CDATA[chanmin2025]]></dc:creator><pubDate>Thu, 24 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛에서 프론트엔드 개발을 담당하고 있는 김찬민이라고 합니다.&lt;/p&gt;
+&lt;p&gt;작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=165847&quot;&gt;새로운 기술을 습득하거나 코드를 리팩터링하는&lt;/a&gt; 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI를 활용할 수 있게 된 것 같습니다.
+AI의 활용 방법들 중 하나로, 이번 글에서는 &lt;a href=&quot;https://github.com/GLips/Figma-Context-MCP&quot;&gt;Framelink Figma MCP&lt;/a&gt; 를 사용해 프론트엔드 개발자의 숙제 중 하나인 UI 컴포넌트를 효율적으로 개발하는 방법을 소개해보려 합니다.&lt;/p&gt;
+&lt;p&gt;(참고) 글을 쓰는 시점에 &lt;a href=&quot;https://help.figma.com/hc/ko/articles/32132100833559-Dev-Mode-MCP-%EC%84%9C%EB%B2%84-%EC%95%88%EB%82%B4%EC%84%9C&quot;&gt;Figma 공식 MCP&lt;/a&gt; 의 베타 버전이 공개되어 있기는 하나, 아직까지는 Framelink Figma MCP가 더 안정적으로 동작한다고 느껴져 Framelink Figma MCP를 다루었습니다.&lt;/p&gt;
+&lt;h1&gt;1. Cursor 에디터와 Figma MCP 연동&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/GLips/Figma-Context-MCP&quot;&gt;Framelink Figma MCP&lt;/a&gt; 는 Cursor, GitHub Copilot 등의 코딩 에이전트와 Figma를 이어주는 MCP로, 피그마 노드(≈ UI 요소)의 주소를 프롬프트에 추가하면 UI를 인식해 코드로 전환할 수 있습니다.&lt;/p&gt;
+&lt;h2&gt;1-a. 설치 및 설정하기&lt;/h2&gt;
+&lt;p&gt;Framelink Figma MCP를 사용하기 위해서는 먼저 피그마 액세스 토큰이 필요합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;토큰 발급 위치 : [피그마 홈 - Settings - Security 하단]&lt;/li&gt;
+&lt;li&gt;토큰 권한은 모두 Read-only로 부여했습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/267c7159e469ab9fcca74408c3751962/5c744/01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.58227848101266%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAuElEQVR42p1P2Q6CMBD0/39PE6XCI2gPegAJCLTjboHE+GTcZDJt053jlGKE0RqawNwaA6UU5nnGP3NKKUGSwENKSBJkbpomGzAk3c1uwuA37z2ccwghwBM7azH0/SYYuwBZCKiyhKoqtKKAJYFjydLnT2aRSK3WdUUkcKBIYN4Segtzr1BfBeqbwPNyRlx+q8vCwZMJG1EApL3yaxrRkfAQfE4wL0teSLvzN47h02hbjFpisiYnfAOox4J2LibBQwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/267c7159e469ab9fcca74408c3751962/f058b/01.png&quot;
+        srcset=&quot;/static/267c7159e469ab9fcca74408c3751962/c26ae/01.png 158w,
+/static/267c7159e469ab9fcca74408c3751962/6bdcf/01.png 315w,
+/static/267c7159e469ab9fcca74408c3751962/f058b/01.png 630w,
+/static/267c7159e469ab9fcca74408c3751962/40601/01.png 945w,
+/static/267c7159e469ab9fcca74408c3751962/5c744/01.png 1206w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;다음으로 Cursor 에디터에 MCP를 추가하기 위해 Cursor 설정에 진입합니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d1b2241e099982465bcd7fec96bc35ad/914c7/02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.291139240506325%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADNElEQVR42k2TW1NaVxiG909I2ySNkxlDRL3ptIr9Ie1FZ3ppa4pRRyAeKyGi0QhyVEDAoJw3sA+wN7CRSJo2o5O2k07/09Ml8aIXz3x7rTXzrnd937ulYCCKmkrQzKRIBAOshCNsHh7wIhLAH94nlDhkP+xn52CDSMxHMPiMWPgZyaiHZPgp2egCpRM3+dgs5fgskt/npJjPcSYEU5kM2XyBcr1BvlKlqum8PAjy1ddTfDM9w5RjRlQH0w4HDsc0M46pT8xM8+3M1HBP8niWqZfOOReC1bPX5FNJaudntBWFy3abQDDMnbtfcm/kIV/cHxny+S2f/Y879x9wd8SG5FtYRMmeCMthysdxKqlj5HSKWjZDLZOmFg8RWF1kz+0ktLFMeNNFfMvNsddD3OvmSBDfcnGyvYLbOYe0eyOYTlKIhijFIzTEtyouaGQEqSMqBzE8sfcsR97iy/7Fdu4jy0d/8jTygYXoLZFrFhP/srqZRFpwujANk0qpjNFq0jVNjKYuaIq1Tj55xma0j/eoz2bEErSZ223z8/4Fc7c82evxJPiOeacfada5hG52KVVlqrKMpuvoQkzTm8hiOC2lTreQQcsco2UTdEo5Bo0i16bCldEQtcE7tcKVVhUpCSL99MuSmKpC9nWO7OkpqqbSahmi6pQqFZSGQrlYIZ/LizSUqMsK9bpOsVwnX5CRZfGa1gUX3bciTimkedcSzXaXinDXUBrowuGNS1XVxVpFVzXqZSF4mqMiBM/SIgm5IppioGsdWk0Lq3PJ75fvRTazoofrW/QvBzSNFoZhYPUsupaga9EyzGEv5WKRWrFEV7ShrTUx9Ra9zgV9qy+c9bFMi9/6A9LxU6QfxahD0Sj+nR22/X6ChyEOQ2FC4o/ZffmK03QarVqiVjhn0DY/0WkPM3ohWtMTF97wRgwz/kr00D45jt1u59Ej25DR0dEhNpuNew8e4lpc5rrfoafKXOoKg5bKG71BX61zZZn8PejxQZz/88eAciKG9HhsgrExO2P28SH28YkhE5OT2MYm+f67H9j1evGurfF8fQ3fxrqoq2ytrLCz9SsH2y/Y8z0nuLvDwryT/wCMZJ0URBUOPQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d1b2241e099982465bcd7fec96bc35ad/f058b/02.png&quot;
+        srcset=&quot;/static/d1b2241e099982465bcd7fec96bc35ad/c26ae/02.png 158w,
+/static/d1b2241e099982465bcd7fec96bc35ad/6bdcf/02.png 315w,
+/static/d1b2241e099982465bcd7fec96bc35ad/f058b/02.png 630w,
+/static/d1b2241e099982465bcd7fec96bc35ad/40601/02.png 945w,
+/static/d1b2241e099982465bcd7fec96bc35ad/914c7/02.png 978w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;MCP 설정에 진입했다면 &quot;New MCP Server&quot; 버튼을 눌러 MCP 서버를 추가할 수 있습니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f93c333714653ae50c3faa39ffad0e50/a4f81/03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.0506329113924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACYUlEQVR42nVUyXLbMBTzr3TqWpa1WqI2aqEka7FiO+mx00Onhx76Eb31w1GQSTqx4xwwlGgT7+EB1Grnp9gnNbKyRyp7iLyF7SVwggyyGQ2a/oikaGE5MbauuIPkBQKrrRvzcIIgKmC7EaxdSETQhTTJXlT8TZoCmvAWmkSf2dgetnxfWU7ElwBfLB/rjYtPn22stwH8WKLuZtTthDApqaJCnNVEQxWNWTVCIZGqC+T4Db5osDLS6gFhXJpqOz8xlUMStsOCaXnEcLxgnLnOFxaZULWjKVRyHHFaonv8heX7H0TFTMmcV5jWsDiD9S7GRs+EhM4+R64GqMMRedkhr3qDVLZINDgO85xz/vURsv9KJeww8gRabtaUVewzpJynRVIvzNCoA7s7oySxbAbTVfUfo+k2ySp0T79x+vEXkVywkkGMWTaEwkPdoY9zI1077e0LY4Z+1qPQ6y2cIIXthNjaLk2lKTtuCg7c4wFHu/binCYIRWkIXwt8CCbC9p//Z0wp1WQy6EfPxmhTPM6woqRueIBiDoVxuDYOX6FQjFaB/vwT9fCEla4QsUOHVTSR/YawPkwmOk0/s+iIou5phnoHQQ/a6ULy9pkwYETcF2lXHZLkMJ2N04aUxujDt13qzqflxKxKfVM4Hz+5ukqa0CWhpGRFye14MmvB0bwG+0pyUqCj5EZLvnc3LUdgzwgduwOWfsDjeMTSDujyChk7jO90KNXC/fY+4YaEZZhg7kacpgdcmMXTfMZcKjRZiShX781hHv0o/6BDHWwGPg8EsjfIWcRn7nact3MDlxdBf1D+Afqg6o07KSf1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f93c333714653ae50c3faa39ffad0e50/f058b/03.png&quot;
+        srcset=&quot;/static/f93c333714653ae50c3faa39ffad0e50/c26ae/03.png 158w,
+/static/f93c333714653ae50c3faa39ffad0e50/6bdcf/03.png 315w,
+/static/f93c333714653ae50c3faa39ffad0e50/f058b/03.png 630w,
+/static/f93c333714653ae50c3faa39ffad0e50/40601/03.png 945w,
+/static/f93c333714653ae50c3faa39ffad0e50/78612/03.png 1260w,
+/static/f93c333714653ae50c3faa39ffad0e50/a4f81/03.png 1508w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string-property property&quot;&gt;&quot;mcpServers&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string-property property&quot;&gt;&quot;Framelink Figma MCP&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token string-property property&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;npx&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string-property property&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;-y&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;figma-developer-mcp&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;--figma-api-key=피그마_액세스_토큰&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;--stdio&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;MCP 서버를 추가한 뒤 MCP Tools에 Framelink Figma MCP에 초록불이 들어와 있다면 성공입니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e1cfb5726ec0efb0f179d3ee0d512740/5fada/04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.88607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAUlEQVR42nWT2ZLaMBRE+ZPUVDLYBu+b5B1b9hjIkKXymMpjqpL//4BOS4yHZGIeDhLG9O2r29o4Xop9IOCGEl4kzWq7KXZ+Dj8uECQV1xKOl5nn62QvpNg4/IjSCqLskeQNAopY+5jiBWStIKsBOX/Tha19ssrWCQxG0NrFeLQ84uPh/Q7vHmx8sAI6K9GpE7KiM051sYU4r18J0xJ5e0FWP5suNlo1r3p4bMuibYetblk1ymoMTx+hSD+dUXcTKk07mrXsRpTc64Lqyy8cLj+vghYFhaSLIIfthMa2biNIChzGI9p+hmwGFETW/yJoJJUt1Nff6BfByE2gRIWx7DAXDUQksKVTNxTm5Zgtard6TcT1+4I+e4/vJeUJUTFDz2MTULDJK0g6kmGOyKfDlynrweiq2vHi/C3m+S6k2HW/sfmHWHQIswZOoN0tLZdo1Ix+PJv2Eg5AO/6fBmlxwPj8w8TPxCZlKz7d2BRyFkG203DKHQVbUg9HJBzAGll1gDp9vk05ZHi1+hJUPeWcRzB3CvMwQTV00PZoedaryBonFnf9F0GtvNwE7fCRgk2cY6LYPJ1wJAPFS1GvUKFgSr5dviNeBN+iHaYM7Fk94dN8NkxNj45O7lFlAvt7gvaeU2YcAsYl0vHgGYfcu7wx9ylvZ7iGiQWv5Y3k7l3+O0J/ABGdxUkq5vCvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e1cfb5726ec0efb0f179d3ee0d512740/f058b/04.png&quot;
+        srcset=&quot;/static/e1cfb5726ec0efb0f179d3ee0d512740/c26ae/04.png 158w,
+/static/e1cfb5726ec0efb0f179d3ee0d512740/6bdcf/04.png 315w,
+/static/e1cfb5726ec0efb0f179d3ee0d512740/f058b/04.png 630w,
+/static/e1cfb5726ec0efb0f179d3ee0d512740/40601/04.png 945w,
+/static/e1cfb5726ec0efb0f179d3ee0d512740/78612/04.png 1260w,
+/static/e1cfb5726ec0efb0f179d3ee0d512740/5fada/04.png 1706w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+이제 프롬프트에 Figma 노드 정보를 포함시키면 MCP 서버가 Figma API를 통해 해당 노드의 정보를 불러올 수 있고, 코딩 에이전트는 이를 코드로 변환할 수 있게 됩니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h1&gt;2. Figma MCP로 컴포넌트 개발하기&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;MCP 설정이 끝났다면 테스트를 위해 구글에서 유지보수하는 UI 컴포넌트 라이브러리인 &lt;a href=&quot;https://www.figma.com/community/file/912837788133317724/material-ui-for-figma-and-mui-x&quot;&gt;Material UI&lt;/a&gt; 의 피그마 시안을 코드로 옮겨 보겠습니다.&lt;/p&gt;
+&lt;h2&gt;2-a. Figma 디자인 요소 선택하기&lt;/h2&gt;
+&lt;p&gt;Figma에서 개발하고자 하는 UI 컴포넌트를 선택하고 해당 요소의 URL을 복사합니다(Pages가 아닌 Layers 메뉴에서 노드를 복사해야 하는 점만 유의해 주세요).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/616ba1d8d9bbdb6b074e800ad3d99eff/62da8/05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 144.9367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/616ba1d8d9bbdb6b074e800ad3d99eff/f058b/05.png&quot;
+        srcset=&quot;/static/616ba1d8d9bbdb6b074e800ad3d99eff/c26ae/05.png 158w,
+/static/616ba1d8d9bbdb6b074e800ad3d99eff/6bdcf/05.png 315w,
+/static/616ba1d8d9bbdb6b074e800ad3d99eff/f058b/05.png 630w,
+/static/616ba1d8d9bbdb6b074e800ad3d99eff/40601/05.png 945w,
+/static/616ba1d8d9bbdb6b074e800ad3d99eff/78612/05.png 1260w,
+/static/616ba1d8d9bbdb6b074e800ad3d99eff/62da8/05.png 1262w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Figma Dev Mode를 사용한다면 조금이나마 더 쉽게 요소를 선택할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/67ebdd6cd5ea85eec626a6d30b8aa938/c679a/06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.88607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAADVUlEQVR42l2TX2gcVRTGV30Wnxp8UCiVSK0ogoLgg1TRRg2S96qtLVRRKWjQCrFWrNGI0RJpCtWKlgpRC6JWYiWxAaVpS6pp0iTt1qSbZrPZ3XQ3M7Pz7975tz/PTGxBD3xz7sycc+495/turplABiCRRxzJurmKRL4n8SriABp1jW37EhMTRZH8TySueR3pey4NjjxN5HiEjkKbmthLoYh1JMkSGKfVwbU1jqvwXA9fSU6cZIe4htRyoa0obNvKbMfTXGx7nJlHHib/6Eam77+PSl9fFuSUy7iGgVY+tVoNc6VOHCqacuxmtIo41GitycUqorL/M5Y+7mdp3wEW9n5EqbuXha53MX4ZzkYROC6eYeGJT4teqloMzdYZnjMy/DprcHbRItBKCgYReuJH1JnD+KNf4p85gh47gjp1iLAwls008h2SMJSEUIap6TlZomX/DLf1z3DzJ+e5oWeCp76bJVaetCyz87rvwtvdgv3GLRgv3oj10k2Yz+XwBl5JR4e9XGCluiDFAymqMVzNfN1lYcVh0fQpCpZl/pFsmovDhOqpaRaHx1k+PYV/eYKgMIme+4uwVsrYTq0pDIY6IJSk1JI4Jgw0/7ec60LboTp39hZZ2zfPuq/mWXuwwJoDRXYezXNiaIivvz/GiT9GychOUmabxOJTpj1fEYqErkknl27y9ohN54jBjm9MNnXXeebbZXb8FtDx5kHubb2DW9e00PZYGzqM8T0vYzNlKwoDIilwXY+pDsMg5uSF3xmaGuTo8Z/54vNBBk8fY3R2hK7eTjY8cQ/rNq2n/fl2kUacncqVtjzx2m6gV2poEbrv+6hAZpgK9clPO3jow4080PMg67s30Lr7bm7vaqV9TwfvvLeXl3ft5P19HxAlEaq2jGNZLBkuVculYopvKKxUWuUiuUhImbpygfG5c0wWpvnz7wnGL08yduksxauLq3cyIyGRVgOU6+DYNg0/oGFaWFdr2dpOCzZMabmhqXTuYmn7Cyxu3kL52W2UtmyntHkrxuEBuZZN7GIFu2qKzmKUtBoEwSo5gSLxXVkLSUKMr0TYkRNwpestiq++xvmu1xkZ6JcbcpzyTz9gjp9D1et4lTpWuU4o+vOElEgF/5FK819t5fN5/gFeGtNgdOdMwgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;06&quot;
+        title=&quot;&quot;
+        src=&quot;/static/67ebdd6cd5ea85eec626a6d30b8aa938/f058b/06.png&quot;
+        srcset=&quot;/static/67ebdd6cd5ea85eec626a6d30b8aa938/c26ae/06.png 158w,
+/static/67ebdd6cd5ea85eec626a6d30b8aa938/6bdcf/06.png 315w,
+/static/67ebdd6cd5ea85eec626a6d30b8aa938/f058b/06.png 630w,
+/static/67ebdd6cd5ea85eec626a6d30b8aa938/40601/06.png 945w,
+/static/67ebdd6cd5ea85eec626a6d30b8aa938/78612/06.png 1260w,
+/static/67ebdd6cd5ea85eec626a6d30b8aa938/c679a/06.png 2460w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;2-b. 코딩 에이전트에 프롬프트 작성하기&lt;/h2&gt;
+&lt;p&gt;이제 Cursor 에디터에 다음과 같이 프롬프트를 작성하면 LLM이 피그마 파일을 읽을 수 있게 됩니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@https://www.figma.com/design/MQDo9JH9CSJw4Dm1wsxj91/Material-UI-for-Figma--and-MUI-X---Community-?node-id=6594-968657&amp;amp;t=vqVI3vvlCQYLyqj8-4
+
+
+이 피그마 시안을 참고해 React 컴포넌트와 스토리북을 구현해줘.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/347c74c69ef5745a39751ce1f0165cdb/105d8/07.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.12658227848101%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABuUlEQVR42o1T2W6rMBDlUwJ4ZTFgbEhIUtKrqv//R+fO2DSKVLXqw9HYs3t8phjmDX65QzUjpB0ShHHf5CukJV+SrzGV6lDKFoXzZ/TTGWO4Em7oR76vmNe3pAvnPcmOdCyHsGGiBrgJtrEfQ7dTTmj7iGV7Twjrjnh+wPmNqnvoLpDjfMjwlIp1BPYxh48hvekiisZxwgeWyyN12jgycAA5KztRUIZu/R8wU4cdZdcCshZQhFrUUFpCKgFtFSVV0EZBSIGqqn5GWZKPRsFZrZL45wbcO4dp7XH7jLh+BJpVTzO1CYqKclBV/YDyRAlV7pA7EjVBSOowQ0hJjjXKE6GsUXP3v6KGUCZ/io93Guic6JA+g+fX5Lmkebb5ro6PYLtJH/EdBSeKy4q3fYcbKKE2UMZCk3yC7sY0yWZtC2Ob9Lzc2fEqOgtlUfBPNk2LhZKGuGCaPPxM8/O5UNKHmM5d7542LnI6lXksjLKiIvTkbiTCxlsi6nyQeEgkJ0lbxBjjNfkwoRnOX+B4w4jQfJ/XTPB2WFBwYCQOMrG3/ROX+0cKYO59rRWvGG8Cy691E2ZIule70D3+A5gdbFi8BpnUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;07&quot;
+        title=&quot;&quot;
+        src=&quot;/static/347c74c69ef5745a39751ce1f0165cdb/f058b/07.png&quot;
+        srcset=&quot;/static/347c74c69ef5745a39751ce1f0165cdb/c26ae/07.png 158w,
+/static/347c74c69ef5745a39751ce1f0165cdb/6bdcf/07.png 315w,
+/static/347c74c69ef5745a39751ce1f0165cdb/f058b/07.png 630w,
+/static/347c74c69ef5745a39751ce1f0165cdb/40601/07.png 945w,
+/static/347c74c69ef5745a39751ce1f0165cdb/105d8/07.png 1170w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;프롬프팅의 결과로 &lt;a href=&quot;https://www.figma.com/design/OZujJWaiPQwe7kHUgO9AeC/Material-UI-for-Figma--and-MUI-X---Community-&quot;&gt;Figma Material UI&lt;/a&gt; 중 Alert UI에 대응하는 컴포넌트와 스토리북 문서가 생성되었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/a7bf3a7848fc09be3fa9088d402db260/08.gif&quot; alt=&quot;08&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;3. 실제 업무에 적용해본 후기&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;개인적으로는 LLM에게 수동적으로 코드 개선을 요청하는 단계를 넘어, 피그마 파일을 읽고 마크업을 생성해주는 모습에 큰 인상을 받았습니다. 그래서 React 기반의 OK캐쉬백 서비스에 사용되는 일부 컴포넌트를 Vue로 재작업하는 과정에 MCP를 실제로 사용해 보았습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OK캐시백 디자인 시스템 피그마 일부&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/22d947b399f4819fc501097205fc130a/52ab5/09.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.848101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABR0lEQVR42m2QwU7CQBCG96oPZWJ8AdGgF2o3tN0tSBviAdoH0EQ4tOFCAgE0RvQBTDw2PdNwhoMBr6acCYnktzsl6MFNvsxmZvaf+Ze5tRtUKzVIy4JtCUIKAfEHKSVs2ybU/b+8QuVY3iDBKxKak3EtoFcE5VSDlQ3inEPXdcIwjL2Yumuatkf1MrVN2Ra4OzfwcHyF0QlHUDBhGRm7h61WC0EQIAxDNJtNElI0Gg30+330ej10u104jgPGqxK3mdj34QXATrF9S4CPL4wuHRR5CS/PY6iTpilmsxkmkwnq9ToNWiwWVFuv1xSjKALTM0G13fagmAu+T4HPNBfUS3gd54Kr1Qrz+RxJkpCg+rPlckm1zWZDMY7jX8v3hTKejjQ8ZpbDMwtiZ1k9bLfbZLfT6cD3fZimSZY9z8NwOMRgMCDbruviB4bcMjHO8iS3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;09&quot;
+        title=&quot;&quot;
+        src=&quot;/static/22d947b399f4819fc501097205fc130a/f058b/09.png&quot;
+        srcset=&quot;/static/22d947b399f4819fc501097205fc130a/c26ae/09.png 158w,
+/static/22d947b399f4819fc501097205fc130a/6bdcf/09.png 315w,
+/static/22d947b399f4819fc501097205fc130a/f058b/09.png 630w,
+/static/22d947b399f4819fc501097205fc130a/40601/09.png 945w,
+/static/22d947b399f4819fc501097205fc130a/78612/09.png 1260w,
+/static/22d947b399f4819fc501097205fc130a/52ab5/09.png 1420w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MCP 기반으로 생성된 컴포넌트를 튜닝해 완성한 모습&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/00a529c11e728d7e435a66ddc91fafe3/10.gif&quot; alt=&quot;10&quot;&gt;
+&lt;img src=&quot;/f761fb5bceec5edec21e9d04bad0a63b/11.gif&quot; alt=&quot;11&quot;&gt;&lt;/p&gt;
+&lt;p&gt;MCP가 성공적으로 컴포넌트를 생성해 주었고, 스위치가 더 자연스럽게 움직일 수 있도록 motion 라이브러리를 사용해 애니메이션을 다듬으니 만족스러운 결과물을 얻을 수 있었습니다.&lt;/p&gt;
+&lt;p&gt;제가 직접 처음부터 구현해야 했다면 4시간 정도 걸렸을 것 같은 작업이었는데, 수 분 내에 작업을 마치고 작은 디테일들을 보완하는 데에 사용할 수 있는 시간이 늘었던 만족스러운 경험이었습니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h1&gt;4. 마치며&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a6b4c588c1b7076246bd71c80789acec/e5715/12-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC7klEQVR42k2SW0zSURzHee7Bh5566cHl3Gpra2tdVualqdjSRmFOc1NrhJfMpSGViDQnmmU6u3hZVktKEQsBBYdcJEEu+pcoQRNUUFQERBQBL/DndELbOvs9ns/vc37f88OgXgfYdc8b9SLxEDzc/n5YfVwum8PlDQy47Qtgew31uwDwwwqhXtTnCPmc+4UJeOwAeFnsvswC0q0iMp5Qml38iFhOg5Vb8uQHogbAZzEZCsm0gnLaq/b30AR9BzDqdYIdl3VhbsUyE/LaEY1i2WrW/dRqxtSzcyabZQZsO2RiYfTFtFOJ6biceyGvI/gf7ICwzTo7LBaWV9W0vev4bdBx+YJBkWjBbHRajSDg0mvV2YUk/J2S6udNILiB7qyHwnwY3nbZl+aJpKoTCfjEDMK4FoHjBfzuwO6mXCbB5RbH38ibUMuVI9IiMjX/YaUWUQF0M7BlxwR9TuBfWzFPG6d0RoNuQAClgxKJSCwWIWPKyQl1bUPToWPnKNXPOjsZR09jI89e6WL2wO57nlUMtKM+J5wabNkkQ4KPnxiCQT6H08fjcdjsb+Zp7a5nicXjyRWKcY0yv4xSQKJOjEOzJwjNkISZ+dcWgXdVKhHKRqRy+fcuJmt52SIVCd0rc3q1xPi5wtBauIgMwTeiG1b4W2hYidnPDbbxOczNb9s4XE5nTy+l9uWs0SCTimzzBn1znpl2frU2Rl+b6rZMwm8PeFYP0g6TDhD0aJTyAjKNQn8hFAr7BXxGV/eXr30mOWeKFmuqSxmuwBLTsbn590cUChDYgEg4bQjDwPfckzrkQSWd3vgmg1CSdPM2k9ndy2JOtBT/ol4y0ZMzrqUcvpAVcTK5sbUDLhWM+p/574aud3azcITSGDwhMuZ6xPE4/N3ShrIcVRVWS0+bp1+OSUqNSsg8cuYqh8+HOwf38sAM28D0hoelatWoSjWaXfy4/nV7ywcG+Wkdtaaekp/VQYyNjsVFxWdExeERRAMv75v/AFMKN2zGtJ6LAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;12-1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a6b4c588c1b7076246bd71c80789acec/f058b/12-1.png&quot;
+        srcset=&quot;/static/a6b4c588c1b7076246bd71c80789acec/c26ae/12-1.png 158w,
+/static/a6b4c588c1b7076246bd71c80789acec/6bdcf/12-1.png 315w,
+/static/a6b4c588c1b7076246bd71c80789acec/f058b/12-1.png 630w,
+/static/a6b4c588c1b7076246bd71c80789acec/e5715/12-1.png 768w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;화면 전체 UI를 코드로 옮기려 시도하면 유지보수가 어려운 코드가 생성되는 등 아직은 AI가 완벽하지 않은 모습을 보이기도 하지만,
+단위 컴포넌트를 구현하고 스토리북 문서를 관리하는 목적만으로도 프론트엔드 개발자의 부하를 크게 줄여줄 수 있게 되었습니다.&lt;/p&gt;
+&lt;p&gt;수동적으로 코드 생성, 개선을 요청하는 용도를 넘어 프론트엔드 개발에서 중요한 과정인 디자인을 코드로 옮기는 데에 들이는 시간을 크게 단축할 수 있게 되었다는 점에는 만족하지만, 앞으로 프론트엔드 개발자들이 일하는 모습은 어떻게 변화해야 할지, 어떤 식으로 경쟁력을 갖춰야 할지에 대해서는 어려운 고민거리를 던져준 것 같습니다.&lt;/p&gt;
+&lt;p&gt;UI 구현에 어려움을 겪을 수 있는 타 직군이나 주니어 개발자들에게 이 글이 도움이 되셨길 바라며, 더 좋은 글로 다시 찾아뵙겠습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;(참고) 작가의 최근 글은 여기서도 읽으실 수 있습니다.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/uptn-loadingspinner/&quot;&gt;LoadingSpinner를 도입하여 웹앱 사용자 경험을 개선하다(웹앱 사용자 경험을 개선하는 기술 한 스푼)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=167311&quot;&gt;[Vue] motion 라이브러리로 더 나은 UX 제공하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=167206&quot;&gt;시각장애인을 위해 모달 컴포넌트 접근성 개선하기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[讀書生活本］'코드 너머, 회사보다 오래 남을 개발자' 독후감 및 요약]]></title><description><![CDATA[…]]></description><link>https://techtopic.skplanet.com/book-beyondcode/</link><guid isPermaLink="false">https://techtopic.skplanet.com/book-beyondcode/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 오늘은 최근 화제가 되고 있는 개발자 소프트스킬 | 퍼스널브랜딩 | 개발문화 도서, &lt;strong&gt;&quot;코드 너머, 회사보다 오래 남을 개발자&quot;&lt;/strong&gt; 의 요약 및 독후감을 작성하여 보았어요~ (요즘 학교에서는 &quot;독후감&quot;이라는 표현보다는 자유롭게 책을 읽고 기록하며 생활 속에서 실천을 강조하는 &quot;독서생활본(讀書生活本)&quot;의 작성을 권장한다고 하는데요, 웬지 성찰/학습/개선이라는 패턴의 &lt;strong&gt;개발자 회고(Retrospect)&lt;/strong&gt; 와도 유사한 점이 많은 것 같습니다. 나의 업무와 회사의 문화를 회고하는 마음으로 퀵하게 작성해 보았사오니 참고 부탁드립니다!)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;도서 링크는 여기에! &lt;a href=&quot;https://product.kyobobook.co.kr/detail/S000216932006&quot;&gt;https://product.kyobobook.co.kr/detail/S000216932006&lt;/a&gt; (교보문고)&lt;/li&gt;
 &lt;/ul&gt;
@@ -378,7 +736,15 @@
 그런데 소프트 스킬은 인간이 인간과 협업할 때 필요한 역량이라면, 최근 이야기가 많이 나오고 있는 &apos;AI와 인간의 협업&apos;을 위해서는 어떤 하이브리드란 스킬이 필요할까요? (고도화된 프롬프트 엔지니어링? 규칙을 부여하여 원하는 결과를 뽑아낼 수 있는 바이브코딩? 멀티 툴 활용?) 이 부분도 별도로 고민이 필요할 영역일 것 같습니다.&lt;/p&gt;
 &lt;p&gt;혹시 다음에 &lt;strong&gt;&apos;코드너머 2편&apos;&lt;/strong&gt; 이 나온다면 ^ ^ 1편은 개발자 관점에서의 소프트스킬/브랜딩/문화를 서술했다면, 2편은 IT기업과 담당자 관점에서의 데브렐 업무 및 프랙티스, AI와 개발자의 협업 및 활용과 해커톤 영역까지 소개하는 관점의 책을 한번 기대해 봅니다(저희도 참전할 수 있으면 좋겠네요 ^ ^).&lt;/p&gt;
 &lt;p&gt;그러한 의미에서 이 책이 우리나라 개발자 생태계에, 그리고 소프트스킬 | 퍼스널브랜딩 | 개발문화 분야의 마중물이 되기를 바랍니다.&lt;/p&gt;
-&lt;p&gt;읽어 주셔서 감사드립니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2025 하반기 NEW! 기술 세미나 & 컨퍼런스 일정 정리! (ver.250713)]]></title><description><![CDATA[안녕하세요 SK플래닛 DevRel 담당자입니다. 
+&lt;p&gt;읽어 주셔서 감사드립니다!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;(참고) 작가의 최근 글은 여기서도 읽으실 수 있습니다.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/github-copilot/&quot;&gt;SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/genai-productivity/&quot;&gt;AI-assisted Coding과 개발 생산성 향상 #1 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/skp-prompthon24/&quot;&gt;&apos;우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?&apos; (feat. SKP 멀티 LLM 플레이그라운드 ＆ AI 프롬프톤 사례 공유)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/universerecapkr24/&quot;&gt;Microsoft-GitHub UNIVERSE24 Recap Seoul Review(Global Version)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2025 하반기 NEW! 기술 세미나 & 컨퍼런스 일정 정리! (ver.250713)]]></title><description><![CDATA[안녕하세요 SK플래닛 DevRel 담당자입니다. 
 여러 곳에서 열리는 국내외 기술 세미나 & 컨퍼런스 주요 정보를 한 곳에 정리해 보았습니다. 저희 업무에도 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 공유드리오니 참고하시기 바랍니다.  목차 (연중 추가될 수 있음) 7월: TOSS…]]></description><link>https://techtopic.skplanet.com/techseminar2025-2h/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techseminar2025-2h/</guid><dc:creator><![CDATA[Joe]]></dc:creator><pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 SK플래닛 DevRel 담당자입니다. 
 여러 곳에서 열리는 &lt;strong&gt;국내외 기술 세미나 &amp;#x26; 컨퍼런스 주요 정보&lt;/strong&gt;를 한 곳에 정리해 보았습니다.&lt;br&gt;
 저희 업무에도 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 공유드리오니 참고하시기 바랍니다. &lt;/p&gt;
@@ -1860,7 +2226,7 @@ prefix caching은 프로젝트 기간 중 참여한 사내 교육을 통해 알�
 AI Moment는 아직도 성장 중이며, 저희는 그 안에서 &lt;strong&gt;AI와 인간 사이를 잇는 개발자&lt;/strong&gt;로서의 역할을 계속 탐구해 보고 싶습니다. 읽어 주셔서 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ '우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?' (feat. SKP 멀티 LLM 플레이그라운드 ＆ AI 프롬프톤 사례 공유)]]></title><description><![CDATA[안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe!입니다.
 
 ChatGPT가 출시된 이후 계속해서 생성형 AI 기술을 활용한 서비스 개발 고도화뿐만 아니라, 각 기업 내 구성원들의 AI 활용을 높이기 위한 노력 또한 더욱 커지고 있는데요.
-따라서 AI…]]></description><link>https://techtopic.skplanet.com/skp-prompthon24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-prompthon24/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Wed, 12 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe!입니다.
+따라서 AI…]]></description><link>https://techtopic.skplanet.com/skp-prompthon24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-prompthon24/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Wed, 12 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 판교 SK플래닛 DevRel &amp;#x26; 기술교육 담당 Joe!입니다.
 &lt;/br&gt;
 ChatGPT가 출시된 이후 계속해서 생성형 AI 기술을 활용한 서비스 개발 고도화뿐만 아니라, 각 기업 내 구성원들의 AI 활용을 높이기 위한 노력 또한 더욱 커지고 있는데요.
 따라서 &lt;strong&gt;AI를 잘 활용하기 위한 기업의 환경 조성 및 활용 문화의 확산&lt;/strong&gt; 또한 중요해지고 있습니다.&lt;/p&gt;
@@ -3847,7 +4213,7 @@ Syrup Design System에서는 색상, 폰트, 간격, 둥글기 등을 정의하�
 &lt;/ul&gt;
 &lt;p&gt;감사합니다.&lt;/p&gt;
 &lt;p&gt;(참고) &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=165723&quot;&gt;https://devocean.sk.com/blog/techBoardDetail.do?ID=165723&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Microsoft-GitHub UNIVERSE24 Recap Seoul Review(Global Version)]]></title><description><![CDATA[안녕하세요, SK플래닛 Joe입니다. 
-2024년 12월 6일 서울 광화문에서 있었던 'Microsoft-GitHub UNIVERSE24 Recap Seoul'에 발표자로 참여한 후기를 간략히 공유해 드립니다. 이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다.   Hi, this is Joe from SK Planet…]]></description><link>https://techtopic.skplanet.com/universerecapkr24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/universerecapkr24/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Thu, 02 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 Joe입니다. &lt;/br&gt;
+2024년 12월 6일 서울 광화문에서 있었던 'Microsoft-GitHub UNIVERSE24 Recap Seoul'에 발표자로 참여한 후기를 간략히 공유해 드립니다. 이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다.   Hi, this is Joe from SK Planet…]]></description><link>https://techtopic.skplanet.com/universerecapkr24/</link><guid isPermaLink="false">https://techtopic.skplanet.com/universerecapkr24/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Thu, 02 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 Joe입니다. &lt;/br&gt;
 2024년 12월 6일 서울 광화문에서 있었던 &apos;Microsoft-GitHub UNIVERSE24 Recap Seoul&apos;에 발표자로 참여한 후기를 간략히 공유해 드립니다. 이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다.  &lt;/p&gt;
 &lt;p&gt;Hi, this is Joe from SK Planet.&lt;/br&gt;
 I’d like to briefly share my experience as a speaker at the &apos;Microsoft-GitHub UNIVERSE24 Recap Seoul&apos; event held on December 6, 2024, in Gwanghwamun, Seoul. I sincerely hope that everyone who attended, both inside and outside the venue, returned home peacefully and safely that day.&lt;/p&gt;
@@ -4961,7 +5327,7 @@ ChatGPT를 연동할때 외부 Function call에 대해 정의된 정보를 함�
 &lt;h3&gt;마무리&lt;/h3&gt;
 &lt;p&gt;&quot;댓글 하나 달아 준다고 얼마나 효과가 날까?&quot;라는 의문을 가지고 시작했던 개발이 사용자들의 궁금증을 풀어 주고, 재미를 더해 주어 한번 더 글을 작성하게 만드는 효과를 보면서, 개발의 난이도 대비 좋은 결과를 얻었다고 생각합니다. &lt;/br&gt;&lt;/br&gt;
 또한, 댓글을 한번만 달아주고 끝내는 연동이 아니라, 서로 소통하는 스토리를 만들어 개발하는 과정을 통해 생성형 AI 기술의 잠재력과 다양한 응용 가능성을 직접 느낄 수 있었습니다. 이런 경험을 바탕으로 더욱 정교하고 맥락에 맞게 이용자들과 소통할 수 있는 오글봇 AI로 발전시켜 나가고 싶습니다.&lt;/p&gt;
-&lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[웹앱 사용자 경험을 개선하는 기술 한 스푼]]></title><description><![CDATA[SK…]]></description><link>https://techtopic.skplanet.com/uptn-loadingspinner/</link><guid isPermaLink="false">https://techtopic.skplanet.com/uptn-loadingspinner/</guid><dc:creator><![CDATA[chanmin]]></dc:creator><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;SK플래닛에서 운영하는 블록체인 플랫폼의 프론트엔드 개발을 담당하는 김찬민입니다. 저는 입사 전부터 &apos;나부터 사용하고 싶고 네이티브 이상으로 부드러운 웹앱&apos;을 만들고 싶은 꿈이 있었는데요, 이를 위해 작은 디테일을 잡아내는 것이 중요하다고 생각했습니다. 이번 글은 프론트엔드 개발자가 도입한 기술을 통한 사용자 경험 개선에 관한 이야기입니다.&lt;/p&gt;
+&lt;p&gt;감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[LoadingSpinner를 도입하여 웹앱 사용자 경험을 개선하다(웹앱 사용자 경험을 개선하는 기술 한 스푼)]]></title><description><![CDATA[SK…]]></description><link>https://techtopic.skplanet.com/uptn-loadingspinner/</link><guid isPermaLink="false">https://techtopic.skplanet.com/uptn-loadingspinner/</guid><dc:creator><![CDATA[chanmin]]></dc:creator><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;SK플래닛에서 운영하는 블록체인 플랫폼의 프론트엔드 개발을 담당하는 김찬민입니다. 저는 입사 전부터 &apos;나부터 사용하고 싶고 네이티브 이상으로 부드러운 웹앱&apos;을 만들고 싶은 꿈이 있었는데요, 이를 위해 작은 디테일을 잡아내는 것이 중요하다고 생각했습니다. 이번 글은 프론트엔드 개발자가 도입한 기술을 통한 사용자 경험 개선에 관한 이야기입니다.&lt;/p&gt;
 &lt;h3&gt;스피너, 어떻게 개선할 수 있을까&lt;/h3&gt;
 &lt;p&gt;1년 전 UPTN Station을 처음 맡게 되었을 때의 기억이 아직도 생생한데요, 이 서비스가 과연 어떤 앱인지 파악하기 위해 직접 써보던 중 저는 화면을 가득 채우는 로딩 스피너가 제일 먼저 눈에 들어왔습니다.&lt;/p&gt;
 &lt;ul&gt;
@@ -7440,7 +7806,7 @@ public boolean allow(String action, Map&amp;lt;String, Object&gt; resourceAttrib
 &lt;p&gt;위 표와 그래프를 보면 알 수 있듯이 Trino는 적은 양의 데이터에서 기존 Hive보다 더 빠른 속도를 보장합니다. 경험적으로 1,000만 Rows 미만의 Text 데이터 처리에는 Trino가 적합하다는 것을 확인할 수 있었습니다.&lt;/p&gt;
 &lt;h2&gt;결론&lt;/h2&gt;
 &lt;p&gt;본 과제를 통한 시스템 도입으로 사내 서비스의 DAU(일일 활성 사용자) 분석이 한층 정교해졌으며, 이를 통해 빠르고 효율적인 마케팅 집행과 신속한 의사결정이 가능해졌습니다. 또한 일부 리포트의 주기를 일간에서 시간 단위로 단축하는 성과를 거두었으며, 실시간 모수 추출에도 효과적으로 활용되고 있습니다.&lt;/p&gt;
-&lt;p&gt;SK플래닛은 이 시스템을 기반으로 다양한 서비스 적용 사례를 지속적으로 발굴하고 구체화해 나가고 있습니다. 더불어 이러한 데이터를 AI 환경에서 최적화된 방식으로 활용할 방안을 적극적으로 모색하고 있습니다. 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)]]></title><description><![CDATA[여러분은 업무에서 GitHub Copilot(이하 '코파일럿'으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :) SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터…]]></description><link>https://techtopic.skplanet.com/github-copilot/</link><guid isPermaLink="false">https://techtopic.skplanet.com/github-copilot/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Fri, 30 Aug 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;여러분은 업무에서 GitHub Copilot(이하 &apos;코파일럿&apos;으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :)&lt;/p&gt;
+&lt;p&gt;SK플래닛은 이 시스템을 기반으로 다양한 서비스 적용 사례를 지속적으로 발굴하고 구체화해 나가고 있습니다. 더불어 이러한 데이터를 AI 환경에서 최적화된 방식으로 활용할 방안을 적극적으로 모색하고 있습니다. 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)]]></title><description><![CDATA[여러분은 업무에서 GitHub Copilot(이하 '코파일럿'으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :) SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터…]]></description><link>https://techtopic.skplanet.com/github-copilot/</link><guid isPermaLink="false">https://techtopic.skplanet.com/github-copilot/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Fri, 30 Aug 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;여러분은 업무에서 GitHub Copilot(이하 &apos;코파일럿&apos;으로 명명) 등 AI-assisted Software를 얼마나 많이 사용하고 계신지요? :)&lt;/p&gt;
 &lt;p&gt;SK플래닛에서도 이미 작년부터 코파일럿을 업무에 도입한 개발자들이 있었지만, 직무와 연차, 활용 용도에 따라 상이하게 사용하고 있었고 각자의 만족도도 달랐습니다. 따라서 당사는 2024년 4월부터 8월까지, 다양한 개발 업무에서 개발 생산성 향상 실험 및 사례 발굴 등의 활동을 진행하였습니다. 본 글은 이 활동을 회고하고 사례를 정리한 &apos;코파일럿 활용기&apos; 성격으로 작성하였사오니 함께 참고 부탁드립니다.  &lt;/p&gt;
 &lt;p&gt;참고로 SK플래닛에서 사용한 코파일럿 버전은 &apos;Copilot for Business&apos; 이며, 당사의 사업 및 개발 분야는 아래를 참조하시기 바랍니다. &lt;/p&gt;
 &lt;ul&gt;
@@ -8966,7 +9332,7 @@ Tech Talk라는 외부 대상 기술 컨퍼런스도 매년 진행하고 있으�
 &lt;h4&gt;마무리&lt;/h4&gt;
 &lt;p&gt;지금까지 SK ICT 관계사 중심으로 운영되었거나 운영 중인 테크 블로그들을 소개하였습니다.
 각 테크 블로그들이 SK 관계사뿐만 아니라 외부의 개발자들과도 공유 및 소통의 도구로 더욱 성장하기를 바랍니다. 읽어 주셔서 감사합니다.&lt;/p&gt;
-&lt;p&gt;덧. 이 블로그는 SK 데보션에서도 같은 내용으로 참고하실 수 있습니다. &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=166044&amp;#x26;boardType=techBlog&amp;#x26;searchData=&amp;#x26;searchDataMain=&amp;#x26;page=&amp;#x26;subIndex=&amp;#x26;searchText=sk+ict&amp;#x26;techType=&amp;#x26;searchDataSub=&quot;&gt;https://devocean.sk.com/blog/techBoardDetail.do?ID=166044&amp;#x26;boardType=techBlog&amp;#x26;searchData=&amp;#x26;searchDataMain=&amp;#x26;page=&amp;#x26;subIndex=&amp;#x26;searchText=sk+ict&amp;#x26;techType=&amp;#x26;searchDataSub=&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AI-assisted Coding과 개발 생산성 향상 #1 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)]]></title><description><![CDATA[본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI…]]></description><link>https://techtopic.skplanet.com/genai-productivity/</link><guid isPermaLink="false">https://techtopic.skplanet.com/genai-productivity/</guid><dc:creator><![CDATA[joe]]></dc:creator><pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI 툴을 바라보는 여러 관점들을 발표자와 실리콘밸리 사례 위주로 설명합니다(* 참고로 본 글은 지난 3월 사내에서 진행되었던 SK플래닛 기술 세미나(Data &amp;#x26; Tech Committee, DTC*)에서 Upzen 한기용 대표의 발표 내용을 중심으로 정리하였습니다 - 발표자의 허락을 받아 편집자가 Tech Topic 블로그에 포스팅합니다).&lt;/p&gt;
+&lt;p&gt;덧. 이 블로그는 SK 데보션에서도 같은 내용으로 참고하실 수 있습니다. &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=166044&amp;#x26;boardType=techBlog&amp;#x26;searchData=&amp;#x26;searchDataMain=&amp;#x26;page=&amp;#x26;subIndex=&amp;#x26;searchText=sk+ict&amp;#x26;techType=&amp;#x26;searchDataSub=&quot;&gt;https://devocean.sk.com/blog/techBoardDetail.do?ID=166044&amp;#x26;boardType=techBlog&amp;#x26;searchData=&amp;#x26;searchDataMain=&amp;#x26;page=&amp;#x26;subIndex=&amp;#x26;searchText=sk+ict&amp;#x26;techType=&amp;#x26;searchDataSub=&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AI-assisted Coding과 개발 생산성 향상 #1 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)]]></title><description><![CDATA[본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI…]]></description><link>https://techtopic.skplanet.com/genai-productivity/</link><guid isPermaLink="false">https://techtopic.skplanet.com/genai-productivity/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI 툴을 바라보는 여러 관점들을 발표자와 실리콘밸리 사례 위주로 설명합니다(* 참고로 본 글은 지난 3월 사내에서 진행되었던 SK플래닛 기술 세미나(Data &amp;#x26; Tech Committee, DTC*)에서 Upzen 한기용 대표의 발표 내용을 중심으로 정리하였습니다 - 발표자의 허락을 받아 편집자가 Tech Topic 블로그에 포스팅합니다).&lt;/p&gt;
 &lt;p&gt;이들을 잘 활용할 경우 개발자의 소프트웨어 개발 생산성이 향상된다고 알려져 있는데요, 정말 그러한가 해서 발표자께서는 실리콘밸리 지인 찬스(!)를 사용하셨다고 합니다(물론 발표자님도 써 보셨고요 ^^).&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
