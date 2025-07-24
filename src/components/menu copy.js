@@ -17,7 +17,7 @@ const Menu = ({ location }) => {
         Tech
       </Link>
       <a
-        href="https://careers.skplanet.com/"
+        href="https://careers.skplanet.com/home"
         target="_blank"
         rel="noreferrer"
       >
@@ -35,7 +35,18 @@ const Menu = ({ location }) => {
           alt="facebook"
         />
       </a>
-
+      <a
+        href="https://www.instagram.com/sk.planet.design"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          srcSet={`${insta_1x} 36w, ${insta_4x} 144w`}
+          sizes={`(max-width: 419px) 20px, 36px`}
+          src={insta_4x}
+          alt="facebook"
+        />
+      </a>
     </div>
   );
 };
