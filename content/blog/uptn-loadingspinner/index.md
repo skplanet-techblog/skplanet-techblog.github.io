@@ -1,5 +1,5 @@
 ---
-title: 'LoadingSpinner를 도입하여 웹앱 사용자 경험을 개선하다(웹앱 사용자 경험을 개선하는 기술 한 스푼)'
+title: '웹앱 사용자 경험을 개선하는 기술 한 스푼'
 date: "2024-11-21"
 author: "chanmin"
 description: '웹앱 사용자 경험을 개선하는 기술 한 스푼'
