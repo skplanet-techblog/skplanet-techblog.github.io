@@ -1,7 +1,7 @@
 ---
 title: "SK플래닛 전사 테크 세미나 3년 회고 및 현장 사례"
 date: "2024-12-06"
-tags: ["개발문화", "테크세미나", "DTC", "AI세미나"]
+tags: ["DevRel", "개발문화", "테크세미나", "DTC", "AI세미나"]
 author: "techeditorial" 
 description: "판교세미나, Age of AI, DTC"
 ---

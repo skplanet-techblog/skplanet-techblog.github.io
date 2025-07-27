@@ -1,7 +1,7 @@
 ---
 title: "사내 LLM 플레이그라운드를 활용한 AI 프롬프톤 사례 (2024)"
 date: "2025-03-12"
-tags: ["AI", "개발문화", "prompthon", "프롬프톤", "LLM", "플레이그라운드"]
+tags: ["AI", "개발문화", "DevRel", "Prompthon", "프롬프톤", "LLM", "플레이그라운드"]
 author: "techeditorial"
 description: "멀티 LLM 플레이그라운드 및 AI 프롬프톤 사례 공유" 
 ---
