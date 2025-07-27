@@ -1,12 +1,12 @@
 ---
 title: "SK ICT Family 테크블로그 총정리 (2025년 버전)" 
 date: "2025-06-29"
-tags: ["SK", "테크블로그", "TechBlog", "기술블로그"]
-author: "Joe"
+tags: ["TechBlog", "SK ICT", "테크블로그", "기술블로그"]
+author: "techeditorial"
 description: "SK ICT Family사 테크 블로그 총정리 (SKP기술지원팀 또는 테크편집부)" 
 ---
 
-안녕하세요, SK플래닛 DevRel 담당자입니다! <br/>
+안녕하세요, 테크편집부입니다! <br/>
 SK그룹 테크블로그가 궁금하신 분들을 위해, 작년에 이어 SK ICT 테크블로그 2025년 버전을 업데이트해 보았어요~ <br/>
 (참고: SK ICT 테크블로그 2024년 버전 -  https://techtopic.skplanet.com/skict-techblog24/ ) 
 

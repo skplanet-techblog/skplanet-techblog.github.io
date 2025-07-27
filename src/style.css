@@ -371,7 +371,7 @@ main ol.list li:first-child .post-list-item {
 }
 */
 .post-list-item {
-  padding: 3rem 0; /* ★ 공백 줄임 */
+  padding: 2rem 0; /* ★ 공백 줄임 */
   border-bottom: 1px solid #e0e0e0; /* ★ 선을 더 가볍게 */
   line-height: 1.2;
 }

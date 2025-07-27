@@ -1,7 +1,7 @@
 ---
 title: "초분광 기술과 IoT의 접목 사례"
 date: "2023-07-11"
-tags: ["hyperspectral", "IoT", "CNN", "AI", "초분광"]
+tags: ["AI/ML", "hyperspectral", "IoT", "CNN", "초분광"]
 author: "kyuho"
 description: "초분광 기술과 IoT의 접목 사례"
 ---

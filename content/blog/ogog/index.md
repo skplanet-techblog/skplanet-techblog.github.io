@@ -1,7 +1,7 @@
 ---
 title: "돈 버는 커뮤니티, OK캐쉬백 오글오글의 UX/UI 이야기"
 date: "2023-10-18"
-tags: ["Branding", "UI", "UX", "OK Cashbag", "ogog"]
+tags: ["UX/UI", "OK Cashbag", "오글오글"]
 author: "ogog"
 description: "돈 버는 커뮤니티, OK캐쉬백 오글오글의 UX/UI 이야기"
 ---

@@ -1,8 +1,8 @@
 ---
-title: "SKP 멀티 LLM 플레이그라운드 ＆ AI 사내 프롬프톤 사례 (2024)"
+title: "사내 LLM 플레이그라운드를 활용한 AI 프롬프톤 사례 (2024)"
 date: "2025-03-12"
-tags: ["prompthon", "프롬프톤", "Playground", "Multi-LLM"]
-author: "joeoriginal"
+tags: ["AI", "prompthon", "프롬프톤", "LLM", "플레이그라운드"]
+author: "techeditorial"
 description: "멀티 LLM 플레이그라운드 및 AI 프롬프톤 사례 공유" 
 ---
 

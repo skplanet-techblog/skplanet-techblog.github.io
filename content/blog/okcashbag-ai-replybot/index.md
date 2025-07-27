@@ -1,7 +1,7 @@
 ---
 title: "AI 기반 OK캐쉬백 자동 댓글봇(오글봇) 구현 사례"
 date: "2024-12-05"
-tags: ["OK Cashbag", "오글오글", "오글봇", "ChatGPT", "AI개발"]
+tags: ["GenAI", "OK Cashbag", "댓글봇", "오글봇"]
 author: "eshong"
 description: "오글봇 AI 개발 사례 및 효과"
 ---

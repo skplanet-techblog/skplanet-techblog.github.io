@@ -1,7 +1,7 @@
 ---
 title: "Syrup 모바일 웹 속도 개선기: WebFlux, SSE, 그리고 Next.js" 
 date: "2023-12-12"
-tags: ["syrup", "시럽", "포인트테크"]
+tags: ["Frontend", "Backend", "Spring", "WebFlex", "SSE", "Next.js", "Syrup"]
 author: "changho"
 description: "모으는 재미, 불리는 맛 Syrup, SK플래닛의 대표 서비스 Syrup의 웹 개선 사례를 소개합니다."
 ---

@@ -22,7 +22,7 @@ import keumbaek from "./images/keumbaek.png"
 import chanmin from "./images/chanmin.jpeg"
 import eshong from "./images/eshong.png"
 import syrupdev from "./images/syrupdev.png"
-import editorial from "./images/editorial.png"
+import techeditorial from "./images/techeditorial.png"
 import aieditorial from "./images/aieditorial.png"
 import shinys from "./images/shinys.png";
 import chanmin2025 from "./images/chanmin.jpeg"
@@ -172,25 +172,25 @@ export const MEMBERS = {
   eshong: {
     name: "홍의숙",
     team: "OCB개발팀",
-    description: "탁구치기 좋아하는 아줌마 개발자입니다 :)",
+    description: "탁구치는 것을 좋아하는 아줌마(?) 개발자입니다 :)",
     thumbnail: eshong,
   },
   syrupdev: {
     name: "최경영,여선영,임형준",
     team: "Syrup개발팀",
-    description: "Syrup 처럼 달콤한 사용자 경험을 추구하는 프론트엔드 개발자들입니다.",
+    description: "Syrup처럼 달콤한 사용자 경험을 추구하는 프론트엔드 개발자들입니다.",
     thumbnail: syrupdev,
   },
-  editorial: {
+  techeditorial: {
     name: "테크편집부",
     team: "Editorial Team",
-    description: "SK플래닛 Tech Topic 작성을 효과적으로 돕기 위해 2025년부터 출범하였습니다. 잘 부탁드립니다!",
-    thumbnail: editorial,
+    description: "SK플래닛 Tech Topic 작성을 효과적으로 돕는 Virtual Team입니다. 잘 부탁드립니다!",
+    thumbnail: techeditorial,
   },
   aieditorial: {
     name: "AI편집부",
     team: "AI Editorial Team",
-    description: "SK플래닛 Tech Topic 작성을 효과적으로 돕기 위해 2025년부터 출범하였습니다. 잘 부탁드립니다!",
+    description: "SK플래닛 Tech Topic 작성을 효과적으로 돕는 AI Virtual 멤버입니다. 잘 부탁드립니다!",
     thumbnail: aieditorial,
   },
   shinys: {
@@ -206,9 +206,9 @@ export const MEMBERS = {
     thumbnail: chanmin2025,
   },
     joeoriginal: {
-    name: "Joe",
-    team: "DevRel Manager",
-    description: "새로운 탐색을 즐겨하는 SKP DevRel, Tech Writer + 바이브 코더 0년차입니다",
+    name: "Joe!",
+    team: "Developer Advocate",
+    description: "전자음악과 새로운 시도를 즐기는 DevRel | Tech Edu | TW | 바이브 개발자 1년차입니다",
     thumbnail: joeoriginal,
   },
 };

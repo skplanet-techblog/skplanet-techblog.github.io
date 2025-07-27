@@ -1,9 +1,9 @@
 ---
-title: "[Ansible AWX] 활용법: 서버 배포부터 무중단 릴리즈까지"
+title: "Ansible AWX 활용법: 서버 배포부터 무중단 릴리즈까지"
 date: "2025-02-21"
 author: "sunny"
 description: "오픈 소스 AWX를 활용하여 배포 자동화 툴을 개발하는 방법을 설명합니다" 
-tags: ["배포 자동화", "AWX", "Ansible", "Open Source"] 
+tags: ['DevOps", "AWX", "Ansible", "배포 자동화", "Open Source"] 
 ---
 
 소프트웨어 배포 자동화는 코드 변경 및 테스트 이후 프로덕션 환경에 배포하는 과정을 자동화하여 배포 속도를 향상시키고 품질을 보장하는 중요한 기술이며, 이를 통해 배포 빈도를 증가시키면서도 일관된 환경을 유지하고 보안성을 강화할 수 있습니다.

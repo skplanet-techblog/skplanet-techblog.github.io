@@ -1,9 +1,9 @@
 ---
 title: "AI-assisted Coding과 개발 생산성 향상 #1 (부제: 실리콘밸리 개발자가 바라보는 AI 생산성 툴 및 개발 방식의 변화)"
 date: "2024-07-31"
-tags: ["GenAI", "개발생산성", "Copilot", "코파일럿", "ChatGPT"]
+tags: ["GenAI", "AI", "개발생산성", "Copilot", "코파일럿", "ChatGPT"]
 author: "joeoriginal" 
-description: "AI-assisted Coding과 개발 생산성 향상"
+description: "AI-assisted Coding과 개발 생산성 향상 특강 요약"
 ---
 
 본 글에서는 엔지니어의 개발 생산성을 향상시킬 수 있는 GitHub Copilot(이하 코파일럿), ChatGPT 외 다양한 AI 툴(AI-assisted Software)의 기능과 활용 방법을 소개하며, 생성형 AI로 인한 개발 방식의 변화, AI의 발전에 따른 우려 사항, 그리고 AI 툴을 바라보는 여러 관점들을 발표자와 실리콘밸리 사례 위주로 설명합니다(* 참고로 본 글은 지난 3월 사내에서 진행되었던 SK플래닛 기술 세미나(Data & Tech Committee, DTC*)에서 Upzen 한기용 대표의 발표 내용을 중심으로 정리하였습니다 - 발표자의 허락을 받아 편집자가 Tech Topic 블로그에 포스팅합니다). 

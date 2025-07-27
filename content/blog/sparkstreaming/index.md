@@ -1,7 +1,7 @@
 ---
 title: "실시간 파생 데이터 생성 : Kafka + Spark로 하루를 앞당기다"
 date: "2024-10-23"
-tags: ["Kafka", "Spark", "Spark Streaming"]
+tags: ["Data Engineering", "Kafka", "Spark", "Spark Streaming"]
 author: "junghochoi"
 description: "Hadoop 기반 빅 데이터 시스템의 정보를 토대로 인사이트를 발견할 때 배치로 스케줄링 해 파생 데이터를 생성합니다. 하지만 파생 데이터가 지연 생성될 수 있는데 이를 개선하고자 spark streaming을 사용하여 실시간으로 전환한 사례를 소개합니다."
 ---

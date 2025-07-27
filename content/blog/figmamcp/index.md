@@ -1,7 +1,7 @@
 ---
 title: "Figma MCP로 프론트엔드 컴포넌트 자동 생성하기"
 date: "2025-07-24"
-tags: ["프론트엔드", "AI", "MCP", "Figma MCP"]
+tags: ["Frontend", "AI", "MCP", "Figma MCP"]
 author: "chanmin2025"
 description: "Figma MCP를 활용한 효율적인 UI 컴포넌트 개발 및 실제 적용 경험 공유"
 ---
@@ -105,7 +105,7 @@ UI 구현에 어려움을 겪을 수 있는 타 직군이나 주니어 개발자
 ---
 #### (참고) 작가의 최근 글은 여기서도 읽으실 수 있습니다.
 
-* [LoadingSpinner를 도입하여 웹앱 사용자 경험을 개선하다(웹앱 사용자 경험을 개선하는 기술 한 스푼)](https://techtopic.skplanet.com/uptn-loadingspinner/)
+* [로딩 스피너는 이제 그만! UPTN Station UX 개선 사례)](https://techtopic.skplanet.com/uptn-loadingspinner/)
 * [[Vue] motion 라이브러리로 더 나은 UX 제공하기](https://devocean.sk.com/blog/techBoardDetail.do?ID=167311)
 * [시각장애인을 위해 모달 컴포넌트 접근성 개선하기](https://devocean.sk.com/blog/techBoardDetail.do?ID=167206)
 

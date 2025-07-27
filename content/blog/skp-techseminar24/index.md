@@ -1,20 +1,18 @@
 ---
 title: "SK플래닛 전사 테크 세미나 3년 회고 및 현장 사례"
 date: "2024-12-06"
-tags: ["판교세미나", "DTC", "AI세미나", "개발생산성"]
-author: "joe" 
+tags: ["DevRel", "판교세미나", "DTC", "AI세미나"]
+author: "techeditorial" 
 description: "판교세미나, Age of AI, DTC"
 ---
 
-안녕하세요, 판교 SK플래닛 DevRel & 기술교육 담당 Joe입니다 :)  
-
-판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, 
-
+안녕하세요, 테크편집부입니다! <br/>  
+판교의 많은 IT회사처럼 저희도 다양한 DevRel(Developer Relation, 개발자 활동)을 진행하고 있는데요, <br/>
 지난 수 년간 사내 기술 공유 문화 활동으로 진행하였던 Data & Tech Committee(이하 DTC) 라는 이름의 판교 테크 세미나 프로그램을 Tech Topic 블로그를 통해 회고하며, 특히 지난 11월 진행된 DTC 주제인  'Age of AI - the Future of Work' 강연 및 현장의 분위기, 구성원 의견 중 일부를 함께 담아 보았사오니 즐겨 주시면 감사하겠습니다. 
 
 아울러 기술 세미나를 기획하거나 운영하는 다른 회사 및 부서에서도 함께 참고하여 주시면 감사하겠습니다. 
 
-## DTC(Data & Tech Committee)란? 
+## SK플래닛 월간 전사 테크 세미나, Data & Tech Committee(DTC) 
 ---
 #### TL;DR
 ```java

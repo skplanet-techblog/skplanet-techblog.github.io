@@ -1,7 +1,7 @@
 ---
 title: "SK플래닛의 DTS 기술 적용 사례"
 date: "2023-08-21"
-tags: ["DTS", "IoT", "ESG", "AI", "분산온도센서", "광섬유센서"]
+tags: ["AI/ML", "DTS", "IoT", "ESG", "분산온도센서", "광섬유센서"]
 author: "hyungjoo"
 description: "SK플래닛의 DTS 기술 적용 사례"
 ---

@@ -1,8 +1,8 @@
 ---
 title: "2023년 채용연계형 인턴십 프로그램을 소개합니다."
 date: "2023-02-09"
-tags: ["intern", "recruit"]
-author: "neotf"
+tags: ["DevRel", "Intership", "인턴", "채용연계형"]
+author: "techeditorial"
 description: "2023년 채용연계형 인턴십 프로그램을 소개합니다."
 ---
 

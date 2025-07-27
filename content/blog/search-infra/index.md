@@ -1,7 +1,7 @@
 ---
 title: "클라우드 기반 SK플래닛 검색 시스템 개발"
 date: "2023-09-13"
-tags: ["Elasticsearch", "검색 시스템", "키워드 검색", "검색 Dictionary 관리"]
+tags: ["Search", "Elasticsearch", "ES", "검색 시스템"]
 author: "taehyung"
 description: "SK플래닛 클라우드 기반 검색 시스템"
 ---
