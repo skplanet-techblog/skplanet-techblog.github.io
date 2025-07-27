@@ -1,5 +1,5 @@
 ---
-title: "Syrup 모바일 웹 개선 사례"
+title: "Syrup 모바일 웹 속도 개선기: WebFlux, SSE, 그리고 Next.js" 
 date: "2023-12-12"
 tags: ["syrup", "시럽", "포인트테크"]
 author: "changho"

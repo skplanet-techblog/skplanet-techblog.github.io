@@ -1,5 +1,5 @@
 ---
-title: "판교 테크세미나를 운영하는 법과 'Age of AI - the Future of Work' 회고"
+title: "SK플래닛 전사 테크 세미나 3년 회고 및 현장 사례"
 date: "2024-12-06"
 tags: ["판교세미나", "DTC", "AI세미나", "개발생산성"]
 author: "joe" 

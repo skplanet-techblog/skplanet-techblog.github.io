@@ -1,7 +1,7 @@
 ---
-title: "OPA(Open Policy Agent)를 이용하여 JIRA의 권한 구현하기"
+title: "[Open Policy Agent]로 JIRA 권한 구현하기"
 date: "2024-09-26"
-tags: ["OPA", "JIRA", "Spring", "Kubernetes"]
+tags: ["DevOps", "OPA", "JIRA", "Spring", "Kubernetes"]
 author: "sunny"
 description: "OPA(Open Policy Agent)를 이용한 JIRA의 권한 구현하기"
 ---

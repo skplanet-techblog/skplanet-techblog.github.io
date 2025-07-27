@@ -1,5 +1,5 @@
 ---
-title: "Syrup Design System 개발 : UX에서 Front-End로의 효과적인 Hand-off"
+title: "[Syrup 디자인 시스템] 개발: UX에서 FE로의 효과적인 핸드오프"
 date: "2025-03-07"
 tags: ["Syrup", "시럽", "Design System", "FrontEnd"]
 author: "syrupdev"

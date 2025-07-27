@@ -3,7 +3,7 @@ title: "SK플래닛 신규 서비스 Wezuro 브랜드 구축 스토리"
 date: "2023-11-23"
 tags: ["Branding", "Brand", "BX", "Wezuro", "경유 쇼핑"]
 author: "go"
-description: "여행은 직항, 쇼핑은 경유. WeZuro 브랜드 구축 스토리를 전합니다."
+description: "여행은 직항, 쇼핑은 경유. Wezuro 브랜드 구축 스토리를 전합니다."
 ---
 
 ### No.1 리워드 쇼핑 플랫폼, Wezuro 런칭!

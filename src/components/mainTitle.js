@@ -1,11 +1,10 @@
 import * as React from "react";
 
 const MainTitle = () => (
-  <div className="main-title">
-    <div className="text">
-      <div>SK플래닛 개발자 활동과 경험을 공유하는</div>
+  <div className="main-title mt-4 text-center">
+    <div className="font-bold leading-tight text">
       <div>
-        <span className="highlight"> 기술 블로그</span>를 소개합니다!
+        SK플래닛의 개발 활동을 공유하는 <span className="highlight">기술 블로그</span>입니다.
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 ---
-title: "Locust를 활용한 부하 테스트 작성"
+title: "블록체인 부하 테스트에 Locust 오픈소스 활용하기"
 date: "2024-10-10"
 tags: ["locust", "부하테스트", "opensource"]
 author: "wonjs"

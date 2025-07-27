@@ -118,12 +118,8 @@ h3,
 h4,
 h5,
 h6 {
-  /*
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-  */ 
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.8rem !important;
   letter-spacing: -0.025em;
 }
 
@@ -138,26 +134,28 @@ h6 {
 
 h1 {
   font-weight: bold;
+  font-size: 2rem;
   color: #222222;
-}
-h1 {
-  font-size: 1.5rem;
 }
 
 h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
   font-size: 1.25rem;
 }
-h3 {
+
+h5 {
   font-size: 1rem;
 }
-h4 {
-  font-size: 0.75rem;
-}
-h5 {
-  font-size: 0.5rem;
-}
+
 h6 {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 h1 > a {
@@ -326,11 +324,11 @@ main ol.list li:last-child .post-list-item {
 }
 
 .main-title {
-  margin: 1rem auto 0 auto; /* ← 기존 5rem → 2rem 추천 */
+  margin: 5rem auto 0 auto;
 }
 
 .main-title .text {
-  font-size: 2rem; /* ← 기존 3rem → 1.5rem 추천 */
+  font-size: 3rem;
   font-weight: 600;
   color: #222222;
   margin: 0 auto;
@@ -361,21 +359,14 @@ main ol.list li:last-child .post-list-item {
 }
 
 main ol.list li:first-child .post-list-item {
-  padding-top: 6.25rem; 
+  padding-top: 6.25rem;
 }
-/*
+
 .post-list-item {
   padding: 5rem 0;
   border-bottom: 2px solid #f4f4f4;
   line-height: 1.5;
 }
-*/
-.post-list-item {
-  padding: 3rem 0; /* ★ 공백 줄임 */
-  border-bottom: 1px solid #e0e0e0; /* ★ 선을 더 가볍게 */
-  line-height: 1.2;
-}
-
 
 .post-list-item p {
   margin-bottom: 1.25rem;
@@ -384,22 +375,14 @@ main ol.list li:first-child .post-list-item {
 }
 
 .post-list-item h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #303030;
   margin: 0;
 }
-/* 
+
 .post-list-item header {
   margin: 1.3rem 0 2rem 0;
-}
-*/ 
-.post-list-item header {
-  margin: 0.8rem 0 1rem 0; /* ★ 위 아래 간격을 축소 */
-}
-
-.post-list-item p {
-  margin-bottom: 0.5rem; /* ★ 글 요약 아래 간격 축소 */
 }
 
 .post-list-item .tags {
@@ -472,10 +455,9 @@ main ol.list li:first-child .post-list-item {
 
 .blog-post header h1 {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem; 
 }
 
-.blog-post header h1 {
+.blog-post header h2 {
   color: #222222;
   margin-top: 1.5rem;
 }
@@ -547,21 +529,20 @@ main ol.list li:first-child .post-list-item {
   ol {
     list-style-position: inside;
   }
-
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   h4 {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   h5 {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   }
   h6 {
     font-size: 0.5rem;

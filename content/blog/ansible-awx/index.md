@@ -1,5 +1,5 @@
 ---
-title: "배포 자동화 툴 개발을 위한 AWX 활용"
+title: "[Ansible AWX] 활용법: 서버 배포부터 무중단 릴리즈까지"
 date: "2025-02-21"
 author: "sunny"
 description: "오픈 소스 AWX를 활용하여 배포 자동화 툴을 개발하는 방법을 설명합니다" 

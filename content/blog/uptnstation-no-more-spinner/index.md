@@ -1,5 +1,5 @@
 ---
-title: '웹앱 사용자 경험을 개선하는 기술 한 스푼'
+title: "로딩 스피너는 이제 그만! UPTN Station UX 개선 사례"
 date: "2024-11-21"
 author: "chanmin"
 description: '웹앱 사용자 경험을 개선하는 기술 한 스푼'

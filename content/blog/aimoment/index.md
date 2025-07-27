@@ -1,5 +1,5 @@
 ---
-title: "생성형 AI를 활용한 마케팅 영상 제작 - AI Moment 개발 사례"
+title: "[AI Moment] B2B 영상 생성, AI로 어떻게 가능해졌나"
 date: "2025-05-29"
 tags: ["AI", "AIMoment", "자동 마케팅 영상 서비스"]
 author: "shinys" 

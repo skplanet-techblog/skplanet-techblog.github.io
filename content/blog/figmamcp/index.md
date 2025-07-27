@@ -1,5 +1,5 @@
 ---
-title: "[Figma MCP]를 활용한 효율적인 UI 컴포넌트 개발 및 실제 적용 경험을 공유합니다"
+title: "Figma MCP로 프론트엔드 컴포넌트 자동 생성하기"
 date: "2025-07-24"
 tags: ["프론트엔드", "AI", "MCP", "Figma MCP"]
 author: "chanmin2025"

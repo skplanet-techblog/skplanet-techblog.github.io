@@ -1,5 +1,5 @@
 ---
-title: "Microsoft-GitHub UNIVERSE24 Recap Seoul Review(Global Version)"
+title: "[GitHub Copilot] UNIVERSE24 리캡 서울 발표기"
 date: "2025-01-02"
 tags: ["Microsoft", "GitHub Copilot", "SK", "UNIVERSERECAPKR24", "AI-assisted Coding"]
 author: "joeoriginal" 
