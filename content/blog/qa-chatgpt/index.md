@@ -1,7 +1,7 @@
 ---
 title: "생성형 AI로 QA 업무 수행하기 : 똑똑한 소프트웨어 테스트의 시작"
 date: "2024-11-01"
-tags: ["QA", "생성형AI", "Prompt_Engineering"]
+tags: ["QA", "AI", "생성형AI", "Prompt_Engineering"]
 author: "keumbaek"
 description: "생성형 AI로 QA 업무 수행하기: 똑똑한 S/W 테스트의 시작"
 ---

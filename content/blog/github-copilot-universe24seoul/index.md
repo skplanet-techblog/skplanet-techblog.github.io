@@ -1,7 +1,7 @@
 ---
 title: "[GitHub Copilot] UNIVERSE24 리캡 서울 발표기"
 date: "2025-01-02"
-tags: ["AI Coding", "GitHub Copilot", "SK Planet", "UNIVERSE", "발표기"]
+tags: ["AI", "AI Coding", "GitHub Copilot", "SK Planet", "UNIVERSE", "발표기"]
 author: "joeoriginal" 
 description: "Microsoft-GitHub UNIVERSE24 Recap Seoul Review :) "
 ---
