@@ -376,11 +376,22 @@ main ol.list li:first-child .post-list-item {
   line-height: 1.2;
 }
 
-
+/*
 .post-list-item p {
   margin-bottom: 1.25rem;
   color: #666666;
   font-size: 1.125rem;
+}
+*/
+.post-list-item p {
+  margin-bottom: 0.5rem;
+  color: #666666;
+  font-size: 1rem; /* 줄 수 줄이기 위해 약간 축소 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* ✅ 최대 줄 수를 3줄로 제한 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-list-item h2 {
