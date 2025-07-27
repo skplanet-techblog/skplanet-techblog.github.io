@@ -361,7 +361,7 @@ main ol.list li:last-child .post-list-item {
 }
 
 main ol.list li:first-child .post-list-item {
-  padding-top: 6.25rem; 
+  padding-top: 3rem; 
 }
 /*
 .post-list-item {

@@ -15,7 +15,7 @@ const Layout = ({ location, title, children }) => {
         {isRootPath && 
           <>
             <MainTitle />
-            <Banner />
+            {/* <Banner /> */}
           </>
         } 
         {children}
