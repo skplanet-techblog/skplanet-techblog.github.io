@@ -6,8 +6,6 @@ author: "chanmin2025"
 description: "Figma MCP를 활용한 효율적인 UI 컴포넌트 개발 및 실제 적용 경험 공유"
 ---
 
-안녕하세요, SK플래닛에서 프론트엔드 개발을 담당하고 있는 김찬민이라고 합니다.
-
 작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 [새로운 기술을 습득하거나 코드를 리팩터링하는](https://devocean.sk.com/blog/techBoardDetail.do?ID=165847) 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI를 활용할 수 있게 된 것 같습니다.
 AI의 활용 방법들 중 하나로, 이번 글에서는 [Framelink Figma MCP](https://github.com/GLips/Figma-Context-MCP) 를 사용해 프론트엔드 개발자의 숙제 중 하나인 UI 컴포넌트를 효율적으로 개발하는 방법을 소개해보려 합니다.
 
