@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 28 Jul 2025 01:32:23 GMT</lastBuildDate><item><title><![CDATA[Figma MCP로 프론트엔드 컴포넌트 자동 생성하기]]></title><description><![CDATA[작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 새로운 기술을 습득하거나 코드를 리팩터링하는 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI를 활용할 수 있게 된 것 같습니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 28 Jul 2025 01:40:59 GMT</lastBuildDate><item><title><![CDATA[Figma MCP로 프론트엔드 컴포넌트 자동 생성하기]]></title><description><![CDATA[작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 새로운 기술을 습득하거나 코드를 리팩터링하는 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI를 활용할 수 있게 된 것 같습니다.
 AI의 활용 방법들 중 하나로, 이번 글에서는 Framelink…]]></description><link>https://techtopic.skplanet.com/figmamcp/</link><guid isPermaLink="false">https://techtopic.skplanet.com/figmamcp/</guid><dc:creator><![CDATA[chanmin2025]]></dc:creator><pubDate>Thu, 24 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=165847&quot;&gt;새로운 기술을 습득하거나 코드를 리팩터링하는&lt;/a&gt; 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI를 활용할 수 있게 된 것 같습니다.
 AI의 활용 방법들 중 하나로, 이번 글에서는 &lt;a href=&quot;https://github.com/GLips/Figma-Context-MCP&quot;&gt;Framelink Figma MCP&lt;/a&gt; 를 사용해 프론트엔드 개발자의 숙제 중 하나인 UI 컴포넌트를 효율적으로 개발하는 방법을 소개해보려 합니다.&lt;/p&gt;
 &lt;p&gt;(참고) 글을 쓰는 시점에 &lt;a href=&quot;https://help.figma.com/hc/ko/articles/32132100833559-Dev-Mode-MCP-%EC%84%9C%EB%B2%84-%EC%95%88%EB%82%B4%EC%84%9C&quot;&gt;Figma 공식 MCP&lt;/a&gt; 의 베타 버전이 공개되어 있기는 하나, 아직까지는 Framelink Figma MCP가 더 안정적으로 동작한다고 느껴져 Framelink Figma MCP를 다루었습니다.&lt;/p&gt;
@@ -4270,25 +4270,24 @@ The above sentence was translated into English and Japanese using machine transl
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/119554c2dd2e109b3c2c902fab1d1420/302a4/image01.png&quot;
+    href=&quot;/static/3d3f867d6b3aababdacc19cd9cef770a/57dc1/image01.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACX0lEQVR42oWUa3OiMBSG+/9/ys5+2Nkv7ex03Fq19oKi2FWrIkpCCAkQriIg6Z6Vbq2OnZ5hmJCch3Py5oWL13Mh5dczEBcnz1VV7XbVyWRR5DD/Nex5nm00kjTJskwIEYaRCARBc5OiHKpL+bGFA1xPup47fb6ZjIez2cwXYRxvMDLxqqfP+5zzk/4/wFI6Do/jBGGHOtwkDCjGOKVuIFxjOZ1OeiII86I4A+d5YawQ8PpyhS0apRvPE2vDUNWeZSHhhw5jSk9DmLzv/2jPhFCb0MFwrC9WTpRsK+n7oT7TXIZFEPvJVhuNx5N5UZan8DbfCQdxYg61aZpusu3WsWlVlFCHcQ9bdpzlmDCM7TOVKymhW0rrZQkZzcurp1Yblmybce5bGI+UnyBKLdAR7LkcmUvIoxRkS7NsG0RxEAavRZSkGxNZnLkIrcv/PR/gsqwsvHDw0LERyGtZti8iOOQojMh6SWwHYJt53BXnTRKFfInmf557NkFrZOmLheeF3PUNk8AReCJgrg/tfOqwvJKUrLCI1ZGmKp3ZywTcQr0ATmG1xlEUf2pPuXcfDNJNzhllfjRdGIaxIsTp3CmMue86na9c7aPOgDpBECVJChufL4zaWFIemfsAg4z1AtyL4m0M7/oo7/m2Ien+/uny6rrV7l79ajRvO7etu+tGUx1oT0q/1eq2Ow83zfa37z8Gw9EpDHXmC73xu3XT7MA1fpk32w/dx55umI/KoPOg9FWt1x/CG1VV+/R7fjN5kJOw9NPK8nMaFjzZyXO/kiO192LJvXX3yv8DakZW8hDv8F8AbG6PefnmEwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 113.29113924050634%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAADyElEQVR42q1VaXPTVhT1//8J7bB8aAmdQEIChSYzbShJIE4x8b5EsmRZ+75YlrXYOr16jgFnoV+qGc2Tnq7vO/ecc69ruOcqy3Jrvf1tVeLBq3Z7I54vYBsjFHnC3pfLJYpiydbVaoUgCGGoItwoQEbvDyZcoymh6R641lPIYgOqZsK0bNoz6VmHZXtQFQ6GMkJn8BnhIr1TSe12mX4Q4KpxCnkqov7pA8bjCVwvQJIs4Loe+OsOdLkNYVTHmOeR59nW778mXNBp06mKOJ5DNxyI4hR+FEOkPYGeNd0gtC6hdOA6BgSBR6d5yp59P2J0sISbzIZhgeMEeIRGpxI1jQLDGcJoxko2NQmDwRDtTg+O61NyB7al4arZRavdh+N42whTQiiIMmTVYAEfLz5jQsjM2RxJlsOiBN1uB93WB0wlDkEYI04ycLyI0/NL8GOJCVf7Xl1lKsD3XFy1+hQwQUiKmnGMpChQUkmO68J3dUSzCJZpwwhiGF6IVquH4bVAfBbfSrbdAJHJw1QlfGkNoKr6mts0JSE45Gl2Y6ECY1FilATEsWn7GHEiwjBiwtQ2isdxQh8kIjjEcMQTipjtZ5To7fMXON7dg0XCVFelvEV2UjQPvS/vMGgfI82/s01RrEgInZQb08kmFEJXiZESuizP4ZGVbBIiXVSHFITKZb50qCpVEaGpE2yAsYSua0Oe9GAZVLKp08kGs0clREClVKtL1ogcGb7OU/IQgyHHkgqiQrH+jRc3CR0NktDBlP+IyYRnluBJPVWz4PkBoY0wIwpESQVHapqmBVnRYVMVBolT8brVKeVqSaRa6EsSdck5oR3A8WfodJoYDUfM0IpK7WeYzJMMsecz71YV3OnlSp2KgnRJXCoCROKTdxc4OX5Jlmhi0O+i2fgbE+ogh9pPJ56vqQls4vIH06bEhtkZKW6YJiYCB9kK0Lseo9lswaHh0O0NcVFvUMkalj+aNvfNwkWSMEU1cy1QZaU+ifHpooH5PLl3Zm5Nm6rB12v5NTDLMjYwYkpQkIWqqRORGFXs+l7H3pk2/9fFEhpkg/fvz1lPVnY5p2b/4+gvnJ3VWU9fXl4Rhz3ib0QTh2Me7PVHODk5Q7PVZXsVJd8Skvy7u4d49OhXPHv2Ej/9/AsODt9h78Uhjo/+xJvXR6hf/IPd317h4OB37O+9wf6rt3j8ZAc7z/fx5OkO2u3eA6LcrPN8BdnPYYQ5ggXZKUhhz3LY8QrefPXff1IbUdaTt8Q8LaC4pHKwQDDPYIUpu01/AW+WMYux+HJblH8Bq6HI1B7rkdwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;image01&quot;
         title=&quot;&quot;
-        src=&quot;/static/119554c2dd2e109b3c2c902fab1d1420/f058b/image01.png&quot;
-        srcset=&quot;/static/119554c2dd2e109b3c2c902fab1d1420/c26ae/image01.png 158w,
-/static/119554c2dd2e109b3c2c902fab1d1420/6bdcf/image01.png 315w,
-/static/119554c2dd2e109b3c2c902fab1d1420/f058b/image01.png 630w,
-/static/119554c2dd2e109b3c2c902fab1d1420/40601/image01.png 945w,
-/static/119554c2dd2e109b3c2c902fab1d1420/302a4/image01.png 1080w&quot;
+        src=&quot;/static/3d3f867d6b3aababdacc19cd9cef770a/f058b/image01.png&quot;
+        srcset=&quot;/static/3d3f867d6b3aababdacc19cd9cef770a/c26ae/image01.png 158w,
+/static/3d3f867d6b3aababdacc19cd9cef770a/6bdcf/image01.png 315w,
+/static/3d3f867d6b3aababdacc19cd9cef770a/f058b/image01.png 630w,
+/static/3d3f867d6b3aababdacc19cd9cef770a/57dc1/image01.png 718w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
