@@ -428,8 +428,8 @@ main ol.list li:first-child .post-list-item {
   margin-right: 0.625rem;
   border-radius: 0.25rem;
   border: 1px solid #fab8a1;
-  background-color: #f9f4f2;
-  color: #de4007;
+  background-color: #ffffee;
+  color: #f24506;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -543,7 +543,7 @@ main ol.list li:first-child .post-list-item {
   text-align: center;
   padding: 3.25rem 0;
   background-color: #f9f9f9;
-  color: #2c2a2a;
+  color: #100f0f;
   font-size: 1.25rem;
   position: absolute;
   width: 100vw;
