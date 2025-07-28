@@ -297,7 +297,7 @@ a:focus {
   margin-right: 2rem;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #2a2a2a; /* 진한 회색 또는 검정 */
+  color: #090909; /* 진한 회색 또는 검정 */
 }
 
 .menu a:last-child {
