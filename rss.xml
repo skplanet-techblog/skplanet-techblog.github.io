@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 28 Jul 2025 01:40:59 GMT</lastBuildDate><item><title><![CDATA[Figma MCP로 프론트엔드 컴포넌트 자동 생성하기]]></title><description><![CDATA[작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 새로운 기술을 습득하거나 코드를 리팩터링하는 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI를 활용할 수 있게 된 것 같습니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 28 Jul 2025 02:11:14 GMT</lastBuildDate><item><title><![CDATA[Figma MCP로 프론트엔드 컴포넌트 자동 생성하기]]></title><description><![CDATA[작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 새로운 기술을 습득하거나 코드를 리팩터링하는 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI를 활용할 수 있게 된 것 같습니다.
 AI의 활용 방법들 중 하나로, 이번 글에서는 Framelink…]]></description><link>https://techtopic.skplanet.com/figmamcp/</link><guid isPermaLink="false">https://techtopic.skplanet.com/figmamcp/</guid><dc:creator><![CDATA[chanmin2025]]></dc:creator><pubDate>Thu, 24 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;작년 이맘때까지만 해도 프론트엔드 개발자가 AI를 사용하는 용도는 &lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=165847&quot;&gt;새로운 기술을 습득하거나 코드를 리팩터링하는&lt;/a&gt; 등 프롬프트를 기반으로 하는 코드 생성 작업이 대부분이었던 것 같은데요, MCP와 코딩 에이전트의 등장 후로는 훨씬 더 다양한 방식으로 AI를 활용할 수 있게 된 것 같습니다.
 AI의 활용 방법들 중 하나로, 이번 글에서는 &lt;a href=&quot;https://github.com/GLips/Figma-Context-MCP&quot;&gt;Framelink Figma MCP&lt;/a&gt; 를 사용해 프론트엔드 개발자의 숙제 중 하나인 UI 컴포넌트를 효율적으로 개발하는 방법을 소개해보려 합니다.&lt;/p&gt;
 &lt;p&gt;(참고) 글을 쓰는 시점에 &lt;a href=&quot;https://help.figma.com/hc/ko/articles/32132100833559-Dev-Mode-MCP-%EC%84%9C%EB%B2%84-%EC%95%88%EB%82%B4%EC%84%9C&quot;&gt;Figma 공식 MCP&lt;/a&gt; 의 베타 버전이 공개되어 있기는 하나, 아직까지는 Framelink Figma MCP가 더 안정적으로 동작한다고 느껴져 Framelink Figma MCP를 다루었습니다.&lt;/p&gt;
@@ -15405,4 +15405,87 @@ iOS는 스와이핑 중에는 썸네일이 보이지 않고 검은 화면이 노
 &lt;h3&gt;마무리&lt;/h3&gt;
 &lt;p&gt;결과적으로는 화면이 깜박거리는 현상과 스와이핑 중 썸네일이 사라지는 두 현상 모두 &lt;code class=&quot;language-text&quot;&gt;loaded&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;moving&lt;/code&gt;의 상태 값, 그리고 이미지를 로드하는 위치, &lt;code class=&quot;language-text&quot;&gt;object-fit&lt;/code&gt; 등의 조합으로 해결할 수 있는 문제였습니다.&lt;/p&gt;
 &lt;p&gt;이번 경험을 통해 문제 해결에 접근하는 시야를 좀더 넓게 가질 수 있었고, 성능 최적화라는 목표를 향해 한 걸음씩 나아가며 이슈를 해결하는 여러 가지 방법을 터득할 수 있었습니다.&lt;/p&gt;
-&lt;p&gt;그리고 이러한 고민과 노력의 과정이 결국은 사용자에게 더 나은 경험을 제공하고, 서비스의 품질을 높이는 데 많은 기여를 한다고 생각합니다. 😊&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;그리고 이러한 고민과 노력의 과정이 결국은 사용자에게 더 나은 경험을 제공하고, 서비스의 품질을 높이는 데 많은 기여를 한다고 생각합니다. 😊&lt;/p&gt;</content:encoded></item><item><title><![CDATA[SK플래닛 Tech Topic 기술 블로그를 소개합니다!]]></title><description><![CDATA[안녕하세요, 테크편집부입니다! 
+2023년 1월, SK플래닛의 기술 블로그를 새롭게 오픈하였습니다. 이름: TECH TOPIC 링크: https://techtopic.skplanet.com/ 한줄설명: "SK플래닛 구성원의 '기술 활동'을 공유합니다."   여기서 '기술 활동' 은 중의적인 의미를 가지는데요. (1) SK…]]></description><link>https://techtopic.skplanet.com/skp-techblog-intro/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-techblog-intro/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Mon, 02 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 테크편집부입니다! &lt;br/&gt;
+2023년 1월, SK플래닛의 &lt;strong&gt;기술 블로그&lt;/strong&gt;를 새롭게 오픈하였습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이름: &lt;strong&gt;TECH TOPIC&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;링크: &lt;strong&gt;&lt;a href=&quot;https://techtopic.skplanet.com/&quot;&gt;https://techtopic.skplanet.com/&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;한줄설명: &quot;SK플래닛 구성원의 &apos;기술 활동&apos;을 공유합니다.&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e4c0a2178bef7afeeab3595fdd108bfd/58354/image01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 86.0759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACHklEQVR42q1T2Y7aQBDk/38o4S3KRiTKbsQKca7DEbANGNtg8AG+Kl0Nk3gjtFGkjFR0M7Z7uqtqWpBVTl+AOEQcx/B9H57nIU1TvLXyPMf5fNZYFAWOx6N+36qLCrklBSMHjr1Cv9/H83NXi3LVVQUI6rqWUKEsS90PwxDb7VYPzrIMrutis9mghf+8Wjz129MT2u/fodvtYjQaod1uYzyZoByOkH74iOrzF/yYz/H18RGfHh7Q6XQwl/86gXRuItHiz054c9YbjeTCdRzESYJa8kLyWsY/HA46Isciz+TrbodXhjOgEJRCsJBMnkj4+XL595HZYeK5SAVx4CGU09nBer3GbrdDIp2cbgpGUaSK/pXD8YsFazpT3izLQq/Xw0Ty8XiMwWCA4XCoOff3+72qzcIG+W0q5ZAPDTc74Ypd0TLcM/v8TwRBoNERXs0EtAtzYyEt6HnXjx3bgS8v0WP82EQ+MwW5x0IUibkBKWGtK4dphlTMGSepnJK9skPTEn+CBQzM+zeVzwJR9JKiLn5fqYuo3Mybq+m/Vz6UFFW4QRUFqLZL5JGM5AfqRwrAcU1url6z+7s+dNw1prM5vgsmovhisdAbQ4UZZ7OZgg7gXTfd3it8vSkUQginIPsb6UZZepLdURD/5lHmTWGYEzxIC9IGq9VKo23bv2IT3KNFlsul2uR0OqnRCRY2pteClDyRu8tIEZrq3cNbHP4EuZUYi9GDX34AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e4c0a2178bef7afeeab3595fdd108bfd/f058b/image01.png&quot;
+        srcset=&quot;/static/e4c0a2178bef7afeeab3595fdd108bfd/c26ae/image01.png 158w,
+/static/e4c0a2178bef7afeeab3595fdd108bfd/6bdcf/image01.png 315w,
+/static/e4c0a2178bef7afeeab3595fdd108bfd/f058b/image01.png 630w,
+/static/e4c0a2178bef7afeeab3595fdd108bfd/40601/image01.png 945w,
+/static/e4c0a2178bef7afeeab3595fdd108bfd/78612/image01.png 1260w,
+/static/e4c0a2178bef7afeeab3595fdd108bfd/58354/image01.png 1396w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt; &lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;여기서 &lt;strong&gt;&apos;기술 활동&apos;&lt;/strong&gt; 은 중의적인 의미를 가지는데요.&lt;/p&gt;
+&lt;p&gt;(1) SK플래닛 서비스의 개발 사례 및 경험을 공유하는 &lt;strong&gt;기술(=技術)활동&lt;/strong&gt; &lt;br/&gt;
+: 코드 구현, 개발 역량, 서비스 운영 경험, 기술 정보 등을 공유하는 활동입니다.&lt;/p&gt;
+&lt;p&gt;(2) Tech Writing을 통해 퍼스널 브랜딩을 지원하는 &lt;strong&gt;기술(=記述)활동&lt;/strong&gt; &lt;br/&gt;
+: 기록을 통한 아카이빙, 공유 및 개발자 브랜딩 활동까지 지원하는 개발 문화 활동입니다.&lt;/p&gt;
+&lt;p&gt;많은 응원과 조언 부탁드리겠습니다. 감사합니다.
+&lt;br/&gt;&lt;br/&gt;
+(참고) TECH TOPIC 이전에 SK플래닛은 &apos;README 기술 블로그&apos;를 2018년까지 운영하였으며, 현재는 아카이빙되어 있습니다. 관련 내용을 참조하시려면 여기를 참조하세요 &lt;br/&gt;
+=&gt; &lt;a href=&quot;https://web.archive.org/web/20190116065552/http://readme.skplanet.com/&quot;&gt;README 블로그 아카이브 접속하기&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/680c02c363ba2d73bd03d7347d703b6e/0f96c/image02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35.44303797468354%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABcklEQVR42m2QW0/bQBCF/eORCrTP9D/0oVWf+hgS9QFIVJErJAZjQxRf1pf4ljhx7K+7a0RfOtLRnNk5M5o9xrqomTyazGZTojhBRdO0tC0fOMn6eGp179vojR9jl+wAMzfHFAWirJluCvZ1i5Eeat48H8/zqPZ7/hdSh5zR8fN+w69FQHkCO95za0UsxY6bl4SqbjB6Vs7X4Zaru4TLgc9F3+P82tX88yDgsu9z3tv8e++/a2T+8lvw6dqX2oCzns/3eYqxtF4ZDMfcTZf8ebBY2C6j+RPDmclwbnK/srmdLDVGiycm5ivjlcOj4yKKI2FxIJLne9KDSHIjFAHP5opDpb7bdmiVh43MjXL03czmw9S27fzcyRnLFeyOXS07GEVREoYhcRzj+Z2Xvsyuq3KguZB9pQkCgRBCa5PtlmNds4lS4qzsDpBhbGVjvV7LBa6GGlBvSZKQpqnmCornea6RZRllWVJVFY5t4zi21quFfwFvLAbyRBLQgAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/680c02c363ba2d73bd03d7347d703b6e/f058b/image02.png&quot;
+        srcset=&quot;/static/680c02c363ba2d73bd03d7347d703b6e/c26ae/image02.png 158w,
+/static/680c02c363ba2d73bd03d7347d703b6e/6bdcf/image02.png 315w,
+/static/680c02c363ba2d73bd03d7347d703b6e/f058b/image02.png 630w,
+/static/680c02c363ba2d73bd03d7347d703b6e/40601/image02.png 945w,
+/static/680c02c363ba2d73bd03d7347d703b6e/78612/image02.png 1260w,
+/static/680c02c363ba2d73bd03d7347d703b6e/0f96c/image02.png 2248w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
