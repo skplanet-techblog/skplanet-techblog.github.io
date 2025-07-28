@@ -6,8 +6,7 @@ author: "joeoriginal"
 description: "Microsoft-GitHub UNIVERSE24 Recap Seoul Review :) "
 ---
 
-안녕하세요, SK플래닛 Joe입니다. </br>
-2024년 12월 6일 서울 광화문에서 있었던 'Microsoft-GitHub UNIVERSE24 Recap Seoul'에 발표자로 참여한 후기를 간략히 공유해 드립니다. 이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다.  
+이 글에서는 2024년 12월 6일 서울 광화문에서 있었던 'Microsoft-GitHub UNIVERSE24 Recap Seoul'에 발표자로 참여한 후기를 간략히 공유해 드립니다. 이날 안과 바깥에서 모이셨던 모든 분들이 평화롭고 안전하게 귀가하셨길 진심으로 바랍니다.  
 
 Hi, this is Joe from SK Planet.</br>
 I’d like to briefly share my experience as a speaker at the 'Microsoft-GitHub UNIVERSE24 Recap Seoul' event held on December 6, 2024, in Gwanghwamun, Seoul. I sincerely hope that everyone who attended, both inside and outside the venue, returned home peacefully and safely that day.
