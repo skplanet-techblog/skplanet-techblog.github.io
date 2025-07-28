@@ -123,23 +123,3 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `)
 }
-// gatsby-node.js
-const fs = require("fs");
-const path = require("path");
-const glob = require("glob");
-
-exports.onPostBuild = async () => {
-  const files = glob.sync("public/**/*.html");
-
-  files.forEach(file => {
-    let content = fs.readFileSync(file, "utf8");
-
-    // 빈 class 속성을 가진 span 제거 또는 단순화
-    content = content.replace(/<span class="">(.*?)<\/span>/g, "$1");
-
-    fs.writeFileSync(file, content, "utf8");
-    console.log(`✔️ cleaned: ${file}`);
-  });
-
-  console.log("✅ 모든 HTML에서 <span class=''> 제거 완료");
-};

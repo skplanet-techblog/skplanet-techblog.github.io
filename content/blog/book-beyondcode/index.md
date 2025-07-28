@@ -177,4 +177,4 @@ description: "'코드너머' 독후감 작성한 썰 푼다(?)"
 * [SK플래닛 개발자들의 GitHub Copilot 활용기(AI-assisted Coding과 개발 생산성 향상 #2)](https://techtopic.skplanet.com/github-copilot/)
 * [실리콘밸리 개발자가 보는 AI 툴 및 개발방식의 변화(AI-assisted Coding과 개발 생산성 향상 #1)](https://techtopic.skplanet.com/genai-productivity/)
 * ['우리 회사 서비스 캐릭터들이 AI를 만나면 어떤 아이들이 될까?' (SKP LLM 플레이그라운드 ＆ AI 프롬프톤 사례)](https://techtopic.skplanet.com/skp-prompthon24/)
-* [[GitHub Copilot] UNIVERSE24 리캡 서울 발표기](https://techtopic.skplanet.com/universerecapkr24/) 
+* [[GitHub Copilot] UNIVERSE24 리캡 서울 발표기](https://techtopic.skplanet.com/github-copilot-universee24seoul/) 
