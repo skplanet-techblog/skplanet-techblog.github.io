@@ -48,7 +48,7 @@ const Seo = ({ description, title, children }) => {
       />
       <meta
         name="viewport"
-        content="initial-scale=1.0, width=device-width, viewport-fit=cover"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover"
       />
       <link
         rel="preload stylesheet"
