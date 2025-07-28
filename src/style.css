@@ -442,7 +442,7 @@ main ol.list li:first-child .post-list-item {
 */
 
 .post-list-item .tags span.gray {
-  background-color: #ffffee;  /* 더 짙은 회색 */
+  background-color: #ffffff;  /* 더 짙은 회색 */
   color: #151313;             /* 충분한 대비 확보 */
   font-weight: 600;
 }
