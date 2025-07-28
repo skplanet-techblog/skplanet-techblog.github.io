@@ -1,5 +1,5 @@
 ---
-title: "Curosr와 Figma MCP로 프론트엔드 컴포넌트 자동 생성하기"
+title: "Figma MCP로 프론트엔드 컴포넌트 자동 생성하기"
 date: "2025-07-24"
 tags: ["Frontend", "AI", "MCP", "Figma MCP", "Cursor"]
 author: "chanmin2025"
