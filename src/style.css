@@ -429,15 +429,22 @@ main ol.list li:first-child .post-list-item {
   border-radius: 0.25rem;
   border: 1px solid #fbb196;
   background-color: #fff3ee;
-  color: #ff875b;
+  color: #f75418;
   font-size: 0.875rem;
   font-weight: 600;
 }
-
+/*
 .post-list-item .tags span.gray {
   border: 1px solid #c3c3c3;
   background-color: #f6f6f6;
   color: #7d7d7d;
+}
+*/
+
+.post-list-item .tags span.gray {
+  background-color: #e0e0e0;  /* 더 짙은 회색 */
+  color: #3f3c3c;             /* 충분한 대비 확보 */
+  font-weight: 600;
 }
 
 .post-list-item small {
