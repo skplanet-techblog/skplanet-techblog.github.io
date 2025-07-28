@@ -7,6 +7,19 @@
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: `en` })
-}
+// gatsby-ssr.js
+const React = require("react");
+
+exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
+  // HTML lang 속성 설정
+  setHtmlAttributes({ lang: `en` });
+
+  // meta viewport 삽입 (접근성 기준 준수)
+  setHeadComponents([
+    <meta
+      key="viewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />,
+  ]);
+};

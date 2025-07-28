@@ -429,7 +429,7 @@ main ol.list li:first-child .post-list-item {
   border-radius: 0.25rem;
   border: 1px solid #fbb196;
   background-color: #fff3ee;
-  color: #f75418;
+  color: #f84c0d;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -443,14 +443,14 @@ main ol.list li:first-child .post-list-item {
 
 .post-list-item .tags span.gray {
   background-color: #e0e0e0;  /* 더 짙은 회색 */
-  color: #3f3c3c;             /* 충분한 대비 확보 */
+  color: #151313;             /* 충분한 대비 확보 */
   font-weight: 600;
 }
 
 .post-list-item small {
   font-size: 1.125rem;
   font-weight: 400;
-  color: #9a9a9a;
+  color: #585656;
 }
 
 .header-link-home {
@@ -543,7 +543,7 @@ main ol.list li:first-child .post-list-item {
   text-align: center;
   padding: 3.25rem 0;
   background-color: #f9f9f9;
-  color: #9d9d9d;
+  color: #2c2a2a;
   font-size: 1.25rem;
   position: absolute;
   width: 100vw;
