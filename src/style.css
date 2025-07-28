@@ -427,9 +427,9 @@ main ol.list li:first-child .post-list-item {
   padding: 0.25rem 0.625rem;
   margin-right: 0.625rem;
   border-radius: 0.25rem;
-  border: 1px solid #fbb196;
-  background-color: #fff3ee;
-  color: #f84c0d;
+  border: 1px solid #fab8a1;
+  background-color: #f9f4f2;
+  color: #de4007;
   font-size: 0.875rem;
   font-weight: 600;
 }
