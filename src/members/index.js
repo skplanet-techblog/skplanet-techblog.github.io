@@ -17,6 +17,7 @@ import joe from "./images/joe.png";
 import hanjh from "./images/hanjh.png"; 
 import sunny from "./images/sunny.png"; 
 import wonjs from "./images/wonjs.jpg"; 
+import wonjs2025 from "./images/wonjs2025.jpg"; 
 import junghochoi from "./images/junghochoi.jpeg"
 import keumbaek from "./images/keumbaek.png"
 import chanmin from "./images/chanmin.jpeg"
@@ -150,6 +151,12 @@ export const MEMBERS = {
     team: "Web3개발팀",
     description: "새로운 도전과 시도를 통해 끊임없이 성장하고자 하는 개발자입니다.",
     thumbnail: wonjs,
+  },
+  wonjs2025: {
+    name: "원준수",
+    team: "솔루션개발1팀",
+    description: "새로운 도전과 시도를 통해 끊임없이 성장하고자 하는 개발자입니다.",
+    thumbnail: wonjs2025,
   },
   junghochoi: {
     name: "최중호",
