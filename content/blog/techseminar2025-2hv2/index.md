@@ -143,7 +143,6 @@ Lab 2 : MongoDB Vector Search (15:40-17:20)
 * 삼성 SDS의 REAL SUMMIT 2025: https://www.realsummit2025.com/ (9/11, 코엑스)
 * Dell Technologies Forum: https://events.dell.com/event/edd57c8d-820b-4501-b95a-3a3055fedfb2/agenda (9/17, COEX)
 * Meta Connect 2025: https://www.meta.com/ko-kr/connect/ (9/17-18, Livestream)
-* if(kakaoAI) 2025 일정이 곧! 오픈될 예정입니다. 
 
 덧 2. 기타 행사 정보는 지난 링크를 참고하세요! https://techtopic.skplanet.com/techseminar2025-2h/
 <br/> 9월 중에 한번 더 업데이트하겠습니다. 
