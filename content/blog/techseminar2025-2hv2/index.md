@@ -9,15 +9,15 @@ description: "2025년 8월 말~9월 기술 세미나 일정 공유(업데이트)
 안녕하세요, 테크편집부입니다. 이번에도 저희 업무에 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 정리하였습니다. <br/>
 이번 페이지에는 8월 말-9월 중에 열리는 좋은 행사들이지만, 다른 블로그에는 잘 알려지지 않은 행사들 위주로 정리해 보았사오니 일정에 참고하시기 바랍니다(아래는 행사명 요약입니다).
 
-* 돕는 AI 컨퍼런스 2025 (카카오임팩트)
-* XRPL Korea: Road to Unicorn (9월 해커톤 일정 포함)
-* 모두연 10주년 기념 발표 
-* 9월 데보션 테크 데이: Agent와 자동화 기술
-* MongoDB.local Seoul 2025
-* SNOWFLAKE WORLD TOUR SEOUL
-* 실리콘밸리의 한국인 2025
-* 한빛 DEVGROUND 2025 (w/Upstage)
-* AWSKRUG 데이터모임: 2025년 9월 (Claude Code 사례)
+- (8/25-26 월화) 돕는 AI 컨퍼런스 2025 (카카오임팩트)
+- (8/27 수) XRPL Korea: Road to Unicorn (9월 해커톤 일정 포함)
+- (8/30 토) 모두연 10주년 기념 발표
+- (9/01 월) 9월 데보션 테크 데이: Agent와 자동화 기술
+- (9/03 수) MongoDB.local Seoul 2025
+- (9/09 화) SNOWFLAKE WORLD TOUR SEOUL
+- (9/11 목) 실리콘밸리의 한국인 2025
+- (9/18 목) 한빛 DEVGROUND 2025 (w/Upstage)
+- (9/18 목) AWSKRUG 데이터모임: 2025년 9월 (Claude Code 사례)
 
 덧. 지난번에 공유드린 행사 일정은 여기를 참고하세요! (9월에 한번 더 업데이트하겠습니다)
 https://techtopic.skplanet.com/techseminar2025-2h/
