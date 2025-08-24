@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Aug 2025 23:29:16 GMT</lastBuildDate><item><title><![CDATA[2025년 8월 말~9월 기술 세미나 일정 공유(추가)]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 이번에도 저희 업무에 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 정리하였습니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Aug 2025 23:57:56 GMT</lastBuildDate><item><title><![CDATA[2025년 8월 말~9월 국내 기술세미나 일정 공유(추가)]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 이번에도 저희 업무에 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 정리하였습니다. 
 이번 페이지에는 8월 말-…]]></description><link>https://techtopic.skplanet.com/techseminar2025-2hv2/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techseminar2025-2hv2/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 테크편집부입니다. 이번에도 저희 업무에 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 정리하였습니다. &lt;br/&gt;
-이번 페이지에는 8월 말-9월 중에 열리는 좋은 행사들이지만, 다른 블로그에는 잘 알려지지 않은 행사들 위주로 정리해 보았사오니 일정에 참고하시기 바랍니다.&lt;/p&gt;
+이번 페이지에는 &lt;strong&gt;8월 말-9월 중에 열리는&lt;/strong&gt; 좋은 행사들이지만, 다른 블로그에는 잘 알려지지 않은 행사들 위주로 정리해 보았사오니 일정에 참고하시기 바랍니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 544px; &quot;
@@ -34,10 +34,10 @@
 (행사 예시: SK데보션 테크 데이-AI와 함께 일하는 시대, 에이전트와 자동화 기술)&lt;/p&gt;
 &lt;p&gt;아래 행사명을 요약하였습니다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(8/25-26 월화) 돕는 AI 컨퍼런스 2025 (카카오임팩트)&lt;/li&gt;
+&lt;li&gt;(8/25-26 월-화) 돕는 AI 컨퍼런스 2025 (카카오임팩트)&lt;/li&gt;
 &lt;li&gt;(8/27 수) XRPL Korea: Road to Unicorn (9월 해커톤 일정 포함)&lt;/li&gt;
-&lt;li&gt;(8/30 토) 모두연 10주년 기념 발표&lt;/li&gt;
-&lt;li&gt;(9/01 월) 9월 데보션 테크 데이: Agent와 자동화 기술&lt;/li&gt;
+&lt;li&gt;(8/30 토) [모두팝] 10주년 회사 대표에게 묻다&lt;/li&gt;
+&lt;li&gt;(9/01 월) 9월 데보션 테크 데이: AI와 함께 일하는 시대, 에이전트와 자동화 기술&lt;/li&gt;
 &lt;li&gt;(9/03 수) MongoDB.local Seoul 2025&lt;/li&gt;
 &lt;li&gt;(9/09 화) SNOWFLAKE WORLD TOUR SEOUL&lt;/li&gt;
 &lt;li&gt;(9/11 목) 실리콘밸리의 한국인 2025&lt;/li&gt;
@@ -323,6 +323,40 @@ Lab 2 : MongoDB Vector Search (15:40-17:20)
 &lt;li&gt;&lt;a href=&quot;https://www.snowflake.com/ko/world-tour/seoul/&quot;&gt;https://www.snowflake.com/ko/world-tour/seoul/&lt;/a&gt; (무료 신청) &lt;/li&gt;
 &lt;li&gt;데이터와 앱 그리고 AI로 여는 새로운 미래! 오는 9월 9일(화), 서울에서 열리는 Snowflake World Tour에서 데이터와 AI 로 비즈니스 혁신을 이끄는 Snowflake의 최신 기술을 만나보세요.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4273f3954330560bc85ac7778564c5c2/1b42c/snowmorning.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 101.26582278481011%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBA//EABYBAQEBAAAAAAAAAAAAAAAAAAIEA//aAAwDAQACEAMQAAABumUwgs46BoBYf//EABkQAQADAQEAAAAAAAAAAAAAAAEAETECEP/aAAgBAQABBQKyWeFsdnK3rP/EABgRAAIDAAAAAAAAAAAAAAAAAAMQESEy/9oACAEDAQE/AYpH2v/EABcRAQADAAAAAAAAAAAAAAAAABACMUH/2gAIAQIBAT8B0jR//8QAGRAAAQUAAAAAAAAAAAAAAAAAMQAQICGh/9oACAEBAAY/AhqDVL//xAAcEAEAAQQDAAAAAAAAAAAAAAABABARIUExUdH/2gAIAQEAAT8hhFn3QInLMCMWz1QWDDbuJP/aAAwDAQACAAMAAAAQaz9C/8QAGhEBAAEFAAAAAAAAAAAAAAAAAQAQETFhsf/aAAgBAwEBPxBRc8piNEZ//8QAFxEBAAMAAAAAAAAAAAAAAAAAAQAQIf/aAAgBAgEBPxATFhP/xAAbEAEAAwEAAwAAAAAAAAAAAAABABExUSFhcf/aAAgBAQABPxBHUvbb2M0+XjStFHIaWR5Mo2BCCrp6hkGilKlPdmpq6XWAVU//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;snowmorning&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4273f3954330560bc85ac7778564c5c2/828fb/snowmorning.jpg&quot;
+        srcset=&quot;/static/4273f3954330560bc85ac7778564c5c2/ff44c/snowmorning.jpg 158w,
+/static/4273f3954330560bc85ac7778564c5c2/a6688/snowmorning.jpg 315w,
+/static/4273f3954330560bc85ac7778564c5c2/828fb/snowmorning.jpg 630w,
+/static/4273f3954330560bc85ac7778564c5c2/0ede0/snowmorning.jpg 945w,
+/static/4273f3954330560bc85ac7778564c5c2/1b42c/snowmorning.jpg 1005w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt; &lt;br/&gt;
+(모닝 Dev Talk 세션 예시입니다)
+&lt;br/&gt;&lt;/p&gt;
 &lt;h2&gt;실리콘밸리의 한국인 2025 (스타트업얼라이언스)&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
