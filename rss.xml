@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Aug 2025 23:21:39 GMT</lastBuildDate><item><title><![CDATA[2025년 8월 말~9월 기술 세미나 일정 공유(추가)]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 이번에도 저희 업무에 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 정리하였습니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Aug 2025 23:25:27 GMT</lastBuildDate><item><title><![CDATA[2025년 8월 말~9월 기술 세미나 일정 공유(추가)]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 이번에도 저희 업무에 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 정리하였습니다. 
 이번 페이지에는 8월 말-…]]></description><link>https://techtopic.skplanet.com/techseminar2025-2hv2/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techseminar2025-2hv2/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 테크편집부입니다. 이번에도 저희 업무에 활용할 겸 최신 정보를 정리하면서, 개발자 여러분들도 함께 참고하실 수 있도록 현재까지 공개된 주요 기술 행사 일정들을 정리하였습니다. &lt;br/&gt;
 이번 페이지에는 8월 말-9월 중에 열리는 좋은 행사들이지만, 다른 블로그에는 잘 알려지지 않은 행사들 위주로 정리해 보았사오니 일정에 참고하시기 바랍니다(아래는 행사명 요약입니다).&lt;/p&gt;
 &lt;ul&gt;
@@ -428,8 +428,8 @@ Lab 2 : MongoDB Vector Search (15:40-17:20)
 &lt;li&gt;11월: SK AI SUMMIT 2025 | AI SUMMIT SEOUL &amp;#x26; EXPO 2025&lt;/li&gt;
 &lt;li&gt;12월: AWS re:Invent 2025&lt;/li&gt;
 &lt;li&gt;미공개: 네이버 DAN25 | if(kakaoAI) 2025 | 우아콘 2025 | SDC Korea 2025 | 모두콘 2025 등&lt;/li&gt;
+&lt;li&gt;&apos;26.1Q: CES26 | MWC26 | (NVIDIA GTC26)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&apos;26.1Q: CES26 | MWC26 | (NVIDIA GTC26)&lt;/p&gt;
 &lt;h1&gt;마무리하며&lt;/h1&gt;
 &lt;p&gt;아직 포스팅 시점에서 미확정 행사도 있고 &apos;모든&apos; 행사를 담거나 완전한 자동화가 조금 어려워서, 큰 행사와 작은 밋업을 포함, 당사와 연관성이 많은 행사의 &lt;strong&gt;소개 및 안내&lt;/strong&gt;를 겸하는 형식으로 조금씩 &lt;strong&gt;추가&lt;/strong&gt;해 나가고 있습니다 - 조금 더 실험적으로 진행하면서 유익한 정보를 제공해 보도록 하겠습니다.&lt;/p&gt;
 &lt;p&gt;읽어 주셔서 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ChatGPT 질문 내역 바로보기 (익스텐션 개발기)]]></title><description><![CDATA[안녕하세요. SK플래닛에서 Web3 서비스의 백엔드를 담당하고 있는 원준수라고 합니다. 
