@@ -152,7 +152,7 @@ Lab 2 : MongoDB Vector Search (15:40-17:20)
 * 11월: SK AI SUMMIT 2025 | AI SUMMIT SEOUL & EXPO 2025 
 * 12월: AWS re:Invent 2025 
 * 미공개: 네이버 DAN25 | if(kakaoAI) 2025 | 우아콘 2025 | SDC Korea 2025 | 모두콘 2025 등
-'26.1Q: CES26 | MWC26 | (NVIDIA GTC26)
+* '26.1Q: CES26 | MWC26 | (NVIDIA GTC26)
 
 
 
