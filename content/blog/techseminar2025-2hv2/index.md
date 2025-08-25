@@ -67,7 +67,7 @@ https://techtopic.skplanet.com/techseminar2025-2h/
 
 # [2025년 9월] 
 
-## 제 9회 SK데보션 테크 데이-AI와 함께 일하는 시대, 에이전트와 자동화 기술 (SKT)
+## 제 9회 SK데보션 테크 데이-AI와 함께 일하는 시대, 에이전트와 자동화 기술 (SKT & AWS)
 
 ![0901](./0901.png)
 
@@ -75,8 +75,7 @@ https://techtopic.skplanet.com/techseminar2025-2h/
 * 일시: 9/1(월),  13:30 ~ 17:40
 * 장소: 을지로 SKT타워 4층 SUPEX홀
 * https://devocean.sk.com/events/view.do?id=210 (무료 사전등록)
-* 국내 최고의 기술 블로그와 커뮤니티를 지향하는 SK데보션의 테크(AI)세미나(AWS와 함께 합니다) - AWS와 함께하는 생성형 AI 기반 코딩부터 에이전트 개발, 배포까지 <br/>
-(SKT와 AWS 엔지니어의 실제 사례 발표로 진행됩니다) <br/>
+* 국내 최고의 기술 블로그와 커뮤니티를 지향하는 SK데보션의 테크(AI)세미나(AWS와 함께 합니다) - AWS와 함께하는 생성형 AI 기반 코딩부터 에이전트 개발, 배포까지(SKT와 AWS 엔지니어의 실제 사례 발표로 진행됩니다) <br/>
 + 참여자 전원에게 AWS 굿즈(가방)를 드린다고 합니다 : ) <br/>
 ![0901-goods](./0901-goods.jpeg)
 
