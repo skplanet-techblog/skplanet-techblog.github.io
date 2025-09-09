@@ -27,7 +27,8 @@ import techeditorial from "./images/techeditorial.png"
 import aieditorial from "./images/aieditorial.png"
 import shinys from "./images/shinys.png";
 import chanmin2025 from "./images/chanmin.jpeg"
-import joeoriginal from "./images/joeoriginal.jpeg"
+import joeoriginal from "./images/joeoriginal.jpeg";
+import leesh from "./images/leesh.jpeg"
 
 
 
@@ -217,5 +218,11 @@ export const MEMBERS = {
     team: "Developer Advocate",
     description: "전자음악과 새로운 시도를 즐기는 DevRel | Tech Edu | TW | 바이브 개발자 1년차입니다",
     thumbnail: joeoriginal,
+  },
+    leesh: {
+    name: "이성현",
+    team: "데이터서비스개발팀",
+    description: "누구에게나 실질적인 도움이 되고 싶은 개발자입니다.",
+    thumbnail: leesh,
   },
 };
