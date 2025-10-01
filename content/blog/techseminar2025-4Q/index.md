@@ -1,5 +1,5 @@
 ---
-title: "2025 4분기 기술 컨퍼런스 & SK AI SUMMIT 2025 & 해커톤 일정" 
+title: "2025 4분기 기술 컨퍼런스 && SK AI SUMMIT 2025 && 해커톤 일정" 
 date: "2025-10-01"
 tags: ["TechCon", "주요IT기업", "기술세미나","기술컨퍼런스", "SK AI SUMMIT"]
 author: "techeditorial"
