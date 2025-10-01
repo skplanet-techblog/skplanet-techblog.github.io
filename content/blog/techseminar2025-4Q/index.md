@@ -140,9 +140,9 @@ description: "SK AI SUMMIT 2025 및 4분기 기술 컨퍼런스 일정을 공유
 
 # [2025년 12월]
 
-### AWS re:Invent 2025 
+## AWS re:Invent 2025 
 
-![image_reinvent25.png](./image_reinvent25.png.png)
+![image_awsreinvent25.png](./image_awsreinvent25.png)
 
 * 한줄설명: AWS(Amazon Web Services)의 대표적인 연례 기술 컨퍼런스 
 * 링크: https://reinvent.awsevents.com/
