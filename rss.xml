@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 01 Oct 2025 12:30:42 GMT</lastBuildDate><item><title><![CDATA[2025 4분기 기술 컨퍼런스 && SK AI SUMMIT 2025 && 해커톤 일정]]></title><description><![CDATA[안녕하세요 테크편집부입니다, 처음 이 글을 올린지도 시간이 꽤 흘렀네요!  
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 01 Oct 2025 12:34:18 GMT</lastBuildDate><item><title><![CDATA[2025 4분기 기술 컨퍼런스 && SK AI SUMMIT 2025 && 해커톤 일정]]></title><description><![CDATA[안녕하세요 테크편집부입니다, 처음 이 글을 올린지도 시간이 꽤 흘렀네요!  
 2025년 4분기 기술 컨퍼런스 정보를 10월 1일자 정보로 업데이트하였사오니 많은 참고 부탁드립니다.  (11월에 진행되는 SK AI SUMMIT 2025의 웹사이트 도 마침 오늘 오픈하여 관련 정보를 함께 공유드리며, 본 행사와 함께 Claude Code Builder…]]></description><link>https://techtopic.skplanet.com/techseminar2025-4Q/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techseminar2025-4Q/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 테크편집부입니다, 처음 이 글을 올린지도 시간이 꽤 흘렀네요!  &lt;br/&gt;
 &lt;strong&gt;2025년 4분기 기술 컨퍼런스 정보&lt;/strong&gt;를 10월 1일자 정보로 업데이트하였사오니 많은 참고 부탁드립니다. &lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;(11월에 진행되는 &lt;a href=&quot;https://www.skaisummit.com/&quot;&gt;&lt;strong&gt;SK AI SUMMIT 2025의 웹사이트&lt;/strong&gt;&lt;/a&gt; 도 마침 오늘 오픈하여 관련 정보를 함께 공유드리며, 본 행사와 함께 &lt;a href=&quot;https://devocean.sk.com/community/hackathonInfo.do&quot;&gt;&lt;strong&gt;Claude Code Builder Hackathon&lt;/strong&gt;&lt;/a&gt; 부대행사가 함께 열린다고 해요!)&lt;/p&gt;
@@ -526,8 +526,39 @@
 &lt;/ul&gt;
 &lt;br/&gt;
 &lt;h1&gt;[2025년 12월]&lt;/h1&gt;
-&lt;h3&gt;AWS re:Invent 2025 &lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;./image_reinvent25.png.png&quot; alt=&quot;image_reinvent25.png&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;AWS re:Invent 2025 &lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0b1a4a31dec9a30fbbfcf52241ba16a9/2eb79/image_awsreinvent25.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.43037974683544%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC90lEQVR42hXR61NbVRTG4X1yck9NwiUUaKFcGgmllZYSxgoTKGCk2otTW6agQ52O0opa0AHqVFoE5JyQlBASSGhKbgLB1OJQRvSTf9vP7Yd39v70zHrXEqr7Eq5TH9B04RqnvP2cla+nvheD7SJ2eyduWxceyxVqTT3UmwI0mXvxmvvwWa5yXqZdpkPGb+3jfWsAYWn7nkr/DO3XNVr6F/AGFvD4ZjlZM8m56id0ls3RY1lkSA1xW43whbrGuDHOY9MGs6ZNnstopjhR0xpJc1iCXSHqg3ECYwW67+Xpupnh1vAeo9f3ePBhiVHvHjdEji+VEhPiDTPiLQviLyLibzbEP+TEMSVxxJFywL+iiLB2LuPpjtBwNU5jT4LWy+v0+5P0eeMMnU5ytyrHbZHlvmGHb9USM6YD5i2H6Ma3xIyHbBkOKIgSr5VdjpUMwtahUeGXYHec97o36WiN0erS8DtXCFYkGKnJM2LPc18tMOl8zZznkJWGY1arjtiQ/5TtD16JHfaUHH+KLQlekODFCPXta/iaXxBo22DwbIKhMwk+qUxyz5Nl1J7lYVmR6eo3TJl/l7X3eW7YR1OKrEpsU64ko6QpioQEfTrlLWF8LVHa61bpaYjRWxtjoHqd4DsJ7rjTDFu3eeCSld1FJow7TEnkJ/Eb86KArmSJijRJkZToGsLRrFNVq9FYptPq0DhvXOKyusQVwxIDJp1BJcZNQ4oRNcOYIcu4muexrD9rLjBnyjEvJ9OVlJw0TkK8QFTU6TRUhmlxRuh0hRmsjvJRRYShE8t87FjkTnmIYfc2nzuzPDq5y2RNkRmZaWeep+48P5vTPJNVF5WohFcQdVU6ze4IPkeILgndOpfiRnOCgcoIAfMyw7W/SjTNp2qKh6d3mWraZ7qpyDeWV/zozDBt3+IHEeOJnO6poiEay3XedWq0nQhzyRqi4/+66jy95mcEXb9INEzQmuAzucu7jpfyQGnGbGm+dm4zLrGvlHUeiSgTSpjvxDL/AYq0rDCgItyOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image_awsreinvent25.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0b1a4a31dec9a30fbbfcf52241ba16a9/f058b/image_awsreinvent25.png&quot;
+        srcset=&quot;/static/0b1a4a31dec9a30fbbfcf52241ba16a9/c26ae/image_awsreinvent25.png 158w,
+/static/0b1a4a31dec9a30fbbfcf52241ba16a9/6bdcf/image_awsreinvent25.png 315w,
+/static/0b1a4a31dec9a30fbbfcf52241ba16a9/f058b/image_awsreinvent25.png 630w,
+/static/0b1a4a31dec9a30fbbfcf52241ba16a9/40601/image_awsreinvent25.png 945w,
+/static/0b1a4a31dec9a30fbbfcf52241ba16a9/2eb79/image_awsreinvent25.png 1256w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;한줄설명: AWS(Amazon Web Services)의 대표적인 연례 기술 컨퍼런스&lt;/li&gt;
 &lt;li&gt;링크: &lt;a href=&quot;https://reinvent.awsevents.com/&quot;&gt;https://reinvent.awsevents.com/&lt;/a&gt;&lt;/li&gt;
