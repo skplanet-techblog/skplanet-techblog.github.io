@@ -1,19 +1,23 @@
 ---
 title: "Chat DIC 프로젝트에서 AWS Bedrock Prompt Caching으로 성능 최적화하기"
 date: "2025-10-17"
-tags: ["AI", "Prompt Caching", "Chat DIC", "SQL Generation", "Optimization", "AWS", "Bedrock"]
+tags: ["AI", "Prompt Caching", "Chat DIC", "SQL Generation", "LLM", "Optimization", "AWS", "Bedrock"]
 author: "rhs"
 description: "사내 Chat DIC 프로젝트에서 AWS Bedrock을 이용해 DB 스키마 기반 쿼리 생성 서비스를 구현하며, Prompt Caching을 적용해 토큰 사용량과 응답 지연을 줄인 실제 사례를 소개합니다."
 ---
 
 이 글은 SK플래닛 사내 AI 프로젝트 **Chat DIC**에서 AWS Bedrock의 Prompt Caching 기능을 활용해 **쿼리 생성 속도와 비용을 최적화한 사례**를 다룹니다.
 
-## 1. 개요
+## 0. 개요
 
 AWS Bedrock의 **Prompt Caching**은 반복적으로 사용되는 프롬프트 문맥(예: system, tools 등)을 캐시에 저장하여 **모델 재계산을 줄이고 응답 지연 시간 및 토큰 비용을 절감**할 수 있는 기능입니다.  
 현재 Bedrock의 일부 모델에 대해 **Generally Available(GA)** 상태로 제공되고 있습니다.
 
----
+## 1. Chat DIC 이란?
+
+Data Infrastructure(DI)팀에서 개발한 사내 Text 기반의 SQL Assistant 및 Table 메타 검색 시스템입니다.
+향후 당사의 데이터 플랫폼인 DIC 내의 여러 서비스를 LLM을 기반으로 통합하고 사용자의 데이터 분석 진입장벽을 낮춰주며, 궁극적으로는 Agent 형태로 개발될 예정입니다. 
+현재 클로즈 알파 단계로 데이터 직군 구성원들이 사전 테스트 중이며. 10월 중 오픈 테스트를 진행할 예정입니다.
 
 ## 2. Prompt Caching이란?
 
