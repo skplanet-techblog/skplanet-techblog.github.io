@@ -1,9 +1,9 @@
 ---
-title: "휴먼의 AI ＇학습＇은 이렇게! #1 - OpenAI Academy 사이트 톺아보기" 
+title: "휴먼의 AI ＇학습＇은 이렇게! #1 - OpenAI Academy에서 배워보자~" 
 date: "2025-10-16"
-tags: ["AI", "Education", "OpenAI Academy", "Tech Learning"]
+tags: ["AI", "Education", "OpenAI", "OpenAI Academy", "GPT-5", "Agent"]
 author: "joeoriginal"
-description: "휴먼의 AI ＇학습＇은 이렇게! #1 - OpenAI Academy 사이트 톺아보기" 
+description: "이 글은 효과적인 AI 학습을 위한 주요 사이트를 소개하며, 그 첫번째로 OpenAI Academy 를 소개합니다" 
 ---
 
 안녕하세요, Joe! 입니다. <br/>
