@@ -29,6 +29,7 @@ import shinys from "./images/shinys.png";
 import chanmin2025 from "./images/chanmin.jpeg"
 import joeoriginal from "./images/joeoriginal.jpeg";
 import leesh from "./images/leesh.jpeg"
+import rhs from "./images/rhs.jpeg"
 
 
 
@@ -224,5 +225,11 @@ export const MEMBERS = {
     team: "데이터서비스개발팀",
     description: "누구에게나 실질적인 도움이 되고 싶은 개발자입니다.",
     thumbnail: leesh,
+  },
+    rhs: {
+    name: "류호성",
+    team: "Data Infrastructure팀", 
+    description: "새로운 트렌드에 뒤쳐지지 않기 위해 노력하는 개발자입니다.",
+    thumbnail: rhs,
   },
 };
