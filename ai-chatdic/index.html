@@ -15,9 +15,10 @@
 <p>Chat DIC는 사용자의 자연어 요청을 기반으로 사내 DB 스키마 정보를 Bedrock 모델에 전달해</p>
 <ul>
 <li>원하는 <strong>SQL 쿼리를 생성하거나</strong>,</li>
-<li>관련된 <strong>테이블과 필드를 탐색</strong>할 수 있도록 도와주는 시스템입니다.</li>
+<li>관련된 <strong>테이블과 필드를 탐색</strong></li>
 </ul>
-<p>하지만 이 과정에서 매번 전체 스키마 정보를 Prompt에 포함시키다 보니,
+<p>할 수 있도록 도와주는 시스템입니다.
+하지만 이 과정에서 매번 전체 스키마 정보를 Prompt에 포함시키다 보니,
 토큰 수가 급격히 증가하고 <strong>Throttling</strong> 및 <strong>응답 지연</strong> 문제가 발생했습니다.
 이 문제를 해결하기 위해 Bedrock의 <strong>Prompt Caching</strong> 기능을 도입했습니다.</p>
 <hr>
