@@ -8,158 +8,157 @@ description: "사내 Chat DIC 프로젝트에서 AWS Bedrock을 이용해 DB 스
 
 이 글은 SK플래닛 사내 AI 프로젝트 **Chat DIC**에서 AWS Bedrock의 Prompt Caching 기능을 활용해 **쿼리 생성 속도와 비용을 최적화한 사례**를 다룹니다.
 
-# 1. 개요
+## 1. 개요
 
-Chat DIC는 사용자의 자연어 요청을 기반으로 사내 DB 스키마 정보를 Bedrock 모델에 전달해
-
-- 원하는 **SQL 쿼리를 생성하거나**,
-- 관련된 **테이블과 필드를 탐색**
-
-할 수 있도록 도와주는 시스템입니다.
-하지만 이 과정에서 매번 전체 스키마 정보를 Prompt에 포함시키다 보니,
-토큰 수가 급격히 증가하고 **Throttling** 및 **응답 지연** 문제가 발생했습니다.
-이 문제를 해결하기 위해 Bedrock의 **Prompt Caching** 기능을 도입했습니다.
+AWS Bedrock의 **Prompt Caching**은 반복적으로 사용되는 프롬프트 문맥(예: system, tools 등)을 캐시에 저장하여 **모델 재계산을 줄이고 응답 지연 시간 및 토큰 비용을 절감**할 수 있는 기능입니다.  
+현재 Bedrock의 일부 모델에 대해 **Generally Available(GA)** 상태로 제공되고 있습니다.
 
 ---
 
-# 2. Prompt Caching이란?
+## 2. Prompt Caching이란?
 
-Prompt Caching은 반복적으로 사용되는 프롬프트 문맥(예: system, tools 등)을 캐시에 저장하여
-**모델 재계산을 줄이고**, **응답 지연 시간과 토큰 비용을 절감**할 수 있는 Bedrock의 기능입니다.
+Prompt Caching은 대형 언어 모델(LLM)이 동일한 프롬프트 문맥을 여러 번 계산하지 않도록 하는 기능입니다.  
+이를 통해 **지연 시간 단축**과 **토큰 비용 절감**이 가능합니다.
 
-### 주요 효과
+### 지원 모델
+- Claude 4.0 Sonnet  
+- Claude 3.7 Sonnet  
+- Claude 3.5 Haiku  
+- Amazon Nova Micro / Lite / Pro / Premier 등
 
-- **지연 시간 단축:** Cache된 문맥은 매번 재연산할 필요가 없어 빠른 응답 가능
-- **토큰 비용 절감:** Cache에서 읽은 토큰은 낮은 요율이 적용되어 비용 절감
-- **효율적 자원 활용:** 불필요한 재요청 및 Throttling을 줄여 안정적인 API 사용 가능
-
-### Chat DIC 적용 이유
-
-Chat DIC은 **DB 스키마 정보(system + tools prompt)** 가 매우 크기 때문에
-모델이 매번 이를 다시 처리하는 비효율이 존재했습니다.  
-이를 Prompt Caching을 통해 상시 유지함으로써, **message prompt의 변경된 부분만 계산**하도록 최적화했습니다.
+### 효과
+- **지연 시간 단축:** Cache된 문맥은 재연산이 불필요하여 응답 속도 향상  
+- **토큰 비용 절감:** Cache에서 읽은 토큰은 낮은 요율이 적용, 일부 쓰기 토큰은 일반 요금보다 높을 수 있음
 
 ---
 
-# 3. 작동 원리
+## 3. 작동 원리
 
 ### Cache Checkpoint
-
-- 캐시 저장 지점으로, prompt prefix(연속된 문맥 블록)를 지정
-- Claude 3.7+ 기준 최소 1,024 tokens 필요 (Chat DIC는 Claude 4 사용, 4.5는 A/B Testing 중)
+- 캐시 저장 지점으로, prompt prefix(연속된 문맥 블록)를 지정  
+- Claude 3.7 Sonnet 기준 최소 1,024 tokens 필요  
 - 예: 1,800 tokens에서 cachepoint 지정 시, 이후 cachepoint 지정은 2,048 tokens 도달 시 가능
 
 ### TTL (Time To Live)
-
 - 캐시 유효 기간은 **5분**
-- TTL 내 캐시 히트 발생 시, TTL은 자동으로 재설정됨
+- TTL 내 캐시 히트 발생 시, TTL은 재설정됨
 
 ### 지원 API
-
-- Converse / ConverseStream
-- InvokeModel / InvokeModelWithResponseStream
+- Converse / ConverseStream  
+- InvokeModel / InvokeModelWithResponseStream  
 - Cross-region Inference 기능과 조합 가능
 
 ### Prompt 관리
-
-- Console 및 API에서 프롬프트 생성·수정 시 캐싱 옵션 설정 가능
-- `system`, `messages`, `tools` 등의 필드에 적용 가능
+- Console 및 API에서 프롬프트 생성·수정 시 캐싱 옵션 설정 가능  
+- `system`, `messages`, `tools` 등의 필드에 적용 가능  
 - 체크포인트 추가 시 모델별 최대 제한 존재
 
 ---
 
-# 4. Chat DIC 시스템 구조 및 이슈
+## 4. 모델별 제약 사항
 
-### (1) 초기 구조: AWS Gateway + Lambda
-
-Bedrock API를 Lambda로 호출 <br/><br/>
-주요 이슈:
-- Gateway Timeout 29초 → 90초 확장해도 불충분
-- SSE 통신 미지원 (`stream` 옵션 불가)
-- Throttling 빈번히 발생
-- Lambda 환경에서 Prompt Caching 미지원
-
-=> 결과적으로 이 구조는 테스트용으로만 유지
-
-### (2) 개선 구조: AWS ALB + EC2
-
-- SSE 통신 지원 (`stream=True` 정상 작동)
-- Timeout 3600초까지 설정 가능 (기본 600초 사용)
-- 여전히 Throttling 이슈가 간헐적으로 발생
-
-### (3) Prompt Caching 도입
-
-- `system`과 `tools` 프롬프트에 캐시 적용
-- `messages` 영역은 사용자 입력이 매번 달라 적용 효율이 낮음
-- CachePoint 한도 초과 방지를 위해 선택적으로 사용
+| Model name | Model ID | Release Type | Minimum tokens per checkpoint | Max checkpoints | Fields |
+|-------------|-----------|---------------|-------------------------------|-----------------|--------|
+| Claude 3 Opus 4.1 | anthropic.claude-opus-4-1-20250805-v1:0 | GA | 1,024 | 4 | system, messages, tools |
+| Claude Opus 4 | anthropic.claude-opus-4-20250514-v1:0 | GA | 1,024 | 4 | system, messages, tools |
+| Claude Sonnet 4 | anthropic.claude-sonnet-4-20250514-v1:0 | GA | 1,024 | 4 | system, messages, tools |
+| Claude 3.7 Sonnet | anthropic.claude-3-7-sonnet-20250219-v1:0 | GA | 1,024 | 4 | system, messages, tools |
+| Claude 3.5 Haiku | anthropic.claude-3-5-haiku-20241022-v1:0 | GA | 2,048 | 4 | system, messages, tools |
+| Claude 3.5 Sonnet v2 | anthropic.claude-3-5-sonnet-20241022-v2:0 | Preview | 1,024 | 4 | system, messages, tools |
+| Amazon Nova Micro | amazon.nova-micro-v1:0 | GA | 1K | 4 | system, messages |
+| Amazon Nova Lite | amazon.nova-lite-v1:0 | GA | 1K | 4 | system, messages |
+| Amazon Nova Pro | amazon.nova-pro-v1:0 | GA | 1K | 4 | system, messages |
+| Amazon Nova Premier | amazon.nova-premier-v1:0 | GA | 1K | 4 | system, messages |
 
 ---
 
-# 5. 적용 코드 예시
+## 5. 적용 과정
+
+### (1) AWS Gateway + Lambda 구조 (초기 설계)
+- AWS Bedrock API 호출을 Lambda에서 수행  
+- 다음 문제점 발생:
+  - Gateway Timeout 최대 29초 → 90초로 확장 요청 → 90초 이상의 타임아웃 적용 어려움
+  - SSE 통신 미지원 → `stream` 옵션 적용 불가
+  - Throttling 이슈 발생 → 요청 토큰 수가 많을 경우 API 호출 실패
+  - Lambda 환경에서는 Prompt Cache 미지원  
+- 해당 구조는 개발 테스트용으로만 유지
+
+### (2) AWS ALB + EC2 구조 (재설계)
+- SSE 통신 지원 (`stream=true` 정상 작동)
+- Timeout 3600초까지 설정 가능 (기본 600초로 설정)
+- 여전히 Throttling 이슈 발생
+
+### (3) Prompt Caching 적용으로 Throttling 해결
+- `system`, `tools` 프롬프트에 캐시 적용  
+- `messages` 프롬프트는 캐시 적용하지 않음  
+  - 이유: message 리스트의 수만큼 cachepoint가 생성되어 한도 초과 가능성 높음  
+  - 사용자 질문이 매번 다르므로 캐시 효율이 낮음
+
+### 호출 시 주의점
+- **공백 하나라도 달라지면 캐시 미적용**  
+- 따라서 변하지 않는 `system`, `tools` 프롬프트에만 캐싱 적용
+
+---
+
+## 6. 적용 코드
 
 ### 🧩 System Prompt Caching
 
 ```python
-system_prompts = []  
-for message in chat_request.messages:  
-    if message.role != "system":  
-        # ignore system messages here  
-  continue  
- assert isinstance(message.content, str)  
-    system_prompts.append({"text": message.content})  
+system_prompts = []
+for message in chat_request.messages:
+    if message.role != "system":
+        continue
+    assert isinstance(message.content, str)
+    system_prompts.append({"text": message.content})
 
-# Prompt Caching
-if system_prompts:  
-    system_prompts.append({"cachePoint": {"type": "default"}})  
-  
-return system_prompts
+# system prompt caching
+if system_prompts:
+    system_prompts.append({
+        "cachePoint": {
+            "type": "default"
+        }
+    })
 ```
 
 ### 🧰 Tools Prompt Caching
 
 ```python
-# add tool config  
-if chat_request.tools:  
+if chat_request.tools:
     tool_list = [self._convert_tool_spec(t.function) for t in chat_request.tools]
-    tool_list.append({"cachePoint": {"type": "default"}}) # Prompt Caching
+    # tools prompt caching
+    tool_list.append({"cachePoint": {"type": "default"}})
     tool_config = {"tools": tool_list}
 ```
 
 ---
 
-# 6. Cache Hit 구조 (Chat DIC에서의 적용 결과)
+## 7. Cache Hit 구조 (추정)
 
 | 구분 | 조건 | 설명 |
 |------|------|------|
 | **Cache Miss** | 누적 토큰 수 < 1,024 OR 프롬프트 prefix 불일치 OR TTL(5분) 초과 | 모델 재연산 발생 |
 | **Cache Hit** | 누적 토큰 수 ≥ 1,024 AND 프롬프트 prefix 완전 일치 AND TTL(5분) 내 유효 | system, tools tokens 계산 절감 |
 
-### 실제 효과
-
-- 캐시 도입 전 평균 응답 시간: **~29.3초**
-- 캐시 도입 후 평균 응답 시간: **~23.1초**
-- Throttling 발생률: **약 60% 감소**
-- 시스템 리소스 부하 및 비용 절감 효과 확인
-
----
-
-## 7. 마치며
-
-Prompt Caching은 단순히 모델 호출 속도를 개선하는 기술이 아니라,
-**LLM 기반 시스템의 구조적 효율을 향상시키는 핵심 기능**입니다.
-
-Chat DIC 프로젝트의 경우,
-
-- 방대한 DB 스키마 정보를 캐싱하여 재사용함으로써 **불필요한 토큰 소모를 줄이고**,
-- **SSE 스트리밍 환경에서도 안정적으로 작동**하는 시스템을 구축할 수 있었습니다.
-
-향후에는 캐시 TTL 및 캐시 영역을 세분화하여
-사용자 맞춤형 Prompt 재활용 로직을 도입할 계획입니다.
+![BedrockAPICacheMiss](./BedrockAPICacheMiss.png)
+(Cache Miss)
+<br/>
+![BedrockAPICachehit](./BedrockAPICachehit.png)
+(Cache Hit)
+<br/>
 
 ---
 
-## 8. 참고 링크
+## 8. 마치며
+
+Prompt Caching은 반복적이고 고정된 프롬프트 구조를 가진 LLM 응용 서비스에서 **비용 절감 및 성능 향상**에 매우 효과적인 기능입니다.  
+특히 Bedrock의 `system`, `tools` 프롬프트를 캐싱하면 모델 응답 시간을 단축하고, Throttling 문제도 완화할 수 있습니다.
+
+아직 `messages` 영역에는 적용 효율이 낮지만, 장기적으로 Bedrock이 더 세분화된 캐시 제어를 제공하게 된다면  
+프롬프트 기반 애플리케이션의 효율성은 더욱 향상될 것으로 기대됩니다.
+
+---
+
+## 9. 참고 링크
 
 - 🔗 [AWS 공식 문서: Prompt Caching](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html)
-- 📘 SK Planet TechTopic: [https://techtopic.skplanet.com/skp-techblog-intro/](https://techtopic.skplanet.com/skp-techblog-intro/)
-
