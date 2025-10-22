@@ -331,15 +331,7 @@ Error: API quota exceeded for the day.
 
 7단계 자동화된 파이프라인을 통해 입력된 메타 정보를 확인 및 임베딩 후, Elasticsearch에 bulk로 업로드합니다. <br/>
 
-```Python
-graph TD
-    A[1. 서비스 DB에서 세그먼트/Trait 조건 추출] --> B[2. 의미 확장을 위한 LLM 배치 요청문 생성]
-    B --> C[3. LLM에 의미확장용 Batch API 요청과 응답]
-    C --> D[4. 임베딩 벡터 요청문 생성]
-    D --> E[5. 임베딩 벡터 생성용 Batch API 요청과 응답]
-    E --> F[6. Elasticsearch 데이터 변환]
-    F --> G[7. 임베딩 벡터 저장]
-```
+![image99](./image99.png)
 
 각 프로세스별 예시는 다음과 같습니다. 
 
