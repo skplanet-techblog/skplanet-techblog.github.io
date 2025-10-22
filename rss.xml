@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Oct 2025 01:45:53 GMT</lastBuildDate><item><title><![CDATA[마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기]]></title><description><![CDATA[이 글은 SK플래닛 LLM 기반 DMP(Data Management Platform)인 "Seg Lens" 시스템 개발 사례를 소개합니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Oct 2025 02:07:19 GMT</lastBuildDate><item><title><![CDATA[마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기]]></title><description><![CDATA[이 글은 SK플래닛 LLM 기반 DMP(Data Management Platform)인 "Seg Lens" 시스템 개발 사례를 소개합니다.
 
 Seg Lens는 마케터의 의도를 해석하고, 방대한 데이터 속에서 최적의 타겟 세그먼트를 찾아주는 지능형 마케팅 툴로, Segment + Lens의 합성어입니다. 여기서 Segment(세그먼트)는 DMP/CDP…]]></description><link>https://techtopic.skplanet.com/dmp-seglens/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dmp-seglens/</guid><dc:creator><![CDATA[dsdev]]></dc:creator><pubDate>Thu, 23 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 SK플래닛 &lt;strong&gt;LLM 기반 DMP(Data Management Platform)인 &quot;Seg Lens&quot; 시스템&lt;/strong&gt; 개발 사례를 소개합니다.
 &lt;br/&gt;&lt;br/&gt;
@@ -18,8 +18,34 @@ Seg Lens는 &lt;strong&gt;마케터의 의도를 해석하고, 방대한 데이�
 &lt;hr&gt;
 &lt;h1&gt;DMP란 무엇인가요?&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;SK플래닛 데이터서비스개발팀&lt;/strong&gt;에서는 마케터들이 데이터를 기반으로 더 효율적인 캠페인을 운영하는 &lt;strong&gt;DMP(Data Management Platform)와 CDP(Customer Data Platform)&lt;/strong&gt; 두 플랫폼을 함께 개발 및 운영하고 있습니다.&lt;br/&gt;
+(참고: &lt;a href=&quot;https://alp.planetad.co.kr/pages/dmp.html&quot;&gt;SK플래닛 DMP 소개 페이지&lt;/a&gt;)
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 32.911392405063296%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABbklEQVR42n2QTUsbURSG8y9dlJI2iQi14B+QumtXbl1W7KKrdlEhglAoFJTEBicxGk0pTc0kmcTJfN7JzM3k4/EkqFAXOXC4h5dznvOem+Eh9GSKijSu7ROohEhPCKIEx1e4QUQYxqjxBCW6SlJCybHMPI/MYzGSxmGY4I8WOcZVGk/eMJ0R6CluPMGxbIYDG1d0R3pjWbAS6I00XUvTs3yiOKYjgFrZoG5cYgcjzJZJ9eKKRvMPfhCTpKscygmuAF2B+bbHeDrlttWh9KVIqfidrmjt/pBK7ZLenSOOUxK9wuFimyOnJJaF2bwmjBM8+cOm2eN3u8ttp49p3dFzA5ybf8QDn3QxOJ//D5w/CJ407ux+5f3eIT9+ltj/eMCZUadcqVKq1Dg9Mzgpn1Op32CcnlP9dYHtBTxnPjnUStFo/OXT529sv/tA9tU6L7Mb5ApvyeXfkC9sLuvX+U3yG1usvShQPDpezs5msyfgPW0cAZjS1Vx3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image0&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0e24be3389ba59a4307e7eb4228e46d7/f058b/image00.png&quot;
+        srcset=&quot;/static/0e24be3389ba59a4307e7eb4228e46d7/c26ae/image00.png 158w,
+/static/0e24be3389ba59a4307e7eb4228e46d7/6bdcf/image00.png 315w,
+/static/0e24be3389ba59a4307e7eb4228e46d7/f058b/image00.png 630w,
+/static/0e24be3389ba59a4307e7eb4228e46d7/40601/image00.png 945w,
+/static/0e24be3389ba59a4307e7eb4228e46d7/78612/image00.png 1260w,
+/static/0e24be3389ba59a4307e7eb4228e46d7/05244/image00.png 1752w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;br/&gt;
-DMP와 CDP는 다양한 데이터 소스(웹/앱 로그, 광고 반응 데이터, 구매 이력 등)로부터 고객 행동 정보를 수집하고, 이를 바탕으로 특정 조건에 맞는 고객군(세그먼트)을 만들어 마케팅에 활용할 수 있도록 돕는 &lt;strong&gt;데이터 마케팅 플랫폼&lt;/strong&gt;입니다. 즉,&lt;br/&gt;&lt;/p&gt;
+DMP와 CDP는 다양한 데이터 소스(웹/앱 로그, 광고 반응 데이터, 구매 이력 등)로부터 고객 행동 정보를 수집하고, 이를 바탕으로 특정 조건에 맞는 고객군(세그먼트)을 만들어 마케팅에 활용할 수 있도록 돕는 **데이터 마케팅 플랫폼**입니다. 즉,&lt;br/&gt;
 &lt;p&gt;| “원하는 조건을 입력하면, 그에 맞는 고객을 찾아주는 똑똑한 데이터 관리 시스템”&lt;/p&gt;
 &lt;p&gt;이라고 할 수 있습니다.&lt;br/&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -849,7 +875,7 @@ Tech Topic의 경우, 최근에는 &lt;strong&gt;팀 및 프로젝트 단위의 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/syrup-designsystem/&quot;&gt;Syrup 디자인시스템 개발: UX-FE로의 효과적인 핸드오프&lt;/a&gt; (Syrup개발팀 개발자 3명)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/aimoment/&quot;&gt;[AI Moment] B2B 영상 생성, AI로 어떻게 가능해졌나&lt;/a&gt; (VAS개발팀 개발자 3명)&lt;/li&gt;
-&lt;li&gt;마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기 (데이터서비스개발팀 개발자 3명)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/dmp-seglens/&quot;&gt;마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기&lt;/a&gt; (데이터서비스개발팀 개발자 3명) 등&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;저희뿐만 아니라 주요 테크 기업에서는 기술 블로그 및 기술 문서 작성을 중요하게 인식하고 있으며, KPI/기술문화/기여보상 등 &lt;strong&gt;다양한 방법으로 글쓰기를 장려&lt;/strong&gt;하고 있습니다.&lt;/p&gt;
 &lt;h2&gt;2) Tech Topic: SK플래닛 기술 블로그 (Season 2)&lt;/h2&gt;
