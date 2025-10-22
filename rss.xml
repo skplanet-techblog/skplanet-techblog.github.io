@@ -1,4 +1,1196 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 17 Oct 2025 02:21:54 GMT</lastBuildDate><item><title><![CDATA[Chat DIC 프로젝트에서 AWS Bedrock Prompt Caching으로 성능 최적화하기]]></title><description><![CDATA[이 글은 SK플래닛 사내 AI 프로젝트 Chat DIC에서 AWS Bedrock의 Prompt Caching 기능을 활용해 쿼리 생성 속도와 비용을 최적화한 사례를 다룹니다. 0. 개요 AWS Bedrock의 Prompt Caching은 반복적으로 사용되는 프롬프트 문맥(예: system, tools…]]></description><link>https://techtopic.skplanet.com/chatdic-ai-text2sql/</link><guid isPermaLink="false">https://techtopic.skplanet.com/chatdic-ai-text2sql/</guid><dc:creator><![CDATA[rhs]]></dc:creator><pubDate>Fri, 17 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 SK플래닛 사내 AI 프로젝트 &lt;strong&gt;Chat DIC&lt;/strong&gt;에서 AWS Bedrock의 Prompt Caching 기능을 활용해 &lt;strong&gt;쿼리 생성 속도와 비용을 최적화한 사례&lt;/strong&gt;를 다룹니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Oct 2025 01:45:53 GMT</lastBuildDate><item><title><![CDATA[마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기]]></title><description><![CDATA[이 글은 SK플래닛 LLM 기반 DMP(Data Management Platform)인 "Seg Lens" 시스템 개발 사례를 소개합니다.
+
+Seg Lens는 마케터의 의도를 해석하고, 방대한 데이터 속에서 최적의 타겟 세그먼트를 찾아주는 지능형 마케팅 툴로, Segment + Lens의 합성어입니다. 여기서 Segment(세그먼트)는 DMP/CDP…]]></description><link>https://techtopic.skplanet.com/dmp-seglens/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dmp-seglens/</guid><dc:creator><![CDATA[dsdev]]></dc:creator><pubDate>Thu, 23 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 SK플래닛 &lt;strong&gt;LLM 기반 DMP(Data Management Platform)인 &quot;Seg Lens&quot; 시스템&lt;/strong&gt; 개발 사례를 소개합니다.
+&lt;br/&gt;&lt;br/&gt;
+Seg Lens는 &lt;strong&gt;마케터의 의도를 해석하고, 방대한 데이터 속에서 최적의 타겟 세그먼트를 찾아주는 지능형 마케팅 툴&lt;/strong&gt;로, &lt;strong&gt;Segment + Lens&lt;/strong&gt;의 합성어입니다. 여기서 Segment(세그먼트)는 DMP/CDP에서 &lt;strong&gt;마케팅 타겟&lt;/strong&gt;을 의미하며, Lens(렌즈)는 &lt;strong&gt;마케터가 데이터를 바라보는 관점&lt;/strong&gt;을 의미합니다. 이번에 DMP에 LLM을 도입한 후 마케터의 관점을 더욱 반영하여 데이터를 해석하고, 의도를 바로 실행 가능한 세그먼트로 변환할 수 있게 되었습니다.
+&lt;br/&gt;&lt;br/&gt;
+이 글의 주요 내용은 다음과 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DMP란 무엇인가요?&lt;/li&gt;
+&lt;li&gt;기존 DMP의 세그먼트 생성 방식 및 한계&lt;/li&gt;
+&lt;li&gt;DMP에 LLM 도입하기: 의미기반 탐색과 Seg Lens&lt;/li&gt;
+&lt;li&gt;Seg Lens의 주요 기능 및 전체 구성도&lt;/li&gt;
+&lt;li&gt;벡터 DB 구축: Semantic Expansion, LLM 도입, 데이터 접근 제어&lt;/li&gt;
+&lt;li&gt;DIA(DMP Intelligence API)란 무엇인가요?&lt;/li&gt;
+&lt;li&gt;DIA 구조 및 서비스 플로우&lt;/li&gt;
+&lt;li&gt;맺음말&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;DMP란 무엇인가요?&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;SK플래닛 데이터서비스개발팀&lt;/strong&gt;에서는 마케터들이 데이터를 기반으로 더 효율적인 캠페인을 운영하는 &lt;strong&gt;DMP(Data Management Platform)와 CDP(Customer Data Platform)&lt;/strong&gt; 두 플랫폼을 함께 개발 및 운영하고 있습니다.&lt;br/&gt;
+&lt;br/&gt;
+DMP와 CDP는 다양한 데이터 소스(웹/앱 로그, 광고 반응 데이터, 구매 이력 등)로부터 고객 행동 정보를 수집하고, 이를 바탕으로 특정 조건에 맞는 고객군(세그먼트)을 만들어 마케팅에 활용할 수 있도록 돕는 &lt;strong&gt;데이터 마케팅 플랫폼&lt;/strong&gt;입니다. 즉,&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;| “원하는 조건을 입력하면, 그에 맞는 고객을 찾아주는 똑똑한 데이터 관리 시스템”&lt;/p&gt;
+&lt;p&gt;이라고 할 수 있습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;기존 DMP의 세그먼트 생성 방식&lt;/h1&gt;
+&lt;p&gt;기존의 DMP에서는 마케터가 직접 데이터 조건을 입력해 세그먼트를 구성해야 했습니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f1df869bade6396d0c7071a73dd67033/350de/image01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAACm0lEQVR42nVUaW/bMAz1//9h68dhGIp1XY91jtNkbiLfus3xUZHjpJkAQhf1eDxSheo91Y0j52eimeU05qv1WmK83K/1CmsNL6JsjDHkvZfLvu/p7u4L7Xa7Twas7mm/2xJOzFDT8XggpRp5WySwuDyKMYqjIQRWPIqR80igZmppW5XUDyMNQ09d15HWOnl47Bx9tJ4+Dg2pRnHofgFeG1lLOM3wKDmQ0oB1sd2+U1lWtNlseC5FECZChuX/Ce6vdcZxpOKtUuz2RONkadKOhtHIbGyU2booYmxY1hBtPN/75bxnjInDLqp6Imc1ec4ZLLRtK3POi/eBBm2ph0HryVorD6GTSYSnzrlECkomJxuK/TCIwsBz5NxUdUOPrxt6/vNOj78rmgwDThOTFpeyATgAJYd140/Jp5vjdVvT1/tH+v7wTN9+PFE/alGebzwQljcbRZ5DNmxZGDvfylTuFd0/vdFP9vL+1xt1AETpsD7CR3ldAO4PXNjRL+VyPd4PrYT8Uu7o4aWkph/lHEC5ZC4Al5BZkAcIkg3ryGE7aGbUikFj4ZWT+do49jBS/FX8MDhhE8kGGZlFsKYZAJIJSKwOpwo4R7UA7jjk4NkDl0oC3sFLgOMBPEON4Qwdghl6AMzM5m4SQNWhV7mV5vjpV0keAXxkgOnicbqPK8E5Qj5wARsOmcnygd3mFhbJ+wDFdJZ08nnWSWIsomHA11KR0SnxhoG7DoXNheq5xVhJc5egtbyPkmfn0xq6iawoBrBHKoqqaii49EX1/BU1TSPEGKMlNDCqulHyM89BwkeeQRq+LoDkMpLW2zPL7lTYUEAvK6XSj3Jqv3gjt3nAaGrFkEjZ1gN59lBrk+rPpDnXIjzBRwtD+Wx9v96D+X8Fdhktq6H3xwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f1df869bade6396d0c7071a73dd67033/f058b/image01.png&quot;
+        srcset=&quot;/static/f1df869bade6396d0c7071a73dd67033/c26ae/image01.png 158w,
+/static/f1df869bade6396d0c7071a73dd67033/6bdcf/image01.png 315w,
+/static/f1df869bade6396d0c7071a73dd67033/f058b/image01.png 630w,
+/static/f1df869bade6396d0c7071a73dd67033/40601/image01.png 945w,
+/static/f1df869bade6396d0c7071a73dd67033/350de/image01.png 998w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(SKP DMP 조건 생성 화면)&lt;/p&gt;
+&lt;p&gt;예를 들어, &lt;br/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;최근 7일 이내 앱을 방문한 사용자&lt;/li&gt;
+&lt;li&gt;장바구니에 상품을 넣었지만 구매하지 않은 사용자&lt;/li&gt;
+&lt;li&gt;30대 여성 중 특정 카테고리를 자주 조회한 고객&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이러한 조건을 설정하려면 마케터가 데이터 구조를 이해하고 논리적으로 조건를 구성할 줄 알아야 했습니다. &lt;br/&gt;
+아무래도 비전공자나 실무 마케터에게는 진입 장벽이 높을 수밖에 없었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6ad6c242479d6879eb1832e30db2f0e8/37114/image02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.10126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQklEQVR42j2SWU8bQRCE/f8f8hPyihBRECHhDgkYMBhjwBfg9V72XrP32rs2iiBf2ouUhxnNTHdX11R1o9PpcNG85L7b5fHhAe3lBV2bYBkmKggwJhNu27dcXbawTRPf85jZNuMXDduy6rsx0RkNR3iOQ0MFLidHO8SRIkkyPM/lsnmEro8JBDBJMzRtxN7uBnGSEMeykoiDH5tYlk4q8dHwkfOzQ5QKaITdY9yzTdLebwLXIfRdlto1pavh+gFx4JFoHZzuAflMmgijhTvG7u7L/alumppD5i/XRFLbyEdXGF8+ycMNaZaRKp+VeU/pG3iBIjDHuK3vWKdbhL0mjqGhuieYPzdR7X0cYZnZzxRSvybTSOIIY3hPqBQTXccUnebVkiwvaq2UCpkXcxzXJYoiQlmZNJ5Op6RJTBRG5BLPikXNtuG5Hv3+gG872wwGfVwp7LTbYtA9VVWhTzROjg9rg9I05aZ1Rb/3WIOvTbnr3NKTXHc2w5Pahu/5ZIniqddiMc95e3vnrrXH8OGc978QKZenh0uWVclqtaJ5ssXzoEWeFbUJo941+rgv7NQH4EwYzj2D+GaXeWCzKCvCq23C2z2q1z8U9hOJxKpUkec5aVvyRhdimKo1K3qnFGKaL4D+GtCR2SnzVEywqBYFZVni/drAv/hKJYyqQmJqyutqSZElmHufCcQkXzSPo5BVOGWZ+AIYfDBcb+tvqzCuRVWSaFumGGLV5/VboKL/MWsyZmrJBMj4rIc6SlIxKuEDx+MfE3zTN6/RDtkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6ad6c242479d6879eb1832e30db2f0e8/f058b/image02.png&quot;
+        srcset=&quot;/static/6ad6c242479d6879eb1832e30db2f0e8/c26ae/image02.png 158w,
+/static/6ad6c242479d6879eb1832e30db2f0e8/6bdcf/image02.png 315w,
+/static/6ad6c242479d6879eb1832e30db2f0e8/f058b/image02.png 630w,
+/static/6ad6c242479d6879eb1832e30db2f0e8/40601/image02.png 945w,
+/static/6ad6c242479d6879eb1832e30db2f0e8/78612/image02.png 1260w,
+/static/6ad6c242479d6879eb1832e30db2f0e8/37114/image02.png 2300w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(조건 예시)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;기존 DMP의 한계 (마케터 관점)&lt;/h1&gt;
+&lt;p&gt;마케터들이 실제로 겪던 주요 문제점은 러닝커브 외에도 다음과 같았습니다.&lt;/p&gt;
+&lt;h2&gt;1. 시간과 노력의 과다 소모&lt;/h2&gt;
+&lt;p&gt;세그먼트 조건을 수동으로 설정해야 했으므로, 심지어 한 번의 세그먼트 생성에 평균 2~3시간이 소요되기도 했습니다. 그만큼 휴먼 에러 발생 가능성도 높았습니다.&lt;/p&gt;
+&lt;h2&gt;2. 방대한 데이터지만 낮은 접근성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;DMP: 세그먼트 8,760건 / 트레잇 카테고리 57,829건&lt;/li&gt;
+&lt;li&gt;CDP: 세그먼트 5,090건 / 트레잇 카테고리 26,873건&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;데이터는 많지만 필요한 정보를 빠르게 찾는 효율은 매우 낮았습니다.&lt;br/&gt;
+결국 “데이터는 많지만 활용성이 떨어지는” 역설적인 상황이 자주 발생했습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;3. 직관적 탐색의 어려움&lt;/h2&gt;
+&lt;p&gt;‘유사’, ‘관련’ 조건을 직관적으로 찾기 어렵고, 키워드 기반 검색만으로는 의도한 조합을 떠올리기가 쉽지 않았습니다.&lt;/p&gt;
+&lt;h2&gt;4. 비효율적인 리소스 구조&lt;/h2&gt;
+&lt;p&gt;세그먼트 기획보다 데이터 탐색에 더 많은 리소스가 쓰이는 구조였습니다.&lt;br/&gt;
+결국 마케팅 전략 수립보다 쿼리 작성과 검색에 더 많은 시간이 소모되었습니다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;복잡한 데이터 환경이 문제를 가중시킨다&lt;/h1&gt;
+&lt;p&gt;DMP/CDP는 다양한 회사, 다양한 서비스 등의 고객 행태 데이터를 수십 개의 데이터 소스에서 수집하고 사용합니다.&lt;br/&gt;
+이 과정에서 세그먼트, 트레잇, 데이터 소스 속성(Attribute) 등이 얽히며 데이터 구조는 점점 더 복잡해집니다.&lt;br/&gt;
+결국 마케터가 이 모든 데이터를 완벽히 이해하고 활용하는 것은 현실적으로 불가능했으며, 그 결과 다음과 같은 문제가 반복됩니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;수동 세그먼트 설정에 과도한 시간 소요&lt;/li&gt;
+&lt;li&gt;숨겨진 데이터의 미활용&lt;/li&gt;
+&lt;li&gt;놓치는 타겟 조합 발생&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;그래서 필요한 것은?&lt;/h1&gt;
+&lt;p&gt;이제는 더 이상 검색창에 조건을 하나하나 입력하는 방식으로는 한계가 분명합니다. 마케터가 자연스럽게 말하듯 입력하면, 시스템이 그 의도를 이해하고 세그먼트를 찾아주는 방식, 바로 &lt;strong&gt;LLM 기반 자연어 접근 방식&lt;/strong&gt;이 필요했습니다.&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;왜 LLM인가?&lt;/h1&gt;
+&lt;p&gt;기존 DMP는 데이터는 많지만, 마케터의 의도(Intention) 를 이해하지 못했습니다. &lt;br/&gt;
+예를 들어 마케터가&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;| “서울에 사는 30대 혹은 40대 여성에게 노트북 추천 캠페인을 하고 싶어요.”&lt;/p&gt;
+&lt;p&gt;라고 입력한다고 해 봅시다.&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;기존 DMP는 이 문장을 이해하지 못합니다.&lt;br/&gt;
+마케터는 결국 아래처럼 조건을 &lt;strong&gt;일일이&lt;/strong&gt; 입력해야 했습니다:&lt;br/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;나이: 30~49&lt;/li&gt;
+&lt;li&gt;성별: 여성&lt;/li&gt;
+&lt;li&gt;지역: 서울&lt;/li&gt;
+&lt;li&gt;관심 제품: 노트북&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하지만 LLM(Large Language Model) 은 문장의 의미를 파악하고,&lt;br/&gt;
+그 안의 논리적 관계(AND, OR, NOT 등)를 &lt;strong&gt;모델이 스스로 해석해 구조화할 수 있습니다.&lt;/strong&gt; &lt;br/&gt;
+&lt;br/&gt;
+&lt;strong&gt;즉, 마케터의 “생각”을 바로 “데이터 조건”으로 그대로 바꿀 수 있는 길이 열린 것입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;의미 기반 탐색(Semantic Search)의 필요성&lt;/h1&gt;
+&lt;p&gt;마케터가 데이터를 다룰 때 필요한 것은 단순한 키워드 검색이 아닙니다.&lt;br/&gt;
+그들이 원하는 것은 &lt;strong&gt;의미 기반 탐색(semantic search)&lt;/strong&gt; 입니다.&lt;br/&gt;
+&lt;br/&gt;
+예를 들어,&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;| “서울 지역의 고가 IT제품 관심 고객”&lt;/p&gt;
+&lt;p&gt;이라는 의도에는 단순히 ‘서울’, ‘IT’, ‘고가’ 키워드만 있는 게 아닙니다.&lt;br/&gt;
+‘구매력’, ‘브랜드 선호도’, ‘최근 검색 패턴’ 같은 맥락적 의미가 담겨 있죠.&lt;br/&gt;
+&lt;br/&gt;
+마케터는 자연어로 의도를 설명하기만 하면,&lt;br/&gt;
+LLM이 이를 구조화된 데이터 조건으로 변환하는 방식이 필요하였습니다. &lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens (revisited)&lt;/h1&gt;
+&lt;p&gt;이제 Seg Lens를 다시 한번 설명드리면, &lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;“마케터의 의도를 해석하고, 방대한 데이터 속에서 최적의 타겟 세그먼트를 찾아주는 지능형 마케팅 툴&quot; 입니다. &lt;br/&gt;
+Seg Lens는 Segment + Lens의 합성어로, 여기서 Segment(세그먼트)는 DMP/CDP에서 마케팅 타겟을 의미하며, Lens(렌즈)는 마케터가 데이터를 바라보는 관점을 의미합니다.&lt;br/&gt;
+&lt;br/&gt;
+즉, Seg Lens는 &lt;strong&gt;LLM 기술을 활용해서 마케터의 관점에서 데이터를 해석하고, 의도를 바로 실행 가능한 세그먼트로 변환하는 시스템&lt;/strong&gt;입니다.&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens의 주요 기능&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e883b02507be8ff97eb278588cca8da2/e92cd/image03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80.37974683544303%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAABd0lEQVR42p2TyY7CMBBE8/8/xZkD4orEJpZhDZCQzVlMj1+PHMEIZgiWipikXamu6gRxWkkYGTmdQimSL6nrSm632wO6rKAqjZgidzCS5w5F8UCUJIl7Sf0+YeGI6rqRpmnEWofG6r6qKi0YjUaSZZnufyt/hoDiKIokjuMWaZpKWZZijJHr9ersOEkYhlqH4megjnNBnudaeLlclOx8PmvBcDhUdRAfj0cl5ADKufcMhbMrQMV+v5fNZiPb7VYPc282m8lisdD2+W+t/dc/XhbAPJ/PVc14PFYcDgdB+b1v76yWEHXL5VJ2u52qZO/TRRn4Cc3+CbjUQw7TP0S0iSIfCiC4+6BeQT3kBw9JcjAYSL/fV+l+bLqstuXVaqXeoZA9IPGuX4kSopBRIV0PHuDf/TiAV+PiQdvtYDOHXGm91+vpHqMh94TeildQQj+HtEnC6/VavYSYZD/yEO+Yw8lkokAdNvhv+KNQptOpXhkbRsQPdVfCb09A2yUIz+jPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e883b02507be8ff97eb278588cca8da2/f058b/image03.png&quot;
+        srcset=&quot;/static/e883b02507be8ff97eb278588cca8da2/c26ae/image03.png 158w,
+/static/e883b02507be8ff97eb278588cca8da2/6bdcf/image03.png 315w,
+/static/e883b02507be8ff97eb278588cca8da2/f058b/image03.png 630w,
+/static/e883b02507be8ff97eb278588cca8da2/40601/image03.png 945w,
+/static/e883b02507be8ff97eb278588cca8da2/78612/image03.png 1260w,
+/static/e883b02507be8ff97eb278588cca8da2/e92cd/image03.png 1778w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(DMP/CDP Seg Lens 화면)&lt;/p&gt;
+&lt;p&gt;Seg Lens는 LLM의 의미 이해 능력을 중심으로 다음과 같은 핵심 기능들을 제공합니다.&lt;/p&gt;
+&lt;h2&gt;1. 자연어 세그먼트 추출&lt;/h2&gt;
+&lt;p&gt;마케터의 자연어 질의를 분석해 세그먼트 조건으로 구조화합니다. &lt;br/&gt;
+복잡한 논리(AND, OR, NOT)도 자동 반영해 줍니다.&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;2. 이미지 분석 기능&lt;/h2&gt;
+&lt;p&gt;이미지 업로드를 통해 텍스트 + 시각 정보를 결합한 분석이 가능합니다.&lt;br/&gt;
+예를 들어 “이 제품에 관심 있을 고객을 찾아줘.”라고 입력하면, LLM이 이미지의 맥락을 이해하고 고객군을 추천합니다.&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;3. 키워드 확장 및 유사 세그먼트 제안&lt;/h2&gt;
+&lt;p&gt;입력된 세그먼트를 기반으로 관련 키워드나 유사 고객군을 자동 제안합니다.&lt;br/&gt;
+즉, 마케터가 미처 생각하지 못한 연관 세그먼트를 발견할 수 있습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;4. 벡터 검색 기반 의미 탐색&lt;/h2&gt;
+&lt;p&gt;LLM이 생성한 벡터 임베딩(embedding) 을 활용해, 의미적으로 유사한 세그먼트를 빠르게 탐색합니다.&lt;br/&gt;
+단순 키워드 일치가 아닌, 맥락적 유사성(Contextual Similarity)에 기반한 탐색이 가능합니다.&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;5. 결과 필터링&lt;/h2&gt;
+&lt;p&gt;마케팅 목적(예: 리타겟팅, 신규 유입, 브랜드 인지도 강화 등)에 따라 LLM이 결과를 재구성하고, 가장 적합한 세그먼트만 선별해 제공합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens 전체 구성도&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c801c59dc9879eefbd05507c7b4a5cfb/227ba/image04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVR42p2SW4uDUAyE/f8/zgefBFG8QNXWqtV6r035sgSELYtsYBhO9EwmyXHknzFNkyzL8ivvnLm877vM8yzruqoIXNe1dF0nj8dDmqZRjON4XhAR4v1+K4hhGKSqKrndbirY9704r9dLtm1T2I8IHHMAJwjgCgYUeT6f6gwm57Rtq/bhsiy1Imf4fr8rX69XSdNU8jyXKIrkcrmoIwrxDw6BtkwCMRJcYFZFUegZBlQOgkB83xfXdZUpigAFPM+TJEnUpYNtA+0TMFukkOUQDsNQBQAjYDQ4xZQVcP7aKu3SFmcKIH6cOQI4w30cxz8Oj0K2FJzhiLmxOcK2fAyeUJZlKgjrUr4J2uYQg+0h2zu0twj4zjfjry3Tjj0Dm+HZ+AD4MlXb7F9UJwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c801c59dc9879eefbd05507c7b4a5cfb/f058b/image04.png&quot;
+        srcset=&quot;/static/c801c59dc9879eefbd05507c7b4a5cfb/c26ae/image04.png 158w,
+/static/c801c59dc9879eefbd05507c7b4a5cfb/6bdcf/image04.png 315w,
+/static/c801c59dc9879eefbd05507c7b4a5cfb/f058b/image04.png 630w,
+/static/c801c59dc9879eefbd05507c7b4a5cfb/227ba/image04.png 769w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Seg Lens는 아래와 같은 컴포넌트로 구성되어 있습니다.&lt;/p&gt;
+&lt;p&gt;(1) 벡터 데이터베이스(Vector DB)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DMP/CDP의 데이터 조건을 embedding하여 사용자 질의와 유사한 조건을 검색하기 위한 DB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;p&gt;(2) DIA* 모듈 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LLM Service: OpenAI GPT-4 기반 세그먼트 추출&lt;/li&gt;
+&lt;li&gt;Vector Service: 3,000 차원의 Vector DB 유사도 기반 검색&lt;/li&gt;
+&lt;li&gt;Keyword Service: 정확한 매칭 및 스코어링&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(* DIA: DMP Intelligence API, 이후 설명합니다)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;벡터 데이터베이스(Vector Database)란?&lt;/h1&gt;
+&lt;p&gt;벡터 데이터베이스(이하 벡터DB)는 고차원 벡터 데이터를 효율적으로 저장하고 검색할 수 있는 특화된 데이터베이스입니다.&lt;br/&gt;
+기존의 관계형 데이터베이스가 정확한 키워드 매칭에 최적화되어 있다면, 벡터DB는 맥락적 유사도를 기반으로 한 검색에 특화되어 있습니다.&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;벡터 임베딩(Vector Embedding)의 개념과 작동 원리&lt;/h1&gt;
+&lt;p&gt;벡터 임베딩(Vector Embedding)은 비정형 데이터(텍스트, 이미지, 음성 등)를 정형화된 숫자의 배열 형태로 변환하는 과정입니다.
+이 과정을 통해 컴퓨터가 이해할 수 있는 수학적 표현으로 데이터를 변환합니다. &lt;br/&gt;
+벡터 임베딩의 작동원리에 대해 간단히 살펴보면 다음과 같습니다. &lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;(표)&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구분&lt;/th&gt;
+&lt;th&gt;내용&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;원본 텍스트&lt;/td&gt;
+&lt;td&gt;자전거에 관심있는 20대 여성&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;임베딩된 텍스트&lt;/td&gt;
+&lt;td&gt;[0.4, 0.6, -0.3, 0.8, -0.2, 0.1, 0.9, -0.4, ...]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;이 문장은 임베딩 모델을 통해 다차원의 벡터로 변환됩니다. 이 벡터의 각 숫자는 문장의 의미, 맥락, 주제 등을 수학적으로 표현한 값입니다.&lt;br/&gt;
+즉, 언뜻 보기에 단순한 숫자 배열이지만, 벡터 공간에서는 문장의 의미적 위치를 나타내는 “좌표”가 됩니다.&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/78905c7a54c053e2fe3f552db376b330/2e195/image05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABBklEQVR42oVRO1LFMAz0uTkEN+ACtED7OgqoaCiZzKNIiElIPE7i+LtIJs4ECp7GmsSSdr2SBA5mfUSICUiJTsIl4wrn/a+YOEtFRAGRCBwRPr+84vbhBNkPCITgB3wICOQx8oMx1/I/27Is2dMmQtw9vUEbh8UFIk64Pz3i6voG1fkdljDT6jHqGdM0YTUGejZgLucd1KKgtMq50pHILW5GAmFWi1Z+QhHwv6ZD9Oj0Bwb9ldWXCYkjyFGP7CECl0YYYyCVK4yZMQ4jrLUb4R9kmcUxnraZlRh/nXM/94Sc87Qcjgkp5V7Iibqu0bYtuq7bCbXWqKoKXFuUlIU0TYO+7/ctfwOabSKcVs2jxwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/78905c7a54c053e2fe3f552db376b330/f058b/image05.png&quot;
+        srcset=&quot;/static/78905c7a54c053e2fe3f552db376b330/c26ae/image05.png 158w,
+/static/78905c7a54c053e2fe3f552db376b330/6bdcf/image05.png 315w,
+/static/78905c7a54c053e2fe3f552db376b330/f058b/image05.png 630w,
+/static/78905c7a54c053e2fe3f552db376b330/2e195/image05.png 782w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;br/&gt;
+임베딩의 핵심은 “의미가 비슷한 문장은 벡터 공간에서도 서로 가깝게 위치한다”는 것입니다.&lt;br/&gt;
+&lt;br/&gt;&lt;br/&gt;
+예를 들어 아래와 같은 문장들을 임베딩 벡터로 변환했다고 가정하겠습니다.&lt;br/&gt;
+&lt;ul&gt;
+&lt;li&gt;유사_텍스트1 = &quot;사이클링을 좋아하는 젊은 여성&quot;  # → 유사한 벡터값 &lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;유사_텍스트2 = &quot;자전거 타기를 즐기는 20대&quot;      # → 유사한 벡터값 &lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;유사_텍스트3 = &quot;자동차에 관심있는 30대 남성&quot;    # → 다른 벡터값 &lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+유사_텍스트1과 유사_텍스트2는 원본 문장 “자전거에 관심있는 20대 여성”과 유사한 의미를 가지고 있으므로, 벡터 공간에서도 서로 가까운 위치에 존재합니다. 반면 유사_텍스트3은 “자동차”와 “남성”, “30대” 등 다른 주제를 포함하고 있기 때문에 원본 문장과의 벡터 거리가 멀어집니다.&lt;br/&gt;
+&lt;br/&gt;
+이처럼 임베딩은 단어 하나하나를 따지는 것이 아니라, 문장의 전체적인 의미와 맥락을 숫자로 표현함으로써 &lt;br/&gt;
+의미 기반 검색(Semantic Search), 추천 시스템, 유사도 분석 등에 활용됩니다.&lt;br/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9b9cd24d336d9c3fcbf23b0fa80e5de3/71c1d/image06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACA0lEQVR42l2S227aQBCGef8XqlpFSSpVqqoqAVISwMbG9tpe7669Z68PLCZDaAOqNBdzMd8c/vlnx9FcYzDTaHqnmKQbnCpJj6M9x2AkJ1kW53kCoSU99ArqZ7fwYdCng21U/ZJFVBCGESK5c3JoxeJl8eXu7tvD/d3j48tq6SyfDvYv7EftgTz1O5K/5XtoPPZasnKN4hR4w3snlaCXGJwE8t9k2Na7sdM52sf7sG9FrahzglXo2JuIFUG2my+ea1ZOH9tdDjnD54GHNqCokXQZbVZxYC1nip5G29CiUSyty5QWX/88a11Po/W9ho6XfQE2ACf1uQ6SiKB5ugPy+3a13YdhmZ58t6my5yIqYYVgLST71GgGC1yG14p1rRg71TSV1k3fqSSLiro0TnjIWc4EgYN/hG//wWceMKHrtzJpMAqLZItinMWcFJBIxdZVplouTA2N/BUe4bdWt9yYJiRoUyZRvicVQiz3nfatvH9drqJty8nP4DWAK47OnzUzV7WHTtWSPqwW4IGneOtUPfVmi1PECsQxJJMVuEwLcIiglz9dYYgSZ05Srtg4GDCTEoQIwiVb5hFucExzLMihlVbdCjaai+BPaAdmmqNojZOTd0Ovf6PQmgaqwSHwBfjlNJhbR84+XQ0tPhxr4U+g0K800JYLXuE8qSTJeXXyLRT4G/4d/VPU6FxuUDcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image06&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9b9cd24d336d9c3fcbf23b0fa80e5de3/f058b/image06.png&quot;
+        srcset=&quot;/static/9b9cd24d336d9c3fcbf23b0fa80e5de3/c26ae/image06.png 158w,
+/static/9b9cd24d336d9c3fcbf23b0fa80e5de3/6bdcf/image06.png 315w,
+/static/9b9cd24d336d9c3fcbf23b0fa80e5de3/f058b/image06.png 630w,
+/static/9b9cd24d336d9c3fcbf23b0fa80e5de3/40601/image06.png 945w,
+/static/9b9cd24d336d9c3fcbf23b0fa80e5de3/78612/image06.png 1260w,
+/static/9b9cd24d336d9c3fcbf23b0fa80e5de3/71c1d/image06.png 1536w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;DMP/CDP에서는 &lt;strong&gt;Elasticsearch의 Dense Vector 기능&lt;/strong&gt;을 활용하여 의미적 유사도 기반 검색을 구현했습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;벡터 데이터베이스(Vector Database)의 검색 방식&lt;/h1&gt;
+&lt;p&gt;벡터 DB에서 검색에는 &lt;strong&gt;코사인 유사도(Cosine Similarity)&lt;/strong&gt; 를 사용합니다. &lt;br/&gt;
+이는 두 벡터가 이루는 각도를 기준으로 의미적 유사도를 측정하는 방법으로, 벡터의 크기(길이)에 영향을 받지 않으면서 &lt;strong&gt;방향&lt;/strong&gt;만으로 의미의 유사함을 비교할 수 있습니다. &lt;br/&gt;
+&lt;br/&gt;
+Elasticsearch는 이 코사인 유사도를 활용해 쿼리 벡터와 인덱스에 저장된 벡터들 사이의 유사도를 계산하고, &lt;br/&gt;
+&lt;strong&gt;Top-K 검색(Top-K Retrieval)&lt;/strong&gt; 방식으로 가장 유사한 K개의 결과를 빠르게 반환합니다. &lt;br/&gt;
+&lt;br/&gt;
+이 문장은 임베딩 모델을 통해 다차원의 벡터로 변환됩니다. 이 벡터의 각 숫자는 문장의 의미, 맥락, 주제 등을 수학적으로 표현한 값입니다. 즉, 언뜻 보기에 단순한 숫자 배열이지만, 벡터 공간에서는 문장의 의미적 위치를 나타내는 &lt;strong&gt;좌표&lt;/strong&gt;가 됩니다.&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&quot;knn&quot;: {
+  &quot;field&quot;: &quot;my_vector&quot;, #vector가 저장된 필드 명
+  &quot;query_vector&quot;: query_vector, # 검색하고자 하는 임베딩 백터
+  &quot;k&quot;: k, # 반환할 이웃의 목표 개수
+  &quot;num_candidates&quot;: self.MAX_CANDIDATES, # 탐색할 후보개수
+  &quot;filter&quot;: { ... } # 검색에 추가 조건 
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens 벡터 DB 구축(1) - Semantic Expansion으로 벡터검색 정확도 높이기&lt;/h1&gt;
+&lt;p&gt;일반적으로 벡터 검색(Vector Search)은 사용자가 입력한 키워드를 임베딩하여 데이터와의 유사도를 계산합니다. 하지만 단순한 키워드만 임베딩할 경우, 의미적인 맥락(context)이 충분히 반영되지 않아 정확도가 떨어질 수 있습니다.
+&lt;br/&gt;
+예를 들어, “은행”이라는 단어를 그대로 임베딩하면 기계는 금융기관인지 은행나무인지 잘 구분하지 못합니다. 이런 문제는 짧은 키워드에 문맥 정보가 부족하기 때문에 발생합니다.&lt;br/&gt;
+&lt;br/&gt;
+최근의 임베딩 모델은 대부분 문장 단위 또는 청크(chunk) 단위로 학습되어 있습니다. 문맥이 풍부한 문장을 임베딩할수록 모델이 의미를 더 잘 파악하며, RAG(Retrieval-Augmented Generation) 성능 또한 향상됩니다.&lt;br/&gt;
+그래서 최신 DMP/CDP 시스템에서는 단순 키워드 기반의 벡터화 대신, &lt;strong&gt;의미 확장(Semantic Expansion) 단계&lt;/strong&gt;를 추가합니다. 사용자의 입력을 문장 단위로 확장한 후 임베딩함으로써, &lt;strong&gt;훨씬 더 정확한 검색과 추천이 가능&lt;/strong&gt;하게 되었습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8ed6dea8a56a07ecd6a006ccebb7b2cf/6f464/image07.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.43037974683544%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABgUlEQVR42m2S164CMQxE9/9/DB7ofRG9l6V32MVwRvJK6N5IoyR2Mh6X4Hg82nq9tuv1atvt1na7nTCfzy2OY3u/35YkSQru/8H9QRRFNh6PRdbv93WG8H6/2/P5FCB+vV4psD0eD4F37CL8Egf+CIXZbNYymYw1m02r1WqWy+WsWCzqXCqVrFKpyFYul61QKOgdmWw2GxGyAuSyLpeL9Xo9qVwulyoDO8oXi4XOs9nMptOpzpDg2+/3EsSCKyU8n89S02g0ROqfCTIcDnWfTCYi544P2+12M18/hDhIIQxDG41G1u12dSYA58FgYJ1OR8FarZZ27NTQyX4I6TZ1qVaragwpA2qEMtJEHXeUsa9WK4Gm/FFI5+r1uqK3223t3ggHGRAQ1fl8Xs3BTmBqSh9SwtPpJGVEPxwOCkDneURaPh7YADUHNAQfNvxB4k35fkQRjSEq9UOxjwzlwOeqCO7pEjxN2SccI0OOQmpFCtSNWnHH7sDH8PMeUkYHsjhO7APfCTl3XW8nwwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image07&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8ed6dea8a56a07ecd6a006ccebb7b2cf/f058b/image07.png&quot;
+        srcset=&quot;/static/8ed6dea8a56a07ecd6a006ccebb7b2cf/c26ae/image07.png 158w,
+/static/8ed6dea8a56a07ecd6a006ccebb7b2cf/6bdcf/image07.png 315w,
+/static/8ed6dea8a56a07ecd6a006ccebb7b2cf/f058b/image07.png 630w,
+/static/8ed6dea8a56a07ecd6a006ccebb7b2cf/40601/image07.png 945w,
+/static/8ed6dea8a56a07ecd6a006ccebb7b2cf/78612/image07.png 1260w,
+/static/8ed6dea8a56a07ecd6a006ccebb7b2cf/6f464/image07.png 1464w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens 벡터 DB 구축(2) - 비용 및 성능을 고려한 LLM 모델 사용 (실시간 vs BATCH API)&lt;/h1&gt;
+&lt;p&gt;DMP/CDP 에서는 5만 개가 넘는 항목에 대해 의미확장과 embedding을 각각 수행합니다. 최신 데이터를 실시간으로 요구되지 않는 상황에서는 batch API 를 사용하는것이 시간과 비용을 아끼는 방법이 될 수 있습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;1. 비용 효율성&lt;/h2&gt;
+&lt;p&gt;50,000개의 세그먼트를 처리한다고 가정해보겠습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1) 실시간 API 사용 시&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;비용: $50 (50,000 × 500 tokens × $0.002 / 1,000)&lt;/li&gt;
+&lt;li&gt;처리 시간: 30-60분 (네트워크 지연 + 재시도 고려)&lt;/li&gt;
+&lt;li&gt;API 호출 제한: 3,500 requests/minute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2) Batch API 사용 시&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;비용: $25 &lt;strong&gt;=&gt; 50% 비용 절감&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;처리 시간: 2-4시간 &lt;strong&gt;=&gt; 일관성 유지됨&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;사용자 개입: 불필요 &lt;strong&gt;=&gt; 완전 자동화&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;p&gt;연간 약 $9,000의 &lt;strong&gt;비용 절감 효과&lt;/strong&gt;까지 얻을 수 있었습니다.&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;2. 안정성과 신뢰성&lt;/h2&gt;
+&lt;p&gt;실시간 API를 사용할 때 가장 큰 문제는 Rate Limit과 네트워크 불안정성이었습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Error: Rate limit exceeded. Try again in 60 seconds.
+Error: Too many requests. Please slow down.
+Error: API quota exceeded for the day.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이러한 오류들이 발생하면 전체 프로세스가 중단되고, 복잡한 재시도 로직을 구현해야 했습니다.&lt;br/&gt;
+반면 Batch API는 OpenAI 서버에서 자동으로 부하를 분산하므로, 개별 요청이 실패하더라도 &lt;strong&gt;전체에는 영향을 주지 않는다&lt;/strong&gt;는 안정성 측면의 장점을 가지고 있습니다. &lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;3. 운영 효율성&lt;/h2&gt;
+&lt;p&gt;실시간 API는 24시간 모니터링이 필요하였지만, &lt;strong&gt;Batch API는 엔지니어에게 모니터링 피로도를 상대적으로 줄여 주었습니다.&lt;/strong&gt; 그리고 한국시간의 업무시간에서는 Batch API가 24시간까지 걸리지 않고, 대부분 1-2시간 내로 결과를 전달해주어서 모니터링하기 용이한 부분이 있었습니다(정형화할 수는 없지만 북미 사용자의 사용량이 많은 시간대를 피하는 것도 하나의 팁이 될 수 있습니다).&lt;br/&gt;&lt;br/&gt;
+참고로 Batch API의 진행 상태는 각 LLM 서비스의 대시보드에서도 접근하여 모니터링할 수 있습니다.
+&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens 벡터 DB 구축 (3) - Vector DB 생성 프로세스&lt;/h1&gt;
+&lt;p&gt;7단계 자동화된 파이프라인을 통해 입력된 메타 정보를 확인 및 임베딩 후, Elasticsearch에 bulk로 업로드합니다. &lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;graph TD
+    A&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.&lt;/span&gt; 서비스 DB에서 세그먼트&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;Trait 조건 추출&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; B&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2.&lt;/span&gt; 의미 확장을 위한 LLM 배치 요청문 생성&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    B &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; C&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.&lt;/span&gt; LLM에 의미확장용 Batch API 요청과 응답&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    C &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; D&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4.&lt;/span&gt; 임베딩 벡터 요청문 생성&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    D &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; E&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5.&lt;/span&gt; 임베딩 벡터 생성용 Batch API 요청과 응답&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    E &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; F&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6.&lt;/span&gt; Elasticsearch 데이터 변환&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    F &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; G&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;7.&lt;/span&gt; 임베딩 벡터 저장&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;각 프로세스별 예시는 다음과 같습니다. &lt;/p&gt;
+&lt;h2&gt;1. DMP/CDP의 세그먼트/Trait 조건 추출 예시&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;s_10014,segment,표준 세그먼트 &gt; 쇼핑 &gt; 조회상품 (90일) &gt; 자동차 &gt; SUV,SUV,SUV  
+s_10015,segment,내부용 세그먼트 &gt; (구)쇼핑-브랜드 세그먼트 &gt; (구)조회상품 &gt; 브랜드 &gt; 차량용품 &gt; 벤츠,벤츠,Benz...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;2. 의미 확장을 위한 LLM Prompt 예시&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;‘표준 세그먼트 &gt; 쇼핑 &gt; 조회상품 (90일) &gt; 자동차 &gt; 소형차’는 세그먼트입니다. 
+이 세그먼트를 DMP 시스템의 조건으로 활용하거나, 타겟 광고/추천을 위한 임베딩 벡터로 활용하려고 합니다. 
+단, 세그먼트의 내용이 지역명, 성별, 연령대일 경우 동의 세그먼트로만 확장해 주세요. 
+이 세그먼트의 의미를 다음과 같은 방식으로 확장해 주세요: 
+- 동의 세그먼트 (유사한 사용자 행동/관심) 
+- 상위 세그먼트 (더 넓은 관심 또는 범주) 
+- 하위 세그먼트 (더 구체적인 조건의 사용자 집단) 
+- 연관 세그먼트 (다른 플랫폼이나 행동에서 의미적으로 연관 있는 세그먼트) 
+결과는 동의, 상위, 하위, 연관 세그먼트만 출력되며 자연어로 이루어져 있습니다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;3. LLM 의미확장 API 결과물 &lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;동의 세그먼트
+	소형차에 관심이 있는 사용자 중 최근 90일 이내에 자동차 관련 정보를 조회한 사용자 집단입니다.
+	이들은 소형차 구매 의사가 높거나 소형차에 대한 정보 검색이 활발한 사용자들입니다.
+
+상위 세그먼트
+	자동차에 관심이 있는 사용자, 즉 모든 차량 유형에 대한 정보를 검색하거나
+	관련 콘텐츠를 소비하는 사용자 집단입니다.
+	이 범주에는 중형차, 대형차, SUV 등 다양한 차량 유형에 관심을 가진 사용자들이 포함됩니다.
+
+하위 세그먼트
+	특정 브랜드의 소형차를 검색한 사용자, 예를 들어 현대, 기아, 토요타의 소형차에 대한 정보를 찾는 사용자 집단입니다.
+	이들은 특정 브랜드에 대한 선호가 뚜렷한 소비자들입니다.
+
+연관 세그먼트
+	자동차 관련 액세서리나 부품에 관심이 있는 사용자 집단입니다.
+	이들은 소형차뿐만 아니라 관련된 차량 관리 용품이나 자동차 보험, 정비 서비스 등에도 관심을 가질 가능성이 높은 사용자들입니다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;4. LLM Embedding Vector 추출 (3,072차원 예시)&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;embedding&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.00021520282&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.02277509&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.014803194&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.02186752&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.02352322&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.0014579368&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  
+&lt;span class=&quot;token number&quot;&gt;0.016005112&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.02368266&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.009247398&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.026368573&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.0055098054&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.0035290963&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.015379624&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.033653658&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.0376764&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.017121177&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.015772087&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.01713344&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  
+&lt;span class=&quot;token number&quot;&gt;0.06882811&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.0336046&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.0010516768&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.021744875&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.01782025&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.031642288&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.025044013&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.013306932&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.014337146&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.042778414&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.008161994&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.04368598&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.009235133&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.046923798&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.028306358&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;5. Elasticsearch에 Embedding Vector 적재&lt;/h2&gt;
+&lt;p&gt;생성된 임베딩 벡터는 Elasticsearch의 dense_vector 필드 형태로 저장됩니다. dense_vector는 고정된 차원의 실수(float) 배열을 효율적으로 저장하고, 유사도 기반 검색을 지원하고자 설계된 특수한 필드 타입입니다.&lt;br/&gt;&lt;br/&gt;
+이렇게 저장된 벡터들은 단순한 텍스트 검색이 아닌 의미 기반 검색을 가능하게 합니다. 즉, 사용자가 입력한 문장과 의미적으로 비슷한 문장을 찾아 주는 구조입니다.
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens 벡터 DB 구축(4) - 서비스별·권한별 데이터 접근 제어 방안&lt;/h1&gt;
+&lt;p&gt;DMP(Data Management Platform)와 CDP(Customer Data Platform)에서는 &lt;strong&gt;동일한 검색 요청이라도, 사이트나 사용자 권한 수준에 따라 접근 가능한 자원이 달라져야 합니다.&lt;/strong&gt; 관리자가 사용하는 운영 콘솔(Admin Console) 및 각 파트너·브랜드 사이트의 접근 범위는 명확히 구분되어야 하며, 이는 단순 보안이 아닌 비즈니스 로직 차원의 필수 요구사항입니다. &lt;br/&gt;
+&lt;br/&gt;
+예를 들어, DMP에서는 세그먼트(Segment), 트레잇(Trait), 데이터 소스(Data Source)의 공유 상태에 따라 검색 가능한 데이터 범위가 달라집니다. SK플래닛-DMP에서는 자체 수집 데이터와 파생 세그먼트까지 조회할 수 있지만, SK브로드밴드-DMP에서는 자사 데이터만 접근 가능해야 합니다. 이를 위해 검색 쿼리의 filter 영역에 사이트별 접근 가능한 자원 정보를 반영했습니다.&lt;br/&gt;
+접근 제어 정보는 site_resource_index에 저장되며, 검색 시점에 해당 사이트의 resource_id 목록을 조회하여 메인 인덱스 결과를 동적으로 필터링합니다.&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;          &lt;span class=&quot;token property&quot;&gt;&quot;filter&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+              &lt;span class=&quot;token property&quot;&gt;&quot;terms&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token property&quot;&gt;&quot;filter_id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                  &lt;span class=&quot;token property&quot;&gt;&quot;index&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;site_resource_index&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; # 접근가능한 자원정보
+                  &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; # 현재 접속한 사이트의 ID
+                  &lt;span class=&quot;token property&quot;&gt;&quot;path&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;resource_id&quot;&lt;/span&gt; # 접근 가능한 데이터들의 목록
+                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+              &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 구조는 Elasticsearch KNN(Vector) 검색과 자연스럽게 통합되어, 벡터 검색의 정확도(semantic similarity)를 유지하면서도 사이트별 권한 제어(authorization filtering)를 동시에 보장합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;_index&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;site_resource_index&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;_id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;_source&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;resource_id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;d_1277&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;t_1279&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;s_1280&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;s_1281&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;d_1282&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ... &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1&gt;DIA(DMP Intelligence API)란?&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;DIA&lt;/strong&gt; 는 &lt;strong&gt;Data Management Platform(DMP)의 지능형 추천 시스템&lt;/strong&gt;으로, 다음과 같은 목적을 가지고 있습니다:&lt;/p&gt;
+&lt;h2&gt;1. 마케팅 세그먼트 기반 지능형 추천&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자가 입력한 키워드나 이미지를 분석하여 마케팅 대상 세그먼트를 자동으로 추출&lt;/li&gt;
+&lt;li&gt;각 세그먼트별로 관련 리소스(콘텐트, 상품, 서비스 등)를 지능적으로 추천&lt;/li&gt;
+&lt;li&gt;벡터 검색과 키워드 매칭을 결합한 하이브리드 추천 시스템&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. AI 기반 콘텐트 분석&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenAI GPT 모델을 활용한 자연어 처리&lt;/li&gt;
+&lt;li&gt;이미지 분석을 통한 시각적 콘텐츠 이해&lt;/li&gt;
+&lt;li&gt;키워드 확장 및 세그먼트 추출을 통한 정확한 의도 파악&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. 실시간 벡터 검색&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Elasticsearch를 활용한 고성능 벡터 검색&lt;/li&gt;
+&lt;li&gt;임베딩 기반 의미적 유사도 검색&lt;/li&gt;
+&lt;li&gt;사이트별 필터링을 통한 맞춤형 추천&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens DIA 구축(1) - Architecture&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2466663059f6c124736b63166150b924/d0e73/image08.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 104.43037974683544%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB40lEQVR42q3UCW5iMRAEUO5/PRASS1gCIew7hN3Ra8kIksz8kTKWLD52d3VVte1SKhjX6zXm5XJJt9utKDyVigI2m01qt9up2+2m/X7/e8D5fJ7q9Xp6eXkJcONvTH8EPJ/P6XQ6xRyPx6lWq6Vms5kWi0WsHQ6HsKAQMFderVZpNBoFSL/fj99GoxGz1WrF3m63u+c8Mi5lgMFgENImk0nMXq+XhsNhen19jXX71oFtt9tiyYIkrdfrNJvNYn58fATAcrmMGP/FYJnXeCwWKUzvgALe399jczqdxgQOkHeCFdXxSqUS6xhXq9Wwgtd8vQNKcjRsAOadqiSTnlUAwlL88XgMhrmoZpayoZhJtvn29hZJgvOa4RzmfcV0nBIEKHxiSB5WNiTlTkpWLANmBeIdH9+KAlbgzhAjXpDNdF6RqsMSclHd73Q64R/JYvIJ0LSnc8gHA7N8zYBIzF3GFku3xkQAoEndj4DMz2dNEGn5XvPOWm4GqRj7DsmPgNhIEEyCAgLJ9OJg6Jsl4jDNnsv5Bpiv0dfLL9mRAEhiuVwOIDI1EkM+fwP8OgADIksyJrqaCwDFMl/JOIdFj6smSAAI6PER8ZtfJfPp6v1pCATKXwx+/cAC0oT/9mI7g7wy/4XhJ606VtQe6TsJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image08&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2466663059f6c124736b63166150b924/f058b/image08.png&quot;
+        srcset=&quot;/static/2466663059f6c124736b63166150b924/c26ae/image08.png 158w,
+/static/2466663059f6c124736b63166150b924/6bdcf/image08.png 315w,
+/static/2466663059f6c124736b63166150b924/f058b/image08.png 630w,
+/static/2466663059f6c124736b63166150b924/d0e73/image08.png 671w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Seg Lens DIA 구축(2) -  Service Flow&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 626px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a37ecadb204559fc9eed82ae1327dbcb/af590/image09.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 129.74683544303798%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAAAsTAAALEwEAmpwYAAACaElEQVR42p2VB6siQRCE/f//S0UUs2LOOeesfXwNJT7v9qG3MMzObHdNVYfZkAU8p9PJNpuNHQ4H2+/3PmusVit7PB7/9Au9b8gQkNls5s7dbteq1aq1Wi1br9c2mUzsfr9/BqjneDy6I6DT6dQGg4GvF4uFrz9mqOdyudhyuXTZsBqNRk+5jKAnEBDJu93OgWq1mpVKJR865Ha7fRdD2CARsFQqZfF43GKxmMeSQ76WfD6frdfreUKYm82mA7Emnl9LBnC73Xq8SEKn03G5xBPJHzNUORBDQLLZrGUyGZedTqetWCzacDh0O0DfgX+tQxypPUAY5XLZ2u22S/+1DnXS9Xp9SkIqScG53+97cjiA9Xw+dzsGYRHbJyCGBBonGJEAgg+raDTqUiORiIXDYR8cgA3JIuuw5p0DHBADOgNQTqQbSACDTiFBMKPYsUUJM+vxeOxJAwzmT4aSBwCzWg0H9gCQDY6sOZg1NgwIOCB0kVupVHwmu0hhTXeoDtUxjUbD95DKmv16ve5xfzIEXcXLO2zYZ48W5B1mHIQjjAgPMRfbHwzZ1Ed1CExhgbM6hAMAx4Z9fHhX4TugYsFHao2B3FwuZ/l83teFQsGzTpErHAoJJPCndn8UNjeI6lADI6ThQCUgXzaqw8BOwQGA145RMphhrItB3wF9bb/Q+3+Ea0sOHED2uLYSiYQlk0mPJUrUHe8XxV+ASFLdqcYoE5JD4FVzMNVlGwjIqRgQF4AVR9Z0A+FQ/PSd+aP7EOkwoOZUJtQmINTjx3+91+uLEABKMigXYsgaxv/1T4EJjBQzGCIZ+UEM/wDs6cK79IvU0AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image09&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a37ecadb204559fc9eed82ae1327dbcb/af590/image09.png&quot;
+        srcset=&quot;/static/a37ecadb204559fc9eed82ae1327dbcb/c26ae/image09.png 158w,
+/static/a37ecadb204559fc9eed82ae1327dbcb/6bdcf/image09.png 315w,
+/static/a37ecadb204559fc9eed82ae1327dbcb/af590/image09.png 626w&quot;
+        sizes=&quot;(max-width: 626px) 100vw, 626px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;1. 자연어와 이미지로 질의&lt;/h2&gt;
+&lt;p&gt;Seg Lens는 사용자의 질의부터 다르게 접근합니다. &lt;br/&gt;
+단순한 키워드가 아니라, 자연어 문장이나 이미지로도 마케터의 의도를 전달할 수 있습니다. 예를 들어,&lt;/p&gt;
+&lt;p&gt;| “서울에 사는 30대 혹은 40대 여성에게 노트북 추천”&lt;/p&gt;
+&lt;p&gt;이 한 문장 안에는 여러 의미 단위가 숨어 있죠.
+Seg Lens는 이를 자동으로 분석해 이렇게 구조화합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&quot;서울 AND (30대 OR 40대) AND 여성 AND 노트북&quot;&lt;/strong&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;2. 의미 단위 분석과 세그먼트 추출&lt;/h2&gt;
+&lt;p&gt;LLM(OpenAI 기반)을 활용해 질의에서 핵심 키워드와 의미 단위를 추출합니다.&lt;br/&gt;
+이를 ‘세그먼트 정보’로 정리하면 다음과 같습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;세그먼트 정보 Json 파싱 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;query&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울에 사는 30대 혹은 40대 여성에게 노트북 추천&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;logic&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울 AND (30대 OR 40대) AND 여성 AND 노트북&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;segments&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;demo_area&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;conjunction&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;AND&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;order&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;group&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;30대&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;demo_age&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;conjunction&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;AND&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;order&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;group&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   ...
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;성별, 나이, 지역 등은 demo type(인구통계 정보), 그 외 키워드는 general type(일반 관심 키워드)로 구분합니다.&lt;/p&gt;
+&lt;h2&gt;3. 키워드 검색 + 벡터 검색의 하이브리드 접근&lt;/h2&gt;
+&lt;h3&gt;3-1. 키워드 검색 &lt;/h3&gt;
+&lt;p&gt;“노트북”이라는 키워드에서 관련 항목을 확장합니다.&lt;br/&gt;
+예를 들어, LLM을 통해 아래와 같은 확장 키워드를 자동 생성합니다. &lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;입력 키워드&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; 노트북
+추출된 키워드&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&apos;노트북&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;LG 그램&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;삼성 갤럭시북&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;애플 맥북 프로&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;애플 맥북 에어&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;델 XPS&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;레노버 씽크패드&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;HP 스펙터&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;ASUS 젠북&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;MS 서피스 랩탑&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;MS 서피스 프로&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;에이서 스위프트&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;MSI 모던&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;노트북 거치대&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;무선 마우스&apos;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 키워드들을 기반으로 Elasticsearch에 병렬 검색을 수행하여, 높은 점수를 받은 결과만 남기고 중복을 제거합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;키워드 검색 결과 &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;_index&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;dmp_index_n1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;_id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;h0M-A5oBR8OodhE7G-E5&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;_score&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10.481092&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;_source&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;column_value&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&quot;72_col007 노트북\\노트북||노트북||삼성&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&quot;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;count&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;31993&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;attrId&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;d_94&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;_index&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;dmp_index_n1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;_id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;tEM-A5oBR8OodhE7G-E5&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;_score&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10.481092&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;_source&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;column_value&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&quot;72_col007 노트북\\노트북||노트북||LG&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&quot;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;count&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;27169&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;attrId&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;d_94&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+......(생략)......&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;3-2. 벡터 검색&lt;/h3&gt;
+&lt;p&gt;동시에, 질의어와 세그먼트 정보를 의미적으로 확장합니다.&lt;br/&gt;
+예를 들어 “서울”이라는 단어는 단순 지역명이 아니라, “서울에 거주하거나 활동하는 사람들”이라는 맥락으로 확장됩니다.&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;키워드 확장 결과&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; 마케팅 대상은 서울에 거주하거나 활동하는 사람들입니다. 이 대상은 지리적으로 서울특별시에 위치한 소비자 또는 사용자를 의미하며&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 서울 내에서 이루어지는 구매&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 방문&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 또는 기타 행동을 기반으로 식별할 수 있습니다. 연령&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 성별&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 관심사 등 다른 속성은 주어지지 않았으므로 포함하지 않습니다.
+
+키워드 확장 결과&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; 마케팅 대상은 &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;대 연령층에 속하는 사람들입니다. 이 대상은 만 &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;세부터 &lt;span class=&quot;token number&quot;&gt;39&lt;/span&gt;세 사이의 성인으로&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 특정 성별이나 지역에 제한되지 않으며&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 연령에 따른 생활 패턴이나 관심사를 가진 집단이라고 볼 수 있습니다. 구매 행동이나 관심사는 세그먼트에 명시되어 있지 않아 일반적인 &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;대 특성에 기반한 마케팅 전략을 세울 수 있습니다.
+
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 생성된 문장을 3,072차원의 벡터로 임베딩하여 의미 유사도 기반 검색을 수행합니다.&lt;br/&gt;
+그 결과 “서울시 거주자”, “서울 서초구 거주 세그먼트”와 같은 유의미한 결과를 반환합니다. &lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;벡터 검색 결과&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;total&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;recommendIds&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;segment&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;53979&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;출처 &gt; 서울시거주자&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;score&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.8341&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;segment&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;11705&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;표준 세그먼트 &gt; 목적지/거주지 &gt; 목적지 (구) &gt; 서울 서초구&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;score&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.8251&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	...
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;3-3. 결과 병합과 그룹화&lt;/h3&gt;
+&lt;p&gt;키워드 검색과 벡터 검색의 결과는 각각 CSV로 변환 후 통합됩니다.&lt;br/&gt;
+이후, 같은 의미를 가진 데이터는 그룹으로 묶여 &lt;strong&gt;마케터가 바로 쓸 수 있는 형태로 정리&lt;/strong&gt;됩니다.&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;그룹 데이터 &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;target&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&apos;서울&apos; 관련 마케팅 세그먼트&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;reason&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&apos;서울&apos;와 관련된 마케팅 대상자 세그먼트들을 그룹화한 결과입니다.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;resources&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;segment&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;53979&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;출처 &gt; 서울시거주자&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;content_desc&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울시에 거주하는 고객들로 구성된 OK캐쉬백락 세그먼트&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;segment&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;11705&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;표준 세그먼트 &gt; 목적지/거주지 &gt; 목적지 (구) &gt; 서울 서초구&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;content_desc&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울 서초구에 거주하는 고객들로 이루어진 목적지(구) 세그먼트&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    ...
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;conjunction&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;AND&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; 
+
+......(생략)......&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;3-4. 최종 결과 반환&lt;/h3&gt;
+&lt;p&gt;최종적으로 Seg Lens는 아래와 같은 구조로 결과를 제공합니다.&lt;br/&gt;
+이 결과는 단순한 검색 결과가 아니라, 의도를 이해해 &lt;strong&gt;바로 실행 가능한 세그먼트 추천&lt;/strong&gt;으로 완성됩니다.&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;code&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;result&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울에 사는 30대 혹은 40대 여성에게 노트북 추천&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;result_summary&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울 AND (30대 OR 40대) AND 여성 AND 노트북&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;recommendation_targets&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;target&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&apos;서울&apos; 관련 마케팅 세그먼트&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;reason&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&apos;서울&apos;와 관련된 마케팅 대상자 세그먼트들을 그룹화한 결과입니다.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;resources&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;segment&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;53979&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;OK캐쉬백락 &gt; 서울시거주자&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;content_desc&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울시에 거주하는 고객들로 구성된 OK캐쉬백락 세그먼트&quot;&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;segment&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;11705&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;표준 세그먼트 &gt; 목적지/거주지 &gt; 목적지 (구) &gt; 서울 서초구&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;content_desc&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울 서초구에 거주하는 고객들로 이루어진 목적지(구) 세그먼트&quot;&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          ...
+        &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;conjunction&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;AND&quot;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      ...
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;resut_summary&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울 AND (30대 OR 40대) AND 여성 AND 노트북&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;revised_result&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;keyword&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울에 사는 30대 혹은 40대 여성에게 노트북 추천&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;revised_keyword&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울에 사는 30대 혹은 40대 여성에게 노트북 추천&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;extract_segment_result&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;query&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울에 사는 30대 혹은 40대 여성에게 노트북 추천&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;logic&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울 AND (30대 OR 40대) AND 여성 AND 노트북&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;segments&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;demo_area&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;conjunction&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;AND&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;order&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;group&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;30대&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;demo_age&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;conjunction&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;AND&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;order&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;group&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        ...
+      &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;request_id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;570c6ecc-45ba-42a0-a23d-9b68d8459052&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;맺음말&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Seg Lens&lt;/strong&gt;는 단순히 세그먼트 생성 방식을 바꾼 것뿐만 아니라, 데이터 마케팅 패러다임 자체를 혁신한 시도입니다. LLM과 벡터 검색을 활용해 ‘데이터를 이해하는 시스템’에서 &lt;strong&gt;‘마케터의 의도를 이해하는 시스템’&lt;/strong&gt; 으로 발전함으로써, 마케터는 더 이상 복잡한 데이터 구조를 해석할 필요 없이 &lt;strong&gt;생각을 실행으로 바로 전환&lt;/strong&gt;할 수 있게 되었습니다. 복잡한 조건 설정 대신 자연어 한 줄, 텍스트·이미지 입력만으로도 원하는 타겟을 찾는 경험은, 마케터가 데이터 엔지니어가 아닌 &lt;strong&gt;고객을 이해하는 전략가로서 본연의 역할에 집중하게 만들어 줍니다.&lt;/strong&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;strong&gt;Seg Lens는 기술을 통해 마케터의 의도를 곧바로 실행으로 연결하는 경험을 추구합니다.&lt;/strong&gt; 앞으로도 Seg Lens는 더욱 다양한 데이터 소스와 연결되어 데이터의 복잡함을 줄이고, 인사이트의 속도를 높이는 혁신을 지속할 것입니다.
+&lt;br/&gt;
+&lt;br/&gt;
+덧. 처음 기획한 제목은 &quot;데이터? 몰라도 돼요!!&quot; - 간단한 입력으로 타겟 고객을 찾는 LLM 마케팅 솔루션&quot; 였답니다. 혹시 읽어보신 글의 내용에 부합이 되었을까요? : )&lt;/p&gt;
+&lt;p&gt;읽어 주셔서 감사드립니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Tech Topic 기술블로그 개선 실험 - 콘텐트, 성능, SEO, AEO]]></title><description><![CDATA[안녕하세요, SK플래닛(이하 SKP)에서는 2025년 현재 'Tech Topic' 이라는 기술(테크) 블로그를 운영하고 있습니다. 
+본 글에서는 지난…]]></description><link>https://techtopic.skplanet.com/techblogupdate1/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techblogupdate1/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Tue, 21 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛(이하 SKP)에서는 2025년 현재 &lt;a href=&quot;https://techtopic.skplanet.com/&quot;&gt;&apos;Tech Topic&apos;&lt;/a&gt; 이라는 기술(테크) 블로그를 운영하고 있습니다. &lt;br/&gt;
+본 글에서는 지난 7월 한 달간 진행하였던 다양한 측면에서의 기술 블로그 개선 실험 사례를 공유하고, 향후 더 나은 방향을 탐색하고자 공유드리오니 참고 부탁드립니다.&lt;br/&gt;
+목차는 다음과 같습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;들어가며
+&lt;ul&gt;
+&lt;li&gt;기술 블로그의 가치&lt;/li&gt;
+&lt;li&gt;Tech Topic 소개&lt;/li&gt;
+&lt;li&gt;히스토리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;콘텐트 반응 실험 및 분석&lt;/li&gt;
+&lt;li&gt;지속 가능한 개발자 방문을 가져오는 요소들
+&lt;ul&gt;
+&lt;li&gt;글의 유입양 및 퀄리티, 꾸준함&lt;/li&gt;
+&lt;li&gt;성능 개선, SEO, AEO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;마무리하며&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;h1&gt;1. 들어가며&lt;/h1&gt;
+&lt;h2&gt;1) 기술 블로그의 가치: 왜 많은 기업들은 기술 블로그를 쓰는가?&lt;/h2&gt;
+&lt;p&gt;이미 국내외 많은 ICT 기업들이 도입하고 있는 기술 블로그(테크 블로그)의 가치는, 1) 기업 차원에서는 전략적 활용 및 개발문화를 조성하는 도구로 활용 2) 구성원 차원에서는 개발자의 성장 및 퍼스널 브랜딩 채널로 활용하는 것으로 볼 수 있습니다(&lt;a href=&quot;https://techtopic.skplanet.com/book-beyondcode/&quot;&gt;&apos;코드 너머, 회사보다 오래 남을 개발자&apos;&lt;/a&gt; 참고). &lt;br/&gt;&lt;br/&gt;
+Tech Topic의 경우, 최근에는 &lt;strong&gt;팀 및 프로젝트 단위의 성과&lt;/strong&gt;도 포스팅하는 비중을 높여서, 개인뿐만 아니라 &lt;strong&gt;조직의 테크 브렌딩에도 기여&lt;/strong&gt;하고 있습니다(아래 참조).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/syrup-designsystem/&quot;&gt;Syrup 디자인시스템 개발: UX-FE로의 효과적인 핸드오프&lt;/a&gt; (Syrup개발팀 개발자 3명)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://techtopic.skplanet.com/aimoment/&quot;&gt;[AI Moment] B2B 영상 생성, AI로 어떻게 가능해졌나&lt;/a&gt; (VAS개발팀 개발자 3명)&lt;/li&gt;
+&lt;li&gt;마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기 (데이터서비스개발팀 개발자 3명)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;저희뿐만 아니라 주요 테크 기업에서는 기술 블로그 및 기술 문서 작성을 중요하게 인식하고 있으며, KPI/기술문화/기여보상 등 &lt;strong&gt;다양한 방법으로 글쓰기를 장려&lt;/strong&gt;하고 있습니다.&lt;/p&gt;
+&lt;h2&gt;2) Tech Topic: SK플래닛 기술 블로그 (Season 2)&lt;/h2&gt;
+&lt;p&gt;SKP 초기 운영되던 &lt;a href=&quot;https://web.archive.org/web/20190116065552/http://readme.skplanet.com/&quot;&gt;README(2012-2018, 현재 아카이빙)&lt;/a&gt; 블로그 이후 기술 블로그가 부재하여, 회사의 기술 활동을 대외에 공유하기 위한 기술 블로그를 제안, 2023년 새롭게 런칭하였습니다(&lt;strong&gt;Tech Topic&lt;/strong&gt; 네이밍은 당시 CTO님께서 제안해 주셔서 이를 반영하였습니다).&lt;br/&gt;
+빠르게 런칭할 수 있고 &lt;strong&gt;개발자 친화적인 GitHub Pages + Gatsby 조합을 선택하였고, Markdown으로 작성&lt;/strong&gt;하되
+기획자/디자이너 등이 작성할 경우에는 사내 위키(컨플루언스)로 1차 접수를 받고 상호 검수 및 변환작업 후 포스팅을 진행하는 절차를 가졌습니다.
+&lt;br/&gt;&lt;br/&gt;
+&lt;strong&gt;초기&lt;/strong&gt;에는 다양한 조직의 활동 사례를 반영하고자 다양한 솔루션(챗봇, IoT 등) 소개, UX, Web3 등 다양한 주제를 커버하고 있었으나,
+&lt;strong&gt;&apos;24년 하반기&lt;/strong&gt;부터 개발(코드를 포함하는) 및 기술 문화를 주제로 하는 글의 비중을 높이고자 하였습니다.
+포스팅 주기는 월 1회/격월 1회 등으로 기준이 변경되었고, 그 동안 담당자 및 역할이 조금씩 바뀌기도 하였습니다.&lt;/p&gt;
+&lt;h2&gt;3) 히스토리(2024-2025 상반기)&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b51e4eb8e2969b84f1325411993314a2/e40ed/image01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 68.35443037974683%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABXUlEQVR42r1Ta2/CMAzk//9B2IexqqVdgZU2z+Z9JAG6wlinSdMcnVwlzvlqOys8WAhhET/ZCn9sd4RCCFRVhbqu0TTNhLIss09njDEYY6C1znhUfUfovYc2egq21k6X03fyKSaR3PyiQqdjkAtTLZVSGMcROno1XiClhHMOwQcMBw7F9bX4M8JbpuKlxaHpJ7XW2ayMawmqOKQZYaPiqA9WO5SbD9BOXgXMCa/0m2OB3bCfCFMi4y1e+xZ116OgBzjvYpJ05qN6H+Oe1PBGuO0b7PlpIkzBPjhUwwkNSRjAuYPgPkNK//mvT7sc65NqNp9HFVXoWNu0UuKLopD3ktLFpig1glIRR8NGr0GIzv6dndDyDkcx5K5nxI4LKmGUXR7s1EVCKGicN844CCNYt1uU7Q6b/RsIpXle+25Asa7Rt+z3L4UagUExCKfu9lOnnfH/+PS+szBbDwdfCM88j00I+UfX/gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b51e4eb8e2969b84f1325411993314a2/f058b/image01.png&quot;
+        srcset=&quot;/static/b51e4eb8e2969b84f1325411993314a2/c26ae/image01.png 158w,
+/static/b51e4eb8e2969b84f1325411993314a2/6bdcf/image01.png 315w,
+/static/b51e4eb8e2969b84f1325411993314a2/f058b/image01.png 630w,
+/static/b51e4eb8e2969b84f1325411993314a2/40601/image01.png 945w,
+/static/b51e4eb8e2969b84f1325411993314a2/78612/image01.png 1260w,
+/static/b51e4eb8e2969b84f1325411993314a2/e40ed/image01.png 1378w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2024년 상반기까지는 월평균 1천-2천 PV(페이지뷰) 수준의 방문자 통계를 보여주고 있습니다. &lt;br/&gt;
+참고로 블로그 등의 웹사이트의 PV 등 정보는 &lt;a href=&quot;https://www.similarweb.com/&quot;&gt;Similarweb &lt;/a&gt;등의 분석 사이트 무료 버전을 활용하면 누구나 쉽게 알 수 있습니다(좀더 상세한 분석은 GA 등의 도구가 필요).&lt;/p&gt;
+&lt;p&gt;그러다가 &lt;strong&gt;코드 레벨의 개발을 통한 문제해결 사례, 기술문화 사례 등 개발자가 선호하는 주제 중심으로 변경을 조금씩 시도&lt;/strong&gt;하였고,
+그 결과 &lt;strong&gt;&apos;24년 하반기에는 월평균 5천-6천 PV 수준으로 상승&lt;/strong&gt;하는 그래프를 보여 주었습니다(초록색 점선 참조).
+3분기에 특히 집중되었던 글은 아래와과 같았고, 개발자들이 선호하는 글임을 확인할 수 있었습니다.
+포스팅 주기는 상반기 격월 1회 → 하반기 월 2-3회 수준으로 진행하였습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI-assisted Coding과 개발 생산성 향상 시리즈 (한기용님 테크 세미나 - 발표자의 허락을 받은 요약본 게시 및 GitHub Copilot 활용 사례와 PoC 결과 공유)&lt;/li&gt;
+&lt;li&gt;SK ICT Family사 테크 블로그 총정리 (SKT, C&amp;#x26;C, SKP 및 스퀘어 자회사 블로그 소개)&lt;/li&gt;
+&lt;li&gt;오픈소스 Trino를 활용한 전사 데이터분석 시스템 구축기&lt;/li&gt;
+&lt;li&gt;생성형 AI로 QA 업무 수행하기: 똑똑한 소프트웨어 테스트의 시작 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2025년에는 월 1회 수준으로 운영하였으며 &lt;strong&gt;월평균 3천-5천 PV&lt;/strong&gt; 수준으로 조금 떨어졌는데요.
+7월에 반전을 위한(!) 블로그 개선을 포함한 컨텐츠 실험을 하게 됩니다(결론부터 말씀드리면 &lt;strong&gt;7월 한 달간 8천+ PV로 증가&lt;/strong&gt;하였으며 이 내용을 소개해 드리고자 합니다).&lt;/p&gt;
+&lt;h1&gt;2. 콘텐트 반응 실험&lt;/h1&gt;
+&lt;h2&gt;1) GA 분석: 어떤 점이 좋아졌는가?&lt;/h2&gt;
+&lt;p&gt;7월 한 달간 사용자의 유입 결과를 나타내는 &lt;strong&gt;GA(Google Analytics)&lt;/strong&gt; 의 월간 주요 지표 페이지로, 진행 및 개선 현황을 한눈에 파악할 수 있습니다.
+실험 및 개선 내용은&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;포스팅 숫자(1회 → 3회) 증가&lt;/li&gt;
+&lt;li&gt;개발자가 선호하는 글 주제 선정 및 다변화&lt;/li&gt;
+&lt;li&gt;블로그 성능 개선 작업(접속 속도 및 가독성)을 포함하였으며,&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이해를 돕기 위해 각 마일스톤별로 설명을 추가하였습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;다양한 주제, 3번의 포스팅: &lt;em&gt;개발 사례&lt;/em&gt;(&lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=167571&quot;&gt;Figma MCP&lt;/a&gt;), &lt;em&gt;기술 문화&lt;/em&gt;(&lt;a href=&quot;https://devocean.sk.com/blog/techBoardDetail.do?ID=167611&quot;&gt;&apos;코드너머&apos; 독후감&lt;/a&gt;), &lt;em&gt;기술 정보&lt;/em&gt;(&lt;a href=&quot;https://techtopic.skplanet.com/techseminar2025-2h/&quot;&gt;컨퍼런스 일정&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;포스팅 주기 변화: 기존 월/격월 수준 → 1주일 단위로 injection&lt;/li&gt;
+&lt;li&gt;블로그 성능 개선: 접속 속도, 가독성 측면 개선&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/03bb057722e064e4b091f22924840dc0/58a91/image02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.139240506329116%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABH0lEQVR42pVSy04DMQzs5/MJ3FCFeufUA4gvACFQxYEeWiFBt933ZjdZ5+Ed3HQ5gBZVRLIcj+yx48kM/zjDcD5n9hswNkBpB3Ic48CMEDiSMQ94WK5xN39Bk5tTEx6mCb+73z8muLh+xdNbIdiAxe0WlzfriM+XG1wtVtg8JyAKYB9AykwTshSzTOIl6bPU2CuC84y6JbynHXalwWpbIRU8SH7SBZSthTV2mlBrQtUY9L1FI/esIZSqR08OWrBSiFQnObVGUXXIqhZ5beI6JgmdFFGl4BoNW7fwSp/i0du6G1/gog/eC1mI9pNw3J3TFnqXod/n6HYp6FBCJ1n0dCigPlJYmbYniuuxzsGLYMz8tyhHFafsKM4wqnbu53wBtk1t4yw8uBYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/03bb057722e064e4b091f22924840dc0/f058b/image02.png&quot;
+        srcset=&quot;/static/03bb057722e064e4b091f22924840dc0/c26ae/image02.png 158w,
+/static/03bb057722e064e4b091f22924840dc0/6bdcf/image02.png 315w,
+/static/03bb057722e064e4b091f22924840dc0/f058b/image02.png 630w,
+/static/03bb057722e064e4b091f22924840dc0/40601/image02.png 945w,
+/static/03bb057722e064e4b091f22924840dc0/78612/image02.png 1260w,
+/static/03bb057722e064e4b091f22924840dc0/58a91/image02.png 1990w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;2) 견인 효과: 포스팅 구간별 상승을 견인하는 효과는?&lt;/h3&gt;
+&lt;p&gt;글 포스팅은 첫 1주차에는 올리지 않고, &lt;strong&gt;2주차부터 주 1회 수준으로 유입하여 공백기 동안의 기존 글 및 새로운 글의 효과와 함께 누적기간 동안의 효과를 보고자 하였습니다&lt;/strong&gt;.
+특히 4구간의 경우는 세 번째 글을 유입하면서 &lt;strong&gt;블로그 성능 개선 활동을 비슷한 시기에 진행하여 효과를 함께 검토하였습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;결과를 요약하면, 첫 2-3주간은 SEO를 타는 글은 조회수의 영향을 받지 않았으나, 4주차 이후부터는 블로그 메인 및 오가닉 조회수의 동반상승 효과를 보고 있습니다. 글 하나의 반감기는 차이는 있겠지만 5일 전후로 관찰되고 있습니다. &lt;br/&gt;&lt;/p&gt;
+&lt;h3&gt;3) 유입 경로별 분석: SEO 등 최적화의 효과는?&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/28bd39fc4685b26956742262fd9a5dd5/2b608/image03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 40.50632911392405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFklEQVR42o2Su0oDURiE8wR26XwEwXcTtBC2kagY30FRS0sRExOJlkERBBWF2ESj0WwROffrePaY3WK9sAPT/Jz5GJhTQ0nOOSilIIMpl2BCRXOpo7WxwQbeefymWvmgtQYhBJxRWPkJp8i3NYM3DNYFqDP4Sz+AKgAFJxhOBLa7As0Ox1Zws8PQaEvsn49w0evh4XEQ33vv/wdSxkMTgZtnhbmlMeorY8yvvqO+/IaFjSl2Tm6RJAmOjlvVgIQwaEFw92qwuJ7i8FogpQ5PHxoTjthsrbGJ1ulZ9YZkmqI/oGjfq9lQvggOX0bY3TtA//KqGrAYRYYlZ6vbAMydAbKbq7pyLh9CWcSEL5KFI9jawuVmOfALMpxhT4Rk0dMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image03&quot;
+        title=&quot;&quot;
+        src=&quot;/static/28bd39fc4685b26956742262fd9a5dd5/f058b/image03.png&quot;
+        srcset=&quot;/static/28bd39fc4685b26956742262fd9a5dd5/c26ae/image03.png 158w,
+/static/28bd39fc4685b26956742262fd9a5dd5/6bdcf/image03.png 315w,
+/static/28bd39fc4685b26956742262fd9a5dd5/f058b/image03.png 630w,
+/static/28bd39fc4685b26956742262fd9a5dd5/40601/image03.png 945w,
+/static/28bd39fc4685b26956742262fd9a5dd5/78612/image03.png 1260w,
+/static/28bd39fc4685b26956742262fd9a5dd5/2b608/image03.png 1540w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;7월 한 달간 유입 경로별 분포는 **Organic &gt; Direct &gt; Referral **등의 순서로 전반적으로 건강하고 전형적인 트래픽 분포를 보여 주었습니다.
+특히 Organic Search 비중이 약 43%로, 구글 검색 최적화가 잘 된 편으로 볼 수 있고 Direct 트래픽 비중도 약 39%를 차지,
+&apos;브랜드 인지도나 충성도가 높은&apos; 편으로 볼 수도 있곘으나 상대적으로 2구간의 이벤트 효과 및 추후 설명드릴 AEO 검색의 비중도 함께 반영이 되었음을 추정할 수 있습니다.&lt;br/&gt;&lt;/p&gt;
+&lt;h1&gt;3. 지속 가능한 개발자 방문을 가져오는 요소&lt;/h1&gt;
+&lt;h2&gt;1) 콘텐트 관점과 성능 관점에서의 지속가능성&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/727bab65bbdbe5567476ca0267d0e51d/772aa/image04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABe0lEQVR42oWSy07CUBCGeTpCArFgQW61LZZeuFioYgkLEx9AEwKtoNKCCQkEWbswce/GhwDZ8gJA+D2npmwEPcmfnOTMfGfmnwlst1vQs1wu0ev14DgO+m4PA6o+0WAA13V3ou/dbhftdhuTyQSbzcbL9zkB/zKbzZBKpXDK85A0A/lSHfliDYqiQpIkT7lcDhzHgWEYhEIhVCoVrFar/cCvxcJL4gkwev4M9voDsatXcKIGXS+jVCoTuAJRFL2YRCKBRqOB9Xq9H7ggQEEQwGWzYOQ7sJdTRAoOsoKMYlGDqmnQiPxq4/E4TNP8G0h/TiaTiCm3iF+McVR4QJaXoKmKB5RlGel02hPLsqjX64eBfssiqfK4OkTi5hOM+QZBKsGo6tCJX4ZhQFV/PP235fl87gVFowyCZzYitXcEiy+InQjIiTyxQ/QsoYPLZDIIh8PEW/3wUOjadDodWJaF1sMQracpWo9jtK172La9E10XGtNsNjEajX6tzTeGiNAdrF2mwgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/727bab65bbdbe5567476ca0267d0e51d/f058b/image04.png&quot;
+        srcset=&quot;/static/727bab65bbdbe5567476ca0267d0e51d/c26ae/image04.png 158w,
+/static/727bab65bbdbe5567476ca0267d0e51d/6bdcf/image04.png 315w,
+/static/727bab65bbdbe5567476ca0267d0e51d/f058b/image04.png 630w,
+/static/727bab65bbdbe5567476ca0267d0e51d/40601/image04.png 945w,
+/static/727bab65bbdbe5567476ca0267d0e51d/78612/image04.png 1260w,
+/static/727bab65bbdbe5567476ca0267d0e51d/772aa/image04.png 2042w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;콘텐트 수 및 꾸준한 발행&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;콘텐트 퀄리티(개발자에게 도움이 되고 선호하는 주제 및 내용)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;성능 측정 및 개선&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;검색 엔진 최적화(SEO)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI 답변 최적화(AEO, AIO)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;등이 있으며, 이들 모두를 고려해야 합니다.&lt;br/&gt;
+퀄리티는 개발자가 선호하는 주제와도 관련이 많으며, 최근에는 AI Coding, AI Agent, MCP 등의 &apos;AI&apos; 관련 주제와 코드를 통한 다양한 문제해결 및 기술부채 해결 사례, 그리고 여러 기술문화 사례 및 정보 공유 등이 포함됩니다.&lt;/p&gt;
+&lt;h2&gt;2) 성능 측정 및 개선: 20의 블로그 개선으로 80의 성능 향상 효과를 가져오는 활동은?&lt;/h2&gt;
+&lt;p&gt;테크 블로그를 포함하여 &lt;strong&gt;웹사이트의 성능 측정&lt;/strong&gt;을 위해서는 &lt;strong&gt;Google의 &apos;PageSpeed Insights&apos;&lt;/strong&gt; 라는 도구를 가장 많이 사용하고 있습니다.
+이 도구에서 활용 가능한 &lt;strong&gt;진단 요소는 1) 성능(속도), 2) 접근성(A11y) 3) 구글 검색 최적화 등&lt;/strong&gt;인데요. 
+Tech Topic 블로그를 개선하기 전에 주요 메트릭을 측정하고 원인을 찾아보았습니다.&lt;br/&gt;
+이 중 가장 두드러진 개선 포인트는 로딩 속도 저하였는데요. 이를 나타내는 두 가지 요소가 있었습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Largest Contentful Paint&lt;/strong&gt;(LCP): 3초 수준 (목표수준 2.5초 이하. 메인 배너 크기로 인한 로딩 속도 지연)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cumulative Layout Shift&lt;/strong&gt;( CLS): 0.105초 (목표 0.1초 이하. 주 원인은 특정 태그 존재, 콘트라스트가 떨어지는 컬러 선택 등으로 가독성이 떨어지는 것으로 판단)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;따라서 이들을 개선하여 &lt;strong&gt;4개 항목 모두 95점-100점의 성능 개선 효과&lt;/strong&gt;를 이루었습니다(아래 참조).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;로딩속도 개선: 메인 배너 제거&lt;/li&gt;
+&lt;li&gt;가독성 개선: 제목 길이 수정 (3줄 → 1줄)&lt;/li&gt;
+&lt;li&gt;접근성 개선(A11y): Font Color 및 명도 변경, 불필요한 태그 제거 등&lt;/li&gt;
+&lt;li&gt;개선 후 LCP: 3초 → 1.2초로 개선&lt;/li&gt;
+&lt;li&gt;개선 후 CLS: 0&lt;/li&gt;
+&lt;li&gt;최신 제목 및 글이 최대 3개까지 메인 페이지에 노출 (이전에는 제목과 배너에 가려 보이지 않았음)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1000569084f321ecb7076e7f67777a6f/6e29b/image00.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 18.9873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA0klEQVR42nWPS0vDUBCF+/+3olSw1n0N2EXJndu0IgSRlqysUiwSKDYNTVO8m0bN4+tNpBsfB84chmEOfC2syrKsgyAI6PdvGHsjRCuGWjfWWvD0sMl6F6VQyqUoCn6qVY/j4fKig9x5TLZzTPpOEM15jl9Jdymj5ZQk3TKLF0yjJ85OTjHGNH9VVf1deNXtcj95YLlP+Pr4JNytiExClmU8rhfsbYabN17ikPN2+//CI7Lv+1z3etxaZCUWWQnaWsSiut8prsIdDHAchzzPfyEfAChAHxpZVv1nAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image00&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1000569084f321ecb7076e7f67777a6f/f058b/image00.png&quot;
+        srcset=&quot;/static/1000569084f321ecb7076e7f67777a6f/c26ae/image00.png 158w,
+/static/1000569084f321ecb7076e7f67777a6f/6bdcf/image00.png 315w,
+/static/1000569084f321ecb7076e7f67777a6f/f058b/image00.png 630w,
+/static/1000569084f321ecb7076e7f67777a6f/40601/image00.png 945w,
+/static/1000569084f321ecb7076e7f67777a6f/78612/image00.png 1260w,
+/static/1000569084f321ecb7076e7f67777a6f/6e29b/image00.png 1610w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;3) 검색 엔진 최적화: 어떤 부분이 반영되어 있는가?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;검색 엔진 최적화(SEO: Search Engine Optimization)의 목적은 구글, 네이버 등의 검색 엔진이 나의 글을 검색결과 상단에 잘 배치(노출)해 주는 것입니다&lt;/strong&gt;.
+저희는 개발자 대상 블로그라는 특성을 고려한 선택과 집중으로 Google 검색엔진 최적화를 중심으로 작업을 했구요.
+아래와 같은 내용 중심의 기본적인 사항을 적용하여 포스팅하고 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;마크다운 문서 헤드에 title, tags(keywords), description 등 검색에 필요한 내용을 작성하여 반영&lt;/li&gt;
+&lt;li&gt;태그 분류화 작업: 직무별 분류 및 글의 특성을 반영한 키워드 ontology (확대 개선여지 있음)&lt;/li&gt;
+&lt;li&gt;문서 구조화, 멀티링크 반영 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7583c94d04eddc7bca98fc2efe0db468/06868/image05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.848101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABJklEQVR42q2RMUsCYRiA/Q/BnVGJ0omkGRYtDa7+AdvyTvwzDnku/oaKPKdTSBDUXGw4cDAIFxGsoVOHhjsMQZ/OrwhuaOuF53u+b3ng5QvwzxPYHsPhkGKxSFkvc10qoeu6j/KPK5UK99UqdbMuME0To1ZjPp+L2Gaz+Q42Gg12pCCKEiWphImE9gkf7BHx2A3KSJKELMuk02me+n2cpcvg7YXl5xLLshiPx/5gs/lAKHJIMnXORSrJ2XGc08QRKY+TeIxELEosqpDJZHj2ttnOzP0QHo1GTCYTf7DT6XCZzaLl81zlcqiqiqqpwprnvKYJCoUCN7d3dB97tFpt2t0ehmHwOp36g6vVCsdxcF1XsL3/xWKxwLZtZjPb87t4r9fr30/5AndRd9Asr1x0AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image05&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7583c94d04eddc7bca98fc2efe0db468/f058b/image05.png&quot;
+        srcset=&quot;/static/7583c94d04eddc7bca98fc2efe0db468/c26ae/image05.png 158w,
+/static/7583c94d04eddc7bca98fc2efe0db468/6bdcf/image05.png 315w,
+/static/7583c94d04eddc7bca98fc2efe0db468/f058b/image05.png 630w,
+/static/7583c94d04eddc7bca98fc2efe0db468/40601/image05.png 945w,
+/static/7583c94d04eddc7bca98fc2efe0db468/78612/image05.png 1260w,
+/static/7583c94d04eddc7bca98fc2efe0db468/06868/image05.png 1974w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;4) AI 답변 최적화: 왜 중요하고 어떤 부분을 반영해야 하는가?&lt;/h2&gt;
+&lt;p&gt;최근 AI 기반 검색이 대중화되면서 사용자는 더 이상 검색결과 페이지를 일일이 클릭하지 않고 ChatGPT 등 AI 에이전트에게 질문을 던지고 답변을 받는 형식으로 변화하면서, 온라인 광고 마케팅 산업이 급변하고 있습니다. &lt;br/&gt;
+테크 블로그도 그 동안 많은 부분 검색엔진 최적화에 영향을 받아 왔고 이를 고려한 전략을 수립하여 실행해 왔으나, 이제는 AI 에이전트를 고려한 전략을 새롭게 수립하여야 합니다.
+이를 &lt;strong&gt;AI 답변 최적화&lt;/strong&gt;(&lt;strong&gt;AEO: Answer Engine Optimization&lt;/strong&gt;) 또는 &lt;strong&gt;AI 검색 최적화&lt;/strong&gt;(&lt;strong&gt;AIO, Artificial Intelligence Optimization&lt;/strong&gt;) 라고 합니다.
+&lt;br/&gt;&lt;br/&gt;
+&lt;strong&gt;좋은 AEO/AIO 전략&lt;/strong&gt;은 다음과 같이 알려져 있는데요,
+빠르게 렌더링되는 페이지와 안정적인 페이지 구조 및 내용을 사이트(블로그)에 반영하면 AI가 검색하기에 용이하다고 합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;빠르게 렌더링되도록 구성 (AI가 로딩하고 읽기에도 좋음)&lt;/li&gt;
+&lt;li&gt;페이지 구조화 (h1, h2, h3 등)&lt;/li&gt;
+&lt;li&gt;요약문을 포함하여 작성: 글 앞에 TL:DR, 한줄 요약 등을 추가&lt;/li&gt;
+&lt;li&gt;자연어형 질문 &amp;#x26; 답변 포맷으로 구성. 예를 들어 소제목을 질문 형태로 만들고 이후 바로 답변 형태로 글을 작성하면 잘 읽음(FAQ-like).&lt;/li&gt;
+&lt;li&gt;스키마 마크업을 적용: FAQ, HowTo, Article 등의 마크업 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;아래는 Perplexity AI에서 특별한 질문 형식 없이 &lt;strong&gt;&apos;SK플래닛 테크&apos;&lt;/strong&gt; 라고만 검색한 간단한 사례인데요,
+이 경우에도 Tech Topic 블로그와 함께 조직 구조 및 연구개발/개발 문화에 대한 내용을 잘 소개해 주고 있습니다.&lt;br/&gt;
+때로는 글에 따라 사람의 조회수가 상대적으로 높지 않더라도 AI가 잘 검색할 수 있는 글을 AEO/AIO 전략에 따라 발행할 경우 AI가 잘 검색하는 사례를 보여주고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6be823cb5e3afa7b4515ce3978859768/913a1/image06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36.708860759493675%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABfUlEQVR42o3RTU8aYRDAcb+SiR+gBy9Gmg0HYIG+sgWFqil9QUgv5VS18eRB0wtEORDbrcakcZdSvQAJpKmGNIGwLQ2ICr7SpgG0rv9uOemFdpLJ5HkOv8nM9GGErut/C7lcFtcDD+6HT7jvGefuPRd3jAxOBvm+9YlmpUy7/Qs1oeB0OpEkiVKpxFWj7+ojnU5jtdqYm54l9nqB0Ks4gneesYlHVHcqHB82OL84Q1HXMZluYrPZKBQKvUGHw05FM7p2Ot2/SDSK1+tld3+Xw5MjWp1WFxQEAbvdTrFY7A2KosjyW5nNzQ3Wkp/xhyOMT/ip1iqc/jhBv/yNqir/B2YyGWMMEcknEnjupH/wBgNDtwk8fkotv81x+Sv6QZ0P8hsEsxnHv8BUKoXFYiUWj6AkZd6ry7wIh/CNjFL+kmfvm0b7qIG6IjNsMmG1WHrvMJvN4ZJcLC3GeCevoqwneDk1w7PAJLX6Hqc/m3SMoyQ3PnLLuLLb7UbTtGvgH24/wwNIHbvhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image06&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6be823cb5e3afa7b4515ce3978859768/f058b/image06.png&quot;
+        srcset=&quot;/static/6be823cb5e3afa7b4515ce3978859768/c26ae/image06.png 158w,
+/static/6be823cb5e3afa7b4515ce3978859768/6bdcf/image06.png 315w,
+/static/6be823cb5e3afa7b4515ce3978859768/f058b/image06.png 630w,
+/static/6be823cb5e3afa7b4515ce3978859768/40601/image06.png 945w,
+/static/6be823cb5e3afa7b4515ce3978859768/78612/image06.png 1260w,
+/static/6be823cb5e3afa7b4515ce3978859768/913a1/image06.png 1476w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;4. 마무리하며&lt;/h1&gt;
+&lt;p&gt;이제는 개발자뿐만 아니라 AI가 나와 회사의 글을 검색하고 읽는 시대가 되었고, &lt;br/&gt;
+빠르게 변화하는 시대와 기술의 흐름 가운데에서 많은 기업의 테크(기술) 블로그도 이에 발맞춰 준비하고 운영하시리라 생각합니다. 이제는 개발자와 AI 모두에게 친화적인 블로그 콘텐츠와 플랫폼 구축을 위해 새로운 요소를 계속 발굴하여 반영하는 것이 글 작성자 및 운영자 모두에게 필요할 것으로 보입니다
+(사내교육/가이드 적시 반영 등).
+&lt;br/&gt;&lt;br/&gt;
+각자의 테크 블로그에 글을 쓰고 운영하는 모든 분들께서 이 작은 고민의 실험과 질문들에 잠시 발걸음을 멈추고, 모쪼록 함께 생각할 수 있는 계기가 되었으면 좋겠습니다. : )
+읽어 주셔서 감사드립니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chat DIC 프로젝트에서 AWS Bedrock Prompt Caching으로 성능 최적화하기]]></title><description><![CDATA[이 글은 SK플래닛 사내 AI 프로젝트 Chat DIC에서 AWS Bedrock의 Prompt Caching 기능을 활용해 쿼리 생성 속도와 비용을 최적화한 사례를 다룹니다. 0. 개요 AWS Bedrock의 Prompt Caching은 반복적으로 사용되는 프롬프트 문맥(예: system, tools…]]></description><link>https://techtopic.skplanet.com/chatdic-ai-text2sql/</link><guid isPermaLink="false">https://techtopic.skplanet.com/chatdic-ai-text2sql/</guid><dc:creator><![CDATA[rhs]]></dc:creator><pubDate>Fri, 17 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 SK플래닛 사내 AI 프로젝트 &lt;strong&gt;Chat DIC&lt;/strong&gt;에서 AWS Bedrock의 Prompt Caching 기능을 활용해 &lt;strong&gt;쿼리 생성 속도와 비용을 최적화한 사례&lt;/strong&gt;를 다룹니다.&lt;/p&gt;
 &lt;h2&gt;0. 개요&lt;/h2&gt;
 &lt;p&gt;AWS Bedrock의 &lt;strong&gt;Prompt Caching&lt;/strong&gt;은 반복적으로 사용되는 프롬프트 문맥(예: system, tools 등)을 캐시에 저장하여 &lt;strong&gt;모델 재계산을 줄이고 응답 지연 시간 및 토큰 비용을 절감&lt;/strong&gt;할 수 있는 기능입니다.&lt;br&gt;
 현재 Bedrock의 일부 모델에 대해 &lt;strong&gt;Generally Available(GA)&lt;/strong&gt; 상태로 제공되고 있습니다.&lt;/p&gt;
