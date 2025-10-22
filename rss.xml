@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Oct 2025 02:07:19 GMT</lastBuildDate><item><title><![CDATA[마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기]]></title><description><![CDATA[이 글은 SK플래닛 LLM 기반 DMP(Data Management Platform)인 "Seg Lens" 시스템 개발 사례를 소개합니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Oct 2025 05:02:30 GMT</lastBuildDate><item><title><![CDATA[마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기]]></title><description><![CDATA[이 글은 SK플래닛 LLM 기반 DMP(Data Management Platform)인 "Seg Lens" 시스템 개발 사례를 소개합니다.
 
 Seg Lens는 마케터의 의도를 해석하고, 방대한 데이터 속에서 최적의 타겟 세그먼트를 찾아주는 지능형 마케팅 툴로, Segment + Lens의 합성어입니다. 여기서 Segment(세그먼트)는 DMP/CDP…]]></description><link>https://techtopic.skplanet.com/dmp-seglens/</link><guid isPermaLink="false">https://techtopic.skplanet.com/dmp-seglens/</guid><dc:creator><![CDATA[dsdev]]></dc:creator><pubDate>Thu, 23 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 SK플래닛 &lt;strong&gt;LLM 기반 DMP(Data Management Platform)인 &quot;Seg Lens&quot; 시스템&lt;/strong&gt; 개발 사례를 소개합니다.
 &lt;br/&gt;&lt;br/&gt;
@@ -494,13 +494,37 @@ Error: API quota exceeded for the day.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 &lt;h1&gt;Seg Lens 벡터 DB 구축 (3) - Vector DB 생성 프로세스&lt;/h1&gt;
 &lt;p&gt;7단계 자동화된 파이프라인을 통해 입력된 메타 정보를 확인 및 임베딩 후, Elasticsearch에 bulk로 업로드합니다. &lt;br/&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;graph TD
-    A&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.&lt;/span&gt; 서비스 DB에서 세그먼트&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;Trait 조건 추출&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; B&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2.&lt;/span&gt; 의미 확장을 위한 LLM 배치 요청문 생성&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-    B &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; C&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.&lt;/span&gt; LLM에 의미확장용 Batch API 요청과 응답&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-    C &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; D&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4.&lt;/span&gt; 임베딩 벡터 요청문 생성&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-    D &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; E&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5.&lt;/span&gt; 임베딩 벡터 생성용 Batch API 요청과 응답&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-    E &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; F&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6.&lt;/span&gt; Elasticsearch 데이터 변환&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-    F &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; G&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;7.&lt;/span&gt; 임베딩 벡터 저장&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/511e60cc29042b3181d61a9d9260f71f/d48f1/image99.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 182.91139240506325%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAlCAYAAABCr8kFAAAACXBIWXMAABYlAAAWJQFJUiTwAAADh0lEQVR42q2Wh24jMQxE9f9fEqTBQDri9B6n2+m9Vzu9Fx4eD2PI67XjA04AQYniUhKHI214fX21+/t7e3x8dHl4eKgQbHd3dy6Mb29v3fb09FS28z1CrIDT1taWLS0tWVdXl+vh4WFramqyoaEhm5yctJGREZfe3l6bm5tzPTMzY2NjY66z2ay1tbX5guH5+dlOT09dDg8PbX9/33Z3d21nZ8eOj4/t5OTE9vb2fLy9ve1+aHyw8w1+GxsbvvPw8/Njn5+f9v397cJY+uvry7WOTsOW9JWNcbAGGvlCaHyUbLEtaCfJlWWnkQaOWWuH8ThwXPKEAA65WV1dtfX1de+vra3Z5uam54vA5Org4KDsJxvzxAqsCLIEEKqdnZ3W2trqYxDFRh/0+/v7bXZ21gYGBqylpcWmp6fdH80uPaDqEMSRl5cXF/JGbZVKJSsWi25jXjmVDxrgiBXSkpxMtor+N1CqUE46a3x1dWWXl5c1A8YtcCSOgSap7+/v3n97e3MhL0dHRy4Ek51jxr7S4eLiwgqFgiMF9aARIABGe3u769HRURsfHy9TbXBw0Obn562vr8/nEPrn5+cWbm5unFYEhKcqAUpoeXnZVlZWfMGFhQVbXFwslxF1SXWgqRDmr6+v/9YhW//4+PDjMaaP0OeYVAEoiqbyAVX5Sf4L9SpAEc0kSVrRuFFIAy2mWkxTScUOOQJ5oERAlUAkGooR8OzszKmGjXkAFd/LO4wHrChwOjo6/NIEWfoAQhVASagH7bAlU1C1Q654qIZGuOKhHTunL7t8qnaYzEFaq0e9ujmsRT12Q73GAWqiTB1Rh9SQ6koaEcoIDd/YL65B5gIXK0DkcjmnFNUPldBUP68dICCAAGugYT6ft4mJCQcQwc+pxytGWRAQI1TDgQ/QXKRoLlc4ziJcpswz5jsWYp5YQbeHKKTjY6NPKekC5oial45T5rdNPVBi6tW7YGvWoYo7fm8FCg9Tskx+Daj/GP2/6H+FZPN3wJgC1xvDTc4tVBVQq7ETEgwQmUzGdXd3d/nSRbDzAoJwc3OzLxTHqNghK4MUlwBHxBmtfxguA+bYMX7Y+aZuDtNASrsPG8phrYDkjtwmA6UFTQ2ofx1qK3nB6t9Gcw0FBGU9VDABJsEQNA8UzMGn4YAkmpdsamrKenp6HFH4y5iXENs/BYRC+meBVmg95vTRSFrAP++/7lNZwzGwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image99&quot;
+        title=&quot;&quot;
+        src=&quot;/static/511e60cc29042b3181d61a9d9260f71f/f058b/image99.png&quot;
+        srcset=&quot;/static/511e60cc29042b3181d61a9d9260f71f/c26ae/image99.png 158w,
+/static/511e60cc29042b3181d61a9d9260f71f/6bdcf/image99.png 315w,
+/static/511e60cc29042b3181d61a9d9260f71f/f058b/image99.png 630w,
+/static/511e60cc29042b3181d61a9d9260f71f/d48f1/image99.png 796w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;각 프로세스별 예시는 다음과 같습니다. &lt;/p&gt;
 &lt;h2&gt;1. DMP/CDP의 세그먼트/Trait 조건 추출 예시&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;s_10014,segment,표준 세그먼트 &gt; 쇼핑 &gt; 조회상품 (90일) &gt; 자동차 &gt; SUV,SUV,SUV  

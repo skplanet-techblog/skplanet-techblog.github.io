@@ -504,13 +504,37 @@ Error: API quota exceeded for the day.</code></pre></div>
 <hr>
 <h1>Seg Lens 벡터 DB 구축 (3) - Vector DB 생성 프로세스</h1>
 <p>7단계 자동화된 파이프라인을 통해 입력된 메타 정보를 확인 및 임베딩 후, Elasticsearch에 bulk로 업로드합니다. <br/></p>
-<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">graph TD
-    A<span class="token punctuation">[</span><span class="token number">1.</span> 서비스 DB에서 세그먼트<span class="token operator">/</span>Trait 조건 추출<span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> B<span class="token punctuation">[</span><span class="token number">2.</span> 의미 확장을 위한 LLM 배치 요청문 생성<span class="token punctuation">]</span>
-    B <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> C<span class="token punctuation">[</span><span class="token number">3.</span> LLM에 의미확장용 Batch API 요청과 응답<span class="token punctuation">]</span>
-    C <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> D<span class="token punctuation">[</span><span class="token number">4.</span> 임베딩 벡터 요청문 생성<span class="token punctuation">]</span>
-    D <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> E<span class="token punctuation">[</span><span class="token number">5.</span> 임베딩 벡터 생성용 Batch API 요청과 응답<span class="token punctuation">]</span>
-    E <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> F<span class="token punctuation">[</span><span class="token number">6.</span> Elasticsearch 데이터 변환<span class="token punctuation">]</span>
-    F <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> G<span class="token punctuation">[</span><span class="token number">7.</span> 임베딩 벡터 저장<span class="token punctuation">]</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/511e60cc29042b3181d61a9d9260f71f/d48f1/image99.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 182.91139240506325%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAlCAYAAABCr8kFAAAACXBIWXMAABYlAAAWJQFJUiTwAAADh0lEQVR42q2Wh24jMQxE9f9fEqTBQDri9B6n2+m9Vzu9Fx4eD2PI67XjA04AQYniUhKHI214fX21+/t7e3x8dHl4eKgQbHd3dy6Mb29v3fb09FS28z1CrIDT1taWLS0tWVdXl+vh4WFramqyoaEhm5yctJGREZfe3l6bm5tzPTMzY2NjY66z2ay1tbX5guH5+dlOT09dDg8PbX9/33Z3d21nZ8eOj4/t5OTE9vb2fLy9ve1+aHyw8w1+GxsbvvPw8/Njn5+f9v397cJY+uvry7WOTsOW9JWNcbAGGvlCaHyUbLEtaCfJlWWnkQaOWWuH8ThwXPKEAA65WV1dtfX1de+vra3Z5uam54vA5Org4KDsJxvzxAqsCLIEEKqdnZ3W2trqYxDFRh/0+/v7bXZ21gYGBqylpcWmp6fdH80uPaDqEMSRl5cXF/JGbZVKJSsWi25jXjmVDxrgiBXSkpxMtor+N1CqUE46a3x1dWWXl5c1A8YtcCSOgSap7+/v3n97e3MhL0dHRy4Ek51jxr7S4eLiwgqFgiMF9aARIABGe3u769HRURsfHy9TbXBw0Obn562vr8/nEPrn5+cWbm5unFYEhKcqAUpoeXnZVlZWfMGFhQVbXFwslxF1SXWgqRDmr6+v/9YhW//4+PDjMaaP0OeYVAEoiqbyAVX5Sf4L9SpAEc0kSVrRuFFIAy2mWkxTScUOOQJ5oERAlUAkGooR8OzszKmGjXkAFd/LO4wHrChwOjo6/NIEWfoAQhVASagH7bAlU1C1Q654qIZGuOKhHTunL7t8qnaYzEFaq0e9ujmsRT12Q73GAWqiTB1Rh9SQ6koaEcoIDd/YL65B5gIXK0DkcjmnFNUPldBUP68dICCAAGugYT6ft4mJCQcQwc+pxytGWRAQI1TDgQ/QXKRoLlc4ziJcpswz5jsWYp5YQbeHKKTjY6NPKekC5oial45T5rdNPVBi6tW7YGvWoYo7fm8FCg9Tskx+Daj/GP2/6H+FZPN3wJgC1xvDTc4tVBVQq7ETEgwQmUzGdXd3d/nSRbDzAoJwc3OzLxTHqNghK4MUlwBHxBmtfxguA+bYMX7Y+aZuDtNASrsPG8phrYDkjtwmA6UFTQ2ofx1qK3nB6t9Gcw0FBGU9VDABJsEQNA8UzMGn4YAkmpdsamrKenp6HFH4y5iXENs/BYRC+meBVmg95vTRSFrAP++/7lNZwzGwAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image99"
+        title=""
+        src="/static/511e60cc29042b3181d61a9d9260f71f/f058b/image99.png"
+        srcset="/static/511e60cc29042b3181d61a9d9260f71f/c26ae/image99.png 158w,
+/static/511e60cc29042b3181d61a9d9260f71f/6bdcf/image99.png 315w,
+/static/511e60cc29042b3181d61a9d9260f71f/f058b/image99.png 630w,
+/static/511e60cc29042b3181d61a9d9260f71f/d48f1/image99.png 796w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
 <p>각 프로세스별 예시는 다음과 같습니다. </p>
 <h2>1. DMP/CDP의 세그먼트/Trait 조건 추출 예시</h2>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">s_10014,segment,표준 세그먼트 > 쇼핑 > 조회상품 (90일) > 자동차 > SUV,SUV,SUV  
