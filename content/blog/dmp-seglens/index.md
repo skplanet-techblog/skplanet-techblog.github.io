@@ -25,6 +25,9 @@ Seg Lens는 **마케터의 의도를 해석하고, 방대한 데이터 속에서
 # DMP란 무엇인가요? 
 
 **SK플래닛 데이터서비스개발팀**에서는 마케터들이 데이터를 기반으로 더 효율적인 캠페인을 운영하는 **DMP(Data Management Platform)와 CDP(Customer Data Platform)** 두 플랫폼을 함께 개발 및 운영하고 있습니다.<br/>
+(참고: [SK플래닛 DMP 소개 페이지](https://alp.planetad.co.kr/pages/dmp.html))
+![image0](./image00.png)
+
 <br/>
 DMP와 CDP는 다양한 데이터 소스(웹/앱 로그, 광고 반응 데이터, 구매 이력 등)로부터 고객 행동 정보를 수집하고, 이를 바탕으로 특정 조건에 맞는 고객군(세그먼트)을 만들어 마케팅에 활용할 수 있도록 돕는 **데이터 마케팅 플랫폼**입니다. 즉,<br/>
 

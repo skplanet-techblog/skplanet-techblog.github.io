@@ -30,7 +30,7 @@ Tech Topic의 경우, 최근에는 **팀 및 프로젝트 단위의 성과**도 
 
 * [Syrup 디자인시스템 개발: UX-FE로의 효과적인 핸드오프](https://techtopic.skplanet.com/syrup-designsystem/) (Syrup개발팀 개발자 3명)
 * [\[AI Moment\] B2B 영상 생성, AI로 어떻게 가능해졌나](https://techtopic.skplanet.com/aimoment/) (VAS개발팀 개발자 3명)
-* 마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기 (데이터서비스개발팀 개발자 3명) 
+* [마케터를 돕는 LLM 기반 DMP - Seg Lens 시스템 개발기](https://techtopic.skplanet.com/dmp-seglens/) (데이터서비스개발팀 개발자 3명) 등 
 
 
 저희뿐만 아니라 주요 테크 기업에서는 기술 블로그 및 기술 문서 작성을 중요하게 인식하고 있으며, KPI/기술문화/기여보상 등 **다양한 방법으로 글쓰기를 장려**하고 있습니다.
