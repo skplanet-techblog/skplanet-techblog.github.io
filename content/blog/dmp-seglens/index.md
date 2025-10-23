@@ -458,12 +458,12 @@ DMP(Data Management Platform)와 CDP(Customer Data Platform)에서는 **동일�
 * 사이트별 필터링을 통한 맞춤형 추천
 
 ---
-# Seg Lens DIA 구축(1) - Architecture
+# Seg Lens DIA 구축(1) - Service Flow
 
 ![image08](./image08.png)
 
 ---
-# Seg Lens DIA 구축(2) -  Service Flow
+# Seg Lens DIA 구축(2) - 사용자 질의어 처리 예시 
 
 ![image09](./image09.png)
 
