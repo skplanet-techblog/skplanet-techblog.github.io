@@ -76,7 +76,7 @@ GitHub Copilot뿐만 아니라 (당시에는 매우 핫했던) 애니스피어�
 (https://devground2025.hanbit.co.kr/)
 
 덧. 당시 현장 분위기는 SK데보션 블로그 글을 참고하세요! 현장감이 잘 살아 있습니다 :) 
-https://devocean.sk.com/blog/techBoardDetail.do?ID=167950 <br/>
+https://devocean.sk.com/blog/techBoardDetail.do?ID=167950<br/>
 덧2. 올해 가장 핫한 연사 중 한 분인 하용호 님을 저희 테크 세미나(4분기 DTC)에 섭외하려고 했으나 국가전략회 일정 등으로 이번에는 어렵게 되었습니다. 다음 기회에 꼭 뵙기를 희망합니다 : ) 
 <br/>
 <br/>
