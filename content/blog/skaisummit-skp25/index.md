@@ -73,6 +73,7 @@ SK플래닛은 2025년에 2건의 AI 주제를 발표합니다 ~~(텔레콤, 하
 * 발표시간: 25분 (발표 20분, 질의응답 5분)
 
 ![image04-1](./image04-1.png)
+(https://www.skaisummit.com/session) 
 
 ![image04-a](./image04-a.png)
 ![image04-b](./image04-b.png)
@@ -84,6 +85,7 @@ SK플래닛은 2025년에 2건의 AI 주제를 발표합니다 ~~(텔레콤, 하
 * 발표시간: 세션당 15분 * 3개, 이후 질의응답 
 
 ![image04-2](./image04-2.png)
+(https://www.skaisummit.com/session)
 
 ![image04-3](./image04-3.png)
 
