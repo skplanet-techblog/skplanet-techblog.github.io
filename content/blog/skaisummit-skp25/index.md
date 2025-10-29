@@ -26,6 +26,7 @@ description: "SK AI SUMMIT 2025 요약정보 및 SK플래닛 발표정보"
 * 웹사이트: https://www.skaisummit.com/ 
 * Youtube: https://www.youtube.com/@skaisummit2025 <br/>
 (키노트 및 일부 발표는 라이브 스트리밍을 제공하며, 발표 후 녹화 VOD 영상도 제공합니다)
+* 참고: 예전에는 'SK Tech SUMMIT'이었음(2024년부터 AI SUMMIT으로 변경했고 장소도 워커힐 -> 코엑스에서 개최)
 
 ![image01](./image01.png)
 
