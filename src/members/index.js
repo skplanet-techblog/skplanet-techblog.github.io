@@ -31,7 +31,8 @@ import joeoriginal from "./images/joeoriginal.jpeg";
 import leesh from "./images/leesh.jpeg"
 import rhs from "./images/rhs.jpeg"
 import dsdev from "./images/dsdev.png"
-
+import songhy from "./images/songhy.jpeg"
+import leegw from "./images/leegw.jpeg"  
 
 export const MEMBERS = {
   jayoon: {
@@ -235,7 +236,19 @@ export const MEMBERS = {
    dsdev: {
     name: "김세정, 장여진, 정영우",
     team: "데이터서비스개발팀", 
-    description: "데이터를 이해하고 의도를 읽어 성과로 증명하는 데이터 서비스 개발팀입니다",
+    description: "데이터를 이해하고 의도를 읽어 성과로 증명하는 데이터 서비스 개발팀입니다.",
     thumbnail: dsdev,
+  },
+    songhy: {
+    name: "송혜영",
+    team: "Data Infrastructure팀", 
+    description: "Data Infrastructure팀에서 JS기반 FE/BE 개발 및 운영을 담당하고 있습니다.",
+    thumbnail: songhy,
+  },
+    leegw: {
+    name: "이기원",
+    team: "광고개발팀", 
+    description: "끊임없이 배우고 성장하는 개발자입니다.",
+    thumbnail: leegw,
   },
 };
