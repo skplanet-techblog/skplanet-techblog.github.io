@@ -32,9 +32,15 @@ import leesh from "./images/leesh.jpeg"
 import rhs from "./images/rhs.jpeg"
 import dsdev from "./images/dsdev.png"
 import songhy from "./images/songhy.jpeg"
-import leegw from "./images/leegw.jpeg"  
+import leekw from "./images/leekw.jpeg"  
 
 export const MEMBERS = {
+  neotf: {
+    name: "NEO TF",
+    team: "NEO TF",
+    description: "TechTopic 기술블로그를 운영하고 있습니다.",
+    thumbnail: neotf,
+  },
   jayoon: {
     name: "공자윤",
     team: "Biz플랫폼개발팀",
@@ -46,12 +52,6 @@ export const MEMBERS = {
     team: "블록체인플랫폼개발팀",
     description: "블록체인 기술과 Web3를 탐험 중인 개발자입니다.",
     thumbnail: hdy,
-  },
-  neotf: {
-    name: "NEO TF",
-    team: "NEO TF",
-    description: "TechTopic 기술블로그를 운영하고 있습니다.",
-    thumbnail: neotf,
   },
   hyuna: {
     name: "최현아",
@@ -245,10 +245,10 @@ export const MEMBERS = {
     description: "Data Infrastructure팀에서 JS기반 FE/BE 개발 및 운영을 담당하고 있습니다.",
     thumbnail: songhy,
   },
-    leegw: {
+    leekw: {
     name: "이기원",
     team: "광고개발팀", 
-    description: "끊임없이 배우고 성장하는 개발자입니다.",
-    thumbnail: leegw,
+    description: "새로운 기술을 끊임없이 배우고 성장하고자 하는 개발자입니다.",
+    thumbnail: leekw,
   },
 };
