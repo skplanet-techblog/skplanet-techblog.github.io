@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Nov 2025 03:02:43 GMT</lastBuildDate><item><title><![CDATA[증강현실 기반 마케팅 솔루션 'play AR'을 소개합니다(feat. '춘식이는 홈런왕')]]></title><description><![CDATA[안녕하세요, SK플래닛 광고개발팀 이기원입니다. 본 글에서는 우리 회사의 증강현실(Augmented Reality) 기술 기반 마케팅 플랫폼인 'play AR…]]></description><link>https://techtopic.skplanet.com/skp-playar/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-playar/</guid><dc:creator><![CDATA[leekw]]></dc:creator><pubDate>Tue, 04 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 광고개발팀 이기원입니다. 본 글에서는 우리 회사의 증강현실(Augmented Reality) 기술 기반 마케팅 플랫폼인 &lt;strong&gt;&apos;play AR&apos;&lt;/strong&gt; 의 기술을 소개하기에 앞서, 다양한 마케팅 활용 사례를 먼저 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Nov 2025 05:14:30 GMT</lastBuildDate><item><title><![CDATA[증강현실 기반 마케팅 솔루션 'play AR'을 소개합니다(feat. '춘식이는 홈런왕')]]></title><description><![CDATA[안녕하세요, SK플래닛 광고개발팀 이기원입니다. 본 글에서는 우리 회사의 증강현실(Augmented Reality) 기술 기반 마케팅 솔루션인 'play AR…]]></description><link>https://techtopic.skplanet.com/skp-playar/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-playar/</guid><dc:creator><![CDATA[leekw]]></dc:creator><pubDate>Tue, 04 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 광고개발팀 이기원입니다. 본 글에서는 우리 회사의 증강현실(Augmented Reality) 기술 기반 마케팅 솔루션인 &lt;strong&gt;&apos;play AR&apos;&lt;/strong&gt; 의 기술을 소개하기에 앞서, 다양한 마케팅 활용 사례를 먼저 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다.&lt;/p&gt;
 &lt;p&gt;가장 대표적인 최근 사례로는 카카오페이증권과 진행한 &apos;춘식이는 홈런왕!&apos; Web AR 이벤트 사례가 있으며, 그밖에도 많은 사례가 있사오니 참고하시기 바랍니다.&lt;/p&gt;
 &lt;h2&gt;1. 카카오페이증권 | 춘식이는 홈런왕!&lt;/h2&gt;
 &lt;div style=&quot;text-align:center;&quot;&gt;
@@ -663,7 +663,7 @@ Chat DIC르 보다 사용자 친화적으로 발전시켜 나갈 수 있었습�
 &lt;/ul&gt;
 &lt;p&gt;(키노트 및 일부 발표는 라이브 스트리밍을 제공하며, 발표 후 녹화 VOD 영상도 제공합니다)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;참고: 예전에는 &apos;SK Tech SUMMIT&apos;이었음(2024년부터 AI SUMMIT으로 변경했고 장소도 워커힐 -&gt; 코엑스에서 개최)&lt;/li&gt;
+&lt;li&gt;참고: 예전에는 &apos;SK Tech SUMMIT&apos;이었음(2024년부터 AI SUMMIT으로 변경했고 장소도 워커힐 -&gt; 코엑스로 변경)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
