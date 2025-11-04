@@ -1,4 +1,295 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Nov 2025 02:29:34 GMT</lastBuildDate><item><title><![CDATA[Chat DIC - 대화형 LLM 서비스의 프런트엔드 성능 개선기]]></title><description><![CDATA[이 글은 SK플래닛 Chat DIC 사내 프로젝트의 프런트엔드(Frontend) 개발 과정에서, 실시간 대화형 LLM 서비스의 특성에 맞춰 적용한 여러 기술적, 성능적 개선점을 정리한 글입니다. Chat DIC(저희는 /챗:디/라고 읽습니다)는 SK플래닛 Data Infrastructure팀에서 개발한 Text 기반의 SQL Assistant 및 Table…]]></description><link>https://techtopic.skplanet.com/chatdic-fe-blog/</link><guid isPermaLink="false">https://techtopic.skplanet.com/chatdic-fe-blog/</guid><dc:creator><![CDATA[songhy]]></dc:creator><pubDate>Sat, 01 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 SK플래닛 &lt;strong&gt;Chat DIC 사내 프로젝트의 프런트엔드(Frontend) 개발&lt;/strong&gt; 과정에서,&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Nov 2025 03:02:43 GMT</lastBuildDate><item><title><![CDATA[증강현실 기반 마케팅 솔루션 'play AR'을 소개합니다(feat. '춘식이는 홈런왕')]]></title><description><![CDATA[안녕하세요, SK플래닛 광고개발팀 이기원입니다. 본 글에서는 우리 회사의 증강현실(Augmented Reality) 기술 기반 마케팅 플랫폼인 'play AR…]]></description><link>https://techtopic.skplanet.com/skp-playar/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-playar/</guid><dc:creator><![CDATA[leekw]]></dc:creator><pubDate>Tue, 04 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 광고개발팀 이기원입니다. 본 글에서는 우리 회사의 증강현실(Augmented Reality) 기술 기반 마케팅 플랫폼인 &lt;strong&gt;&apos;play AR&apos;&lt;/strong&gt; 의 기술을 소개하기에 앞서, 다양한 마케팅 활용 사례를 먼저 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다.&lt;/p&gt;
+&lt;p&gt;가장 대표적인 최근 사례로는 카카오페이증권과 진행한 &apos;춘식이는 홈런왕!&apos; Web AR 이벤트 사례가 있으며, 그밖에도 많은 사례가 있사오니 참고하시기 바랍니다.&lt;/p&gt;
+&lt;h2&gt;1. 카카오페이증권 | 춘식이는 홈런왕!&lt;/h2&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/a43580a5fdaf7f25302fbf08b90c81d0/166a3/case_kakao.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAACKUlEQVR42k2SWW9SURSF7x/yT/g/fPLJt0ZfnY3RmGhqmpimTolT+1DRYKuhtfNASwELV8pQoAwFynCx3IE7ce/ngbbGnayzd87ZeyVn7SWpqoZumGi6hu2aeP4Az3MFBvi+h2mZ6JqGJmBZFsPwfZ+L+K8chdQ3TkWyODps8uxWkKe353jxZI3xB++5f2OK1QX5bNDzuZg1+n0a9WOUTls86Fi9GEY3gee2kTr1JJvhCAf7u7x7s8D0h3mmJma59+gTV8cm+RLYArdMW0meE/r0TZO1WJ5MvgWDDMrhQ47lu3j6ClKrHuNbMEQpu09w+SffQ59JxsLsJFO8WgqxkTjC6ZWo1bKCy8Z3UiSOy3ycfMzMcpRTq4B9MoFWe45vbCKZ/T9kdpYIzU5z+dpNLl25zvjkW4IRhTuBPEvRHKYhvmUPBKEr0EVutNmNHpBSOmj2b1qRMfIbY2CvI3luiU4ljry8SGA9ysu5FbIHKYLBeWYCc+QLRWzbRtf1f8I7Qs+vBY9sd6hAE7X2g255Hs8uIuGbtIoJtqZfU41vozfrgsChWilTLg3JLEyh2RDnex2dp7pFTzOwTFtoKlzhny1NsmyXVq1CYnOF2OoiuXSak8YJzWZTkFg4jjOyzNBeQ9uoqkq5WqUyRK02qgulI+qNuujvI1XFRTqTJpGUicZ/EdnbYzcSISIgy/KIuNfroSjKiKwjcjoeJ7MdJh8WEH2HAsVcjp6q8hcaoIayz1tTFwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;case kakao&quot; title=&quot;&quot; src=&quot;/static/a43580a5fdaf7f25302fbf08b90c81d0/f058b/case_kakao.png&quot; srcset=&quot;/static/a43580a5fdaf7f25302fbf08b90c81d0/c26ae/case_kakao.png 158w,
+/static/a43580a5fdaf7f25302fbf08b90c81d0/6bdcf/case_kakao.png 315w,
+/static/a43580a5fdaf7f25302fbf08b90c81d0/f058b/case_kakao.png 630w,
+/static/a43580a5fdaf7f25302fbf08b90c81d0/40601/case_kakao.png 945w,
+/static/a43580a5fdaf7f25302fbf08b90c81d0/78612/case_kakao.png 1260w,
+/static/a43580a5fdaf7f25302fbf08b90c81d0/166a3/case_kakao.png 1980w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h2&gt;2.스타벅스 | 체리블러썸&lt;/h2&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/04336c825d65e1305310e820d2a3ea7a/1fa90/case_starbucks.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 43.0379746835443%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAACWElEQVR42j2SWU9TURSF+2/8Ez746JsP6Bu8KCWgDIaiBlFQYkojoaAVDDNqS8OkIgEUGxERBzBi6UQLTUsl5db2tvd2oNjp83KJ7GRn55yzs85eay9NJBIhJorEYlESYoxEPE4iISlnUb0vFArk8zlySkqSTCQiICvvxXyB4yiVShSLRbUehyZyEEWKSxwpDf59gWD4jwKSJxgIENoLqU3fFqw4lmZYmZ3EoKtg2TKIRd/G8tQ0qXQal8uFIAgqqCa45SMdTfJyaYXyK7XUXr+Nzx9kuK+bYVMPciqD1XAfc1Ml5q5WLG1a1kbv0Vt/gfnedvVDSUqQyWRUNpoDb4B4ROKtbZkdkwn/+BS+3SCbz1/QWl9HKvOX2aEnGGovYTTepepaGdZHTdScPYO+4fIJbYXy/9CEFmcQt/xsbNtxvJtDcHnxedyMtWoZ0F1FSmZAkYCkTCAs8MO9yY5rg/GJcRbXPp3qeAqorT6LbWqEn24vC+urfHY5CO3uMGfUsdDfRVxZ0q5vm9XvDrwuJ96Nr4TC+/i3bOx9GUOO/yYaFZFl+YTy6Bs9tl+zOF0+Jqdf8f7DigIiE/OHOAiGEWMRzAP99PW+pkOvx1RXzqR5kLHuWzy+eZGQ34MkJ1XAXC6HJn9UIp08VERNc5hRajpDKpUipkwmJVMcyiKmqvPo6ivpbG5kvqWCpX4DQz3tPLzTgNftVqlms1k1NQkpjqB463j1drsdj8eD0+lUbSMnkwj7IbobyzA+bcHacYOR5moWJyw869TyoOYc9vWPZI9yinfj6pT/AJRsXaxN9TQrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;case starbucks&quot; title=&quot;&quot; src=&quot;/static/04336c825d65e1305310e820d2a3ea7a/f058b/case_starbucks.png&quot; srcset=&quot;/static/04336c825d65e1305310e820d2a3ea7a/c26ae/case_starbucks.png 158w,
+/static/04336c825d65e1305310e820d2a3ea7a/6bdcf/case_starbucks.png 315w,
+/static/04336c825d65e1305310e820d2a3ea7a/f058b/case_starbucks.png 630w,
+/static/04336c825d65e1305310e820d2a3ea7a/40601/case_starbucks.png 945w,
+/static/04336c825d65e1305310e820d2a3ea7a/78612/case_starbucks.png 1260w,
+/static/04336c825d65e1305310e820d2a3ea7a/1fa90/case_starbucks.png 2118w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h2&gt;3. 파라다이스시티 호텔 | 그랜드 산타 익스프레스&lt;/h2&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/09eab60fbf55d7760990f4ee1a8543ad/cad61/case_pcity.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 48.10126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACyElEQVR42k2TSU9TARRG309w5dqoO2OiIYpDcIyiqCmjgggWaH1ScYCgQilEtMq0kAhqhBbFgrW0pQMoo62IIgUplFogBhotk3NMjEpM5Ph0YTyLu7r35Ft8VxjxBxj1j+H1veT9h4/0ezw0ma2YLVZMTWZsdied3W6abU4szTaszQ7a2jtxux/jaG3B7nRKexYMjfeYm59HkK1ajTpsFYdWLqe2rpGSgrOIuzYh2x1JZvROlPt2kJG0l3MxG0iOieXUwXCy9kWQlHSQU/JEkmP3EBcZSeLmdfS43Agp27ZwIWorYkQYjffMlJeVEhcVRWpiKmJKIseVIqoslXS4n2NykUxJolKko7upoyp6F7V5co6my5FF7ad/YBihMP0ARcoYtIpI+jos9DrqKTiSgKm8mNbLmZivXsF8q4wCSWQq02KqUNF04yJtdjtVpUWUnFehv5hNYUYaoakphDuqA+SlrKcqIxz/EwceQzUNp0WM2iL6c1JpO3OSlgo1xlwVzZUVPFUreZx7kvKsTDSKNC4pldiKsrghZhD0+xH0chlaTSyDumy+jA8QGPPT1eHA1dmFy27EVl9F94OHuDvcWO824Kw30FrnJOgd5dP4BJ+lVO8+fWD23Tw/FhYQKotFSjRplKpTCI69YMr3HH1FIZWaBBqr1XRY9Riv6chTnkGblk1+nJSwpo+f337xl0X+sbi4iODydDH0ogdXXzuht6/pbW/hTlkclpIl6IvXYrheSk7+CbbLNlOruUmu4iyVF6r5/nXhn+R/hNmZOV6/mWY6NENwchJTw10UCWHEbxA4vHsp5dpC4qP3smbFMsTtycRvjGZnWDjPep9K/fXj9XoZHBxkZGSEiYkJhD8jEJDKPeojFHrDq/EADkcLNbrbGO83MdDfR6/ZxqNbBrrqGuiuqWfA6GR0aJghSfZH6JGewefzEQwG+Q00ITJ5uqacqwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;case pcity&quot; title=&quot;&quot; src=&quot;/static/09eab60fbf55d7760990f4ee1a8543ad/f058b/case_pcity.png&quot; srcset=&quot;/static/09eab60fbf55d7760990f4ee1a8543ad/c26ae/case_pcity.png 158w,
+/static/09eab60fbf55d7760990f4ee1a8543ad/6bdcf/case_pcity.png 315w,
+/static/09eab60fbf55d7760990f4ee1a8543ad/f058b/case_pcity.png 630w,
+/static/09eab60fbf55d7760990f4ee1a8543ad/40601/case_pcity.png 945w,
+/static/09eab60fbf55d7760990f4ee1a8543ad/78612/case_pcity.png 1260w,
+/static/09eab60fbf55d7760990f4ee1a8543ad/cad61/case_pcity.png 1988w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;위와 같은 사례들은 모두 Web AR 기술을 기반으로 이루어졌습니다.&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;Web AR은 기존의 Native AR(App AR)이 가진 한계를 극복하며, 사용자 접근성과 경험을 개선한 기술입니다.&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;특히, 앱 설치 없이 QR 코드 스캔만으로 AR 콘텐츠에 접속할 수 있는 Web AR은,&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;마케팅 캠페인에서 고객의 참여를 유도하고 몰입감을 높이는 데 중요한 역할을 했습니다.&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;이제 play AR이 어떻게 Web으로 개발 되었는지, 그리고 이를 통해 어떤 기술적 변화가 이루어졌는지 살펴보겠습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1&gt;Web AR 기술로의 전환 : 왜 &apos;Web&apos; AR인가?&lt;/h1&gt;
+&lt;p&gt;기술의 발전에 따라 AR(Augmented Reality, 증강현실) 기술은 단순한 호기심의 차원을 넘어서 실질적인 비즈니스 도구로 포지셔닝하고 있습니다. 특히 AR 기술은 마케팅 분야에서 고객과의 상호작용을 강화하고 브랜드 경험을 혁신하는 데 중요한 역할을 하고 있습니다. 이와 같은 흐름 속에서 SK플래닛은 AR을 활용한 마케팅 솔루션인 &apos;play AR&apos;을 선보이며 기술 발전에 발맞춰 나가고 있었습니다.&lt;/p&gt;
+&lt;p&gt;하지만 기존의 &lt;strong&gt;Native AR(App AR)&lt;/strong&gt; 은 사용자 경험을 저해하는 몇 가지 한계를 가지고 있었습니다. 개발자 입장에서는 AR 기능을 구현하기 위해 앱에 play AR SDK를 통합해야 하는 번거로움이 있었고, 사용자 입장에서는 앱 설치라는 진입 장벽이 사용자 접근성을 제한했습니다. 사용자는 AR 콘텐츠를 경험하기 위해 별도의 앱을 다운로드하고 설치해야 했으며, 이는 많은 사용자에게 부담으로 작용했습니다.&lt;/p&gt;
+&lt;p&gt;이러한 문제를 해결하기 위해 등장한 것이 바로 &lt;strong&gt;Web AR&lt;/strong&gt;입니다.&lt;br&gt;
+Web AR은 &lt;strong&gt;QR 코드 스캔만으로 간편하게 AR 콘텐츠에 접속&lt;/strong&gt;할 수 있는 환경을 제공합니다. 별도의 앱 설치 없이 브라우저를 통해 즉시 AR 경험을 시작할 수 있으며, 이는 사용자 접근성을 획기적으로 개선한 기술입니다.&lt;/p&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/553736676dfa75cc3ddef46484b423cc/191e2/app_to_web.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAACAElEQVR42i2RT0iTYRzHX0qc29KWbqwZYup0WYcWWFbCICUSD4F06BIICQVF1FFIpcBDVkQ4qE5dO3SJLtFBYxRtk63N6fa+7/ZuU/eP2gam28RDfXocPfDjuTx8nu/n95U0JYgaC6JpGqqqIssKpVKJWq1GtVqlUqmymcmhqFp9YjH5/ygoSoJkeoPNzSyJuMbW1jZSwXuXYniayIoHj+cTPt8ifv+SeBSlXE6zf6YeTmG3d9PTd4pmiw2dwYBOr8fWYefS2DhXRoYZdJ4hIz6WtlfusBufYWM9RDS2LBIui9vP6qqXVCokcH94cHuSlgMSR9usnBYQXZeTI90ncdj7cRzvpVGScLRbyefySGvfP5IILZEQupFIhHAoTCAQQBZalZ2desJ7N29gbm2j/bAZV58D1+WrjIyOMTriwmKyYGw4yECnjex+Qs+ijPdbEjm6TviHQjAQFbA06WSBcnG3Drx/a0Io99BhteDsP8HQ+UGGLl5g4Ow5od2F2WRifNhFIVdA+vI5iNezRjgY46vHj88bEtA1UskcP/O/68DJ69cwCK1jLU1C20Sz0Yi+qZFW4yE6rWZMDRK9QjkjypFiq+tCNytKKKDIGnE1JRqMoypJsdc8e3t/+fD+Hc/npnn7xo3b7WZ2Zpa5x4949mSeVwtuXi+85MXTeYq/SvwDVj2AOMNatfoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;app to web&quot; title=&quot;&quot; src=&quot;/static/553736676dfa75cc3ddef46484b423cc/f058b/app_to_web.png&quot; srcset=&quot;/static/553736676dfa75cc3ddef46484b423cc/c26ae/app_to_web.png 158w,
+/static/553736676dfa75cc3ddef46484b423cc/6bdcf/app_to_web.png 315w,
+/static/553736676dfa75cc3ddef46484b423cc/f058b/app_to_web.png 630w,
+/static/553736676dfa75cc3ddef46484b423cc/40601/app_to_web.png 945w,
+/static/553736676dfa75cc3ddef46484b423cc/78612/app_to_web.png 1260w,
+/static/553736676dfa75cc3ddef46484b423cc/191e2/app_to_web.png 1836w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;Web AR의 주요 장점&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;앱 설치 부담 해소&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Web AR은 별도의 앱 설치가 필요하지 않아, 사용자 진입 장벽을 낮추고 더 많은 고객에게 AR 경험을 제공할 수 있습니다.&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;QR 코드 스캔을 통한 간편한 접속&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;사용자는 QR 코드를 스캔하는 것만으로 AR 콘텐츠에 접속할 수 있습니다. 이는 특히 이벤트나 프로모션에서 고객의 참여를 유도하는 데 효과적입니다.&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt;앱 통합 및 배포 부담 없는 맞춤형 환경 제공&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Web AR은 별도의 앱 내 SDK 통합이나 배포 없이도 다양한 환경에서 고객 맞춤형 경험을 제공할 수 있습니다.&lt;br&gt;
+예를 들어, 특정 브랜드의 로고나 이미지를 활용한 AR 콘텐츠를 제작하여, QR 코드 스캔만으로 간편하게 접근할 수 있는 유연한 솔루션을 제공합니다.&lt;/p&gt;
+&lt;h2&gt;Web AR 전환으로 인한 성능 이슈와 해결 방안&lt;/h2&gt;
+&lt;p&gt;Native AR은 ARKit(iOS)나 ARCore(Android)와 같은 플랫폼의 네이티브 API를 활용하여 디바이스의 하드웨어 가속을 최대한 활용할 수 있습니다.
+반면, Web AR은 브라우저 엔진과 JavaScript의 한계로 인해 성능 저하가 발생할 가능성이 있습니다.&lt;/p&gt;
+&lt;p&gt;이러한 성능 이슈를 해결하기 위해 다양한 &lt;strong&gt;최적화 전략&lt;/strong&gt;을 적용하여 Web AR에서도 원활한 사용자 경험을 제공할 수 있도록 개선하였습니다.&lt;/p&gt;
+&lt;h3&gt;AR 성능 최적화 전략&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;3D 모델 및 콘텐츠 최적화&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;웹 친화적인 경량화된 3D 모델 포맷(GLTF/GLB)을 활용하여 로딩 속도를 개선하고 렌더링 성능을 최적화하였습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;WebGL 기반의 렌더링 최적화&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;쉐이더 최적화: 복잡한 조명 계산과 쉐이더 로직을 간소화하여 GPU 부하를 줄이고 렌더링 성능을 개선하였습니다.&lt;/li&gt;
+&lt;li&gt;프레임 속도 조정: 디바이스 성능에 따라 프레임 속도를 동적으로 조정하여 저사양 디바이스에서도 원활한 AR 경험을 제공하였습니다.&lt;/li&gt;
+&lt;li&gt;마커 기반 추적 활용: 복잡한 피처 추적 대신 마커 기반 추적 방식을 사용하여 계산 부담을 줄였습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SPA 구조 구현&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;페이지의 전환 없이 AR 콘텐츠를 빠르게 로드할 수 있도록 SPA 구조로 설계하고, 컴포넌트 기반 구현을 통해 AR 콘텐츠를 컴포넌트 단위로 분리하여 필요한 부분만 로드하고 렌더링하도록 최적화 하였습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;사용자 경험 최적화&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그레시브 로딩과 애니메이션을 활용하여 로딩 상태를 시각적으로 표시하고, 초기 로딩 시간을 단축하며 콘텐츠를 단계적으로 제공함으로써 사용자 경험을 한층 개선하였습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;이를 통해 앱 설치 없이도 Native AR에 가까운 품질의 AR 경험을 제공하며, 사용자 접근성과 만족도를 동시에 향상시켰습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Web AR의 기술 스택&lt;/h1&gt;
+&lt;p&gt;Web AR은 최신 기술 스택을 활용하여 강력하고 유연한 AR 경험을 제공합니다.&lt;br&gt;
+주요 기술 스택은 다음과 같습니다:&lt;/p&gt;
+&lt;h2&gt;1. WebRTC(Web Real-Time Communication)&lt;/h2&gt;
+&lt;p&gt;WebRTC는 브라우저 간의 실시간 통신을 가능하게 하는 기술로, Web AR에서 카메라 피드를 실시간으로 스트리밍하는 데 사용됩니다. 아주 간단한 코드로 디바이스의 비디오 및 오디오를 스트리밍 할 수 있습니다:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;playVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;videoElement&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; constraints&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 1. 카메라 및 마이크 접근, constraints 예시: { video: true, audio: true }&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; stream &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; navigator&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mediaDevices&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getUserMedia&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;constraints&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 2. 화면에 표시&lt;/span&gt;
+    videoElement&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;srcObject &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; stream&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; stream&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Media access error:&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; error&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; error&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;2. A-Frame&lt;/h2&gt;
+&lt;p&gt;Web AR의 메인 프레임워크로, 3D 콘텐츠를 웹 환경에서 구현합니다. A-Frame은 WebGL이나 Three.js에 대한 전문지식 없이도 간단한 HTML 태그를 사용하여 복잡한 3D 장면을 쉽게 구성할 수 있도록 지원합니다.&lt;br&gt;
+A-Frame의 기본 코드 구조는 다음과 같습니다:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a-scene&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a-box&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;-1 0.5 -3&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;rotation&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;0 45 0&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;#4CC3D9&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a-box&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a-sphere&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;0 1.25 -5&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;1.25&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;#EF2D5E&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a-sphere&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a-cylinder&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;1 0.75 -3&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;0.5&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;1.5&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;#FFC65D&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a-cylinder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a-plane&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;0 0 -4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;rotation&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;-90 0 0&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;#7BC8A4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a-plane&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a-sky&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;#ECECEC&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a-sky&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a-scene&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 코드를 실행하면, 다양한 3D 오브젝트(박스, 구, 원기둥 등)가 배치된 장면을 렌더링할 수 있습니다.&lt;br&gt;
+A-Frame은 이러한 간단한 코드만으로도 직관적이고 풍부한 3D 환경을 구현할 수 있는 도구입니다.&lt;/p&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/be7ef01c7d22e42d33db36d94f1ac94d/61583/aframe_example_.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABk0lEQVR42p2Ryy9jcRTH/SE28x+InUckLEk0EzIWSCaRWMyYhK3FsEAsJDbe45WQiExHEczcqqjHeMSjZJIRFpQieh+9dXulLW0/7lUWGhV1kpOT3znn+/l9k5PGCxEOhwmFQknTnCeLtMRGLBZDVVVEUUSSJCSvF+nKG6/G2+yb85SBplg2gbqGFLxBDurIimz03wl8cKhdo86tEqhtR/xhQ5KNjxQ/fv91ikCfD0UzhOt7BHOqCWZX4flg4dz6C8V/iipevB2ICVR8eAIaRxOLeDIqucj8zGFuCQF7BbqjjCvX0ONu9HVg7LH2H5zx6c8WRZPL1DT2sJZeyEKBBX2lEl2w4N3uSw3Y4Dohc1Qga3CK/BEb37tbafvZwo2zAk34yPl279uA8aU76nf+kz3mJGdgluLxCeo2Rmle6iS0WA7zxbiWW4g8s/AC8GkUid7SsD5D3piVUusQX4Ruvgmd1Ni76HA0Yfv9leHVngTVKw6jxlE2Lw+wH+/gPNtlwb2Lw+16yDn3P6ZP9vl7eZT0yvdbHCaQh99ctQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;aframe example&quot; title=&quot;&quot; src=&quot;/static/be7ef01c7d22e42d33db36d94f1ac94d/f058b/aframe_example_.png&quot; srcset=&quot;/static/be7ef01c7d22e42d33db36d94f1ac94d/c26ae/aframe_example_.png 158w,
+/static/be7ef01c7d22e42d33db36d94f1ac94d/6bdcf/aframe_example_.png 315w,
+/static/be7ef01c7d22e42d33db36d94f1ac94d/f058b/aframe_example_.png 630w,
+/static/be7ef01c7d22e42d33db36d94f1ac94d/40601/aframe_example_.png 945w,
+/static/be7ef01c7d22e42d33db36d94f1ac94d/78612/aframe_example_.png 1260w,
+/static/be7ef01c7d22e42d33db36d94f1ac94d/61583/aframe_example_.png 1616w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;3. AR.js&lt;/h2&gt;
+&lt;p&gt;AR 기능을 강화하는 라이브러리로, 다양한 AR 경험을 제공합니다.&lt;br&gt;
+특히, A-Frame과 완벽히 호환되어 Web AR 환경에서 손쉽게 통합 및 활용할 수 있다는 장점이 있습니다.&lt;br&gt;
+&lt;strong&gt;Location Based(위치 기반)&lt;/strong&gt;, &lt;strong&gt;Image Tracking(이미지 추적)&lt;/strong&gt;, &lt;strong&gt;Marker Based(마커 기반)&lt;/strong&gt; 기능 등을 지원하며,&lt;br&gt;
+실제로 이를 통해 play AR의 다양한 기능들이 구현되었습니다.&lt;br&gt;
+예를 들어, 이미지 스캐닝형 템플릿이나 위치 기반 도슨트 템플릿과 같은 기능들이 AR.js를 활용해 개발되었습니다.&lt;/p&gt;
+&lt;h2&gt;4. Vue.js&lt;/h2&gt;
+&lt;p&gt;페이지 전환 없이 AR 콘텐츠를 구동할 수 있도록 &lt;strong&gt;SPA(단일 페이지 애플리케이션)&lt;/strong&gt; 구조를 지원합니다.&lt;br&gt;
+Vue.js는 컴포넌트 기반 개발 방식을 통해 템플릿을 기반으로 한 개발 최적화를 실현하며, 유지보수성과 확장성을 보장합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;템플릿 기반 구조와 기능&lt;/h1&gt;
+&lt;p&gt;Web AR은 템플릿 기반으로 설계되어 있어, 간단한 백오피스 설정만으로도 다양한 AR 경험을 손쉽게 제공할 수 있습니다.&lt;br&gt;
+주요 특징은 다음과 같습니다:&lt;/p&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/dface817aa5368a178952fa8f22f0bda/91a65/ar_struct.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 29.746835443037973%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVR42pWRP0sDQRDFL2Xubvd2Z3dm7191Igl3uRz4PWxtrVKJlTZ+AbHSzsIirYVga5NGG1F78WvEJsFE1r0TrCTowCuGx/sxj/Ekl3uazI0kPpVCThmLrsMwPPG+p+f9d0DoM0qMzVJYGYI1CLCc8/vOA+BKqUFRFNutGGMDt6cbgTJSp9qQJSMXSGKpItUCH1pvR/sTiMmWVbVqxuMPE8dWQ3jXeiMZHEmDr2VVvhiiZ5d5Q2THHRCJbKxhQSCWIhLWXdJdWIK/DwY/R3X9Xtf1PHZApdht621JfyIRH4flcIYaZy7zhMgPusoqI2tcZVBiLaLop3KSJD5kWd40TZbnedbvQ56mTG2sLJjY5cCvJIbnDnQRBMGl0+EfntL7TV9B1kC649diOAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;ar struct1&quot; title=&quot;&quot; src=&quot;/static/dface817aa5368a178952fa8f22f0bda/f058b/ar_struct.png&quot; srcset=&quot;/static/dface817aa5368a178952fa8f22f0bda/c26ae/ar_struct.png 158w,
+/static/dface817aa5368a178952fa8f22f0bda/6bdcf/ar_struct.png 315w,
+/static/dface817aa5368a178952fa8f22f0bda/f058b/ar_struct.png 630w,
+/static/dface817aa5368a178952fa8f22f0bda/40601/ar_struct.png 945w,
+/static/dface817aa5368a178952fa8f22f0bda/78612/ar_struct.png 1260w,
+/static/dface817aa5368a178952fa8f22f0bda/91a65/ar_struct.png 2476w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/a6cf0b4bf51a13cc4776426472acc82e/5ba90/ar_struct2.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvUlEQVR42o2SSY7bMBBFvY5YRcocRA2URNnt3P80vcgBYsBc5ALNn/LQgQ2kkSweilUgfo0759O5t8tZayXQDWPo3Lb04j/zGSf6w0+lVBH7vhtURG4yttliXQl2z4gdYxgYwd+JUWxH6IQYCSEQnCOIwCf1aq+iu2E/1cxbXWkVm+vSrHVulprEn7X43yTebDVQrI2iqhpB3XkIXfl4CF920Y6YzYqVFkw0IVJEzxFR93eox0CDxHow6+eq/l6hjvJxWaSNBX7fw7GF54C9trDKit3DkpO4g9bm34LWOMy8oN8npHbBrBJGHqGlmoYa+aygHnwh9iro2oDESURnJDNL6yusdiJAYOIX/ksw2IiNtxtHdcRJfZf3EUub8SZ+powDHbDRJu27ryp9atmGmvRcRxrrzFNN7VgneU8q1UGszK965asnXw21lW7b5coPrmKS5OOR6LIzcUBzzOCUMfURxxPh7aSQvMcqIxjtgJVXJJLZmgmrznIVy42DOmCQ2cuyJJmRK2DZcj8WlXPhGAt3XbGtK33k0o+qjFGXrlPFa1dCE4ozvnTcFbmCIsssQclbh6t/CSr80qb98RvM0wZ159xMVAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;ar struct2&quot; title=&quot;&quot; src=&quot;/static/a6cf0b4bf51a13cc4776426472acc82e/f058b/ar_struct2.png&quot; srcset=&quot;/static/a6cf0b4bf51a13cc4776426472acc82e/c26ae/ar_struct2.png 158w,
+/static/a6cf0b4bf51a13cc4776426472acc82e/6bdcf/ar_struct2.png 315w,
+/static/a6cf0b4bf51a13cc4776426472acc82e/f058b/ar_struct2.png 630w,
+/static/a6cf0b4bf51a13cc4776426472acc82e/40601/ar_struct2.png 945w,
+/static/a6cf0b4bf51a13cc4776426472acc82e/78612/ar_struct2.png 1260w,
+/static/a6cf0b4bf51a13cc4776426472acc82e/5ba90/ar_struct2.png 1604w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;렌더링 컴포넌트 설계 및 이벤트 관리&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각각의 역할을 담당하는 오브젝트 렌더링 컴포넌트는 컴포넌트 특성에 맞는 필수 기능만을 포함하도록 설계되었습니다.  공통 기능은 Vue.js의 이벤트 버스를 활용하여 부모 컴포넌트(템플릿)에서 템플릿 특성에 따라 유연하게 설정할 수 있도록 개발되었습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;템플릿 기반 AR 구동&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;템플릿 컴포넌트는 각각의 렌더링 컴포넌트를 조합하고, 필요한 이벤트를 선언하여 AR 콘텐츠를 구동하는 역할을 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1&gt;play AR의 주요 이벤트 시나리오&lt;/h1&gt;
+&lt;p&gt;play AR은 다양한 이벤트 시나리오를 지원하여, AR 기술을 활용한 몰입감 있는 사용자 경험을 제공합니다.&lt;br&gt;
+아래는 play AR에서 구현 가능한 주요 이벤트 템플릿과 그 특징들입니다:&lt;/p&gt;
+&lt;h2&gt;1. &lt;strong&gt;아이템 캐치형 이벤트&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;AR 상에서 특정 아이템을 찾아 캐치하면 혜택을 제공하는 방식입니다.&lt;br&gt;
+사용자는 AR 환경에서 떠다니는 아이템을 터치하거나 특정 위치에서 수집하며, 이를 통해 쿠폰, 포인트, 경품 등의 보상을 받을 수 있습니다.&lt;/p&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/9932f4918088cba220ecdd55e8ef0686/62a6a/template_basic.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 31.0126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABy0lEQVR42g2RW0uTAQBAvx/QPSF6ih76AT2GiIRQVMToittUprMYPc2YI9A9pLh0Nos53aXdvtnc3Pd929wNrGE2xxYSlrIt6UKsCdFF8aXn037BOYcjHFSbfJzMsjW8xF/lPamIwkT/CGPdJgqxJJvFBmO9GeaNFV5aS4geiWvtOlSdeuzjHrzPAxh71Axp7xBwigi/t2vEzBMYurQsOIIsR2Qq0ncK/hohd4j95gGP9BbOn+vEOGgh7FvgTNtZTh0+jUFvIhmdZC9/iF+5o8iLMwifv+xQTGaRPCEkMU1KTvLOVWXVtkFMlPn5o8HI8EOuXL/E1BML+eUEzwbNvPElSSwmSMUfs/fVT3PLweucA2Hn0weiaQm3Y4a1fIZkIsOfwCoN5wopJUetWqfvlhqNVk0+myPk83O34zIm3QNcs35W0tM0qhG2y3OsvXIhlNYLBEUv9/rV2K0WxFaS3KIH7SK+eS/F0jr3Nd309umJprJM22ycOHaE420nGTKPEvZYeBttp7jU0bKdRfi3v0e9skk5mGO3XEdRZAw6AwOqHrJxhW/VXdyjaawDCuGpAtGwhKpLw9ULap6Oz/HCGeTGxZvcbj0QPXH+A6PCSfHJh2GIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;template basic&quot; title=&quot;&quot; src=&quot;/static/9932f4918088cba220ecdd55e8ef0686/f058b/template_basic.png&quot; srcset=&quot;/static/9932f4918088cba220ecdd55e8ef0686/c26ae/template_basic.png 158w,
+/static/9932f4918088cba220ecdd55e8ef0686/6bdcf/template_basic.png 315w,
+/static/9932f4918088cba220ecdd55e8ef0686/f058b/template_basic.png 630w,
+/static/9932f4918088cba220ecdd55e8ef0686/40601/template_basic.png 945w,
+/static/9932f4918088cba220ecdd55e8ef0686/62a6a/template_basic.png 1122w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;2. &lt;strong&gt;이미지 스캔형 이벤트&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;AR 카메라를 통해 특정 이미지를 찾아 스캔하면 혜택을 제공하는 방식입니다.&lt;br&gt;
+예를 들어, 브랜드 로고나 특정 상품의 이미지를 스캔하면, 관련된 AR 콘텐츠가 활성화되거나 보상이 제공됩니다.&lt;/p&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/cc23ca0f2ae3a237c334af19a1a82665/ef6b9/template_scan.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 48.734177215189874%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC4UlEQVR42h2SaUiTARyH35ISXdqmLSceWea8a26Spdg+hKadVK43O8y3ld0HBEFEkR3SpaZdW+kqNJtYQQdB2PWhYxbYwtY0C6Wo5lFJmbiont78+vvDD57/7xH2FR/gRMVx6mprsVptWKxVDA4O0tHZickkIooikiRRsFJisZhPa1vb0H2VeS05s/MwLSkkTzSTM2shd+/dRVi4VGLztq0cO1zCvv2H2bO3hJ8DA7hcLiLHRzNRG4tel4wuxYA2NoHm5ma+9Q0wN9eA7WAw9tIIbp+NZI0YwoWaBoTwsChS9FMZM1ZDqCaMeQvMcqEXp9OJcnSQnIcy0i8AhUJBiCZqKPd4vmOaH8PfjggGr6qgQ01lSZhMZ0dIClMzQZtMqiENZXAE6RmZ/Ojvp9XVwq5zdk49fIml0YH1oZPdtTd54Wymp/sHW/KjaayO4sgOIzesUziwJZDT1hqETBln+uRoxKwYUuPUxMcl8qXbg/u1G7v7HVdetFJ7/Q72l+1cfvuB58+e4un+ybaCOBobCimrusOta6UUrx9OReU5hLT4iRTlTaVwXhrLZ+vQJSXR2/UJl7udvedrOGGr4Kj1EmfsFortV3nW5KCrZwBpURTedwfxtrbDHzeHtmuoKD+DEByoJEsXjylzGjPTUknQamWkLl61uPDz9SdcPQZ9YiKx48bhO8KXJsdjPHJhXk4ov96X8/XtR/jdyZGdkygrrZRHUSnJmKAhNy6c//8cHxlJl+czr+WVlYpRjB3lR3igPyEB/vgM8+Hpk0f09PaTP0dLryOJj02z+NueTfE6H8rKLAjpBj1GYxa52dkYJqcw05hBX18frlctqINUqILUaEI0qJQqAvz9cDgc9Muj6ZNj0CcomJGuxjhFtiFQoLrahlBafpK6unrq6xuosl3EcvY8Xq93SOylywswm9dQVLRWFnk1S5atoO3NmyGxi9ZvQsyXkMwbWSltYO6Cxdy//4B/ZOHjVz6+nhwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;template scan&quot; title=&quot;&quot; src=&quot;/static/cc23ca0f2ae3a237c334af19a1a82665/f058b/template_scan.png&quot; srcset=&quot;/static/cc23ca0f2ae3a237c334af19a1a82665/c26ae/template_scan.png 158w,
+/static/cc23ca0f2ae3a237c334af19a1a82665/6bdcf/template_scan.png 315w,
+/static/cc23ca0f2ae3a237c334af19a1a82665/f058b/template_scan.png 630w,
+/static/cc23ca0f2ae3a237c334af19a1a82665/ef6b9/template_scan.png 832w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;3. &lt;strong&gt;포토형 이벤트&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;사용자가 3D 오브젝트와 함께 사진을 촬영한 뒤, 이를 SNS에 공유하거나 현장에서 인화할 수 있는 이벤트 방식입니다.&lt;br&gt;
+예를 들어, play AR에서 제공하는 3D 오브젝트 캐릭터, 스티커, 배경 등을 활용해 사진을 찍고, 이를 공유하면 추가적인 혜택을 받을 수 있습니다.&lt;/p&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/46692fd965981a966cf8cda273b1301a/339e3/template_photo.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 36.075949367088604%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3klEQVR42i2R32tSARTH71/VQxBB0EMQvQTBiPUSQbBaG/UQFEIRe6gJMoTCMBflFAp1jBq0RS2VEnXakE3NzZ9X7/R6r1ev3uXUT3d3HTgP58P3ezg/BMPoorRExIaKKClMJhOGR0M0Xaep92hpGnrfMDkMj0f0DANjeExb1TiJwdEIqTVAVgzkdhdBrWxQzfrJlXskC03GkzG6rNJKJOj9iCIm4rQ7PcvscvtZeOHmlTtAZq9gsa2tOL5lJ3bna3yrYYRGrcxLpwOvY4H9TJ6RKerWD1FNU9r2nIbnM2q3b5nn7z7m2qUppqdmicV/W2xjfRPP4hz3b9/A8zaAEHzv5eHNy2x/nCEVCVoiXZZR34ToOJYR331C6eoWf3rnFtfPn2X64gWSiW2L+QNfePDEhn3RzofgJkI4GmLNO0/h6xy/YqcN+wONaPgbriUPqZVVtN7phEuzM9jOneHZ1SvsJFMWC8QPubcu8sgVxRf6iVCWJdLZGLnYd3LpXcYnh5Y75CJxViIxUrEUmqYzMr+S3d2hmt/joGBmuWo1FOt98vm/5DId8jkJodlSOKiolMUO+8Wq9WV9YFCqSNRrCn9KNbT/K1dEiWJVoVCqU5daFmvKbQ7MulxrUqyI/AOZId9IwIwniAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;template photo&quot; title=&quot;&quot; src=&quot;/static/46692fd965981a966cf8cda273b1301a/f058b/template_photo.png&quot; srcset=&quot;/static/46692fd965981a966cf8cda273b1301a/c26ae/template_photo.png 158w,
+/static/46692fd965981a966cf8cda273b1301a/6bdcf/template_photo.png 315w,
+/static/46692fd965981a966cf8cda273b1301a/f058b/template_photo.png 630w,
+/static/46692fd965981a966cf8cda273b1301a/40601/template_photo.png 945w,
+/static/46692fd965981a966cf8cda273b1301a/339e3/template_photo.png 977w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;4. &lt;strong&gt;도슨트형 이벤트&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;GPS 기반으로 특정 위치를 안내하고, 해당 위치에 도달하면 AR 콘텐츠가 활성화되어 혜택을 제공하는 방식입니다.&lt;br&gt;
+예를 들어, 사용자가 특정 장소에 도착하면 AR 도슨트가 해당 장소의 정보를 제공하며, 미션 완료 시 보상을 받을 수 있습니다.&lt;/p&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/85132ff7e6ccee6fc148bb3b7741c784/59000/template_docent.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 38.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPElEQVR42jWRXUiTcRSH390IUbcF3QiJF+WFkR9JEJQoSTS01dKZ6ZY0JWhRkGHpUjQyJxpS5IWkJVjokER9dV+uOScaZSQaVs5KXClT82Ppms2e1rs68IcDD8/vnD9HmP1kwzo2hvXlIibzMt+X/Pyt31ub+L0jjL93IL6ZwuxaZXhojWAwGOaBZfwLQ4xOj2EZm6ffFcD9MYDQ1vGQ+z0mKpttPHk6gu9HONC3ukTXs2pEayuNfd1UPeijudVFcCscODP9lju3srhdp6e0rgGdrobnHTaEm/pKWrrs1BstDE64+V9Tbje5hYW8GG3E8aqB9q5HtLYZ2fwVkLjYKyKTCURFRxMbd4B9MXsxGO4iZGu0XC4uIjNTybXrJSwsLkrC5y8eivRliEN6TM4GmloqMFTVsLGxLnHX4CA7d2zjcHwMJ9JTKdAVYjS2IxzRXiRdq+O4PIPzWSrmPbOS4F3wckl3gwdNJVhe69FdKeZqcSlrPp/EBwacyAQZEaEtd22PCPUCao0GYXdUFDFx8aQrMtHk5zE5OS4Jc3Pz5GouoDilIk9dgDxDyVl1PisrKxJ3Ol0kJR0iOTmFlNQ0EhIOUl5egRC5J5KY2P3kqrUkJibR09MtCR6PB6Uqm6NpcpJDL+WYnDOqHJb/BQ6GvnxSoQgNzSfnnBrl6Sxqa+8hlJlFDGYbj0U7naZePN++SsK630ej00yF3U5try10OAsDw0P8DISPMuOdpaZfpNrhoL7TTEeflYkP7/gDndXMlM/hby0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;template docent&quot; title=&quot;&quot; src=&quot;/static/85132ff7e6ccee6fc148bb3b7741c784/f058b/template_docent.png&quot; srcset=&quot;/static/85132ff7e6ccee6fc148bb3b7741c784/c26ae/template_docent.png 158w,
+/static/85132ff7e6ccee6fc148bb3b7741c784/6bdcf/template_docent.png 315w,
+/static/85132ff7e6ccee6fc148bb3b7741c784/f058b/template_docent.png 630w,
+/static/85132ff7e6ccee6fc148bb3b7741c784/59000/template_docent.png 917w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;템플릿 시나리오뿐만 아니라 play AR의 기반 기술을 활용하여 요구사항에 맞게 커스터마이징이 가능하며, 따라서 실무자는 다양한 캠페인에 활용할 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1&gt;마무리하며&lt;/h1&gt;
+&lt;p&gt;SK플래닛의 Web AR 기술 기반 &apos;play AR&apos;은 앱 설치 없이 QR 스캔만으로 AR 경험을 제공해 접근성과 몰입도를 높인 마케팅 솔루션으로, 다양한 템플릿을 통해 브랜드 캠페인을 유연하게 구현하며 다양한 협업 사례를 구축한 사례입니다.
+앞으로도 기술 기반 장점을 잘 활용하여 사업 효과까지 연결할 수 있는 다양한 사례를 발굴하도록 하겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chat DIC - 대화형 LLM 서비스의 프런트엔드 성능 개선기]]></title><description><![CDATA[이 글은 SK플래닛 Chat DIC 사내 프로젝트의 프런트엔드(Frontend) 개발 과정에서, 실시간 대화형 LLM 서비스의 특성에 맞춰 적용한 여러 기술적, 성능적 개선점을 정리한 글입니다. Chat DIC(저희는 /챗:디/라고 읽습니다)는 SK플래닛 Data Infrastructure팀에서 개발한 Text 기반의 SQL Assistant 및 Table…]]></description><link>https://techtopic.skplanet.com/chatdic-fe-blog/</link><guid isPermaLink="false">https://techtopic.skplanet.com/chatdic-fe-blog/</guid><dc:creator><![CDATA[songhy]]></dc:creator><pubDate>Sat, 01 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 SK플래닛 &lt;strong&gt;Chat DIC 사내 프로젝트의 프런트엔드(Frontend) 개발&lt;/strong&gt; 과정에서,&lt;br&gt;
 실시간 대화형 LLM 서비스의 특성에 맞춰 적용한 여러 기술적, 성능적 개선점을 정리한 글입니다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://techtopic.skplanet.com/chatdic-ai-text2sql/&quot;&gt;&lt;strong&gt;Chat DIC&lt;/strong&gt;&lt;/a&gt;(저희는 /챗:디/라고 읽습니다)는 SK플래닛 Data Infrastructure팀에서 개발한 &lt;strong&gt;Text 기반의 SQL Assistant 및 Table 메타 검색 시스템&lt;/strong&gt;입니다.
 이 글에서는 Chat DIC의 프런트엔드에 도입된 기술 중 주요 항목을 소개합니다.&lt;/p&gt;
