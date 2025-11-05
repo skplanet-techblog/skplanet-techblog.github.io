@@ -1,9 +1,9 @@
 ---
-title: "증강현실 기반 마케팅 솔루션 'play AR'을 소개합니다(feat. '춘식이는 홈런왕')"
+title: "play AR: Web AR 기술을 적용한 증강현실 기반 차세대 마케팅 솔루션(feat. '춘식이는 홈런왕')"
 date: "2025-11-04"
-tags: [ "Augmented Reality", "A-Frame", "WebRTC", "Web AR", "play AR", "증강현실", "마케팅 솔루션" ]
+tags: [ "Augmented Reality", "Web AR", "A-Frame", "WebRTC", "play AR", "증강현실", "마케팅 솔루션" ]
 author: "leekw"
-description: "play AR: 증강현실 기반 차세대 마케팅 솔루션"
+description: "play AR: Web AR 기술을 적용한 증강현실 기반 차세대 마케팅 솔루션"
 ---
 
 안녕하세요, SK플래닛 광고개발팀 이기원입니다. 본 글에서는 우리 회사의 증강현실(Augmented Reality) 기술 기반 마케팅 솔루션인 **'play AR'** 의 기술을 소개하기에 앞서, 다양한 마케팅 활용 사례를 먼저 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다. 
