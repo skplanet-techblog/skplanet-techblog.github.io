@@ -1,22 +1,27 @@
 ---
-title: "play AR: Web AR 기술을 적용한 증강현실 기반 차세대 마케팅 솔루션(feat. '춘식이는 홈런왕')"
+title: "play AR: SK플래닛의 Web AR 기반 마케팅 솔루션(feat. '춘식이는 홈런왕')"
 date: "2025-11-04"
 tags: [ "Augmented Reality", "Web AR", "A-Frame", "WebRTC", "play AR", "증강현실", "마케팅 솔루션" ]
 author: "leekw"
-description: "play AR: Web AR 기술을 적용한 증강현실 기반 차세대 마케팅 솔루션"
+description: "play AR: SK플래닛의 Web AR 기술을 적용한 증강현실 기반 차세대 마케팅 솔루션"
 ---
 
-안녕하세요, SK플래닛 광고개발팀 이기원입니다. 본 글에서는 우리 회사의 증강현실(Augmented Reality) 기술 기반 마케팅 솔루션인 **'play AR'** 의 기술을 소개하기에 앞서, 다양한 마케팅 활용 사례를 먼저 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다. 
+안녕하세요, 광고개발팀 이기원입니다. 본 글에서는 SK플래닛의 Web AR(Augmented Reality) 기술 기반 마케팅 솔루션인 **'play AR'** 의 기술을 도입한 배경과 특징을 소개하며, 이와 함께 다양한 마케팅 활용 사례를 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다. 
 
+# Web AR & play AR이란? 
+
+Web AR(Web-based AR)은 앱 기반의 Native AR과 대비되는 개념으로, 브라우저 상에서 AR(증강현실)을 제공할 수 있는 기술입니다. 특히 WebXR 표준 지원이 Chrome·Safari 등 주요 브라우저에 확대되면서 **앱 설치 없이도 AR(증강현실)**을 제공이 가능하다는 특징이 장점으로 부각되어, 마케팅/이커머스 분야에서 특히 주목받고 있습니다. <br/>
+당사는 이 기술을 적용한 마케팅 솔루션인 play AR을 개발, 아래와 같이 다양한 마케팅 이벤트에 적용하여 성과를 거두었습니다. 
+<br/><br/>
 가장 대표적인 최근 사례로는 카카오페이증권과 진행한 '춘식이는 홈런왕!' Web AR 이벤트 사례가 있으며, 그밖에도 많은 사례가 있사오니 참고하시기 바랍니다. 
-
+<br/><br/>
 ## 1. 카카오페이증권 | 춘식이는 홈런왕!
 <div style="text-align:center;">
   <img style="height: 400px;" src="./img/case_kakao.png" alt="case kakao">
 </div>
 <br />
 
-## 2.스타벅스 | 체리블러썸
+## 2. 스타벅스 | 체리블러썸
 <div style="text-align:center;">
   <img style="height: 400px;" src="./img/case_starbucks.png" alt="case starbucks">
 </div>
