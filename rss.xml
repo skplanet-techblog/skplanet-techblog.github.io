@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Nov 2025 01:05:30 GMT</lastBuildDate><item><title><![CDATA[소소한 언플러그드 개발자 도서관 '테미도' 이야기]]></title><description><![CDATA[안녕하세요 오랜만에 Joe!입니다. 개발자 하면 책! 은 떨어질래야 떨어질 수 없는 것 같습니다.  판교 SK…]]></description><link>https://techtopic.skplanet.com/tech-library/</link><guid isPermaLink="false">https://techtopic.skplanet.com/tech-library/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Fri, 07 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 오랜만에 Joe!입니다.&lt;/p&gt;
-&lt;p&gt;개발자 하면 책! 은 떨어질래야 떨어질 수 없는 것 같습니다.  판교 SK플래닛의 개발자-엔지니어분들도 그러한데요. 이번 글은 기술조직 내 작은 &apos;언플러그드&apos; 테크 미니 도서관을 열고 운영을 시작한 이야기입니다. 편하게 보아주세요~&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Nov 2025 01:16:41 GMT</lastBuildDate><item><title><![CDATA[소소한 언플러그드 개발자 도서관, '테미도' 이야기]]></title><description><![CDATA[안녕하세요 오랜만에 Joe!입니다. 개발자 하면 책! 은 떨어질래야 떨어질 수 없는 것 같습니다.  판교 SK…]]></description><link>https://techtopic.skplanet.com/tech-library/</link><guid isPermaLink="false">https://techtopic.skplanet.com/tech-library/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Fri, 07 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 오랜만에 Joe!입니다.&lt;/p&gt;
+&lt;p&gt;개발자 하면 책! 은 떨어질래야 떨어질 수 없는 것 같습니다.  판교 SK플래닛의 개발자-엔지니어분들도 그러한데요. 이번 글은 &lt;strong&gt;기술조직 내 &apos;언플러그드한&apos; 개발자 미니 도서관을 열고 운영을 시작한 이야기&lt;/strong&gt;입니다. 편하게 보아주세요~&lt;/p&gt;
 &lt;h1&gt;도입 계기는&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;원래 스탭 부서(기술지원팀)에서 사내 교육기획을 위해 개발도서를 업무용도로 담당자가 구입하고 있었습니다. AI(프로덕트 개발, 코딩툴, 자동화), 개발, 데이터, 인프라, 기술문화, PM, 교육/조직, 글쓰기/말하기 등 다양한 주제의 책을 구입했고 조금씩 &apos;쌓여&apos;가고 있었는데요.&lt;/p&gt;
@@ -97,7 +97,7 @@
     &lt;/span&gt;
 (초기 테미도의 모습 - 지금은 더 좋은 책꽂이로 이전 중 ㅎㅎ)&lt;/p&gt;
 &lt;br/&gt;
-&lt;h1&gt;3. 느슨한 사내 홍보&lt;/h1&gt;
+&lt;h1&gt;느슨한 사내 홍보&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;신간 안내는 매월 초 이메일로 홍보를 진행하고 있으며, &lt;br/&gt;
 추천도서 소개는 매월 진행하는 사내 기술조직 뉴스레터를 통해 진행 중입니다(&apos;테미도를 통해 대출 가능합니다&apos; 라는 문구를 빼먹지 않음!) &lt;br/&gt;
@@ -137,12 +137,12 @@
     &lt;/span&gt;
 (뉴스레터 문구 일부입니다)&lt;/p&gt;
 &lt;br/&gt;
-&lt;h1&gt;4. 2.5개월 운영 결과 (8월-11월 첫주 &amp;#x26; 추석연휴)&lt;/h1&gt;
+&lt;h1&gt;2.5개월 초기 운영 결과 (8월-11월 첫주 &amp;#x26; 추석연휴)&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;추석연휴가 포함되었으므로 실제는 2개월 반 정도의 기간 동안 운영을 한 셈이네요. 심지어 반납일도 엄격하게 demanding하지 않는 &apos;느슨한&apos; 운영을 약 3개월 진행하였는데요(반출대장에는 대여일과 반납일을 기록하도록 함) &lt;strong&gt;나름 자율적으로 잘 운영이 되고 있습니다.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;이 기간 총 대출 횟수는 63건으로, 휴일을 제외하면 working day 매일 약 1권 대출이 이루어졌다고 볼 수 있습니다. 대부분의 개발팀에서 골고루 대여를 했었고(일부 인프라팀에서도 대여), 사업부서에서도 한 분께서 이름을 적고 빌려가셨었네요 ㅎㅎ&lt;/p&gt;
 &lt;br/&gt;
-&lt;h1&gt;5. 향후 계획&lt;/h1&gt;
+&lt;h1&gt;향후 계획&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;테미도의 스케일을 &apos;키울&apos; 생각은 지금은 전혀 없습니다. 오래된 책은 기증하는 등 바로바로 &apos;다이어트&apos;를 하여 규모를 유지할 예정이구요.&lt;/p&gt;
 &lt;p&gt;&apos;AI 중심 신간의 가장 빠른 사내 공급&apos;을 통해 개발자들이 &apos;서점에 가지 않고도&apos; 사무실에서 종이 스타일 도서의 내용을 빠르게 접할 수 있게 하는 것이 목표일 수 있겠습니다.&lt;/p&gt;
