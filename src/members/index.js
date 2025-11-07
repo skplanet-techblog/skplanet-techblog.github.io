@@ -33,6 +33,7 @@ import rhs from "./images/rhs.jpeg"
 import dsdev from "./images/dsdev.png"
 import songhy from "./images/songhy.jpeg"
 import leekw from "./images/leekw.jpeg"  
+import leejs from "./images/leejs.png"
 
 export const MEMBERS = {
   neotf: {
@@ -250,5 +251,11 @@ export const MEMBERS = {
     team: "광고개발팀", 
     description: "새로운 기술을 끊임없이 배우고 성장하고자 하는 개발자입니다.",
     thumbnail: leekw,
+  },
+    leejs: {
+    name: "이준성",
+    team: "데이터서비스개발팀", 
+    description: "탁구공과 버그를 스매시하는 AI개발자입니다.",
+    thumbnail: leejs,
   },
 };
