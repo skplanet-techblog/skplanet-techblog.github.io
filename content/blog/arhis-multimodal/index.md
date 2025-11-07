@@ -16,7 +16,7 @@ AI를 사용하여 도로의 결빙을 어디까지 감지할 수 있을까요?
 
 그래서 등장한 기술이 **멀티모달 결빙 감지 솔루션**입니다. 도로의 주행 소리(Audio), 영상(Image)을 동시에 분석하고, 환경 정보(온도·습도·기상정보)를 함께 반영하여 결빙 위험을 예측합니다. 즉, **듣고 (Audio), 보고 (Image), 느끼는 (Environment) 방식으로 보이지 않는 위험을 감지하는 AI기술**입니다(따라서 본 글에서는 이 솔루션에 'ARHIS Ambient(가칭)'라는 멋진 이름을 붙여 보았습니다~).
 
-덧. 참고로 ARHIS(Audio & AI based Road Hazard Information System, 음향기반 도로노면 검지 시스템/솔루션)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 기술이며 RB ARHIS는 이 기술을 솔루션화한 제품입니다. 여기에 멀티모달 센싱 기능이 추가된 것이죠. <br/>
+덧. 참고로 ARHIS(Audio & AI based Road Hazard Information System, 음향기반 도로노면 검지 시스템/솔루션)는 차량이 달릴 때 도로 노면에서 발생하는 음향을 탐지, 블랙 아이스와 같이 눈에 보이지 않는 도로 노면의 상태를 검지(detection)하는 당사의 기술이며 RB ARHIS는 이 기술을 솔루션화한 제품입니다. 여기에 멀티모달 센싱 기능이 추가된 것이죠. <br/>
 ARHIS와 RB ARHIS에 대한 자세한 내용은 [여기](https://techtopic.skplanet.com/rbarhis-ai/)를 참조하세요! 
 
 
