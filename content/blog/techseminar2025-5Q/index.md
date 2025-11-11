@@ -173,7 +173,7 @@ description: "2025 11월(중순)-12월 테크세미나 추가일정"
 * 링크/신청: https://www.ces.tech/ (신청)
 * 일시/장소: January 6 - 9 (현지시간), Las Vegas, US
 * 한줄설명: Innovators show up - 세계 최대 연례 가전 행사
-* CES: Consumer Eletrtic Show 
+* CES: Consumer Electronics Show 
 
 ## MWC26
 ![22.png](./22.png)
