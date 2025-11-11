@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 11 Nov 2025 08:44:59 GMT</lastBuildDate><item><title><![CDATA[2025. 11월(중순)-12월 테크세미나 추가 일정(+2026. 1Q 확정 일정)]]></title><description><![CDATA[안녕하세요 테크편집부입니다! 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 11 Nov 2025 09:23:31 GMT</lastBuildDate><item><title><![CDATA[2025. 11월(중순)-12월 테크세미나 추가 일정(+2026. 1Q 확정 일정)]]></title><description><![CDATA[안녕하세요 테크편집부입니다! 
 2025년 4분기 기술 컨퍼런스 정보에 미처 담지 못했던 좋은 세미나들이 11월과 12월에 계속 나오고 있어 추가해 보았구요, 아울러 NVIDIA GTC 컨퍼런스 일정 등 내년도 1분기 해외 일정도 함께 담았습니다.  
 기존 일정은 위 링크를 참조하세요! 요약 11월: COMMIT * Figma | NVIDIA AI Day…]]></description><link>https://techtopic.skplanet.com/techseminar2025-5Q/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techseminar2025-5Q/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Wed, 12 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 테크편집부입니다! &lt;br/&gt;
 &lt;a href=&quot;https://techtopic.skplanet.com/techseminar2025-4Q/&quot;&gt;&lt;strong&gt;2025년 4분기 기술 컨퍼런스 정보&lt;/strong&gt;&lt;/a&gt;에 미처 담지 못했던 좋은 세미나들이 11월과 12월에 계속 나오고 있어 추가해 보았구요, 아울러 NVIDIA GTC 컨퍼런스 일정 등 내년도 1분기 해외 일정도 함께 담았습니다.  &lt;br/&gt;
@@ -1049,7 +1049,7 @@ ARHIS와 RB ARHIS에 대한 자세한 내용은 &lt;a href=&quot;https://techtop
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-(구글 나노바나나로 그린 &apos;테미도&apos;의 상상도입니다. 편안해 보이죠? ^^ &lt;del&gt;근데 이건 너무 전기먹게 생겼...&lt;/del&gt; )&lt;/p&gt;
+(구글 나노바나나로 그린 &apos;테미도&apos;의 상상도입니다. 편안해 보이죠? ^^)&lt;/p&gt;
 &lt;br/&gt;
 &lt;h1&gt;네 시작은 미약하였으나...&lt;/h1&gt;
 &lt;hr&gt;
@@ -1070,41 +1070,6 @@ ARHIS와 RB ARHIS에 대한 자세한 내용은 &lt;a href=&quot;https://techtop
 &lt;p&gt;많이 대여하셨던 책들은 최근 기술인 클로드코드, 커서, 깃헙 코파일럿, 요즘 다른회사 개발, n8n, 에이전트 등의 책이 역시 인기가 많았습니다. : )&lt;/p&gt;
 &lt;p&gt;대출방식은 &lt;del&gt;실시간 공유 그런건 없고&lt;/del&gt; 출입대장 형식의 수기(handwriting) 작성으로 하였습니다. 대신(!) 책장 옆에는 첫 1개월 동안 초콜릿과 쿠키 등 맛난 간식을 수시로 제공했구요 ^ ^ &lt;br/&gt;
 (간식이 너무 빨리 떨어져서 걱정하시는 분도 계셨습니다 ㅎㅎ)&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;생각같아서는 AR기반 사내 맵을 그리고(indoor LBS) OO문고처럼 배달로봇으로 딜리버리해 주는 잉여력을 발휘.. 아 아닙니다.&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6cb84f065f65345bcb6359ab05517ef4/1ffbd/temido-real_.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 41.139240506329116%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB70lEQVR42mWSbU9ScRiH/SR9Drde5pt60yrXMjGXRi4LcKW4Mh48HiAO5yCccwAF5PlJDgjlTERh6ubqRWvrA8HVQWe2eW//+9W9a7/7vv5jg8GAUR2f9HF7PWiaimq+eFwnmdwim8+STKdptPYoZbYpJDZpNuqUCjnyxQIRPcbp2fklYzgcMjZqozo7/0lU3UHwyyiKyprHj7KVxBcMIYp+PIKIsLJAYGkaRXQy/2Cc4OocbttT9nYLl4xRuLHB8Cqh0W5j++hE9PmoGxX0QoLi4XdaBx0uzvoY9Sxu1xIOuxXrs2mmJu7y+cMCXuci/f3qVcL/gUf9NsvrFiKaRCC8jqjZ0TI6qWqNSrvKwelXEqpAwOVAWH6H9eEEK8uTWB7f46TbvEl4vfKv338wGoe0vnXYkCTWfCLRmIIUEtDUTVRdN+8XIuJ6i/XVC2YnJ3DMP2H++X3SKf028KQ/kuImZsow6mXcJtC7+p6Z8Ts4Zy1sKjqKJON8+Qj73BTONzN4VxaJyn663e6NlGvLcnQDQfiEbqZp7JbNwTCRYBCX7TXSupfkdgY9qhORFTwuD8EvsjkbR5bC9I57ty13ek06R/v0uh2MWoVSfodSLoJhtCkWa5RLVfOrlMlmC+QyOfOeGvlUmmQ8xo+Li3/Av4TZ1iu7vP65AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;temido-real_&quot;
-        title=&quot;&quot;
-        src=&quot;/static/6cb84f065f65345bcb6359ab05517ef4/f058b/temido-real_.png&quot;
-        srcset=&quot;/static/6cb84f065f65345bcb6359ab05517ef4/c26ae/temido-real_.png 158w,
-/static/6cb84f065f65345bcb6359ab05517ef4/6bdcf/temido-real_.png 315w,
-/static/6cb84f065f65345bcb6359ab05517ef4/f058b/temido-real_.png 630w,
-/static/6cb84f065f65345bcb6359ab05517ef4/40601/temido-real_.png 945w,
-/static/6cb84f065f65345bcb6359ab05517ef4/78612/temido-real_.png 1260w,
-/static/6cb84f065f65345bcb6359ab05517ef4/1ffbd/temido-real_.png 2108w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-(초기 테미도의 모습 - 지금은 더 좋은 책꽂이로 이전 중 ㅎㅎ)&lt;/p&gt;
 &lt;br/&gt;
 &lt;h1&gt;느슨한 사내 홍보&lt;/h1&gt;
 &lt;hr&gt;
@@ -1149,7 +1114,7 @@ ARHIS와 RB ARHIS에 대한 자세한 내용은 &lt;a href=&quot;https://techtop
 &lt;h1&gt;2.5개월 초기 운영 결과 (8월-11월 첫주 &amp;#x26; 추석연휴)&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;추석연휴가 포함되었으므로 실제는 2개월 반 정도의 기간 동안 운영을 한 셈이네요. 심지어 반납일도 엄격하게 demanding하지 않는 &apos;느슨한&apos; 운영을 약 3개월 진행하였는데요(반출대장에는 대여일과 반납일을 기록하도록 함) &lt;strong&gt;나름 자율적으로 잘 운영이 되고 있습니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;이 기간 총 대출 횟수는 63건으로, 휴일을 제외하면 working day 매일 약 1권 대출이 이루어졌다고 볼 수 있습니다. 대부분의 개발팀에서 골고루 대여를 했었고(일부 인프라팀에서도 대여), 사업부서에서도 한 분께서 이름을 적고 빌려가셨었네요 ㅎㅎ&lt;/p&gt;
+&lt;p&gt;Working day 기준으로 거의 매일 대출이 이뤄졌고 각 개발팀에서 골고루 대여를 했었습니다(일부 인프라팀 및 사업부서에서도 한 분이 이름을 적고 빌려가셨었네요 ㅎㅎ)&lt;/p&gt;
 &lt;br/&gt;
 &lt;h1&gt;향후 계획&lt;/h1&gt;
 &lt;hr&gt;
@@ -1199,8 +1164,7 @@ ARHIS와 RB ARHIS에 대한 자세한 내용은 &lt;a href=&quot;https://techtop
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;책은 잘 받았구요, 윤리경영팀 검수 직후 바로 테미도에 기증하였습니다 ㅎㅎ
-11월 뉴스레터에도 추천도서로 올릴 예정입니다.
+&lt;p&gt;책은 잘 받았구요, 11월 뉴스레터에도 추천도서로 올릴 예정입니다.
 좋은 이벤트에 참여할 수 있도록 기회를 주셔서 다시 한번 감사드립니다!&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
