@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 20 Nov 2025 12:29:19 GMT</lastBuildDate><item><title><![CDATA[어떤 광고가 돈이 될까? AI 기반 광고 수익 최적화 (SK AI SUMMIT 발표)]]></title><description><![CDATA[(본 사례는 SK AI SUMMIT 2025에서 발표한 사례입니다) 안녕하세요, SK플래닛 광고개발팀과 AI서비스개발팀입니다.
-이번 글에서는 저희가 협업하여 구축한 AI 기반 광고 수익 최적화 시스템의 개발 사례를 소개드리려 합니다. SK플래닛은 OK캐쉬백, Syrup…]]></description><link>https://techtopic.skplanet.com/planet-ad-for-money/blog/</link><guid isPermaLink="false">https://techtopic.skplanet.com/planet-ad-for-money/blog/</guid><dc:creator><![CDATA[shinyoon]]></dc:creator><pubDate>Fri, 21 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;(본 사례는 SK AI SUMMIT 2025에서 발표한 사례입니다)&lt;/p&gt;
-&lt;p&gt;안녕하세요, SK플래닛 광고개발팀과 AI서비스개발팀입니다.&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 20 Nov 2025 12:39:45 GMT</lastBuildDate><item><title><![CDATA[어떤 광고가 돈이 될까? AI 기반 광고 수익 최적화 (SK AI SUMMIT 발표)]]></title><description><![CDATA[안녕하세요, SK플래닛 광고개발팀과 AI서비스개발팀입니다.
+이번 글에서는 저희가 협업하여 구축한 AI 기반 광고 수익 최적화 시스템의 개발 사례를 소개드리려 합니다. SK플래닛은 OK…]]></description><link>https://techtopic.skplanet.com/planet-ad-for-money/blog/</link><guid isPermaLink="false">https://techtopic.skplanet.com/planet-ad-for-money/blog/</guid><dc:creator><![CDATA[shinyoon]]></dc:creator><pubDate>Fri, 21 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, SK플래닛 광고개발팀과 AI서비스개발팀입니다.&lt;br&gt;
 이번 글에서는 저희가 협업하여 구축한 AI 기반 광고 수익 최적화 시스템의 개발 사례를 소개드리려 합니다.&lt;/p&gt;
-&lt;p&gt;SK플래닛은 OK캐쉬백, Syrup, 오락: 등 다양한 앱을 통해 광고를 노출하고 있으며, 이를 통해 수익을 창출하는 디지털 광고 생태계를 운영하고 있습니다.
+&lt;p&gt;SK플래닛은 OK캐쉬백, 시럽, 오락: 등 다양한 앱을 통해 광고를 노출하고 있으며, 이를 통해 수익을 창출하는 디지털 광고 생태계를 운영하고 있습니다.
 광고 플랫폼은 단순히 광고를 보여주는 시스템이 아니라, &lt;strong&gt;광고주(Advertiser)&lt;/strong&gt; 와 &lt;strong&gt;매체(Publisher)&lt;/strong&gt; 를 연결하고, &lt;strong&gt;광고 네트워크(Ad Network)&lt;/strong&gt; 를 통해 실시간으로 광고를 입찰하고 송출하는 복잡한 기술 인프라입니다.
 특히 저희는 OpenRTB(Real-Time Bidding) 기반의 광고 입찰 시스템을 운영하고 있으며,
 광고 요청이 들어오는 순간, 수십 개의 광고 네트워크에 동시에 입찰 요청을 보내고, 가장 높은 가격을 제시한 광고를 선택해 노출합니다.
@@ -210,7 +209,7 @@ IAB가 만든 실시간 입찰을 위한 표준 프로토콜입니다.&lt;br&gt;
 &lt;p&gt;이러한 방식은 구현이 간단하고 빠르며, 초기에는 일정 수준의 성과를 낼 수 있었습니다.
 하지만 광고 플랫폼이 점점 복잡해지고, 광고 지면과 네트워크가 다양해지면서 휴리스틱 방식의 한계가 명확히 드러나기 시작했습니다.&lt;/p&gt;
 &lt;h3&gt;현실적인 운영의 어려움&lt;/h3&gt;
-&lt;p&gt;저희 광고 플랫폼은 OK캐쉬백, 시럽, 오락 등 다양한 앱에서 광고를 노출하고 있으며,
+&lt;p&gt;저희 광고 플랫폼은 OK캐쉬백, 시럽, 오락: 등 다양한 앱에서 광고를 노출하고 있으며,
 이들 앱에는 각각 수십 개의 광고 지면이 존재합니다.
 또한, 광고 입찰은 수십 개의 외부 Ad Network와 실시간으로 연결되어 이루어집니다.
 즉, 조정해야 할 조합은 &lt;code class=&quot;language-text&quot;&gt;수백 개의 지면 × 수십 개의 Ad Network = 수천 개&lt;/code&gt;의 가격 설정 문제로 확장됩니다.
