@@ -34,6 +34,8 @@ import dsdev from "./images/dsdev.png"
 import songhy from "./images/songhy.jpeg"
 import leekw from "./images/leekw.jpeg"  
 import leejs from "./images/leejs.png"
+import kwj from "./images/kwj.png"
+import shinyoon from "./images/shinyoon.jpg"
 
 export const MEMBERS = {
   neotf: {
@@ -257,5 +259,17 @@ export const MEMBERS = {
     team: "데이터서비스개발팀", 
     description: "탁구공과 버그를 스매시하는 AI개발자입니다.",
     thumbnail: leejs,
+  },
+    kwj: {
+    name: "김우주",
+    team: "AI서비스개발팀", 
+    description: "AI를 통해 다양한 솔루션을 제작하고 고도화하고자 하는 개발자입니다.",
+    thumbnail: kwj,
+  },
+    shinyoon: {
+    name: "신호준, 윤이연",
+    team: "광고개발팀, AI서비스개발팀", 
+    description: "광고개발팀 × AI서비스개발팀 = 데이터에서 성과까지 함께합니다.",
+    thumbnail: shinyoon,
   },
 };
