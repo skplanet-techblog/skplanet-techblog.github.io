@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 25 Nov 2025 05:48:03 GMT</lastBuildDate><item><title><![CDATA[휴먼의 'AI 학습'은 이렇게 #2: DeepLearning.ai (& pro)]]></title><description><![CDATA[안녕하세요, Joe! 입니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 25 Nov 2025 05:57:49 GMT</lastBuildDate><item><title><![CDATA[휴먼의 'AI 학습'은 이렇게 #2: DeepLearning.ai (& pro)]]></title><description><![CDATA[안녕하세요, Joe! 입니다. 
 '휴먼의 AI학습' 시리즈 그 두번째는 여러분이 잘 아시는 DeepLearning.ai 사이트를 소개합니다. 최근에 구독형 서비스(pro)를 오픈하면서 화제가 되기도 했지요. 2025년 11월 버전 기준으로 정리해 보도록 하겠습니다.  (1) https://www.deeplearning.ai…]]></description><link>https://techtopic.skplanet.com/deeplearningai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/deeplearningai/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, Joe! 입니다. &lt;br&gt;
 &apos;휴먼의 AI학습&apos; 시리즈 그 두번째는 여러분이 잘 아시는 DeepLearning.ai 사이트를 소개합니다. 최근에 구독형 서비스(pro)를 오픈하면서 화제가 되기도 했지요. 2025년 11월 버전 기준으로 정리해 보도록 하겠습니다. &lt;/p&gt;
 &lt;h1&gt;(1) &lt;a href=&quot;https://www.deeplearning.ai/&quot;&gt;https://www.deeplearning.ai/&lt;/a&gt; (딥러닝 에이아이의 주요 특징은?)&lt;/h1&gt;
@@ -1771,7 +1771,8 @@ ARHIS와 RB ARHIS에 대한 자세한 내용은 &lt;a href=&quot;https://techtop
 &lt;li&gt;Dev: 4x권 (BE, FE, SWE, DevOps, 개발문화)&lt;/li&gt;
 &lt;li&gt;Data &amp;#x26; 기타: 2x권&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;약 150권 들어갈 규모의 책꽂이 2개를 구한 다음 그냥 저희팀 앞에 비치해 두었습니다.&lt;/p&gt;
+&lt;p&gt;약 150권 들어갈 규모의 책꽂이 2개를 구한 다음 그냥 저희팀 앞에 비치해 두었습니다.&lt;br&gt;
+(11월에 큰 책꽂이도 따로 구입하고 설치 장소도 중앙 무대로 옮겼습니다 ^ ^)&lt;/p&gt;
 &lt;p&gt;많이 대여하셨던 책들은 최근 기술인 클로드코드, 커서, 깃헙 코파일럿, 요즘 다른회사 개발, n8n, 에이전트 등의 책이 역시 인기가 많았습니다. : )&lt;/p&gt;
 &lt;p&gt;대출방식은 &lt;del&gt;실시간 공유 그런건 없고&lt;/del&gt; 출입대장 형식의 수기(handwriting) 작성으로 하였습니다. 대신(!) 책장 옆에는 첫 1개월 동안 초콜릿과 쿠키 등 맛난 간식을 수시로 제공했구요 ^ ^ &lt;br/&gt;
 (간식이 너무 빨리 떨어져서 걱정하시는 분도 계셨습니다 ㅎㅎ)&lt;/p&gt;
