@@ -52,7 +52,7 @@ description: "사내 테크 미니 도서관을 만든 작은 이야기를 적�
 (간식이 너무 빨리 떨어져서 걱정하시는 분도 계셨습니다 ㅎㅎ)
 
 
-![temido_newbook](./temido_newbook.png)
+![temido_newbooks](./temido_newbooks.jpg)
 (책장도 구입하고 4분기에 신착 AI 개발도서도 다수 보강하였어요!)
 <br/>
 
