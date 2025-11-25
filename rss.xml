@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 21 Nov 2025 13:32:49 GMT</lastBuildDate><item><title><![CDATA[휴먼의 'AI 학습'은 이렇게 #2: DeepLearning.ai (& pro)]]></title><description><![CDATA[안녕하세요, Joe! 입니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 25 Nov 2025 05:40:45 GMT</lastBuildDate><item><title><![CDATA[휴먼의 'AI 학습'은 이렇게 #2: DeepLearning.ai (& pro)]]></title><description><![CDATA[안녕하세요, Joe! 입니다. 
 '휴먼의 AI학습' 시리즈 그 두번째는 여러분이 잘 아시는 DeepLearning.ai 사이트를 소개합니다. 최근에 구독형 서비스(pro)를 오픈하면서 화제가 되기도 했지요. 2025년 11월 버전 기준으로 정리해 보도록 하겠습니다.  (1) https://www.deeplearning.ai…]]></description><link>https://techtopic.skplanet.com/deeplearningai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/deeplearningai/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, Joe! 입니다. &lt;br&gt;
 &apos;휴먼의 AI학습&apos; 시리즈 그 두번째는 여러분이 잘 아시는 DeepLearning.ai 사이트를 소개합니다. 최근에 구독형 서비스(pro)를 오픈하면서 화제가 되기도 했지요. 2025년 11월 버전 기준으로 정리해 보도록 하겠습니다. &lt;/p&gt;
 &lt;h1&gt;(1) &lt;a href=&quot;https://www.deeplearning.ai/&quot;&gt;https://www.deeplearning.ai/&lt;/a&gt; (딥러닝 에이아이의 주요 특징은?)&lt;/h1&gt;
@@ -1775,7 +1775,9 @@ ARHIS와 RB ARHIS에 대한 자세한 내용은 &lt;a href=&quot;https://techtop
 &lt;p&gt;많이 대여하셨던 책들은 최근 기술인 클로드코드, 커서, 깃헙 코파일럿, 요즘 다른회사 개발, n8n, 에이전트 등의 책이 역시 인기가 많았습니다. : )&lt;/p&gt;
 &lt;p&gt;대출방식은 &lt;del&gt;실시간 공유 그런건 없고&lt;/del&gt; 출입대장 형식의 수기(handwriting) 작성으로 하였습니다. 대신(!) 책장 옆에는 첫 1개월 동안 초콜릿과 쿠키 등 맛난 간식을 수시로 제공했구요 ^ ^ &lt;br/&gt;
 (간식이 너무 빨리 떨어져서 걱정하시는 분도 계셨습니다 ㅎㅎ)&lt;/p&gt;
-&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;./temido-new.png&quot; alt=&quot;temido-new&quot;&gt;
+(책장도 구입하고 4분기에 신착 AI 개발도서도 다수 보강하였어요!)
+&lt;br/&gt;&lt;/p&gt;
 &lt;h1&gt;느슨한 사내 홍보&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;신간 안내는 매월 초 이메일로 홍보를 진행하고 있으며, &lt;br/&gt;
@@ -1826,6 +1828,38 @@ ARHIS와 RB ARHIS에 대한 자세한 내용은 &lt;a href=&quot;https://techtop
 &lt;p&gt;테미도의 스케일을 &apos;키울&apos; 생각은 지금은 전혀 없습니다. 오래된 책은 기증하는 등 바로바로 &apos;다이어트&apos;를 하여 규모를 유지할 예정이구요.&lt;/p&gt;
 &lt;p&gt;&apos;AI 중심 신간의 가장 빠른 사내 공급&apos;을 통해 개발자들이 &apos;서점에 가지 않고도&apos; 사무실에서 종이 스타일 도서의 내용을 빠르게 접할 수 있게 하는 것이 목표일 수 있겠습니다.&lt;/p&gt;
 &lt;p&gt;모쪼록 개발자들이 편하게 책과 최신 지식을 접하고 회사와 개인의 성장에 기여하는 작은 환경이 되기를 바랍니다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1e633ba22811dec5c58e4a391ac54d3c/2bef9/temido-image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEDUlEQVR42iVUyY4bVRStHwIJiRV8BBuW/EHWbIAoRAIhhRWCsIBFJEKnh3TabpeHmlzz7Bpc8zy4Jtsdt+P2kLhXoRKko7O57+je9945F4DTGkorKK3hpEaSCkpqtki9pWU2xrQ2yCxHkoYrc7Mym01wt4s327jlD9hHAJJWcNqMkgZOGqjltBEKj48neqU7S4spy1FUjaLcbNz0xt3uW1nUyj4iBNrTaFbRs4Ka5WSeT+ZhT5IpLTzBhOFUvVD9f0jzgrW5yJitnLt9sNkF+0O03Ye7QwgQWarV9qTQ7NpqZ3OW5kgXh6L3rCfTanyOGn9eipSadzl1sfFaZasv1/Z6H9ze+YCeqUoiEnJ/OpsGN05y67gLE5SUS8F6QVqDiX3Nqh184ibu+/f58T5eb31GGSaF4s00QHNoI2RD6pVXKmcC/+gl8uQaO5W0P8jp79T0hzMIFIRzmn/aJ34FSdZWDlsvZbpFxCuJAXRJqM8gIAXRMvLgr6tPvj/74tHZ17+B376AHzyHPv3u9Ksnrz7/8fzLhy8++7nzywk40bAOhQy4McigAC9j1xr1jMKvWOyEkR52pZ9A8XFf+pdhTyjm8Svsb4Rq8fgC/ubpdYfBQR7DZJKXxqyEAoUOoT77UkZBCWLikGxWeLkUmqJ64x/vk/tjdDjG5dqPlna88uyZ0iWR0BxXGpwZCJDqMO7SAtlj6R4S+FC+QPNKLrxm7W32wXoX+I01LU218rQ60DKtR0LedJxpSGygAMQiAx7tUwjMQm1Nr4NpaUcL580+3BzCm7vQrUyhSFo7INmCiAKIgWEWxbiWYUCU0a4i9gUSERAzn8Q37mzlrnfR9hDt3sa3u9iubTxv/Ttvh8KDsMOPn3PUKUuRDgcUSh82Vd1jDWucN/r2XbJ/1/o2bG69YuXPblwlM9EkH8YlVCyJMByJcE9FTzlaSXkglIeIJuITihGR+WK62gVGqjCuQngG5lp04lOJi9n6SKCZ2NZynaZAcdw9Z3E5YAHLZ5NcyTM5y6TNne9VKuyyw0Do+RwUSVioYAotKjRKDFiLcSpTcznD5TSPN0MOSG+9/THZH+Pdfbw9RtVrU7VY2WFJA6csgvEYEOuCgwsSvRrQoD13ncZyF62FXbUOgdfbsL3h5iPebP1UhXSqa3JDW0R0bqQqhCQgAn7NIx1hMnbmjlL4XJGRsxLJ5kAb0U0b0fZ538ZJaZgMGPCdWLgK2MuIeZmMLybUcCIRuoBDHEokbvthcLaA0pYb4P9Yt7w9xM3KtzMd09mhOIY4DGNJnoBQrN8ZD3oiNXZkJE6RdI6kDVMuiWLRdv4oPrT40Hz3LqnuQq20xNwYhNGlm5OxqVSmXltWbTKzDEqbdmfh+RzLm/8AT6jFmPSqWE0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;temido-image&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1e633ba22811dec5c58e4a391ac54d3c/f058b/temido-image.png&quot;
+        srcset=&quot;/static/1e633ba22811dec5c58e4a391ac54d3c/c26ae/temido-image.png 158w,
+/static/1e633ba22811dec5c58e4a391ac54d3c/6bdcf/temido-image.png 315w,
+/static/1e633ba22811dec5c58e4a391ac54d3c/f058b/temido-image.png 630w,
+/static/1e633ba22811dec5c58e4a391ac54d3c/40601/temido-image.png 945w,
+/static/1e633ba22811dec5c58e4a391ac54d3c/2bef9/temido-image.png 1024w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;br/&gt;
 &lt;h2&gt;덧1. 이번 주에 옆옆 개발팀(익명)에서 도서비 펀딩을 해주셨습니다(감사합니다!)&lt;/h2&gt;
 &lt;hr&gt;
@@ -1933,7 +1967,7 @@ ARHIS와 RB ARHIS에 대한 자세한 내용은 &lt;a href=&quot;https://techtop
 &lt;br/&gt;
 &lt;h1&gt;마무리하며&lt;/h1&gt;
 &lt;p&gt;비록 거창한 무언가를 도입하는 그런 이야기는 아니지만, 작은 일이라도 무시(?)하지 않고 필요에 따라 자연스럽게 누군가의 필요를 채워 가는 소소한 이야기 하나를 전해 드렸습니다.&lt;/p&gt;
-&lt;p&gt;이러한 작은 일들이 쌓여 AI 시대에 필요한 한 사람의 개발자가 성장하는 데 기여할 수 있다면 얼마나 좋은 일일까 하는 생각을 하면서 글을 맺고자 합니다. 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[play AR: SK플래닛의 Web AR 기반 마케팅 솔루션(feat. '춘식이는 홈런왕')]]></title><description><![CDATA[안녕하세요, 광고개발팀 이기원입니다. 본 글에서는 SK플래닛의 Web AR(Augmented Reality) 기술 기반 마케팅 솔루션인 'play AR' 의 기술을 도입한 배경과 특징을 소개하며, 이와 함께 다양한 마케팅 활용 사례를 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다. Web AR & play AR이란? Web AR(Web…]]></description><link>https://techtopic.skplanet.com/skp-playar/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-playar/</guid><dc:creator><![CDATA[leekw]]></dc:creator><pubDate>Tue, 04 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 광고개발팀 이기원입니다. 본 글에서는 SK플래닛의 Web AR(Augmented Reality) 기술 기반 마케팅 솔루션인 &lt;strong&gt;&apos;play AR&apos;&lt;/strong&gt; 의 기술을 도입한 배경과 특징을 소개하며, 이와 함께 다양한 마케팅 활용 사례를 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다.&lt;/p&gt;
+&lt;p&gt;이러한 작은 일들이 쌓여 AI 시대에 필요한 한 사람의 개발자가 성장하는 데 기여할 수 있다면 얼마나 좋은 일일까 하는 생각을 하면서 글을 맺고자 합니다. 읽어 주셔서 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[play AR: SK플래닛의 Web AR 기반 마케팅 솔루션(feat. '춘식이는 홈런왕')]]></title><description><![CDATA[안녕하세요, 광고개발팀 이기원입니다. 본 글에서는 SK플래닛의 Web AR(Augmented Reality) 기술 기반 마케팅 솔루션인 'play AR' 의 기술을 도입한 배경과 특징을 소개하며, 이와 함께 다양한 마케팅 활용 사례를 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다. Web AR & play AR이란? Web AR(Web…]]></description><link>https://techtopic.skplanet.com/skp-playar/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-playar/</guid><dc:creator><![CDATA[leekw]]></dc:creator><pubDate>Tue, 04 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 광고개발팀 이기원입니다. 본 글에서는 SK플래닛의 Web AR(Augmented Reality) 기술 기반 마케팅 솔루션인 &lt;strong&gt;&apos;play AR&apos;&lt;/strong&gt; 의 기술을 도입한 배경과 특징을 소개하며, 이와 함께 다양한 마케팅 활용 사례를 소개함으로써 서비스와 효용성을 보다 쉽게 설명해 드리고자 합니다.&lt;/p&gt;
 &lt;h1&gt;Web AR &amp;#x26; play AR이란?&lt;/h1&gt;
 &lt;p&gt;Web AR(Web-based AR)은 앱 기반의 Native AR과 대비되는 개념으로, 브라우저 상에서 AR(증강현실)을 제공할 수 있는 기술입니다. 특히 WebXR 표준 지원이 Chrome·Safari 등 주요 브라우저에 확대되면서 &lt;strong&gt;앱 설치 없이도 AR(증강현실)&lt;/strong&gt; 을 제공이 가능하다는 특징이 장점으로 부각되어, 마케팅/이커머스 분야에서 특히 주목받고 있습니다. &lt;br/&gt;
 당사는 이 기술을 적용한 마케팅 솔루션인 play AR을 개발, 아래와 같이 다양한 마케팅 이벤트에 적용하여 성과를 거두었습니다.
