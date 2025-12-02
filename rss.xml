@@ -1,4 +1,479 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 25 Nov 2025 05:57:49 GMT</lastBuildDate><item><title><![CDATA[휴먼의 'AI 학습'은 이렇게 #2: DeepLearning.ai (& pro)]]></title><description><![CDATA[안녕하세요, Joe! 입니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 02 Dec 2025 06:01:54 GMT</lastBuildDate><item><title><![CDATA[AI가 만들어주는 나만의 목소리(SK AI SUMMIT 발표사례)]]></title><description><![CDATA[2025년 11월 4일(화)에 열린 SK AI SUMMIT 2025 행사 둘째날 Special Session에서 당사 김우주 매니저가 발표한 SK플래닛의 AI를 활용한 Voice Conversion 기술을 소개합니다. AI Voice? Large Language Model과 Generative Model(Diffusion, flow-based…]]></description><link>https://techtopic.skplanet.com/speech2sing-ai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/speech2sing-ai/</guid><dc:creator><![CDATA[kwj]]></dc:creator><pubDate>Tue, 02 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2025년 11월 4일(화)에 열린 SK AI SUMMIT 2025 행사 둘째날 Special Session에서 당사 김우주 매니저가 발표한 SK플래닛의 &lt;strong&gt;AI를 활용한 Voice Conversion&lt;/strong&gt; 기술을 소개합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;AI Voice?&lt;/h2&gt;
+&lt;p&gt;Large Language Model과 Generative Model(Diffusion, flow-based, Generative Adversarial Network)의 발전으로 음성과 노래 생성 성능이 개선되었습니다. 이를 통해 Text2Speech, Speech2Text, Voice conversion과 같은 기술을 활용해 다양한 보이스 서비스를 통해 개인화된 콘텐츠 제작이 가능해졌습니다. 가장 흔히 접해본 Text2Speech는 문자를 음성으로 변환해주는 기술입니다.&lt;/p&gt;
+&lt;h4&gt;예시 AI 생성 음성 🎧&lt;/h4&gt;
+&lt;audio controls&gt;
+  &lt;source src=&quot;/audio00.wav&quot; type=&quot;audio/wav&quot;&gt;
+  브라우저가 오디오 재생을 지원하지 않습니다.
+&lt;/audio&gt;
+&lt;p&gt;script: &lt;em&gt;&quot;안녕하세요, 내 목소리가 말하고, 노래한다. AI가 만들어준 나만의 목소리의 발표를 맡게된 SK 플래닛 AI 서비스 개발팀의 김우주라고 합니다.&quot;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;다음과 같이 저의 소개 문장을 입력으로 두고 AI에게 읽어 달라고 한 내용인데요. 발음과 리듬, 음색 등이 아직은 &apos;기계음스럽게&apos; 들립니다. 이제 좀 더 사람처럼, 내가 원하는 화자처럼 말하고 노래하게 하려면 &lt;strong&gt;&apos;Speech or Singing Voice Conversion&apos;&lt;/strong&gt; 과 같은 기술이 필요합니다.&lt;/p&gt;
+&lt;h2&gt;Speech Voice Conversion?&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/855c76deed46e8d7ff20526ba1379dec/f098e/image00.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 34.177215189873415%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABcSAAAXEgFnn9JSAAABrElEQVR42mNgsKgXUs0/abD+4G3ZD48eCenp6XG7ZzSp+9XMUXdLq9cwNvbhYoAARgZiwMmTJ+2uXLvW/PPnr//v3759XD1pqUvTrhevmrY+/Na07dHX9Ek7zEDq7O3rWaCGgjATzIL6/f9Z6lf9Z5t46x/7zDP/WRlm7t7Nf+PGtZZnz57+P3/29Luyjsmu9due7mva9vhk/dYHJyLqF+iBNAqpqPAxHJ+gynBuuhbDvCJZoBDIAiat+lVsB+9+Ndt66bVJ987/3AwM/2eytk5fnN/WOeVeS8/M/QFp1W7V62+eLVl06nrVqqtXw+oXG4EM5GfgF2T4f1CW4f9RHYb19QJAIR55e3sOkNynT+/s7964bAr28v///1UdQivaqyt6/9e0Ln5nE9Ps0bD5wfbSJWcOV625dii6e5UWSJ08gzwHw8wCSYb1zbIMyaFC6GFaX1/PBGZ8/fDM2No6osXSIuifuUXIHae4RseGzfeOlS4+faV6zfXzSd1rdVA0YAFARyHkQhkYOCcJSOvbS6vI8EppCIcyhDIDhVmBWBGI2VF1Al31/z/e2AYApqivXLOsqc0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/855c76deed46e8d7ff20526ba1379dec/f058b/image00.png&quot;
+        srcset=&quot;/static/855c76deed46e8d7ff20526ba1379dec/c26ae/image00.png 158w,
+/static/855c76deed46e8d7ff20526ba1379dec/6bdcf/image00.png 315w,
+/static/855c76deed46e8d7ff20526ba1379dec/f058b/image00.png 630w,
+/static/855c76deed46e8d7ff20526ba1379dec/40601/image00.png 945w,
+/static/855c76deed46e8d7ff20526ba1379dec/78612/image00.png 1260w,
+/static/855c76deed46e8d7ff20526ba1379dec/f098e/image00.png 1506w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&quot;https://www.naver.com/&quot;&gt;유재석(naver.com)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;앞서 설명드린 Speech Voice Conversion의 전체 흐름을 간단히 정리하겠습니다. 음성(source, target)을 입력으로 받아 source가 내용과 리듬을 유지하면서 target 화자의 음색과 톤으로 생성하는 기술입니다.&lt;/p&gt;
+&lt;p&gt;해당 기술은 Text도 입력으로 포함하여 Target Speech Style로 Speech를 생성해주는 TTS with voice conversion과 달리, Source 입력과 Target 입력이 모두 음성입니다. 만약 Text도 입력으로 포함하려면 Text를 따로 처리해주는 Encoder와 Zero-Shot VC Network의 생성기에 condition으로 Text 특징이 들어가야 합니다.&lt;/p&gt;
+&lt;p&gt;이때 전처리를 통해 목소리가 아닌 잡음을 제거(Denoising), 목소리를 강화하기(Speech Enhancement), 목소리와 Background Music을 분리(Source Separation)하는 작업 등이 필요합니다.&lt;/p&gt;
+&lt;p&gt;이후 Zero-Shot VC Network의 입력값으로 제공되며, 훈련 데이터에 존재하지 않은 새로운 화자에 대해서도 짧은 5~10초 정도의 음성만으로 변환 및 합성이 가능하도록 추론 시 일반화하여 생성합니다.&lt;/p&gt;
+&lt;p&gt;이 작업을 통해 Source Speech와 Target Speech를 입력하면 유재석님이 말한 것처럼 Output speech인 &quot;안녕하세요&quot;가 생성됩니다.&lt;/p&gt;
+&lt;!-- 
+&lt;div style=&quot;display:flex; align-items:center; gap:40px;&quot;&gt;
+
+  &lt;div style=&quot;text-align:center;&quot;&gt;
+    &lt;span style=&quot;color:#0084FF;&quot;&gt;Source speech&lt;/span&gt; 🎧&lt;br/&gt;
+    &lt;audio controls style=&quot;width:180px;&quot;&gt;
+      &lt;source src=&quot;./audio_source_speech.wav&quot; type=&quot;audio/wav&quot;&gt;
+      브라우저가 오디오 재생을 지원하지 않습니다.
+    &lt;/audio&gt;
+  &lt;/div&gt;
+
+  &lt;div style=&quot;text-align:center;&quot;&gt;
+    &lt;span style=&quot;color:#C80000;&quot;&gt;Target speech&lt;/span&gt; 🎧&lt;br/&gt;
+    &lt;audio controls style=&quot;width:180px;&quot;&gt;
+      &lt;source src=&quot;./audio_target_speech.wav&quot; type=&quot;audio/wav&quot;&gt;
+      브라우저가 오디오 재생을 지원하지 않습니다.
+    &lt;/audio&gt;
+  &lt;/div&gt;
+
+  &lt;div style=&quot;text-align:center;&quot;&gt;
+    &lt;span style=&quot;color:#A0C0FF; font-weight:bold;&quot;&gt;Output speech&lt;/span&gt; 🎧&lt;br/&gt;
+    &lt;audio controls style=&quot;width:180px;&quot;&gt;
+      &lt;source src=&quot;./output_speech.wav&quot; type=&quot;audio/wav&quot;&gt;
+      브라우저가 오디오 재생을 지원하지 않습니다.
+    &lt;/audio&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt; --&gt;
+&lt;hr&gt;
+&lt;h2&gt;Singing Voice Conversion ?&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9b7a40539a1d0a71a74f948ed47c4852/7970d/image01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.58227848101266%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABcSAAAXEgFnn9JSAAABdElEQVR42mP4+O5N+9W7zxs7Zu6wyvfXF4huXaVVv/luV/XaG10Z07arMwBBfX09EwMysLdn8Svt5PVL6uQFsVHk3n/4+P/mzZtPz1y77FZcHCMW07bKo2nbo7t1G+7cy515yB6khqc1V5Th8Ew5/swoQRA/tWe9VdmSc3vLll7YmTJxpzFI7Pr167xgAxuK87dmxkQvVWzNE2fwYGCPrV/oVbnm2vmKFZfO50zfZw1Sw7GwXI7h/2o9rvosCRA/bdJ276rV1z5Xrbn2NrJnm83/z3fE7tx5ClbL4BsU/ScqNfHpgXOnvebXl0jEdq73ql1/43HNmuuPCuceA7tQMG0mP0PhfUd5+3gOED+lf4tB5dIzy0oXnpifNWuv9sIn/4X7j//QnH3lvxCDrW/o1LjIkClz09P17e21eHwrl4lH1s2JjqyfH5HWs0kEEi7nBRg2vtBj+H+EFxpSjCX/90u0/T8pDGLXX/nPNvPMf9b6Vf/ZANfKoJwXOcyzAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9b7a40539a1d0a71a74f948ed47c4852/f058b/image01.png&quot;
+        srcset=&quot;/static/9b7a40539a1d0a71a74f948ed47c4852/c26ae/image01.png 158w,
+/static/9b7a40539a1d0a71a74f948ed47c4852/6bdcf/image01.png 315w,
+/static/9b7a40539a1d0a71a74f948ed47c4852/f058b/image01.png 630w,
+/static/9b7a40539a1d0a71a74f948ed47c4852/40601/image01.png 945w,
+/static/9b7a40539a1d0a71a74f948ed47c4852/78612/image01.png 1260w,
+/static/9b7a40539a1d0a71a74f948ed47c4852/7970d/image01.png 1908w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+앞서 설명드린 Speech Voice Conversion과 전체 구조는 유사하지만, 음성을 입력으로 받아 Target 화자의 음색·톤을 유지하면서 Source 노래의 내용·리듬·멜로디로 생성하는 기술입니다. 추가로 두 가지 새로운 작업이 필요합니다.&lt;/p&gt;
+&lt;p&gt;Zero-Shot Voice Conversion Network에 새로운 condition으로 pitch를 주입해야 하며, 마지막 단계인 Mixing을 통해 에코와 리버브를 주입하고 보컬과 반주를 합쳐주는 작업이 필요합니다. 이때 내 목소리가 target이 되고 뉴진스의 노래(목소리)가 source가 됩니다. 즉, 내가 부르는 뉴진스 노래가 생성됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&quot;https://vibe.naver.com/track/85487533&quot;&gt;뉴진스 앨범 커버(NAVER VIBE)&lt;/a&gt;&lt;/p&gt;
+&lt;!-- &lt;div style=&quot;display:flex; align-items:center; gap:40px;&quot;&gt;
+
+  &lt;div style=&quot;text-align:center;&quot;&gt;
+    &lt;span style=&quot;color:#C80000;&quot;&gt;Source singing&lt;/span&gt; 🎤&lt;br/&gt;
+    &lt;audio controls style=&quot;width:180px;&quot;&gt;
+      &lt;source src=&quot;./audio_source_singing.m4a&quot; type=&quot;audio/wav&quot;&gt;
+      브라우저가 오디오 재생을 지원하지 않습니다.
+    &lt;/audio&gt;
+  &lt;/div&gt;
+
+  &lt;div style=&quot;text-align:center;&quot;&gt;
+    &lt;span style=&quot;color:#0084FF;&quot;&gt;Target speech or singing&lt;/span&gt; 🎙️&lt;br/&gt;
+    &lt;audio controls style=&quot;width:180px;&quot;&gt;
+      &lt;source src=&quot;./audio_target_singing.wav&quot; type=&quot;audio/wav&quot;&gt;
+      브라우저가 오디오 재생을 지원하지 않습니다.
+    &lt;/audio&gt;
+  &lt;/div&gt;
+
+  &lt;div style=&quot;text-align:center;&quot;&gt;
+    &lt;span style=&quot;color:#A0C0FF; font-weight:bold;&quot;&gt;Output Music&lt;/span&gt; 🎶&lt;br/&gt;
+    &lt;audio controls style=&quot;width:180px;&quot;&gt;
+      &lt;source src=&quot;./output_music.wav&quot; type=&quot;audio/wav&quot;&gt;
+      브라우저가 오디오 재생을 지원하지 않습니다.
+    &lt;/audio&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt; --&gt;
+&lt;hr&gt;
+&lt;h2&gt;Zero-Shot Voice Conversion (VC) Network ?&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/756dee93d14a8a2af30ac7d21f429d2b/064b2/image02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.21518987341772%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABcSAAAXEgFnn9JSAAABj0lEQVR42mOYNWuWdmzNHMPGCStM5e3zBRhW/WdmqP/PwhAKpDv+8zPU27MwiGbxSJt1yGjazVNVYjDmT5ZxE8o0DNaLswgwy1bUU+tmYBBjgABGhv3799ssW7bQ8MCRI7ZaWlo8DLke7AztmYKCM9P4GULT+BN6NtTnzDp4OLVlRWtA/uyg6In7cz3soy0SszsSi+cdu5E7ffdSj9wOmckn/6v5ZrRYMDDU+wvwxjoLM0yLEmSw1xdgiPbgY/i4zYL9yiIVoI28tTO3z+rdev1PQd+aeQs2Ht666eSd/9OmLSgPLeiLrVpz7WfxwuM7E1qWurfufDo3rW/DVIY9hw+7LtuwwfzAmTOO6urqvAz2QC9uaxUV3T+FB2Tg6k3rS46fOrV93cbNOdMnteuvntAe05zkJR9SNSsuf/aBb3nTd+9TMnbhh/iYV5ihublZvsPFRXdabKxhIQOf0H8GBnYY3iHDJ+QjKckFVMnuw8DAlcbAwLqfgYEDpNXePp4jILtN2CWtHGiYPYu9PQQDAFw/jfwOFTPGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/756dee93d14a8a2af30ac7d21f429d2b/f058b/image02.png&quot;
+        srcset=&quot;/static/756dee93d14a8a2af30ac7d21f429d2b/c26ae/image02.png 158w,
+/static/756dee93d14a8a2af30ac7d21f429d2b/6bdcf/image02.png 315w,
+/static/756dee93d14a8a2af30ac7d21f429d2b/f058b/image02.png 630w,
+/static/756dee93d14a8a2af30ac7d21f429d2b/40601/image02.png 945w,
+/static/756dee93d14a8a2af30ac7d21f429d2b/78612/image02.png 1260w,
+/static/756dee93d14a8a2af30ac7d21f429d2b/064b2/image02.png 1874w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;앞에서 Speech 또는 Singing Voice Conversion이 대략적으로 어떻게 동작하는지 살펴보았습니다. 이제 세부적으로 어떻게 진행되는지 설명드리겠습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;color:#0084FF; font-weight:bold;&quot;&gt;Feature Extractor&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;말의 내용 (semantic)과 음의 높낮이(pitch), 화자의 말투와 음색 스타일(timbre, style)을 각각 분리해 특징을 추출해주는 모듈입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;color:#C80000; font-weight:bold;&quot;&gt;Speech or Singing Generator&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature Extractor에서 생성된 feature를 이용해 말의 내용과 리듬은 그대로 유지하고, 음색만 다른 사람의 목소리로 바꾸는 모듈입니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speech Generator&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Source speech와 같이 말하는 사람의 발음을 유지하면서 target speech의 음색으로 자연스럽게 재합성해줍니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Singing Generator&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Source 보컬처럼 노래를 재구성하고 target의 음색과 감정 표현을 입히는 단계를 통해 합성해줍니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;음성 분야에서 다양한 목적을 가지고 학습된 모델들을 통해 더욱 정교한 음성을 합성 및 변환하고자 합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Feature Extractor&lt;/h2&gt;
+&lt;h4&gt;Spectrogram&lt;/h4&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/a1204b4028120a3969a5be4ff1d43c75/c2b0b/image03.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 17.72151898734177%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABcSAAAXEgFnn9JSAAABQklEQVR42iXMQSiDYRzH8TdX5eSolGKSi5QUuaiVk7g4OSkcqA1zwWpqkzgspSSlFVlNdpADhx04bTnM0kTLYTNa2+x93vd51/s8z/u8Pw/+9e33P300YsPzVLVVxPNObI9h2H2WZXUAGFcFuOMsqV1xmDOj9u4hlUbAt8XCwT3h962K3WBUbK5FRDKeFFLaXCs1LJ4pGyzzabJshdpFg8Nk4qVUp1cNDlDGRb0pUfjQHxWYioVi6Nb65WDrCNpa2jHWOoUubQDr0344VHc1apr4KpZh0Sa4hIv/K1RMlqzagAQEVTAx+R+YO77Fae+CPBnyY7lzHpejARz2LOJoNoJq9dvV9JrufcvnvbqueyHEbxOu6w4rZ1L9YcN2NiBFiFE6p8Dr0n1OZLfPG4WDBMnvx8lrNEGedy5I+uyG1Iih/wBsyPsmJ7vpBwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;mel-spectrogram&quot; title=&quot;&quot; src=&quot;/static/a1204b4028120a3969a5be4ff1d43c75/f058b/image03.png&quot; srcset=&quot;/static/a1204b4028120a3969a5be4ff1d43c75/c26ae/image03.png 158w,
+/static/a1204b4028120a3969a5be4ff1d43c75/6bdcf/image03.png 315w,
+/static/a1204b4028120a3969a5be4ff1d43c75/f058b/image03.png 630w,
+/static/a1204b4028120a3969a5be4ff1d43c75/40601/image03.png 945w,
+/static/a1204b4028120a3969a5be4ff1d43c75/78612/image03.png 1260w,
+/static/a1204b4028120a3969a5be4ff1d43c75/c2b0b/image03.png 1895w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;p style=&quot;color:gray; font-style:italic;&quot;&gt;
+Mel-Spectrogram
+&lt;/p&gt;
+&lt;p&gt;음향 특징에서 가장 기본적으로 사용되는 Mel-Spectrogram은 기존의 Amplitude(진폭) 정보만으로는 표현되지 않는 음성의 주파수적 특성을 푸리에 변환(Fourier Transform) 을 통해 가시화한 스펙트럼입니다. 즉, 각 순간(time frame)마다 어떤 주파수(frequency) 에 어떤 소리(energy) 가 존재하고, 그 높낮이(pitch) 와 세기(amplitude) 가 어느 정도인지를 시각적으로 표현한 것입니다. 이를 통해 우리는 음성 신호의 기본적인 프로소디(Prosody) 즉, 억양(intonation), 피치(pitch), 템포(tempo) 등과 같은 음성의 리듬과 감정적 특성을 추출할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&quot;https://velog.io/@eunjnnn/Understanding-the-Mel-Spectrogram&quot;&gt;Understanding the Mel Spectrogram - velog.io/@eunjnnn&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Pitch Extractor &amp;#x26; Pitch Adjustment&lt;/h4&gt;
+&lt;p&gt;Pitch Extractor는 음성 신호에서 시간에 따른 기초주파수(F₀, Fundamental Frequency) 변화를 추출하여 음성의 높낮이(pitch) 패턴을 시각적으로 표현하는 과정입니다. 아래 그래프는 시간 프레임(Frame Index)에 따라 피치가 어떻게 변하는지를 보여줍니다.&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/9d36a4733a92d5231d44f96042114ac1/2e367/image04.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABcSAAAXEgFnn9JSAAABdUlEQVR42j1SbVPbMAzO//9DfNmHcdy424B9KXBdNqh7QGkTt4ljy++SpqSA73SypEey9MhNjAlijFBKXnRMCZJILQVCCHA6nUBrDbrv4Sj6E5NzgpLPWO+DM8ZkAFg302TZQGIXMyMil1o5l8qj+FIuXMVHRDz5xJDOmPmMEHkKmQmJnY+US2Hn3LaR8tS+G7p/HSiVSgfj6X30dP2vJ3mEpCBJPv167mkv/hkzuEjtfqSHt3GJSbHllZyzaqwDvt1o/vmk+ft6z1d/DrzpLV+sdvztccc/2o7XO8OX6wPfPmu+EezqdeC7OUfs1cvAv5WmzhWW8bdN8B6lk0V2A2C7NwixoIyDV22HT51F6RqPLqLxCf8eJpQuUduAVnAvR4dCR50SzgU3jRD/xYuQxRASI9EXTzHX5V6F21nOMOIinH0eGXVJEN+2kfmVbE4tOiXlnFUzF7M9WauCxEYzqq7rlGxRlQ+8tR84ETvZjfyWN4ld/wfnhBXQoXetCgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;F0 Curve&quot; title=&quot;&quot; src=&quot;/static/9d36a4733a92d5231d44f96042114ac1/f058b/image04.png&quot; srcset=&quot;/static/9d36a4733a92d5231d44f96042114ac1/c26ae/image04.png 158w,
+/static/9d36a4733a92d5231d44f96042114ac1/6bdcf/image04.png 315w,
+/static/9d36a4733a92d5231d44f96042114ac1/f058b/image04.png 630w,
+/static/9d36a4733a92d5231d44f96042114ac1/40601/image04.png 945w,
+/static/9d36a4733a92d5231d44f96042114ac1/2e367/image04.png 1066w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;p style=&quot;color:gray; font-style:italic;&quot;&gt;
+Figure. F₀ (Fundamental Frequency) curve extracted from a speech signal
+&lt;/p&gt;
+&lt;p&gt;📈 그래프 해석&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;세로축 (Frequency [Hz]) : 음성의 높낮이를 의미하며, 값이 높을수록 고음(pitch)이 높습니다.&lt;/li&gt;
+&lt;li&gt;가로축 (Frame Index) : 시간 흐름에 따른 프레임 단위 구간입니다.&lt;/li&gt;
+&lt;li&gt;곡선의 변동 : 말하거나 노래할 때의 억양(intonation), 피치 변동(pitch contour), 감정 표현을 나타냅니다.&lt;/li&gt;
+&lt;li&gt;단절된 부분 : 무성 구간(unvoiced segment)으로, 피치가 존재하지 않는 음소를 의미합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;추출된 F₀ 정보는 Source와 Target 음성 간의 평균 피치 차이를 보정하기 위해 사용됩니다. 이를 통해 Target 음성의 톤과 자연스러운 음높이를 유지하면서도 Source의 발화 패턴이나 멜로디를 자연스럽게 반영할 수 있습니다. 결과적으로 이 과정은 톤 매칭(Tone Matching)과 자연스러운 피치 변환(Pitch Normalization)을 가능하게 하여 최종 합성 음성의 일관성과 리얼리즘을 향상시킵니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&quot;https://arxiv.org/abs/2306.15412v2&quot;&gt;RMVPE&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;span style=&quot;color:#0084FF; font-weight:bold;&quot;&gt;Semantic Encoder&lt;/span&gt;  &amp;#x26; &lt;span style=&quot;color:#C80000; font-weight:bold;&quot;&gt;Style Encoder&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&quot;color:#0084FF; font-weight:bold;&quot;&gt;Semantic Encoder&lt;/span&gt; 는 음성 신호에서 &lt;strong&gt;언어적 의미(semantic information)&lt;/strong&gt; 만을 추출하는 모듈입니다. 화자의 음색이나 톤은 최대한 배제하고, “&lt;strong&gt;무엇을 말하고 / 어떤 멜로디로 노래하고 있는지&lt;/strong&gt;”에 해당하는 &lt;strong&gt;내용(content) 표현&lt;/strong&gt;을 인코딩합니다.
+&lt;span style=&quot;color:#C80000; font-weight:bold;&quot;&gt;Style Encoder&lt;/span&gt;  는 그와 반대로, 화자의 &lt;strong&gt;가창 스타일(style)&lt;/strong&gt; 을 인코딩합니다. 즉, “&lt;strong&gt;어떤 음색, 톤, 발성, 표현 방식으로 말하고/노래하는지&lt;/strong&gt;”에 해당하는 정보를 뽑아냅니다.&lt;/p&gt;
+&lt;h4&gt;악보 비유로 이해하기&lt;/h4&gt;
+&lt;!-- &lt;img src=&quot;./image05.png&quot; alt=&quot;Golden&quot; style=&quot;width:50%;&quot;&gt;
+&lt;p style=&quot;color:gray; font-style:italic;&quot;&gt;
+Kpop Demon Hunters - Golden 악보 
+&lt;/p&gt; --&gt;
+&lt;p&gt;음성을 “악보 + 가창 스타일”로 나누어 생각하면 이해가 쉽습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;color:#0084FF; font-weight:bold;&quot;&gt;Semantic Encoder ≈ 악보의 전체 내용&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;가사(lyrics)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;무엇을 말하고/노래하는지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;리듬(rhythm)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;말하기·노래하기의 박자감&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;멜로디(melody)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;음높이(pitch contour) 흐름&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;곡 자체의 구조와 내용에 해당하는 정보입니다.&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;color:#C80000; font-weight:bold;&quot;&gt;Style Encoder ≈ 가수가 노래하는 방식&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;음색(timbre)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;목소리 색깔, 사람마다 고유한 소리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;톤(tone)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;밝게/어둡게, 부드럽게/거칠게 등 톤의 성격&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;발성법(vocal technique)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;벨팅, 속삭이듯, 비성, 바이브레이션 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;같은 곡을 불러도 “이 사람이 부르면 이렇게 들린다”를 결정하는 정보입니다.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&quot;https://arxiv.org/abs/2212.04356&quot;&gt;WHISPER&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/abs/2303.00332&quot;&gt;CAM++&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Generator&lt;/h2&gt;
+&lt;h4&gt;Timbre Extractor (cosyvoice, Alibaba)&lt;/h4&gt;
+&lt;p&gt;음성 변환 과정에서 &lt;strong&gt;Source 음색이 Target으로 새어 나가는 문제(timbre leakage)&lt;/strong&gt; 를 완화하기 위한 모듈입니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Source 음성과 대응되는 Target 음색을 추출하기 위해 &lt;strong&gt;timbre shifter&lt;/strong&gt;로 사용&lt;/li&gt;
+&lt;li&gt;Target 음색을 제대로 잡지 못하면 “&lt;strong&gt;변환하고자 하는 목소리&lt;/strong&gt;”로 제어할 수 없음 → 결과적으로 자연스러운 화자 변환 실패&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&quot;https://arxiv.org/abs/2407.05407&quot;&gt;CosyVoice: Compositional Voice Cloning and Speech Editing via Mixed Speech Tokens&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Length Regulator&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Semantic (내용)&lt;/strong&gt; 정보를 &lt;strong&gt;Acoustic (소리) feature&lt;/strong&gt;의 길이에 맞춰주는 정렬(alignment) 모듈입니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프레임 길이가 서로 다르면 “언제, 어떤 내용을 말해야 하는지” 불일치가 발생&lt;/li&gt;
+&lt;li&gt;발화 타이밍·템포 오류를 방지하여 &lt;strong&gt;내용(content)&lt;/strong&gt; 과 &lt;strong&gt;소리(acoustic)&lt;/strong&gt; 의 시간적 일관성을 유지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/fcb3d23de5adc7db0e8dd481823e5f59/a3767/image06.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 28.48101265822785%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA7klEQVR42lVQW3LDIAz0/S/Xz/40F0gd49g89ADUFcSZVDPLopVYBEtKiekVpRT6jH3f6X7/pce2UQgbresKLZC3nalQiJmejpTzkclw/nvBYrVWa62Zqg4eOWDWrfeJBohWk9rsyGyFFf0NmjNEBGa4LTHGYTDghmCtaiQTJ252g1hk7DOLqcw+P+NDVHf+b6idRfqZqJ+F+xOcwImkE3Sv4eAAjLogF5m5zFp9Gf4sxGyEPHE1Bo/n4dnOHteTPWobg7zrV69LvsD8hj+kPeUSVCUwU4AI5oDb3vvjOAYuDf8+dIfvMeEDXFD7+gNlytNmc09a8AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Length Regulator&quot; title=&quot;&quot; src=&quot;/static/fcb3d23de5adc7db0e8dd481823e5f59/f058b/image06.png&quot; srcset=&quot;/static/fcb3d23de5adc7db0e8dd481823e5f59/c26ae/image06.png 158w,
+/static/fcb3d23de5adc7db0e8dd481823e5f59/6bdcf/image06.png 315w,
+/static/fcb3d23de5adc7db0e8dd481823e5f59/f058b/image06.png 630w,
+/static/fcb3d23de5adc7db0e8dd481823e5f59/40601/image06.png 945w,
+/static/fcb3d23de5adc7db0e8dd481823e5f59/a3767/image06.png 1210w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;p style=&quot;color:gray; font-style:italic;&quot;&gt;
+Length Regulator aligns phoneme durations to match acoustic frame lengths.
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Diffusion Transformer Decoder (U-DiT)&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Diffusion + Transformer 기반의 U-Net 구조&lt;/strong&gt;로, 화자의 &lt;strong&gt;스타일(style)&lt;/strong&gt;, &lt;strong&gt;피치(pitch)&lt;/strong&gt;, &lt;strong&gt;내용(semantic)&lt;/strong&gt; 정보를 결합해   시간적 일관성을 가진 &lt;strong&gt;Mel-Spectrogram&lt;/strong&gt;을 생성합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transformer 기반 U-Net 구조로, 말/노래의 앞뒤 구간까지 고려하며 &lt;strong&gt;호흡·강약·감정선&lt;/strong&gt; 같은 전체 흐름을 모델링&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;해상도를 점진적으로 줄였다 복원&lt;/strong&gt;하면서, &lt;strong&gt;호흡 소리·비브라토·잔향&lt;/strong&gt; 등의 미세 질감(temporal detail)을 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/75fcab505f350eaad53f63a65a8e30b3/f73a1/image07.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 45.56962025316456%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABcSAAAXEgFnn9JSAAACDUlEQVR42mVS2W7aUBTkr/vapz5XUfsBbfrQRChRmxLUtGE33jA47GCMF2xjm802OMCFeGoQPKAeaXTvmdEZHelMwnHmpNfToes2BgMDm80W51p4ATodFaORA2lgYrl8PfJRFB1f03TR7aowDBeybGG/35OErCkkz5bB1HgUOBphGGK3DvFGNhg7NrLlEjixghxDYe772AcW5gqPbWCjI8vI0iWwsV4WKtgdDIfWmDxzAn5l8+C6fViGCr5WQasuQB7KyIvNo1YQG/CCAJLwA6nUNWT2Fp1Y/0OXkcplwbdbIHElJuaINJgiKoUMhk0RtiqBKlHgqQIcbYAWF2+f+Y02T2MxnUCvJvH37gp6JYlxj4GQ+gz24RMk5h6r1YokgplDtK6Ifp2Hq0tw9AFymUdwxScsHBMvdAbP99/QYPOYL+YwmS9gbj5gJt5gZkoo375H9vod5GoawTIkCc+1SJMrgsk9weg3sZg4aDY66Lba8FwTXYEC/fwISWQQeDP02RTS379iyP/EbEijlr4C9/ARGp/EaxgbxscisjJCiRKi9WZ7ON8FxvY0yubZKFiujj1Z+1HoWdE6DI59p6dEFPMSnYKxPRjuVM0Cw9YvInNKBmxniiJVjSMTXkTmrPf6Chiufh47bqj6vm+apmXE///guK6hqJoR+MGJezsBRnxUw7YdQ9M0w/M8M+aUfzAciKyrP6+eAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;U-DiT Architecture&quot; title=&quot;&quot; src=&quot;/static/75fcab505f350eaad53f63a65a8e30b3/f058b/image07.png&quot; srcset=&quot;/static/75fcab505f350eaad53f63a65a8e30b3/c26ae/image07.png 158w,
+/static/75fcab505f350eaad53f63a65a8e30b3/6bdcf/image07.png 315w,
+/static/75fcab505f350eaad53f63a65a8e30b3/f058b/image07.png 630w,
+/static/75fcab505f350eaad53f63a65a8e30b3/f73a1/image07.png 822w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;p style=&quot;color:gray; font-style:italic;&quot;&gt;
+Comparison of DiT, DiT-UNet, and U-DiT architectures.
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Diffusion 과정을 통해 노이즈가 섞인 latent vector를 여러 단계에 걸쳐 복원&lt;br&gt;
+→ Style + Content와 유사한 Mel-Spectrogram을 안정적으로 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/b4e2f4467bc832c44bf806002f9780fc/96658/image08.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 36.708860759493675%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABcSAAAXEgFnn9JSAAABgUlEQVR42k1R20rDQBDNt/mgP6PgF/iuj17AF/HFFrXgqyCi2AtWbUsRQWhNalsTc2mTZpO0aZPOcXax0IHD7M7OOXNZDUDCWLLlRJRLP5/PFSzTzPv9fv7d+1bodjq567q5tNlsprzMZ2SsAeYHGsdSBtZtsViACRBCwDRNOI6DyWQC27aVn06nSNNUCqwo6sA6Qms0GmmpVAJXRhAECkmSoNVqQcZ1XVdvYRii2+2qWLvdRhzH8H1fYTwek+s6kis0/esrrVWqCLlyzEIyQXZg6Aaq5TIMQ4dlWfA8T3VafnyCzsKrCWQhFqfRiH0UCW3/+SHdKJ5gEAaqd16I8sfNCjaLR/i0TGQ8Xp5l+GXy1tUJDmr3Kmf5P/JoGtPOwx4OXwpCu3h/S3fvbmBHQj1mcp9ZjuuPV2zfFDEcB3LbIC7kxQK7t5c4r9dVbCUYLRI6bZ2h0HwSGt9na4tV4JFp9GuTZ1o06A+o1+sxDBoOfyh0PIp8n/gDaI2z/NcI/wCemwV8X1OdSQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Diffusion Process&quot; title=&quot;&quot; src=&quot;/static/b4e2f4467bc832c44bf806002f9780fc/f058b/image08.png&quot; srcset=&quot;/static/b4e2f4467bc832c44bf806002f9780fc/c26ae/image08.png 158w,
+/static/b4e2f4467bc832c44bf806002f9780fc/6bdcf/image08.png 315w,
+/static/b4e2f4467bc832c44bf806002f9780fc/f058b/image08.png 630w,
+/static/b4e2f4467bc832c44bf806002f9780fc/96658/image08.png 881w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;p style=&quot;color:gray; font-style:italic;&quot;&gt;
+Diffusion process: forward adds noise, reverse reconstructs Mel-Spectrogram.
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&quot;https://arxiv.org/abs/2405.02730&quot;&gt;U-DiT: A Diffusion Transformer for High-Fidelity Image and Speech Generation&lt;/a&gt;,
+&lt;a href=&quot;https://arxiv.org/abs/2105.13871&quot;&gt;DiffSVC: A Diffusion Probabilistic Model for Singing Voice Conversion&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Vocoder (BigVGAN, NVIDIA)&lt;/h4&gt;
+&lt;p&gt;Diffusion Decoder가 생성한 Mel-Spectrogram을 실제로 들을 수 있는 &lt;strong&gt;waveform&lt;/strong&gt;으로 변환하는 역할입니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mel-Spectrogram의 주파수·시간 정보를 바탕으로 &lt;strong&gt;자연스럽고 고해상도의 오디오 신호&lt;/strong&gt;를 복원&lt;/li&gt;
+&lt;li&gt;생성된 스펙트럼을 &lt;strong&gt;실제 소리로 재생할 수 있게 만드는 단계&lt;/strong&gt;&lt;br&gt;
+→ 즉, 모델의 “출력 음성”을 완성시키는 마지막 구성요소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 383px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/363d483bde77d3ea01e0f839695f42d8/d0c94/image09.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 137.34177215189874%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAABcSAAAXEgFnn9JSAAAFV0lEQVR42qVV209TdxzvP7H4ZOIelmUJzicvi9mW7GnJHve0xcRHk2XjZU7nkIuW6BgIisGJuIhKMVSgtKX0cnq/UEoLLaUUDrcWkDvK9aDiOb/Pvr9DKwruaSf55Px+3+/3fL+f76XfahRFkRhjoDfDOw+X8WdjYwOyLGNnZ0eVbW9vv9Vx+atXr/hRyX0maiYmJrYePHiAkpIS5dy5c6y2tpZNT0+zzc1NxoPU1dWxoaEhduvWLXb27FlWVFSkyqqqqpjVamVarZYVFxfLhYWFKCsrG9E8e/ZMCgaDIKesvr4ew8PDWF9fVyNzJj6fDxQALS0tuHPnDhobG8Hte3p6MD4+jtbWVhgMBqW9vR2BQEDUEE0pnyX+4+EBFhcX36b5gdLspcxr2NfXx6OycDgMjkgk8haciclkAmeQ1+XtuI4jFAop0WgUW1tbooaKLvHLy5cvmSRJatE5+Pn169dYWFhAV1cXOjo6kMlkVNl+O2qYwks1NTUlaigdaWBgIMeeHehyKpVS2SSTScRisQPlyKc8OTmJbDYraiiK5PV6MTIywkRRxH7odDpUVlaipqYGer0eiUQCY2Nj3F7V8zfdFR6UstltyurqKhcyHmU/aArQ39+v1oqfP2TDHS4tLWFbknab4nG7YTGbmeBwwGG3vwcuM1L92p4+hZPrbbYDNiRTXE4ngnxsiKbUbbViIZ1mo729mKA65TFOzcrG4xBJngqFME3pctm7NjkobrMZTqdT1CwvL0vdFNliNDI7RbORczuxsOeYdJJh/d27qLt9W2XKGef1HDaCXqdTUjROLrdb1Dx//lxy0YwRXTYzN4dJGo3M1BQms1nMzM4iQoyuV1Sg+mYNhvhozMyourwNv7sEQUkEAnC5XKKGfgFS3ONBv8/HgnYBKhwCAjYH/IRuwQWn2QLB1ImI2wu/1a7aBFQ4ERKc8JjNyiB12ckdzs/NSaPEYi2bZX0eG0ajQapZAJPxsIrpwV4kAgJi7i5kEj2Y6A9jvK9btePo99ixlskoUSLl4DWcn5+XRnrCWJvIMN3DSmRnDNC3XcOjpjI0NV9BY1OJem/45w/cu38JrYY/8aSlHB2mSqSGdXjy8CbkxWUlRT5oSex2eYi6yId+nrbHQMSEWHcbBEsjrMb7sBg4GmBs/Rt+ZzNc1of01qHH34KY34D12Xm8WVlR0tRtXXMzNWVlRbJTUwaoKQm/H72CB30ePwb8QZIFkQ5H4KUa2lvbaXTCiPuChACl6keCzr0uF5obGhRDczNoyewO9traGmjS2YsXLyCOirDarHymIAgCHDQm1D1YrV1we9yqjOu4TXIwiVX6ln5pCl8atNoO7sNwuEddqJsbm1heWobRaKLlqqcVZqZl2oYp0tGawgyNCy1U9UMipeTeew7z/ylz87MUOY6R0TTSYgrxeAx2aydsdgtifREMpQYoizSSqTg5z+SX7t6C3c9wenKRUkrAZ4vD1xlF0JuCRYjCqPci7BuGy5+EV0jAZevHWGomv8UOOqQgqsPa22Yc/r4Yp08W45uPCnH81EUUnCnH10eLcfx0CQp+KMeXJ0pw9LPfUPrLo11vsvIBh7mU6zocOFx1DSd/qsa3X2hx+sx1HLt0A6fOVOHzy9U4WlaNE4U1KPjxGq5WGt6rYd7hBk+XHL7hfm+0d8qHtL/Kn/58VT72Valc8F2pfORCqfxJeZF8+K8S+cj5K/LH2qvyoaLz8oVyvbybnLKTc5jeawp2GdrSSVwMNUHb24Lf71lx+bEJlzwGVERJltDhsrcNFXEdigKP8cSVyBXwfYZtBAuh83/ATHAQ6v8FuZgibxJsZC4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;BigVGAN Vocoder&quot; title=&quot;&quot; src=&quot;/static/363d483bde77d3ea01e0f839695f42d8/d0c94/image09.png&quot; srcset=&quot;/static/363d483bde77d3ea01e0f839695f42d8/c26ae/image09.png 158w,
+/static/363d483bde77d3ea01e0f839695f42d8/6bdcf/image09.png 315w,
+/static/363d483bde77d3ea01e0f839695f42d8/d0c94/image09.png 383w&quot; sizes=&quot;(max-width: 383px) 100vw, 383px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;p style=&quot;color:gray; font-style:italic;&quot;&gt;
+BigVGAN vocoder architecture reconstructing waveform from Mel-Spectrogram.
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&quot;https://arxiv.org/abs/2206.04658&quot;&gt;BigVGAN: A Universal Neural Vocoder with Large-Scale Training and Efficient Inference&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;평가 지표&lt;/h2&gt;
+&lt;p&gt;두 음성이 &lt;strong&gt;얼마나 같은 화자인 것처럼 들리는지&lt;/strong&gt;를 평가하기 위해 다음과 같은 음향적 유사도 지표를 사용합니다.
+해당 내용에서는 언급하진 않았지만 음성 평가 지표인 DNSMOS, 언어적 평가 지표인 Character Error Rate, Word Error Rate를 통해서도 평가를 합니다.&lt;/p&gt;
+&lt;h4&gt;Speaker Cosine Similarity&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;두 화자의 &lt;strong&gt;임베딩 간 코사인 유사도(Cosine Similarity)&lt;/strong&gt; 를 계산&lt;/li&gt;
+&lt;li&gt;값이 1에 가까울수록 두 음성의 &lt;strong&gt;화자 특성(timbre, tone)&lt;/strong&gt; 이 유사함을 의미&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;F₀ Correlation &amp;#x26; F₀ RMSE&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;추출된 F₀ 곡선을 기반으로, 변환된 음성이 원본과 &lt;strong&gt;얼마나 유사한 피치 궤적을 가지는지&lt;/strong&gt;를 측정합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Correlation&lt;/strong&gt;은 두 F₀ 곡선의 &lt;strong&gt;타이밍 및 멜로디 형태 유사도&lt;/strong&gt;를 나타내며, &lt;strong&gt;RMSE&lt;/strong&gt;는 &lt;strong&gt;피치 값의 절대적 차이&lt;/strong&gt;를 측정하여 전반적인 음정 편차를 평가합니다.&lt;/li&gt;
+&lt;li&gt;이 두 지표는 단순히 음정이 맞는지뿐만 아니라, &lt;strong&gt;시간 축에서의 피치 변화 양상&lt;/strong&gt;까지 함께 고려하여 음성 변환의 품질을 정량화합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;F₀ Trajectories: Pitch Shift Comparison&lt;/h4&gt;
+&lt;p&gt;아래 그래프는 Source(파란색), Generated(주황색), 그리고 &lt;strong&gt;+9반음(semitone) 만큼 인위적으로 높인 Generated(초록색)&lt;/strong&gt; 의 F₀ 변화를 나타냅니다.&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/0a8c78ddbe48c7e9f116e397cd626e46/66465/image10.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 44.93670886075949%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABcSAAAXEgFnn9JSAAABoUlEQVR42l1SbZuTMBDs//9n6he152mfq0d7paUHlACBvG3COOG0nm6eJctuMplsZpNiDMZYNE2Ltr3h5dXhdjNACIgSEWOEUgrnc4myqmGch7AWfvv72HuPDT9hHHtcrxU3djhU3/C9+IgfzTPOtoP2BF+w2uQFhp5SursPb/8SBdZabIhMhgbLsiAtCRaCPgbUZmYkmAnA0lrPVo36Hq+HOFnnhWNlSLA74HvLC+IS/8lk+5Nb1nEn/xdwGIbgnIMTcksCHz0M484ojL4n67j6/+YTe5nYt+gYu7dcBhSR4Hj31mhUc82r9iiGEtepw77pofhgyis4bkpkwc7h5hqcdIV6HtCYAaWuMYlG8IGAuYcEPFYXfHkusHs5oCgvKM4XnMqfeCh2+LDfYnt6gtID1NxjyzWPhyM+7R7wtSjw+WmPx8uRqhBsyHQFDN7Cjh2mUUF4qtiRfY3wZDx3DXzfIDE/jQP07ZVrNBxrhgd43aOtr8itWwEjn9xYXimxsdRTjoX6m/hYVBWEemyoUZfjLA+X61QENZk9UjaOcwb8BfftuDGE+70SAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;F0 Comparison&quot; title=&quot;&quot; src=&quot;/static/0a8c78ddbe48c7e9f116e397cd626e46/f058b/image10.png&quot; srcset=&quot;/static/0a8c78ddbe48c7e9f116e397cd626e46/c26ae/image10.png 158w,
+/static/0a8c78ddbe48c7e9f116e397cd626e46/6bdcf/image10.png 315w,
+/static/0a8c78ddbe48c7e9f116e397cd626e46/f058b/image10.png 630w,
+/static/0a8c78ddbe48c7e9f116e397cd626e46/40601/image10.png 945w,
+/static/0a8c78ddbe48c7e9f116e397cd626e46/66465/image10.png 1097w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;p style=&quot;color:gray; font-style:italic;&quot;&gt;
+F₀ trajectories of Source, Generated, and pitch-shifted (+9 semitone) audio samples.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Source (파란색):&lt;/strong&gt; 원본 화자의 기초 주파수(F₀) 궤적&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Generated (주황색):&lt;/strong&gt; 목표 음역대에 맞추어 변환된 음성&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Generated pitch +9 (초록색):&lt;/strong&gt; 동일한 음성을 &lt;strong&gt;+9 semitone 만큼 과도하게 올린 경우&lt;/strong&gt;로,&lt;br&gt;
+모델이 잘못 설정되었을 때 &lt;strong&gt;원본보다 지나치게 높은 음정으로 출력되는 실패 사례&lt;/strong&gt;를 의도적으로 보여줍니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 그래프는 모델의 피치 제어가 올바르게 작동하지 않을 경우, F₀ 곡선이 원본 대비 &lt;strong&gt;과도하게 높게 변형되는 비자연스러운 결과&lt;/strong&gt;를 시각적으로 보여줍니다. 즉, 올바른 피치 변환의 경우 &lt;code class=&quot;language-text&quot;&gt;F₀ Correlation&lt;/code&gt;은 &lt;strong&gt;높게&lt;/strong&gt;, &lt;code class=&quot;language-text&quot;&gt;F₀ RMSE&lt;/code&gt;는 &lt;strong&gt;낮게&lt;/strong&gt; 유지되어야 합니다. 반대로, 피치가 비자연스럽게 변형된 실패 사례에서는 &lt;code class=&quot;language-text&quot;&gt;Correlation&lt;/code&gt;이 떨어지고 &lt;code class=&quot;language-text&quot;&gt;RMSE&lt;/code&gt;가 크게 증가하게 됩니다.&lt;/p&gt;
+&lt;p&gt;이 그래프를 통해,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;F₀ 궤적이 Source와 과도하게 벌어질 경우 &lt;strong&gt;멜로디·음역대가 심각하게 틀어졌다는 것&lt;/strong&gt;을 시각적으로 확인할 수 있고,&lt;/li&gt;
+&lt;li&gt;단순히 “피치가 바뀌었다”가 아니라, &lt;strong&gt;얼마나 비자연적인 수준으로 벗어났는지&lt;/strong&gt;를 판단할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;⚠️ 한계점 및 대응방안&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구분&lt;/th&gt;
+&lt;th&gt;한계점&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;th&gt;대응방안&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;생성 시간 및 GPU 자원&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;실시간 대응 어려움 및 고성능 GPU 의존&lt;/td&gt;
+&lt;td&gt;모델 구조가 Semantic &amp;#x26; Style Encoder, Generator, Vocoder로 구성되어 연산량이 큼&lt;/td&gt;
+&lt;td&gt;모델 &lt;strong&gt;경량화 (Quantization, Distillation)&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;학습 데이터&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;고품질 음성 및 노래 데이터 부족&lt;br/&gt;+ 저작권 문제&lt;/td&gt;
+&lt;td&gt;특정 스타일·감정·장르의 고품질 데이터 확보가 어려움&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;데이터 증강 (Augmentation)&lt;/strong&gt;&lt;br/&gt;&lt;strong&gt;오픈소스 데이터셋 크롤링·정제&lt;/strong&gt;&lt;br/&gt;&lt;strong&gt;저작권 협의&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;음색 보존 및 다양성&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;변환 후 원 화자의 음색이 흐려짐 / 유사 스타일로 수렴&lt;/td&gt;
+&lt;td&gt;VC 이후 음색 왜곡·일관성 저하 / 감정·톤 표현 제한&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Speaker Embedding 정교화&lt;/strong&gt;&lt;br/&gt;&lt;strong&gt;Style Extractor 사전 학습 및 Fine-tuning&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3&gt;Summary&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AI Voice 파이프라인은 Feature Extractor → Generator(U-DiT 기반) → Vocoder(BigVGAN) 으로 구성됩니다.
+Feature Extractor는 음성에서 Spectrogram, Pitch, Semantic 등 핵심 음향 특징을 추출하고, Timbre Extractor가 화자 음색을 정제, Length Regulator가 발화 길이·타이밍을 정렬합니다. 이후 Diffusion Transformer Decoder(U-DiT)가 Style·Pitch·Semantic 정보를 결합해 고품질 Mel-Spectrogram을 생성하고, Vocoder(BigVGAN)가 이를 실제 오디오 waveform으로  복원하여 자연스럽고 현실적인 AI 음성을 완성합니다.
+모델 평가는 Speaker Similarity(Cosine Similarity) 와 F₀ 기반 Correlation·RMSE 지표를 사용해 음색 일관성(timbre consistency) 과 음정 유사도(pitch similarity) 를 함께 측정하며, 성능 향상을 위해 모델 경량화, 데이터 확충, 음색 정교화 전략이 병행됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;읽어 주셔서 감사드립니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[휴먼의 'AI 학습'은 이렇게 #2: DeepLearning.ai (& pro)]]></title><description><![CDATA[안녕하세요, Joe! 입니다. 
 '휴먼의 AI학습' 시리즈 그 두번째는 여러분이 잘 아시는 DeepLearning.ai 사이트를 소개합니다. 최근에 구독형 서비스(pro)를 오픈하면서 화제가 되기도 했지요. 2025년 11월 버전 기준으로 정리해 보도록 하겠습니다.  (1) https://www.deeplearning.ai…]]></description><link>https://techtopic.skplanet.com/deeplearningai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/deeplearningai/</guid><dc:creator><![CDATA[joeoriginal]]></dc:creator><pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, Joe! 입니다. &lt;br&gt;
 &apos;휴먼의 AI학습&apos; 시리즈 그 두번째는 여러분이 잘 아시는 DeepLearning.ai 사이트를 소개합니다. 최근에 구독형 서비스(pro)를 오픈하면서 화제가 되기도 했지요. 2025년 11월 버전 기준으로 정리해 보도록 하겠습니다. &lt;/p&gt;
 &lt;h1&gt;(1) &lt;a href=&quot;https://www.deeplearning.ai/&quot;&gt;https://www.deeplearning.ai/&lt;/a&gt; (딥러닝 에이아이의 주요 특징은?)&lt;/h1&gt;
