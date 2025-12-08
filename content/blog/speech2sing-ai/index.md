@@ -6,7 +6,7 @@ author: "kwj"
 description: "내 목소리가 말하고, 노래한다!"
 ---
 
-2025년 11월 4일(화)에 열린 SK AI SUMMIT 2025 행사 둘째날 Special Session에서 당사 김우주 매니저가 발표한 SK플래닛의 **AI를 활용한 Voice Conversion** 기술을 소개합니다.
+본 글에서는 2025년 11월 4일(화)에 열린 SK AI SUMMIT 2025 행사 둘째날 Special Session에서 당사 김우주 매니저가 발표한 SK플래닛의 **AI를 활용한 Voice Conversion** 기술을 소개합니다.
 
 ---
 
@@ -27,7 +27,7 @@ script: _"안녕하세요, 내 목소리가 말하고, 노래한다. AI가 만�
 
 ![image1](./image00.png)
 
-**Reference:** [유재석(naver.com)](https://www.naver.com/)
+**Reference:** [유재석(naver.com)]
 
 
 앞서 설명드린 Speech Voice Conversion의 전체 흐름을 간단히 정리하겠습니다. 음성(source, target)을 입력으로 받아 source가 내용과 리듬을 유지하면서 target 화자의 음색과 톤으로 생성하는 기술입니다.
