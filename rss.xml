@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Dec 2025 04:02:11 GMT</lastBuildDate><item><title><![CDATA['우리는 이미 만들고 있었다' - 개발조직 AI 리얼스토리(2025년판)]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 지난 여름 사내 세미나에서 '우리는 이미 만들고 있었다' 라는 주제로 공유된 개발조직 AI 구현 사례를 블로그 스타일로 재편집/정리였사오니 참고하시기 바랍니다. *SK플래닛은 OK캐쉬백과 Syrup Wallet 앱으로 알려져 있는 회사로, 그밖에도 다양한 사내외 AI & Data…]]></description><link>https://techtopic.skplanet.com/skp-aistory2025/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-aistory2025/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Wed, 10 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 테크편집부입니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Dec 2025 04:07:05 GMT</lastBuildDate><item><title><![CDATA['우리는 이미 만들고 있었다' - 개발조직 AI 리얼스토리(2025년판)]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 지난 여름 사내 세미나에서 '우리는 이미 만들고 있었다' 라는 주제로 공유된 개발조직 AI 구현 사례를 블로그 스타일로 재편집/정리였사오니 참고하시기 바랍니다. *SK플래닛은 OK캐쉬백과 Syrup Wallet 앱으로 알려져 있는 회사로, 그밖에도 다양한 사내외 AI & Data…]]></description><link>https://techtopic.skplanet.com/skp-aistory2025/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-aistory2025/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Wed, 10 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 테크편집부입니다.&lt;/p&gt;
 &lt;p&gt;지난 여름 사내 세미나에서 &lt;strong&gt;&apos;우리는 이미 만들고 있었다&apos;&lt;/strong&gt; 라는 주제로 공유된 개발조직 AI 구현 사례를 블로그 스타일로 재편집/정리였사오니 참고하시기 바랍니다.&lt;/p&gt;
 &lt;p&gt;*SK플래닛은 OK캐쉬백과 Syrup Wallet 앱으로 알려져 있는 회사로, 그밖에도 다양한 사내외 AI &amp;#x26; Data 플랫폼 및 도구를 개발해 오고 있습니다. 2025년 현재 저희는 LLM을 직접 개발하지는 않으며(예: &apos;LLM 국가대표 5대 기업&apos;이 아님) AI를 우리의 프로덕트에 어떻게 잘 활용할 것인가에 초점을 맞추고 있습니다. 특히 &lt;strong&gt;1) 프로덕트의 가치의 향상 2) AI Coding 도구를 통한 개발 생산성 향상 3) AI와 협업하면서 생산성을 직접 경험하며 사고의 혁신을 함께 이루는 것&lt;/strong&gt;을 지속적인 목표로 가져가려고 합니다(최근에는 11번가를 자회사로 편입하고 기프티콘 사업부를 인수하는 등 새로운 시즌을 맞고 있습니다).&lt;/p&gt;
 &lt;h2&gt;목차&lt;/h2&gt;
@@ -325,7 +325,9 @@ RB Dialog를 활용한 AICC 개선 발표 내용은 &lt;a href=&quot;https://www
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;(8) 지능형 ADN 설정 시스템&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;더 자세한 내용은 테크 블로그를 참조하세요!&lt;/strong&gt; &lt;a href=&quot;https://techtopic.skplanet.com/planet-ad-for-money/blog/&quot;&gt;https://techtopic.skplanet.com/planet-ad-for-money/blog/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SK AI SUMMIT 2025 발표 영상은 여기를,&lt;/strong&gt; &lt;br&gt;
+(제목: &lt;a href=&quot;https://www.youtube.com/watch?v=Kpra7EWOvkM&quot;&gt;&apos;어떤 광고가 돈이 될까? AI 기반 광고 수익 최적화&apos;&lt;/a&gt;) &lt;br&gt;
+&lt;strong&gt;더 자세한 내용은 테크 블로그를 참조하세요!&lt;/strong&gt; &lt;a href=&quot;https://techtopic.skplanet.com/planet-ad-for-money/blog/&quot;&gt;https://techtopic.skplanet.com/planet-ad-for-money/blog/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;본 과제는 &lt;strong&gt;&quot; &apos;어떤 광고가 돈이 될까&apos; - SK플래닛 AD(P.AD)에 적용된 AI 기반 광고 수익 최적화 기술&quot;&lt;/strong&gt; 이라는 주제로 올해 &lt;strong&gt;SK AI SUMMIT&lt;/strong&gt; 에서도 발표하였습니다. 지능형 ADN 설정 시스템은 광고 매출 극대화를 위한 노출 가중치 및 최소 단가 자동 조정 시스템이며, 다음의 특징을 갖고 있습니다.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -382,7 +384,9 @@ RB Dialog를 활용한 AICC 개선 발표 내용은 &lt;a href=&quot;https://www
 &lt;li&gt;Grid별 학습 데이터 및 모델 구축, 주적 모델 업데이트, 신뢰도 지표&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;(10) TTS &amp;#x26; Speech2Sing (AI서비스개발팀)&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;더 자세한 내용은 테크 블로그를 참조하세요!&lt;/strong&gt; &lt;a href=&quot;https://techtopic.skplanet.com/speech2sing-ai/&quot;&gt;https://techtopic.skplanet.com/speech2sing-ai/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;**SK AI SUMMIT 2025 발표 영상은 여기를, ** &lt;br&gt;
+(제목: &lt;a href=&quot;https://www.youtube.com/watch?v=-m4SOL-V-kk&quot;&gt;&apos;내 목소리가 말하고, 노래한다! AI가 만들어준 나만의 목소리&apos;&lt;/a&gt;) &lt;br&gt;
+&lt;strong&gt;더 자세한 내용은 테크 블로그를 참조하세요!&lt;/strong&gt; &lt;a href=&quot;https://techtopic.skplanet.com/speech2sing-ai/&quot;&gt;https://techtopic.skplanet.com/speech2sing-ai/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Large Language Model과 Generative Model(Diffusion, flow-based, Generative Adversarial Network)의 발전으로 음성과 노래 생성 성능이 개선되었습니다. 이를 통해 Text2Speech, Speech2Text, Voice conversion과 같은 기술을 활용해 다양한 보이스 서비스를 통해 개인화된 콘텐츠 제작이 가능해졌습니다. 가장 흔히 접해 본 Text2Speech는 문자를 음성으로 변환해주는 기술입니다.&lt;/p&gt;
 &lt;h2&gt;(11) Real-time Voice AI (AI서비스개발팀)&lt;/h2&gt;
 &lt;p&gt;&lt;span
