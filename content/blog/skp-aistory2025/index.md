@@ -124,8 +124,7 @@ Insight Lens는 데이터 분석을 지원하는 AI 기반 쿼리 생성 어시�
 ![07](./07.png)
 
 ## (8) 지능형 ADN 설정 시스템 
-**SK AI SUMMIT 2025 발표 영상은 여기를,** <br>
-(제목: ['어떤 광고가 돈이 될까? AI 기반 광고 수익 최적화'](https://www.youtube.com/watch?v=Kpra7EWOvkM)) <br>
+**SK AI SUMMIT 2025 발표 영상은 여기를 - (제목: ['어떤 광고가 돈이 될까? AI 기반 광고 수익 최적화(CLICK!)'](https://www.youtube.com/watch?v=Kpra7EWOvkM))** <br>
 **더 자세한 내용은 테크 블로그를 참조하세요!** https://techtopic.skplanet.com/planet-ad-for-money/blog/
 
 
@@ -156,8 +155,7 @@ Insight Lens는 데이터 분석을 지원하는 AI 기반 쿼리 생성 어시�
 
 ## (10) TTS & Speech2Sing (AI서비스개발팀)
 
-**SK AI SUMMIT 2025 발표 영상은 여기를, ** <br>
-(제목: ['내 목소리가 말하고, 노래한다! AI가 만들어준 나만의 목소리'](https://www.youtube.com/watch?v=-m4SOL-V-kk)) <br>
+**SK AI SUMMIT 2025 발표 영상은 여기를 - (제목: ['내 목소리가 말하고, 노래한다! AI가 만들어준 나만의 목소리(CLICK!)'](https://www.youtube.com/watch?v=-m4SOL-V-kk))** <br>
 **더 자세한 내용은 테크 블로그를 참조하세요!** https://techtopic.skplanet.com/speech2sing-ai/
 
 Large Language Model과 Generative Model(Diffusion, flow-based, Generative Adversarial Network)의 발전으로 음성과 노래 생성 성능이 개선되었습니다. 이를 통해 Text2Speech, Speech2Text, Voice conversion과 같은 기술을 활용해 다양한 보이스 서비스를 통해 개인화된 콘텐츠 제작이 가능해졌습니다. 가장 흔히 접해 본 Text2Speech는 문자를 음성으로 변환해주는 기술입니다.
