@@ -1,4 +1,180 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Dec 2025 04:10:14 GMT</lastBuildDate><item><title><![CDATA['우리는 이미 만들고 있었다' - 개발조직 AI 리얼스토리(2025년판)]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 06 Jan 2026 08:38:40 GMT</lastBuildDate><item><title><![CDATA[개인의 회고에서 조직의 자산으로 : SK플래닛 기술 블로그 3년의 여정]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 독자 여러분 새해 복 많이 받으세요! 
+2026년 한 해 모두 건강하시고 각자의 위치에서 행복한 코딩 하시길 바랍니다 :) SK플래닛 기술 블로그 Tech Topic이 2023년 1월 다시 문을 연 지 어느덧 3년이라는 시간이 흘렀습니다.
+(관련 글: 'SK플래닛 Tech Topic…]]></description><link>https://techtopic.skplanet.com/techtopic-3years/</link><guid isPermaLink="false">https://techtopic.skplanet.com/techtopic-3years/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 테크편집부입니다. 독자 여러분 새해 복 많이 받으세요! &lt;br&gt;
+2026년 한 해 모두 건강하시고 각자의 위치에서 행복한 코딩 하시길 바랍니다 :)&lt;/p&gt;
+&lt;p&gt;SK플래닛 기술 블로그 &lt;a href=&quot;https://techtopic.skplanet.com/&quot;&gt;&lt;strong&gt;Tech Topic&lt;/strong&gt;&lt;/a&gt;이 2023년 1월 다시 문을 연 지 어느덧 3년이라는 시간이 흘렀습니다.&lt;br&gt;
+(관련 글: &lt;a href=&quot;https://techtopic.skplanet.com/skp-techblog-intro/&quot;&gt;&lt;strong&gt;&apos;SK플래닛 Tech Topic 기술 블로그를 소개합니다!&apos;&lt;/strong&gt;&lt;/a&gt; 참조) &lt;br&gt;&lt;br&gt;
+Tech Topic은 단순한 기술의 기록만이 아니라, SK플래닛의 기술 DNA를 외부 세계와 연결하고 이를 내재화하는 &lt;strong&gt;회고의 여정&lt;/strong&gt; 을 담았다고 생각합니다. 또한 개발자 차원에서는 &lt;strong&gt;퍼스널 브랜딩&lt;/strong&gt; 및 &lt;strong&gt;성장 플랫폼&lt;/strong&gt;으로서의 역할도 수행하였는데요. 2026년 새해를 맞아, 지난 3년간의 유의미한 변화와 지표들을 숫자로 정리하며 앞으로의 방향을 함께 공유하고자 합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;(1) 양적 성장을 넘어선 꾸준함: 아티클 발행량 2배 증가&lt;/h2&gt;
+&lt;p&gt;Tech Topic은 2024년 상반기까지는 월 평균 1-2천 수준의 조회수를 기록하며 조용히 기반을 다져 왔습니다. &lt;br&gt;
+그러다가 2024년 하반기부터는 AI 및 개발자 회고 중심의 아티클을 늘려 가면서 5-6천 수준으로 점진적 성장을 이룬 뒤, 2025년 7월 GA4(Google Analytics 4) 기반의 데이터 분석 결과를 토대로 대대적인 기술 블로그 개선을 단행하였습니다(관련 글: &lt;a href=&quot;https://techtopic.skplanet.com/techblogupdate1/&quot;&gt;&lt;strong&gt;&apos;Tech Topic 기술블로그 개선 실험 - 콘텐트, 성능, SEO, AEO&apos;&lt;/strong&gt;&lt;/a&gt; 참조).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ab14ebb1c9ccd8b63328b705f948e26d/78612/image00_.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAABYlAAAWJQFJUiTwAAABRklEQVR42nWRy07CQBSGfTpNiKUgTUXAubRM2ymRtiC6MvEBjLHSC6HlkliM0cS1CWtXvgTQLbwC9SgxYVH/zJzFzHz/+XPmYLvdZlm2Xq+jKIqjeDyKJuOfNZ1OR3+K4zgIgn6/P5s9Z3s62MGLxaJarZ4jpBp2s3XNzJ6m64pCVVWllNZqtWKxWCgUOOc58Gq1gncI4XL7Sbr5FHsfDcza7QtutjRNw5gghGRZ7na7uXCKMa7X6yK7r3Rej81JA6vc0A2D67qhKOCsAuw4Tg6cpil4Q/IT/U5yZqI5bCBF0xi0ZYyd/UqSpHx4F5sQUrYS+fZLvJoTldu2ZVm243TAglLl39jL5RLuSqXSUTMULueHrffKKaIEE0LBEdrCzARByB/YZrMJwxA+43GQuMO3h8GL5we+7/mwPQ/OobqumyTJPvwNl4Uwgo6k2m8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image00_&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ab14ebb1c9ccd8b63328b705f948e26d/f058b/image00_.png&quot;
+        srcset=&quot;/static/ab14ebb1c9ccd8b63328b705f948e26d/c26ae/image00_.png 158w,
+/static/ab14ebb1c9ccd8b63328b705f948e26d/6bdcf/image00_.png 315w,
+/static/ab14ebb1c9ccd8b63328b705f948e26d/f058b/image00_.png 630w,
+/static/ab14ebb1c9ccd8b63328b705f948e26d/40601/image00_.png 945w,
+/static/ab14ebb1c9ccd8b63328b705f948e26d/78612/image00_.png 1260w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;꾸준한 발행&lt;/strong&gt;: 하반기부터 기고 글 수를 대폭 확대하며 매월 꾸준한 콘텐츠를 선보였습니다(10월·11월 각 7건 발행 등). 그 결과로 &apos;24년 14건에서 &lt;strong&gt;&apos;25년 28건&lt;/strong&gt;으로 2배의 테크 아티클을 발행하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;개발자 친화적인 콘텐츠 큐레이션&lt;/strong&gt;: &apos;코드를 통해 현업의 문제를 해결하고자 하는&apos; SK플래닛의 개발 사례를 포함하여, 기술 문화, 세미나 일정 및 교육 등의 기술 정보, AI 등으로 다양화하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;사용자 경험(UX) 최적화&lt;/strong&gt;: 블로그 메인 배너 개편 및 로딩 속도 향상, 접근성(A11y) 강화, 그리고 SEO/AEO(검색 및 AI 답변 최적화) 개선을 통해 누구나 쉽게 기술 정보를 접할 수 있는 환경을 만들었습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b647f0296a710fe236a93ca6764411f5/78612/image02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 18.9873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAt0lEQVR42nWOzQqCQBSFff8XiH4se4J05YzOaBJpQhgRQka/iJJGM26iGUFtcBG26ML97rmLwzlS0zR1XQsGQaDOVGQiAIABDQigECY02hcCXReiLMumM5LYqqoEJ/IYOGj9jApSbO5RmJ0KSuHNp5SG2XGV7Aa9PiHkG/ZjnirK0vfi14MzfiVpUuScsW16YG92yeN9epaHI0L/mF3PFbUXtoMxtpFlIXHxvCVGGBmmpmmc827tD4Irz9/GsqUlAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b647f0296a710fe236a93ca6764411f5/f058b/image02.png&quot;
+        srcset=&quot;/static/b647f0296a710fe236a93ca6764411f5/c26ae/image02.png 158w,
+/static/b647f0296a710fe236a93ca6764411f5/6bdcf/image02.png 315w,
+/static/b647f0296a710fe236a93ca6764411f5/f058b/image02.png 630w,
+/static/b647f0296a710fe236a93ca6764411f5/40601/image02.png 945w,
+/static/b647f0296a710fe236a93ca6764411f5/78612/image02.png 1260w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(성능, 접근성, 검색엔진 최적화 개선 결과)&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h2&gt;(2) 첫 이정표: 월간 조회수 10,000건 돌파&lt;/h2&gt;
+&lt;p&gt;추석 연휴 직후인 10월 15일부터 11월 14일까지 30일간, Tech Topic은 새로운 첫 이정표를 세웠는데요, 바로 &lt;strong&gt;30일 PV 10,000+&lt;/strong&gt; 을 달성한 것입니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;콘텐츠 집중 발행 및 카테고리 다양화&lt;/strong&gt;: 한 달간 총 11개의 글을 발행하며 개발 사례(5건), 개발자 문화(3건), 기술 정보(3건) 등 풍성한 카테고리를 구성했습니다. 참고로 비슷한 시점에 진행되었던 SK AI SUMMIT 발표 주제의 정리 글은 이 기간 이후에 발행되었으며, 해당 기간 많은 개발자 분들이 참여해 주셔서 좋은 포트폴리오를 구성할 수 있었습니다. 이 자리를 빌어 감사의 인사를 드립니다 : )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;첫 PV 10,000+ 달성&lt;/strong&gt;: 그 결과, 30일 조회수가 &lt;strong&gt;10,838회&lt;/strong&gt;를 기록했습니다. 이는 특정 아티클에 의존한 일시적 현상이 아니라, 전반적인 품질 향상과 사용자 유입 경로 최적화가 함께 만들어낸 작은 열매라고 할 수 있습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2e317fdf4718eaf48d9afc35a5cb5dd9/73caa/image09.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.75949367088608%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAABYlAAAWJQFJUiTwAAABQklEQVR42n1Si26DMAzs//9jNdSWJZCEvEhCHjZzG63tJDrLsrDx2eaO0/5mFbA0AMCeIr6cqu1h7/2nZx+ZWeOVCW2csd76NZdWKpDXhmtMVFxDeo5+gbu1Wr2njmCd2/KGiNTavTUopVJE/ADGpwFQmgnQoL/pDXQ7fAITOjWoiK4ifRxPsGQocE8p2kL3t4+baSo3YdL+poww/iY0U1bYxEwSNlykJ1KOCHtE6d2Z8YGNA/u+TPw6sZuYRyn4ItkiQwi1FNzxmO0vMes1hi2Rp1J8jD5F7ZwymkaMSvbrjsGDlIvf4EHStmXn15XESXlLWVo7MIYN/9msJh2VlIQkYQKJFmLOpZZK+wfO7qIdbb6XzhMflRrG27QsyjmmFF/UbIk8Pcz8KqYu5jHbMW8mBpciRRtDj/b3ucKff3Pf9x+eRLwO+BO7HgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image09&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2e317fdf4718eaf48d9afc35a5cb5dd9/f058b/image09.png&quot;
+        srcset=&quot;/static/2e317fdf4718eaf48d9afc35a5cb5dd9/c26ae/image09.png 158w,
+/static/2e317fdf4718eaf48d9afc35a5cb5dd9/6bdcf/image09.png 315w,
+/static/2e317fdf4718eaf48d9afc35a5cb5dd9/f058b/image09.png 630w,
+/static/2e317fdf4718eaf48d9afc35a5cb5dd9/40601/image09.png 945w,
+/static/2e317fdf4718eaf48d9afc35a5cb5dd9/73caa/image09.png 1110w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;(3) 또다른 값진 의미: 개인에서 조직으로 - 협업의 문화를 반영한 기술 홍보&lt;/h2&gt;
+&lt;p&gt;숫자의 증가보다 더 의미있는 숨은 가치는 바로 &lt;strong&gt;기고 스타일의 변화&lt;/strong&gt;였습니다. 개발자 개인 차원의 기고를 넘어, 팀이나 과제 단위(2인 이상)로 참여하는 글의 비중이 전년 대비 높아졌습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;팀/과제 홍보 및 협업 기반 기고&lt;/strong&gt;: 2024년 단 1건이었던 팀 단위 글이 2025년에는 4건으로 증가했습니다(아래 참조).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;의미 있는 변화&lt;/strong&gt;: 이는 단순히 기술력을 홍보하는 차원 외에도, &lt;strong&gt;팀 내 지식 공유 문화 정착 및 공동의 성과를 기록하려는 시도&lt;/strong&gt;가 시작되었음을 시사합니다. 과제의 기획부터 개발, 트러블슈팅에 이르기까지 전체 과정을 함께 조망하고 회고함으로써 콘텐츠의 깊이뿐만 아니라 그 가치가 더욱 의미를 가지게 되었다고 생각합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/542f80e49cbeeb4c79821bb06a629ba3/e93a1/image04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.12658227848101%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAABYlAAAWJQFJUiTwAAACXElEQVR42mVSS2sTURSeP+NScCG4lOJasCBtjG3TalFBpMGgbS00La0gxWK1m9qKlUTTqtC92y4CoRHaeZiZTDKZybzSxLwmk3vndUdPk43gx+Gby73f+e45Zy4ViW+OTCRvTCUnE68nE5sQT1Z34mu7M/NbE08vdqLxDeDp528fr+zMb3yKr3+4t/AuMrcRX9+jRhP7l269Gl9IuZ7vBwSCkBACvsN1vfGbZrhSSRKKYrkslcpAFdB6nk9Fl76MPHofS2ZM07DtHnZwv28jhPqo30e267oYI7HMimVOKLGixIkiX5FKCHV94lHTyYObc7sP1r+buqEpsqrIUkk0JMMs1qqs1ja7YFTgOe4XzbBnNH16mj+jfzIFloeiqMhi+vL45tRyhvgk9MLADYlLiBcSjxAnCP3Q9bBmSlK1IKsChKpIakVunbc97FORF+lr09ux5QzCOAzDP//BsrqtTt3xbOz2kGMh1wIOggDEFNw5mvg4u/YVJqGpqmmYuq5Xq1UdutA0EPV6vUKBF3gBSmdZjmU4gS+e187Bl7qzmL4+uz2zctBut+v1uqqqkKwoCmTCug9TQ0iWZWUAMAVuNBrBANTYfOpK9M3dpc+O44DZv3UPu+h2u+ACCfUBarUa7AyPqPurh7ef7T98+U3T9FazaVlWq9XqdDrAIAKFbdsnJye5XC6bzebzeYZhaJoWBAH+IjW2kLo6uRVLHmIMdzsYY1BDtfYAkAw7IB3mcBzH83ylUmk2mxcDO84J6aPjox9ZfYBhz4ZhwAjgGJ4Y9OYOANZD9n0fTAkhfwHhM1LMZky6WgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;&quot;
+        src=&quot;/static/542f80e49cbeeb4c79821bb06a629ba3/f058b/image04.png&quot;
+        srcset=&quot;/static/542f80e49cbeeb4c79821bb06a629ba3/c26ae/image04.png 158w,
+/static/542f80e49cbeeb4c79821bb06a629ba3/6bdcf/image04.png 315w,
+/static/542f80e49cbeeb4c79821bb06a629ba3/f058b/image04.png 630w,
+/static/542f80e49cbeeb4c79821bb06a629ba3/40601/image04.png 945w,
+/static/542f80e49cbeeb4c79821bb06a629ba3/78612/image04.png 1260w,
+/static/542f80e49cbeeb4c79821bb06a629ba3/e93a1/image04.png 3814w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h2&gt;마치며: 다음 3년을 향하여&lt;/h2&gt;
+&lt;p&gt;Tech Topic의 지난 3년이 &lt;a href=&quot;https://web.archive.org/web/20190116065552/http://readme.skplanet.com/&quot;&gt;README&lt;/a&gt;에서 다시 오픈한 SK 플래닛 기술 블로그의 정체성을 재확인하고 기틀을 잡는 시기였다면, 앞으로의 3년은 &lt;strong&gt;기술정보 전달 기능을 넘어 기술 홍보의 지속 가능성을 고민하는 시간&lt;/strong&gt;이 될 것입니다.&lt;/p&gt;
+&lt;p&gt;국내 최고 수준인 SK데보션 등의 규모에는 비할 바가 아니지만, Tech Topic은 이미 &lt;strong&gt;SK스퀘어 자회사 중 가장 활발하게 운영되고 있는 기술 채널로 자리매김하였습니다&lt;/strong&gt;. 단순한 조회수를 넘어, 회사의 발전과 함께 SK플래닛의 개발 활동을 알리는 홍보 채널이자 개발자들의 퍼스널 브랜딩과 회고를 돕는 플랫폼으로서 앞으로도 &lt;strong&gt;SK 테크 문화의 한 축&lt;/strong&gt;을 지탱해 가고자 하오니 앞으로도 잘 부탁드립니다.&lt;/p&gt;
+&lt;p&gt;읽어 주셔서 감사합니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA['우리는 이미 만들고 있었다' - 개발조직 AI 리얼스토리(2025년판)]]></title><description><![CDATA[안녕하세요, 테크편집부입니다. 
 지난 여름 사내 세미나에서 '우리는 이미 만들고 있었다' 라는 주제로 공유된 개발조직 AI 구현 사례를 블로그 스타일로 재편집/정리였사오니 참고하시기 바랍니다. *SK플래닛은 OK캐쉬백과 Syrup Wallet 앱으로 알려져 있는 회사로, 그밖에도 다양한 사내외 AI & Data…]]></description><link>https://techtopic.skplanet.com/skp-aistory2025/</link><guid isPermaLink="false">https://techtopic.skplanet.com/skp-aistory2025/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Wed, 10 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요, 테크편집부입니다. &lt;br&gt;
 지난 여름 사내 세미나에서 &lt;strong&gt;&apos;우리는 이미 만들고 있었다&apos;&lt;/strong&gt; 라는 주제로 공유된 개발조직 AI 구현 사례를 블로그 스타일로 재편집/정리였사오니 참고하시기 바랍니다.&lt;/p&gt;
 &lt;p&gt;*SK플래닛은 OK캐쉬백과 Syrup Wallet 앱으로 알려져 있는 회사로, 그밖에도 다양한 사내외 AI &amp;#x26; Data 플랫폼 및 도구를 개발해 오고 있습니다. 2025년 현재 저희는 LLM을 직접 개발하지는 않으며(예: &apos;LLM 국가대표 5대 기업&apos;이 아님) AI를 우리의 프로덕트에 어떻게 잘 활용할 것인가에 초점을 맞추고 있습니다. 특히 &lt;strong&gt;1) 프로덕트의 가치의 향상 2) AI Coding 도구를 통한 개발 생산성 향상 3) AI와 협업하면서 생산성을 직접 경험하며 사고의 혁신을 함께 이루는 것&lt;/strong&gt;을 지속적인 목표로 가져가려고 합니다(최근에는 11번가를 자회사로 편입하고 기프티콘 사업부를 인수하는 등 새로운 시즌을 맞고 있습니다).&lt;/p&gt;
