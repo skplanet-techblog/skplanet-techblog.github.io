@@ -36,6 +36,7 @@ import leekw from "./images/leekw.jpeg"
 import leejs from "./images/leejs.png"
 import kwj from "./images/kwj.png"
 import shinyoon from "./images/shinyoon.jpg"
+import tacademy from "./images/tacademy_logo.png"
 
 export const MEMBERS = {
   neotf: {
@@ -271,5 +272,11 @@ export const MEMBERS = {
     team: "광고개발팀, AI서비스개발팀", 
     description: "광고개발팀 × AI서비스개발팀 = 데이터에서 성과까지 함께합니다.",
     thumbnail: shinyoon,
+  },
+    tacademy: {
+    name: "T Academy",
+    team: "SK planet", 
+    description: "대한민국의 스마트 ICT 전문가를 양성하는 SK 플래닛의 교육기관입니다.",
+    thumbnail: tacademy,
   },
 };
