@@ -12,7 +12,7 @@ module.exports = {
     title: `SK플래닛 TECH TOPIC`,
     author: {
       name: `양진욱`,
-      summary: `SK플래닛 개발그룹`,
+      summary: `SK플래닛 AT개발그룹`,
     },
     description: `SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!`,
     siteUrl: `https://techtopic.skplanet.com/`,
