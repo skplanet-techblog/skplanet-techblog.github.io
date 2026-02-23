@@ -143,8 +143,8 @@ module.exports = {
       resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: [
-          //"G-XMQBSN6DMR",
-          "G-ZKB2SBCZXJ",
+          "G-XMQBSN6DMR",
+          //"G-ZKB2SBCZXJ",
         ],
         gtagConfig: {
           anonymize_ip: true,

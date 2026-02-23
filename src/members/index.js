@@ -37,6 +37,7 @@ import leejs from "./images/leejs.png"
 import kwj from "./images/kwj.png"
 import shinyoon from "./images/shinyoon.jpg"
 import tacademy from "./images/tacademy_logo.png"
+import kimlee from "./images/kimlee.png"
 
 export const MEMBERS = {
   neotf: {
@@ -278,5 +279,11 @@ export const MEMBERS = {
     team: "SK planet", 
     description: "대한민국의 스마트 ICT 전문가를 양성하는 SK 플래닛의 교육기관입니다.",
     thumbnail: tacademy,
+  },
+    kimlee: {
+    name: "김동국, 이준",
+    team: "AT기술개발팀", 
+    description: "AI를 활용해 더 가치 있는 서비스를 만들고자 노력하고 있습니다.", 
+    thumbnail: kimlee,
   },
 };
