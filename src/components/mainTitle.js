@@ -11,4 +11,3 @@ const MainTitle = () => (
 );
 
 export default MainTitle;
-896
