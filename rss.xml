@@ -1,4 +1,130 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 24 Feb 2026 07:02:33 GMT</lastBuildDate><item><title><![CDATA[Text2SQL 기반 데이터 분석 서비스 InsightLens 개발기]]></title><description><![CDATA[오늘날 기업 환경에서 데이터 기반 의사결정의 중요성은 아무리 강조해도 지나치지 않습니다. 기획자, 마케터, 운영 담당자 등 비개발 직군에서도 데이터 조회에 대한 니즈가 급증하고 있으며, 원하는 시점에 원하는 데이터를 얼마나 빠르게 확보할 수 있느냐가 비즈니스 경쟁력을 좌우하는 시대가 되었습니다. 하지만 기존 데이터 추출 프로세스를 살펴보면, SQL…]]></description><link>https://techtopic.skplanet.com/insightlens/</link><guid isPermaLink="false">https://techtopic.skplanet.com/insightlens/</guid><dc:creator><![CDATA[kimlee]]></dc:creator><pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;오늘날 기업 환경에서 데이터 기반 의사결정의 중요성은 아무리 강조해도 지나치지 않습니다. 기획자, 마케터, 운영 담당자 등 비개발 직군에서도 데이터 조회에 대한 니즈가 급증하고 있으며, 원하는 시점에 원하는 데이터를 얼마나 빠르게 확보할 수 있느냐가 비즈니스 경쟁력을 좌우하는 시대가 되었습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 25 Feb 2026 06:19:07 GMT</lastBuildDate><item><title><![CDATA[2026 SKP-11번가 첫 판교 세미나 with OpenAI]]></title><description><![CDATA[안녕하세요 SK플래닛 테크편집부입니다! 
+테크편집부는 저희 회사의 다양한 개발 및 기술문화 관련 내용들을 여러분께 공유해 드리고 있는데요, 
+올 2월에는 OpenAI 및 11번가 와 함께한 판교 플래닛 세미나의 따끈따끈한 소식을 전해드립니다.  (참고) 판교 플래닛 세미나의 이름을 DTC(Data & Tech Committee)에서 ATT(AI Tech…]]></description><link>https://techtopic.skplanet.com/att-openai/</link><guid isPermaLink="false">https://techtopic.skplanet.com/att-openai/</guid><dc:creator><![CDATA[techeditorial]]></dc:creator><pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요 SK플래닛 테크편집부입니다! 
+테크편집부는 저희 회사의 다양한 개발 및 기술문화 관련 내용들을 여러분께 공유해 드리고 있는데요, 
+올 2월에는 &lt;strong&gt;OpenAI 및 11번가&lt;/strong&gt; 와 함께한 판교 플래닛 세미나의 따끈따끈한 소식을 전해드립니다. &lt;/p&gt;
+&lt;p&gt;(참고) 판교 플래닛 세미나의 이름을 DTC(Data &amp;#x26; Tech Committee)에서 &lt;strong&gt;ATT(AI Tech Talk)&lt;/strong&gt; 로 변경하였습니다. 
+원래 DTC가 기존 임원들의 회의 협의체에서 비롯되어 행사 명칭에 &apos;Committee&apos;가 남아 있었는데요,  
+조금 헤비(?)하다는 의견과 함께 최근 기술 트렌드와 행사의 정체성을 고려하여 &lt;strong&gt;&apos;AI&apos;&lt;/strong&gt; 와 &lt;strong&gt;&apos;Tech&apos;&lt;/strong&gt; 를 포함하기로 하였습니다. &lt;br&gt;
+앞으로도 많은 응원 부탁드립니다(DTC 관련 예전 소개글은 &lt;a href=&quot;https://techtopic.skplanet.com/skp-techseminar24/&quot;&gt;여기&lt;/a&gt;를 참조하세요).&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;외부 전문가와 함께하는 올해 첫 세미나는 &lt;strong&gt;OpenAI Korea&lt;/strong&gt;의 한지은 전략 어카운트 디렉터 및 김정원 솔루션 엔지니어 분을 모시고 2월 23일에 SK플래닛 판교사옥에서 진행하였어요(바쁘신 중에도 미팅과 세미나에 시간을 할애해 주신 OpenAI Korea의 김경훈 총괄대표님 및 두 분 발표자께 이 자리를 빌어 감사의 인사를 드립니다). &apos;OpenAI API Platform기반의 기술 소개 및 사례&apos; 를 메인으로 다음 주제들을 커버하였습니다. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenAI 최근 사업방향 및 기술 소개 &lt;/li&gt;
+&lt;li&gt;엔터프라이즈 기업의 AX를 위한 OpenAI 오퍼링&lt;/li&gt;
+&lt;li&gt;OpenAI가 바라보는 커머스 및 앱스 생태계 소개 &lt;/li&gt;
+&lt;li&gt;커머스 사례 소개: Instacart 협업, 쇼핑 리서치, Apps in ChatGPT 등  &lt;/li&gt;
+&lt;li&gt;Agentic Commerce 전략, 대응방안 및 Codex 구현 MVP 시연 (11번가) &lt;/li&gt;
+&lt;li&gt;질의응답 및 애프터 미팅  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;특히 이번에는 11번가 자회사 (재)편입 후 &lt;strong&gt;SK플래닛 및 11번가 구성원&lt;/strong&gt; 약 200명이 한 자리에 모여 기술 인사이트를 공유하는 의미있는 자리였는데요(설 연휴 직후였는데도 많은 분들이 와 주셨어요 ^ ^), 앞으로도 양사 및 유력한 비즈 파트너와의 다양한 기술 활동을 통한 AI 시너지를 기대합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/20e4aa93c4cc5cb84aa77ad5b64f219a/71c1d/01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR42gEZA+b8ADsrMzcvOGtdW6yZhcm3ncO6qaqyuJ+yyae816a3z5+nuaObnHxsa4huaG9VUF1CO2JDO5xyWVpHSkI8TABdU1Ssl4DKuJ3Au66ms7+YrsuftNGcqb+Yl6OQgYB5XVOkeV6QZk5GMTEzKTIxKzlYRk/BmIDAl4J0V1kAzLmhvLq1orDCk6jHkaK+kpWlfXJ3hmtidVtRdGZkj4J669e0saOQJyo/OjtMUERPimJauoJlpXJcd1FKAKK0zJClxYSLontyenpjX2xbWod1bdS6l83CrLnJyM/b0/fw1ru1qDYyQk0/SGNJSnxXToxfUYZaTWpIRABmaX5MQk0+MDtsV1PXvJq8vrnQ1c3k0K7o4cnU39XO3dXe6eC5wbw9M0BSQEViRkVtSkV0TkZuS0ReQT4ASTtCel5ObFBJhnFu8urV3ODX1dvUy8e7zdLKzdrU1+fh3/Dpwc/LQDdCTjtAWkFAYUM/ZEQ/YEI+WD07AIZtZsqZcIZaSYZsZtzf19ff2r7Hxr7GxLnCwb/LyNbm4dvt6MTV0UhBSEk2OFY/O1g/Olo9OVg7OFI5NQCNb2Opf2VXPTxwYWHV3tnU393K19bP39vU5N7W5d/Y5+Db7OXJ3NZPSE00IS1PPUNRQkVHMjJTOTRNNTEAhWpelnRhTjc3bV9i0+Tj1ujm1+jm1OXi1eXe2OTd1ODZzdzUuszJYVdQjmotm3cvfVkpVzgsSTEvRi8tAIBkWYtrW0g0OFFCSXV1e3FwdWtna2dgYmRbW2BVVVhLS1JDQUMzOGNHLt2lJuKjIOeXGKFcGkcvK0UuLgB2WU53WExALC9AKy9AJilFKClWMSxTLylMKSVQKyVSKyVULCVWLytdNyfPiR3olxTUfgydUw9GKR44JCAAk1g1rGg1tW8zzIA30Ic30o084J1F0Y05xIQ0wYE1vX41t3s1vnozqmgr14EU9qYxyY9Gilw1fF1Dels6AEswLF48K2VDLohaNrt/QMeOQ8iXTuWoT/W1UfzBVfzDU/vIWfu8S/67Ss59ILt+Q62NcoFvYpV6Zah8WIIvgSOZDKW/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;01.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/20e4aa93c4cc5cb84aa77ad5b64f219a/f058b/01.png&quot;
+        srcset=&quot;/static/20e4aa93c4cc5cb84aa77ad5b64f219a/c26ae/01.png 158w,
+/static/20e4aa93c4cc5cb84aa77ad5b64f219a/6bdcf/01.png 315w,
+/static/20e4aa93c4cc5cb84aa77ad5b64f219a/f058b/01.png 630w,
+/static/20e4aa93c4cc5cb84aa77ad5b64f219a/40601/01.png 945w,
+/static/20e4aa93c4cc5cb84aa77ad5b64f219a/78612/01.png 1260w,
+/static/20e4aa93c4cc5cb84aa77ad5b64f219a/71c1d/01.png 1536w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+Image created • Presentation at the conference stage&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/664a8d8861709db6ae452ad0618aedf9/71c1d/02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR42gEZA+b8AEQxL0g9PpF/cc+6odrLt8zFv7K5ybC+1rrI4LLB2Keww6mjq39yc5R+eH5oYnFVS2BMSpp1YnNcWl9XYACBcmfVvJ/e0L3IxcSwucymt9Wsvdmfq8KWl6WThoh2YVuqiHacemdRP0BBOkRIQUxjU1mkeWesf2x8YV8A3s+9wcXLqLXPnK7NlaXAkpepgnqAj3hwdmBagnZ4pJmZ69/Ux7+7OzpKTEpYWk1VfFxYmWtakGVXdVVPAKCz1JSmx4ySqIJ7gnlnZHNiYpSCftPAs9zW1eTr9Pb5/f///9jV10A+TFNIUWJMTnFTT3xZUXlWT2VLSABhZHZTS1NPQkZ+bGXVxbnU2N3w9Pj///37+/vr7vLi5en29/rc3uJLRVBRQ0leSEphSEdnS0hlSUZbREQATUNHfGZXYUpLmYqM/v387/D04uTo2Nnc2dvg0NPZ29/j+Pn+4+fsUk5YRztBVUJFW0RFY0lHYEZEWUJCAIdxa8WZdnBOSJiFhOfq7crN0tja4N3e5OHj6Ozw9PX4/PX3/Ovu81xZY0Q2OlxJRVNBPE05OFpDQVM+PgCJcGefgG5PPUCGen3y9fnu8fXy9Pn3+f34+v73+v31+Pz2+Pz7//9qZ3AwIzJWREttVE8mHydUPj5OOjoAf2tmjHRqRjc8gXh7//////7+/v//+fz/9Pf98PP46e7y5Ojs5uvvdXBwel0wlHY1eFklRzMlTTk5SDY3AHdmYYJtY0M2PF5VXJqYno+LkYWBhn11eXRqbmpfY11TVlVISUk7QGBJNs2YH9ijHOefGahhE1E6Lj4yNwB1YlxwXFc6Lzc7Lzc4Ji09JypOMjFRNDJNMDBPMjFPMjBRMzBSNjRYPDO+gRjdkAfXhwWmWglWNh9AMSwAe082lWA4nWY4s3U7vH8+xIpD0phOxo5GuoM9tH89rno9qXY7r3U5nWg1xXkN7J0eypA9h1ougmA+km46AEkzLlw+Ll9EM39ZObB7Q8CQScWbWOGsWfC3WfjCXPnEXfnJYvW6Ufi5UL94Hap0PK2NcH9qWpR2X6F0UO/xnRHyp8WnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;02.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/664a8d8861709db6ae452ad0618aedf9/f058b/02.png&quot;
+        srcset=&quot;/static/664a8d8861709db6ae452ad0618aedf9/c26ae/02.png 158w,
+/static/664a8d8861709db6ae452ad0618aedf9/6bdcf/02.png 315w,
+/static/664a8d8861709db6ae452ad0618aedf9/f058b/02.png 630w,
+/static/664a8d8861709db6ae452ad0618aedf9/40601/02.png 945w,
+/static/664a8d8861709db6ae452ad0618aedf9/78612/02.png 1260w,
+/static/664a8d8861709db6ae452ad0618aedf9/71c1d/02.png 1536w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+Image created • Korean woman presenting in conference room&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ae015c856712d69d087d8aa742a1acbc/71c1d/03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR42gEZA+b8AF1QS31mWrOMacCRYolmSGRPP25YRI5uUdardLCDUHxiSHllT49zVbqTYcCZaItyVVNPSnBgULuUZM+peQBcWVpYU1FxZFyXeV3Mm2SYckplUD52X0ijgVnbrG6ad1BxYUyQdFO6k2DBmmhYSz0dKDhJRD/FonKfiXIAW22BX2VtXlRQcGBYjXVgxZtouY1ZclpCc1xEwJlqx5xlfWVLg2xTvpdkvZZlfWhQZlpMuJVps5p5aGxuAFl7mFhib0U6NW5gQ21eUm1gVr2YbcSYYXldQHphStSqcp97UXJgTbeRYruYaX1tWpd+YNKuf4CBfZOtuQBsjahpaW97aVyNe2FsYltQTlFfVVGehGfKoGiGaEaMclXMo210Xkisil6zkmdwYlO5mG6noZCZuca23O4Ad5KpaWVnloJx0rSVkoN0YltYV1JRWFJTeGdZv5tshWlJooVijXRVkHdck4FrgHRlq6CKiau9n8PYiKKzADY1NUQ4MnRgUJB3Y3pjUXloV4t4Y2tfVWZVS4hxXo1wVoZuWYp0Xo5+bJaJeaydjauoon6Ol3BydXNqZACFWj6dck1LNiKXdEtdSzp6XDxyVTVuUzdxVDtkTDh2YEaGbVGHcVyTfmihjHaekoKWmoqKhHyFeGyVg3AAl2xTrIdZdGZRw6xzWU07cF5JXEo5TDUiRC4dhWdEeV01Z0swdVw9ZVE/a1dCaFY6VEg4b2Fae25kjHtrACkpOVhUVE9RWYB7dTo0NT03QzgyNTQlGrSJX92tbWlXKWpWOal0RoFhQXZaPoFyX5Z9PYR3KnlmVnVoXgAmIzEnIzVFLjBPLx9bPxuYgSBMRRUvIBqvhF3Gs5qSe19wV0BsUjaKYjaQdGR0ZmFZYVpaSyZrVDtuYVgAilw+c0cTpoAZp5UbgHIYpKkbYGUcMC45PDU0c3V8r6+vjmdFlnRQakw2akEfWEUydnJtmIh3l4JqtZdsAOCmdJmaIJSkHJ6rIHZ6GG98F0FKIyAhNjY0OkI6N3RzeX1eSZBaKaR6UGk5FmA2D3lKKKiAUb6jd7uQWHCLS9fae9/KAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;03.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ae015c856712d69d087d8aa742a1acbc/f058b/03.png&quot;
+        srcset=&quot;/static/ae015c856712d69d087d8aa742a1acbc/c26ae/03.png 158w,
+/static/ae015c856712d69d087d8aa742a1acbc/6bdcf/03.png 315w,
+/static/ae015c856712d69d087d8aa742a1acbc/f058b/03.png 630w,
+/static/ae015c856712d69d087d8aa742a1acbc/40601/03.png 945w,
+/static/ae015c856712d69d087d8aa742a1acbc/78612/03.png 1260w,
+/static/ae015c856712d69d087d8aa742a1acbc/71c1d/03.png 1536w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+Image created • Lecture hall with attentive audience
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;(위 이미지들은 OpenAI ChatGPT를 활용하여 애니메이션 스타일로 변환 및 공유하였습니다)&lt;/p&gt;
+&lt;p&gt;읽어 주셔서 감사합니다! &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Text2SQL 기반 데이터 분석 서비스 InsightLens 개발기]]></title><description><![CDATA[오늘날 기업 환경에서 데이터 기반 의사결정의 중요성은 아무리 강조해도 지나치지 않습니다. 기획자, 마케터, 운영 담당자 등 비개발 직군에서도 데이터 조회에 대한 니즈가 급증하고 있으며, 원하는 시점에 원하는 데이터를 얼마나 빠르게 확보할 수 있느냐가 비즈니스 경쟁력을 좌우하는 시대가 되었습니다. 하지만 기존 데이터 추출 프로세스를 살펴보면, SQL…]]></description><link>https://techtopic.skplanet.com/insightlens/</link><guid isPermaLink="false">https://techtopic.skplanet.com/insightlens/</guid><dc:creator><![CDATA[kimlee]]></dc:creator><pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;오늘날 기업 환경에서 데이터 기반 의사결정의 중요성은 아무리 강조해도 지나치지 않습니다. 기획자, 마케터, 운영 담당자 등 비개발 직군에서도 데이터 조회에 대한 니즈가 급증하고 있으며, 원하는 시점에 원하는 데이터를 얼마나 빠르게 확보할 수 있느냐가 비즈니스 경쟁력을 좌우하는 시대가 되었습니다.&lt;/p&gt;
 &lt;p&gt;하지만 기존 데이터 추출 프로세스를 살펴보면, SQL에 익숙하지 않은 현업 담당자들은 데이터 분석팀에 추출 요청을 하고, 요구사항을 명확히 하기 위해 여러 차례 피드백을 주고받으며, 그제서야 원하는 결과물을 받을 수 있습니다. 이 과정에서 발생하는 시간적 지연과 커뮤니케이션 비용은 조직 전체의 생산성을 저하시키는 주요 요인이 됩니다.&lt;/p&gt;
 &lt;p&gt;이러한 비효율을 해소하고 &lt;strong&gt;데이터 인사이트&lt;/strong&gt;를 실현하기 위해 저희 팀에서는 &lt;strong&gt;InsightLens&lt;/strong&gt;라는 Text2SQL 기반 서비스를 개발했습니다. InsightLens는 LLM과 검색증강생성(RAG, Retrieval-Augmented Generation) 기술을 결합하여, 사용자가 자연어로 질문하면 실행 가능한 SQL 쿼리를 자동으로 생성해주는 AI 에이전트입니다. 이 글에서는 InsightLens의 개발 배경부터 에이전트의 설계, 그리고 개발 과정에서 얻은 기술적 인사이트까지 공유드리겠습니다.&lt;/p&gt;
 &lt;hr&gt;
