@@ -38,6 +38,7 @@ import kwj from "./images/kwj.png"
 import shinyoon from "./images/shinyoon.jpg"
 import tacademy from "./images/tacademy_logo.png"
 import kimlee from "./images/kimlee.png"
+import euisook_hong from "./images/euisook_hong.png"
 
 export const MEMBERS = {
   neotf: {
@@ -286,4 +287,10 @@ export const MEMBERS = {
     description: "AI를 활용해 더 가치 있는 서비스를 만들고자 노력하고 있습니다.", 
     thumbnail: kimlee,
   },
+    euisook_hong: {
+    name: "홍의숙",
+    team: "OCB개발팀",
+    description: "OK캐쉬백 기반의 복지 포인트 개발 사례에 대한 소개",
+    thumbnail: euisook_hong,
+  }
 };
