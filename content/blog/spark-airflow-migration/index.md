@@ -1,6 +1,6 @@
 ---
 title: "Oozie/Sqoop에서 Airflow/Spark로: 데이터 파이프라인 전환기"
-date: "2026-09-07"
+date: "2026-09-17"
 tags: ["Data Engineering", "Airflow", "Spark", "HDFS", "Parquet", "Data Pipeline"]
 author: "choijongeun"
 description: "Oozie XML로 하드코딩되어 있던 1,200개 파이프라인을 Airflow Dag Factory로 템플릿화하고, Sqoop 입수 로직을 Spark로 재설계한 기록. 파티션 키 자동 선정과 메모리 제어, HDFS 파일 사이즈 최적화를 직접 설계해 입수 시간 최대 70%, 조회 시간 최대 66.8배를 단축했습니다."
