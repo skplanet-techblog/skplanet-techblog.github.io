@@ -39,6 +39,7 @@ import shinyoon from "./images/shinyoon.jpg"
 import tacademy from "./images/tacademy_logo.png"
 import kimlee from "./images/kimlee.png"
 import euisook_hong from "./images/euisook_hong.png"
+import choijongeun from "./images/choijongeun.png"
 
 export const MEMBERS = {
   neotf: {
@@ -292,5 +293,10 @@ export const MEMBERS = {
     team: "OCB개발팀",
     description: "OK캐쉬백 기반의 복지 포인트 개발 사례에 대한 소개",
     thumbnail: euisook_hong,
+  },
+  choijongeun: {
+    name: "최종은",
+    team: "AI Data Platform팀",
+    thumbnail: choijongeun,
   }
 };
