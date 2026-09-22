@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 17 Sep 2026 09:01:00 GMT</lastBuildDate><item><title><![CDATA[Oozie/Sqoop에서 Airflow/Spark로: 데이터 파이프라인 전환기]]></title><description><![CDATA[대규모 데이터 인프라 환경에서 안정적이고 빠른 데이터 입수는 하위 분석 작업과 비즈니스 의사결정의 중요한 초석이라고 생각합니다. 기존 인프라에서는 1,200여 개의 데이터 파이프라인이 Oozie XML을 통해 관리되고, 데이터 입수 도구로 Sqoop…]]></description><link>https://techtopic.skplanet.com/spark-airflow-migration/</link><guid isPermaLink="false">https://techtopic.skplanet.com/spark-airflow-migration/</guid><dc:creator><![CDATA[choijongeun]]></dc:creator><pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;대규모 데이터 인프라 환경에서 안정적이고 빠른 데이터 입수는 하위 분석 작업과 비즈니스 의사결정의 중요한 초석이라고 생각합니다. 기존 인프라에서는 1,200여 개의 데이터 파이프라인이 Oozie XML을 통해 관리되고, 데이터 입수 도구로 Sqoop이 사용되고 있었습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 22 Sep 2026 23:47:19 GMT</lastBuildDate><item><title><![CDATA[Oozie/Sqoop에서 Airflow/Spark로: 데이터 파이프라인 전환기]]></title><description><![CDATA[대규모 데이터 인프라 환경에서 안정적이고 빠른 데이터 입수는 하위 분석 작업과 비즈니스 의사결정의 중요한 초석이라고 생각합니다. 기존 인프라에서는 1,200여 개의 데이터 파이프라인이 Oozie XML을 통해 관리되고, 데이터 입수 도구로 Sqoop…]]></description><link>https://techtopic.skplanet.com/spark-airflow-migration/</link><guid isPermaLink="false">https://techtopic.skplanet.com/spark-airflow-migration/</guid><dc:creator><![CDATA[choijongeun]]></dc:creator><pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;대규모 데이터 인프라 환경에서 안정적이고 빠른 데이터 입수는 하위 분석 작업과 비즈니스 의사결정의 중요한 초석이라고 생각합니다. 기존 인프라에서는 1,200여 개의 데이터 파이프라인이 Oozie XML을 통해 관리되고, 데이터 입수 도구로 Sqoop이 사용되고 있었습니다.&lt;/p&gt;
 &lt;p&gt;해당 시스템은 오랜 기간 제 역할을 수행해 주었으나, 장기적인 관점에서 더 이상의 성능 향상을 기대하기 어려운 구조적 아쉬움이 있었습니다.
 해당 글에서는 기존 파이프라인의 기술 부채를 해소하고, 데이터 입수 속도 개선과 HDFS 파일 사이즈 최적화 및 쿼리 성능 극대화를 달성하기 위해 Airflow와 Spark를 도입한 경험을 공유합니다.&lt;/p&gt;
 &lt;hr&gt;
@@ -49,9 +49,7 @@
   &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;COL_A&quot;&lt;/span&gt;
     &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;string&quot;&lt;/span&gt;
     &lt;span class=&quot;token key atrule&quot;&gt;encrypt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;false&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;COL_B&quot;&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;string&quot;&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;encrypt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# ... 이하 컬럼 동일 형식&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;2.2. Factory 패턴을 통한 파이프라인 자동 조립&lt;/h2&gt;
 &lt;p&gt;Airflow 스케줄러가 로드될 때, &lt;code class=&quot;language-text&quot;&gt;factory.py&lt;/code&gt;에 구현된 &lt;code class=&quot;language-text&quot;&gt;create_dag&lt;/code&gt; 함수가 위 두 개의 메타데이터를 파싱합니다. 조합된 설정값을 바탕으로 파이프라인을 구성하는 3개의 핵심 Task가 자동으로 인스턴스화되고 체이닝됩니다.&lt;/p&gt;
 &lt;p&gt;개별 &lt;code class=&quot;language-text&quot;&gt;dag.yaml&lt;/code&gt;만 작성하면 즉시 파이프라인이 Airflow DAG로 배포됩니다.&lt;/p&gt;
@@ -81,9 +79,7 @@
         import_task &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; create_and_update_hive_task &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; create_done_file
 
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; dag&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;2.3. 커스텀 Operator 활용 및 콜백(Callback) 기반 모니터링&lt;/h2&gt;
-&lt;p&gt;파이프라인은 사내 환경에 맞게 생성된 커스텀 Operator(&lt;code class=&quot;language-text&quot;&gt;DI_SparkOperator&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;QcOperator&lt;/code&gt;)를 래핑하여 사용했습니다. 이를 통해 Spark Submit 파라미터 구성과 Hive 쿼리 실행 제어를 규격화했습니다.&lt;/p&gt;
-&lt;p&gt;또한, Factory 패턴 내에 &lt;code class=&quot;language-text&quot;&gt;on_failure_callback&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;on_success_callback&lt;/code&gt;을 주입했습니다. 이를 통해 DAG가 실패했을 때 사내 메신저(Teams) 및 이메일 알림이 즉시 발송되고, 정상 수행됐을 시에는 Metric이 수집되는 모니터링 체계를 확보했습니다.&lt;/p&gt;
+&lt;p&gt;세 Task는 모두 사내 환경에 맞게 만들어진 커스텀 Operator를 래핑해, Spark Submit 파라미터 구성과 Hive 쿼리 실행 제어를 규격화했습니다. 또한 Factory 내부에서 &lt;code class=&quot;language-text&quot;&gt;on_failure_callback&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;on_success_callback&lt;/code&gt;을 함께 주입해, 실패 시 사내 메신저와 이메일로 알림이 발송되고 정상 수행 시에는 Metric이 수집되도록 했습니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;3. 핵심 로직: 어떻게 잘 가져올 것인가&lt;/h1&gt;
 &lt;p&gt;데이터 파이프라인 고도화 과정에서 가장 신경 쓴 부분은 &apos;단일/병렬처리 동적 분기 및 최적 파티션 키 선정을 통한 입수 속도 개선&apos;입니다.&lt;/p&gt;
@@ -144,10 +140,10 @@
 &lt;li&gt;&lt;strong&gt;4순위&lt;/strong&gt;: 문자형(CHAR) 및 기타 컬럼&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;단순히 컬럼을 지정하는 것을 넘어, 데이터 타입과 인덱스 유무를 종합적으로 판단하여 병렬 처리 시 발생할 수 있는 데이터 스큐(Data Skew) 현상을 줄이고자 하였습니다.&lt;/p&gt;
-&lt;h2&gt;3.3. Date/Timestamp 타입 불일치 에러 방지&lt;/h2&gt;
-&lt;p&gt;파티션 키가 숫자형일 경우에는 Spark의 기본 옵션(&lt;code class=&quot;language-text&quot;&gt;partitionColumn&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;lowerBound&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;upperBound&lt;/code&gt;)을 사용해도 무방합니다. 하지만 Date/Timestamp 타입의 경우 파라미터 바인딩 과정에서 타입 이슈가 발생할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;Oggre는 하드코딩된 날짜를 사용하지 않고, 런타임에 원천 DB에서 Min/Max 값을 조회하여 동적인 파라미터로 바운더리를 할당합니다. 이때 조회된 날짜 값을 Spark의 기본 옵션에 그대로 주입하면, Spark가 내부적으로 형변환(Type Casting)을 거쳐 JDBC Statement 파라미터로 바인딩합니다. 이 과정에서 원천 DB의 드라이버가 Spark의 내부 날짜 객체를 정확히 인식하지 못해 &lt;strong&gt;타입 불일치(Type Mismatch) 에러를 발생시키며 파이프라인이 실패&lt;/strong&gt;하는 현상이 있었습니다.&lt;/p&gt;
-&lt;p&gt;이러한 동적 변수 할당 시 발생하는 형변환 이슈를 차단하기 위해, 날짜형 컬럼은 &lt;code class=&quot;language-text&quot;&gt;partitionColumn&lt;/code&gt; 옵션을 배제하고 &lt;strong&gt;Spark의 Predicates API&lt;/strong&gt;를 활용하여 명시적인 조건절을 직접 주입하는 방식을 채택했습니다.&lt;/p&gt;
+&lt;h2&gt;3.3. Date/Timestamp 형식 불일치 에러 방지&lt;/h2&gt;
+&lt;p&gt;파티션 키가 숫자형일 경우에는 Spark의 기본 옵션(&lt;code class=&quot;language-text&quot;&gt;partitionColumn&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;lowerBound&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;upperBound&lt;/code&gt;)을 사용해도 무방합니다. 하지만 Date/Timestamp 타입의 경우 WHERE 절 생성 과정에서 형식 불일치 이슈가 발생할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;Oggre는 하드코딩된 날짜를 사용하지 않고, 런타임에 원천 DB에서 Min/Max 값을 조회하여 동적인 파라미터로 바운더리를 할당합니다. 이때 조회된 날짜 값을 Spark의 기본 옵션에 그대로 주입하면, Spark는 경계값을 자체 포맷의 날짜 문자열로 변환해 WHERE 절에 삽입합니다. 원천 DB는 이 문자열을 자신의 날짜 형식 설정으로 해석하려다 형식이 맞지 않아 &lt;strong&gt;에러를 발생시키며 파이프라인이 실패&lt;/strong&gt;하는 현상이 있었습니다.&lt;/p&gt;
+&lt;p&gt;이러한 동적 변수 할당 시 발생하는 형식 불일치 이슈를 차단하기 위해, 날짜형 컬럼은 &lt;code class=&quot;language-text&quot;&gt;partitionColumn&lt;/code&gt; 옵션을 배제하고 &lt;strong&gt;Spark의 Predicates API&lt;/strong&gt;를 활용하여 명시적인 조건절을 직접 주입하는 방식을 채택했습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 1. 날짜형(Date) 컬럼의 Min/Max 바운더리를 문자열 형태로 사전 조회&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# (MIN, MAX를 동시에 조회하면 인덱스의 이점을 누리지 못할 수 있습니다. 서브쿼리로 분리를 추천합니다)&lt;/span&gt;
 bounds_sql &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;&quot;&quot;(
@@ -157,7 +153,7 @@ bounds_sql &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span 
     FROM DUAL
 ) tmp&quot;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
 
-&lt;span class=&quot;token comment&quot;&gt;# 2. Spark 내부 형변환을 우회하기 위한 명시적 조건절(Predicates) 배열 동적 생성&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 2. Spark의 날짜 문자열 생성을 우회하기 위한 명시적 조건절(Predicates) 배열 동적 생성&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# (+1초: 마지막 구간의 상한이 MAX 값보다 커지도록 해 MAX 값 행이 누락되지 않게 합니다)&lt;/span&gt;
 step &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ceil&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;max_ts &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; min_ts &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; read_parts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 predicates &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
@@ -177,8 +173,8 @@ df_main &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; self&lt;span
     predicates&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;predicates&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     properties&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;fetchsize&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;20000&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;즉, Spark가 파라미터를 추론하여 형변환하도록 두지 않고, 사전에 파싱한 Min/Max 값을 바탕으로 원천 DB가 명확히 이해할 수 있는 조건절 문자열(예: &lt;code class=&quot;language-text&quot;&gt;TO_DATE&lt;/code&gt; 구문)을 직접 생성하여 전달합니다.
-이를 통해 RDBMS와 타입 충돌 없이 동적인 파티셔닝과 병렬 추출이 가능해졌습니다.&lt;/p&gt;
+&lt;p&gt;즉, Spark가 날짜 문자열을 생성하도록 두지 않고, 사전에 파싱한 Min/Max 값을 바탕으로 원천 DB가 명확히 이해할 수 있는 조건절 문자열(예: &lt;code class=&quot;language-text&quot;&gt;TO_DATE&lt;/code&gt; 구문)을 직접 생성하여 전달합니다.
+이를 통해 RDBMS와 형식 충돌 없이 동적인 파티셔닝과 병렬 추출이 가능해졌습니다.&lt;/p&gt;
 &lt;h2&gt;3.4. Spark 메모리 제어: Phase 1과 Phase 2로 나누어 살펴보기&lt;/h2&gt;
 &lt;p&gt;1,200여 개의 테이블은 컬럼 수, 데이터 타입, 레코드 크기가 모두 다른 이기종 환경입니다. 어떤 테이블이 들어오더라도 OOM 없이 안정적으로 동작하는 리소스 기준점을 잡는 것이 핵심 포인트였습니다.&lt;/p&gt;
 &lt;p&gt;현재 Oggre의 핵심 Spark 리소스 스펙은 다음과 같습니다.&lt;/p&gt;
@@ -191,7 +187,7 @@ df_main &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; self&lt;span
 &lt;/ul&gt;
 &lt;p&gt;Memory Overhead 2GB는 JVM 힙 밖의 native 메모리(스레드 스택, 네트워크 버퍼 등)로, 아래 계산에서는 제외합니다. Spark는 executor-memory에서 고정 예약 영역(300MB)을 제외한 나머지(약 9,940MB)를 spark.memory.fraction 비율로 나눕니다.&lt;/p&gt;
 &lt;p&gt;Execution Memory(약 7,952MB, 80%): 셔플·정렬 등 Spark 연산이 사용하는 영역으로, Spark의 MemoryManager가 태스크별 사용량을 실제로 추적해 할당량을 넘으면 디스크로 spill시킵니다. 정확히는 캐시용 Storage Memory와 함께 쓰는 공용 영역이지만, Oggre는 캐시를 사용하지 않아 사실상 Execution이 전부 사용합니다.
-User Memory(약 1,988MB, 20%): JDBC ResultSet, Parquet Writer 버퍼 등 Spark의 관리 밖에 있는 일반 JVM 객체가 사용하는 영역입니다. 4개 코어가 동시에 태스크를 수행하므로, 태스크당 평균 약 497MB(1,988MB ÷ 4)를 쓸 수 있는 셈입니다.&lt;/p&gt;
+User Memory(약 1,988MB, 20%): JDBC ResultSet, Parquet Writer 버퍼 등 Spark의 관리 밖에 있는 일반 JVM 객체가 사용하는 영역입니다. 4개 코어가 동시에 태스크를 수행하므로 태스크당 평균 약 497MB(1,988MB ÷ 4)인데, 이는 넘으면 OOM으로 죽는 한계선이 아니라 컬럼 폭이 제각각인 1,200여 개 테이블을 감당하기 위해 보수적으로 잡아둔 설계 기준선에 가깝습니다.&lt;/p&gt;
 &lt;p&gt;여기서 짚어야 할 부분은, Spark가 User Memory 20%를 강제로 제한할 수는 없다는 점입니다. Execution Memory는 실제로 추적·관리되지만 User Memory는 그냥 JVM heap에 가깝기 때문에, Execution Memory가 쓰이고 있지 않은 시점이라면 User Memory 쪽 객체가 그 공간까지 물리적으로 침범해 쓰는 게 막혀 있지 않습니다. 이 특성이 왜 중요한지는 파이프라인을 **Phase 1(JDBC 추출 → 임시 저장)**과 **Phase 2(정렬 → 최종 저장)**로 나눠보면 알 수 있습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -228,19 +224,18 @@ User Memory(약 1,988MB, 20%): JDBC ResultSet, Parquet Writer 버퍼 등 Spark�
     &lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;Phase 1: JDBC 추출 → temp_path 임시 저장&lt;/h3&gt;
 &lt;p&gt;Two-Pass(병렬 추출)의 첫 단계는 파티셔닝된 JDBC 커넥션으로 데이터를 읽어 임시 경로에 그대로 저장하는 작업입니다. 각 태스크가 RDBMS 드라이버를 통해 fetchsize=20000 단위로 데이터를 읽고, 형변환한 뒤 곧바로 Parquet으로 저장합니다. 이때 Parquet으로 저장하는 과정에서 Row Group 크기만큼의 쓰기 버퍼도 함께 사용하므로, Phase 1의 User Memory 수요는 ResultSet과 쓰기 버퍼를 합친 크기가 됩니다(쓰기 버퍼의 동작은 Phase 2에서 자세히 다룹니다). 이 과정엔 셔플이나 정렬이 전혀 없습니다 — repartitionByRange도, sortWithinPartitions도 아직 호출되지 않은 시점이라, Execution Memory 풀(약 7,952MB)은 이 단계에서 사실상 비어 있습니다.&lt;/p&gt;
-&lt;p&gt;ResultSet은 한 번에 20,000행씩만 메모리에 올라오고 소비되는 즉시 제거되므로, 테이블 전체 크기와 무관하게 순간 메모리 사용량이 고정됩니다. 게다가 이 시점엔 경쟁 상대인 Execution 작업이 없어서, 설계 시 참고했던 태스크당 평균치(약 497MB)를 다소 넘더라도 비어 있는 공간을 사용할 수 있습니다. 즉 497MB는 넘으면 OOM으로 죽는 한계선이 아니라, 컬럼 폭이 제각각인 1,200여 개 테이블을 감당하기 위해 보수적으로 잡아둔 논리적인 설계 기준선에 가깝습니다.&lt;/p&gt;
+&lt;p&gt;ResultSet은 한 번에 20,000행씩만 메모리에 올라오고 소비되는 즉시 제거되므로, 테이블 전체 크기와 무관하게 순간 메모리 사용량이 고정됩니다. 게다가 이 시점엔 경쟁 상대인 Execution 작업이 없어, 앞서 잡아둔 태스크당 기준선(약 497MB)을 다소 넘더라도 비어 있는 공간을 사용할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;그렇다면 메모리에 여유가 있는 만큼 fetchsize를 더 키우면 입수가 빨라지지 않을까 하는 의문이 남습니다. 실제로 fetchsize를 20,000→30,000→50,000으로 늘려가며 테스트했지만, 이후 구간부터는 입수 시간이 더 줄지 않았습니다. 그 이상은 메모리 사용량만 늘릴 뿐 속도 개선에는 도움이 안 된다는 걸 실측으로 확인하였습니다.&lt;/p&gt;
 &lt;h3&gt;Phase 2: temp_path 재조회 → 정렬 → 최종 저장&lt;/h3&gt;
 &lt;p&gt;임시 저장이 끝나면 이 데이터를 다시 읽어 파일 사이즈 최적화를 위한 정렬(repartitionByRange → sortWithinPartitions → 최종 write)을 수행합니다. 이 단계는 Phase 1과 메모리 사용 패턴이 정반대입니다.&lt;/p&gt;
 &lt;p&gt;JDBC 커넥션은 더 이상 존재하지 않습니다. temp_path는 이미 HDFS에 저장된 순수 Parquet 파일이라 DB 연결도, ResultSet 버퍼링도 필요 없습니다. 대신 repartitionByRange의 셔플과 sortWithinPartitions의 정렬이 이때 Execution Memory를 본격적으로 사용합니다. spark.memory.fraction=0.8로 확보해 둔 여유가 실제로 효과를 내는 지점이 바로 여기입니다 — 정렬 대상 데이터가 메모리에 다 들어가지 못해 디스크로 spill되면 그만큼 시간이 늘어나기 때문입니다.&lt;/p&gt;
 &lt;p&gt;정렬된 데이터는 곧바로 Parquet Writer로 전달돼 최종 파일로 저장됩니다. 이때 Writer는 파일 전체 크기(약 256MB)를 한 번에 버퍼에 들고 있는 게 아니라, Row Group 단위(parquet block size, 기본 128MB)로 차면 flush하고 버퍼를 비웁니다. 즉, 최종 파일과는 무관하게 메모리 사용량은 Row Group 크기로 고정됩니다. 그래서 Phase 2는 Execution(셔플+정렬)과 User(쓰기 버퍼)가 같은 태스크에서 동시에 쓰이는 구간이지만, User 쪽 수요가 &quot;파일 전체&quot;가 아닌 &quot;Row Group 하나&quot;로 제한돼(4코어 동시 기준, 128MB × 4코어 = 약 512MB) 1,988MB 예산 안에서 충분한 여유를 갖습니다.&lt;/p&gt;
 &lt;h3&gt;결과적으로&lt;/h3&gt;
-&lt;p&gt;fetchsize=20,000과 fraction=0.8이라는 두 숫자가 충돌 없이 안전할 수 있는 이유는 JDBC 추출(Phase 1)과 셔플+정렬(Phase 2)이 temp_path를 경계로 완전히 분리되어 두 메모리 영역이 같은 시점에 겹치지 않기 때문입니다. Phase 1에서는 비어 있는 Execution Memory가 User Memory 쪽 부담(ResultSet + 쓰기 버퍼)을 흡수하고, Phase 2에서는 JDBC 부담이 이미 사라진 상태에서 Writer가 Row Group 단위로만 User Memory를 소모합니다. 이와 같은 구조적인 메모리 분리 덕에 서로 다른 1,200여 개 테이블이 하나의 리소스 스펙으로 OOM 없이 처리될 수 있었습니다.&lt;/p&gt;
+&lt;p&gt;fetchsize=20,000과 fraction=0.8이라는 두 숫자가 충돌 없이 안전할 수 있는 이유는 JDBC 추출(Phase 1)과 셔플+정렬(Phase 2)이 temp_path를 경계로 완전히 분리되어, 메모리 부담이 큰 두 작업이 같은 시점에 겹치지 않기 때문입니다. Phase 1에서는 비어 있는 Execution Memory가 User Memory 쪽 부담(ResultSet + 쓰기 버퍼)을 흡수하고, Phase 2에서는 JDBC 부담이 이미 사라진 상태에서 Writer가 Row Group 단위로만 User Memory를 소모합니다. 이와 같은 구조적인 메모리 분리 덕에 서로 다른 1,200여 개 테이블이 하나의 리소스 스펙으로 OOM 없이 처리될 수 있었습니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;4. 핵심 로직: 어떻게 잘 저장할 것인가&lt;/h1&gt;
-&lt;p&gt;데이터를 빠르게 가져오는 것만큼 중요한 것이 &apos;어떤 형태로 저장할 것인가&apos;입니다. 기존 Sqoop 환경은 Mapper 수에 따라 파일 개수가 결정되는 구조였고, 이는 데이터 크기와 무관하게 파일 개수가 고정된다는 것을 의미합니다. 이 특성은 양쪽 방향 모두에서 문제가 될 수 있습니다.&lt;/p&gt;
-&lt;p&gt;작은 테이블에서는 데이터가 얼마 되지 않는데도 Mapper 수만큼 파일이 쪼개져 Small File을 양산하게 됩니다. HDFS는 파일 하나하나의 메타데이터를 NameNode 메모리에 유지하기 때문에, 작은 파일이 많아질수록 NameNode에 부담이 가중됩니다.&lt;/p&gt;
-&lt;p&gt;반대로 큰 테이블에서는 데이터가 아무리 많아도 정해진 개수의 파일에 모두 담기다 보니 파일 하나가 과도하게 커지게 됩니다. 여기에 기존 포맷(Text+Gzip)은 분할(Split)이 불가능하다는 제약이 존재합니다. Split이 되지 않으면 파일 하나를 태스크 하나가 통째로 읽어야 하므로, 읽기 병렬성이 파일 개수에 그대로 묶여버립니다. 데이터는 HDFS에 분산 저장되어 있음에도 정작 조회 시점에는 그 분산의 이점을 활용하지 못하게 됩니다.&lt;/p&gt;
+&lt;p&gt;데이터를 빠르게 가져오는 것만큼 중요한 것이 &apos;어떤 형태로 저장할 것인가&apos;입니다. 기존 Sqoop 환경은 Mapper 수에 따라 파일 개수가 결정되는 구조였고, 이는 데이터 크기와 무관하게 파일 개수가 고정된다는 것을 의미합니다. 이 특성은 양쪽 방향 모두에서 문제가 됩니다. 작은 테이블에서는 데이터가 얼마 되지 않는데도 Mapper 수만큼 파일이 쪼개져 NameNode에 부담을 주는 Small File을 양산하게 됩니다.&lt;/p&gt;
+&lt;p&gt;반대로 큰 테이블에서는 정해진 개수의 파일에 데이터가 모두 담기다 보니 파일 하나가 과도하게 커집니다. 여기에 기존 포맷(Text+Gzip)은 분할(Split)이 불가능해, 파일 하나를 태스크 하나가 통째로 읽어야 합니다. 데이터는 HDFS에 분산 저장되어 있음에도 읽기 병렬성은 파일 개수에 그대로 묶여버리는 셈입니다.&lt;/p&gt;
 &lt;p&gt;Oggre는 이 문제를 해결하기 위해 저장 시점에 파일 개수와 크기를 능동적으로 제어하고, 포맷 역시 Row Group 단위로 분할 조회가 가능한 Parquet으로 전환했습니다.&lt;/p&gt;
 &lt;h2&gt;4.1. 실측 기반의 파일 개수 산정&lt;/h2&gt;
 &lt;p&gt;3.1에서 DB 카탈로그를 통해 산정한 테이블 용량은 어디까지나 &lt;strong&gt;원천 DB 기준의 크기&lt;/strong&gt;입니다. 이 데이터가 Parquet+Snappy로 변환되고 나면 컬럼 인코딩과 압축 과정을 거치며 실제 용량은 크게 달라지게 됩니다. 압축률은 컬럼 구성과 데이터 분포에 따라 테이블마다 제각각이기 때문에, 원천 용량을 기준으로 파일 개수를 정하면 목표 크기에서 크게 벗어날 수밖에 없습니다.&lt;/p&gt;
@@ -261,10 +256,9 @@ final_df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;s
     &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;option&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;compression&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;snappy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; \
     &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;option&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;maxRecordsPerFile&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; \
     &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;parquet&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;save&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;output_path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;단순히 &lt;code class=&quot;language-text&quot;&gt;repartition&lt;/code&gt;으로 파일 개수만 맞출 수도 있지만, &lt;code class=&quot;language-text&quot;&gt;repartitionByRange&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;sortWithinPartitions&lt;/code&gt;를 함께 사용한 데에는 세 가지 이점이 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;첫째, 파일 크기의 균등성입니다.&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;repartition&lt;/code&gt;은 해시 기반으로 데이터를 섞기 때문에 데이터 분포에 따라 parquet 파일 크기가 들쭉날쭉해질 수 있습니다. 반면 &lt;code class=&quot;language-text&quot;&gt;repartitionByRange&lt;/code&gt;는 파티션 키의 값 범위를 기준으로 나누므로, 각 파일이 목표 크기에 보다 고르게 수렴합니다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;둘째, 압축 효율입니다.&lt;/strong&gt; Parquet은 컬럼 단위로 데이터를 저장하며 RLE, Dictionary 같은 인코딩을 적용하는데, 이 인코딩들은 &lt;strong&gt;같은 값이 연속으로 모여 있을수록 효율이 좋아집니다.&lt;/strong&gt; 데이터가 무작위로 섞여 있으면 각 Row Group에 다양한 값이 흩어져 인코딩 효과가 떨어지지만, 정렬된 상태라면 Row Group마다 좁은 값 구간만 담기게 되어 압축률이 올라갑니다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;셋째, 조회 시 Pushdown 효율입니다.&lt;/strong&gt; Parquet은 각 Row Group마다 컬럼별 min/max 통계를 함께 기록합니다. 조회 시 Spark나 Hive는 이 통계를 먼저 확인해, 조건에 해당하지 않는 Row Group은 아예 읽지 않고 건너뜁니다. 이때도 데이터의 정렬 상태가 Pushdown 성능에 큰 영향을 미칩니다. 데이터가 무작위로 섞여 있으면 모든 Row Group의 min/max가 전체 값 범위에 가깝게 잡히므로 건너뛸 수 있는 구간이 사실상 없습니다. 반면 정렬되어 있으면 Row Group마다 좁거나 겹치지 않는 값 구간을 갖게 되어, 조회 조건에 맞는 극히 일부만 읽고 나머지는 건너뛸 수 있습니다. 파티션 키를 기준으로 정렬해 두는 것은 저장 시점에 미리 조회 성능을 확보해두는 작업입니다. 다만 이 효과는 정렬 기준이 된 컬럼으로 조회할 때 가장 크게 나타납니다.&lt;/p&gt;
+&lt;p&gt;단순히 &lt;code class=&quot;language-text&quot;&gt;repartition&lt;/code&gt;으로 파일 개수만 맞출 수도 있지만, &lt;code class=&quot;language-text&quot;&gt;repartition&lt;/code&gt;은 데이터를 라운드로빈으로 분배해 값이 무작위로 섞입니다. &lt;code class=&quot;language-text&quot;&gt;repartitionByRange&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;sortWithinPartitions&lt;/code&gt;를 함께 사용한 데에는 두 가지 이점이 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;첫째, 압축 효율입니다.&lt;/strong&gt; Parquet은 컬럼 단위로 데이터를 저장하며 RLE, Dictionary 같은 인코딩을 적용하는데, 이 인코딩들은 &lt;strong&gt;같은 값이 연속으로 모여 있을수록 효율이 좋아집니다.&lt;/strong&gt; 데이터가 무작위로 섞여 있으면 각 Row Group에 다양한 값이 흩어져 인코딩 효과가 떨어지지만, 정렬된 상태라면 Row Group마다 좁은 값 구간만 담기게 되어 압축률이 올라갑니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;둘째, 조회 시 Pushdown 효율입니다.&lt;/strong&gt; Parquet은 각 Row Group마다 컬럼별 min/max 통계를 함께 기록합니다. 조회 시 Spark나 Hive는 이 통계를 먼저 확인해, 조건에 해당하지 않는 Row Group은 아예 읽지 않고 건너뜁니다. 이때도 데이터의 정렬 상태가 Pushdown 성능에 큰 영향을 미칩니다. 데이터가 무작위로 섞여 있으면 모든 Row Group의 min/max가 전체 값 범위에 가깝게 잡히므로 건너뛸 수 있는 구간이 사실상 없습니다. 반면 정렬되어 있으면 Row Group마다 좁거나 겹치지 않는 값 구간을 갖게 되어, 조회 조건에 맞는 극히 일부만 읽고 나머지는 건너뛸 수 있습니다. 파티션 키를 기준으로 정렬해 두는 것은 저장 시점에 미리 조회 성능을 확보해두는 작업입니다. 다만 이 효과는 정렬 기준이 된 컬럼으로 조회할 때 가장 크게 나타납니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -325,13 +319,13 @@ final_df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;s
 &lt;td&gt;table_b&lt;/td&gt;
 &lt;td&gt;1시간 17분&lt;/td&gt;
 &lt;td&gt;35분 18초&lt;/td&gt;
-&lt;td&gt;54.5%&lt;/td&gt;
+&lt;td&gt;54.2%&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;table_c&lt;/td&gt;
 &lt;td&gt;5시간 1분&lt;/td&gt;
 &lt;td&gt;3시간 44분&lt;/td&gt;
-&lt;td&gt;25.5%&lt;/td&gt;
+&lt;td&gt;25.6%&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -623,7 +617,7 @@ final_df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;s
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;반대 방향의 사례입니다. &lt;code class=&quot;language-text&quot;&gt;table_b&lt;/code&gt;는 대용량 테이블로, 레거시(08/22)에서는 전체 데이터가 **4개 파일(각 5.2G~5.4G)**에 담겼습니다. Text+Gzip은 분할(Split)이 불가능하므로, 이 데이터를 조회할 때 병렬성은 파일 개수인 4로 고정됩니다.&lt;/p&gt;
-&lt;p&gt;신규 파이프라인(08/23)에서는 동일한 데이터가 &lt;strong&gt;240MB~280MB 수준의 파일 다수&lt;/strong&gt;로 분산 저장되었습니다. HDFS 블록 크기를 기준으로 파일 크기가 200MB~300MB 사이에 수렴하도록 산정했고, Parquet은 Row Group 단위 분할 조회가 가능하므로 읽기 병렬성 제약도 함께 해소되었습니다.&lt;/p&gt;
+&lt;p&gt;신규 파이프라인(08/23)에서는 동일한 데이터가 &lt;strong&gt;240MB~280MB 수준의 파일 다수&lt;/strong&gt;로 분산 저장되었습니다. 파일 하나당 HDFS의 블록 크기인 256MB를 목표로 개수를 산정한 결과이며, 압축률과 값 분포에 따라 이 정도 편차가 생깁니다. Parquet은 Row Group 단위 분할 조회가 가능하므로 읽기 병렬성 제약도 함께 해소되었습니다.&lt;/p&gt;
 &lt;h3&gt;실측 기반 산정의 효과&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -661,7 +655,7 @@ final_df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;s
 &lt;p&gt;파일 개수 산정이 왜 실측 기반이어야 하는지는 로그에서 확인할 수 있습니다. &lt;code class=&quot;language-text&quot;&gt;TABLE_B&lt;/code&gt; 테이블의 경우, 오라클 카탈로그 기준 용량은 약 &lt;strong&gt;158,303MB&lt;/strong&gt;였지만 Parquet+Snappy로 적재된 실제 용량은 &lt;strong&gt;19,710MB&lt;/strong&gt;로 약 8배 차이가 났습니다.&lt;/p&gt;
 &lt;p&gt;만약 원천 DB 용량을 기준으로 파일 개수를 정했다면 약 620개의 파일이 생성되어, 파일 하나당 32MB 수준의 Small File 문제가 발생했을 것입니다. 실측 용량을 기준으로 산정한 결과 목표 파일은 &lt;strong&gt;77개&lt;/strong&gt;로 결정되었고, 파일당 256MB라는 목표 크기에 수렴할 수 있었습니다.&lt;/p&gt;
 &lt;h2&gt;5.3. 조회 성능&lt;/h2&gt;
-&lt;p&gt;포맷 전환(Text+Gzip → Parquet+Snappy)이 실제 조회 성능에 미친 영향을 확인했습니다. 성격이 다른 두 가지 쿼리로 측정했습니다. 레거시와 신규 파이프라인의 적재 일자가 달라, 레거시는 08/22 파티션, 신규는 08/23 파티션을 기준으로 비교했습니다.&lt;/p&gt;
+&lt;p&gt;포맷 전환(Text+Gzip → Parquet+Snappy)이 실제 조회 성능에 미친 영향을 확인했습니다. 성격이 다른 두 가지 쿼리를 Hive로 측정했습니다. 레거시와 신규 파이프라인의 적재 일자가 달라, 레거시는 08/22 파티션, 신규는 08/23 파티션을 기준으로 비교했습니다.&lt;/p&gt;
 &lt;h3&gt;특정 값 조회&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -750,7 +744,7 @@ final_df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;s
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;약 &lt;strong&gt;66.8배&lt;/strong&gt; 단축되었습니다.&lt;/p&gt;
+&lt;p&gt;약 &lt;strong&gt;66.7배&lt;/strong&gt; 단축되었습니다.&lt;/p&gt;
 &lt;h3&gt;결과 건수가 많은 조회&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -841,9 +835,8 @@ final_df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;s
 &lt;/table&gt;
 &lt;p&gt;약 &lt;strong&gt;9.7배&lt;/strong&gt; 단축되었습니다.&lt;/p&gt;
 &lt;h3&gt;개선의 배경&lt;/h3&gt;
-&lt;p&gt;이 차이는 단일 요인이 아니라 세 가지 특성이 함께 작용한 결과입니다. 첫째, Parquet은 컬럼 단위로 데이터를 저장하므로 조회에 필요한 컬럼만 선택적으로 읽습니다. Text 포맷은 조건 컬럼 하나를 확인하기 위해서도 레코드 전체를 읽어야 합니다. 둘째, 4장에서 언급했듯 Text+Gzip은 분할이 불가능해 파일 하나를 태스크 하나가 통째로 읽어야 하는 반면, Parquet은 Row Group 단위 분할이 가능해 읽기 병렬성이 크게 높아집니다. 셋째, 4.2에서 설명한 Row Group Pruning이 동작해 조회 조건에 해당하지 않는 구간을 아예 건너뜁니다.&lt;/p&gt;
-&lt;p&gt;위의 두 사례의 개선 폭 차이(66.8배 vs 9.7배)를 자세하게 살펴보겠습니다. 특정 값 조회의 조건 컬럼인 &lt;code class=&quot;language-text&quot;&gt;SEQ&lt;/code&gt;는 입수 시 정렬 기준으로 사용된 컬럼이라, 조건에 맞는 데이터가 극히 일부 Row Group에 모여 있어 나머지를 대부분 건너뛸 수 있었습니다. 반면 결과 건수가 많은 조회는 6만 건이 넘는 결과가 여러 Row Group에 걸쳐 있어 실제로 읽어야 할 데이터가 많고, 그만큼 개선 폭이 줄어듭니다. 두 테이블의 크기와 파일 개수가 달라 배수를 직접 비교하기는 어렵지만, 정렬 기준 컬럼으로 좁은 조건을 조회할수록 유리하다는 방향성은 확인할 수 있었습니다.&lt;/p&gt;
-&lt;p&gt;한 가지 덧붙이면 Row Group Pruning은 정렬 기준이 된 컬럼으로 조회할 때 가장 크게 작용합니다. 다른 컬럼으로 필터링하면 해당 값이 여러 Row Group에 흩어져 있어 건너뛸 수 있는 구간이 줄어듭니다. 3.2의 파티션 키 선정이 입수 속도뿐 아니라 이후 조회 성능까지 함께 좌우하는 지점입니다.&lt;/p&gt;
+&lt;p&gt;이 차이는 세 가지 특성이 함께 작용한 결과입니다. Parquet은 컬럼 단위로 저장하므로 조회에 필요한 컬럼만 읽고, Row Group 단위 분할이 가능해 읽기 병렬성 제약이 없으며, 4.2에서 설명한 Row Group Pruning으로 조건에 맞지 않는 구간을 건너뜁니다. 반면 Text+Gzip은 조건 컬럼 하나를 확인하기 위해 레코드 전체를 읽어야 하고, 분할도 되지 않습니다.&lt;/p&gt;
+&lt;p&gt;위의 두 사례의 개선 폭 차이(66.7배 vs 9.7배)를 자세하게 살펴보겠습니다. 특정 값 조회의 조건 컬럼인 &lt;code class=&quot;language-text&quot;&gt;SEQ&lt;/code&gt;는 입수 시 정렬 기준으로 사용된 컬럼이라, 조건에 맞는 데이터가 극히 일부 Row Group에 모여 있어 나머지를 대부분 건너뛸 수 있었습니다. 반면 결과 건수가 많은 조회는 6만 건이 넘는 결과가 여러 Row Group에 걸쳐 있어 실제로 읽어야 할 데이터가 많고, 그만큼 개선 폭이 줄어듭니다. 두 테이블의 크기와 파일 개수가 달라 배수를 직접 비교하기는 어렵지만, 정렬 기준 컬럼으로 좁은 조건을 조회할수록 유리하다는 방향성은 확인할 수 있었습니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;마치며&lt;/h1&gt;
 &lt;p&gt;1,200여 개의 파이프라인을 전면 개편하는 작업은 결코 단순한 도구 교체가 아니었습니다. Sqoop이 알아서 처리해주던 영역을 하나씩 직접 설계해야 했고, 그 과정에서 그동안 당연하게 여겼던 것들을 다시 들여다보게 되었습니다.&lt;/p&gt;
