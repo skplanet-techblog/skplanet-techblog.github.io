@@ -1,3 +1,4 @@
+import quba from "./images/quba.png";
 import jayoon from "./images/jayoon.jpg";
 import hdy from "./images/hdy.png";
 import neotf from "./images/neotf.png";
@@ -298,5 +299,10 @@ export const MEMBERS = {
     name: "최종은",
     team: "AI Data Platform팀",
     thumbnail: choijongeun,
-  }
+  },
+  quba: {
+    name: "이학성, 하동우, 민경윤",
+    team: "VAS개발팀",
+    thumbnail: quba,
+  },
 };
