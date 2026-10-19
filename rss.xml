@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 19 Oct 2026 07:30:29 GMT</lastBuildDate><item><title><![CDATA[버그 티켓, AI에게 맡겨봤습니다 — QUBA 개발기]]></title><description><![CDATA[버그 티켓, AI에게 맡겨봤습니다 — QUBA 개발기 QA가 등록한 Jira 버그 티켓을 AI Agent가 먼저 조사하고, 원인과 수정안까지 제안한다면 어떨까요? 사이드 프로젝트로 시작한 버그 처리 자동화 Agent ‘QUBA’의 설계 과정과, 분석 품질을 좌우한 데이터 임베딩·RAG…]]></description><link>https://techtopic.skplanet.com/quba/</link><guid isPermaLink="false">https://techtopic.skplanet.com/quba/</guid><dc:creator><![CDATA[quba]]></dc:creator><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;버그 티켓, AI에게 맡겨봤습니다 — QUBA 개발기&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[SK플래닛 개발자 활동과 경험을 공유하는 기술 블로그를 소개합니다!]]></description><link>https://techtopic.skplanet.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 19 Oct 2026 07:47:36 GMT</lastBuildDate><item><title><![CDATA[버그 티켓, AI에게 맡겨봤습니다 — QUBA 개발기]]></title><description><![CDATA[버그 티켓, AI에게 맡겨봤습니다 — QUBA 개발기 QA가 등록한 Jira 버그 티켓을 AI Agent가 먼저 조사하고, 원인과 수정안까지 제안한다면 어떨까요? 사이드 프로젝트로 시작한 버그 처리 자동화 Agent ‘QUBA’의 설계 과정과, 분석 품질을 좌우한 데이터 임베딩·RAG…]]></description><link>https://techtopic.skplanet.com/quba/</link><guid isPermaLink="false">https://techtopic.skplanet.com/quba/</guid><dc:creator><![CDATA[quba]]></dc:creator><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;버그 티켓, AI에게 맡겨봤습니다 — QUBA 개발기&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;QA가 등록한 Jira 버그 티켓을 AI Agent가 먼저 조사하고, 원인과 수정안까지 제안한다면 어떨까요? 사이드 프로젝트로 시작한 버그 처리 자동화 Agent ‘QUBA’의 설계 과정과, 분석 품질을 좌우한 데이터 임베딩·RAG 구축, 그리고 실제 티켓으로 측정한 효과까지 공유합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -42,6 +42,7 @@
 &lt;li&gt;&lt;a href=&quot;#%EB%A7%88%EC%B9%98%EB%A9%B0&quot;&gt;마치며&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
+&lt;p&gt;&lt;a id=&quot;시작은-작은-호기심이었습니다&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;시작은 작은 호기심이었습니다&lt;/h2&gt;
 &lt;p&gt;QUBA는 &lt;code class=&quot;language-text&quot;&gt;Quality Bug Assistants&lt;/code&gt;의 약자로, 한마디로 &lt;strong&gt;버그 처리 자동화 AI Agent&lt;/strong&gt;입니다. 출발점은 단순한 질문이었습니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -52,6 +53,7 @@
 &lt;p&gt;ℹ️ &lt;strong&gt;아직 개발 중인 프로젝트입니다&lt;/strong&gt;
 QUBA는 완성된 제품이 아니라, 실제 업무 적용을 목표로 계속 테스트하며 다듬고 있는 프로젝트입니다. 이 글은 설계와 아키텍처, 파이프라인 내부 동작, 분석 품질을 좌우한 데이터 임베딩·RAG 구축, 그리고 실제 티켓으로 측정한 효과까지를 한 번에 정리한 기록입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a id=&quot;버그-하나를-고치기까지-시간은-어디서-새고-있을까&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;버그 하나를 고치기까지, 시간은 어디서 새고 있을까&lt;/h2&gt;
 &lt;p&gt;AI를 붙이기 전에, 먼저 지금 우리가 버그를 어떻게 처리하고 있는지부터 정리했습니다. 대부분의 팀이 비슷한 흐름일 거라 생각합니다.&lt;/p&gt;
 &lt;ol&gt;
@@ -96,6 +98,7 @@ QUBA는 완성된 제품이 아니라, 실제 업무 적용을 목표로 계속 
 &lt;em&gt;일반적인 버그 처리 프로세스. 4단계 ‘원인 추론’에서 개발자는 여러 시스템을 오가야 합니다.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;여기서 눈여겨볼 곳은 4단계입니다. 원인을 찾는 데 필요한 정보가 한곳에 모여 있지 않거든요. 버그 유형에 따라 &lt;strong&gt;소스 코드, API 규격서, 서버 로그, DB 데이터, 정책 문서, 과거 처리 이력&lt;/strong&gt;을 하나씩 찾아보며 퍼즐을 맞춰야 합니다.&lt;/p&gt;
 &lt;p&gt;코드를 고치는 시간보다, &lt;strong&gt;고치기 전에 여기저기 흩어진 정보를 모으고 연결하는 시간&lt;/strong&gt;이 더 길 때가 많습니다. 그래서 이렇게 생각했습니다. 이 정보 수집과 연결을 AI Agent가 대신하고, 원인 분석까지 거들어 준다면 어떨까?&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;ai-agent가-들어갈-수-있는-네-개의-틈&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;AI Agent가 들어갈 수 있는 네 개의 틈&lt;/h2&gt;
 &lt;p&gt;위 프로세스에서 반복적으로 발생하는 작업을 중심으로, Agent가 시간을 줄여줄 수 있는 네 가지 영역을 뽑았습니다.&lt;/p&gt;
 &lt;table&gt;
@@ -135,6 +138,7 @@ QUBA는 완성된 제품이 아니라, 실제 업무 적용을 목표로 계속 
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;핵심은 “AI야, 이 버그 분석해 줘”라고 던지는 게 아니라, &lt;strong&gt;개발자가 반복하던 작업을 Agent가 단계별로 거들도록 만드는 것&lt;/strong&gt;입니다. 1번 담당자 추천은 다음 고도화 단계로 미뤄두고, 이번에는 2~4번에 집중했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;다른-팀은-어떻게-하고-있을까&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;다른 팀은 어떻게 하고 있을까&lt;/h2&gt;
 &lt;p&gt;방향을 정하기 전에, 다른 기업과 개발자들이 AI Agent를 실무에 어떻게 적용하고 있는지 살펴봤습니다.&lt;/p&gt;
 &lt;h3&gt;Adriel — 글로벌 마케팅 BI 플랫폼&lt;/h3&gt;
@@ -155,6 +159,7 @@ QUBA는 완성된 제품이 아니라, 실제 업무 적용을 목표로 계속 
 &lt;li&gt;&lt;strong&gt;흐름:&lt;/strong&gt; Jira → 정보 보강 → 자동 재현 → 로그/코드 분석 → 수정 PR → CI&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;기술:&lt;/strong&gt; LLM Agent · Docker · Playwright · Git/CI&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;a id=&quot;사례에서-찾은-세-가지-설계-원칙&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;사례에서 찾은 세 가지 설계 원칙&lt;/h2&gt;
 &lt;p&gt;세 사례를 나란히 놓고 보니 공통된 원칙이 보였습니다. QUBA도 이 세 가지 위에서 설계했습니다.&lt;/p&gt;
 &lt;h3&gt;1. 충분한 맥락(Context)을 줄 것&lt;/h3&gt;
@@ -167,6 +172,7 @@ QUBA는 완성된 제품이 아니라, 실제 업무 적용을 목표로 계속 
 &lt;p&gt;✅ &lt;strong&gt;결국 세 가지 질문입니다&lt;/strong&gt;
 얼마나 좋은 Context를 줄 것인가, 어떤 Tool을 연결할 것인가, 어디까지 AI에게 맡기고 어디서 사람이 통제할 것인가. LLM 성능만큼이나 이 세 가지를 함께 설계하는 게 중요하다고 판단했습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a id=&quot;왜-langgraph였나&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;왜 LangGraph였나&lt;/h2&gt;
 &lt;p&gt;Agent를 구현할 프레임워크로 n8n, LangGraph, Claude Agent SDK 세 가지를 비교했습니다.&lt;/p&gt;
 &lt;table&gt;
@@ -206,6 +212,7 @@ QUBA는 완성된 제품이 아니라, 실제 업무 적용을 목표로 계속 
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;간단한 자동화라면 n8n이, 코드 분석·수정을 빠르게 Agent화하려면 Claude Agent SDK가 매력적입니다. 하지만 버그 처리는 일회성 작업이 아니라 &lt;strong&gt;이슈 분석부터 처리까지 여러 단계를 거치는 긴 워크플로&lt;/strong&gt;입니다. 실행 흐름을 코드로 명확하게 통제하고, 앞으로 다양한 Tool을 붙여 확장하기에는 LangGraph가 가장 적합하다고 판단했습니다. 초기 학습 비용은 장기 운영을 위한 투자로 봤습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;quba-아키텍처-한눈에-보기&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;QUBA 아키텍처 한눈에 보기&lt;/h2&gt;
 &lt;p&gt;이제 QUBA가 실제로 어떻게 생겼는지 보겠습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -285,6 +292,7 @@ LLM은 일반 지식은 잘 알지만 사내 도메인, 정책, 화면 구성, �
 &lt;/blockquote&gt;
 &lt;h3&gt;④ REST API — 실제 업무 시스템과의 연결&lt;/h3&gt;
 &lt;p&gt;Jira Data Center API로 티켓을 조회하고 코멘트를 등록합니다. 별도 서버 API를 통해 DB나 로그 같은 사내 데이터도 조회할 수 있도록 설계했는데, 이 연결은 다음 고도화 단계에서 구현할 계획입니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;7개-노드로-흐르는-파이프라인&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;7개 노드로 흐르는 파이프라인&lt;/h2&gt;
 &lt;p&gt;지금까지가 QUBA의 전체 지도였다면, 이제 그 안으로 한 단계 들어가 보겠습니다. 티켓 번호 하나가 들어와서 구조화된 분석 리포트가 나오기까지, MCP Server 안에서는 어떤 일이 벌어질까요?&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -361,6 +369,7 @@ LLM은 일반 지식은 잘 알지만 사내 도메인, 정책, 화면 구성, �
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;⑥ confirm_post가 앞에서 이야기한 Human-in-the-Loop 승인 게이트입니다. 이 중 특히 중요한 &lt;strong&gt;① fetch_ticket, ③ enrich_context, ⑤ synthesize&lt;/strong&gt; 세 노드를 좀 더 자세히 보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;정보-수집--fetch_ticket&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;정보 수집 — fetch_ticket&lt;/h2&gt;
 &lt;p&gt;Jira 티켓을 보면 오류 현상에 대한 간단한 설명과 &lt;strong&gt;재현 절차, 결과 정보&lt;/strong&gt;가 적혀 있습니다. QUBA는 이 자연어 정보를 가지고 정책 문서, API 스펙, 코드를 찾아갑니다.&lt;/p&gt;
 &lt;p&gt;가장 먼저 LLM이 &lt;strong&gt;핵심 키워드 세 개&lt;/strong&gt;를 추출합니다. 예를 들어 선물 발신 후 구매내역 화면에 “수신대기 D-day” 문구가 잘못 노출되는 티켓이라면 &lt;strong&gt;“선물 발신”, “수신 대기”, “D-Day”&lt;/strong&gt; 같은 키워드가 뽑힙니다.&lt;/p&gt;
@@ -392,6 +401,7 @@ LLM은 일반 지식은 잘 알지만 사내 도메인, 정책, 화면 구성, �
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;a id=&quot;문맥-보강--enrich_context&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;문맥 보강 — enrich_context&lt;/h2&gt;
 &lt;p&gt;enrich_context는 파이프라인에서 &lt;strong&gt;가장 중요한 노드&lt;/strong&gt;로, 한마디로 &lt;strong&gt;근거를 모으는 노드&lt;/strong&gt;입니다. LLM은 처음 검색 전략을 정할 때 &lt;strong&gt;단 한 번만&lt;/strong&gt; 사용하고, 이후 7단계는 &lt;strong&gt;검색과 계산만으로&lt;/strong&gt; 답을 도출합니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -555,6 +565,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;h3&gt;6~7단계 — 정리&lt;/h3&gt;
 &lt;p&gt;각 검색 결과의 점수를 비교하기 위해 &lt;strong&gt;RRF(Reciprocal Rank Fusion) 병합&lt;/strong&gt;을 수행하고, 마지막으로 이 정보들을 얼마나 믿을 수 있는지 &lt;strong&gt;신뢰도&lt;/strong&gt;를 계산합니다.&lt;/p&gt;
 &lt;p&gt;엔드포인트를 왜 굳이 중간에 꺼내서 쓰는지, RRF로 순위를 병합하는 이유가 무엇인지, 신뢰도는 어떤 근거로 계산하는지는 모두 3부에서 다시 다루겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;분석과-검증--synthesize&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;분석과 검증 — synthesize&lt;/h2&gt;
 &lt;p&gt;synthesize 노드가 하는 일은 &lt;strong&gt;LLM이 수정 대상을 뽑고, 그 결과를 코드로 검증&lt;/strong&gt;하는 것입니다. 흐름은 &lt;strong&gt;입력 → JSON 생성 → 4단계 검증 → 분석 리포트&lt;/strong&gt; 순서입니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -704,6 +715,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;신뢰도를 계산한 뒤에는 &lt;strong&gt;그 근거를 자료로&lt;/strong&gt; 함께 만듭니다.&lt;/p&gt;
 &lt;h3&gt;분석 리포트&lt;/h3&gt;
 &lt;p&gt;이렇게 네 단계를 거치면 &lt;strong&gt;버그 요약, 원인 분석, 수정 방향, 수정 범위, 신뢰도&lt;/strong&gt;를 담은 &lt;strong&gt;분석 리포트&lt;/strong&gt;가 완성됩니다. 이 리포트가 &lt;strong&gt;IDE로 돌아가서&lt;/strong&gt; 해당 티켓에 대한 후속 처리가 진행됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;분석-근거는-어디서-오는가&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;분석 근거는 어디서 오는가&lt;/h2&gt;
 &lt;p&gt;여기까지가 QUBA가 어떻게 생겼고, 티켓 하나를 어떤 단계로 처리하는지에 대한 이야기였습니다. 이제 남은 질문은 하나입니다. &lt;strong&gt;Agent는 그 근거를 대체 어디서 가져올까요?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;앞에서 설계 원칙 중 첫 번째로 꼽았던 ‘충분한 맥락(Context)을 줄 것’, 그리고 “Agent 개발보다 공수가 더 들었다”고 적어둔 그 작업이 바로 이 부분입니다. 원인을 찾는 데 필요한 정보가 한곳에 모여 있지 않다는 문제는 Agent에게도 똑같이 적용되거든요. LLM에게 질문을 던지는 것만으로는 부족했고, &lt;strong&gt;관련 근거를 먼저 찾아낸 뒤 그 근거 안에서만 답하도록&lt;/strong&gt; 만들어야 했습니다.&lt;/p&gt;
@@ -744,6 +756,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
     &lt;/span&gt;
 &lt;em&gt;QUBA의 임베딩·검색 파이프라인&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;문서를 청크로 나누고, 1024차원 벡터로 만들고, 후보를 넉넉히 확보한 뒤, 리랭커로 좁혀서 LLM에게 근거로 넘깁니다. 각 단계에서 무엇을 결정해야 했는지 순서대로 보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;임베딩-의미를-좌표로-바꾸는-일&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;임베딩: 의미를 좌표로 바꾸는 일&lt;/h2&gt;
 &lt;h3&gt;텍스트 하나에 좌표 하나&lt;/h3&gt;
 &lt;p&gt;임베딩 모델이 하는 일 자체는 단순합니다. 텍스트를 &lt;strong&gt;일정한 길이의 숫자 배열&lt;/strong&gt;로 바꿔주는 것입니다. QUBA에서 사용하는 모델은 사내에서 운영 중인 BGE-M3 계열 임베딩 모델로, 텍스트 하나를 1024개의 숫자로 표현합니다.&lt;/p&gt;
@@ -783,6 +796,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;ℹ️ &lt;strong&gt;같은 모델, 같은 차원이어야 합니다&lt;/strong&gt;
 문서와 질문은 반드시 같은 모델, 같은 차원이어야 비교가 성립합니다. 모델이 바뀌면 좌표 체계 자체가 달라지므로, 차원 수가 우연히 같더라도 기존 벡터를 재사용할 수 없고 전량 재임베딩이 필요합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a id=&quot;임베딩-이전에-결정되는-것&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;임베딩 이전에 결정되는 것&lt;/h2&gt;
 &lt;p&gt;임베딩 모델을 고르기 전에 먼저 정해야 할 것이 있었습니다. &lt;strong&gt;문서를 어디까지 하나의 덩어리로 볼 것인가&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;p&gt;문서 전체를 하나의 벡터로 만들면 여러 주제가 섞입니다. 그러면 어떤 질문과 비교해도 의미가 흐릿해져서, “이 문서는 뭐든 조금씩 관련 있어 보이는” 상태가 됩니다. 반대로 너무 잘게 나누면 이번에는 endpoint와 그 설명, 예외 코드 사이의 관계가 끊어져버립니다. 쪼개진 조각 하나만으로는 맥락을 알 수 없게 되는 것입니다.&lt;/p&gt;
@@ -826,6 +840,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;위 그림에서 더 중요한 것은 오른쪽입니다. endpoint, 파일 경로, 에러 코드처럼 &lt;strong&gt;정확히 같아야만 쓸모가 있는 값&lt;/strong&gt;은 벡터에 녹이지 않고 메타데이터로 따로 보존했습니다.&lt;/p&gt;
 &lt;p&gt;이유는 단순합니다. &lt;code class=&quot;language-text&quot;&gt;/v1/banners&lt;/code&gt;라는 문자열을 1024차원 벡터 안에 넣으면, 그 벡터는 “배너와 관련된 어떤 API”라는 흐릿한 의미를 갖게 됩니다. &lt;code class=&quot;language-text&quot;&gt;/v1/banners&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;/v1/banner-groups&lt;/code&gt;는 벡터 공간에서 매우 가깝지만, 코드를 찾을 때는 완전히 다른 값입니다. 이런 값은 &lt;strong&gt;유사도로 비교할 대상이 아니라 정확 일치로 걸러낼 대상&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;p&gt;2부에서 본 “3단계 Metadata에서 Endpoint 추출”이 가능했던 이유가 바로 이것입니다. 그때 꺼내 쓴 엔드포인트는 벡터 안에 녹아 있던 값이 아니라, 여기서 따로 보존해둔 값이었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;청킹-실패가-임베딩-실패로-보였다&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;청킹 실패가 임베딩 실패로 보였다&lt;/h2&gt;
 &lt;p&gt;초기 인제스션 단계에서는 모델 품질보다 &lt;strong&gt;데이터 파이프라인의 문제&lt;/strong&gt;가 먼저 드러났습니다. 검색 결과가 이상해서 임베딩 모델을 의심했는데, 실제 원인은 전혀 다른 곳에 있었습니다.&lt;/p&gt;
 &lt;h3&gt;v1 — 중복 청크 ID&lt;/h3&gt;
@@ -877,6 +892,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;✅ &lt;strong&gt;모델보다 색인을 먼저 의심할 것&lt;/strong&gt;
 검색 결과가 이상할 때 가장 먼저 확인해야 할 것은 모델 성능이 아니라, 찾으려는 문서가 애초에 인덱스에 들어가 있는지였습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a id=&quot;데이터-공급망을-분리하다&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;데이터 공급망을 분리하다&lt;/h2&gt;
 &lt;p&gt;이렇게 청크와 임베딩 데이터를 만드는 일은, 현재 &lt;code class=&quot;language-text&quot;&gt;quba-data&lt;/code&gt;라는 별도 프로젝트가 담당하고 있습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -941,6 +957,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;h3&gt;런타임과 빌드타임의 분리&lt;/h3&gt;
 &lt;p&gt;이 구조에서 중요한 점은 QUBA가 데이터 생성 과정에 직접 관여하지 않는다는 것입니다. QUBA는 Feature-Code 매핑, API 스펙, 정책 문서 — &lt;strong&gt;세 개의 alias만 읽습니다.&lt;/strong&gt; 물리 인덱스 이름조차 알지 못합니다.&lt;/p&gt;
 &lt;p&gt;덕분에 데이터를 만드는 방식을 나중에 개선하더라도 검색하는 쪽의 계약은 그대로 유지됩니다. 새 데이터를 publish하는 동안에도 런타임 검색은 영향을 받지 않습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;벡터는-어떻게-검색되는가&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;벡터는 어떻게 검색되는가&lt;/h2&gt;
 &lt;p&gt;이제 만들어진 벡터가 실제로 어떻게 검색되는지 보겠습니다. 문서 벡터는 OpenSearch의 &lt;code class=&quot;language-text&quot;&gt;knn_vector&lt;/code&gt; 필드에 저장되고, &lt;strong&gt;HNSW&lt;/strong&gt;(Hierarchical Navigable Small World)라는 여러 층으로 된 이웃 그래프로 서로 연결됩니다.&lt;/p&gt;
 &lt;h3&gt;HNSW — 계층형 이웃 그래프&lt;/h3&gt;
@@ -985,6 +1002,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;이 전제가 이후 파이프라인 전체의 설계를 바꿨습니다. 1차 검색 단계에서 정답을 확정하려 하지 않고, 대신 후보를 &lt;strong&gt;넉넉하게 확보&lt;/strong&gt;한 뒤 다음 단계에서 좁히는 2단계 구조를 택했습니다. 2부에서 본 “API 스펙 최대 20개 → 리랭킹 → 5개”가 바로 이 구조입니다. 이 단계의 목표는 정확도가 아니라 &lt;strong&gt;누락하지 않는 것&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;h3&gt;임베딩 장애 시 폴백&lt;/h3&gt;
 &lt;p&gt;임베딩 API에 장애가 생기면 질문 벡터를 만들 수 없으므로 벡터 검색 자체가 불가능해집니다. 이때 조사를 중단하는 대신 &lt;strong&gt;BM25 텍스트 검색으로 전환&lt;/strong&gt;합니다. 검색 품질은 떨어지지만 완전히 멈추는 것보다는 낫다는 판단입니다. 물론 이 전환이 일어났다는 사실은 로그로 관측하고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;벡터-검색만으로-부족한-이유&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;벡터 검색만으로 부족한 이유&lt;/h2&gt;
 &lt;p&gt;그렇다면 모든 검색을 벡터로 처리하면 되지 않을까요? 그렇지 않았습니다.&lt;/p&gt;
 &lt;p&gt;임베딩은 표현이 다른 자연어를 연결하는 데 강합니다. “배너 등록이 안 된다”와 “콘텐츠 배너 저장 실패”를 이어주는 것은 임베딩이 가장 잘하는 일입니다. 하지만 모든 검색 문제에 적합한 것은 아니었습니다.&lt;/p&gt;
@@ -1023,6 +1041,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;에러 코드, HTTP method, 클래스명, endpoint는 &lt;strong&gt;의미가 비슷한 값보다 정확히 같은 값이 중요&lt;/strong&gt;합니다. 그런데 이런 짧고 고유한 값은 임베딩 벡터 안에서 오히려 의미가 희석됩니다. &lt;code class=&quot;language-text&quot;&gt;UU304&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;UU305&lt;/code&gt;는 벡터 공간에서 거의 같은 위치에 놓이지만, 실제로는 완전히 다른 에러입니다.&lt;/p&gt;
 &lt;p&gt;2부에서 전략을 Vector / BM25 / Hybrid로 나눠 LLM이 고르게 한 이유가 이것입니다. 질문에 따라 &lt;strong&gt;잘 통하는 검색 방식이 다르기 때문&lt;/strong&gt;입니다. 벡터 검색을 포기한 것이 아니라, 의미 검색이 잘하는 일과 정확 일치 검색이 잘하는 일을 나눈 것입니다.&lt;/p&gt;
 &lt;p&gt;전략 판단이 실패하면 가장 넓은 &lt;code class=&quot;language-text&quot;&gt;vector&lt;/code&gt; 검색과 전체 저장소 조회로 폴백합니다. 여기까지의 목표는 정답을 확정하는 것이 아니라, &lt;strong&gt;정답이 포함될 만한 후보를 충분히 모으는 것&lt;/strong&gt;이기 때문입니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;후보-생성과-정밀-판정을-분리하다&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;후보 생성과 정밀 판정을 분리하다&lt;/h2&gt;
 &lt;p&gt;후보를 모았다고 해서 검색 점수가 높은 문서를 바로 정답으로 볼 수는 없었습니다.&lt;/p&gt;
 &lt;h3&gt;bi-encoder와 cross-encoder&lt;/h3&gt;
@@ -1096,6 +1115,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;⚠️ &lt;strong&gt;소규모 표본입니다&lt;/strong&gt;
 정답 4건, 오답 3건으로 확인한 초기 결과입니다. 일반화된 정확도 지표로 볼 수는 없으며, 표본을 늘려 재확인할 계획입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a id=&quot;점수-분포를-이해해야-confidence가-된다&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;점수 분포를 이해해야 confidence가 된다&lt;/h2&gt;
 &lt;p&gt;신호가 리랭커에 있다는 것을 확인했으니, 이제 그 점수를 사용자에게 보여줄 &lt;strong&gt;검색 신뢰도(confidence)&lt;/strong&gt; 로 바꿔야 했습니다. 2부의 7단계 마지막에 나온 “신뢰도 산출”이 이 계산입니다. 그런데 여기에 함정이 하나 더 있었습니다.&lt;/p&gt;
 &lt;h3&gt;raw score는 확률이 아니다&lt;/h3&gt;
@@ -1113,6 +1133,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;⚠️ &lt;strong&gt;확률이 아니라 운영 기준입니다&lt;/strong&gt;
 이 계산 방식은 아직 작은 표본을 보고 정한 운영 기준입니다. 확률값이 아니라 “현재 데이터 기준으로 정한 값”으로 이해하는 것이 정확합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a id=&quot;벡터-위에-구조화된-연결을-더한다&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;벡터 위에 구조화된 연결을 더한다&lt;/h2&gt;
 &lt;p&gt;마지막 조각은 임베딩 검색 결과를 &lt;strong&gt;실제 코드 후보로 연결하는 것&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;p&gt;자연어 질문으로 Feature-Code 매핑을 바로 벡터 검색하면 잘 맞지 않았습니다. “배너 등록 실패”라는 문장과 &lt;code class=&quot;language-text&quot;&gt;BannerController&lt;/code&gt;의 코드 요약문은 임베딩 공간에서 생각보다 멀리 떨어져 있습니다. 둘은 같은 것을 가리키지만 어휘 자체가 다른 세계에 속해 있기 때문입니다.&lt;/p&gt;
@@ -1194,6 +1215,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;임베딩은 모델 API를 한 번 호출하고 끝나는 작업이 아니었습니다. 데이터 준비부터 검색 결과 평가까지 이어지는 파이프라인이었고, 품질을 좌우한 것은 모델 교체가 아니라 그 파이프라인 위의 선택들이었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;비용과-시간으로-따져보기&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;비용과 시간으로 따져보기&lt;/h2&gt;
 &lt;p&gt;여기까지 보면 “&lt;strong&gt;그래서 QUBA를 쓰는 게 이득일까?&lt;/strong&gt;”라는 궁금증이 생길 것입니다. 그래서 마지막으로 &lt;strong&gt;비용과 시간&lt;/strong&gt; 측면에서 분석해 보았습니다.&lt;/p&gt;
 &lt;h3&gt;측정 방법 및 결과&lt;/h3&gt;
@@ -1247,6 +1269,7 @@ BM25 0건은 문자열이 맞지 않았다는 뜻이지, 관련 문서가 없다
 &lt;p&gt;✅ &lt;strong&gt;결론: 쓰는 쪽이 이득입니다&lt;/strong&gt;
 티켓별로 편차는 있었지만 비용은 절감 쪽으로 기울었고, 1차 조사 시간은 확실히 줄어들었습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a id=&quot;마치며&quot; style=&quot;display:block;scroll-margin-top:8rem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;마치며&lt;/h2&gt;
 &lt;p&gt;QUBA를 만들면서 가장 크게 느낀 건, 좋은 AI Agent는 좋은 모델 하나로 완성되지 않는다는 점입니다. &lt;strong&gt;어떤 맥락을 주고, 어떤 도구를 쥐여주고, 어디서 사람이 멈춰 세울지&lt;/strong&gt;를 함께 설계해야 비로소 실무에서 쓸 만한 Agent가 됩니다.&lt;/p&gt;
 &lt;p&gt;같은 이야기가 한 단계 안쪽에서도 반복됐습니다. 검색 품질 역시 임베딩 모델 하나가 결정하지 않았거든요. 무엇을 벡터에 담을지, 찾아낸 것을 무엇으로 이을지, 나온 점수를 어떻게 해석할지를 설계하는 일이 모델 선택보다 훨씬 큰 차이를 만들었습니다. 비용 측정에서 얻은 결론도 결국 같은 방향이었습니다. 더 똑똑한 모델이 아니라 &lt;strong&gt;더 나은 근거&lt;/strong&gt;가 필요했습니다.&lt;/p&gt;
