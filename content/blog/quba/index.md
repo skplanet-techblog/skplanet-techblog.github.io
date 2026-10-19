@@ -1,6 +1,6 @@
 ---
 title: "버그 티켓, AI에게 맡겨봤습니다 — QUBA 개발기"
-date: "2026-10-14"
+date: "2026-10-19"
 tags: ["AI", "AI Agent", "LangGraph", "MCP", "RAG", "임베딩", "벡터 검색", "QA"]
 author: "quba"
 description: "QA가 등록한 Jira 버그 티켓을 AI Agent가 먼저 조사하고 원인과 수정안까지 제안한다면 어떨까요? 사이드 프로젝트로 시작한 버그 처리 자동화 Agent 'QUBA'의 설계부터 RAG 구축, 비용·시간 효과 검증까지의 기록입니다."
