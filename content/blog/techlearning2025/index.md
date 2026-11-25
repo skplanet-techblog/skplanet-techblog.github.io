@@ -2,6 +2,7 @@
 title: "2025년 버전, 개발조직 주도 교육 및 성장 회고(Tech-driven Education Retrospect)"
 date: "2025-10-28"
 tags: ["개발문화", "기술교육", "AI교육", "L&D", "개발자 성장"]
+primaryTags: ["기술교육", "개발자 성장"]
 author: "techeditorial"
 description: "SK플래닛 2025년 AI교육, 기술교육, 기술 인사이트 세미나 등 개발자 성장 프로그램 회고" 
 ---

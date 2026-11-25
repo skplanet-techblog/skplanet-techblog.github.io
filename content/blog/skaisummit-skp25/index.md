@@ -2,6 +2,7 @@
 title: "미리 봅시다!@SK AI SUMMIT 2025 (+ 현장등록 방법, '숨은맛집' 세션소개 포함)"
 date: "2025-10-29"
 tags: ["개발문화", "SK ICT", "SK AI SUMMIT", "SK플래닛"]
+primaryTags: ["SK AI SUMMIT"]
 author: "techeditorial"
 description: "SK AI SUMMIT 2025 요약정보 및 SK플래닛 발표정보" 
 ---

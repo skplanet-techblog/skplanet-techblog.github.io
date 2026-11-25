@@ -2,6 +2,7 @@
 title: "Tech Topic 기술블로그 개선 실험 - 콘텐트, 성능, SEO, AEO"
 date: "2025-10-21" 
 tags: ["TechBlog", "기술문화", "성능개선", "SEO", "AEO"]
+primaryTags: ["SEO", "AEO"]
 author: "joeoriginal"
 description: "Tech Topic 기술 블로그 개선 실험 #1 - 콘텐트, 성능, SEO 및 AEO 관점에서"
 ---

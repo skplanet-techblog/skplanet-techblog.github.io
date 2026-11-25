@@ -2,6 +2,7 @@
 title: "2026 SKP-11번가 첫 판교 세미나 with OpenAI"
 date: "2026-02-25"
 tags: ["AI", "기술문화", "판교세미나", "OpenAI"]
+primaryTags: ["판교세미나", "OpenAI"]
 author: "techeditorial"
 description: "2026년 SK플래닛 주관 외부전문가 판교 세미나를 소개합니다 with OpenAI & 11번가" 
 ---

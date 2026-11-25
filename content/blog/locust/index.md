@@ -2,6 +2,7 @@
 title: "블록체인 부하 테스트에 Locust 오픈소스 활용하기"
 date: "2024-10-10"
 tags: ["Web3", "locust", "부하테스트", "Open Source"]
+primaryTags: ["locust", "부하테스트"]
 author: "wonjs"
 description: "Locust를 이용하여 간단하게 부하테스트 작성해보기"
 ---

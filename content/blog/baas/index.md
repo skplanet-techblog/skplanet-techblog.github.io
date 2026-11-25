@@ -2,6 +2,7 @@
 title: "웹 3.0 생태계를 빠르게 꽃 피우는 법"
 date: "2024-06-03"
 tags: ["Web3", "Blockchain", "BaaS"]
+primaryTags: ["BaaS", "Web3"]
 author: "taehak"
 description: "SK플래닛 BaaS(Blockchain as a Service) 소개"
 ---

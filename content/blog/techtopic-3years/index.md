@@ -2,6 +2,7 @@
 title: "개인의 회고에서 조직의 자산으로 : SK플래닛 기술 블로그 3년의 여정"
 date: "2026-01-06"
 tags: ["DevRel", "개발문화", "기술블로그", "소프트스킬", "퍼스널브랜딩"]
+primaryTags: ["기술블로그", "DevRel"]
 author: "techeditorial" 
 description: "Tech Topic 기술 블로그 3주년 회고" 
 ---

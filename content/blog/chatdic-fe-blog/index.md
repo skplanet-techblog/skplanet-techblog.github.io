@@ -2,6 +2,7 @@
 title: "Chat DIC - 대화형 LLM 서비스의 프런트엔드 성능 개선기"
 date: "2025-11-01"
 tags: [ "Frontend", "AI", "React", "SSE", "LLM", "JavaScript", "최적화" ]
+primaryTags: ["Frontend", "최적화"]
 author: "songhy"
 description: "SSE 스트리밍, 버퍼링, 가상화 — Chat DIC(챗디) 프런트엔드 개발에 적용된 주요 기술과 개선 사례를 공유합니다."
 ---

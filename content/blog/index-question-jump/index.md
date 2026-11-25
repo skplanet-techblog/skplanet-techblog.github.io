@@ -2,6 +2,7 @@
 title: "ChatGPT 질문 내역 바로보기 (익스텐션 개발기)"
 date: "2025-08-14"
 tags: ["AI", "ChatGPT", "Chrome Extension", "사용자 경험 개선"]
+primaryTags: ["Chrome Extension", "ChatGPT"]
 author: "wonjs2025"
 description: "ChatGPT 질문 내역 바로보기 (익스텐션 개발기)"
 ---

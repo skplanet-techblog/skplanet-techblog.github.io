@@ -2,6 +2,7 @@
 title: "AI가 만들어주는 나만의 목소리(SK AI SUMMIT 발표사례)" 
 date: "2025-12-02" 
 tags: ["AI", "Voice Conversion", "Diffusion", "Transformer"]
+primaryTags: ["Voice Conversion", "Diffusion"]
 author: "kwj"
 description: "내 목소리가 말하고, 노래한다!"
 ---

@@ -2,6 +2,7 @@
 title: "Web3와 App-chain 플랫폼의 가능성"
 date: "2023-02-23"
 tags: ["Web3", "App-chain"]
+primaryTags: ["Web3", "App-chain"]
 author: "hdy"
 description: "Web3와 App-chain 플랫폼의 가능성"
 ---

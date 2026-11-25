@@ -2,6 +2,7 @@
 title: "Text2SQL 기반 데이터 분석 서비스 InsightLens 개발기"
 date: "2026-02-24"
 tags: ["AI", "AI 에이전트", "RAG", "Text2SQL"]
+primaryTags: ["Text2SQL", "RAG"]
 author: "kimlee"
 description: "InsightLens의 개발 배경부터 에이전트의 설계, 그리고 개발 과정에서 얻은 기술적 인사이트까지 공유"
 ---

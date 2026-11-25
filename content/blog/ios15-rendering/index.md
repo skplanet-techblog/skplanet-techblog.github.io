@@ -2,6 +2,7 @@
 title: "iOS 환경에서 비디오 최적화 및 성능 개선 사례"
 date: "2023-01-26"
 tags: ["Frontend", "iOS 15", "iOS 16", "video", "rendering"]
+primaryTags: ["video", "iOS 15"]
 author: "jayoon"
 description: "iOS 환경에서 비디오 최적화 및 성능 개선 사례"
 ---

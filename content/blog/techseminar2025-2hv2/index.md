@@ -2,6 +2,7 @@
 title: "2025년 8월 말~9월 국내 기술세미나 일정 공유(추가)"
 date: "2025-08-25"
 tags: ["TechCon", "주요IT기업", "기술세미나", "테크세미나", "테크컨퍼런스"]
+primaryTags: ["TechCon", "기술세미나"]
 author: "techeditorial"
 description: "2025년 8월 말~9월 기술 세미나 일정 공유(업데이트)"
 ---

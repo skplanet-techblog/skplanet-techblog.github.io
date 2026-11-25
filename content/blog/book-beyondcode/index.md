@@ -2,6 +2,7 @@
 title: "<코드 너머, 회사보다 오래 남을 개발자> 요약 및 독후감"
 date: "2025-07-20"
 tags: ["DevRel", "개발문화", "소프트스킬", "퍼스널브랜딩", "후기"]
+primaryTags: ["소프트스킬", "개발문화"]
 author: "joeoriginal" 
 description: "'코드너머' 독후감 작성한 썰 푼다(?)"
 ---

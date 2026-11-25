@@ -2,6 +2,7 @@
 title: "휴먼의 'AI 학습'은 이렇게 #2: DeepLearning.ai (& pro)"
 date: "2025-11-24"
 tags: ["AI", "Education", "DeepLearning.ai", "Andrew Ng"]
+primaryTags: ["DeepLearning.ai", "Education"]
 author: "joeoriginal"
 description: "휴먼의 'AI 학습'은 이렇게 #2: DeepLearning.ai (& pro)"
 ---

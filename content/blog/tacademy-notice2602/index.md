@@ -2,6 +2,7 @@
 title: "[안내] T Academy: AI 활용 데이터 엔지니어 2기 교육생 모집(~2/1)"
 date: "2026-01-22"
 tags: ["AI", "Data", "T Academy", "AI교육", "DE교육", "ICT교육","SK플래닛"]
+primaryTags: ["T Academy", "DE교육"]
 author: "tacademy"
 description: "SK플래닛 T Academy 주관 프로그램 안내: AI 활용 데이터 엔지니어 2기 모집" 
 ---

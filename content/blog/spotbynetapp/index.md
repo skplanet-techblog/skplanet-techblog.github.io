@@ -2,6 +2,7 @@
 title: "Spot by NetApp을 활용한 AWS EKS 운영 비용 절감 사례"
 date: "2023-04-09"
 tags: ["Cloud Eng.", "AWS", "EKS","Spot", "NetApp"]
+primaryTags: ["Spot", "EKS"]
 author: "leejun"
 description: "Spot by NetApp을 활용한 AWS EKS 운영 비용 절감 사례"
 ---

@@ -2,6 +2,7 @@
 title: "SK플래닛 Tech Topic 기술 블로그를 소개합니다!"
 date: "2023-01-02"
 tags: ["DevRel", "개발문화", "TechBlog", "기술블로그"]
+primaryTags: ["TechBlog", "개발문화"]
 author: "techeditorial" 
 description: "SK플래닛 Tech Topic 기술 블로그를 소개합니다!"
 ---

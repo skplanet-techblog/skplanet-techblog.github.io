@@ -2,6 +2,7 @@
 title: "Planet AD 서비스 안정화 가이드"
 date: "2024-04-05"
 tags: ["Cloud Eng.", "AWS", "AD Platform", "Planet AD"]
+primaryTags: ["AWS", "Cloud Eng."]
 author: "limds"
 description: "Planet AD 서비스 안정화 가이드"
 ---

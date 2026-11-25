@@ -2,6 +2,7 @@
 title: "Chat DIC 프로젝트에서 AWS Bedrock Prompt Caching으로 성능 최적화하기"
 date: "2025-10-17"
 tags: ["AI", "Prompt Caching", "Chat DIC", "SQL Generation", "LLM", "Optimization", "AWS", "Bedrock"]
+primaryTags: ["Prompt Caching", "Bedrock"]
 author: "rhs"
 description: "사내 Chat DIC 프로젝트에서 AWS Bedrock을 이용해 DB 스키마 기반 쿼리 생성 서비스를 구현하며, Prompt Caching을 적용해 토큰 사용량과 응답 지연을 줄인 실제 사례를 소개합니다."
 ---

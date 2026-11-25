@@ -2,6 +2,7 @@
 title: "SK ICT Family 테크블로그 총정리 (2025년 버전)" 
 date: "2025-06-29"
 tags: ["TechBlog", "SK ICT", "테크블로그", "기술블로그"]
+primaryTags: ["TechBlog", "SK ICT"]
 author: "techeditorial"
 description: "SK ICT Family사 테크 블로그 총정리 (SKP기술지원팀 또는 테크편집부)" 
 ---

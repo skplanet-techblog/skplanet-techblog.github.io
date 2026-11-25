@@ -5,6 +5,7 @@ title: "OK캐쉬백 복지 포인트 서비스 개발기: 보안, 대용량 처�
 date: "2026-03-19"
 
 tags: ["OK캐쉬백", "복지 포인트"]
+primaryTags: ["복지 포인트"]
 
 author: "euisook_hong"
 

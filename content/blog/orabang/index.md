@@ -2,6 +2,7 @@
 title: "오!라방 라이브커머스 클라우드 비용 절감 프로젝트"
 date: "2025-09-09"
 tags: ["OK캐쉬백", "오!라방", "Cloud", "비용절감"]
+primaryTags: ["비용절감", "Cloud"]
 author: "leesh"
 description: "오!라방 라이브커머스 클라우드 비용 절감 프로젝트"
 ---

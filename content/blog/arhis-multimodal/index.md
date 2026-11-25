@@ -2,6 +2,7 @@
 title: "도로의 숨결과 표정으로 결빙을 감지하는 멀티모달 AI 솔루션 'ARHIS Ambient'"
 date: "2025-11-10"
 tags: ["AI", "Multimodal", "블랙아이스 감지", "도로결빙 예측", "음향분석 AI", "딥러닝 결빙탐지"]
+primaryTags: ["Multimodal", "블랙아이스 감지"]
 author: "leejs"
 description: "도로의 숨결과 표정으로 결빙을 감지하는 멀티모달 AI 솔루션"
 ---

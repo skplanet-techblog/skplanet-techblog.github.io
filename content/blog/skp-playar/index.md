@@ -2,6 +2,7 @@
 title: "play AR: SK플래닛의 Web AR 기반 마케팅 솔루션(feat. '춘식이는 홈런왕')"
 date: "2025-11-04"
 tags: [ "Augmented Reality", "Web AR", "A-Frame", "WebRTC", "play AR", "증강현실", "마케팅 솔루션" ]
+primaryTags: ["Web AR", "play AR"]
 author: "leekw"
 description: "play AR: SK플래닛의 Web AR 기술을 적용한 증강현실 기반 차세대 마케팅 솔루션"
 ---

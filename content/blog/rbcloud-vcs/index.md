@@ -2,6 +2,7 @@
 title: "클라우드 스트리밍 - VCS 기술"
 date: "2023-06-07"
 tags: ["Media", "Cloud Streaming", "Virtualization", "OpenGL"]
+primaryTags: ["Cloud Streaming", "Virtualization"]
 
 author: "nhs" 
 

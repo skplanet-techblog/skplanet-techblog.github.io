@@ -2,6 +2,7 @@
 title: "'우리는 이미 만들고 있었다' - 개발조직 AI 리얼스토리(2025년판)"
 date: "2025-12-10"
 tags: ["AI", "Dev", "오글봇", "AI Moment", "RB Dialog", "Seg Lens", "지능형 ADN", "Speech2Sing"]
+primaryTags: ["AI"]
 author: "techeditorial" 
 description: "'우리는 이미 만들고 있었다' - 개발조직 AI 리얼스토리(2025년판)"
 ---

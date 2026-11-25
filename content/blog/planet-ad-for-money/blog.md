@@ -2,6 +2,7 @@
 title: "어떤 광고가 돈이 될까? AI 기반 광고 수익 최적화 (SK AI SUMMIT 발표)"
 date: "2025-11-21"
 tags: ["AI", "광고", "광고플랫폼", "MAB", "GMM", "Multi-Armed Bandit", "Gaussian Mixture Model"]
+primaryTags: ["광고플랫폼", "GMM"]
 author: "shinyoon"
 description: "광고플랫폼 기본적인 구조와 OpenRTB 시장의 변동성을 이용해 수익률을 상승시키는 과정을 기술한 포스팅입니다."
 ---

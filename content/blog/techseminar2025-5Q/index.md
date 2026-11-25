@@ -2,6 +2,7 @@
 title: "2025. 11월(중순)-12월 테크세미나 추가 일정(+2026. 1Q 확정 일정)" 
 date: "2025-11-12"
 tags: ["TechCon", "주요IT기업", "기술세미나","기술컨퍼런스", "2025", "2026"]
+primaryTags: ["TechCon", "기술세미나"]
 author: "techeditorial"
 description: "2025 11월(중순)-12월 테크세미나 추가일정" 
 ---
