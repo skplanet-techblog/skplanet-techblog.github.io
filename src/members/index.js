@@ -147,8 +147,8 @@ export const MEMBERS = {
   },
   hanjh: {
     name: "한정현",
-    team: "Data Infrastructure팀",
-    description: "사내 빅데이터 플랫폼 개발을 이끌며 함께 성장하는 개발자입니다.",
+    team: "AT인프라그룹 AI Data Platform팀",
+    description: "사내 빅데이터 플랫폼과 데이터 AI 에이전트 개발을 이끌며, 데이터로 묻고 데이터로 결정하는 회사를 팀과 함께 만들어 가는 개발자입니다.",
     thumbnail: hanjh,
   },
   sunny: {
