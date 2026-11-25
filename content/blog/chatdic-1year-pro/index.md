@@ -3,6 +3,7 @@ title: "Chat DIC 1년, 무엇이 바뀌었나: Basic 개선과 Pro 런칭"
 date: "2026-11-25"
 tags: ["AI", "AI 에이전트", "RAG", "Text2SQL", "LangGraph", "Trino"]
 author: "hanjh2026"
+primaryTags: ["Text2SQL", "AI 에이전트"]
 description: "사내 Data AI Agent Chat DIC를 1년 운영하며 SQL 품질을 어떻게 측정하고 끌어올렸는지, 검증된 쿼리만 실행하는 Pro를 어떻게 설계했는지 정리"
 ---
 

@@ -36,7 +36,7 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 {post.frontmatter.tags && (
-                  <TagList tags={post.frontmatter.tags} />
+                  <TagList tags={post.frontmatter.tags} primaryTags={post.frontmatter.primaryTags} />
                 )}
                 <header>
                   <h2 className="title">
@@ -91,6 +91,7 @@ export const pageQuery = graphql`
           description
           author
           tags
+          primaryTags
         }
       }
     }
